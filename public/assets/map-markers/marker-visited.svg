@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 128" width="96" height="128">
+  <path d="M 48 8 C 22 8, 8 30, 8 52 C 8 78, 48 120, 48 120 C 48 120, 88 78, 88 52 C 88 30, 74 8, 48 8 Z" fill="#17233C" stroke="#17233C" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Yellow circle head -->
+  <circle cx="48" cy="48" r="22" fill="#FFC857"/>
+  <!-- Bold checkmark -->
+  <path d="M 36 48 L 44 56 L 60 40" fill="none" stroke="#17233C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF7A85"/>
+      <stop offset="55%" stop-color="#FF5F6D"/>
+      <stop offset="100%" stop-color="#E24352"/>
+    </linearGradient>
+    <linearGradient id="bagGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5BE0D0"/>
+      <stop offset="100%" stop-color="#38C4B4"/>
+    </linearGradient>
+    <radialGradient id="lensGrad" cx="0.35" cy="0.35" r="0.75">
+      <stop offset="0%" stop-color="#2E3F5E"/>
+      <stop offset="70%" stop-color="#17233C"/>
+      <stop offset="100%" stop-color="#0B1424"/>
+    </radialGradient>
+    <radialGradient id="lensGlass" cx="0.35" cy="0.35" r="0.55">
+      <stop offset="0%" stop-color="#8FD9FF" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#3B6A9E" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#17233C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cheekGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFB4A8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFB4A8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path d="M 200 40 C 105 40, 40 105, 40 200 C 40 265, 75 315, 125 340 C 155 355, 175 375, 190 395 C 195 400, 198 400, 200 400 C 202 400, 205 400, 210 395 C 225 375, 245 355, 275 340 C 325 315, 360 265, 360 200 C 360 105, 295 40, 200 40 Z" fill="url(#bodyGrad)" stroke="#17233C" stroke-width="6" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="205" rx="105" ry="95" fill="#FFF9F2" opacity="0.55"/>
+  <path d="M 130 190 Q 155 175 180 190" fill="none" stroke="#17233C" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="245" cy="188" rx="14" ry="18" fill="#17233C"/>
+  <circle cx="250" cy="183" r="4.5" fill="#FFF9F2"/>
+  <path d="M 220 155 Q 245 150 265 158" fill="none" stroke="#17233C" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="125" cy="235" r="15" fill="url(#cheekGrad)"/>
+  <circle cx="275" cy="235" r="15" fill="url(#cheekGrad)"/>
+  <path d="M 185 260 Q 200 268 215 260" fill="none" stroke="#17233C" stroke-width="4.5" stroke-linecap="round"/>
+  <ellipse cx="155" cy="95" rx="35" ry="20" fill="#FFF9F2" opacity="0.35" transform="rotate(-25 155 95)"/>
+</svg>

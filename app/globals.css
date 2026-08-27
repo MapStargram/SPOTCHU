@@ -73,6 +73,40 @@
   --ease-overshoot: cubic-bezier(0.34, 1.56, 0.64, 1);
   --dur-fast: 160ms;
   --dur-base: 220ms;
+
+  /* Gradients */
+  --grad-hero: linear-gradient(180deg, #ff7a85 0%, #ff5f6d 45%, #e24352 100%);
+  --grad-body: linear-gradient(180deg, #ff7a85 0%, #ff5f6d 55%, #e24352 100%);
+  --grad-bag: linear-gradient(180deg, #5be0d0 0%, #38c4b4 100%);
+  --grad-thumb: linear-gradient(135deg, #ff7a85 0%, #ffc857 100%);
+}
+
+@keyframes chubob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@keyframes splashSlide {
+  0% {
+    transform: translateX(-135%);
+  }
+  100% {
+    transform: translateX(285%);
+  }
+}
+@keyframes markerPulse {
+  0% {
+    opacity: 0.35;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.2);
+  }
 }
 
 html {
