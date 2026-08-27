@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 128" width="96" height="128">
+  <defs>
+    <linearGradient id="msBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF7A85"/>
+      <stop offset="100%" stop-color="#E24352"/>
+    </linearGradient>
+  </defs>
+  <path d="M 48 8 C 22 8, 8 30, 8 52 C 8 78, 48 120, 48 120 C 48 120, 88 78, 88 52 C 88 30, 74 8, 48 8 Z" fill="url(#msBody)" stroke="#17233C" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="48" cy="48" r="22" fill="#FFF9F2"/>
+  <!-- Heart symbol -->
+  <path d="M 48 60 C 48 60, 34 52, 34 42 C 34 37, 38 34, 42 34 C 45 34, 48 36, 48 40 C 48 36, 51 34, 54 34 C 58 34, 62 37, 62 42 C 62 52, 48 60, 48 60 Z"
+    fill="#FF5F6D" stroke="#17233C" stroke-width="3" stroke-linejoin="round"/>
+</svg>

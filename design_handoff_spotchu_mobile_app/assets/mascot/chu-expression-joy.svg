@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF7A85"/>
+      <stop offset="55%" stop-color="#FF5F6D"/>
+      <stop offset="100%" stop-color="#E24352"/>
+    </linearGradient>
+    <linearGradient id="bagGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5BE0D0"/>
+      <stop offset="100%" stop-color="#38C4B4"/>
+    </linearGradient>
+    <radialGradient id="lensGrad" cx="0.35" cy="0.35" r="0.75">
+      <stop offset="0%" stop-color="#2E3F5E"/>
+      <stop offset="70%" stop-color="#17233C"/>
+      <stop offset="100%" stop-color="#0B1424"/>
+    </radialGradient>
+    <radialGradient id="lensGlass" cx="0.35" cy="0.35" r="0.55">
+      <stop offset="0%" stop-color="#8FD9FF" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#3B6A9E" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#17233C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cheekGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFB4A8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFB4A8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path d="M 200 40 C 105 40, 40 105, 40 200 C 40 265, 75 315, 125 340 C 155 355, 175 375, 190 395 C 195 400, 198 400, 200 400 C 202 400, 205 400, 210 395 C 225 375, 245 355, 275 340 C 325 315, 360 265, 360 200 C 360 105, 295 40, 200 40 Z" fill="url(#bodyGrad)" stroke="#17233C" stroke-width="6" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="205" rx="105" ry="95" fill="#FFF9F2" opacity="0.55"/>
+  <path d="M 130 190 Q 155 165 180 190" fill="none" stroke="#17233C" stroke-width="6" stroke-linecap="round"/>
+  <path d="M 220 190 Q 245 165 270 190" fill="none" stroke="#17233C" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="125" cy="240" r="18" fill="url(#cheekGrad)"/>
+  <circle cx="275" cy="240" r="18" fill="url(#cheekGrad)"/>
+  <path d="M 175 250 Q 200 285 225 250 Q 200 265 175 250 Z" fill="#17233C"/>
+  <path d="M 195 268 Q 200 280 208 268 Q 205 273 195 268 Z" fill="#FF5F6D"/>
+  <path d="M 90 110 l 3 8 l 8 2 l -8 3 l -3 8 l -3 -8 l -8 -3 l 8 -2 z" fill="#FFC857"/>
+  <path d="M 320 130 l 2 5 l 5 1 l -5 2 l -2 5 l -2 -5 l -5 -2 l 5 -1 z" fill="#FFC857"/>
+  <ellipse cx="155" cy="95" rx="35" ry="20" fill="#FFF9F2" opacity="0.35" transform="rotate(-25 155 95)"/>
+</svg>

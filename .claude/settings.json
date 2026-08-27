@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(npm run lint:*)",
+      "Bash(npm run typecheck:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run test:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(npx prisma migrate dev:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(npx prisma migrate deploy:*)",
+      "Bash(npx prisma db push:*)",
+      "Bash(vercel:*)",
+      "Bash(rm:*)",
+      "Bash(Remove-Item:*)"
+    ],
+    "deny": []
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          { "type": "command", "command": "npm run --silent hook:format --if-present" }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "npm run --silent hook:typecheck --if-present" }
+        ]
+      }
+    ]
+  }
+}

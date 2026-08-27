@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="symBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF7A85"/>
+      <stop offset="100%" stop-color="#E24352"/>
+    </linearGradient>
+    <radialGradient id="symLens" cx="0.35" cy="0.35" r="0.75">
+      <stop offset="0%" stop-color="#2E3F5E"/>
+      <stop offset="70%" stop-color="#17233C"/>
+      <stop offset="100%" stop-color="#0B1424"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="200" r="200" fill="url(#symBg)"/>
+  <!-- Pin silhouette -->
+  <path d="M 200 80 C 132 80, 84 130, 84 190 C 84 235, 112 275, 152 300 C 172 314, 188 330, 195 350 C 197 355, 199 358, 200 360 C 201 358, 203 355, 205 350 C 212 330, 228 314, 248 300 C 288 275, 316 235, 316 190 C 316 130, 268 80, 200 80 Z"
+    fill="#FFF9F2" stroke="#17233C" stroke-width="9" stroke-linejoin="round"/>
+  <!-- Lens -->
+  <circle cx="200" cy="190" r="60" fill="url(#symLens)" stroke="#17233C" stroke-width="7"/>
+  <circle cx="200" cy="190" r="44" fill="none" stroke="#45D6C6" stroke-width="3" opacity="0.7"/>
+  <circle cx="200" cy="190" r="34" fill="#3B6A9E" opacity="0.4"/>
+  <ellipse cx="186" cy="176" rx="12" ry="9" fill="#FFF9F2"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 128" width="96" height="128">
+  <defs>
+    <linearGradient id="mvBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5BE0D0"/>
+      <stop offset="100%" stop-color="#38C4B4"/>
+    </linearGradient>
+  </defs>
+  <path d="M 48 8 C 22 8, 8 30, 8 52 C 8 78, 48 120, 48 120 C 48 120, 88 78, 88 52 C 88 30, 74 8, 48 8 Z" fill="url(#mvBody)" stroke="#17233C" stroke-width="5" stroke-linejoin="round"/>
+  <!-- Yellow ring emphasizing verification -->
+  <circle cx="48" cy="48" r="24" fill="none" stroke="#FFC857" stroke-width="3"/>
+  <circle cx="48" cy="48" r="20" fill="#FFF9F2"/>
+  <!-- Star -->
+  <path d="M 48 34 l 4 9 l 10 1 l -7 6 l 2 10 l -9 -5 l -9 5 l 2 -10 l -7 -6 l 10 -1 z"
+    fill="#FFC857" stroke="#17233C" stroke-width="2" stroke-linejoin="round"/>
+</svg>

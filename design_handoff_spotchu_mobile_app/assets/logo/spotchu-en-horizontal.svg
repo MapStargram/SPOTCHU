@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1094 200" width="1094" height="200">
+  <defs>
+    <radialGradient id="lensGlassPath" cx="0.35" cy="0.35" r="0.55">
+      <stop offset="0%" stop-color="#8FD9FF" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#3B6A9E" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#17233C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(30 0)">
+<path d="
+  M 105 50
+  Q 105 25, 75 25
+  L 55 25
+  Q 25 25, 25 55
+  Q 25 80, 55 88
+  L 80 95
+  Q 110 103, 110 130
+  Q 110 175, 60 175
+  L 45 175
+  Q 15 175, 15 145
+" fill="none" stroke="#17233C" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g transform="translate(172 0)">
+
+  <path d="M 20 20 L 20 180" fill="none" stroke="#17233C" stroke-width="34" stroke-linecap="round"/>
+  <path d="M 20 20 L 80 20 Q 120 20, 120 60 Q 120 100, 80 100 L 20 100"
+    fill="none" stroke="#17233C" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g transform="translate(324 0)">
+
+  <circle cx="70" cy="100" r="70" fill="none" stroke="#FF5F6D" stroke-width="34"/>
+  <circle cx="70" cy="100" r="48" fill="#17233C"/>
+  <circle cx="70" cy="100" r="38" fill="none" stroke="#45D6C6" stroke-width="2.5" opacity="0.7"/>
+  <circle cx="70" cy="100" r="32" fill="url(#lensGlassPath)"/>
+  <ellipse cx="55" cy="85" rx="10" ry="7" fill="#FFF9F2" opacity="0.95"/>
+  <circle cx="88" cy="82" r="4.5" fill="#FFC857"/>
+</g>
+<g transform="translate(476 0)">
+
+  <path d="M 15 25 L 115 25" fill="none" stroke="#17233C" stroke-width="34" stroke-linecap="round"/>
+  <path d="M 65 25 L 65 180" fill="none" stroke="#17233C" stroke-width="34" stroke-linecap="round"/>
+</g>
+<g transform="translate(618 0)">
+<path d="
+  M 115 45
+  Q 100 20, 65 20
+  Q 20 20, 20 100
+  Q 20 180, 65 180
+  Q 100 180, 115 155
+" fill="none" stroke="#17233C" stroke-width="34" stroke-linecap="round"/>
+</g>
+<g transform="translate(760 0)">
+
+  <path d="M 20 20 L 20 180" fill="none" stroke="#17233C" stroke-width="34" stroke-linecap="round"/>
+  <path d="M 120 20 L 120 180" fill="none" stroke="#17233C" stroke-width="34" stroke-linecap="round"/>
+  <path d="M 20 100 L 120 100" fill="none" stroke="#17233C" stroke-width="34" stroke-linecap="round"/>
+</g>
+<g transform="translate(912 0)">
+<path d="
+  M 20 20 L 20 130
+  Q 20 180, 70 180
+  Q 120 180, 120 130
+  L 120 20
+" fill="none" stroke="#17233C" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

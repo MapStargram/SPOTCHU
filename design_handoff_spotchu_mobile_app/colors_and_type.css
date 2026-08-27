@@ -1,0 +1,230 @@
+/* =============================================================
+   SPOTCHU (스팟츄) — Design tokens
+   Colors + Type + Spacing + Radius + Shadow
+   ============================================================= */
+
+/* ---------- Web fonts (external CDN) ---------- */
+/* Pretendard: Korean primary UI font. jsDelivr CDN. */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+/* Poppins: Latin primary UI font. Google Fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* JetBrains Mono for tokens / codey moments (optional). */
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+:root {
+  /* ---------- Brand colors ---------- */
+  --coral:        #FF5F6D;   /* Primary */
+  --coral-light:  #FF7A85;   /* Coral gradient top */
+  --coral-deep:   #E24352;   /* Coral gradient bottom / pressed */
+
+  --mint:         #45D6C6;   /* Secondary — verification, saved */
+  --mint-light:   #5BE0D0;   /* Bag gradient top */
+  --mint-deep:    #38C4B4;   /* Mint pressed */
+
+  --navy:         #17233C;   /* Text, dark bg, lens core */
+  --navy-2:       #2E3F5E;   /* Secondary text, lens grad top */
+  --navy-deep:    #0B1424;   /* Lens grad bottom */
+
+  --cream:        #FFF9F2;   /* App background, on-dark text */
+  --cream-2:      #FBEFE0;   /* Section bg variant */
+
+  --yellow:       #FFC857;   /* Highlight-only accent — spark moments */
+
+  /* ---------- Neutrals / semantic ---------- */
+  --line:         rgba(23, 35, 60, 0.10);
+  --line-strong:  rgba(23, 35, 60, 0.22);
+  --muted:        rgba(23, 35, 60, 0.55);
+  --muted-soft:   rgba(23, 35, 60, 0.35);
+
+  --bg:           var(--cream);
+  --bg-alt:       var(--cream-2);
+  --fg:           var(--navy);
+  --fg-2:         var(--navy-2);
+  --fg-muted:     var(--muted);
+
+  --success:      var(--mint-deep);
+  --danger:       var(--coral-deep);
+  --warning:      var(--yellow);
+
+  /* ---------- Gradients ---------- */
+  --grad-body:    linear-gradient(180deg, #FF7A85 0%, #FF5F6D 55%, #E24352 100%);
+  --grad-bag:     linear-gradient(180deg, #5BE0D0 0%, #38C4B4 100%);
+  --grad-lens:    radial-gradient(circle at 35% 35%, #2E3F5E 0%, #17233C 70%, #0B1424 100%);
+  --grad-glass:   radial-gradient(circle at 35% 35%, rgba(143,217,255,0.9) 0%, rgba(59,106,158,0.5) 50%, rgba(23,35,60,0) 100%);
+  --grad-thumb:   linear-gradient(135deg, #FF7A85 0%, #FFC857 100%);
+  --grad-hero:    linear-gradient(180deg, #FF7A85 0%, #FF5F6D 45%, #E24352 100%);
+
+  /* ---------- Type families ---------- */
+  --font-ko:      "Pretendard Variable", "Pretendard", -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font-latin:   "Poppins", system-ui, -apple-system, sans-serif;
+  --font-mono:    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ---------- Type scale (mobile-first) ---------- */
+  --fs-display:   76px;   /* Hero */
+  --fs-display-lg:108px;
+  --fs-section:   44px;
+  --fs-screen:    22px;
+  --fs-card:      15px;
+  --fs-body:      13px;
+  --fs-caption:   11px;
+  --fs-micro:     9px;
+  --fs-numeric:   18px;
+
+  --lh-tight:     0.90;
+  --lh-title:     1.05;
+  --lh-screen:    1.2;
+  --lh-body:      1.6;
+  --lh-caption:   1.5;
+
+  --tr-display:   -0.05em;
+  --tr-section:   -0.03em;
+  --tr-screen:    -0.02em;
+  --tr-card:      -0.01em;
+  --tr-label:     0.16em;   /* uppercase caption tracking */
+
+  /* ---------- Spacing (4px base grid) ---------- */
+  --sp-1:  4px;
+  --sp-2:  8px;
+  --sp-3:  12px;
+  --sp-4:  14px;
+  --sp-5:  16px;
+  --sp-6:  20px;
+  --sp-7:  22px;
+  --sp-8:  24px;
+  --sp-10: 32px;
+  --sp-12: 40px;
+  --sp-14: 48px;
+  --sp-18: 64px;
+  --sp-24: 96px;
+
+  /* ---------- Radius ---------- */
+  --r-pill:   100px;
+  --r-lg:     24px;
+  --r-md:     22px;
+  --r-card:   20px;
+  --r-sm:     16px;
+  --r-xs:     14px;
+  --r-chip:   12px;
+  --r-icon:   22%;   /* app icon rounded-square mask */
+  --r-screen-in:  38px;
+  --r-screen-out: 46px;
+
+  /* ---------- Shadow ---------- */
+  --sh-card:      0 8px 24px -8px rgba(23,35,60,0.15);
+  --sh-elevated:  0 12px 32px -8px rgba(23,35,60,0.22);
+  --sh-device:    0 40px 80px -20px rgba(23,35,60,0.35);
+  --sh-cta-coral: 0 8px 20px -6px rgba(255,95,109,0.5);
+  --sh-app-icon:  0 30px 60px -20px rgba(23,35,60,0.28);
+  --sh-search:    0 8px 24px -8px rgba(23,35,60,0.25);
+
+  /* ---------- Motion ---------- */
+  --ease-standard:  cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-overshoot: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast:       160ms;
+  --dur-base:       220ms;
+  --dur-slow:       380ms;
+}
+
+/* =============================================================
+   Semantic / role-based type presets
+   Use these on real elements or wrapper classes; :root only holds
+   token vars, these classes/at-rules bake vars into actual styles.
+   ============================================================= */
+
+html { color: var(--fg); background: var(--bg); }
+body {
+  font-family: var(--font-ko);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Display / hero — used on splash + marketing headers */
+.t-display {
+  font-family: var(--font-ko);
+  font-size: var(--fs-display);
+  font-weight: 800;
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tr-display);
+  color: var(--fg);
+}
+
+/* Section titles (e.g. "각도 가이드") */
+.t-section {
+  font-family: var(--font-ko);
+  font-size: var(--fs-section);
+  font-weight: 700;
+  line-height: var(--lh-title);
+  letter-spacing: var(--tr-section);
+}
+
+/* Screen title — 22px 800 -0.02em */
+.t-screen {
+  font-family: var(--font-ko);
+  font-size: var(--fs-screen);
+  font-weight: 800;
+  line-height: var(--lh-screen);
+  letter-spacing: var(--tr-screen);
+}
+
+/* Card title */
+.t-card {
+  font-family: var(--font-ko);
+  font-size: var(--fs-card);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: var(--tr-card);
+}
+
+/* Body */
+.t-body {
+  font-family: var(--font-ko);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: var(--lh-body);
+}
+
+/* Caption / meta */
+.t-caption {
+  font-family: var(--font-ko);
+  font-size: var(--fs-caption);
+  font-weight: 500;
+  line-height: var(--lh-caption);
+  color: var(--muted);
+}
+
+/* Uppercase micro label — used on stats card labels */
+.t-label {
+  font-family: var(--font-latin);
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  letter-spacing: var(--tr-label);
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Numeric — stats value */
+.t-numeric {
+  font-family: var(--font-latin);
+  font-size: var(--fs-numeric);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--coral);
+}
+
+/* Mono — spec / token labels */
+.t-mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* Utility fills */
+.on-coral { color: var(--cream); }
+.on-navy  { color: var(--cream); }

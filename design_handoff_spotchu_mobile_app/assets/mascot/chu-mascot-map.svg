@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" width="400" height="520">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF7A85"/>
+      <stop offset="55%" stop-color="#FF5F6D"/>
+      <stop offset="100%" stop-color="#E24352"/>
+    </linearGradient>
+    <linearGradient id="bagGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5BE0D0"/>
+      <stop offset="100%" stop-color="#38C4B4"/>
+    </linearGradient>
+    <radialGradient id="lensGrad" cx="0.35" cy="0.35" r="0.75">
+      <stop offset="0%" stop-color="#2E3F5E"/>
+      <stop offset="70%" stop-color="#17233C"/>
+      <stop offset="100%" stop-color="#0B1424"/>
+    </radialGradient>
+    <radialGradient id="lensGlass" cx="0.35" cy="0.35" r="0.55">
+      <stop offset="0%" stop-color="#8FD9FF" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#3B6A9E" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#17233C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cheekGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#FFB4A8" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFB4A8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="200" cy="490" rx="105" ry="14" fill="#17233C" opacity="0.12"/>
+  <path d="M 200 60 C 120 60, 60 120, 60 210 C 60 270, 90 315, 130 345 C 155 365, 175 390, 190 430 C 195 445, 198 468, 200 480 C 202 468, 205 445, 210 430 C 225 390, 245 365, 270 345 C 310 315, 340 270, 340 210 C 340 120, 280 60, 200 60 Z" fill="url(#bodyGrad)" stroke="#17233C" stroke-width="6" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="215" rx="95" ry="90" fill="#FFF9F2" opacity="0.55"/>
+  <path d="M 155 205 Q 168 218 182 205" fill="none" stroke="#17233C" stroke-width="5" stroke-linecap="round"/>
+  <path d="M 218 205 Q 231 218 245 205" fill="none" stroke="#17233C" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="138" cy="235" r="15" fill="url(#cheekGrad)"/>
+  <circle cx="262" cy="235" r="15" fill="url(#cheekGrad)"/>
+  <ellipse cx="200" cy="252" rx="5" ry="6" fill="#17233C"/>
+  <g transform="translate(200 340) rotate(-4)">
+    <rect x="-75" y="-40" width="150" height="90" rx="6" fill="#FFF9F2" stroke="#17233C" stroke-width="4"/>
+    <path d="M -60 -20 Q -20 -30 20 -10 Q 50 5 65 25" fill="none" stroke="#45D6C6" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -55 20 Q -20 15 10 30" fill="none" stroke="#45D6C6" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <g transform="translate(20 -5)">
+      <path d="M 0 -14 C -8 -14, -12 -8, -12 -2 C -12 6, 0 14, 0 14 C 0 14, 12 6, 12 -2 C 12 -8, 8 -14, 0 -14 Z" fill="#FF5F6D" stroke="#17233C" stroke-width="2"/>
+      <circle cx="0" cy="-3" r="3.5" fill="#FFF9F2"/>
+    </g>
+    <path d="M -35 25 l 2 5 l 5 0 l -4 3 l 1.5 5 l -4.5 -3 l -4.5 3 l 1.5 -5 l -4 -3 l 5 0 z" fill="#FFC857"/>
+  </g>
+  <path d="M 100 315 Q 90 335 120 350" fill="#FF5F6D" stroke="#17233C" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M 300 315 Q 310 335 280 350" fill="#FF5F6D" stroke="#17233C" stroke-width="5" stroke-linejoin="round"/>
+  <ellipse cx="150" cy="115" rx="30" ry="18" fill="#FFF9F2" opacity="0.35" transform="rotate(-25 150 115)"/>
+  <ellipse cx="184" cy="480" rx="10" ry="6" fill="#17233C"/>
+  <ellipse cx="216" cy="480" rx="10" ry="6" fill="#17233C"/>
+</svg>

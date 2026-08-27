@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260">
+  <style>
+  @font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/woff2-subset/PretendardVariable.woff2') format('woff2-variations');
+    font-weight: 45 920;
+    font-style: normal;
+    font-display: swap;
+  }
+  .ko-wm { font-family: 'Pretendard', -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif; font-weight: 800; }
+</style>
+  <text x="360" y="205" class="ko-wm" font-size="200" fill="#17233C" text-anchor="middle" letter-spacing="-10">스팟츄</text>
+  <g transform="translate(155 30)">
+    <path d="M 0 0 C -16 0, -26 12, -26 26 C -26 42, 0 68, 0 68 C 0 68, 26 42, 26 26 C 26 12, 16 0, 0 0 Z" fill="#FF5F6D" stroke="#17233C" stroke-width="4"/>
+    <circle cx="0" cy="24" r="10" fill="#FFF9F2"/>
+    <circle cx="0" cy="24" r="4" fill="#17233C"/>
+  </g>
+</svg>
