@@ -411,3 +411,77 @@ export const VISIT_HISTORY = [
   { id: "gyeongbok", when: "1주 전", badge: false },
   { id: "seongsu", when: "2주 전", badge: false },
 ];
+
+export interface Post {
+  id: string;
+  author: string;
+  when: string;
+  spotId: string;
+  city: CityId;
+  likes: number;
+  verified: boolean;
+  gradient: string;
+  caption: string;
+}
+
+export const POSTS: Post[] = [
+  {
+    id: "p1",
+    author: "현우",
+    when: "2시간 전",
+    spotId: "suga-shrine",
+    city: "tokyo",
+    likes: 842,
+    verified: true,
+    gradient: "linear-gradient(180deg, #E24352 0%, #FFC857 100%)",
+    caption: "저녁 5시 30분, 정확히 그 앵글로. 츄가 알려준 그대로 찍었어요.",
+  },
+  {
+    id: "p2",
+    author: "서연",
+    when: "6시간 전",
+    spotId: "shibuya",
+    city: "tokyo",
+    likes: 412,
+    verified: true,
+    gradient: "linear-gradient(180deg, #17233C 0%, #E24352 100%)",
+    caption: "스타벅스 2층 창가 자리. 신호 바뀌기 15초 전이 최고.",
+  },
+  {
+    id: "p3",
+    author: "지민",
+    when: "어제",
+    spotId: "mojik",
+    city: "tokyo",
+    likes: 1210,
+    verified: true,
+    gradient: "linear-gradient(180deg, #FF7A85 0%, #FFC857 100%)",
+    caption: "6시 30분 안개 걷힌 순간. 후지산 능선이 살짝 보여요.",
+  },
+  {
+    id: "p4",
+    author: "지민",
+    when: "3시간 전",
+    spotId: "namsan",
+    city: "seoul",
+    likes: 903,
+    verified: true,
+    gradient: "linear-gradient(180deg, #E24352 0%, #17233C 100%)",
+    caption: "일몰 30분 후, 남색 하늘일 때. 삼각대 필수였어요.",
+  },
+  {
+    id: "p5",
+    author: "서연",
+    when: "어제",
+    spotId: "gyeongbok",
+    city: "seoul",
+    likes: 654,
+    verified: true,
+    gradient: "linear-gradient(180deg, #FBEFE0 0%, #E24352 100%)",
+    caption: "개장 직후 15분, 사람 없는 근정전 계단.",
+  },
+];
+
+export const getPost = (id: string) => POSTS.find((p) => p.id === id);
+export const postsByCity = (city: CityId) =>
+  POSTS.filter((p) => p.city === city);

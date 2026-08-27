@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Bell, ChevronDown, ChevronRight } from "lucide-react";
+import { Bell, Camera, ChevronDown, ChevronRight } from "lucide-react";
 import { MobileScreen } from "@/components/ui/MobileScreen";
 import { TagPill } from "@/components/ui/TagPill";
 import { Sparkle } from "@/components/ui/Sparkle";
@@ -46,12 +46,21 @@ export default async function HomeScreen({
             {c.name} <ChevronDown size={16} />
           </div>
         </Link>
-        <span
-          aria-disabled
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy opacity-70 shadow-[var(--sh-card)]"
-        >
-          <Bell size={20} />
-        </span>
+        <div className="flex items-center gap-2">
+          <Link
+            href={`/feed/${city}`}
+            aria-label="도시 피드"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)]"
+          >
+            <Camera size={20} />
+          </Link>
+          <span
+            aria-disabled
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy opacity-70 shadow-[var(--sh-card)]"
+          >
+            <Bell size={20} />
+          </span>
+        </div>
       </header>
 
       {/* Hero card — 오늘의 스팟 */}
