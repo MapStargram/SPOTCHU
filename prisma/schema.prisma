@@ -105,7 +105,9 @@ model User {
   id            String    @id @default(cuid())
   email         String?   @unique
   emailVerified DateTime?
-  nickname      String?
+  name          String? // Auth.js 표준
+  image         String? // Auth.js 표준
+  nickname      String? // 서비스 표시명(name과 별개)
   avatarUrl     String?
   role          Role      @default(USER)
   isTrusted     Boolean   @default(false)

@@ -1,0 +1,24 @@
+# 로컬 개발용 PostgreSQL + PostGIS.
+# 사용: docker compose up -d db  →  npm run db:migrate
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: spotchu-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: spotchu
+      POSTGRES_PASSWORD: spotchu
+      POSTGRES_DB: spotchu
+    ports:
+      - "5432:5432"
+    volumes:
+      - spotchu-db-data:/var/lib/postgresql/data
+      - ./docker/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U spotchu -d spotchu"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  spotchu-db-data:

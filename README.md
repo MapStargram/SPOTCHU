@@ -35,6 +35,17 @@ npm run dev                    # http://localhost:3000
 > 브라우저 폭을 **넓히면 데스크톱 사이드바(웹), 좁히면 하단 탭바(앱)** 로 전환됩니다.
 > 화면은 전부 목업 데이터로 동작하므로 DB/인증 없이 바로 클릭해 볼 수 있습니다(로그인·체크인·업로드는 화면·플로우만).
 
+### 백엔드 준비 (DB · 인증 — 착수됨, 선택)
+실데이터/로그인을 붙이려면:
+```bash
+docker compose up -d db      # PostgreSQL + PostGIS (localhost:5432)
+npm run db:migrate           # Prisma 테이블 생성(최초 마이그레이션)
+# .env.local: AUTH_SECRET(= npx auth secret) + provider 시크릿(AUTH_KAKAO_ID/SECRET 등)
+```
+- **DB**: [`docker-compose.yml`](docker-compose.yml)(postgis/postgis:16-3.4) + `docker/initdb/01-postgis.sql`(`CREATE EXTENSION postgis`). Prisma Client 싱글턴은 [`lib/db.ts`](lib/db.ts).
+- **인증**: Auth.js v5 골격 — [`auth.ts`](auth.ts) · `/api/auth/[...nextauth]` · Prisma 어댑터 · Kakao/Google/Apple. **OAuth 앱 등록 후 시크릿을 넣어야 실제 로그인 동작**(Apple은 JWT 시크릿 별도 생성). 현재 로그인 화면은 데모 플로우.
+- **서버 액션**(목업 → 실데이터)은 미구현 — [`docs/api-surface.md`](docs/api-surface.md) 기준으로 진행.
+
 ## 필수 요건
 - **Node 24** (`.nvmrc` 참조) · npm
 - **Google Maps JS API 키** (각자 발급) — 지도 기능용. 없으면 지도는 CSS 플레이스홀더로 자동 폴백됩니다.

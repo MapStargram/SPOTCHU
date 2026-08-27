@@ -77,6 +77,9 @@
 - **반응형 웹/앱 분리 완료** `9f0934e`·`46e002e`·`97f8b46`: 데스크톱=인스타식 좌측 Sidebar(components/shell/), 모바일=하단 TabBar(lg:hidden). AppShell 래퍼로 전 앱 서피스 감쌈(홈·탐색·컬렉션·프로필·피드·배지·기록·작품·스팟·컬렉션상세). 데스크톱 콘텐츠 240px 오프셋·와이드/다열 그리드. 검증: 데스크톱 사이드바·모바일 탭바 전환, 콘솔 0.
 - **실제 브랜드 아이콘** components/brand/BrandIcons.tsx: Google 4색·KakaoTalk 말풍선·Apple(이모지 제거). 로그인 적용.
 - 반응형 규칙: 앱 서피스는 `AppShell`로 감싸고, 페이지 콘텐츠는 `mx-auto max-w-[500px] lg:max-w-[720~960px]` + `lg:` 반응형. TabBar `lg:hidden`, Sidebar `hidden lg:flex`.
-- **남은 트랙(백엔드 인프라, 미착수)**: Auth.js 실연동(카카오·구글·애플 OAuth 앱 필요) · Postgres/PostGIS(docker)+첫 마이그레이션 · 서버 액션(api-surface) 구현 · R2 이미지 업로드 · 실데이터 치환. + 프로덕션 Map ID·키 리퍼러 제한.
+- **git**: `main` 브랜치 생성 후 원격 푸시 완료(origin main). 이후 main에 직접 커밋·푸시 중. README 전면 개편 + CHANGELOG(Haiku) + 재현성 설정(.nvmrc/prettier/editorconfig/engines).
+- **비용 규칙**: 이력·CHANGELOG 등 히스토리 텍스트는 `changelog-writer`(Haiku) 에이전트로. CLAUDE.md §7.
+- **백엔드 인프라 착수**: DB — `docker-compose.yml`(postgis 16-3.4)+`docker/initdb/01-postgis.sql`+`lib/db.ts`(Prisma 싱글턴). 인증 — Auth.js v5 골격(`auth.ts`·`/api/auth/[...nextauth]`·@auth/prisma-adapter·Kakao/Google/Apple), Prisma User에 name/image 추가. 빌드·typecheck 통과.
+- **인프라 남은 것**: `docker compose up -d db`+`npm run db:migrate` 실행(개발자 로컬) · OAuth 앱 시크릿(카카오·구글·애플, Apple은 JWT) · **서버 액션 구현(목업→실데이터, api-surface)** · R2 업로드 · 프로덕션 Map ID·키 리퍼러 제한 · 로그인 화면 signIn() 배선.
 - 다음 인프라(미착수): 로컬 Postgres/PostGIS(docker)+첫 마이그레이션·Auth.js 실연동·Google Maps(C1 키 필요).
 - ⚠️ 교훈: dev 서버 켠 채 `npm run build` 금지(.next 캐시 오염→500). 빌드는 dev 중지 후.
