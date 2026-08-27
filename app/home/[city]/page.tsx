@@ -4,7 +4,8 @@ import { Bell, Camera, ChevronDown, ChevronRight } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { TagPill } from "@/components/ui/TagPill";
 import { Sparkle } from "@/components/ui/Sparkle";
-import { CITIES, COLLECTIONS, getCity, getSpot, type CityId } from "@/lib/mock";
+import { CITIES, COLLECTIONS, type CityId } from "@/lib/mock";
+import { getCity, getSpot } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
 
 // B2 도쿄 / B3 서울 — 도시 홈. 모바일=앱 컬럼, 데스크톱=사이드바+와이드.
 const CITY_HOME: Record<CityId, { heroId: string; listIds: string[] }> = {
@@ -25,12 +26,13 @@ export default async function HomeScreen({
   params: Promise<{ city: string }>;
 }) {
   const { city } = await params;
-  const c = getCity(city);
+  const c = await getCity(city);
   if (!c || (city !== "tokyo" && city !== "seoul")) notFound();
 
   const conf = CITY_HOME[city as CityId];
-  const heroSpot = getSpot(conf.heroId)!;
-  const list = conf.listIds.map((id) => getSpot(id)!);
+  const heroSpot = (await getSpot(conf.heroId))!;
+  const listRaw = await Promise.all(conf.listIds.map((id) => getSpot(id)));
+  const list = listRaw.filter((s): s is NonNullable<typeof s> => !!s);
   const curated = COLLECTIONS.filter((col) => col.isOfficial).slice(0, 2);
 
   return (

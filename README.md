@@ -44,8 +44,10 @@ npm run db:seed              # 목업 → 실 DB 시드(도시·카테고리·�
 # .env.local: AUTH_SECRET(= npx auth secret) + provider 시크릿(AUTH_KAKAO_ID/SECRET 등)
 ```
 - **DB**: [`docker-compose.yml`](docker-compose.yml)(postgis/postgis:16-3.4) + `docker/initdb/01-postgis.sql`(`CREATE EXTENSION postgis`). Prisma Client 싱글턴은 [`lib/db.ts`](lib/db.ts). 시드는 [`prisma/seed.ts`](prisma/seed.ts).
-- **인증**: Auth.js v5 골격 — [`auth.ts`](auth.ts) · `/api/auth/[...nextauth]` · Prisma 어댑터 · **Kakao/Naver/Google/Apple**. **OAuth 앱 등록 후 시크릿을 넣어야 실제 로그인 동작**(Apple은 JWT 시크릿 별도 생성). 현재 로그인 화면은 데모 플로우.
-- **서버 액션(읽기 계층)**: [`lib/actions/spots.ts`](lib/actions/spots.ts)에 DB 읽기 함수 골격 존재. 페이지의 목업(`lib/mock.ts`)을 이 함수들로 점진 치환 예정 — [`docs/api-surface.md`](docs/api-surface.md) 기준.
+- **인증**: Auth.js v5 — [`auth.ts`](auth.ts) · `/api/auth/[...nextauth]` · Prisma 어댑터 · **Kakao/Naver/Google/Apple**. 로그인 버튼은 `NEXT_PUBLIC_AUTH_ENABLED="true"`면 실제 `signIn()`, 아니면 데모 플로우. 세션은 [`lib/session.ts`](lib/session.ts)의 `getCurrentUser()`(실패 시 null). **OAuth 시크릿 세팅 후 활성**(Apple은 JWT 시크릿 별도).
+- **데이터소스 전환**: [`lib/data.ts`](lib/data.ts) façade — `DATA_SOURCE="db"`면 실 DB([`lib/actions/spots.ts`](lib/actions/spots.ts)), 아니면 목업. 기본=목업(데모 유지). 홈 페이지에 적용됨 → 나머지 페이지도 `lib/mock` 대신 `lib/data`로 점진 전환.
+- **쓰기 액션**: [`lib/actions/mutations.ts`](lib/actions/mutations.ts) — 체크인(반경·정확도·쿨다운·자동승격)·저장·게시물·신고. 도메인 규칙을 서버에서 강제, 원시 좌표 미저장. DB+인증 기동 시 화면에서 호출.
+- 상세 API: [`docs/api-surface.md`](docs/api-surface.md).
 
 ## 필수 요건
 - **Node 24** (`.nvmrc` 참조) · npm

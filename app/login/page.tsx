@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
 import { MobileScreen } from "@/components/ui/MobileScreen";
 import { Mascot } from "@/components/ui/Mascot";
 import {
@@ -10,8 +11,9 @@ import {
   AppleIcon,
 } from "@/components/brand/BrandIcons";
 
-// A5 · Login — 소셜 로그인(카카오·구글·애플). 실제 Auth.js 연동은 후속 인프라 증분에서.
-// 현재는 화면/플로우만 — 어떤 provider든 위치권한 화면으로 이동.
+// A5 · Login — 소셜 로그인(카카오·네이버·구글·애플).
+// NEXT_PUBLIC_AUTH_ENABLED="true" 면 실제 Auth.js signIn, 아니면 데모 플로우(권한 화면으로).
+const AUTH_ENABLED = process.env.NEXT_PUBLIC_AUTH_ENABLED === "true";
 const PROVIDERS = [
   {
     id: "kakao",
@@ -47,6 +49,11 @@ const PROVIDERS = [
 export default function LoginScreen() {
   const router = useRouter();
 
+  const onProvider = (id: string) => {
+    if (AUTH_ENABLED) void signIn(id, { callbackUrl: "/city" });
+    else router.push("/permission"); // 데모: 시크릿 미설정 시 화면 플로우만
+  };
+
   return (
     <MobileScreen className="justify-between py-16">
       <div className="flex flex-col items-center gap-1.5 pt-8 text-navy">
@@ -67,7 +74,7 @@ export default function LoginScreen() {
         {PROVIDERS.map((p) => (
           <button
             key={p.id}
-            onClick={() => router.push("/permission")}
+            onClick={() => onProvider(p.id)}
             className="flex items-center justify-center gap-2.5 rounded-2xl px-5 py-3.5 text-[14px] font-bold tracking-[-0.01em] shadow-[var(--sh-card)] transition active:scale-[0.98]"
             style={{
               background: p.bg,
