@@ -66,4 +66,5 @@
 - 디자인: **`design_handoff_spotchu_mvp_screens/`가 UI 정본**(45 아트보드 A~K, PRD 1:1 / 토큰·모션·상태슬라이스·구현순서 포함). 사용자가 옛 3화면 핸드오프를 이걸로 교체. design.md를 이 기준으로 재작성(브랜드 토큰 coral/mint/navy/cream, 마커 default/saved/visited/verified 색+심볼). 검증상태×저장/방문 핀 우선순위는 지도 구현 시 확정 TODO.
 - 스캐폴드: Next.js 15(App Router)+TS+Tailwind3 수동 구성(기존 파일 충돌 회피). `app/`(layout·globals·page), `lib/geo.ts`(+test 7 통과), `prisma/schema.prisma`(데이터모델 전체), `.env.example`.
 - 검증 통과: prisma generate · typecheck · vitest(7) · lint · build. 훅(hook:format/typecheck) 실작동 확인.
-- 다음(Phase 0 후속): 로컬 Postgres/PostGIS(docker) + 첫 마이그레이션(CREATE EXTENSION postgis) · Auth.js(카카오·구글·애플) 연동.
+- Section A(온보딩·인증) 구현 완료 `9a2fd58`: 스플래시/온보딩3/로그인/위치권한 + 공유 컴포넌트(MobileScreen·CoralButton·Mascot). 브라우저 렌더 확인(에러 0). 소셜 로그인·위치권한은 화면/플로우만(실제 Auth.js·Geolocation은 후속).
+- 다음: (인프라) 로컬 Postgres/PostGIS(docker)+첫 마이그레이션(CREATE EXTENSION postgis)·Auth.js 연동 / (화면) Section B 홈·도시선택·작품상세.

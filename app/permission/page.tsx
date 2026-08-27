@@ -10,7 +10,7 @@ import { CoralButton, GhostButton } from "@/components/ui/CoralButton";
 // 여기서는 목적 고지 + 플로우만.
 export default function PermissionScreen() {
   const router = useRouter();
-  const done = () => router.push("/home");
+  const done = () => router.push("/city");
 
   return (
     <MobileScreen className="justify-between py-16">
