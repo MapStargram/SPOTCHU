@@ -289,6 +289,8 @@ export const COLLECTIONS: Collection[] = [
 export const getCity = (id: string) => CITIES.find((c) => c.id === id);
 export const getSpot = (id: string) => SPOTS.find((s) => s.id === id);
 export const getWork = (id: string) => WORKS.find((w) => w.id === id);
+export const getCollection = (id: string) =>
+  COLLECTIONS.find((c) => c.id === id);
 export const spotsByCity = (city: CityId) =>
   SPOTS.filter((s) => s.city === city);
 
