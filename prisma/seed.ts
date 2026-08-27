@@ -1,0 +1,144 @@
+// 목업 데이터(lib/mock.ts) → 실제 DB 시드. 멱등(upsert)이라 반복 실행 안전.
+// 사용: docker compose up -d db → npm run db:migrate → npm run db:seed
+import { PrismaClient } from "@prisma/client";
+import {
+  CITIES,
+  WORKS,
+  SPOTS,
+  COLLECTIONS,
+  SPOT_COORDS,
+  CITY_CENTER,
+} from "../lib/mock";
+
+const db = new PrismaClient();
+
+// 목업 라벨 → DB 코드 매핑
+const CATEGORY_KEY: Record<string, string> = {
+  "🏯 랜드마크": "landmark",
+  "⛩️ 애니 성지": "anime",
+  "🎬 드라마": "drama",
+  "✨ 포토 스팟": "photo",
+};
+const COUNTRY: Record<string, "KR" | "JP"> = { 한국: "KR", 일본: "JP" };
+const VERIF: Record<string, "OFFICIAL" | "USER_VERIFIED" | "USER_REPORTED"> = {
+  official: "OFFICIAL",
+  user: "USER_VERIFIED",
+  reported: "USER_REPORTED",
+};
+const WORKTYPE: Record<string, "ANIME" | "DRAMA" | "MOVIE" | "OTHER"> = {
+  애니: "ANIME",
+  드라마: "DRAMA",
+  영화: "MOVIE",
+};
+
+async function main() {
+  // 카테고리
+  for (const [label, key] of Object.entries(CATEGORY_KEY)) {
+    await db.category.upsert({
+      where: { key },
+      update: { label },
+      create: { key, label },
+    });
+  }
+  const cats = await db.category.findMany();
+  const catId = (label: string) =>
+    cats.find((c) => c.key === CATEGORY_KEY[label])!.id;
+
+  // 도시
+  for (const c of CITIES) {
+    const center = CITY_CENTER[c.id];
+    await db.city.upsert({
+      where: { id: c.id },
+      update: {},
+      create: {
+        id: c.id,
+        name: c.name,
+        nameEn: c.nameEn,
+        country: COUNTRY[c.country] ?? "JP",
+        centerLat: center.lat,
+        centerLng: center.lng,
+      },
+    });
+  }
+
+  // 작품
+  for (const w of WORKS) {
+    await db.work.upsert({
+      where: { id: w.id },
+      update: {},
+      create: { id: w.id, title: w.title, type: WORKTYPE[w.type] ?? "OTHER" },
+    });
+  }
+
+  // 데모 사용자
+  const user = await db.user.upsert({
+    where: { id: "demo-jimin" },
+    update: {},
+    create: { id: "demo-jimin", name: "지민", nickname: "지민" },
+  });
+
+  // 스팟 (+ 작품 연결)
+  for (const s of SPOTS) {
+    const coord = SPOT_COORDS[s.id];
+    await db.spot.upsert({
+      where: { id: s.id },
+      update: {},
+      create: {
+        id: s.id,
+        name: s.title,
+        categoryId: catId(s.categoryLabel),
+        cityId: s.city,
+        shooterLat: coord?.lat ?? 0,
+        shooterLng: coord?.lng ?? 0,
+        coverImageUrl: "",
+        subject: s.title,
+        verificationStatus: VERIF[s.verified],
+        tip: s.tip,
+        lens: s.lens,
+        createdById: user.id,
+      },
+    });
+    if (s.workId) {
+      await db.spotWork.upsert({
+        where: { spotId_workId: { spotId: s.id, workId: s.workId } },
+        update: {},
+        create: { spotId: s.id, workId: s.workId, sceneNote: s.scene },
+      });
+    }
+  }
+
+  // 컬렉션 (+ 아이템)
+  for (const col of COLLECTIONS) {
+    await db.collection.upsert({
+      where: { id: col.id },
+      update: {},
+      create: {
+        id: col.id,
+        ownerId: user.id,
+        title: col.title,
+        isOfficial: col.isOfficial,
+        visibility: "LINK",
+      },
+    });
+    for (let i = 0; i < col.spots.length; i++) {
+      await db.collectionItem.upsert({
+        where: {
+          collectionId_spotId: { collectionId: col.id, spotId: col.spots[i] },
+        },
+        update: { order: i },
+        create: { collectionId: col.id, spotId: col.spots[i], order: i },
+      });
+    }
+  }
+
+  console.log(
+    `Seed 완료: 도시 ${CITIES.length} · 스팟 ${SPOTS.length} · 작품 ${WORKS.length} · 컬렉션 ${COLLECTIONS.length}`,
+  );
+}
+
+main()
+  .catch((e) => {
+    console.error(e);
+    process.exit(1);
+  })
+  .finally(() => db.$disconnect());

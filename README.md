@@ -40,11 +40,12 @@ npm run dev                    # http://localhost:3000
 ```bash
 docker compose up -d db      # PostgreSQL + PostGIS (localhost:5432)
 npm run db:migrate           # Prisma 테이블 생성(최초 마이그레이션)
+npm run db:seed              # 목업 → 실 DB 시드(도시·카테고리·스팟·작품·컬렉션)
 # .env.local: AUTH_SECRET(= npx auth secret) + provider 시크릿(AUTH_KAKAO_ID/SECRET 등)
 ```
-- **DB**: [`docker-compose.yml`](docker-compose.yml)(postgis/postgis:16-3.4) + `docker/initdb/01-postgis.sql`(`CREATE EXTENSION postgis`). Prisma Client 싱글턴은 [`lib/db.ts`](lib/db.ts).
-- **인증**: Auth.js v5 골격 — [`auth.ts`](auth.ts) · `/api/auth/[...nextauth]` · Prisma 어댑터 · Kakao/Google/Apple. **OAuth 앱 등록 후 시크릿을 넣어야 실제 로그인 동작**(Apple은 JWT 시크릿 별도 생성). 현재 로그인 화면은 데모 플로우.
-- **서버 액션**(목업 → 실데이터)은 미구현 — [`docs/api-surface.md`](docs/api-surface.md) 기준으로 진행.
+- **DB**: [`docker-compose.yml`](docker-compose.yml)(postgis/postgis:16-3.4) + `docker/initdb/01-postgis.sql`(`CREATE EXTENSION postgis`). Prisma Client 싱글턴은 [`lib/db.ts`](lib/db.ts). 시드는 [`prisma/seed.ts`](prisma/seed.ts).
+- **인증**: Auth.js v5 골격 — [`auth.ts`](auth.ts) · `/api/auth/[...nextauth]` · Prisma 어댑터 · **Kakao/Naver/Google/Apple**. **OAuth 앱 등록 후 시크릿을 넣어야 실제 로그인 동작**(Apple은 JWT 시크릿 별도 생성). 현재 로그인 화면은 데모 플로우.
+- **서버 액션(읽기 계층)**: [`lib/actions/spots.ts`](lib/actions/spots.ts)에 DB 읽기 함수 골격 존재. 페이지의 목업(`lib/mock.ts`)을 이 함수들로 점진 치환 예정 — [`docs/api-surface.md`](docs/api-surface.md) 기준.
 
 ## 필수 요건
 - **Node 24** (`.nvmrc` 참조) · npm
