@@ -291,3 +291,31 @@ export const getSpot = (id: string) => SPOTS.find((s) => s.id === id);
 export const getWork = (id: string) => WORKS.find((w) => w.id === id);
 export const spotsByCity = (city: CityId) =>
   SPOTS.filter((s) => s.city === city);
+
+export const RECENT_SEARCHES = [
+  "후지산",
+  "너의 이름은",
+  "남산 야경",
+  "스가 신사",
+  "경복궁",
+];
+export const TRENDING = [
+  "도쿄 야경",
+  "벚꽃 스팟",
+  "한강 일몰",
+  "애니 성지",
+  "노을 명소",
+  "옥상 뷰",
+];
+
+// 탐색 필터/정렬 옵션 (C1·C4)
+export const CATEGORY_FILTERS = [
+  "🏯 랜드마크",
+  "⛩️ 애니 성지",
+  "🎬 드라마",
+  "✨ 포토 스팟",
+  "🌸 계절",
+];
+export const VERIFY_FILTERS = ["공식 인증", "사용자 검증", "제보"];
+export const TIME_FILTERS = ["🌅 일출", "☀️ 낮", "🌇 일몰", "🌙 야경"];
+export const SORT_OPTIONS = ["인기순", "거리순", "최신순"];

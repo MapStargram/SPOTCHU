@@ -11,7 +11,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "format": "prettier --write .",
-    "hook:format": "prettier --write --cache app lib",
+    "hook:format": "prettier --write --cache app lib components",
     "hook:typecheck": "tsc --noEmit",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev"

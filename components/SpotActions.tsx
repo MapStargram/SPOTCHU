@@ -10,7 +10,9 @@ import { COLLECTIONS } from "@/lib/mock";
 export function SpotActions({ spotTitle }: { spotTitle: string }) {
   const [open, setOpen] = useState(false);
   const own = COLLECTIONS.filter((c) => c.isOwn);
-  const [selected, setSelected] = useState<Set<string>>(new Set(own[0] ? [own[0].id] : []));
+  const [selected, setSelected] = useState<Set<string>>(
+    new Set(own[0] ? [own[0].id] : []),
+  );
 
   const toggle = (id: string) =>
     setSelected((prev) => {
@@ -38,7 +40,11 @@ export function SpotActions({ spotTitle }: { spotTitle: string }) {
 
       {/* Save sheet */}
       {open && (
-        <div className="fixed inset-0 z-30 flex items-end justify-center" role="dialog" aria-modal>
+        <div
+          className="fixed inset-0 z-30 flex items-end justify-center"
+          role="dialog"
+          aria-modal
+        >
           <button
             aria-label="닫기"
             onClick={() => setOpen(false)}
@@ -46,8 +52,12 @@ export function SpotActions({ spotTitle }: { spotTitle: string }) {
           />
           <div className="relative z-10 w-full max-w-[430px] rounded-t-[28px] bg-cream px-6 pb-8 pt-5 text-navy">
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line-strong)]" />
-            <div className="text-[20px] font-extrabold tracking-[-0.02em]">컬렉션에 저장</div>
-            <div className="mt-0.5 text-[12px] text-[color:var(--muted)]">{spotTitle}</div>
+            <div className="text-[20px] font-extrabold tracking-[-0.02em]">
+              컬렉션에 저장
+            </div>
+            <div className="mt-0.5 text-[12px] text-[color:var(--muted)]">
+              {spotTitle}
+            </div>
 
             <button className="mt-4 flex w-full items-center gap-3 rounded-[14px] bg-coral px-3.5 py-3 text-left text-cream shadow-[var(--sh-cta-coral)] active:scale-[0.99]">
               <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-[rgba(255,249,242,0.2)]">
@@ -57,7 +67,9 @@ export function SpotActions({ spotTitle }: { spotTitle: string }) {
                 <span className="block text-[13px] font-extrabold tracking-[-0.01em]">
                   새 컬렉션 만들기
                 </span>
-                <span className="mt-0.5 block text-[11px] opacity-85">여행 계획을 새로 시작해요</span>
+                <span className="mt-0.5 block text-[11px] opacity-85">
+                  여행 계획을 새로 시작해요
+                </span>
               </span>
             </button>
 
@@ -93,7 +105,13 @@ export function SpotActions({ spotTitle }: { spotTitle: string }) {
                             : { border: "1.5px solid var(--line-strong)" }
                         }
                       >
-                        {on && <Check size={14} className="text-cream" strokeWidth={2.4} />}
+                        {on && (
+                          <Check
+                            size={14}
+                            className="text-cream"
+                            strokeWidth={2.4}
+                          />
+                        )}
                       </span>
                     </button>
                   </li>

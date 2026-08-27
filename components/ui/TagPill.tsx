@@ -3,7 +3,11 @@ import type { CSSProperties, ReactNode } from "react";
 type Variant = "glass" | "coral" | "mint" | "navy" | "cream" | "yellow";
 
 const VARIANTS: Record<Variant, CSSProperties> = {
-  glass: { background: "rgba(255,249,242,0.25)", color: "var(--cream)", backdropFilter: "blur(8px)" },
+  glass: {
+    background: "rgba(255,249,242,0.25)",
+    color: "var(--cream)",
+    backdropFilter: "blur(8px)",
+  },
   coral: { background: "var(--coral)", color: "var(--cream)" },
   mint: { background: "var(--mint)", color: "var(--navy)" },
   navy: { background: "var(--navy)", color: "var(--cream)" },

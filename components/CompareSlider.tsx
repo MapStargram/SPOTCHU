@@ -60,19 +60,29 @@ export function CompareSlider({
         </div>
         <div className="absolute inset-x-5 bottom-5 text-cream">
           <div className="text-[11px] opacity-85">{userLabel}</div>
-          <div className="mt-0.5 text-[15px] font-bold tracking-[-0.01em]">{userTitle}</div>
+          <div className="mt-0.5 text-[15px] font-bold tracking-[-0.01em]">
+            {userTitle}
+          </div>
         </div>
       </div>
       {/* 위 = 대표 (width로 클립) */}
-      <div className="absolute inset-0 overflow-hidden" style={{ width: `${pct}%` }}>
-        <div className="absolute inset-y-0 left-0" style={{ width: `${10000 / pct}%` }}>
+      <div
+        className="absolute inset-0 overflow-hidden"
+        style={{ width: `${pct}%` }}
+      >
+        <div
+          className="absolute inset-y-0 left-0"
+          style={{ width: `${10000 / pct}%` }}
+        >
           <div className="absolute inset-0" style={{ background: repGrad }}>
             <div className="absolute left-3.5 top-3.5">
               <TagPill variant="navy">대표 사진</TagPill>
             </div>
             <div className="absolute inset-x-5 bottom-5 text-cream">
               <div className="text-[11px] opacity-85">{repLabel}</div>
-              <div className="mt-0.5 text-[15px] font-bold tracking-[-0.01em]">{repTitle}</div>
+              <div className="mt-0.5 text-[15px] font-bold tracking-[-0.01em]">
+                {repTitle}
+              </div>
             </div>
           </div>
         </div>

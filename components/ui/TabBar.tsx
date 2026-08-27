@@ -5,9 +5,14 @@ type TabId = "home" | "explore" | "collections" | "profile";
 
 // 하단 내비 4탭. 아직 미구현 섹션(탐색·컬렉션·프로필)은 비활성(inert)으로 표시 —
 // 404 방지. 해당 섹션 구현 시 href를 채운다.
-const TABS: { id: TabId; label: string; Icon: typeof Home; href: string | null }[] = [
+const TABS: {
+  id: TabId;
+  label: string;
+  Icon: typeof Home;
+  href: string | null;
+}[] = [
   { id: "home", label: "홈", Icon: Home, href: "/home/tokyo" },
-  { id: "explore", label: "탐색", Icon: Compass, href: null },
+  { id: "explore", label: "탐색", Icon: Compass, href: "/explore/tokyo" },
   { id: "collections", label: "컬렉션", Icon: Bookmark, href: null },
   { id: "profile", label: "프로필", Icon: User, href: null },
 ];
@@ -22,7 +27,9 @@ export function TabBar({ active = "home" }: { active?: TabId }) {
           const content = (
             <span className={`flex flex-col items-center gap-1 ${color}`}>
               <Icon size={22} strokeWidth={2} />
-              <span className="font-ko text-[10px] font-semibold tracking-[-0.01em]">{label}</span>
+              <span className="font-ko text-[10px] font-semibold tracking-[-0.01em]">
+                {label}
+              </span>
             </span>
           );
           return (

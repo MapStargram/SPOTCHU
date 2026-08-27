@@ -26,7 +26,9 @@ export function Mascot({
       src={`/assets/mascot/${name}.svg`}
       alt={alt}
       className={className}
-      style={bob ? { animation: "chubob 1.6s ease-in-out infinite" } : undefined}
+      style={
+        bob ? { animation: "chubob 1.6s ease-in-out infinite" } : undefined
+      }
     />
   );
 }
