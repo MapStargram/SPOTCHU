@@ -267,7 +267,7 @@ export default async function SpotDetailScreen({
           </section>
         </div>
 
-        <SpotActions spotTitle={s.title} />
+        <SpotActions spotTitle={s.title} spotId={s.id} />
       </div>
     </div>
   );

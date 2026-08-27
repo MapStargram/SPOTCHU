@@ -1,13 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Bookmark, Plus, Check } from "lucide-react";
 import { CoralButton } from "./ui/CoralButton";
 import { COLLECTIONS } from "@/lib/mock";
 
 // D1/D3 하단 액션 행 + D4 저장 시트. 저장은 원탭→컬렉션 선택(PRD §15).
 // 체크인은 Section F(미구현) — 현재 inert.
-export function SpotActions({ spotTitle }: { spotTitle: string }) {
+export function SpotActions({
+  spotTitle,
+  spotId,
+}: {
+  spotTitle: string;
+  spotId: string;
+}) {
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const own = COLLECTIONS.filter((c) => c.isOwn);
   const [selected, setSelected] = useState<Set<string>>(
@@ -27,7 +35,12 @@ export function SpotActions({ spotTitle }: { spotTitle: string }) {
       {/* Sticky action row */}
       <div className="fixed inset-x-0 bottom-0 z-20">
         <div className="mx-auto flex max-w-[430px] gap-2.5 bg-gradient-to-t from-cream via-cream px-4 pb-6 pt-3">
-          <CoralButton className="flex-1">체크인 하고 수집하기</CoralButton>
+          <CoralButton
+            className="flex-1"
+            onClick={() => router.push(`/spot/${spotId}/checkin`)}
+          >
+            체크인 하고 수집하기
+          </CoralButton>
           <button
             onClick={() => setOpen(true)}
             aria-label="컬렉션에 저장"
