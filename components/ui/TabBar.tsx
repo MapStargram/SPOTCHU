@@ -14,7 +14,7 @@ const TABS: {
   { id: "home", label: "홈", Icon: Home, href: "/home/tokyo" },
   { id: "explore", label: "탐색", Icon: Compass, href: "/explore/tokyo" },
   { id: "collections", label: "컬렉션", Icon: Bookmark, href: "/collections" },
-  { id: "profile", label: "프로필", Icon: User, href: null },
+  { id: "profile", label: "프로필", Icon: User, href: "/profile" },
 ];
 
 export function TabBar({ active = "home" }: { active?: TabId }) {

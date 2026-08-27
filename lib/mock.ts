@@ -338,3 +338,76 @@ export const CITY_CENTER: Record<CityId, { lat: number; lng: number }> = {
   tokyo: { lat: 35.667, lng: 139.74 },
   seoul: { lat: 37.556, lng: 126.986 },
 };
+
+export interface Badge {
+  id: string;
+  title: string;
+  icon: string;
+  earned: boolean;
+  subtitle: string;
+  progress?: number;
+  total?: number;
+}
+
+export const BADGES: Badge[] = [
+  {
+    id: "first-checkin",
+    title: "첫 방문",
+    icon: "🎯",
+    earned: true,
+    subtitle: "첫 스팟 방문 인증",
+  },
+  {
+    id: "tokyo-5",
+    title: "도쿄 초심자",
+    icon: "🗼",
+    earned: true,
+    subtitle: "도쿄 스팟 5곳 방문",
+  },
+  {
+    id: "kimi-master",
+    title: "너의 이름은. 마스터",
+    icon: "🌠",
+    earned: false,
+    subtitle: "작품 스팟 전체 완주 · 4/12",
+    progress: 4,
+    total: 12,
+  },
+  {
+    id: "golden-hour",
+    title: "골든아워 헌터",
+    icon: "🌅",
+    earned: true,
+    subtitle: "일몰 시간대 3회 인증",
+  },
+  {
+    id: "collection-done",
+    title: "컬렉션 완주자",
+    icon: "📸",
+    earned: false,
+    subtitle: "내 컬렉션 1개 100% 방문",
+  },
+  {
+    id: "seoul-10",
+    title: "서울 애호가",
+    icon: "🏙️",
+    earned: false,
+    subtitle: "서울 스팟 10곳 방문 · 3/10",
+    progress: 3,
+    total: 10,
+  },
+];
+
+// 프로필 도시 진행률(데모)·방문 기록(데모)
+export const CITY_PROGRESS = [
+  { city: "도쿄", visited: 12, total: 342 },
+  { city: "서울", visited: 8, total: 218 },
+];
+export const VISIT_HISTORY = [
+  { id: "suga-shrine", when: "오늘", badge: true },
+  { id: "harajuku", when: "어제", badge: false },
+  { id: "shibuya", when: "2일 전", badge: false },
+  { id: "namsan", when: "1주 전", badge: false },
+  { id: "gyeongbok", when: "1주 전", badge: false },
+  { id: "seongsu", when: "2주 전", badge: false },
+];
