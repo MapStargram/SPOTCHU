@@ -74,6 +74,9 @@
 - 지도 연동 `492977a`: @vis.gl/react-google-maps로 탐색 지도(C1) 실 Google Maps 교체. 키는 `.env.local`(NEXT_PUBLIC_GOOGLE_MAPS_API_KEY, 미커밋). 키 없으면 CSS 폴백. mock에 SPOT_COORDS/CITY_CENTER 근사 좌표. **TODO: 프로덕션 Map ID(현 DEMO_MAP_ID)·키 리퍼러 제한·E3 컬렉션 지도도 실지도로 확장**. 인앱 프리뷰는 정적맵 폴백(실 Chrome은 인터랙티브).
 - **화면 전 섹션 A~K 완료 + 실 Google Maps 연동.** (F 체크인 `8bfc507` · G 프로필 `76862d2` · H 커뮤니티 `62aa497` · I 제보 `6c72fae` · J 알림/정책 `f22a488` · K 어드민 `31f9a18`)
 - 상태: 45개 화면 전부 구현, 65개 라우트 빌드(SSG), typecheck·lint·build·런타임(콘솔 0) 통과. 목업 데이터(lib/mock.ts) 기반.
+- **반응형 웹/앱 분리 완료** `9f0934e`·`46e002e`·`97f8b46`: 데스크톱=인스타식 좌측 Sidebar(components/shell/), 모바일=하단 TabBar(lg:hidden). AppShell 래퍼로 전 앱 서피스 감쌈(홈·탐색·컬렉션·프로필·피드·배지·기록·작품·스팟·컬렉션상세). 데스크톱 콘텐츠 240px 오프셋·와이드/다열 그리드. 검증: 데스크톱 사이드바·모바일 탭바 전환, 콘솔 0.
+- **실제 브랜드 아이콘** components/brand/BrandIcons.tsx: Google 4색·KakaoTalk 말풍선·Apple(이모지 제거). 로그인 적용.
+- 반응형 규칙: 앱 서피스는 `AppShell`로 감싸고, 페이지 콘텐츠는 `mx-auto max-w-[500px] lg:max-w-[720~960px]` + `lg:` 반응형. TabBar `lg:hidden`, Sidebar `hidden lg:flex`.
 - **남은 트랙(백엔드 인프라, 미착수)**: Auth.js 실연동(카카오·구글·애플 OAuth 앱 필요) · Postgres/PostGIS(docker)+첫 마이그레이션 · 서버 액션(api-surface) 구현 · R2 이미지 업로드 · 실데이터 치환. + 프로덕션 Map ID·키 리퍼러 제한.
 - 다음 인프라(미착수): 로컬 Postgres/PostGIS(docker)+첫 마이그레이션·Auth.js 실연동·Google Maps(C1 키 필요).
 - ⚠️ 교훈: dev 서버 켠 채 `npm run build` 금지(.next 캐시 오염→500). 빌드는 dev 중지 후.
