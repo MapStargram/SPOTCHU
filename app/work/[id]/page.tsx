@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronLeft, Share2, Check, ChevronRight } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
-import { TabBar } from "@/components/ui/TabBar";
+import { AppShell } from "@/components/shell/AppShell";
 import { WORKS, getWork } from "@/lib/mock";
 
 // B4 · 작품 상세 — 애니 성지 강조. 성지순례 진행률 카드가 1급 요소.
@@ -51,8 +51,8 @@ export default async function WorkDetailScreen({
   const progressPct = Math.round((w.progress / w.spotCount) * 100);
 
   return (
-    <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream pb-28">
+    <AppShell>
+      <div className="relative mx-auto flex w-full max-w-[500px] flex-col bg-cream pb-28 lg:max-w-[720px] lg:pb-12">
         {/* Hero */}
         <div
           className="relative h-[280px] overflow-hidden"
@@ -194,9 +194,7 @@ export default async function WorkDetailScreen({
             </ul>
           )}
         </section>
-
-        <TabBar />
       </div>
-    </div>
+    </AppShell>
   );
 }

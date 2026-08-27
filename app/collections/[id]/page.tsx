@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { AppShell } from "@/components/shell/AppShell";
 import { CollectionDetail } from "@/components/collections/CollectionDetail";
 import { COLLECTIONS, getCollection } from "@/lib/mock";
 
@@ -15,5 +16,9 @@ export default async function CollectionDetailPage({
   const { id } = await params;
   const col = getCollection(id);
   if (!col) notFound();
-  return <CollectionDetail col={col} />;
+  return (
+    <AppShell active="collections">
+      <CollectionDetail col={col} />
+    </AppShell>
+  );
 }

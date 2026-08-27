@@ -33,8 +33,8 @@ export function SpotActions({
   return (
     <>
       {/* Sticky action row */}
-      <div className="fixed inset-x-0 bottom-0 z-20">
-        <div className="mx-auto flex max-w-[430px] gap-2.5 bg-gradient-to-t from-cream via-cream px-4 pb-6 pt-3">
+      <div className="fixed inset-x-0 bottom-0 z-20 lg:pl-[240px]">
+        <div className="mx-auto flex max-w-[500px] gap-2.5 bg-gradient-to-t from-cream via-cream px-4 pb-6 pt-3 lg:max-w-[720px]">
           <CoralButton
             className="flex-1"
             onClick={() => router.push(`/spot/${spotId}/checkin`)}
@@ -54,7 +54,7 @@ export function SpotActions({
       {/* Save sheet */}
       {open && (
         <div
-          className="fixed inset-0 z-30 flex items-end justify-center"
+          className="fixed inset-0 z-30 flex items-end justify-center lg:pl-[240px]"
           role="dialog"
           aria-modal
         >
