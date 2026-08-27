@@ -55,8 +55,9 @@ export default async function HomeScreen({
       </header>
 
       {/* Hero card — 오늘의 스팟 */}
-      <div
-        className="relative h-[196px] overflow-hidden rounded-[22px] shadow-[var(--sh-elevated)]"
+      <Link
+        href={`/spot/${heroSpot.id}`}
+        className="relative block h-[196px] overflow-hidden rounded-[22px] shadow-[var(--sh-elevated)]"
         style={{ background: heroSpot.heroGrad }}
       >
         <div
@@ -80,7 +81,7 @@ export default async function HomeScreen({
             {heroSpot.subtitle}
           </div>
         </div>
-      </div>
+      </Link>
 
       {/* 큐레이션 컬렉션 */}
       <section className="text-navy">
@@ -140,30 +141,32 @@ export default async function HomeScreen({
         </div>
         <ul className="flex flex-col gap-3">
           {list.map((s) => (
-            <li key={s.id} className="flex items-center gap-3">
-              <div
-                className="relative h-[60px] w-[60px] shrink-0 rounded-[14px]"
-                style={{ background: s.thumbGrad }}
-              >
-                {s.verified === "official" && (
-                  <span className="absolute -bottom-1 -right-1">
-                    <Sparkle size={18} />
-                  </span>
-                )}
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="truncate text-[13px] font-bold tracking-[-0.01em]">
-                  {s.title}
+            <li key={s.id}>
+              <Link href={`/spot/${s.id}`} className="flex items-center gap-3">
+                <div
+                  className="relative h-[60px] w-[60px] shrink-0 rounded-[14px]"
+                  style={{ background: s.thumbGrad }}
+                >
+                  {s.verified === "official" && (
+                    <span className="absolute -bottom-1 -right-1">
+                      <Sparkle size={18} />
+                    </span>
+                  )}
                 </div>
-                <div className="mt-0.5 flex items-center gap-1.5 text-[11px] text-[color:var(--muted)]">
-                  <span>{s.categoryLabel}</span>
-                  <span>·</span>
-                  <span className="font-latin">
-                    {s.visits.toLocaleString()}
-                  </span>
+                <div className="min-w-0 flex-1">
+                  <div className="truncate text-[13px] font-bold tracking-[-0.01em]">
+                    {s.title}
+                  </div>
+                  <div className="mt-0.5 flex items-center gap-1.5 text-[11px] text-[color:var(--muted)]">
+                    <span>{s.categoryLabel}</span>
+                    <span>·</span>
+                    <span className="font-latin">
+                      {s.visits.toLocaleString()}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <ChevronRight size={16} className="text-[color:var(--muted)]" />
+                <ChevronRight size={16} className="text-[color:var(--muted)]" />
+              </Link>
             </li>
           ))}
         </ul>
