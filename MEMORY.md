@@ -67,4 +67,8 @@
 - 스캐폴드: Next.js 15(App Router)+TS+Tailwind3 수동 구성(기존 파일 충돌 회피). `app/`(layout·globals·page), `lib/geo.ts`(+test 7 통과), `prisma/schema.prisma`(데이터모델 전체), `.env.example`.
 - 검증 통과: prisma generate · typecheck · vitest(7) · lint · build. 훅(hook:format/typecheck) 실작동 확인.
 - Section A(온보딩·인증) 구현 완료 `9a2fd58`: 스플래시/온보딩3/로그인/위치권한 + 공유 컴포넌트(MobileScreen·CoralButton·Mascot). 브라우저 렌더 확인(에러 0). 소셜 로그인·위치권한은 화면/플로우만(실제 Auth.js·Geolocation은 후속).
-- 다음: (인프라) 로컬 Postgres/PostGIS(docker)+첫 마이그레이션(CREATE EXTENSION postgis)·Auth.js 연동 / (화면) Section B 홈·도시선택·작품상세.
+- Section B(홈·도시·작품) `b456e10`: /city, /home/[city](도쿄·서울), /work/[id]. 목업 lib/mock.ts + TabBar/TagPill/Sparkle.
+- Section D(스팟 상세) `8ecdda8`: /spot/[id] = D1 히어로·스탯·관련작품·각도 + D2 비교 슬라이더(드래그) + D3 팁·메타·리뷰 + D4 저장 시트. CompareSlider·SpotActions. 홈→스팟 연결.
+- 화면 진행: A·B·D 완료. **남음: C(탐색 지도⇄피드·검색·필터) · E(컬렉션) · F(체크인) · G(프로필·배지) · H(커뮤니티) · I(제보) · J(알림·정책) · K(어드민)**.
+- 다음 인프라(미착수): 로컬 Postgres/PostGIS(docker)+첫 마이그레이션·Auth.js 실연동·Google Maps(C1 키 필요).
+- ⚠️ 교훈: dev 서버 켠 채 `npm run build` 금지(.next 캐시 오염→500). 빌드는 dev 중지 후.
