@@ -19,7 +19,7 @@ const TABS: {
 
 export function TabBar({ active = "home" }: { active?: TabId }) {
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-[color:var(--line)] bg-[rgba(255,249,242,0.92)] backdrop-blur-xl">
+    <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-[color:var(--line)] bg-[rgba(255,249,242,0.92)] backdrop-blur-xl lg:hidden">
       <ul className="mx-auto flex h-[72px] max-w-[430px] items-start justify-around pt-3">
         {TABS.map(({ id, label, Icon, href }) => {
           const isActive = active === id;

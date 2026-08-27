@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { AppShell } from "@/components/shell/AppShell";
 import { ExploreView } from "@/components/explore/ExploreView";
 import { CITIES, spotsByCity, type CityId } from "@/lib/mock";
 
@@ -14,5 +15,9 @@ export default async function ExplorePage({
 }) {
   const { city } = await params;
   if (city !== "tokyo" && city !== "seoul") notFound();
-  return <ExploreView spots={spotsByCity(city as CityId)} />;
+  return (
+    <AppShell active="explore">
+      <ExploreView spots={spotsByCity(city as CityId)} />
+    </AppShell>
+  );
 }

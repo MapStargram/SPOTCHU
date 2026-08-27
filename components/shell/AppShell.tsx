@@ -1,0 +1,22 @@
+import { Sidebar } from "./Sidebar";
+import { TabBar } from "../ui/TabBar";
+
+// 앱 서피스 셸: 데스크톱은 좌측 Sidebar + 오프셋, 모바일은 하단 TabBar.
+// content 폭·헤더는 각 페이지가 반응형으로 관리한다(모바일 컬럼 ↔ 데스크톱 와이드).
+type Active = "home" | "explore" | "collections" | "profile";
+
+export function AppShell({
+  active,
+  children,
+}: {
+  active?: Active;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="min-h-dvh bg-[color:var(--cream-2)]">
+      <Sidebar active={active} />
+      <div className="min-h-dvh lg:pl-[240px]">{children}</div>
+      <TabBar active={active} />
+    </div>
+  );
+}

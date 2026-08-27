@@ -7,7 +7,7 @@ import type { Spot } from "@/lib/mock";
 // C2 · 피드(그리드). 2열 4:5 카드, 카드 탭 → 스팟 상세.
 export function FeedView({ spots }: { spots: Spot[] }) {
   return (
-    <div className="grid grid-cols-2 gap-2.5">
+    <div className="grid grid-cols-2 gap-2.5 lg:grid-cols-4 lg:gap-4">
       {spots.map((s) => (
         <Link
           key={s.id}
