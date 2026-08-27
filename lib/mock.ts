@@ -534,3 +534,67 @@ export const NOTIFICATIONS: Notification[] = [
     icon: "🌅",
   },
 ];
+
+export type Priority = "high" | "mid" | "low";
+export interface ModerationRow {
+  id: string;
+  type: string;
+  title: string;
+  reporter: string;
+  time: string;
+  priority: Priority;
+}
+
+export const MODERATION_QUEUE: ModerationRow[] = [
+  {
+    id: "m1",
+    type: "스팟 제보",
+    title: "롯데월드타워 63층 스카이덱",
+    reporter: "user_842",
+    time: "방금",
+    priority: "high",
+  },
+  {
+    id: "m2",
+    type: "신고",
+    title: '"북한산 인공암벽" — 사유지 침해',
+    reporter: "user_311",
+    time: "10분 전",
+    priority: "high",
+  },
+  {
+    id: "m3",
+    type: "스팟 제보",
+    title: "오다이바 자유의 여신상 전망대",
+    reporter: "trusted_user_2",
+    time: "25분 전",
+    priority: "mid",
+  },
+  {
+    id: "m4",
+    type: "공식 승격",
+    title: "홍대 걷고싶은거리 → USER_VERIFIED",
+    reporter: "자동",
+    time: "1시간 전",
+    priority: "mid",
+  },
+  {
+    id: "m5",
+    type: "신고",
+    title: '"이태원 단밤 포차 앞" 사진 부적절',
+    reporter: "user_142",
+    time: "2시간 전",
+    priority: "low",
+  },
+  {
+    id: "m6",
+    type: "스팟 제보",
+    title: "기치조지 이노카시라 공원 벚꽃길",
+    reporter: "user_299",
+    time: "3시간 전",
+    priority: "low",
+  },
+];
+
+export const getModerationRow = (id: string) =>
+  MODERATION_QUEUE.find((m) => m.id === id);
