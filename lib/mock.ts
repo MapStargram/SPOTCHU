@@ -321,3 +321,20 @@ export const CATEGORY_FILTERS = [
 export const VERIFY_FILTERS = ["공식 인증", "사용자 검증", "제보"];
 export const TIME_FILTERS = ["🌅 일출", "☀️ 낮", "🌇 일몰", "🌙 야경"];
 export const SORT_OPTIONS = ["인기순", "거리순", "최신순"];
+
+// 스팟 좌표 (지도용, 근사치 데모값). 실데이터 연동 시 Spot.shooterLat/Lng로 대체.
+export const SPOT_COORDS: Record<string, { lat: number; lng: number }> = {
+  mojik: { lat: 35.6297, lng: 139.7756 },
+  "suga-shrine": { lat: 35.6863, lng: 139.7197 },
+  shibuya: { lat: 35.6595, lng: 139.7005 },
+  harajuku: { lat: 35.6702, lng: 139.7027 },
+  namsan: { lat: 37.5512, lng: 126.9882 },
+  gyeongbok: { lat: 37.5796, lng: 126.977 },
+  seongsu: { lat: 37.5445, lng: 127.0559 },
+  "itaewon-danbam": { lat: 37.5344, lng: 126.9945 },
+};
+
+export const CITY_CENTER: Record<CityId, { lat: number; lng: number }> = {
+  tokyo: { lat: 35.667, lng: 139.74 },
+  seoul: { lat: 37.556, lng: 126.986 },
+};

@@ -1,13 +1,21 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps";
 import { Plus, Crosshair, MapPin } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
 import { Sparkle } from "../ui/Sparkle";
 import { VerifBadge } from "../ui/VerifBadge";
-import type { Spot } from "@/lib/mock";
+import { SPOT_COORDS, CITY_CENTER, type Spot, type CityId } from "@/lib/mock";
 
-// C1 · 지도 뷰. 현재는 CSS 가짜 지도 + 마커(플레이스홀더). 실제는 Google Maps JS API(PRD §12).
-const MARKERS = [
+// C1 · 지도 뷰. 키(NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)가 있으면 실제 Google Maps,
+// 없으면 CSS 가짜 지도로 폴백. 마커 색=검증상태(공식=verified, 그 외=default).
+const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+
+// 폴백(키 없음) — 가짜 지도 + 고정 위치 마커
+const FALLBACK_MARKERS = [
   { state: "verified" as const, x: 44, y: 30, focused: true },
   { state: "default" as const, x: 22, y: 44 },
   { state: "default" as const, x: 70, y: 40, badge: "7" },
@@ -16,20 +24,65 @@ const MARKERS = [
   { state: "default" as const, x: 54, y: 50 },
 ];
 
+function GoogleMapLayer({ spots, city }: { spots: Spot[]; city: CityId }) {
+  const router = useRouter();
+  const withCoords = spots.filter((s) => SPOT_COORDS[s.id]);
+  return (
+    <APIProvider apiKey={KEY as string}>
+      <Map
+        defaultCenter={CITY_CENTER[city]}
+        defaultZoom={13}
+        mapId="DEMO_MAP_ID"
+        disableDefaultUI
+        gestureHandling="greedy"
+        className="absolute inset-0 h-full w-full"
+      >
+        {withCoords.map((s) => (
+          <AdvancedMarker
+            key={s.id}
+            position={SPOT_COORDS[s.id]}
+            onClick={() => router.push(`/spot/${s.id}`)}
+            title={s.title}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={`/assets/map-markers/marker-${s.verified === "official" ? "verified" : "default"}.svg`}
+              alt=""
+              style={{
+                width: 34,
+                filter: "drop-shadow(0 6px 12px rgba(23,35,60,0.35))",
+              }}
+            />
+          </AdvancedMarker>
+        ))}
+      </Map>
+    </APIProvider>
+  );
+}
+
+function FallbackLayer() {
+  return (
+    <>
+      <MapBackground />
+      {FALLBACK_MARKERS.map((m, i) => (
+        <MapMarker key={i} {...m} />
+      ))}
+      <span className="absolute left-1/2 top-[56%] h-[18px] w-[18px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-white bg-coral shadow-[0_0_0_8px_rgba(255,95,109,0.2)]" />
+    </>
+  );
+}
+
 export function MapView({ spots }: { spots: Spot[] }) {
   const preview = spots[0];
   const loc = preview.subtitle.split("·").slice(0, 2).join("·").trim();
 
   return (
     <div className="absolute inset-0 overflow-hidden bg-[#DDE5EE]">
-      <MapBackground />
-
-      {MARKERS.map((m, i) => (
-        <MapMarker key={i} {...m} />
-      ))}
-
-      {/* 현재 위치 */}
-      <span className="absolute left-1/2 top-[56%] h-[18px] w-[18px] -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-white bg-coral shadow-[0_0_0_8px_rgba(255,95,109,0.2)]" />
+      {KEY ? (
+        <GoogleMapLayer spots={spots} city={preview.city as CityId} />
+      ) : (
+        <FallbackLayer />
+      )}
 
       {/* FABs — 제보(+, Section I 미구현)·내 위치(inert) */}
       <div className="absolute bottom-[210px] right-4 z-[9] flex flex-col gap-2.5">
