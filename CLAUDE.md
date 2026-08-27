@@ -50,9 +50,11 @@ SPOTCHU: 한·일 사진 스팟/애니 성지를 **정확한 지도 위치와 �
 
 ---
 
-## 자주 쓰는 명령 (Phase 0에서 확정)
-- 개발: `npm run dev` · 테스트: `npm test` · 린트: `npm run lint` · 타입체크: `npm run typecheck` · 빌드: `npm run build`
-- (아직 `package.json` 미생성. Phase 0 셋업 후 이 절과 훅 스크립트를 실제 값으로 확정한다.)
+## 자주 쓰는 명령
+- 개발 `npm run dev` · 빌드 `npm run build` · 테스트 `npm test` · 린트 `npm run lint` · 타입체크 `npm run typecheck`
+- DB: `npm run db:generate`(Prisma Client) · `npm run db:migrate`(로컬 마이그레이션)
+- 훅 연동: `hook:format`(prettier), `hook:typecheck`(tsc) — `.claude/settings.json`에서 자동 호출.
+- 환경: Node 24 · `.env.local`(예시 `.env.example`) 필요. PostGIS는 마이그레이션 SQL로 활성화.
 
 ## 정의된 완료(DoD)
 1. 대상 `spec.md`의 인수 조건(G/W/T) 충족 · 2. `rules.md` 불변식 미위반 · 3. 타입체크·린트·테스트 통과 · 4. 접근성 기본(시맨틱·포커스·대체텍스트·색+라벨) · 5. 문서-코드 일치.

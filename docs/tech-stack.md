@@ -21,8 +21,14 @@
 - **지도 비용**: 뷰포트 기반 로드·디바운스, 지도 로드/세션 지표화. 초과 임계·정적 지도 폴백은 TODO(prd §41).
 - **애플 로그인 웹 심사 요건** 확인 필요(TODO).
 
-## 개발 환경(Phase 0에서 확정)
-- 패키지 매니저, Node 버전, `.env` 키 목록(지도·OAuth·R2·DB), 로컬 Postgres/PostGIS(docker) 구성은 Phase 0 셋업 시 확정하고 이 문서에 추가한다.
+## 개발 환경 (Phase 0 확정)
+- **Node 24** · npm. 설치: `npm install`.
+- 스크립트: `dev/build/start/lint/typecheck/test`, `db:generate/db:migrate`, `hook:format/hook:typecheck`(훅용).
+- 구성 파일: `next.config.mjs`, `tsconfig.json`(paths `@/*`), `tailwind.config.ts`(브랜드색·폰트 CSS 변수 매핑), `postcss.config.mjs`, `.eslintrc.json`(next/core-web-vitals), `vitest.config.ts`.
+- 스타일 토큰: `app/globals.css`(원천 = `design_handoff_.../colors_and_type.css`, 동기화 필요). 폰트는 `app/layout.tsx`에서 CDN 로드(Phase 1에 self-host 재검토).
+- `.env` 키: `.env.example` 참조(DATABASE_URL, AUTH_*, NEXT_PUBLIC_GOOGLE_MAPS_API_KEY, R2_*).
+- **로컬 Postgres/PostGIS**: docker 구성은 인증/데이터 연동 착수 시 추가(TODO). PostGIS 확장은 첫 마이그레이션 SQL에서 `CREATE EXTENSION postgis`.
+- 지리 유틸: `lib/geo.ts`(haversine·bearing·canCheckIn) + `lib/geo.test.ts`.
 
 ## 후속(스택 확장 여지)
 - 웹푸시(Web Push), 분석(예: PostHog/GA4 중 택1 — TODO), 이미지 CDN 변환, 네이티브(Expo/React Native 재사용 고려).

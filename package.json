@@ -1,0 +1,40 @@
+{
+  "name": "spotchu",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "hook:format": "prettier --write --cache app lib",
+    "hook:typecheck": "tsc --noEmit",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^6",
+    "next": "^15",
+    "react": "^19",
+    "react-dom": "^19",
+    "zod": "^3"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "^15",
+    "postcss": "^8",
+    "prettier": "^3",
+    "prisma": "^6",
+    "tailwindcss": "^3",
+    "typescript": "^5",
+    "vitest": "^2"
+  }
+}

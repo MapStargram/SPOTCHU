@@ -1,0 +1,422 @@
+// SPOTCHU Prisma 스키마 (초안)
+// 원천: docs/data-model.md · 용어: docs/glossary.md
+// PostGIS는 마이그레이션 SQL로 활성화하고, 근처 검색은 raw SQL(ST_DWithin)로 처리한다(docs/tech-stack.md).
+// 좌표 불변식: Spot.shooterLat/shooterLng = 촬영자가 서는 위치.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ---------- Enums ----------
+enum Role {
+  GUEST
+  USER
+  TRUSTED_USER
+  MODERATOR
+  ADMIN
+}
+
+enum VerificationStatus {
+  OFFICIAL
+  USER_VERIFIED
+  USER_REPORTED
+  ESTIMATED
+}
+
+enum CollectionVisibility {
+  PRIVATE
+  LINK
+}
+
+enum SafetyTag {
+  PRIVATE_PROPERTY
+  RAILWAY
+  ROADWAY
+  BUSINESS
+}
+
+enum TimeOfDay {
+  DAWN
+  DAY
+  SUNSET
+  NIGHT
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum ReportTargetType {
+  SPOT
+  POST
+}
+
+enum ReportReason {
+  WRONG_LOCATION
+  COPYRIGHT
+  PRIVACY_TRESPASS
+  INAPPROPRIATE
+}
+
+enum ModerationType {
+  NEW_SPOT
+  REPORT
+  OFFICIAL_CANDIDATE
+  WORK_STILL_REQUEST
+}
+
+enum ModerationStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  MERGED
+  HIDDEN
+}
+
+enum WorkType {
+  ANIME
+  MOVIE
+  DRAMA
+  OTHER
+}
+
+enum Country {
+  KR
+  JP
+}
+
+enum SourcePlatform {
+  INSTAGRAM
+  THREADS
+  YOUTUBE
+  BLOG
+  OTHER
+}
+
+// ---------- Auth.js ----------
+model User {
+  id            String    @id @default(cuid())
+  email         String?   @unique
+  emailVerified DateTime?
+  nickname      String?
+  avatarUrl     String?
+  role          Role      @default(USER)
+  isTrusted     Boolean   @default(false)
+  // 동의 이력 (한국 위치정보법 대응)
+  agreedTermsAt    DateTime?
+  agreedPrivacyAt  DateTime?
+  agreedLocationAt DateTime?
+  birthYear        Int?
+  createdAt     DateTime  @default(now())
+
+  accounts    Account[]
+  sessions    Session[]
+  collections Collection[]
+  posts       Post[]
+  likes       Like[]
+  checkIns    CheckIn[]
+  badges      UserBadge[]
+  reportedSpots Spot[]    @relation("SpotCreatedBy")
+  reports     Report[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ---------- Domain ----------
+model City {
+  id          String  @id @default(cuid())
+  name        String
+  nameEn      String?
+  country     Country
+  centerLat   Float
+  centerLng   Float
+  defaultZoom Int     @default(13)
+  isActive    Boolean @default(true)
+
+  spots       Spot[]
+  collections Collection[]
+}
+
+model Category {
+  id        String @id @default(cuid())
+  key       String @unique
+  label     String
+  sortOrder Int    @default(0)
+
+  spots Spot[]
+}
+
+model Spot {
+  id         String             @id @default(cuid())
+  name       String
+  categoryId String
+  cityId     String
+  // 불변식: 촬영자가 서는 위치
+  shooterLat Float
+  shooterLng Float
+  coverImageUrl String
+  subject    String
+  verificationStatus VerificationStatus @default(USER_REPORTED)
+  createdById String?
+
+  // 선택
+  subjectLat  Float?
+  subjectLng  Float?
+  bearing     Float?
+  addressCached String?
+  access      String?
+  tip         String?
+  timeOfDay   TimeOfDay[]
+  season      String?
+  lens        String?
+  difficulty  Difficulty?
+  crowdedness String?
+  caution     String?
+  checkinRadiusM Int      @default(100)
+
+  // 안전
+  safetyTags       SafetyTag[]
+  isBlockedHighRisk Boolean  @default(false)
+
+  // 파생 집계 캐시
+  saveCount          Int @default(0)
+  checkinCount       Int @default(0)
+  uniqueCheckinCount Int @default(0)
+  likeSum            Int @default(0)
+
+  // i18n (후속)
+  nameJa    String?
+  subjectJa String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  category  Category @relation(fields: [categoryId], references: [id])
+  city      City     @relation(fields: [cityId], references: [id])
+  createdBy User?    @relation("SpotCreatedBy", fields: [createdById], references: [id])
+  works     SpotWork[]
+  items     CollectionItem[]
+  posts     Post[]
+  checkIns  CheckIn[]
+  leads     SpotLead[]
+
+  @@index([cityId])
+  @@index([categoryId])
+  @@index([verificationStatus])
+}
+
+model Work {
+  id       String   @id @default(cuid())
+  title    String
+  titleEn  String?
+  type     WorkType
+  coverImageUrl String?
+  description   String?
+
+  spots SpotWork[]
+}
+
+model SpotWork {
+  id        String  @id @default(cuid())
+  spotId    String
+  workId    String
+  episode   String?
+  sceneNote String?
+
+  spot Spot @relation(fields: [spotId], references: [id], onDelete: Cascade)
+  work Work @relation(fields: [workId], references: [id], onDelete: Cascade)
+
+  @@unique([spotId, workId])
+}
+
+model Collection {
+  id          String               @id @default(cuid())
+  ownerId     String
+  title       String
+  description String?
+  visibility  CollectionVisibility @default(PRIVATE)
+  isOfficial  Boolean              @default(false)
+  isDefault   Boolean              @default(false)
+  cityId      String?
+  coverImageUrl String?
+  createdAt   DateTime             @default(now())
+
+  owner User             @relation(fields: [ownerId], references: [id], onDelete: Cascade)
+  city  City?            @relation(fields: [cityId], references: [id])
+  items CollectionItem[]
+}
+
+model CollectionItem {
+  id           String   @id @default(cuid())
+  collectionId String
+  spotId       String
+  order        Int      @default(0)
+  day          Int? // nullable — 후속 날짜별 일정 확장 여지
+  addedAt      DateTime @default(now())
+
+  collection Collection @relation(fields: [collectionId], references: [id], onDelete: Cascade)
+  spot       Spot       @relation(fields: [spotId], references: [id], onDelete: Cascade)
+
+  @@unique([collectionId, spotId])
+}
+
+model Post {
+  id             String   @id @default(cuid())
+  authorId       String
+  spotId         String // 스팟 필수 연결
+  caption        String?
+  isVerifiedShot Boolean  @default(false)
+  createdAt      DateTime @default(now())
+
+  author User        @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  spot   Spot        @relation(fields: [spotId], references: [id], onDelete: Cascade)
+  images PostImage[]
+  likes  Like[]
+
+  @@index([spotId])
+  @@index([authorId])
+}
+
+model PostImage {
+  id     String @id @default(cuid())
+  postId String
+  url    String
+  order  Int    @default(0)
+
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+}
+
+model Like {
+  id        String   @id @default(cuid())
+  postId    String
+  userId    String
+  createdAt DateTime @default(now())
+
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, userId])
+}
+
+model CheckIn {
+  id             String   @id @default(cuid())
+  userId         String
+  spotId         String
+  deviceAccuracyM Float?
+  isMockSuspected Boolean @default(false)
+  createdAt      DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  spot Spot @relation(fields: [spotId], references: [id], onDelete: Cascade)
+
+  // 스팟당 방문 완료는 최초 1회 unique (재인증 쿨다운은 애플리케이션 규칙)
+  @@unique([userId, spotId])
+  @@index([spotId])
+}
+
+model Badge {
+  id          String @id @default(cuid())
+  key         String @unique
+  type        String // CITY | PILGRIMAGE_COMPLETE | FIRST_REPORTER
+  label       String
+  description String?
+  iconUrl     String?
+  criteria    Json?
+
+  users UserBadge[]
+}
+
+model UserBadge {
+  id        String   @id @default(cuid())
+  userId    String
+  badgeId   String
+  context   String   @default("") // cityId/workId 등 구분자
+  awardedAt DateTime @default(now())
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  badge Badge @relation(fields: [badgeId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, badgeId, context])
+}
+
+model Report {
+  id         String           @id @default(cuid())
+  reporterId String
+  targetType ReportTargetType
+  targetId   String
+  reason     ReportReason
+  memo       String?
+  createdAt  DateTime         @default(now())
+
+  reporter User @relation(fields: [reporterId], references: [id], onDelete: Cascade)
+}
+
+model ModerationItem {
+  id         String           @id @default(cuid())
+  type       ModerationType
+  status     ModerationStatus @default(PENDING)
+  refType    String
+  refId      String
+  assigneeId String?
+  note       String?
+  createdAt  DateTime         @default(now())
+  resolvedAt DateTime?
+
+  @@index([status])
+  @@index([type])
+}
+
+// 외부 시딩 리드 — ⚠️ 원본 이미지 저장 금지, 좌표·출처 메타만 (docs/features/12-policies)
+model SpotLead {
+  id             String         @id @default(cuid())
+  sourceUrl      String
+  sourcePlatform SourcePlatform
+  placeName      String?
+  lat            Float?
+  lng            Float?
+  note           String?
+  status         ModerationStatus @default(PENDING)
+  promotedSpotId String?
+  createdAt      DateTime         @default(now())
+
+  promotedSpot Spot? @relation(fields: [promotedSpotId], references: [id])
+}
