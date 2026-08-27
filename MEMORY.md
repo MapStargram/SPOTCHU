@@ -70,6 +70,8 @@
 - Section B(홈·도시·작품) `b456e10`: /city, /home/[city](도쿄·서울), /work/[id]. 목업 lib/mock.ts + TabBar/TagPill/Sparkle.
 - Section D(스팟 상세) `8ecdda8`: /spot/[id] = D1 히어로·스탯·관련작품·각도 + D2 비교 슬라이더(드래그) + D3 팁·메타·리뷰 + D4 저장 시트. CompareSlider·SpotActions. 홈→스팟 연결.
 - Section C(탐색) `63a6e3d`: /explore/[city] 지도⇄피드 토글+필터시트, /search. 지도는 CSS 플레이스홀더+마커(실제 Google Maps는 MapView/MapBackground만 교체). 컴포넌트 ExploreView·MapView·FeedView·FilterSheet·MapBackground·MapMarker·Chip·VerifBadge.
-- 화면 진행: **A·B·C·D 완료. 남음: E(컬렉션) · F(체크인) · G(프로필·배지) · H(커뮤니티) · I(제보) · J(알림·정책) · K(어드민)**.
+- Section E(컬렉션) `8afdc8e`: /collections 목록·상세(리스트⇄지도)·생성.
+- 지도 연동 `492977a`: @vis.gl/react-google-maps로 탐색 지도(C1) 실 Google Maps 교체. 키는 `.env.local`(NEXT_PUBLIC_GOOGLE_MAPS_API_KEY, 미커밋). 키 없으면 CSS 폴백. mock에 SPOT_COORDS/CITY_CENTER 근사 좌표. **TODO: 프로덕션 Map ID(현 DEMO_MAP_ID)·키 리퍼러 제한·E3 컬렉션 지도도 실지도로 확장**. 인앱 프리뷰는 정적맵 폴백(실 Chrome은 인터랙티브).
+- 화면 진행: **A·B·C·D·E 완료 + 지도 연동. 남음: F(체크인) · G(프로필·배지) · H(커뮤니티) · I(제보) · J(알림·정책) · K(어드민)**.
 - 다음 인프라(미착수): 로컬 Postgres/PostGIS(docker)+첫 마이그레이션·Auth.js 실연동·Google Maps(C1 키 필요).
 - ⚠️ 교훈: dev 서버 켠 채 `npm run build` 금지(.next 캐시 오염→500). 빌드는 dev 중지 후.
