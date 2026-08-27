@@ -86,12 +86,13 @@ export function MapView({ spots }: { spots: Spot[] }) {
 
       {/* FABs — 제보(+, Section I 미구현)·내 위치(inert) */}
       <div className="absolute bottom-[210px] right-4 z-[9] flex flex-col gap-2.5">
-        <span
-          aria-disabled
+        <Link
+          href="/report"
+          aria-label="스팟 제보"
           className="flex h-12 w-12 items-center justify-center rounded-full bg-coral text-cream shadow-[var(--sh-cta-coral)]"
         >
           <Plus size={22} />
-        </span>
+        </Link>
         <span
           aria-disabled
           className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)]"
