@@ -1,15 +1,15 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
+import { AppShell } from "@/components/shell/AppShell";
 import { Mascot } from "@/components/ui/Mascot";
-import { TabBar } from "@/components/ui/TabBar";
 import { BADGES } from "@/lib/mock";
 
 // G2 · 배지 도감
 export default function BadgeDexPage() {
   const earned = BADGES.filter((b) => b.earned).length;
   return (
-    <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-4 pb-28 pt-14">
+    <AppShell active="profile">
+      <div className="mx-auto w-full max-w-[500px] px-4 pb-28 pt-14 lg:max-w-[820px] lg:px-8 lg:pb-12 lg:pt-6">
         <header className="flex items-center gap-2.5 text-navy">
           <Link
             href="/profile"
@@ -51,7 +51,7 @@ export default function BadgeDexPage() {
           </div>
         </div>
 
-        <div className="mt-5 grid grid-cols-2 gap-2.5">
+        <div className="mt-5 grid grid-cols-2 gap-2.5 lg:grid-cols-4 lg:gap-4">
           {BADGES.map((b) => (
             <div
               key={b.id}
@@ -84,9 +84,7 @@ export default function BadgeDexPage() {
             </div>
           ))}
         </div>
-
-        <TabBar active="profile" />
       </div>
-    </div>
+    </AppShell>
   );
 }

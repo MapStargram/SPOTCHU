@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Camera, Heart, Share2, Bookmark, MoreHorizontal } from "lucide-react";
 import { Chip } from "@/components/ui/Chip";
 import { TagPill } from "@/components/ui/TagPill";
-import { TabBar } from "@/components/ui/TabBar";
+import { AppShell } from "@/components/shell/AppShell";
 import { CITIES, getCity, getSpot, postsByCity } from "@/lib/mock";
 
 // H1 · 도시 피드. 스팟 연결 사진 게시물. 카메라 → 업로드, 게시물 → 상세.
@@ -22,8 +22,8 @@ export default async function FeedPage({
   const posts = postsByCity(city);
 
   return (
-    <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream pb-28 pt-14">
+    <AppShell active="explore">
+      <div className="mx-auto flex w-full max-w-[500px] flex-col bg-cream pb-28 pt-14 lg:pb-12 lg:pt-6">
         <header className="flex items-center justify-between px-4">
           <div>
             <div className="font-latin text-[10px] font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
@@ -114,9 +114,7 @@ export default async function FeedPage({
             );
           })}
         </div>
-
-        <TabBar active="explore" />
       </div>
-    </div>
+    </AppShell>
   );
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ChevronLeft, Check } from "lucide-react";
-import { TabBar } from "@/components/ui/TabBar";
+import { AppShell } from "@/components/shell/AppShell";
 import { VISIT_HISTORY, getSpot } from "@/lib/mock";
 
 // G3 · 방문 기록
@@ -9,8 +9,8 @@ export default function HistoryPage() {
     (r) => r.spot,
   );
   return (
-    <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pb-28 pt-14">
+    <AppShell active="profile">
+      <div className="mx-auto w-full max-w-[500px] px-5 pb-28 pt-14 lg:max-w-[720px] lg:px-8 lg:pb-12 lg:pt-6">
         <header className="flex items-center gap-2.5 text-navy">
           <Link
             href="/profile"
@@ -63,9 +63,7 @@ export default function HistoryPage() {
             </li>
           ))}
         </ul>
-
-        <TabBar active="profile" />
       </div>
-    </div>
+    </AppShell>
   );
 }
