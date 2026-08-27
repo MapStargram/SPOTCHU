@@ -485,3 +485,52 @@ export const POSTS: Post[] = [
 export const getPost = (id: string) => POSTS.find((p) => p.id === id);
 export const postsByCity = (city: CityId) =>
   POSTS.filter((p) => p.city === city);
+
+export interface Notification {
+  id: string;
+  type: "badge" | "moderation" | "promotion";
+  title: string;
+  body: string;
+  time: string;
+  unread: boolean;
+  icon: string;
+}
+
+export const NOTIFICATIONS: Notification[] = [
+  {
+    id: "n1",
+    type: "badge",
+    title: "새 배지 획득!",
+    body: "도쿄 초심자 배지를 획득했어요.",
+    time: "방금",
+    unread: true,
+    icon: "🗼",
+  },
+  {
+    id: "n2",
+    type: "moderation",
+    title: "제보가 승인되었어요",
+    body: '"성수동 붉은벽돌 골목"이 지도에 노출됩니다.',
+    time: "2시간 전",
+    unread: true,
+    icon: "✓",
+  },
+  {
+    id: "n3",
+    type: "promotion",
+    title: "내 스팟이 검증되었어요",
+    body: '"성수동 붉은벽돌 골목"이 사용자 검증 단계로 승격되었습니다.',
+    time: "어제",
+    unread: false,
+    icon: "★",
+  },
+  {
+    id: "n4",
+    type: "badge",
+    title: "새 배지 획득!",
+    body: "골든아워 헌터 배지를 획득했어요.",
+    time: "3일 전",
+    unread: false,
+    icon: "🌅",
+  },
+];

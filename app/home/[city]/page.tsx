@@ -54,12 +54,13 @@ export default async function HomeScreen({
           >
             <Camera size={20} />
           </Link>
-          <span
-            aria-disabled
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy opacity-70 shadow-[var(--sh-card)]"
+          <Link
+            href="/notifications"
+            aria-label="알림"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)]"
           >
             <Bell size={20} />
-          </span>
+          </Link>
         </div>
       </header>
 
