@@ -45,6 +45,27 @@ export function KakaoIcon({
   );
 }
 
+// Naver — N 로고
+export function NaverIcon({
+  size = 16,
+  color = "#ffffff",
+}: {
+  size?: number;
+  color?: string;
+}) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={color}
+      aria-hidden
+    >
+      <path d="M16.27 12.845 7.376 0H0v24h7.73V11.153L16.624 24H24V0h-7.73v12.845z" />
+    </svg>
+  );
+}
+
 // Apple — 사과 로고
 export function AppleIcon({
   size = 18,

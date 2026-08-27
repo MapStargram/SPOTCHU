@@ -6,6 +6,7 @@ import { Mascot } from "@/components/ui/Mascot";
 import {
   GoogleIcon,
   KakaoIcon,
+  NaverIcon,
   AppleIcon,
 } from "@/components/brand/BrandIcons";
 
@@ -18,6 +19,13 @@ const PROVIDERS = [
     bg: "#FEE500",
     color: "#191919",
     icon: <KakaoIcon size={19} color="#191919" />,
+  },
+  {
+    id: "naver",
+    label: "네이버로 계속하기",
+    bg: "#03C75A",
+    color: "#ffffff",
+    icon: <NaverIcon size={15} color="#ffffff" />,
   },
   {
     id: "google",
