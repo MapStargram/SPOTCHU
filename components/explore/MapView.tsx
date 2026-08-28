@@ -1,6 +1,6 @@
 "use client";
 
-import { createElement, useCallback, useEffect, useRef, useState } from "react";
+import { createElement, useEffect, useRef } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -221,25 +221,21 @@ function FallbackLayer() {
   );
 }
 
-export function MapView({ spots, city }: { spots: Spot[]; city: CityId }) {
+export function MapView({
+  spots,
+  city,
+  userPos,
+  onLocate,
+}: {
+  spots: Spot[];
+  city: CityId;
+  userPos: LatLng | null; // 현재 위치(ExploreView가 소유 — 피드 거리순과 공유)
+  onLocate: () => void; // FAB '내 위치로 이동' → 재요청
+}) {
   const preview = spots[0];
   const loc = preview
     ? preview.subtitle.split("·").slice(0, 2).join("·").trim()
     : "";
-
-  // 현재 위치. 진입 시 1회 요청(권한 거부/실패 시 도시 중심 유지), FAB으로 재요청.
-  const [userPos, setUserPos] = useState<LatLng | null>(null);
-  const locate = useCallback(() => {
-    if (typeof navigator === "undefined" || !navigator.geolocation) return;
-    navigator.geolocation.getCurrentPosition(
-      (p) => setUserPos({ lat: p.coords.latitude, lng: p.coords.longitude }),
-      () => {},
-      { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 },
-    );
-  }, []);
-  useEffect(() => {
-    locate();
-  }, [locate]);
 
   return (
     <div className="absolute inset-0 overflow-hidden bg-[#DDE5EE]">
@@ -264,7 +260,7 @@ export function MapView({ spots, city }: { spots: Spot[]; city: CityId }) {
         </Link>
         <button
           type="button"
-          onClick={locate}
+          onClick={onLocate}
           aria-label="현재 위치로 이동"
           className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)] transition active:scale-95"
         >

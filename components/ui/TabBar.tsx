@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Home, Compass, Bookmark, User } from "lucide-react";
+import { cityFromPathname } from "@/lib/city-path";
 
 type TabId = "home" | "explore" | "collections" | "profile";
 // AppShell은 notifications·report도 넘길 수 있다(하단 탭엔 없음 → 어떤 탭도 활성화 안 됨).
@@ -20,11 +24,13 @@ const TABS: {
 ];
 
 export function TabBar({ active = "home" }: { active?: ActiveProp }) {
+  const city = cityFromPathname(usePathname()); // 탐색은 현재 보고 있는 도시로
   return (
     <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-[color:var(--line)] bg-[rgba(255,249,242,0.92)] backdrop-blur-xl lg:hidden">
       <ul className="mx-auto flex h-[72px] max-w-[430px] items-start justify-around pt-3">
-        {TABS.map(({ id, label, Icon, href }) => {
+        {TABS.map(({ id, label, Icon, href: rawHref }) => {
           const isActive = active === id;
+          const href = id === "explore" ? `/explore/${city}` : rawHref;
           const color = isActive ? "text-coral" : "text-[color:var(--muted)]";
           const content = (
             <span className={`flex flex-col items-center gap-1 ${color}`}>

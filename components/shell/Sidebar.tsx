@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Home,
   Compass,
@@ -8,6 +11,7 @@ import {
   PlusSquare,
   Settings,
 } from "lucide-react";
+import { cityFromPathname } from "@/lib/city-path";
 
 // 데스크톱 좌측 사이드바(인스타그램식). 기본은 아이콘만 보이는 좁은 레일(76px),
 // 마우스 호버 시 244px로 확장되어 라벨 노출(콘텐츠 위 오버레이). 모바일은 숨김(하단 TabBar).
@@ -34,6 +38,7 @@ const labelBase =
   "whitespace-nowrap text-[16px] leading-none opacity-0 transition-opacity duration-150 group-hover:opacity-100";
 
 export function Sidebar({ active }: { active?: Active }) {
+  const city = cityFromPathname(usePathname()); // 탐색은 현재 보고 있는 도시로
   return (
     <aside className="group peer fixed inset-y-0 left-0 z-30 hidden w-[76px] flex-col overflow-hidden border-r border-[color:var(--line)] bg-cream transition-[width] duration-200 ease-out hover:w-[244px] hover:shadow-[var(--sh-card)] lg:flex">
       <div className="flex w-[244px] flex-1 flex-col px-3 py-6">
@@ -60,10 +65,11 @@ export function Sidebar({ active }: { active?: Active }) {
         <nav className="flex flex-col gap-1">
           {NAV.map(({ id, label, Icon, href }) => {
             const on = active === id;
+            const to = id === "explore" ? `/explore/${city}` : href;
             return (
               <Link
                 key={id}
-                href={href}
+                href={to}
                 aria-current={on ? "page" : undefined}
                 className={`${itemBase} ${on ? "text-navy" : "text-navy"}`}
               >

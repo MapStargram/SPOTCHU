@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import {
   Search,
@@ -13,7 +13,29 @@ import { Chip } from "../ui/Chip";
 import { MapView } from "./MapView";
 import { FeedView } from "./FeedView";
 import { FilterSheet } from "./FilterSheet";
+import { posOf } from "./pin";
 import type { Spot, CityId } from "@/lib/mock";
+
+type LatLng = { lat: number; lng: number };
+
+// 피드 정렬(전체/인기순/거리순/최신순). 거리순은 현재 위치 필요(없으면 원순서 유지).
+function sortFeed(spots: Spot[], chip: number, userPos: LatLng | null): Spot[] {
+  const arr = [...spots];
+  if (chip === 1)
+    return arr.sort((a, b) => b.visits + b.saves - (a.visits + a.saves)); // 인기순
+  if (chip === 2) {
+    if (!userPos) return arr; // 거리순 — 위치 미허용 시 원순서
+    const dist2 = (s: Spot) => {
+      const p = posOf(s);
+      return p
+        ? (p.lat - userPos.lat) ** 2 + (p.lng - userPos.lng) ** 2
+        : Infinity;
+    };
+    return arr.sort((a, b) => dist2(a) - dist2(b));
+  }
+  if (chip === 3) return arr.reverse(); // 최신순(데이터 추가 역순, 홈 그리드와 동일 규칙)
+  return arr; // 전체
+}
 
 const MAP_CHIPS = [
   { label: "추천", dot: "var(--yellow)" },
@@ -34,6 +56,30 @@ export function ExploreView({ spots, city }: { spots: Spot[]; city: CityId }) {
   const [chip, setChip] = useState(0);
   const [filterOpen, setFilterOpen] = useState(false);
   const chips = view === "map" ? MAP_CHIPS : FEED_CHIPS;
+
+  // 현재 위치(지도 중심 + 피드 거리순 공유). 진입 시 1회 요청, FAB으로 재요청.
+  const [userPos, setUserPos] = useState<LatLng | null>(null);
+  const locate = useCallback(() => {
+    if (typeof navigator === "undefined" || !navigator.geolocation) return;
+    navigator.geolocation.getCurrentPosition(
+      (p) => setUserPos({ lat: p.coords.latitude, lng: p.coords.longitude }),
+      () => {},
+      { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 },
+    );
+  }, []);
+  useEffect(() => {
+    locate();
+  }, [locate]);
+
+  // 거리순(chip 2)을 골랐는데 위치가 없으면 재요청.
+  useEffect(() => {
+    if (view === "feed" && chip === 2 && !userPos) locate();
+  }, [view, chip, userPos, locate]);
+
+  const feedSpots = useMemo(
+    () => sortFeed(spots, chip, userPos),
+    [spots, chip, userPos],
+  );
 
   const seg = (v: "map" | "feed", Icon: typeof MapIcon, label: string) => (
     <button
@@ -114,11 +160,16 @@ export function ExploreView({ spots, city }: { spots: Spot[]; city: CityId }) {
       {/* Body */}
       {view === "map" ? (
         <div className="relative flex-1">
-          <MapView spots={spots} city={city} />
+          <MapView
+            spots={spots}
+            city={city}
+            userPos={userPos}
+            onLocate={locate}
+          />
         </div>
       ) : (
         <div className="mx-auto w-full max-w-[1180px] flex-1 px-4 pb-28 pt-4 lg:px-8 lg:pb-12">
-          <FeedView spots={spots} />
+          <FeedView spots={feedSpots} />
         </div>
       )}
 
