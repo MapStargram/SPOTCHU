@@ -3,6 +3,7 @@ import { Settings, Pencil, ChevronRight, LogIn } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { getCurrentUser } from "@/lib/session";
 import { getProfileStats, getCityProgress, getBadgeCards } from "@/lib/data";
+import { db } from "@/lib/db";
 
 // 개인 통계·배지를 매 요청 반영해야 하므로 동적 렌더.
 export const dynamic = "force-dynamic";
@@ -15,7 +16,15 @@ export default async function ProfilePage() {
     getCityProgress(),
     getBadgeCards(),
   ]);
-  const name = user?.name || "게스트";
+  const nickname = user?.id
+    ? (
+        await db.user.findUnique({
+          where: { id: user.id },
+          select: { nickname: true },
+        })
+      )?.nickname
+    : null;
+  const name = nickname || user?.name || "게스트";
   const sub = user?.email || "로그인하고 저장·인증을 시작하세요";
   const initial = (name.trim()[0] || "S").toUpperCase();
   return (
