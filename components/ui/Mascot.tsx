@@ -1,6 +1,6 @@
 // 마스코트 'Chu' 이미지. 에셋: public/assets/mascot/*.svg (자체 그라디언트 포함 SVG).
 // SVG는 next/image 없이 <img>로 표시(장식용, 자체 사이징). 접근성 위해 alt 필수.
-type MascotName =
+export type MascotName =
   | "chu-mascot-front"
   | "chu-mascot-side"
   | "chu-mascot-camera"

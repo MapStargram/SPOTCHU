@@ -19,11 +19,6 @@ import {
 // A5 · Login — 소셜 로그인(카카오·네이버·구글·애플) + 이메일/비밀번호.
 // NEXT_PUBLIC_AUTH_ENABLED="true" 면 실제 Auth.js signIn, 아니면 데모 플로우(권한/도시 화면으로).
 const AUTH_ENABLED = process.env.NEXT_PUBLIC_AUTH_ENABLED === "true";
-// 활성화 시 표시할 provider(쉼표구분, 예: "google,kakao"). 데모 모드에선 전부 표시.
-const ENABLED_PROVIDERS = (process.env.NEXT_PUBLIC_AUTH_PROVIDERS || "")
-  .split(",")
-  .map((s) => s.trim())
-  .filter(Boolean);
 const PROVIDERS = [
   {
     id: "kakao",
@@ -58,15 +53,22 @@ const PROVIDERS = [
 
 export default function LoginScreen() {
   const router = useRouter();
-  // 실제 설정된 provider를 auth 서버에서 가져와 표시(초기값은 env 폴백). 미설정 provider는 자동 숨김.
-  const [available, setAvailable] = useState<string[]>(ENABLED_PROVIDERS);
+  // 마운트 전(SSR·하이드레이션 첫 렌더)엔 available=null → 항상 정적 PROVIDERS 전체를
+  // 결정적으로 렌더한다. 서버/클라의 env(NEXT_PUBLIC_*) 인라인이 어긋나도(예: 워크트리
+  // 분리) 첫 렌더가 동일해 하이드레이션 불일치가 발생하지 않는다. 실제 활성 provider는
+  // 마운트 후에 좁힌다(미설정 provider 자동 숨김).
+  const [available, setAvailable] = useState<string[] | null>(null);
   useEffect(() => {
-    if (!AUTH_ENABLED) return;
+    if (!AUTH_ENABLED) {
+      setAvailable(PROVIDERS.map((p) => p.id)); // 데모: 전부 표시
+      return;
+    }
     getProviders().then((p) => setAvailable(p ? Object.keys(p) : []));
   }, []);
-  const shown = !AUTH_ENABLED
-    ? PROVIDERS
-    : PROVIDERS.filter((p) => available.includes(p.id));
+  const shown =
+    available === null
+      ? PROVIDERS
+      : PROVIDERS.filter((p) => available.includes(p.id));
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

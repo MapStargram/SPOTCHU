@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Home, Compass, Bookmark, User } from "lucide-react";
 
 type TabId = "home" | "explore" | "collections" | "profile";
+// AppShell은 notifications·report도 넘길 수 있다(하단 탭엔 없음 → 어떤 탭도 활성화 안 됨).
+type ActiveProp = TabId | "notifications" | "report";
 
 // 하단 내비 4탭. 아직 미구현 섹션(탐색·컬렉션·프로필)은 비활성(inert)으로 표시 —
 // 404 방지. 해당 섹션 구현 시 href를 채운다.
@@ -17,7 +19,7 @@ const TABS: {
   { id: "profile", label: "프로필", Icon: User, href: "/profile" },
 ];
 
-export function TabBar({ active = "home" }: { active?: TabId }) {
+export function TabBar({ active = "home" }: { active?: ActiveProp }) {
   return (
     <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-[color:var(--line)] bg-[rgba(255,249,242,0.92)] backdrop-blur-xl lg:hidden">
       <ul className="mx-auto flex h-[72px] max-w-[430px] items-start justify-around pt-3">

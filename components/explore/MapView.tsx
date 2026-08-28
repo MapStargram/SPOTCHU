@@ -13,6 +13,7 @@ import { MarkerClusterer, type Marker } from "@googlemaps/markerclusterer";
 import { Plus, Crosshair, MapPin } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
+import { ErrorBoundary } from "../ui/ErrorBoundary";
 import { Sparkle } from "../ui/Sparkle";
 import { VerifBadge, VERIF_CFG } from "../ui/VerifBadge";
 import { CITY_CENTER, type Spot, type CityId } from "@/lib/mock";
@@ -170,7 +171,15 @@ export function MapView({ spots, city }: { spots: Spot[]; city: CityId }) {
 
   return (
     <div className="absolute inset-0 overflow-hidden bg-[#DDE5EE]">
-      {KEY ? <GoogleMapLayer spots={spots} city={city} /> : <FallbackLayer />}
+      {/* Google Maps 로드 실패(키 오류·정책 등)가 전체 라우트를 흰 화면으로 무너뜨리지
+          않도록 폴백 지도로 격리 — 배포 환경에서만 키가 존재하므로 방어적으로 감싼다. */}
+      {KEY ? (
+        <ErrorBoundary fallback={<FallbackLayer />}>
+          <GoogleMapLayer spots={spots} city={city} />
+        </ErrorBoundary>
+      ) : (
+        <FallbackLayer />
+      )}
 
       {/* FABs — 제보(+, Section I 미구현)·내 위치(inert) */}
       <div className="absolute bottom-[210px] right-4 z-[9] flex flex-col gap-2.5">
