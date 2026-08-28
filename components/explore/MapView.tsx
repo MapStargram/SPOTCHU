@@ -1,9 +1,9 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps";
+import { APIProvider, useApiIsLoaded } from "@vis.gl/react-google-maps";
 import { Plus, Crosshair, MapPin } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
@@ -34,79 +34,98 @@ const FALLBACK_MARKERS = [
 // 마커를 선언적으로 직접 렌더한다. @googlemaps/markerclusterer가 AdvancedMarker(React)의
 // DOM을 재부모화하며 React 19와 충돌해 무한 렌더(#185)로 지도가 크래시했다 → 클러스터러 제거.
 // 스팟 수가 도시당 수십 개 규모라 클러스터 없이 충분. 대량화 시 임페러티브 클러스터 재도입(후속).
-function SpotMarkers({ spots }: { spots: Spot[] }) {
-  const router = useRouter();
-  const withPos = useMemo(() => spots.filter((s) => posOf(s)), [spots]);
-
-  return (
-    <>
-      {withPos.map((s) => {
-        const c = VERIF_CFG[s.verified];
-        return (
-          <AdvancedMarker
-            key={s.id}
-            position={posOf(s)}
-            onClick={() => router.push(`/spot/${s.id}`)}
-            title={`${s.title} · ${c.label} · ${s.categoryLabel}`}
-          >
-            {s.imageUrl ? (
-              // 썸네일 마커: 링 색=검증상태, 코너 배지=카테고리(색+아이콘/라벨 병기, rules §접근성)
-              <div
-                role="img"
-                aria-label={`${s.title}, ${c.label}, ${s.categoryLabel}`}
-                className="relative"
-              >
-                <span
-                  className="block h-11 w-11 overflow-hidden rounded-full border-[2.5px] bg-white shadow-[0_4px_10px_rgba(23,35,60,0.35)]"
-                  style={{ borderColor: c.color }}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={s.imageUrl}
-                    alt=""
-                    loading="lazy"
-                    className="h-full w-full object-cover"
-                  />
-                </span>
-                <span
-                  aria-hidden
-                  className="absolute -bottom-1 -right-1 flex h-[18px] w-[18px] items-center justify-center rounded-full border border-white bg-white text-[10px] leading-none shadow"
-                >
-                  {iconOf(s)}
-                </span>
-              </div>
-            ) : (
-              <span
-                role="img"
-                aria-label={`${s.title}, ${c.label}, ${s.categoryLabel}`}
-                className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white text-[15px] leading-none shadow-[0_4px_10px_rgba(23,35,60,0.35)]"
-                style={{ background: c.color }}
-              >
-                {iconOf(s)}
-              </span>
-            )}
-          </AdvancedMarker>
-        );
-      })}
-    </>
-  );
-}
-
 function GoogleMapLayer({ spots, city }: { spots: Spot[]; city: CityId }) {
   return (
     <APIProvider apiKey={KEY as string}>
-      <Map
-        defaultCenter={CITY_CENTER[city]}
-        defaultZoom={13}
-        mapId={MAP_ID}
-        disableDefaultUI
-        gestureHandling="greedy"
-        className="absolute inset-0 h-full w-full"
-      >
-        <SpotMarkers spots={spots} />
-      </Map>
+      <ImperativeMap spots={spots} city={city} />
     </APIProvider>
   );
+}
+
+// @vis.gl 선언적 <Map>이 React 19에서 지도 인스턴스를 생성하지 못해(빈 컨테이너) 지도가
+// 안 떴다. raw google.maps API는 정상이므로 지도·마커를 임페러티브로 생성한다. 클러스터는
+// 뺐다(도시당 수십 개 규모면 불필요, 대량화 시 후속).
+function ImperativeMap({ spots, city }: { spots: Spot[]; city: CityId }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const apiLoaded = useApiIsLoaded();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!apiLoaded || !ref.current || typeof google === "undefined") return;
+    let cancelled = false;
+    const markers: google.maps.marker.AdvancedMarkerElement[] = [];
+    void (async () => {
+      const [{ Map }, { AdvancedMarkerElement }] = await Promise.all([
+        google.maps.importLibrary("maps") as Promise<google.maps.MapsLibrary>,
+        google.maps.importLibrary(
+          "marker",
+        ) as Promise<google.maps.MarkerLibrary>,
+      ]);
+      if (cancelled || !ref.current) return;
+      const map = new Map(ref.current, {
+        center: CITY_CENTER[city],
+        zoom: 13,
+        mapId: MAP_ID,
+        disableDefaultUI: true,
+        gestureHandling: "greedy",
+      });
+      for (const s of spots) {
+        const pos = posOf(s);
+        if (!pos) continue;
+        const c = VERIF_CFG[s.verified];
+        const content = markerContent(s, c);
+        content.style.cursor = "pointer";
+        content.addEventListener("click", () => router.push(`/spot/${s.id}`));
+        markers.push(
+          new AdvancedMarkerElement({
+            map,
+            position: pos,
+            content,
+            title: `${s.title} · ${c.label} · ${s.categoryLabel}`,
+          }),
+        );
+      }
+    })();
+    return () => {
+      cancelled = true;
+      markers.forEach((m) => (m.map = null));
+    };
+  }, [apiLoaded, spots, city, router]);
+
+  return <div ref={ref} className="absolute inset-0 h-full w-full" />;
+}
+
+// AdvancedMarkerElement content = 썸네일 마커 DOM. 링 색=검증상태, 코너 배지=카테고리
+// (색+아이콘/라벨 병기, rules §접근성). 이미지 없으면 이모지 원형 폴백.
+function markerContent(
+  s: Spot,
+  c: { color: string; label: string },
+): HTMLElement {
+  const wrap = document.createElement("div");
+  wrap.setAttribute("role", "img");
+  wrap.setAttribute("aria-label", `${s.title}, ${c.label}, ${s.categoryLabel}`);
+  if (s.imageUrl) {
+    wrap.style.position = "relative";
+    const ring = document.createElement("span");
+    ring.style.cssText = `display:block;height:44px;width:44px;overflow:hidden;border-radius:9999px;border:2.5px solid ${c.color};background:#fff;box-shadow:0 4px 10px rgba(23,35,60,.35)`;
+    const img = document.createElement("img");
+    img.src = s.imageUrl;
+    img.alt = "";
+    img.loading = "lazy";
+    img.style.cssText = "height:100%;width:100%;object-fit:cover";
+    ring.appendChild(img);
+    const badge = document.createElement("span");
+    badge.style.cssText =
+      "position:absolute;bottom:-4px;right:-4px;display:flex;height:18px;width:18px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid #fff;background:#fff;font-size:10px;box-shadow:0 1px 3px rgba(0,0,0,.3)";
+    badge.textContent = iconOf(s);
+    wrap.append(ring, badge);
+  } else {
+    const circle = document.createElement("span");
+    circle.style.cssText = `display:flex;height:32px;width:32px;align-items:center;justify-content:center;border-radius:9999px;border:2px solid #fff;font-size:15px;background:${c.color};box-shadow:0 4px 10px rgba(23,35,60,.35)`;
+    circle.textContent = iconOf(s);
+    wrap.appendChild(circle);
+  }
+  return wrap;
 }
 
 function FallbackLayer() {
