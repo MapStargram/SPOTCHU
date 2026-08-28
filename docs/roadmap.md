@@ -20,11 +20,11 @@
    - ⚠️ **의존성**: 이걸 먼저 안 하면 `DATA_SOURCE=db`로 바꿀 때 실사진이 사라짐(현재 DB 매핑에 imageUrl 없음).
 6. **migrate + seed** — 로컬에서 `npm run db:deploy && npm run db:seed`(사용자 터미널; 샌드박스 밖). → Vercel에 `DATA_SOURCE=db` → 저장·체크인·제보 영속화.
 
-## Phase D — 이미지 프로덕션화 (R2)
-7. **Cloudflare R2 연결**(10GB 무료) — 위키미디어 CC 이미지를 self-host(핫링크 → 자체 CDN, 안정·고속).
+## Phase D — 이미지 프로덕션화 (Cloudinary)
+7. **Cloudinary 연결**(무료 25GB·카드 불필요) — 사용자 업로드 사진 저장·자동 최적화·CDN. (스팟 대표사진은 계속 위키미디어에서 직접 로드)
 8. **사용자 업로드 파이프라인** — 체크인/게시물 사진 업로드(EXIF 위치 제거), 대표 사진 = 사용자 기여(원래 UGC 모델).
 
 ## 의존성 요약
 - 북마크 **영속 저장** → Phase C(DB) 필요. 그전엔 localStorage.
 - DB 전환(6) → **imageUrl DB 반영(5) 먼저**.
-- 사용자 업로드(8) → R2(7) + DB(C).
+- 사용자 업로드(8) → Cloudinary(7) + DB(C).
