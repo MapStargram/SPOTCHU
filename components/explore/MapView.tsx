@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
@@ -67,6 +67,15 @@ function ClusteredMarkers({ spots }: { spots: Spot[] }) {
     });
   }, []);
 
+  // 키별로 ref 콜백을 캐시해 identity를 고정한다. 인라인 콜백이면 매 렌더마다 새 함수라
+  // React 19가 unmount(null)+mount를 반복 → setState 무한 루프(React #185). 그래서 안정화.
+  const refCbs = useRef<Record<string, (m: Marker | null) => void>>({});
+  const getRef = useCallback(
+    (key: string) =>
+      (refCbs.current[key] ??= (m: Marker | null) => setRef(key, m)),
+    [setRef],
+  );
+
   const withPos = useMemo(() => spots.filter((s) => posOf(s)), [spots]);
 
   return (
@@ -77,7 +86,7 @@ function ClusteredMarkers({ spots }: { spots: Spot[] }) {
           <AdvancedMarker
             key={s.id}
             position={posOf(s)}
-            ref={(m) => setRef(s.id, m)}
+            ref={getRef(s.id)}
             onClick={() => router.push(`/spot/${s.id}`)}
             title={`${s.title} · ${c.label} · ${s.categoryLabel}`}
           >
