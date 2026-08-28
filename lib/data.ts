@@ -32,6 +32,12 @@ import {
   timeAgo,
   type NotificationView,
 } from "./notifications";
+import {
+  buildFunnel,
+  verifiedRatio,
+  VERIFIED_STATUSES,
+  type FunnelRow,
+} from "./metrics";
 
 const USE_DB = process.env.DATA_SOURCE === "db";
 
@@ -611,4 +617,111 @@ export async function getNotifications(): Promise<NotificationView[]> {
     );
     return { ...p, id: r.id, unread: !r.isRead, time: timeAgo(r.createdAt) };
   });
+}
+
+// ── 지표·분석(feature 14) — 파생 카운트 집계(내부 대시보드용) ──
+// NSM·퍼널·커버리지를 도메인 테이블에서 파생한다(이벤트 로그 미도입, lib/metrics 참조).
+// 운영자·PM 전용(rules §데이터·권한) — 호출부(app/admin/metrics)에서 권한을 검사한다.
+export interface CityCoverage {
+  cityId: string;
+  cityName: string;
+  spotCount: number;
+  verifiedCount: number; // OFFICIAL + USER_VERIFIED
+  verifiedRatio: number; // 0~1
+}
+export interface MetricsOverview {
+  nsm: number; // 방문 인증 완료 수(최초 unique) = CheckIn 행 수
+  funnel: FunnelRow[]; // 발견→저장→컬렉션→인증→업로드(발견은 이벤트 파이프라인 TODO)
+  coverage: CityCoverage[];
+}
+
+export async function getMetricsOverview(): Promise<MetricsOverview> {
+  if (!USE_DB) {
+    // 데모 배포: DB 없이도 대시보드가 렌더되도록 정적 예시 수치.
+    return {
+      nsm: 128,
+      funnel: buildFunnel({
+        discovery: null,
+        save: 340,
+        collection: 150,
+        checkin: 128,
+        upload: 54,
+      }),
+      coverage: [
+        {
+          cityId: "seoul",
+          cityName: "서울",
+          spotCount: 42,
+          verifiedCount: 18,
+          verifiedRatio: verifiedRatio(18, 42),
+        },
+        {
+          cityId: "tokyo",
+          cityName: "도쿄",
+          spotCount: 37,
+          verifiedCount: 21,
+          verifiedRatio: verifiedRatio(21, 37),
+        },
+      ],
+    };
+  }
+
+  // 퍼널 단계 = 각 행동을 1회 이상 한 distinct 사용자 수(사용자 퍼널). 발견은 DB 미보관.
+  // ponytail: distinct 스캔. 사용자 수가 수만을 넘으면 raw SQL COUNT(DISTINCT)로 승격.
+  const [nsm, savers, creators, checkinUsers, uploaders, cities, byStatus] =
+    await Promise.all([
+      db.checkIn.count(),
+      db.collection.findMany({
+        where: { items: { some: {} } },
+        select: { ownerId: true },
+        distinct: ["ownerId"],
+      }),
+      db.collection.findMany({
+        where: { isDefault: false, isOfficial: false }, // 자동 기본함·큐레이션 제외
+        select: { ownerId: true },
+        distinct: ["ownerId"],
+      }),
+      db.checkIn.findMany({ select: { userId: true }, distinct: ["userId"] }),
+      db.post.findMany({ select: { authorId: true }, distinct: ["authorId"] }),
+      db.city.findMany({
+        where: { isActive: true },
+        select: { id: true, name: true },
+      }),
+      db.spot.groupBy({
+        by: ["cityId", "verificationStatus"],
+        _count: { _all: true },
+      }),
+    ]);
+
+  const funnel = buildFunnel({
+    discovery: null, // 조회 이벤트는 DB 미보관 — 이벤트 파이프라인(TODO) 필요
+    save: savers.length,
+    collection: creators.length,
+    checkin: checkinUsers.length,
+    upload: uploaders.length,
+  });
+
+  const verifiedSet = new Set<string>(VERIFIED_STATUSES);
+  const totalOf = new Map<string, number>();
+  const verifiedOf = new Map<string, number>();
+  for (const g of byStatus) {
+    totalOf.set(g.cityId, (totalOf.get(g.cityId) ?? 0) + g._count._all);
+    if (verifiedSet.has(g.verificationStatus))
+      verifiedOf.set(g.cityId, (verifiedOf.get(g.cityId) ?? 0) + g._count._all);
+  }
+  const coverage: CityCoverage[] = cities
+    .map((c) => {
+      const spotCount = totalOf.get(c.id) ?? 0;
+      const verifiedCount = verifiedOf.get(c.id) ?? 0;
+      return {
+        cityId: c.id,
+        cityName: c.name,
+        spotCount,
+        verifiedCount,
+        verifiedRatio: verifiedRatio(verifiedCount, spotCount),
+      };
+    })
+    .filter((c) => c.spotCount > 0);
+
+  return { nsm, funnel, coverage };
 }
