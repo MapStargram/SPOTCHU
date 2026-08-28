@@ -211,6 +211,10 @@ model Spot {
   addressCached String?
   access      String?
   tip         String?
+  rating      Float? // 평점(표시용)
+  subtitle    String? // 부제(지역·시간대 요약, 표시용)
+  angle       String? // 각도 가이드 텍스트(표시용)
+  infoSource  String? // 정보 출처 URL(리서치 반영 스팟)
   timeOfDay   TimeOfDay[]
   season      String?
   lens        String?

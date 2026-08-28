@@ -8,6 +8,7 @@ import {
   getCitiesFromDb,
   getSpotFromDb,
 } from "./actions/spots";
+import { unstable_cache } from "next/cache";
 
 const USE_DB = process.env.DATA_SOURCE === "db";
 
@@ -92,14 +93,34 @@ function mapCity(row: DbCityLike): City {
   };
 }
 
+// DB 읽기 캐시(revalidate). 콘텐츠는 자주 안 바뀌므로 캐시해 매요청 Neon 조회·콜드스타트 완화.
+const cachedSpotsByCity = unstable_cache(
+  async (city: string) => (await getSpotsByCityFromDb(city)).map(mapSpot),
+  ["db-spots-by-city"],
+  { revalidate: 300, tags: ["spots"] },
+);
+const cachedCities = unstable_cache(
+  async () => (await getCitiesFromDb()).map(mapCity),
+  ["db-cities"],
+  { revalidate: 600, tags: ["cities"] },
+);
+const cachedSpot = unstable_cache(
+  async (id: string) => {
+    const row = await getSpotFromDb(id);
+    return row ? mapSpot(row) : null;
+  },
+  ["db-spot"],
+  { revalidate: 300, tags: ["spots"] },
+);
+
 export async function getSpotsByCity(city: CityId): Promise<Spot[]> {
   if (!USE_DB) return mock.spotsByCity(city);
-  return (await getSpotsByCityFromDb(city)).map(mapSpot);
+  return cachedSpotsByCity(city);
 }
 
 export async function getCities(): Promise<City[]> {
   if (!USE_DB) return mock.CITIES;
-  return (await getCitiesFromDb()).map(mapCity);
+  return cachedCities();
 }
 
 export async function getCity(id: string): Promise<City | undefined> {
@@ -109,6 +130,5 @@ export async function getCity(id: string): Promise<City | undefined> {
 
 export async function getSpot(id: string): Promise<Spot | undefined> {
   if (!USE_DB) return mock.getSpot(id);
-  const row = await getSpotFromDb(id);
-  return row ? mapSpot(row) : undefined;
+  return (await cachedSpot(id)) ?? undefined;
 }
