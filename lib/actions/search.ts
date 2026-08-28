@@ -2,6 +2,7 @@
 // 텍스트 매칭 대상 4종: 스팟명(name)·촬영대상/랜드마크(subject)·지역(city)·작품명(work).
 import { db } from "@/lib/db";
 import type { Prisma, VerificationStatus } from "@prisma/client";
+import { getHiddenSpotIds } from "@/lib/moderation";
 
 export interface DbSearchCriteria {
   q?: string;
@@ -13,9 +14,11 @@ export interface DbSearchCriteria {
 
 const RESULT_LIMIT = 60; // ponytail: 결과 상한 기본값. 페이지네이션은 rules TODO.
 
-export function searchSpotsFromDb(c: DbSearchCriteria) {
+export async function searchSpotsFromDb(c: DbSearchCriteria) {
+  const hidden = await getHiddenSpotIds(); // 검수 반려·숨김·병합 스팟은 검색에서 제외
   const where: Prisma.SpotWhereInput = {
-    isBlockedHighRisk: false, // 고위험 스팟 제외(안전). 모더레이션 숨김 제외는 TODO.
+    isBlockedHighRisk: false, // 고위험 스팟 제외(안전)
+    id: { notIn: hidden },
   };
   if (c.cityId) where.cityId = c.cityId;
   if (c.categoryId) where.categoryId = c.categoryId;

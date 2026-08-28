@@ -31,12 +31,19 @@
 - 검수 결과 인앱 알림(승인·반려·승격): [`../13-notifications/`](../13-notifications/).
 - 검증 상태 승격 규칙: [`../../glossary.md`](../../glossary.md) "검증 상태 승격 규칙" 참조.
 
+## 구현 현황 (phase-j)
+- **권한 게이트**: `requireModerator()`(`lib/authz.ts`) — 세션엔 role이 없어 **DB에서 role 조회**(신뢰 경계). 어드민 페이지는 미인가 시 403(`Forbidden`), 모든 검수 뮤테이션은 서버에서 재검사.
+- **검수 액션**(`lib/actions/moderation.ts`): `resolveModerationAction`(승인=APPROVED / 반려=REJECTED / 숨김=HIDDEN, 신고 기각=APPROVED) + `mergeSpotsAction`(병합). 이미 처리된(PENDING 아님) 아이템은 재처리 차단.
+- **삭제 없는 처리(가역)**: 스키마에 hidden 플래그가 없어(이 페이즈 스키마 동결) 반려·숨김·병합 스팟은 **읽기 필터**(`getHiddenSpotIds`, `lib/moderation.ts`)로 공개 지도/피드/검색에서 제외한다 — 물리 삭제하지 않음.
+- **`ModerationItem` type enum 확정**: `NEW_SPOT`·`REPORT`·`OFFICIAL_CANDIDATE`·`WORK_STILL_REQUEST`(스키마). `refType/refId`: 제보=Spot/spotId, 신고=Report/reportId.
+- **병합 참조 이관 규칙 확정**: `Post`(전량 이동)·`CheckIn`·`CollectionItem`·`SpotWork`(유니크 충돌은 dedup=중복 행 제거) 이관 후 keep 스팟 집계(`uniqueCheckin`/`saveCount`/`likeSum`) 재계산, 흡수 스팟은 `MERGED`로 숨김. 트랜잭션 처리.
+- **신고 큐 유입**: `reportAction`이 `Report` 생성과 함께 `ModerationItem(REPORT)` 적재.
+
 ## TODO / 미결정
 - **반복 신고 자동 임시 숨김 임계값**(구체 수치) — 미정(§22).
-- **`ModerationItem` 유입원 type enum 코드값** — 미정.
-- **중복 스팟 병합 시 참조 이관 규칙**(`CheckIn`/`Post`/`Collection`/`Like`/`SpotWork` 처리) — 미정.
-- **`MODERATOR` vs `ADMIN` 권한 세분** — 사용자 정지·역할 부여·마스터데이터 삭제가 `ADMIN` 전용인지 미정.
+- **`MODERATOR` vs `ADMIN` 권한 세분** — 사용자 정지·역할 부여·마스터데이터 삭제가 `ADMIN` 전용인지 미정(현재 검수 액션은 둘 다 허용).
 - **사용자 정지(밴) 기간·해제 정책**, 경고 누적 → 정지 임계 — 미정.
 - **작품 스틸 등록 요청의 구체 처리 방식**(외부 공식 출처 링크 등록 등, §24 연계) — 미정.
 - **공식 승격 후보 선정 임계**(좋아요·인증 상위 기준) — 미정.
-- **어드민 액션 감사 로그 보관 범위·기간** — 미정.
+- **어드민 액션 감사 로그** — 현재는 `ModerationItem.assigneeId/note/resolvedAt`로만 기록. 별도 감사 로그·보관 기간 미정.
+- **가역 숨김 → 스키마 정식화**: `Spot.isHidden`/soft-delete 필드 도입 시 읽기 필터를 대체(다음 스키마 변경 페이즈).
