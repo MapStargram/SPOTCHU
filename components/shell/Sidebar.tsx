@@ -11,10 +11,11 @@ import {
 
 // 데스크톱 좌측 사이드바(인스타그램식). 기본은 아이콘만 보이는 좁은 레일(76px),
 // 마우스 호버 시 244px로 확장되어 라벨 노출(콘텐츠 위 오버레이). 모바일은 숨김(하단 TabBar).
-type Active = "home" | "explore" | "collections" | "profile";
+type Active =
+  "home" | "explore" | "collections" | "profile" | "notifications" | "report";
 
 const NAV: {
-  id: Active | "notifications" | "report";
+  id: Active;
   label: string;
   Icon: typeof Home;
   href: string;

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { getNotifications } from "@/lib/data";
 import {
   readAndOpenNotification,
@@ -22,7 +23,7 @@ export default async function NotificationsPage() {
   const unread = notifications.filter((n) => n.unread).length;
 
   return (
-    <AppShell>
+    <AppShell active="notifications">
       <div className="mx-auto w-full max-w-[500px] px-4 pb-28 pt-14 text-navy lg:max-w-[680px] lg:pb-12 lg:pt-8">
         <header className="flex items-center justify-between">
           <Link
@@ -58,9 +59,21 @@ export default async function NotificationsPage() {
         </header>
 
         {notifications.length === 0 ? (
-          <p className="mt-16 text-center font-ko text-[13px] text-[color:var(--muted)]">
-            아직 받은 알림이 없어요.
-          </p>
+          <div className="mt-14">
+            <EmptyState
+              mascot="chu-mascot-front"
+              title="아직 받은 알림이 없어요"
+              description="검수 결과와 배지 획득, 컬렉션 소식이 여기에 도착해요. 스팟을 저장하고 방문 인증부터 시작해 보세요."
+              action={
+                <Link
+                  href="/explore/tokyo"
+                  className="flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-coral font-ko text-[14px] font-bold tracking-[-0.01em] text-cream shadow-[var(--sh-cta-coral)] transition duration-150 active:scale-[0.98] active:bg-coral-deep"
+                >
+                  스팟 둘러보기 →
+                </Link>
+              }
+            />
+          </div>
         ) : (
           <ul className="mt-5 flex flex-col gap-2">
             {notifications.map((n) => {

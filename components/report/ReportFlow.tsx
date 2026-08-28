@@ -89,7 +89,7 @@ export function ReportFlow({
   if (step === "location") {
     return (
       <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-        <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pb-28 pt-14 text-navy">
+        <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pt-14 text-navy">
           <header className="flex items-center justify-between">
             <button
               onClick={() => router.back()}
@@ -145,10 +145,8 @@ export function ReportFlow({
             <LocationPicker city={city} value={coord} onChange={setCoord} />
           </div>
 
-          <div className="fixed inset-x-0 bottom-0">
-            <div className="mx-auto max-w-[430px] bg-gradient-to-t from-cream via-cream px-5 pb-6 pt-3">
-              <CoralButton onClick={() => setStep("form")}>다음 →</CoralButton>
-            </div>
+          <div className="sticky bottom-0 z-10 -mx-5 mt-auto bg-gradient-to-t from-cream via-cream px-5 pb-6 pt-6">
+            <CoralButton onClick={() => setStep("form")}>다음 →</CoralButton>
           </div>
         </div>
       </div>
@@ -159,7 +157,7 @@ export function ReportFlow({
   if (step === "form") {
     return (
       <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-        <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pb-28 pt-14 text-navy">
+        <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pt-14 text-navy">
           <header className="flex items-center justify-between">
             <button
               onClick={() => setStep("location")}
@@ -321,16 +319,14 @@ export function ReportFlow({
             </p>
           )}
 
-          <div className="fixed inset-x-0 bottom-0">
-            <div className="mx-auto max-w-[430px] bg-gradient-to-t from-cream via-cream px-5 pb-6 pt-3">
-              <CoralButton
-                disabled={!canSubmit || submitting}
-                onClick={submit}
-                className={!canSubmit || submitting ? "opacity-40" : ""}
-              >
-                {submitting ? "제출 중…" : "제보 제출"}
-              </CoralButton>
-            </div>
+          <div className="sticky bottom-0 z-10 -mx-5 mt-auto bg-gradient-to-t from-cream via-cream px-5 pb-6 pt-6">
+            <CoralButton
+              disabled={!canSubmit || submitting}
+              onClick={submit}
+              className={!canSubmit || submitting ? "opacity-40" : ""}
+            >
+              {submitting ? "제출 중…" : "제보 제출"}
+            </CoralButton>
           </div>
         </div>
       </div>
