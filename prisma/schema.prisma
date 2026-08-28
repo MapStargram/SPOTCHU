@@ -8,8 +8,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL") // 런타임: Neon 풀링(-pooler) 문자열 / 로컬 docker 문자열
+  directUrl = env("DIRECT_URL") // 마이그레이션: Neon 다이렉트(비풀링) 문자열 / 로컬은 DATABASE_URL과 동일
 }
 
 // ---------- Enums ----------
