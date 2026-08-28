@@ -18,15 +18,16 @@
   --navy: #17233c;
   --navy-2: #2e3f5e;
   --navy-deep: #0b1424;
-  --cream: #fff9f2;
-  --cream-2: #fbefe0;
+  /* Base neutrals — Instagram-clean 화이트 계열(사용자 요청으로 크림→화이트 전환) */
+  --cream: #ffffff;
+  --cream-2: #fafafa;
   --yellow: #ffc857;
 
   /* Neutrals / semantic */
-  --line: rgba(23, 35, 60, 0.1);
-  --line-strong: rgba(23, 35, 60, 0.22);
-  --muted: rgba(23, 35, 60, 0.55);
-  --muted-soft: rgba(23, 35, 60, 0.35);
+  --line: #efefef;
+  --line-strong: #dbdbdb;
+  --muted: #8e8e8e;
+  --muted-soft: #b3b3b3;
   --bg: var(--cream);
   --bg-alt: var(--cream-2);
   --fg: var(--navy);
@@ -65,8 +66,9 @@
   --r-chip: 12px;
 
   /* Shadow */
-  --sh-card: 0 8px 24px -8px rgba(23, 35, 60, 0.15);
-  --sh-cta-coral: 0 8px 20px -6px rgba(255, 95, 109, 0.5);
+  --sh-card:
+    0 1px 2px rgba(0, 0, 0, 0.05), 0 6px 18px -10px rgba(0, 0, 0, 0.12);
+  --sh-cta-coral: 0 6px 16px -8px rgba(255, 95, 109, 0.3);
 
   /* Motion */
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
