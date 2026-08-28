@@ -39,6 +39,8 @@ interface DbSpotLike {
   id: string;
   name: string;
   cityId: string;
+  shooterLat: number;
+  shooterLng: number;
   verificationStatus: string;
   lens: string | null;
   tip: string | null;
@@ -62,6 +64,8 @@ function mapSpot(row: DbSpotLike): Spot {
     title: row.name,
     subtitle: row.subtitle ?? "",
     city: row.cityId as CityId,
+    shooterLat: row.shooterLat, // 불변식: 촬영자 위치(피사체 subjectLat/Lng 아님)
+    shooterLng: row.shooterLng,
     categoryLabel: row.category?.label ?? "",
     verified: VERIF_BACK[row.verificationStatus] ?? "reported",
     thumbGrad: g,
