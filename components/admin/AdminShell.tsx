@@ -1,5 +1,7 @@
+import Link from "next/link";
 import {
   LayoutGrid,
+  BarChart3,
   Layers,
   MapPin,
   Star,
@@ -10,16 +12,26 @@ import {
 
 // K · 웹 어드민 셸(데스크톱 전용). <768px는 안내 문구. (README: 어드민은 데스크톱 전용)
 type NavId =
-  "dashboard" | "queue" | "spots" | "works" | "users" | "reports" | "settings";
+  | "dashboard"
+  | "metrics"
+  | "queue"
+  | "spots"
+  | "works"
+  | "users"
+  | "reports"
+  | "settings";
 
+// href 있는 항목만 실제 링크(라우트 있는 것). 나머지는 데모용 정적 항목.
 const NAV: {
   id: NavId;
   label: string;
   Icon: typeof LayoutGrid;
   count?: number;
+  href?: string;
 }[] = [
   { id: "dashboard", label: "대시보드", Icon: LayoutGrid },
-  { id: "queue", label: "검수 큐", Icon: Layers, count: 12 },
+  { id: "metrics", label: "지표", Icon: BarChart3, href: "/admin/metrics" },
+  { id: "queue", label: "검수 큐", Icon: Layers, count: 12, href: "/admin" },
   { id: "spots", label: "스팟", Icon: MapPin },
   { id: "works", label: "작품", Icon: Star },
   { id: "users", label: "사용자", Icon: Users },
@@ -67,17 +79,15 @@ export function AdminShell({
             </div>
           </div>
           <nav className="flex flex-col gap-0.5">
-            {NAV.map(({ id, label, Icon, count }) => {
+            {NAV.map(({ id, label, Icon, count, href }) => {
               const on = active === id;
-              return (
-                <div
-                  key={id}
-                  className={`flex items-center gap-2.5 rounded-[10px] px-3 py-2.5 text-[13px] tracking-[-0.01em] ${
-                    on
-                      ? "bg-[rgba(255,249,242,0.1)] font-bold text-cream"
-                      : "font-medium text-[rgba(255,249,242,0.65)]"
-                  }`}
-                >
+              const cls = `flex items-center gap-2.5 rounded-[10px] px-3 py-2.5 text-[13px] tracking-[-0.01em] ${
+                on
+                  ? "bg-[rgba(255,249,242,0.1)] font-bold text-cream"
+                  : "font-medium text-[rgba(255,249,242,0.65)]"
+              }`;
+              const inner = (
+                <>
                   <Icon size={16} />
                   <span className="flex-1">{label}</span>
                   {count && (
@@ -85,6 +95,15 @@ export function AdminShell({
                       {count}
                     </span>
                   )}
+                </>
+              );
+              return href ? (
+                <Link key={id} href={href} className={cls}>
+                  {inner}
+                </Link>
+              ) : (
+                <div key={id} className={cls}>
+                  {inner}
                 </div>
               );
             })}
