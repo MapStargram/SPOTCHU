@@ -2,7 +2,7 @@
 // 페이지는 lib/mock 대신 여기서 읽으면 env 플래그로 안전하게 전환된다(기본=목업, 데모 유지).
 // ⚠️ DB 행에는 그라디언트/일부 표시 필드가 없어 결정적 폴백으로 매핑한다(실 이미지 준비 전까지 임시).
 import * as mock from "./mock";
-import type { Spot, City, CityId, Work, Collection } from "./mock";
+import type { Spot, City, CityId, Work, Collection, Verified } from "./mock";
 import {
   getSpotsByCityFromDb,
   getCitiesFromDb,
@@ -10,8 +10,16 @@ import {
   getWorkWithSpotsFromDb,
   getCollectionsFromDb,
 } from "./actions/spots";
+import {
+  searchSpotsFromDb,
+  getCategoriesFromDb,
+  getWorksFromDb,
+} from "./actions/search";
+import { filterSpots, type SpotSearchCriteria } from "./search";
 import { unstable_cache } from "next/cache";
 import { getCurrentUser } from "./session";
+import { z } from "zod";
+import type { VerificationStatus } from "@prisma/client";
 import { db } from "./db";
 import {
   BADGE_KEYS,
@@ -229,6 +237,95 @@ export async function getCollection(
   const rows = await getCollectionsFromDb();
   const row = rows.find((r) => r.id === id);
   return row ? mapCollection(row, user?.id) : undefined;
+}
+
+// ── 검색(Search) ──
+// 외부 입력(URL 쿼리)은 여기 zod로 검증·정화한다(서버 트러스트 경계).
+// 잘못된 값은 500이 아니라 무시(.catch(undefined))해 검색 UX를 깨지 않는다.
+const searchSchema = z.object({
+  q: z.string().trim().max(100).optional().catch(undefined),
+  cityId: z.enum(["tokyo", "seoul"]).optional().catch(undefined),
+  category: z.string().max(80).optional().catch(undefined),
+  work: z.string().max(60).optional().catch(undefined),
+  verified: z
+    .enum(["official", "user", "reported"])
+    .optional()
+    .catch(undefined),
+});
+export type SearchParams = z.input<typeof searchSchema>;
+
+// UI 검증상태 → DB enum. 'reported'는 USER_REPORTED+ESTIMATED 둘 다(mapSpot 역매핑과 정합).
+const VERIF_TO_DB: Record<Verified, VerificationStatus[]> = {
+  official: ["OFFICIAL"],
+  user: ["USER_VERIFIED"],
+  reported: ["USER_REPORTED", "ESTIMATED"],
+};
+
+export async function searchSpots(raw: SearchParams): Promise<Spot[]> {
+  const p = searchSchema.parse(raw);
+  const criteria: SpotSearchCriteria = {
+    q: p.q,
+    cityId: p.cityId,
+    categoryId: p.category,
+    workId: p.work,
+    verified: p.verified,
+  };
+  if (!USE_DB) {
+    return filterSpots(mock.SPOTS, criteria, (id) =>
+      id ? mock.getWork(id)?.title : undefined,
+    );
+  }
+  const rows = await searchSpotsFromDb({
+    q: p.q,
+    cityId: p.cityId,
+    categoryId: p.category,
+    workId: p.work,
+    verificationStatus: p.verified ? VERIF_TO_DB[p.verified] : undefined,
+  });
+  // 최종 인기순: 저장+인증+좋아요 합산(PRD §16). DB orderBy는 근사값이라 여기서 확정.
+  const pop = (r: (typeof rows)[number]) =>
+    r.saveCount + r.uniqueCheckinCount + r.likeSum;
+  return rows
+    .slice()
+    .sort((a, b) => pop(b) - pop(a))
+    .map(mapSpot);
+}
+
+// 필터 옵션(카테고리·작품). 목업 카테고리는 id가 없어 라벨을 id로 사용(mock 경로 대조와 정합).
+export interface FilterOption {
+  id: string;
+  label: string;
+}
+const cachedCategories = unstable_cache(
+  async () =>
+    (await getCategoriesFromDb()).map((c) => ({ id: c.id, label: c.label })),
+  ["db-categories"],
+  { revalidate: 600, tags: ["categories"] },
+);
+const cachedWorks = unstable_cache(
+  async () =>
+    (await getWorksFromDb()).map((w) => ({ id: w.id, label: w.title })),
+  ["db-works"],
+  { revalidate: 600, tags: ["works"] },
+);
+
+export async function getCategories(): Promise<FilterOption[]> {
+  if (!USE_DB) {
+    const seen = new Map<string, FilterOption>();
+    for (const s of mock.SPOTS)
+      if (!seen.has(s.categoryLabel))
+        seen.set(s.categoryLabel, {
+          id: s.categoryLabel,
+          label: s.categoryLabel,
+        });
+    return [...seen.values()];
+  }
+  return cachedCategories();
+}
+
+export async function getWorks(): Promise<FilterOption[]> {
+  if (!USE_DB) return mock.WORKS.map((w) => ({ id: w.id, label: w.title }));
+  return cachedWorks();
 }
 
 // ── 프로필 · 배지 집계(feature 08) ──
