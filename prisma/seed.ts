@@ -82,7 +82,12 @@ async function main() {
     const coord = SPOT_COORDS[s.id];
     await db.spot.upsert({
       where: { id: s.id },
-      update: {},
+      update: {
+        coverImageUrl: s.imageUrl ?? null,
+        imageAuthor: s.imageCredit?.author ?? null,
+        imageLicense: s.imageCredit?.license ?? null,
+        imageSource: s.imageCredit?.source ?? null,
+      },
       create: {
         id: s.id,
         name: s.title,
@@ -90,7 +95,10 @@ async function main() {
         cityId: s.city,
         shooterLat: coord?.lat ?? 0,
         shooterLng: coord?.lng ?? 0,
-        coverImageUrl: "",
+        coverImageUrl: s.imageUrl ?? null,
+        imageAuthor: s.imageCredit?.author ?? null,
+        imageLicense: s.imageCredit?.license ?? null,
+        imageSource: s.imageCredit?.source ?? null,
         subject: s.title,
         verificationStatus: VERIF[s.verified],
         tip: s.tip,

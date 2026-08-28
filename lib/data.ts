@@ -41,6 +41,10 @@ interface DbSpotLike {
   uniqueCheckinCount: number;
   saveCount: number;
   category?: { label: string } | null;
+  coverImageUrl?: string | null;
+  imageAuthor?: string | null;
+  imageLicense?: string | null;
+  imageSource?: string | null;
 }
 function mapSpot(row: DbSpotLike): Spot {
   const g = gradFor(row.id);
@@ -60,6 +64,14 @@ function mapSpot(row: DbSpotLike): Spot {
     angle: "",
     lens: row.lens ?? "",
     tip: row.tip ?? "",
+    imageUrl: row.coverImageUrl || undefined,
+    imageCredit: row.imageSource
+      ? {
+          author: row.imageAuthor ?? "",
+          license: row.imageLicense ?? "",
+          source: row.imageSource,
+        }
+      : undefined,
   };
 }
 
