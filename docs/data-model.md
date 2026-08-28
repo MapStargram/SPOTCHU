@@ -22,6 +22,7 @@ erDiagram
     Post ||--o{ Like : liked_by
     Spot ||--o{ CheckIn : visited_at
     Badge ||--o{ UserBadge : awarded
+    User ||--o{ Notification : receives
     Spot ||--o{ Report : reported
     Post ||--o{ Report : reported
     Report ||--o{ ModerationItem : queued
@@ -40,6 +41,7 @@ erDiagram
 - `ModerationType`: `NEW_SPOT` | `REPORT` | `OFFICIAL_CANDIDATE` | `WORK_STILL_REQUEST`
 - `ModerationStatus`: `PENDING` | `APPROVED` | `REJECTED` | `MERGED` | `HIDDEN`
 - `WorkType`: `ANIME` | `MOVIE` | `DRAMA` | `OTHER`
+- `NotificationType`: `BADGE_EARNED` | `REPORT_REVIEWED` | `SPOT_PROMOTED` (MVP 인앱 3종, prd §20 · [`features/13-notifications/rules.md`](features/13-notifications/rules.md))
 
 ## 핵심 엔티티 (필드 초안)
 
@@ -84,6 +86,13 @@ i18n: `name_ja?, subject_ja?`(nullable, 후속).
 ### Report / ModerationItem
 - `Report`: `id, reporterId, targetType(SPOT|POST), targetId, reason(ReportReason), memo?, createdAt`.
 - `ModerationItem`: `id, type(ModerationType), status(ModerationStatus), refType, refId, assigneeId?, note?, createdAt, resolvedAt?`. 반복 신고 임계 초과 시 대상 자동 임시 숨김(임계값 TODO).
+
+### Notification  ← 인앱 알림 (MVP 최소, [`features/13-notifications/`](features/13-notifications/))
+`id, userId, type(NotificationType), refType?, refId?, isRead(bool default false), createdAt`.
+- **소유자 스코프**: 항상 사건 당사자 본인(`userId`)에게만 발행·조회(rules §데이터·권한). 타인 활동 광범위 알림 금지.
+- **딥링크**: `(refType, refId)`가 대상 참조 — `SPOT`→스팟 상세, `BADGE`→프로필 배지. 표시 문구는 `type`+참조 대상명으로 서버에서 조합(별도 저장 안 함).
+- **발행 트리거**: `BADGE_EARNED`=`UserBadge` 생성 시 / `REPORT_REVIEWED`=`ModerationItem` 승인·반려 시 / `SPOT_PROMOTED`=`Spot` `USER_REPORTED`→`USER_VERIFIED` 전이 1회.
+- **인덱스**: `(userId, createdAt)`(목록 역순), `(userId, isRead)`(미읽음 카운트).
 
 ### SpotLead  ← 외부 시딩 (⚠️ 법률 검토 필요, prd §41)
 `id, sourceUrl, sourcePlatform(INSTAGRAM|THREADS|YOUTUBE|BLOG|OTHER), placeName?, lat?, lng?, note?, status(PENDING|VERIFIED|REJECTED), promotedSpotId?, createdAt`.

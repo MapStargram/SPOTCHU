@@ -101,6 +101,13 @@ enum SourcePlatform {
   OTHER
 }
 
+// MVP 인앱 알림 3종(prd §20 · docs/features/13-notifications/rules.md). 유형 추가는 PRD 개정 필요.
+enum NotificationType {
+  BADGE_EARNED
+  REPORT_REVIEWED
+  SPOT_PROMOTED
+}
+
 // ---------- Auth.js ----------
 model User {
   id            String    @id @default(cuid())
@@ -128,6 +135,7 @@ model User {
   badges      UserBadge[]
   reportedSpots Spot[]    @relation("SpotCreatedBy")
   reports     Report[]
+  notifications Notification[]
 }
 
 model Account {
@@ -413,6 +421,23 @@ model ModerationItem {
 
   @@index([status])
   @@index([type])
+}
+
+// 인앱 알림 — 소유자(userId) 스코프. 표시 문구는 type+참조 대상명으로 서버 조합(별도 저장 안 함).
+// 딥링크 대상은 (refType, refId): SPOT→스팟 상세, BADGE→프로필 배지 (docs/features/13-notifications).
+model Notification {
+  id        String           @id @default(cuid())
+  userId    String
+  type      NotificationType
+  refType   String? // "SPOT" | "BADGE"
+  refId     String?
+  isRead    Boolean          @default(false)
+  createdAt DateTime         @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([userId, isRead])
 }
 
 // 외부 시딩 리드 — ⚠️ 원본 이미지 저장 금지, 좌표·출처 메타만 (docs/features/12-policies)
