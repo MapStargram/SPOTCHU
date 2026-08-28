@@ -13,7 +13,7 @@ import { Chip } from "../ui/Chip";
 import { MapView } from "./MapView";
 import { FeedView } from "./FeedView";
 import { FilterSheet } from "./FilterSheet";
-import type { Spot } from "@/lib/mock";
+import type { Spot, CityId } from "@/lib/mock";
 
 const MAP_CHIPS = [
   { label: "추천", dot: "var(--yellow)" },
@@ -29,12 +29,11 @@ const FEED_CHIPS = [
 ];
 
 // C1~C4 탐색 콘텐츠(AppShell 내부). 모바일=앱 컬럼 폭, 데스크톱=사이드바 옆 와이드.
-export function ExploreView({ spots }: { spots: Spot[] }) {
-  const [view, setView] = useState<"map" | "feed">("map");
+export function ExploreView({ spots, city }: { spots: Spot[]; city: CityId }) {
+  const [view, setView] = useState<"map" | "feed">("feed"); // 기본=피드(rules.md:12)
   const [chip, setChip] = useState(0);
   const [filterOpen, setFilterOpen] = useState(false);
   const chips = view === "map" ? MAP_CHIPS : FEED_CHIPS;
-  const city = spots[0]?.city ?? "tokyo"; // 홈 그리드 링크용(같은 도시 스팟들)
 
   const seg = (v: "map" | "feed", Icon: typeof MapIcon, label: string) => (
     <button
@@ -113,7 +112,7 @@ export function ExploreView({ spots }: { spots: Spot[] }) {
       {/* Body */}
       {view === "map" ? (
         <div className="relative flex-1">
-          <MapView spots={spots} />
+          <MapView spots={spots} city={city} />
         </div>
       ) : (
         <div className="mx-auto w-full max-w-[960px] flex-1 px-3.5 pb-28 pt-3 lg:px-8 lg:pb-10">

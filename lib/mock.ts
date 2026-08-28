@@ -40,6 +40,8 @@ export interface Spot {
   source?: string; // 출처 URL(리서치 반영 스팟의 저작권 투명성)
   imageUrl?: string; // 합법 이미지(위키미디어 CC 등). 없으면 그라디언트 폴백
   imageCredit?: { author: string; license: string; source: string }; // CC 출처표기(필수)
+  shooterLat?: number; // 불변식: 촬영자가 서는 위치(지도 핀). 목업은 SPOT_COORDS로 대체
+  shooterLng?: number;
 }
 
 export interface Work {
