@@ -228,7 +228,7 @@
 - **프론트**: Next.js(App Router) + TypeScript + Tailwind, PWA.
 - **백엔드/인증/DB**: Next.js 서버(Route Handlers/Server Actions) + Auth.js(카카오·구글·애플) + PostgreSQL + Prisma.
 - **지리**: PostgreSQL + PostGIS.
-- **스토리지**: Cloudflare R2. **호스팅**: Vercel. **지도**: Google Maps.
+- **스토리지**: Cloudinary(이미지). **호스팅**: Vercel. **지도**: Google Maps.
 - 상세·근거: [`docs/tech-stack.md`](docs/tech-stack.md).
 
 ## 34. 외부 API 후보
