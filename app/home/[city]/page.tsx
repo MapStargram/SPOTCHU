@@ -68,6 +68,17 @@ export default async function HomeScreen({
           className="relative mt-6 block h-[196px] overflow-hidden rounded-[22px] shadow-[var(--sh-elevated)] lg:h-[300px]"
           style={{ background: heroSpot.heroGrad }}
         >
+          {heroSpot.imageUrl && (
+            <>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={heroSpot.imageUrl}
+                alt={heroSpot.title}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+            </>
+          )}
           <div
             className="pointer-events-none absolute -right-10 -top-10 h-40 w-40"
             style={{

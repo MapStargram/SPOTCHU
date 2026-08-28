@@ -17,7 +17,9 @@ export function AppShell({
   return (
     <div className="min-h-dvh bg-[color:var(--cream-2)]">
       <Sidebar active={active} />
-      <div className="min-h-dvh lg:pl-[76px]">{children}</div>
+      <div className="min-h-dvh transition-[padding] duration-200 ease-out lg:pl-[76px] lg:peer-hover:pl-[244px]">
+        {children}
+      </div>
       {!noTabBar && <TabBar active={active} />}
     </div>
   );

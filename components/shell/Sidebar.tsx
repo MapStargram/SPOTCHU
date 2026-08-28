@@ -34,7 +34,7 @@ const labelBase =
 
 export function Sidebar({ active }: { active?: Active }) {
   return (
-    <aside className="group fixed inset-y-0 left-0 z-30 hidden w-[76px] flex-col overflow-hidden border-r border-[color:var(--line)] bg-cream transition-[width] duration-200 ease-out hover:w-[244px] hover:shadow-[var(--sh-card)] lg:flex">
+    <aside className="group peer fixed inset-y-0 left-0 z-30 hidden w-[76px] flex-col overflow-hidden border-r border-[color:var(--line)] bg-cream transition-[width] duration-200 ease-out hover:w-[244px] hover:shadow-[var(--sh-card)] lg:flex">
       <div className="flex w-[244px] flex-1 flex-col px-3 py-6">
         <Link
           href="/home/tokyo"

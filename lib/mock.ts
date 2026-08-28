@@ -6,6 +6,7 @@ import {
   RESEARCH_WORKS,
   RESEARCH_COORDS,
 } from "./spots.research";
+import { SPOT_IMAGES } from "./spot-images";
 
 export type CityId = "tokyo" | "seoul";
 export type Verified = "official" | "user" | "reported";
@@ -37,6 +38,8 @@ export interface Spot {
   lens: string;
   tip: string;
   source?: string; // 출처 URL(리서치 반영 스팟의 저작권 투명성)
+  imageUrl?: string; // 합법 이미지(위키미디어 CC 등). 없으면 그라디언트 폴백
+  imageCredit?: { author: string; license: string; source: string }; // CC 출처표기(필수)
 }
 
 export interface Work {
@@ -252,7 +255,20 @@ const BASE_SPOTS: Spot[] = [
   },
 ];
 
-export const SPOTS: Spot[] = [...BASE_SPOTS, ...RESEARCH_SPOTS];
+export const SPOTS: Spot[] = [...BASE_SPOTS, ...RESEARCH_SPOTS].map((s) => {
+  const img = SPOT_IMAGES[s.id];
+  return img
+    ? {
+        ...s,
+        imageUrl: img.url,
+        imageCredit: {
+          author: img.author,
+          license: img.license,
+          source: img.source,
+        },
+      }
+    : s;
+});
 
 export const COLLECTIONS: Collection[] = [
   {

@@ -63,6 +63,15 @@ export function PinGrid({ spots, city }: { spots: Spot[]; city: string }) {
               className="relative"
               style={{ height: pinHeight(s.id), background: s.thumbGrad }}
             >
+              {s.imageUrl && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={s.imageUrl}
+                  alt={s.title}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              )}
               <span className="absolute left-2 top-2 rounded-full bg-black/30 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
                 {s.categoryLabel}
               </span>

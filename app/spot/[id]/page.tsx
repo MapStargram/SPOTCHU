@@ -59,6 +59,17 @@ export default async function SpotDetailScreen({
           className="relative h-[360px] overflow-hidden"
           style={{ background: s.heroGrad }}
         >
+          {s.imageUrl && (
+            <>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={s.imageUrl}
+                alt={s.title}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25" />
+            </>
+          )}
           <div
             className="pointer-events-none absolute -right-14 -top-14 h-[280px] w-[280px]"
             style={{
@@ -267,16 +278,29 @@ export default async function SpotDetailScreen({
             </ul>
           </section>
 
-          {s.source && (
-            <a
-              href={s.source}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-1 inline-block text-[11px] text-[color:var(--muted)] underline"
-            >
-              정보 출처 ↗
-            </a>
-          )}
+          <div className="mt-1 flex flex-col gap-1">
+            {s.source && (
+              <a
+                href={s.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] text-[color:var(--muted)] underline"
+              >
+                정보 출처 ↗
+              </a>
+            )}
+            {s.imageCredit && (
+              <a
+                href={s.imageCredit.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] text-[color:var(--muted)]"
+              >
+                사진: {s.imageCredit.author} · {s.imageCredit.license}{" "}
+                (Wikimedia Commons) ↗
+              </a>
+            )}
+          </div>
         </div>
 
         <SpotActions spotTitle={s.title} spotId={s.id} />
