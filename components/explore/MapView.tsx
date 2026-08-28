@@ -1,15 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef } from "react";
+import { useMemo } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import {
-  APIProvider,
-  Map,
-  AdvancedMarker,
-  useMap,
-} from "@vis.gl/react-google-maps";
-import { MarkerClusterer, type Marker } from "@googlemaps/markerclusterer";
+import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps";
 import { Plus, Crosshair, MapPin } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
@@ -37,41 +31,12 @@ const FALLBACK_MARKERS = [
   { state: "default" as const, x: 54, y: 50 },
 ];
 
-// 밀집 클러스터링(@googlemaps/markerclusterer 공식 패턴). 숫자 배지로 묶음.
-// ponytail: 지금은 도시 단위 로드(getSpotsByCity) + 클라이언트 클러스터. 서버 뷰포트 로드
-// (listSpotsInViewport·디바운스)는 후속 — 임계·재로드 방식이 rules.md TODO(미결정)라 발명하지 않음.
-function ClusteredMarkers({ spots }: { spots: Spot[] }) {
-  const map = useMap();
+// 마커를 선언적으로 직접 렌더한다. @googlemaps/markerclusterer가 AdvancedMarker(React)의
+// DOM을 재부모화하며 React 19와 충돌해 무한 렌더(#185)로 지도가 크래시했다 → 클러스터러 제거.
+// 스팟 수가 도시당 수십 개 규모라 클러스터 없이 충분. 대량화 시 임페러티브 클러스터 재도입(후속).
+function SpotMarkers({ spots }: { spots: Spot[] }) {
   const router = useRouter();
-  const clusterer = useMemo(
-    () => (map ? new MarkerClusterer({ map }) : null),
-    [map],
-  );
-  useEffect(() => () => clusterer?.clearMarkers(), [clusterer]);
-
-  // 마커 인스턴스는 state가 아니라 ref로 수집한다. state로 모으면 마커 mount마다
-  // setState→리렌더가 연쇄되고 인라인 ref와 겹쳐 React #185(무한 렌더)로 지도가 크래시.
-  const markersRef = useRef<Record<string, Marker>>({});
-  const setRef = useCallback((key: string, marker: Marker | null) => {
-    if (marker) markersRef.current[key] = marker;
-    else delete markersRef.current[key];
-  }, []);
-  // 키별 ref 콜백을 캐시해 identity를 고정(React 19가 매 렌더 재호출하지 않도록).
-  const refCbs = useRef<Record<string, (m: Marker | null) => void>>({});
-  const getRef = useCallback(
-    (key: string) =>
-      (refCbs.current[key] ??= (m: Marker | null) => setRef(key, m)),
-    [setRef],
-  );
-
   const withPos = useMemo(() => spots.filter((s) => posOf(s)), [spots]);
-
-  // 클러스터러/스팟이 준비되면 수집된 마커로 클러스터 갱신(refs는 커밋 시점에 채워짐).
-  useEffect(() => {
-    if (!clusterer) return;
-    clusterer.clearMarkers();
-    clusterer.addMarkers(Object.values(markersRef.current));
-  }, [clusterer, withPos]);
 
   return (
     <>
@@ -81,7 +46,6 @@ function ClusteredMarkers({ spots }: { spots: Spot[] }) {
           <AdvancedMarker
             key={s.id}
             position={posOf(s)}
-            ref={getRef(s.id)}
             onClick={() => router.push(`/spot/${s.id}`)}
             title={`${s.title} · ${c.label} · ${s.categoryLabel}`}
           >
@@ -139,7 +103,7 @@ function GoogleMapLayer({ spots, city }: { spots: Spot[]; city: CityId }) {
         gestureHandling="greedy"
         className="absolute inset-0 h-full w-full"
       >
-        <ClusteredMarkers spots={spots} />
+        <SpotMarkers spots={spots} />
       </Map>
     </APIProvider>
   );
