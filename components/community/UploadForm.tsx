@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Plus, X, Search, MapPin, LogIn, Loader2 } from "lucide-react";
+import { Plus, X, Search, MapPin, LogIn, Loader2, Check } from "lucide-react";
 import { TagPill } from "../ui/TagPill";
 import { CoralButton } from "../ui/CoralButton";
 import { createPostAction, findSpotsAction } from "@/lib/actions/mutations";
@@ -278,7 +278,9 @@ export function UploadForm({
                           variant="mint"
                           style={{ fontSize: 9, padding: "2px 6px" }}
                         >
-                          ✓ GPS 인증
+                          <span className="inline-flex items-center gap-0.5">
+                            <Check size={10} strokeWidth={3} /> GPS 인증
+                          </span>
                         </TagPill>
                       </div>
                     )}

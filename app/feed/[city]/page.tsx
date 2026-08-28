@@ -6,6 +6,7 @@ import {
   Bookmark,
   MoreHorizontal,
   ChevronLeft,
+  Check,
 } from "lucide-react";
 import { Chip } from "@/components/ui/Chip";
 import { TagPill } from "@/components/ui/TagPill";
@@ -130,7 +131,9 @@ export default async function FeedPage({
                           variant="mint"
                           style={{ fontSize: 9, padding: "2px 6px" }}
                         >
-                          ✓ 인증
+                          <span className="inline-flex items-center gap-0.5">
+                            <Check size={10} strokeWidth={3} /> 인증
+                          </span>
                         </TagPill>
                       )}
                     </div>

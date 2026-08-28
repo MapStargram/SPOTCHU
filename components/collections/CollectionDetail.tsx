@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
+import { CategoryLabel } from "../ui/CategoryLabel";
 import type { Collection, Spot } from "@/lib/mock";
 
 const MARK_POS = [
@@ -113,7 +114,7 @@ export function CollectionDetail({
                       {s.title}
                     </span>
                     <span className="mt-0.5 flex items-center gap-1.5 text-[10px] text-[color:var(--muted)]">
-                      <span>{s.categoryLabel}</span>
+                      <CategoryLabel label={s.categoryLabel} size={11} />
                       <span>·</span>
                       <span className="font-latin">
                         {s.subtitle.split("·")[0].trim()}

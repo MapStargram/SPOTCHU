@@ -8,7 +8,4 @@ export function posOf(s: Spot): { lat: number; lng: number } | undefined {
     return { lat: s.shooterLat, lng: s.shooterLng };
   return SPOT_COORDS[s.id]; // 목업 폴백(DB 스팟은 항상 shooter 좌표 보유)
 }
-
-// categoryLabel 예: "🏯 랜드마크" → 앞의 이모지만 카테고리 아이콘으로
-export const iconOf = (s: Spot): string =>
-  s.categoryLabel.trim().split(" ")[0] || "📍";
+// 카테고리 아이콘은 lib/categories.categoryIcon로 통합(이모지 제거). 지도 마커는 MapView에서 렌더.

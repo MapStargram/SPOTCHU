@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { createElement, useEffect, useRef } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { APIProvider, useApiIsLoaded } from "@vis.gl/react-google-maps";
+import { APIProvider } from "@vis.gl/react-google-maps";
 import { Plus, Crosshair, MapPin } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
@@ -11,7 +12,8 @@ import { ErrorBoundary } from "../ui/ErrorBoundary";
 import { Sparkle } from "../ui/Sparkle";
 import { VerifBadge, VERIF_CFG } from "../ui/VerifBadge";
 import { CITY_CENTER, type Spot, type CityId } from "@/lib/mock";
-import { posOf, iconOf } from "./pin";
+import { categoryIcon } from "@/lib/categories";
+import { posOf } from "./pin";
 
 // C1 · 지도 뷰. 키(NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)가 있으면 실제 Google Maps,
 // 없으면 CSS 가짜 지도로 폴백. 핀 인코딩: 색=검증상태, 아이콘=카테고리(색+아이콘/라벨 병기).
@@ -31,9 +33,6 @@ const FALLBACK_MARKERS = [
   { state: "default" as const, x: 54, y: 50 },
 ];
 
-// 마커를 선언적으로 직접 렌더한다. @googlemaps/markerclusterer가 AdvancedMarker(React)의
-// DOM을 재부모화하며 React 19와 충돌해 무한 렌더(#185)로 지도가 크래시했다 → 클러스터러 제거.
-// 스팟 수가 도시당 수십 개 규모라 클러스터 없이 충분. 대량화 시 임페러티브 클러스터 재도입(후속).
 function GoogleMapLayer({ spots, city }: { spots: Spot[]; city: CityId }) {
   return (
     <APIProvider apiKey={KEY as string}>
@@ -47,14 +46,17 @@ function GoogleMapLayer({ spots, city }: { spots: Spot[]; city: CityId }) {
 // 뺐다(도시당 수십 개 규모면 불필요, 대량화 시 후속).
 function ImperativeMap({ spots, city }: { spots: Spot[]; city: CityId }) {
   const ref = useRef<HTMLDivElement>(null);
-  const apiLoaded = useApiIsLoaded();
   const router = useRouter();
 
   useEffect(() => {
-    if (!apiLoaded || !ref.current || typeof google === "undefined") return;
     let cancelled = false;
     const markers: google.maps.marker.AdvancedMarkerElement[] = [];
     void (async () => {
+      // APIProvider가 스크립트를 로드할 때까지 대기(@vis.gl 훅에 의존하지 않음 = React19 견고).
+      for (let i = 0; i < 100 && !window.google?.maps?.importLibrary; i++)
+        await new Promise((r) => setTimeout(r, 100));
+      if (cancelled || !ref.current || !window.google?.maps?.importLibrary)
+        return;
       const [{ Map }, { AdvancedMarkerElement }] = await Promise.all([
         google.maps.importLibrary("maps") as Promise<google.maps.MapsLibrary>,
         google.maps.importLibrary(
@@ -90,13 +92,21 @@ function ImperativeMap({ spots, city }: { spots: Spot[]; city: CityId }) {
       cancelled = true;
       markers.forEach((m) => (m.map = null));
     };
-  }, [apiLoaded, spots, city, router]);
+  }, [spots, city, router]);
 
   return <div ref={ref} className="absolute inset-0 h-full w-full" />;
 }
 
+// 카테고리 Lucide 아이콘을 임페러티브 DOM에 넣기 위해 정적 SVG 문자열로 렌더.
+function iconSvg(categoryLabel: string, size: number, color: string): string {
+  const Icon = categoryIcon(categoryLabel) ?? MapPin;
+  return renderToStaticMarkup(
+    createElement(Icon, { size, color, strokeWidth: 2.5 }),
+  );
+}
+
 // AdvancedMarkerElement content = 썸네일 마커 DOM. 링 색=검증상태, 코너 배지=카테고리
-// (색+아이콘/라벨 병기, rules §접근성). 이미지 없으면 이모지 원형 폴백.
+// (색+아이콘/라벨 병기, rules §접근성). 이미지 없으면 카테고리 아이콘 원형 폴백.
 function markerContent(
   s: Spot,
   c: { color: string; label: string },
@@ -116,13 +126,13 @@ function markerContent(
     ring.appendChild(img);
     const badge = document.createElement("span");
     badge.style.cssText =
-      "position:absolute;bottom:-4px;right:-4px;display:flex;height:18px;width:18px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid #fff;background:#fff;font-size:10px;box-shadow:0 1px 3px rgba(0,0,0,.3)";
-    badge.textContent = iconOf(s);
+      "position:absolute;bottom:-4px;right:-4px;display:flex;height:18px;width:18px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid #fff;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3)";
+    badge.innerHTML = iconSvg(s.categoryLabel, 11, "#17233C");
     wrap.append(ring, badge);
   } else {
     const circle = document.createElement("span");
-    circle.style.cssText = `display:flex;height:32px;width:32px;align-items:center;justify-content:center;border-radius:9999px;border:2px solid #fff;font-size:15px;background:${c.color};box-shadow:0 4px 10px rgba(23,35,60,.35)`;
-    circle.textContent = iconOf(s);
+    circle.style.cssText = `display:flex;height:32px;width:32px;align-items:center;justify-content:center;border-radius:9999px;border:2px solid #fff;background:${c.color};box-shadow:0 4px 10px rgba(23,35,60,.35)`;
+    circle.innerHTML = iconSvg(s.categoryLabel, 16, "#fff");
     wrap.appendChild(circle);
   }
   return wrap;

@@ -1,7 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronLeft, Share2, Heart, ChevronRight } from "lucide-react";
+import {
+  ChevronLeft,
+  Share2,
+  Heart,
+  ChevronRight,
+  Star,
+  Check,
+} from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
+import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
 import { CompareSlider } from "@/components/CompareSlider";
 import { SpotActions } from "@/components/SpotActions";
@@ -118,7 +126,9 @@ export default async function SpotDetailScreen({
           </div>
           <div className="absolute inset-x-5 bottom-14 text-cream">
             <div className="mb-2.5 flex gap-1.5">
-              <TagPill variant="glass">{s.categoryLabel}</TagPill>
+              <TagPill variant="glass">
+                <CategoryLabel label={s.categoryLabel} size={12} />
+              </TagPill>
               <TagPill variant="glass">{VERIFIED_LABEL[s.verified]}</TagPill>
             </div>
             <h1 className="text-[22px] font-extrabold leading-[1.2] tracking-[-0.02em]">
@@ -164,13 +174,13 @@ export default async function SpotDetailScreen({
               className="flex items-center gap-3 rounded-2xl bg-[color:var(--cream-2)] px-3.5 py-3"
             >
               <span
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] text-[20px]"
+                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] text-white"
                 style={{
                   background:
                     "linear-gradient(135deg, #E24352 0%, #FFC857 100%)",
                 }}
               >
-                ⛩️
+                <Star size={20} strokeWidth={2.25} aria-hidden />
               </span>
               <span className="min-w-0 flex-1">
                 <span className="block font-latin text-[9px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
@@ -276,7 +286,9 @@ export default async function SpotDetailScreen({
                           variant="mint"
                           style={{ fontSize: 9, padding: "2px 6px" }}
                         >
-                          ✓ 인증
+                          <span className="inline-flex items-center gap-0.5">
+                            <Check size={10} strokeWidth={3} /> 인증
+                          </span>
                         </TagPill>
                       )}
                     </div>

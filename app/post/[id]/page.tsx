@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronLeft, MoreHorizontal, Share2, Bookmark } from "lucide-react";
+import {
+  ChevronLeft,
+  MoreHorizontal,
+  Share2,
+  Bookmark,
+  Check,
+} from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
 import { LikeButton } from "@/components/community/LikeButton";
@@ -80,7 +86,11 @@ export default async function PostDetailPage({
           </div>
           {p.isVerifiedShot && (
             <div className="absolute left-4 top-44">
-              <TagPill variant="mint">✓ GPS 인증</TagPill>
+              <TagPill variant="mint">
+                <span className="inline-flex items-center gap-1">
+                  <Check size={12} strokeWidth={3} /> GPS 인증
+                </span>
+              </TagPill>
             </div>
           )}
         </div>

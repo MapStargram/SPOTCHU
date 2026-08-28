@@ -7,6 +7,8 @@ import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
 import { CoralButton, GhostButton } from "../ui/CoralButton";
 import { TagPill } from "../ui/TagPill";
+import { CategoryLabel } from "../ui/CategoryLabel";
+import { AppIcon } from "../ui/AppIcon";
 import { Mascot } from "../ui/Mascot";
 import { checkInAction } from "@/lib/actions/mutations";
 import { type Spot } from "@/lib/mock";
@@ -131,7 +133,7 @@ export function CheckinFlow({
         </div>
         <div className="mt-5">
           <TagPill variant="cream" className="mb-2">
-            {spot.categoryLabel}
+            <CategoryLabel label={spot.categoryLabel} size={12} />
           </TagPill>
           <div className="text-[18px] font-extrabold leading-[1.2] tracking-[-0.02em]">
             {spot.title}
@@ -236,8 +238,8 @@ export function CheckinFlow({
                   key={b.key + b.contextLabel}
                   className="flex items-center gap-3 rounded-2xl bg-[rgba(255,249,242,0.16)] px-3.5 py-3 text-left backdrop-blur"
                 >
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-yellow text-[22px]">
-                    {b.icon}
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-yellow text-navy">
+                    <AppIcon name={b.icon} size={22} />
                   </span>
                   <div className="min-w-0">
                     <div className="font-latin text-[10px] font-bold uppercase tracking-[0.16em] text-yellow">

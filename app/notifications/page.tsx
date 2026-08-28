@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
+import { AppIcon } from "@/components/ui/AppIcon";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { getNotifications } from "@/lib/data";
 import {
@@ -96,11 +97,11 @@ export default async function NotificationsPage() {
                       }
                     >
                       <span
-                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-[18px]"
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full"
                         style={{ background: c.bg, color: c.fg }}
                         aria-hidden
                       >
-                        {n.icon}
+                        <AppIcon name={n.icon} size={18} />
                       </span>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center justify-between gap-2">

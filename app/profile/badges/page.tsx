@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
+import { AppIcon } from "@/components/ui/AppIcon";
 import { Mascot } from "@/components/ui/Mascot";
 import { getBadgeCards } from "@/lib/data";
 
@@ -79,13 +80,13 @@ export default async function BadgeDexPage() {
                 style={{ opacity: b.earned ? 1 : 0.7 }}
               >
                 <div
-                  className="mx-auto flex h-14 w-14 items-center justify-center rounded-full text-[26px]"
+                  className="mx-auto flex h-14 w-14 items-center justify-center rounded-full text-navy"
                   style={{
                     background: b.earned ? "var(--yellow)" : "var(--cream-2)",
                     filter: b.earned ? "none" : "grayscale(0.5)",
                   }}
                 >
-                  {b.icon}
+                  <AppIcon name={b.icon} size={24} />
                 </div>
                 <div className="mt-2 text-[12px] font-bold tracking-[-0.01em] text-navy">
                   {b.title}

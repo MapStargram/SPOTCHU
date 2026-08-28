@@ -77,7 +77,8 @@
 - 상태: 45개 화면 전부 구현, 65개 라우트 빌드(SSG), typecheck·lint·build·런타임(콘솔 0) 통과. 목업 데이터(lib/mock.ts) 기반.
 - **반응형 웹/앱 분리 완료** `9f0934e`·`46e002e`·`97f8b46`: 데스크톱=인스타식 좌측 Sidebar(components/shell/), 모바일=하단 TabBar(lg:hidden). AppShell 래퍼로 전 앱 서피스 감쌈(홈·탐색·컬렉션·프로필·피드·배지·기록·작품·스팟·컬렉션상세). 데스크톱 콘텐츠 240px 오프셋·와이드/다열 그리드. 검증: 데스크톱 사이드바·모바일 탭바 전환, 콘솔 0.
 - **실제 브랜드 아이콘** components/brand/BrandIcons.tsx: Google 4색·KakaoTalk 말풍선·Apple(이모지 제거). 로그인 적용.
-- 반응형 규칙: 앱 서피스는 `AppShell`로 감싸고, 페이지 콘텐츠는 `mx-auto max-w-[500px] lg:max-w-[720~960px]` + `lg:` 반응형. TabBar `lg:hidden`, Sidebar `hidden lg:flex`.
+- 반응형 규칙: 앱 서피스는 `AppShell`로 감싸고, 페이지 콘텐츠는 `mx-auto max-w-[500px] lg:max-w-[720~960px]` + `lg:` 반응형. TabBar `lg:hidden`, Sidebar `hidden lg:flex`. **탐색(explore)은 피드=홈과 동일 컨테이너(`max-w-[1180px]`), 지도만 full-bleed**(지도는 화면 채움 필요). *왜*: 메뉴 간 레이아웃 일관성.
+- **UI 아이콘 규칙: 이모지 금지 → lucide 라인 아이콘.** 카테고리는 단일 원천 `lib/categories.ts`(`categoryIcon`/`categoryText`, 이모지 접두 방어적 strip) + 표기 컴포넌트 `components/ui/CategoryLabel`. 배지·알림 등 문자열 `icon` 필드는 **직렬화 가능한 키**만 저장(예: `"target"`,`"medal"`)하고 렌더에서 `components/ui/AppIcon`으로 아이콘화(서버/클라 경계에서 컴포넌트 전달 회피). 데이터(`Spot.categoryLabel` 등)에 이모지 넣지 않는다. *왜*: 이모지는 OS별 렌더 편차·정렬 흔들림 → 브랜드 일관성/접근성.
 - **git**: `main` 브랜치 생성 후 원격 푸시 완료(origin main). 이후 main에 직접 커밋·푸시 중. README 전면 개편 + CHANGELOG(Haiku) + 재현성 설정(.nvmrc/prettier/editorconfig/engines).
 - **비용 규칙**: 이력·CHANGELOG 등 히스토리 텍스트는 `changelog-writer`(Haiku) 에이전트로. CLAUDE.md §7.
 - **백엔드 인프라 착수**: DB — `docker-compose.yml`(postgis 16-3.4)+`docker/initdb/01-postgis.sql`+`lib/db.ts`(Prisma 싱글턴). 인증 — Auth.js v5 골격(`auth.ts`·`/api/auth/[...nextauth]`·@auth/prisma-adapter·**Kakao/Naver/Google/Apple**), Prisma User에 name/image 추가. **시드** `prisma/seed.ts`(목업→DB, `npm run db:seed`, tsx). **읽기 서버액션** `lib/actions/spots.ts`(getCities/getSpotsByCity/getSpot/getWork/getCollections). 빌드·typecheck 통과.

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { posOf, iconOf } from "./pin";
+import { posOf } from "./pin";
 import type { Spot } from "@/lib/mock";
 
 const base: Spot = {
@@ -7,7 +7,7 @@ const base: Spot = {
   title: "테스트 스팟",
   subtitle: "",
   city: "seoul",
-  categoryLabel: "🏯 랜드마크",
+  categoryLabel: "랜드마크",
   verified: "official",
   thumbGrad: "",
   heroGrad: "",
@@ -38,15 +38,5 @@ describe("posOf — 핀 좌표 불변식", () => {
 
   it("좌표를 전혀 못 찾으면 undefined(핀 미표시)", () => {
     expect(posOf({ ...base, id: "no-such-id" })).toBeUndefined();
-  });
-});
-
-describe("iconOf — 카테고리 아이콘", () => {
-  it("categoryLabel의 앞 이모지를 아이콘으로 뽑는다", () => {
-    expect(iconOf(base)).toBe("🏯");
-    expect(iconOf({ ...base, categoryLabel: "⛩️ 애니 성지" })).toBe("⛩️");
-  });
-  it("빈 라벨이면 기본 핀 이모지", () => {
-    expect(iconOf({ ...base, categoryLabel: "" })).toBe("📍");
   });
 });

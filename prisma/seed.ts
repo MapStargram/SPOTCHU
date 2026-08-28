@@ -14,11 +14,13 @@ import { BADGE_DEFS } from "../lib/badges";
 const db = new PrismaClient();
 
 // 목업 라벨 → DB 코드 매핑
+// 카테고리 라벨 → DB 코드. 라벨은 lib/spots.research.ts LABEL·mock BASE_SPOTS와 정확히 일치해야 한다
+// (이모지 라인아이콘화 이후 비이모지). 불일치 시 catId가 undefined가 된다.
 const CATEGORY_KEY: Record<string, string> = {
-  "🏯 랜드마크": "landmark",
-  "⛩️ 애니 성지": "anime",
-  "🎬 드라마": "drama",
-  "✨ 포토 스팟": "photo",
+  랜드마크: "landmark",
+  "애니 성지": "anime",
+  드라마: "drama",
+  "포토 스팟": "photo",
 };
 const COUNTRY: Record<string, "KR" | "JP"> = { 한국: "KR", 일본: "JP" };
 const VERIF: Record<string, "OFFICIAL" | "USER_VERIFIED" | "USER_REPORTED"> = {

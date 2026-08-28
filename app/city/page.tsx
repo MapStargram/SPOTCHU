@@ -1,3 +1,4 @@
+import { Construction } from "lucide-react";
 import { MobileScreen } from "@/components/ui/MobileScreen";
 import { CityGlobe } from "@/components/city/CityGlobe";
 
@@ -21,8 +22,9 @@ export default function CityPickerScreen() {
 
       <CityGlobe />
 
-      <div className="rounded-[22px] border border-dashed border-[color:var(--line-strong)] px-4 py-[18px] text-center text-[12px] text-[color:var(--muted)]">
-        🚧 더 많은 도시는 곧 열려요 · 오사카 · 교토 · 부산
+      <div className="flex items-center justify-center gap-1.5 rounded-[22px] border border-dashed border-[color:var(--line-strong)] px-4 py-[18px] text-center text-[12px] text-[color:var(--muted)]">
+        <Construction size={15} className="shrink-0" aria-hidden /> 더 많은
+        도시는 곧 열려요 · 오사카 · 교토 · 부산
       </div>
     </MobileScreen>
   );
