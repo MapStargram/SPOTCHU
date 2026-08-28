@@ -20,6 +20,7 @@
 ## 화면 상태
 - MVP에는 **사용자 대면 분석 화면이 없다**. 본 문서는 이벤트 수집·지표 정의 스펙이다.
 - 지표 열람은 외부 분석 도구/대시보드로 수행(도구 선정 **TODO**, rules 참조). 어드민 화면([`../11-admin-moderation/`](../11-admin-moderation/))과는 별개다.
+- **내부 운영 대시보드**(MVP): `app/admin/metrics` — 운영자·PM 전용(role 게이트). 도메인 테이블 **파생 카운트**로 NSM·퍼널·커버리지를 방향성 지표로 표시한다(집계 방식은 rules §집계 방식). 외부 분석 도구 선정 전까지의 최소 열람 창구다.
 
 ## 구성 요소
 
@@ -59,10 +60,12 @@
 | `soft_gate_shown` | 소프트 게이트 노출(§9·auth) | `action`(save/checkin/upload/like/report), `spot_id` |
 
 ### 지표 정의
+> MVP 내부 대시보드는 아래 "산출 소스"의 이벤트 대신 **도메인 테이블 파생 카운트**로 근사한다(rules §집계 방식). 이벤트 시퀀스 기반 정밀 산출은 외부 분석 도구 도입 후.
+
 | 지표 | 정의 | 산출 소스 |
 |---|---|---|
-| NSM | 방문 인증 완료 수 | `checkin_success`(unique 기준은 rules) |
-| 퍼널 전환율 | `spot_view`→`spot_save`→`collection_create`→`checkin_success`→`post_upload` 단계별 비율 | 사용자별 이벤트 시퀀스 |
+| NSM | 방문 인증 완료 수 | `checkin_success`(unique 기준은 rules) · MVP 파생: `CheckIn` 행 수 |
+| 퍼널 전환율 | `spot_view`→`spot_save`→`collection_create`→`checkin_success`→`post_upload` 단계별 비율 | 사용자별 이벤트 시퀀스 · MVP 파생: 단계별 distinct 사용자 수(발견은 DB 미보관 → 저장을 분모로) |
 | 리텐션 D1/D7/D30 | 기준일 이후 1·7·30일 재방문 사용자 비율 | 세션/로그인 이벤트(기준일 정의는 TODO) |
 | 커버리지 | 도시별 스팟 수 / 검증 비율(`verificationStatus` 분포) | `Spot` 집계(이벤트 아님, 서버 파생) |
 | 지도 비용 | 세션당 `map_load` 호출 수 | `map_load` × `session_id` |
