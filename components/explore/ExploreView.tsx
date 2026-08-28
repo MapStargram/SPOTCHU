@@ -30,7 +30,7 @@ const FEED_CHIPS = [
 
 // C1~C4 탐색 콘텐츠(AppShell 내부). 모바일=앱 컬럼 폭, 데스크톱=사이드바 옆 와이드.
 export function ExploreView({ spots, city }: { spots: Spot[]; city: CityId }) {
-  const [view, setView] = useState<"map" | "feed">("feed"); // 기본=피드(rules.md:12)
+  const [view, setView] = useState<"map" | "feed">("map"); // 기본=지도(현재 위치 우선 진입)
   const [chip, setChip] = useState(0);
   const [filterOpen, setFilterOpen] = useState(false);
   const chips = view === "map" ? MAP_CHIPS : FEED_CHIPS;
