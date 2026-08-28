@@ -1,7 +1,8 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { signIn } from "next-auth/react";
+import { getProviders, signIn } from "next-auth/react";
 import { MobileScreen } from "@/components/ui/MobileScreen";
 import { Mascot } from "@/components/ui/Mascot";
 import {
@@ -53,10 +54,15 @@ const PROVIDERS = [
 
 export default function LoginScreen() {
   const router = useRouter();
-  const shown =
-    AUTH_ENABLED && ENABLED_PROVIDERS.length
-      ? PROVIDERS.filter((p) => ENABLED_PROVIDERS.includes(p.id))
-      : PROVIDERS;
+  // 실제 설정된 provider를 auth 서버에서 가져와 표시(초기값은 env 폴백). 미설정 provider는 자동 숨김.
+  const [available, setAvailable] = useState<string[]>(ENABLED_PROVIDERS);
+  useEffect(() => {
+    if (!AUTH_ENABLED) return;
+    getProviders().then((p) => setAvailable(p ? Object.keys(p) : []));
+  }, []);
+  const shown = !AUTH_ENABLED
+    ? PROVIDERS
+    : PROVIDERS.filter((p) => available.includes(p.id));
 
   const onProvider = (id: string) => {
     if (AUTH_ENABLED) void signIn(id, { callbackUrl: "/city" });
