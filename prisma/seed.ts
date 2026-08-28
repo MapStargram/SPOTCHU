@@ -9,6 +9,7 @@ import {
   SPOT_COORDS,
   CITY_CENTER,
 } from "../lib/mock";
+import { BADGE_DEFS } from "../lib/badges";
 
 const db = new PrismaClient();
 
@@ -67,6 +68,20 @@ async function main() {
       where: { id: w.id },
       update: {},
       create: { id: w.id, title: w.title, type: WORKTYPE[w.type] ?? "OTHER" },
+    });
+  }
+
+  // 배지 정의(운영자 마스터 데이터, 정확히 3종 — feature 08 rules §불변식)
+  for (const b of BADGE_DEFS) {
+    await db.badge.upsert({
+      where: { key: b.key },
+      update: { type: b.type, label: b.label, description: b.description },
+      create: {
+        key: b.key,
+        type: b.type,
+        label: b.label,
+        description: b.description,
+      },
     });
   }
 
@@ -148,7 +163,7 @@ async function main() {
   }
 
   console.log(
-    `Seed 완료: 도시 ${CITIES.length} · 스팟 ${SPOTS.length} · 작품 ${WORKS.length} · 컬렉션 ${COLLECTIONS.length}`,
+    `Seed 완료: 도시 ${CITIES.length} · 스팟 ${SPOTS.length} · 작품 ${WORKS.length} · 컬렉션 ${COLLECTIONS.length} · 배지 ${BADGE_DEFS.length}`,
   );
 }
 

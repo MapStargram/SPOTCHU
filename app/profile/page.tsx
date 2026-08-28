@@ -2,14 +2,19 @@ import Link from "next/link";
 import { Settings, Pencil, ChevronRight, LogIn } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { getCurrentUser } from "@/lib/session";
-import { BADGES, CITY_PROGRESS } from "@/lib/mock";
+import { getProfileStats, getCityProgress, getBadgeCards } from "@/lib/data";
 
-// 로그인 유저를 매 요청 반영해야 하므로 동적 렌더.
+// 개인 통계·배지를 매 요청 반영해야 하므로 동적 렌더.
 export const dynamic = "force-dynamic";
 
 // G1 · 프로필(AppShell 내부).
 export default async function ProfilePage() {
-  const user = await getCurrentUser();
+  const [user, stats, cityProgress, badges] = await Promise.all([
+    getCurrentUser(),
+    getProfileStats(),
+    getCityProgress(),
+    getBadgeCards(),
+  ]);
   const name = user?.name || "게스트";
   const sub = user?.email || "로그인하고 저장·인증을 시작하세요";
   const initial = (name.trim()[0] || "S").toUpperCase();
@@ -78,9 +83,21 @@ export default async function ProfilePage() {
           </div>
           <div className="mt-4 grid grid-cols-3 text-center">
             {[
-              { v: "20", l: "VISITED", href: "/profile/history" },
-              { v: "3", l: "BADGES", href: "/profile/badges" },
-              { v: "42", l: "SAVED", href: "/collections" },
+              {
+                v: String(stats?.visited ?? 0),
+                l: "VISITED",
+                href: "/profile/history",
+              },
+              {
+                v: String(stats?.badges ?? 0),
+                l: "BADGES",
+                href: "/profile/badges",
+              },
+              {
+                v: String(stats?.saved ?? 0),
+                l: "SAVED",
+                href: "/collections",
+              },
             ].map((it, i) => (
               <Link
                 key={it.l}
@@ -100,68 +117,78 @@ export default async function ProfilePage() {
 
         <div className="mt-6 flex flex-col gap-6 px-5 lg:mt-8 lg:grid lg:grid-cols-2 lg:gap-8 lg:px-6">
           {/* City progress */}
-          <section>
-            <h2 className="mb-2.5 text-[13px] font-extrabold tracking-[-0.01em]">
-              도시 진행률
-            </h2>
-            <div className="flex flex-col gap-2.5">
-              {CITY_PROGRESS.map((cp) => (
-                <div
-                  key={cp.city}
-                  className="rounded-[14px] bg-white px-3.5 py-3 shadow-[var(--sh-card)]"
-                >
-                  <div className="mb-2 flex justify-between text-[13px]">
-                    <span className="font-bold">{cp.city}</span>
-                    <span className="font-latin text-[11px] text-[color:var(--muted)]">
-                      <b className="text-coral">{cp.visited}</b> / {cp.total}
-                    </span>
+          {cityProgress.length > 0 && (
+            <section>
+              <h2 className="mb-2.5 text-[13px] font-extrabold tracking-[-0.01em]">
+                도시 진행률
+              </h2>
+              <div className="flex flex-col gap-2.5">
+                {cityProgress.map((cp) => (
+                  <div
+                    key={cp.id}
+                    className="rounded-[14px] bg-white px-3.5 py-3 shadow-[var(--sh-card)]"
+                  >
+                    <div className="mb-2 flex justify-between text-[13px]">
+                      <span className="font-bold">{cp.name}</span>
+                      <span className="font-latin text-[11px] text-[color:var(--muted)]">
+                        <b className="text-coral">{cp.visited}</b> / {cp.total}
+                      </span>
+                    </div>
+                    <div className="h-1.5 overflow-hidden rounded-full bg-[color:var(--cream-2)]">
+                      <div
+                        className="h-full rounded-full"
+                        style={{
+                          width: `${Math.min(100, (cp.visited / cp.total) * 100)}%`,
+                          background: "var(--grad-body)",
+                        }}
+                      />
+                    </div>
                   </div>
-                  <div className="h-1.5 overflow-hidden rounded-full bg-[color:var(--cream-2)]">
-                    <div
-                      className="h-full rounded-full"
-                      style={{
-                        width: `${(cp.visited / cp.total) * 100}%`,
-                        background: "var(--grad-body)",
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Badge peek */}
-          <section>
-            <div className="mb-2.5 flex items-baseline justify-between">
-              <h2 className="text-[13px] font-extrabold tracking-[-0.01em]">
-                배지
-              </h2>
-              <Link
-                href="/profile/badges"
-                className="flex items-center text-[11px] font-semibold text-[color:var(--muted)]"
-              >
-                전체 <ChevronRight size={12} />
-              </Link>
-            </div>
-            <div className="flex gap-2 overflow-x-auto [scrollbar-width:none]">
-              {BADGES.slice(0, 4).map((b) => (
-                <div key={b.id} className="w-20 shrink-0 text-center">
+          {badges.length > 0 && (
+            <section>
+              <div className="mb-2.5 flex items-baseline justify-between">
+                <h2 className="text-[13px] font-extrabold tracking-[-0.01em]">
+                  배지
+                </h2>
+                <Link
+                  href="/profile/badges"
+                  className="flex items-center text-[11px] font-semibold text-[color:var(--muted)]"
+                >
+                  전체 <ChevronRight size={12} />
+                </Link>
+              </div>
+              <div className="flex gap-2 overflow-x-auto [scrollbar-width:none]">
+                {badges.slice(0, 4).map((b) => (
                   <div
-                    className="mx-auto flex h-[60px] w-[60px] items-center justify-center rounded-full text-[28px]"
-                    style={{
-                      background: b.earned ? "var(--yellow)" : "var(--cream-2)",
-                      opacity: b.earned ? 1 : 0.4,
-                    }}
+                    key={b.id}
+                    className="w-20 shrink-0 text-center"
+                    aria-label={`${b.title} — ${b.earned ? "획득" : "미획득"}`}
                   >
-                    {b.icon}
+                    <div
+                      className="mx-auto flex h-[60px] w-[60px] items-center justify-center rounded-full text-[28px]"
+                      style={{
+                        background: b.earned
+                          ? "var(--yellow)"
+                          : "var(--cream-2)",
+                        opacity: b.earned ? 1 : 0.4,
+                      }}
+                    >
+                      {b.icon}
+                    </div>
+                    <div className="mt-1.5 text-[10px] font-bold tracking-[-0.01em]">
+                      {b.title}
+                    </div>
                   </div>
-                  <div className="mt-1.5 text-[10px] font-bold tracking-[-0.01em]">
-                    {b.title}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </div>
     </AppShell>

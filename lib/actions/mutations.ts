@@ -6,6 +6,7 @@ import { z } from "zod";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
 import { canCheckIn, haversineMeters } from "@/lib/geo";
+import { awardCheckInBadges, type AwardedBadge } from "@/lib/actions/badges";
 
 type Fail = { ok: false; reason: string; [k: string]: unknown };
 
@@ -13,7 +14,9 @@ type Fail = { ok: false; reason: string; [k: string]: unknown };
 export async function checkInAction(
   spotId: string,
   coord: { lat: number; lng: number; accuracy: number },
-): Promise<Fail | { ok: true; first: boolean }> {
+): Promise<
+  Fail | { ok: true; first: boolean; awardedBadges?: AwardedBadge[] }
+> {
   const user = await getCurrentUser();
   if (!user?.id) return { ok: false, reason: "unauthenticated" };
   const spot = await db.spot.findUnique({ where: { id: spotId } });
@@ -75,7 +78,10 @@ export async function checkInAction(
         data: { verificationStatus: "USER_VERIFIED" },
       });
   }
-  return { ok: true, first: true };
+
+  // 배지 지급(서버 판정·멱등) — 이 인증으로 도시/작품 완주 시 축하 피드백용으로 반환
+  const awardedBadges = await awardCheckInBadges(user.id, spotId);
+  return { ok: true, first: true, awardedBadges };
 }
 
 // E · 스팟 저장(원탭 → 기본함 "저장됨" 또는 지정 컬렉션)
