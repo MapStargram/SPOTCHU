@@ -46,7 +46,7 @@ export function Settings() {
             <Row
               icon={<Users size={18} />}
               label="연결된 로그인"
-              extra="카카오"
+              href="/profile/account"
               chevron
             />
             <Row icon={<Bell size={18} />} label="알림 설정" chevron last />
