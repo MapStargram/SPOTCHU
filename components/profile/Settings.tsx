@@ -12,16 +12,56 @@ import {
   Bell,
   Moon,
   Globe,
-  Shield,
   Lock,
   AlertTriangle,
   LogOut,
 } from "lucide-react";
+import { updateNicknameAction } from "@/lib/actions/profile";
 
-// G4 · 설정. 다크모드 토글·로그아웃 동작. 정책 링크는 Section J로 연결.
-export function Settings() {
+// G4 · 설정. 닉네임 편집·연결 로그인은 실제 DB, 미구현 기능(다크/언어/알림)은 "준비중"으로 표기.
+const AUTH_ENABLED = process.env.NEXT_PUBLIC_AUTH_ENABLED === "true";
+const PROVIDER_LABEL: Record<string, string> = {
+  kakao: "카카오",
+  naver: "네이버",
+  google: "Google",
+  apple: "Apple",
+};
+
+export function Settings({
+  profile,
+}: {
+  profile: { nickname: string; providers: string[] } | null;
+}) {
   const router = useRouter();
-  const [dark, setDark] = useState(false);
+  const [nick, setNick] = useState(profile?.nickname ?? "");
+  const [editing, setEditing] = useState(false);
+  const [draft, setDraft] = useState(nick);
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const openEdit = () => {
+    if (!profile) return router.push("/login");
+    setDraft(nick);
+    setError(null);
+    setEditing(true);
+  };
+
+  const save = async () => {
+    setSaving(true);
+    setError(null);
+    const res = await updateNicknameAction(draft);
+    setSaving(false);
+    if (res.ok) {
+      setNick(res.nickname);
+      setEditing(false);
+    } else {
+      setError(res.error);
+    }
+  };
+
+  const providers = profile?.providers
+    .map((p) => PROVIDER_LABEL[p] ?? p)
+    .join(", ");
 
   return (
     <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
@@ -42,36 +82,48 @@ export function Settings() {
         <div className="flex flex-col gap-5">
           {/* 계정 */}
           <Section title="계정">
-            <Row icon={<Pencil size={18} />} label="프로필 편집" chevron />
+            <Row
+              icon={<Pencil size={18} />}
+              label="프로필 편집"
+              extra={profile ? nick || "닉네임 없음" : "로그인 필요"}
+              chevron
+              onClick={openEdit}
+            />
             <Row
               icon={<Users size={18} />}
               label="연결된 로그인"
+              extra={profile ? providers || "없음" : "로그인 필요"}
               href="/profile/account"
               chevron
+              last
             />
-            <Row icon={<Bell size={18} />} label="알림 설정" chevron last />
           </Section>
 
-          {/* 앱 */}
+          {/* 앱 (준비중 — 앱 전체 다크 팔레트/다국어 미구현) */}
           <Section title="앱">
             <Row
               icon={<Moon size={18} />}
               label="다크 모드"
-              toggle={dark}
-              onToggle={() => setDark((v) => !v)}
+              extra="준비중"
+              disabled
+            />
+            <Row
+              icon={<Bell size={18} />}
+              label="알림 설정"
+              extra="준비중"
+              disabled
             />
             <Row
               icon={<Globe size={18} />}
               label="언어"
               extra="한국어"
-              chevron
+              disabled
               last
             />
           </Section>
 
           {/* 정책 */}
           <Section title="정책">
-            <Row icon={<Shield size={18} />} label="이용약관" chevron />
             <Row
               icon={<Lock size={18} />}
               label="개인정보처리방침"
@@ -91,7 +143,7 @@ export function Settings() {
           <Section>
             <button
               onClick={() =>
-                process.env.NEXT_PUBLIC_AUTH_ENABLED === "true"
+                AUTH_ENABLED
                   ? void signOut({ callbackUrl: "/login" })
                   : router.push("/login")
               }
@@ -105,6 +157,53 @@ export function Settings() {
           </Section>
         </div>
       </div>
+
+      {/* 닉네임 편집 시트 */}
+      {editing && (
+        <div
+          className="fixed inset-0 z-30 flex items-end justify-center lg:pl-[76px]"
+          role="dialog"
+          aria-modal
+        >
+          <button
+            aria-label="닫기"
+            onClick={() => setEditing(false)}
+            className="absolute inset-0 bg-[rgba(23,35,60,0.5)]"
+          />
+          <div className="relative z-10 w-full max-w-[430px] rounded-t-[28px] bg-cream px-6 pb-8 pt-5 text-navy">
+            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line-strong)]" />
+            <div className="text-[18px] font-extrabold tracking-[-0.02em]">
+              프로필 편집
+            </div>
+            <label
+              htmlFor="nickname"
+              className="mt-4 block text-[12px] font-semibold text-[color:var(--muted)]"
+            >
+              닉네임
+            </label>
+            <input
+              id="nickname"
+              value={draft}
+              onChange={(e) => setDraft(e.target.value)}
+              maxLength={20}
+              autoFocus
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !saving) void save();
+              }}
+              placeholder="표시할 닉네임"
+              className="mt-1.5 w-full rounded-2xl border border-[color:var(--line)] bg-white px-4 py-3 text-[14px] text-navy outline-none focus:border-[color:var(--coral)]"
+            />
+            {error && <p className="mt-2 text-[12px] text-coral">{error}</p>}
+            <button
+              onClick={() => void save()}
+              disabled={saving}
+              className="mt-4 flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-coral font-ko text-[14px] font-extrabold text-cream shadow-[var(--sh-cta-coral)] disabled:opacity-60"
+            >
+              {saving ? "저장 중…" : "저장"}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -137,8 +236,8 @@ function Row({
   chevron,
   last,
   href,
-  toggle,
-  onToggle,
+  onClick,
+  disabled,
 }: {
   icon: React.ReactNode;
   label: string;
@@ -146,36 +245,36 @@ function Row({
   chevron?: boolean;
   last?: boolean;
   href?: string;
-  toggle?: boolean;
-  onToggle?: () => void;
+  onClick?: () => void;
+  disabled?: boolean;
 }) {
   const inner = (
     <div
-      className={`flex items-center gap-3 px-4 py-3.5 ${last ? "" : "border-b border-[color:var(--line)]"}`}
+      className={`flex items-center gap-3 px-4 py-3.5 ${
+        last ? "" : "border-b border-[color:var(--line)]"
+      } ${disabled ? "opacity-50" : ""}`}
     >
       <span className="text-navy">{icon}</span>
       <span className="flex-1 text-[13px] font-semibold tracking-[-0.01em] text-navy">
         {label}
       </span>
       {extra && (
-        <span className="text-[11px] text-[color:var(--muted)]">{extra}</span>
+        <span className="max-w-[45%] truncate text-[11px] text-[color:var(--muted)]">
+          {extra}
+        </span>
       )}
-      {onToggle !== undefined ? (
-        <button
-          onClick={onToggle}
-          aria-pressed={toggle}
-          className="relative h-[22px] w-[38px] rounded-full transition"
-          style={{ background: toggle ? "var(--mint)" : "rgba(23,35,60,0.15)" }}
-        >
-          <span
-            className="absolute top-0.5 h-[18px] w-[18px] rounded-full bg-white shadow transition-all"
-            style={{ left: toggle ? 18 : 2 }}
-          />
-        </button>
-      ) : chevron ? (
+      {chevron && !disabled && (
         <ChevronRight size={14} className="text-[color:var(--muted)]" />
-      ) : null}
+      )}
     </div>
   );
-  return href ? <Link href={href}>{inner}</Link> : inner;
+
+  if (href) return <Link href={href}>{inner}</Link>;
+  if (onClick && !disabled)
+    return (
+      <button onClick={onClick} className="w-full text-left">
+        {inner}
+      </button>
+    );
+  return inner;
 }

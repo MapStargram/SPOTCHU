@@ -41,6 +41,9 @@ erDiagram
 - `ModerationType`: `NEW_SPOT` | `REPORT` | `OFFICIAL_CANDIDATE` | `WORK_STILL_REQUEST`
 - `ModerationStatus`: `PENDING` | `APPROVED` | `REJECTED` | `MERGED` | `HIDDEN`
 - `WorkType`: `ANIME` | `MOVIE` | `DRAMA` | `OTHER`
+- `MapDisplayType`: `PHOTO_SPOT` | `LANDMARK` | `PILGRIMAGE` | `PARTNER` (지도 표시·필터 구분, prd §12)
+- `SponsorTier`: `NONE` | `BASIC` | `FEATURED` (스폰서 노출 등급, 포스트-MVP prd §42)
+- `PartnerStatus`: `PENDING` | `ACTIVE` | `EXPIRED` | `REJECTED`
 - `NotificationType`: `BADGE_EARNED` | `REPORT_REVIEWED` | `SPOT_PROMOTED` (MVP 인앱 3종, prd §20 · [`features/13-notifications/rules.md`](features/13-notifications/rules.md))
 
 ## 핵심 엔티티 (필드 초안)
@@ -97,6 +100,10 @@ i18n: `name_ja?, subject_ja?`(nullable, 후속).
 ### SpotLead  ← 외부 시딩 (⚠️ 법률 검토 필요, prd §41)
 `id, sourceUrl, sourcePlatform(INSTAGRAM|THREADS|YOUTUBE|BLOG|OTHER), placeName?, lat?, lng?, note?, status(PENDING|VERIFIED|REJECTED), promotedSpotId?, createdAt`.
 **규칙**: 원본 이미지/영상은 저장하지 않는다. 좌표·장소명·출처 URL 등 **메타데이터만**. 운영자 검증 후 `Spot`으로 승격.
+
+### Partner  ← 가맹점 스폰서 (포스트-MVP, prd §42)
+`id, name, category, lat, lng, cityId, thumbnailUrl?, sponsorTier(SponsorTier default NONE), sponsoredUntil?(date), status(PartnerStatus default PENDING), ownerContact?, linkedSpotIds?(맥락 연결)/areaId?, createdAt`.
+**규칙**: `Spot`과 **별도 엔티티**(사진 스팟의 촬영자-위치 불변식·검증 모델 비오염). 지도·목록에서 "광고/파트너" 라벨 병기(표시·광고법). 정확성·인증 기반 오가닉 랭킹과 **분리된 슬롯**. 실제 노출·판매는 트래픽 확보 후(§42). B2B 온보딩은 일반 제보(§18)와 분리된 권한·검수.
 
 ## 인덱스/성능 메모
 - `Spot`: 공간 인덱스(geography), `cityId`, `categoryId`, `verificationStatus`.
