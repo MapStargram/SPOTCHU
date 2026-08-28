@@ -14,6 +14,11 @@ import {
 // A5 · Login — 소셜 로그인(카카오·네이버·구글·애플).
 // NEXT_PUBLIC_AUTH_ENABLED="true" 면 실제 Auth.js signIn, 아니면 데모 플로우(권한 화면으로).
 const AUTH_ENABLED = process.env.NEXT_PUBLIC_AUTH_ENABLED === "true";
+// 활성화 시 표시할 provider(쉼표구분, 예: "google,kakao"). 데모 모드에선 전부 표시.
+const ENABLED_PROVIDERS = (process.env.NEXT_PUBLIC_AUTH_PROVIDERS || "")
+  .split(",")
+  .map((s) => s.trim())
+  .filter(Boolean);
 const PROVIDERS = [
   {
     id: "kakao",
@@ -48,6 +53,10 @@ const PROVIDERS = [
 
 export default function LoginScreen() {
   const router = useRouter();
+  const shown =
+    AUTH_ENABLED && ENABLED_PROVIDERS.length
+      ? PROVIDERS.filter((p) => ENABLED_PROVIDERS.includes(p.id))
+      : PROVIDERS;
 
   const onProvider = (id: string) => {
     if (AUTH_ENABLED) void signIn(id, { callbackUrl: "/city" });
@@ -71,7 +80,7 @@ export default function LoginScreen() {
       </div>
 
       <div className="flex flex-col gap-2.5">
-        {PROVIDERS.map((p) => (
+        {shown.map((p) => (
           <button
             key={p.id}
             onClick={() => onProvider(p.id)}
