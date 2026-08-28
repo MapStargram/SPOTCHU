@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Settings, Pencil, ChevronRight, LogIn } from "lucide-react";
+import { Settings, Pencil, ChevronRight, LogIn, Sparkles } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
+import { AppIcon } from "@/components/ui/AppIcon";
 import { getCurrentUser } from "@/lib/session";
 import { getProfileStats, getCityProgress, getBadgeCards } from "@/lib/data";
 
@@ -61,8 +62,8 @@ export default async function ProfilePage() {
               ) : (
                 initial
               )}
-              <span className="absolute -bottom-0.5 -right-0.5 flex h-[22px] w-[22px] items-center justify-center rounded-full border-2 border-white bg-yellow text-[12px]">
-                🌠
+              <span className="absolute -bottom-0.5 -right-0.5 flex h-[22px] w-[22px] items-center justify-center rounded-full border-2 border-white bg-yellow text-navy">
+                <Sparkles size={11} strokeWidth={2.5} aria-hidden />
               </span>
             </div>
             <div className="min-w-0 flex-1">
@@ -171,7 +172,7 @@ export default async function ProfilePage() {
                     aria-label={`${b.title} — ${b.earned ? "획득" : "미획득"}`}
                   >
                     <div
-                      className="mx-auto flex h-[60px] w-[60px] items-center justify-center rounded-full text-[28px]"
+                      className="mx-auto flex h-[60px] w-[60px] items-center justify-center rounded-full text-navy"
                       style={{
                         background: b.earned
                           ? "var(--yellow)"
@@ -179,7 +180,7 @@ export default async function ProfilePage() {
                         opacity: b.earned ? 1 : 0.4,
                       }}
                     >
-                      {b.icon}
+                      <AppIcon name={b.icon} size={26} />
                     </div>
                     <div className="mt-1.5 text-[10px] font-bold tracking-[-0.01em]">
                       {b.title}

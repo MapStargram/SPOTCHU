@@ -122,7 +122,7 @@ const BASE_SPOTS: Spot[] = [
     title: "모지항에서 본 후지산",
     subtitle: "Shizuoka · Japan · 이른 아침 6시 30분",
     city: "tokyo",
-    categoryLabel: "🏯 랜드마크",
+    categoryLabel: "랜드마크",
     verified: "official",
     thumbGrad: "linear-gradient(135deg, #FF7A85 0%, #FFC857 100%)",
     heroGrad: "linear-gradient(135deg, #FF7A85 0%, #E24352 100%)",
@@ -139,7 +139,7 @@ const BASE_SPOTS: Spot[] = [
     title: "스가 신사 계단",
     subtitle: "Yotsuya · Tokyo · 오후 5시 노을",
     city: "tokyo",
-    categoryLabel: "⛩️ 애니 성지",
+    categoryLabel: "애니 성지",
     verified: "official",
     thumbGrad: "linear-gradient(135deg, #FFC857 0%, #FF7A85 100%)",
     heroGrad: "linear-gradient(180deg, #E24352 0%, #FF7A85 100%)",
@@ -157,7 +157,7 @@ const BASE_SPOTS: Spot[] = [
     title: "시부야 스크램블 교차로",
     subtitle: "Shibuya · Tokyo · 야경 최적",
     city: "tokyo",
-    categoryLabel: "🏯 랜드마크",
+    categoryLabel: "랜드마크",
     verified: "user",
     thumbGrad: "linear-gradient(135deg, #17233C 0%, #E24352 100%)",
     heroGrad: "linear-gradient(180deg, #0B1424 0%, #E24352 100%)",
@@ -174,7 +174,7 @@ const BASE_SPOTS: Spot[] = [
     title: "남산 서울타워 야경",
     subtitle: "Yongsan · Seoul · 일몰 30분 후",
     city: "seoul",
-    categoryLabel: "🏯 랜드마크",
+    categoryLabel: "랜드마크",
     verified: "official",
     thumbGrad: "linear-gradient(135deg, #FF7A85 0%, #17233C 100%)",
     heroGrad: "linear-gradient(180deg, #E24352 0%, #17233C 100%)",
@@ -191,7 +191,7 @@ const BASE_SPOTS: Spot[] = [
     title: "경복궁 근정전 계단",
     subtitle: "Jongno · Seoul · 오전 9시 개장 직후",
     city: "seoul",
-    categoryLabel: "🏯 랜드마크",
+    categoryLabel: "랜드마크",
     verified: "official",
     thumbGrad: "linear-gradient(135deg, #FBEFE0 0%, #FF7A85 100%)",
     heroGrad: "linear-gradient(180deg, #FBEFE0 0%, #E24352 100%)",
@@ -208,7 +208,7 @@ const BASE_SPOTS: Spot[] = [
     title: "성수동 붉은벽돌 골목",
     subtitle: "Seongdong · Seoul · 오후 3시",
     city: "seoul",
-    categoryLabel: "✨ 포토 스팟",
+    categoryLabel: "포토 스팟",
     verified: "user",
     thumbGrad: "linear-gradient(135deg, #FF5F6D 0%, #FBEFE0 100%)",
     heroGrad: "linear-gradient(180deg, #FF7A85 0%, #FBEFE0 100%)",
@@ -225,7 +225,7 @@ const BASE_SPOTS: Spot[] = [
     title: "이태원 단밤 포차 앞",
     subtitle: "Yongsan · Seoul · 저녁",
     city: "seoul",
-    categoryLabel: "🎬 드라마",
+    categoryLabel: "드라마",
     verified: "user",
     thumbGrad: "linear-gradient(135deg, #E24352 0%, #FFC857 100%)",
     heroGrad: "linear-gradient(180deg, #17233C 0%, #E24352 100%)",
@@ -243,7 +243,7 @@ const BASE_SPOTS: Spot[] = [
     title: "하라주쿠 다케시타 거리",
     subtitle: "Shibuya · Tokyo · 낮",
     city: "tokyo",
-    categoryLabel: "✨ 포토 스팟",
+    categoryLabel: "포토 스팟",
     verified: "user",
     thumbGrad: "linear-gradient(135deg, #FFC857 0%, #45D6C6 100%)",
     heroGrad: "linear-gradient(180deg, #FFC857 0%, #45D6C6 100%)",
@@ -339,16 +339,16 @@ export const TRENDING = [
   "옥상 뷰",
 ];
 
-// 탐색 필터/정렬 옵션 (C1·C4)
+// 탐색 필터/정렬 옵션 (C1·C4). 라벨은 순수 텍스트 — 아이콘은 FilterSheet에서 매핑.
 export const CATEGORY_FILTERS = [
-  "🏯 랜드마크",
-  "⛩️ 애니 성지",
-  "🎬 드라마",
-  "✨ 포토 스팟",
-  "🌸 계절",
+  "랜드마크",
+  "애니 성지",
+  "드라마",
+  "포토 스팟",
+  "계절",
 ];
 export const VERIFY_FILTERS = ["공식 인증", "사용자 검증", "제보"];
-export const TIME_FILTERS = ["🌅 일출", "☀️ 낮", "🌇 일몰", "🌙 야경"];
+export const TIME_FILTERS = ["일출", "낮", "일몰", "야경"];
 export const SORT_OPTIONS = ["인기순", "거리순", "최신순"];
 
 // 스팟 좌표 (지도용, 근사치 데모값). 실데이터 연동 시 Spot.shooterLat/Lng로 대체.
@@ -387,21 +387,21 @@ export const BADGES: Badge[] = [
   {
     id: "first-checkin",
     title: "첫 방문",
-    icon: "🎯",
+    icon: "target",
     earned: true,
     subtitle: "첫 스팟 방문 인증",
   },
   {
     id: "tokyo-5",
     title: "도쿄 초심자",
-    icon: "🗼",
+    icon: "tower",
     earned: true,
     subtitle: "도쿄 스팟 5곳 방문",
   },
   {
     id: "kimi-master",
     title: "너의 이름은. 마스터",
-    icon: "🌠",
+    icon: "pilgrimage",
     earned: false,
     subtitle: "작품 스팟 전체 완주 · 4/12",
     progress: 4,
@@ -410,21 +410,21 @@ export const BADGES: Badge[] = [
   {
     id: "golden-hour",
     title: "골든아워 헌터",
-    icon: "🌅",
+    icon: "sunrise",
     earned: true,
     subtitle: "일몰 시간대 3회 인증",
   },
   {
     id: "collection-done",
     title: "컬렉션 완주자",
-    icon: "📸",
+    icon: "camera",
     earned: false,
     subtitle: "내 컬렉션 1개 100% 방문",
   },
   {
     id: "seoul-10",
     title: "서울 애호가",
-    icon: "🏙️",
+    icon: "city",
     earned: false,
     subtitle: "서울 스팟 10곳 방문 · 3/10",
     progress: 3,
@@ -538,7 +538,7 @@ export const NOTIFICATIONS: Notification[] = [
     body: "도쿄 초심자 배지를 획득했어요.",
     time: "방금",
     unread: true,
-    icon: "🗼",
+    icon: "tower",
   },
   {
     id: "n2",
@@ -547,7 +547,7 @@ export const NOTIFICATIONS: Notification[] = [
     body: '"성수동 붉은벽돌 골목"이 지도에 노출됩니다.',
     time: "2시간 전",
     unread: true,
-    icon: "✓",
+    icon: "check",
   },
   {
     id: "n3",
@@ -556,7 +556,7 @@ export const NOTIFICATIONS: Notification[] = [
     body: '"성수동 붉은벽돌 골목"이 사용자 검증 단계로 승격되었습니다.',
     time: "어제",
     unread: false,
-    icon: "★",
+    icon: "star",
   },
   {
     id: "n4",
@@ -565,7 +565,7 @@ export const NOTIFICATIONS: Notification[] = [
     body: "골든아워 헌터 배지를 획득했어요.",
     time: "3일 전",
     unread: false,
-    icon: "🌅",
+    icon: "sunrise",
   },
 ];
 

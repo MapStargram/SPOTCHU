@@ -3,11 +3,11 @@
 import type { Spot, Work, CityId } from "./mock";
 
 const LABEL: Record<string, string> = {
-  landmark: "🏯 랜드마크",
-  anime: "⛩️ 애니 성지",
-  drama: "🎬 드라마",
-  photo: "✨ 포토 스팟",
-  nature: "✨ 포토 스팟",
+  landmark: "랜드마크",
+  anime: "애니 성지",
+  drama: "드라마",
+  photo: "포토 스팟",
+  nature: "포토 스팟",
 };
 
 // 브랜드 그라디언트 팔레트(스팟별 순환 배정 — 실 이미지 준비 전까지 임시)

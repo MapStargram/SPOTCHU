@@ -37,7 +37,7 @@ export function presentNotification(
     case "BADGE_EARNED":
       return {
         tone: "badge",
-        icon: "🏅",
+        icon: "medal",
         title: "새 배지 획득!",
         body: refLabel
           ? `${refLabel} 배지를 획득했어요.`
@@ -47,7 +47,7 @@ export function presentNotification(
     case "REPORT_REVIEWED":
       return {
         tone: "moderation",
-        icon: "✓",
+        icon: "check",
         title: "제보 검수 결과",
         body: refLabel
           ? `"${refLabel}" 제보 검수가 완료됐어요.`
@@ -57,7 +57,7 @@ export function presentNotification(
     case "SPOT_PROMOTED":
       return {
         tone: "promotion",
-        icon: "★",
+        icon: "star",
         title: "내 스팟이 검증되었어요",
         body: refLabel
           ? `"${refLabel}"이(가) 사용자 검증 단계로 승격됐어요.`

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Heart } from "lucide-react";
 import { TagPill } from "../ui/TagPill";
 import { Sparkle } from "../ui/Sparkle";
+import { CategoryLabel } from "../ui/CategoryLabel";
 import type { Spot } from "@/lib/mock";
 
 // C2 · 피드(그리드). 2열 4:5 카드, 카드 탭 → 스팟 상세.
@@ -23,7 +24,7 @@ export function FeedView({ spots }: { spots: Spot[] }) {
                 variant="glass"
                 style={{ fontSize: 9, padding: "2px 8px" }}
               >
-                {s.categoryLabel}
+                <CategoryLabel label={s.categoryLabel} size={10} />
               </TagPill>
             </div>
             <span className="absolute right-2 top-2 flex h-[26px] w-[26px] items-center justify-center rounded-full bg-[rgba(255,249,242,0.85)] backdrop-blur">

@@ -16,7 +16,8 @@ import { MapMarker } from "../map/MapMarker";
 import { Sparkle } from "../ui/Sparkle";
 import { VerifBadge, VERIF_CFG } from "../ui/VerifBadge";
 import { CITY_CENTER, type Spot, type CityId } from "@/lib/mock";
-import { posOf, iconOf } from "./pin";
+import { categoryIcon } from "@/lib/categories";
+import { posOf } from "./pin";
 
 // C1 · 지도 뷰. 키(NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)가 있으면 실제 Google Maps,
 // 없으면 CSS 가짜 지도로 폴백. 핀 인코딩: 색=검증상태, 아이콘=카테고리(색+아이콘/라벨 병기).
@@ -70,6 +71,7 @@ function ClusteredMarkers({ spots }: { spots: Spot[] }) {
     <>
       {withPos.map((s) => {
         const c = VERIF_CFG[s.verified];
+        const Icon = categoryIcon(s.categoryLabel) ?? MapPin;
         return (
           <AdvancedMarker
             key={s.id}
@@ -81,10 +83,10 @@ function ClusteredMarkers({ spots }: { spots: Spot[] }) {
             <span
               role="img"
               aria-label={`${s.title}, ${c.label}, ${s.categoryLabel}`}
-              className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white text-[15px] leading-none shadow-[0_4px_10px_rgba(23,35,60,0.35)]"
+              className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white text-white shadow-[0_4px_10px_rgba(23,35,60,0.35)]"
               style={{ background: c.color }}
             >
-              {iconOf(s)}
+              <Icon size={16} strokeWidth={2.5} aria-hidden />
             </span>
           </AdvancedMarker>
         );

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ChevronLeft, Search } from "lucide-react";
+import { CategoryLabel } from "../ui/CategoryLabel";
 import type { FilterOption } from "@/lib/data";
 
 // C3 · 검색 컨트롤(클라이언트 섬). URL 쿼리를 갱신하면 서버가 결과를 다시 렌더한다.
@@ -40,6 +41,24 @@ function Chip({
     >
       {children}
     </button>
+  );
+}
+
+// 필터 그룹: 라벨 + 내용. 검색 영역의 경계를 명확히 나눠 '백지' 느낌을 없앤다.
+function Field({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-col gap-2">
+      <span className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+        {label}
+      </span>
+      {children}
+    </div>
   );
 }
 
@@ -116,74 +135,74 @@ export function SearchControls({
         </div>
       </form>
 
-      {/* 필터 칩 — 가로 스크롤 */}
-      <div className="-mx-5 flex gap-1.5 overflow-x-auto px-5 [scrollbar-width:none]">
-        <Chip active={!cur("cityId")} onClick={() => setParam("cityId")}>
-          전체
-        </Chip>
-        {CITY_OPTS.map((c) => (
-          <Chip
-            key={c.id}
-            active={cur("cityId") === c.id}
-            onClick={() => setParam("cityId", c.id)}
-          >
-            {c.label}
-          </Chip>
-        ))}
-        <span
-          className="mx-0.5 w-px shrink-0 bg-[color:var(--line)]"
-          aria-hidden
-        />
-        {VERIFY_OPTS.map((v) => (
-          <Chip
-            key={v.id}
-            active={cur("verified") === v.id}
-            onClick={() => setParam("verified", v.id)}
-          >
-            {v.label}
-          </Chip>
-        ))}
-      </div>
-
-      {/* 카테고리 칩 */}
-      {categories.length > 0 && (
-        <div className="-mx-5 flex gap-1.5 overflow-x-auto px-5 [scrollbar-width:none]">
-          {categories.map((c) => (
-            <Chip
-              key={c.id}
-              active={cur("category") === c.id}
-              onClick={() => setParam("category", c.id)}
-            >
-              {c.label}
+      {/* 필터 패널 — 그룹별 경계를 둬서 정렬감을 준다 */}
+      <div className="flex flex-col gap-4 rounded-[20px] border border-[color:var(--line)] bg-white p-4 shadow-[var(--sh-card)]">
+        <Field label="지역">
+          <div className="flex flex-wrap gap-1.5">
+            <Chip active={!cur("cityId")} onClick={() => setParam("cityId")}>
+              전체
             </Chip>
-          ))}
-        </div>
-      )}
-
-      {/* 작품 필터 — 목록이 길 수 있어 네이티브 셀렉트 */}
-      {works.length > 0 && (
-        <div className="flex items-center gap-2">
-          <label
-            htmlFor="search-work"
-            className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]"
-          >
-            작품
-          </label>
-          <select
-            id="search-work"
-            value={cur("work")}
-            onChange={(e) => setParam("work", e.target.value || undefined)}
-            className="flex-1 rounded-[12px] border border-[color:var(--line)] bg-white px-3 py-2 text-[12px] font-semibold text-navy"
-          >
-            <option value="">전체 작품</option>
-            {works.map((w) => (
-              <option key={w.id} value={w.id}>
-                {w.label}
-              </option>
+            {CITY_OPTS.map((c) => (
+              <Chip
+                key={c.id}
+                active={cur("cityId") === c.id}
+                onClick={() => setParam("cityId", c.id)}
+              >
+                {c.label}
+              </Chip>
             ))}
-          </select>
-        </div>
-      )}
+          </div>
+        </Field>
+
+        <Field label="검증 상태">
+          <div className="flex flex-wrap gap-1.5">
+            {VERIFY_OPTS.map((v) => (
+              <Chip
+                key={v.id}
+                active={cur("verified") === v.id}
+                onClick={() => setParam("verified", v.id)}
+              >
+                {v.label}
+              </Chip>
+            ))}
+          </div>
+        </Field>
+
+        {categories.length > 0 && (
+          <Field label="카테고리">
+            <div className="flex flex-wrap gap-1.5">
+              {categories.map((c) => (
+                <Chip
+                  key={c.id}
+                  active={cur("category") === c.id}
+                  onClick={() => setParam("category", c.id)}
+                >
+                  <CategoryLabel label={c.label} size={13} />
+                </Chip>
+              ))}
+            </div>
+          </Field>
+        )}
+
+        {works.length > 0 && (
+          <Field label="작품">
+            <select
+              id="search-work"
+              aria-label="작품 필터"
+              value={cur("work")}
+              onChange={(e) => setParam("work", e.target.value || undefined)}
+              className="w-full rounded-[12px] border border-[color:var(--line)] bg-white px-3 py-2.5 text-[12px] font-semibold text-navy"
+            >
+              <option value="">전체 작품</option>
+              {works.map((w) => (
+                <option key={w.id} value={w.id}>
+                  {w.label}
+                </option>
+              ))}
+            </select>
+          </Field>
+        )}
+      </div>
     </div>
   );
 }

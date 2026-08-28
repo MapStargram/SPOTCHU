@@ -40,14 +40,13 @@ export const BADGE_DEFS: BadgeDef[] = [
   },
 ];
 
-// 획득/미획득은 색만이 아니라 아이콘 병기(rules §접근성).
+// 획득/미획득은 색만이 아니라 아이콘 병기(rules §접근성). 값은 AppIcon 키(components/ui/AppIcon).
 export function cityIcon(cityId: string): string {
-  if (cityId === "seoul") return "🏙️";
-  if (cityId === "tokyo") return "🗼";
-  return "🌆";
+  if (cityId === "tokyo") return "tower";
+  return "city"; // seoul·기타
 }
-export const PILGRIMAGE_ICON = "🌠";
-export const FIRST_REPORTER_ICON = "🚩";
+export const PILGRIMAGE_ICON = "pilgrimage";
+export const FIRST_REPORTER_ICON = "flag";
 
 export type CheckInAwardKind = "CITY" | "PILGRIMAGE_COMPLETE";
 export interface AwardTarget {

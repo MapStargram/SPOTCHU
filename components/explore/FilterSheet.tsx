@@ -1,10 +1,22 @@
 "use client";
 
 import { useState } from "react";
+import type { LucideIcon } from "lucide-react";
+import { Sunrise, Sun, Sunset, Moon } from "lucide-react";
 import { CoralButton } from "../ui/CoralButton";
+import { CATEGORY_ICONS } from "@/lib/categories";
 import { CATEGORY_FILTERS, VERIFY_FILTERS, TIME_FILTERS } from "@/lib/mock";
 
 // C4 · 필터 바텀시트. 카테고리·검증상태·시간대 다중 선택 + '내 주변' 토글.
+// 라벨 → 라인 아이콘 매핑(이모지 대체). 카테고리는 공용 소스 재사용, 검증 상태는 아이콘 없음.
+const ICONS: Record<string, LucideIcon> = {
+  ...CATEGORY_ICONS,
+  일출: Sunrise,
+  낮: Sun,
+  일몰: Sunset,
+  야경: Moon,
+};
+
 function OptionChip({
   label,
   on,
@@ -14,16 +26,25 @@ function OptionChip({
   on: boolean;
   onClick: () => void;
 }) {
+  const Icon = ICONS[label];
   return (
     <button
       onClick={onClick}
-      className="rounded-full px-3.5 py-2 text-[12px] font-semibold text-navy"
+      className="inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[12px] font-semibold text-navy"
       style={
         on
           ? { border: "1.5px solid var(--coral)", background: "var(--cream-2)" }
           : { border: "1px solid var(--line)", background: "#fff" }
       }
     >
+      {Icon && (
+        <Icon
+          size={15}
+          strokeWidth={2}
+          className={on ? "text-coral" : "text-[color:var(--muted)]"}
+          aria-hidden
+        />
+      )}
       {label}
     </button>
   );

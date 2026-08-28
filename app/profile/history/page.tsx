@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ChevronLeft, Check } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
+import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { getVisitHistory } from "@/lib/data";
 
 // 개인 방문 이력을 매 요청 반영.
@@ -59,7 +60,7 @@ export default async function HistoryPage() {
                       {r.spot.title}
                     </div>
                     <div className="mt-0.5 flex items-center gap-1.5 text-[10px] text-[color:var(--muted)]">
-                      <span>{r.spot.categoryLabel}</span>
+                      <CategoryLabel label={r.spot.categoryLabel} size={11} />
                       <span>·</span>
                       <span className="font-latin">{r.when}</span>
                     </div>
