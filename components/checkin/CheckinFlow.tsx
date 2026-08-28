@@ -34,6 +34,9 @@ export function CheckinFlow({
   const [dist, setDist] = useState<number | null>(null);
   const [acc, setAcc] = useState<number | null>(null);
   const [first, setFirst] = useState(true);
+  const [awarded, setAwarded] = useState<
+    { key: string; label: string; icon: string; contextLabel: string }[]
+  >([]);
   const back = () => router.push(`/spot/${spot.id}`);
 
   // 판정·영속화는 서버(checkInAction)가 담당한다. 원시 좌표는 전송만 하고 저장하지 않는다(rules §불변식).
@@ -54,6 +57,7 @@ export function CheckinFlow({
         }).then((res) => {
           if (res.ok) {
             setFirst(res.first);
+            setAwarded(res.awardedBadges ?? []);
             setPhase("success");
           } else if (res.reason === "range") {
             setDist(typeof res.distanceM === "number" ? res.distanceM : null);
@@ -224,7 +228,31 @@ export function CheckinFlow({
               ? `${spot.title} 첫 방문 인증을 완료했어요`
               : `${spot.title} 다시 방문 인증했어요`}
           </div>
-          {/* ponytail: 실제 배지 지급은 feature 08(게임화)에서 연동. 가짜 배지 카드 제거. */}
+          {/* 배지 획득 축하(서버 지급분만 노출). 도시/작품 완주 시 표시. */}
+          {awarded.length > 0 && (
+            <div className="mt-5 flex w-full max-w-[300px] flex-col gap-2">
+              {awarded.map((b) => (
+                <div
+                  key={b.key + b.contextLabel}
+                  className="flex items-center gap-3 rounded-2xl bg-[rgba(255,249,242,0.16)] px-3.5 py-3 text-left backdrop-blur"
+                >
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-yellow text-[22px]">
+                    {b.icon}
+                  </span>
+                  <div className="min-w-0">
+                    <div className="font-latin text-[10px] font-bold uppercase tracking-[0.16em] text-yellow">
+                      New Badge
+                    </div>
+                    <div className="truncate text-[14px] font-extrabold tracking-[-0.01em]">
+                      {b.contextLabel
+                        ? `${b.contextLabel} ${b.label}`
+                        : b.label}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         <div className="relative z-10 flex flex-col gap-2.5 pb-11">
           <button
