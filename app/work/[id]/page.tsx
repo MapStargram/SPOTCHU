@@ -3,7 +3,10 @@ import { notFound } from "next/navigation";
 import { ChevronLeft, Share2, Check, ChevronRight } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
-import { WORKS, getWork } from "@/lib/mock";
+import { getWork } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
+
+// DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
+export const dynamic = "force-dynamic";
 
 // B4 · 작품 상세 — 애니 성지 강조. 성지순례 진행률 카드가 1급 요소.
 type Scene = { ep: string; title: string; label: string; visited: boolean };
@@ -34,21 +37,18 @@ const SCENES: Record<string, Scene[]> = {
   ],
 };
 
-export function generateStaticParams() {
-  return WORKS.map((w) => ({ id: w.id }));
-}
-
 export default async function WorkDetailScreen({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const w = getWork(id);
+  const w = await getWork(id);
   if (!w) notFound();
 
   const scenes = SCENES[id] ?? [];
-  const progressPct = Math.round((w.progress / w.spotCount) * 100);
+  const progressPct =
+    w.spotCount > 0 ? Math.round((w.progress / w.spotCount) * 100) : 0;
 
   return (
     <AppShell>

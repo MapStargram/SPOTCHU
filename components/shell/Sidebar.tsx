@@ -19,7 +19,7 @@ const NAV: {
   Icon: typeof Home;
   href: string;
 }[] = [
-  { id: "home", label: "홈", Icon: Home, href: "/home/tokyo" },
+  { id: "home", label: "홈", Icon: Home, href: "/home" },
   { id: "explore", label: "탐색", Icon: Compass, href: "/explore/tokyo" },
   { id: "collections", label: "컬렉션", Icon: Bookmark, href: "/collections" },
   { id: "notifications", label: "알림", Icon: Bell, href: "/notifications" },
@@ -37,7 +37,7 @@ export function Sidebar({ active }: { active?: Active }) {
     <aside className="group peer fixed inset-y-0 left-0 z-30 hidden w-[76px] flex-col overflow-hidden border-r border-[color:var(--line)] bg-cream transition-[width] duration-200 ease-out hover:w-[244px] hover:shadow-[var(--sh-card)] lg:flex">
       <div className="flex w-[244px] flex-1 flex-col px-3 py-6">
         <Link
-          href="/home/tokyo"
+          href="/home"
           aria-label="SPOTCHU 홈"
           className="mb-5 flex h-9 items-center px-2"
         >

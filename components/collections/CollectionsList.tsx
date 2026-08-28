@@ -4,12 +4,16 @@ import { useState } from "react";
 import Link from "next/link";
 import { Plus, Lock } from "lucide-react";
 import { TagPill } from "../ui/TagPill";
-import { COLLECTIONS } from "@/lib/mock";
+import type { Collection } from "@/lib/mock";
 
-// E1 · 컬렉션 목록(AppShell 내부). 모바일 2열 / 데스크톱 4열.
-export function CollectionsList() {
+// E1 · 컬렉션 목록(AppShell 내부). 모바일 2열 / 데스크톱 4열. 데이터는 서버(page)에서 주입.
+export function CollectionsList({
+  collections,
+}: {
+  collections: Collection[];
+}) {
   const [tab, setTab] = useState<"own" | "curated">("own");
-  const list = COLLECTIONS.filter((c) =>
+  const list = collections.filter((c) =>
     tab === "own" ? c.isOwn : c.isOfficial,
   );
 

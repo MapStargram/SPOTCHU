@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
-import { getSpot, type Collection } from "@/lib/mock";
+import type { Collection, Spot } from "@/lib/mock";
 
 const MARK_POS = [
   { x: 26, y: 30 },
@@ -20,11 +20,14 @@ const MARK_POS = [
   { x: 51, y: 62 },
 ];
 
-export function CollectionDetail({ col }: { col: Collection }) {
+export function CollectionDetail({
+  col,
+  spots,
+}: {
+  col: Collection;
+  spots: Spot[];
+}) {
   const [view, setView] = useState<"list" | "map">("list");
-  const spots = col.spots
-    .map((id) => getSpot(id))
-    .filter((s): s is NonNullable<typeof s> => !!s);
   const remaining = col.itemCount - spots.length;
 
   const toggle = (

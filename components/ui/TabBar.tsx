@@ -11,7 +11,7 @@ const TABS: {
   Icon: typeof Home;
   href: string | null;
 }[] = [
-  { id: "home", label: "홈", Icon: Home, href: "/home/tokyo" },
+  { id: "home", label: "홈", Icon: Home, href: "/home" },
   { id: "explore", label: "탐색", Icon: Compass, href: "/explore/tokyo" },
   { id: "collections", label: "컬렉션", Icon: Bookmark, href: "/collections" },
   { id: "profile", label: "프로필", Icon: User, href: "/profile" },

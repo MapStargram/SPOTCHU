@@ -2,14 +2,16 @@
 // 페이지는 lib/mock 대신 여기서 읽으면 env 플래그로 안전하게 전환된다(기본=목업, 데모 유지).
 // ⚠️ DB 행에는 그라디언트/일부 표시 필드가 없어 결정적 폴백으로 매핑한다(실 이미지 준비 전까지 임시).
 import * as mock from "./mock";
-import type { Spot, City, CityId, Work } from "./mock";
+import type { Spot, City, CityId, Work, Collection } from "./mock";
 import {
   getSpotsByCityFromDb,
   getCitiesFromDb,
   getSpotFromDb,
   getWorkWithSpotsFromDb,
+  getCollectionsFromDb,
 } from "./actions/spots";
 import { unstable_cache } from "next/cache";
+import { getCurrentUser } from "./session";
 
 const USE_DB = process.env.DATA_SOURCE === "db";
 
@@ -173,4 +175,47 @@ const cachedWork = unstable_cache(
 export async function getWork(id: string): Promise<Work | undefined> {
   if (!USE_DB) return mock.getWork(id);
   return (await cachedWork(id)) ?? undefined;
+}
+
+// ── 컬렉션(Collection) ──
+// 큐레이션(official)은 콘텐츠, 내 것(ownerId===유저)은 유저별. 비로그인은 official만 보임.
+interface DbCollectionLike {
+  id: string;
+  title: string;
+  description: string | null;
+  isOfficial: boolean;
+  ownerId: string;
+  items?: { spotId: string }[];
+}
+function mapCollection(row: DbCollectionLike, userId?: string): Collection {
+  return {
+    id: row.id,
+    title: row.title,
+    subtitle: row.description ?? "",
+    itemCount: row.items?.length ?? 0,
+    coverGrad: gradFor(row.id),
+    isOwn: userId ? row.ownerId === userId : false,
+    isOfficial: row.isOfficial,
+    spots: row.items?.map((i) => i.spotId) ?? [],
+  };
+}
+
+export async function getCollections(): Promise<Collection[]> {
+  if (!USE_DB) return mock.COLLECTIONS;
+  const user = await getCurrentUser();
+  const uid = user?.id;
+  const rows = await getCollectionsFromDb();
+  return rows
+    .filter((r) => r.isOfficial || (uid ? r.ownerId === uid : false))
+    .map((r) => mapCollection(r, uid));
+}
+
+export async function getCollection(
+  id: string,
+): Promise<Collection | undefined> {
+  if (!USE_DB) return mock.getCollection(id);
+  const user = await getCurrentUser();
+  const rows = await getCollectionsFromDb();
+  const row = rows.find((r) => r.id === id);
+  return row ? mapCollection(row, user?.id) : undefined;
 }
