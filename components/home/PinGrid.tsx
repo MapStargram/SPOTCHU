@@ -24,9 +24,17 @@ export function PinGrid({ spots, city }: { spots: Spot[]; city: string }) {
     ...Array.from(new Set(spots.map((s) => s.categoryLabel).filter(Boolean))),
   ];
   const [cat, setCat] = useState("전체");
+  const [sort, setSort] = useState<"popular" | "recent" | "rating">("popular");
   const { toggle, isSaved } = useSaved();
-  const shown =
+  const filtered =
     cat === "전체" ? spots : spots.filter((s) => s.categoryLabel === cat);
+  // 최신순 = 데이터 추가 역순(리서치 스팟이 뒤에 붙음). 그 외는 방문/평점 내림차순.
+  const shown =
+    sort === "recent"
+      ? [...filtered].reverse()
+      : [...filtered].sort((a, b) =>
+          sort === "rating" ? b.rating - a.rating : b.visits - a.visits,
+        );
 
   return (
     <div className="mt-3">
@@ -51,6 +59,20 @@ export function PinGrid({ spots, city }: { spots: Spot[]; city: string }) {
         >
           <MapIcon size={15} /> 지도로 보기
         </Link>
+      </div>
+
+      {/* 정렬 */}
+      <div className="mb-3 flex items-center justify-end gap-1.5">
+        <span className="text-[11px] text-[color:var(--muted)]">정렬</span>
+        <select
+          value={sort}
+          onChange={(e) => setSort(e.target.value as typeof sort)}
+          className="rounded-full border border-[color:var(--line)] bg-white px-3 py-1.5 text-[12px] font-semibold text-navy"
+        >
+          <option value="popular">인기순</option>
+          <option value="recent">최신순</option>
+          <option value="rating">평점순</option>
+        </select>
       </div>
 
       {/* 메이슨리 그리드 */}

@@ -7,6 +7,7 @@ import {
   SlidersHorizontal,
   Map as MapIcon,
   LayoutGrid,
+  Home,
 } from "lucide-react";
 import { Chip } from "../ui/Chip";
 import { MapView } from "./MapView";
@@ -33,6 +34,7 @@ export function ExploreView({ spots }: { spots: Spot[] }) {
   const [chip, setChip] = useState(0);
   const [filterOpen, setFilterOpen] = useState(false);
   const chips = view === "map" ? MAP_CHIPS : FEED_CHIPS;
+  const city = spots[0]?.city ?? "tokyo"; // 홈 그리드 링크용(같은 도시 스팟들)
 
   const seg = (v: "map" | "feed", Icon: typeof MapIcon, label: string) => (
     <button
@@ -69,9 +71,17 @@ export function ExploreView({ spots }: { spots: Spot[] }) {
           </button>
         </div>
         <div className="flex items-center justify-between">
-          <div className="inline-flex gap-0.5 rounded-full bg-white p-1 shadow-[var(--sh-card)]">
-            {seg("map", MapIcon, "지도")}
-            {seg("feed", LayoutGrid, "피드")}
+          <div className="flex items-center gap-2">
+            <div className="inline-flex gap-0.5 rounded-full bg-white p-1 shadow-[var(--sh-card)]">
+              {seg("map", MapIcon, "지도")}
+              {seg("feed", LayoutGrid, "피드")}
+            </div>
+            <Link
+              href={`/home/${city}`}
+              className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-2 font-ko text-[12px] font-bold text-navy shadow-[var(--sh-card)]"
+            >
+              <Home size={14} /> 홈 그리드
+            </Link>
           </div>
           <div className="hidden gap-2 overflow-x-auto lg:flex">
             {chips.map((c, i) => (
