@@ -4,7 +4,7 @@ import { createElement, useEffect, useRef } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { APIProvider, useApiIsLoaded } from "@vis.gl/react-google-maps";
+import { APIProvider } from "@vis.gl/react-google-maps";
 import { Plus, Crosshair, MapPin } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
@@ -46,14 +46,17 @@ function GoogleMapLayer({ spots, city }: { spots: Spot[]; city: CityId }) {
 // 뺐다(도시당 수십 개 규모면 불필요, 대량화 시 후속).
 function ImperativeMap({ spots, city }: { spots: Spot[]; city: CityId }) {
   const ref = useRef<HTMLDivElement>(null);
-  const apiLoaded = useApiIsLoaded();
   const router = useRouter();
 
   useEffect(() => {
-    if (!apiLoaded || !ref.current || typeof google === "undefined") return;
     let cancelled = false;
     const markers: google.maps.marker.AdvancedMarkerElement[] = [];
     void (async () => {
+      // APIProvider가 스크립트를 로드할 때까지 대기(@vis.gl 훅에 의존하지 않음 = React19 견고).
+      for (let i = 0; i < 100 && !window.google?.maps?.importLibrary; i++)
+        await new Promise((r) => setTimeout(r, 100));
+      if (cancelled || !ref.current || !window.google?.maps?.importLibrary)
+        return;
       const [{ Map }, { AdvancedMarkerElement }] = await Promise.all([
         google.maps.importLibrary("maps") as Promise<google.maps.MapsLibrary>,
         google.maps.importLibrary(
@@ -89,7 +92,7 @@ function ImperativeMap({ spots, city }: { spots: Spot[]; city: CityId }) {
       cancelled = true;
       markers.forEach((m) => (m.map = null));
     };
-  }, [apiLoaded, spots, city, router]);
+  }, [spots, city, router]);
 
   return <div ref={ref} className="absolute inset-0 h-full w-full" />;
 }
