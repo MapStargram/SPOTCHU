@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { Map as MapIcon, Bookmark } from "lucide-react";
 import { Sparkle } from "@/components/ui/Sparkle";
+import { Select } from "@/components/ui/Select";
+import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { useSaved } from "@/lib/useSaved";
 import type { Spot } from "@/lib/mock";
 
@@ -60,7 +62,7 @@ export function PinGrid({
                 : "border border-[color:var(--line)] bg-white text-navy hover:bg-[color:var(--cream-2)]"
             }`}
           >
-            {c}
+            <CategoryLabel label={c} size={14} />
           </button>
         ))}
         <Link
@@ -72,17 +74,18 @@ export function PinGrid({
       </div>
 
       {/* 정렬 */}
-      <div className="mb-3 flex items-center justify-end gap-1.5">
-        <span className="text-[11px] text-[color:var(--muted)]">정렬</span>
-        <select
+      <div className="mb-3 flex items-center justify-end gap-2">
+        <span className="text-[12px] text-[color:var(--muted)]">정렬</span>
+        <Select
           value={sort}
-          onChange={(e) => setSort(e.target.value as typeof sort)}
-          className="rounded-full border border-[color:var(--line)] bg-white px-3 py-1.5 text-[12px] font-semibold text-navy"
-        >
-          <option value="popular">인기순</option>
-          <option value="recent">최신순</option>
-          <option value="rating">평점순</option>
-        </select>
+          onChange={setSort}
+          ariaLabel="정렬 기준"
+          options={[
+            { value: "popular", label: "인기순" },
+            { value: "recent", label: "최신순" },
+            { value: "rating", label: "평점순" },
+          ]}
+        />
       </div>
 
       {/* 메이슨리 그리드 */}
@@ -112,7 +115,7 @@ export function PinGrid({
                     />
                   )}
                   <span className="absolute left-2 top-2 rounded-full bg-black/30 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
-                    {s.categoryLabel}
+                    <CategoryLabel label={s.categoryLabel} size={11} />
                   </span>
                   {s.verified === "official" && (
                     <span className="pointer-events-none absolute bottom-11 right-2">

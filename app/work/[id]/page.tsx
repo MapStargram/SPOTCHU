@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronLeft, Share2, Check, ChevronRight } from "lucide-react";
+import {
+  ChevronLeft,
+  Share2,
+  Check,
+  ChevronRight,
+  Sparkles,
+} from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
+import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
 import { getWork } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 
@@ -91,7 +98,7 @@ export default async function WorkDetailScreen({
           </div>
           <div className="absolute inset-x-5 bottom-5 text-cream">
             <TagPill variant="glass" className="mb-2.5">
-              ⛩️ 애니 성지
+              <CategoryLabel label="애니 성지" size={12} />
             </TagPill>
             <h1 className="text-[24px] font-extrabold leading-[1.15] tracking-[-0.03em]">
               {w.title}
@@ -125,7 +132,7 @@ export default async function WorkDetailScreen({
             />
           </div>
           <div className="mt-2.5 flex items-center gap-2 text-[11px] text-[color:var(--muted)]">
-            <span className="text-yellow">🌠</span>
+            <Sparkles size={14} className="shrink-0 text-yellow" aria-hidden />
             <span>
               전체 완주 시 <b className="text-navy">{w.title} 마스터</b> 배지
               획득
