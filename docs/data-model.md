@@ -49,7 +49,7 @@ erDiagram
 ## 핵심 엔티티 (필드 초안)
 
 ### User
-`id, email, role(Role), nickname, avatarUrl?, isTrusted(bool), createdAt` + Auth.js 계정 연결 테이블(Account/Session). 동의 이력: `agreedTermsAt, agreedPrivacyAt, agreedLocationAt, birthYear?`(만 14세 미만 제한 검증용).
+`id, email, emailVerified?, passwordHash?(bcrypt), role(Role), nickname, avatarUrl?, isTrusted(bool), createdAt` + Auth.js 계정 연결 테이블(Account/Session/VerificationToken). `passwordHash`는 이메일/비밀번호 가입 사용자만 값이 있고, 소셜 전용 사용자는 null. 동의 이력: `agreedTermsAt, agreedPrivacyAt, agreedLocationAt, birthYear?`(만 14세 미만 제한 검증용). 이메일 인증·비밀번호 재설정 토큰은 `VerificationToken`을 재사용한다.
 
 ### City
 `id, name, nameEn?, country(KR|JP), centerLat, centerLng, defaultZoom, isActive`.

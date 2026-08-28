@@ -93,6 +93,8 @@ export function Settings({
               icon={<Users size={18} />}
               label="연결된 로그인"
               extra={profile ? providers || "없음" : "로그인 필요"}
+              href="/profile/account"
+              chevron
               last
             />
           </Section>

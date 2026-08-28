@@ -6,7 +6,8 @@
 | 영역 | 선택 | 근거 |
 |---|---|---|
 | 프론트 | **Next.js (App Router) + TypeScript + Tailwind, PWA** | SSR로 스팟/공유 페이지 SEO·유입, 모바일 우선, 후속 네이티브 시 API 재사용 |
-| 인증 | **Auth.js (NextAuth)** — 카카오·구글·애플 | 카카오 provider 기본 지원(주 타깃 한국인) |
+| 인증 | **Auth.js (NextAuth)** — 카카오·네이버·구글·애플 + 이메일/비밀번호(Credentials) | 소셜 기본(주 타깃 한국인) + 소셜 미사용자 대응. 세션 `jwt`, 비번 해시 `bcryptjs` |
+| 메일 | **Resend** | 이메일 인증·비밀번호 재설정 발송(무료 티어). `RESEND_API_KEY` |
 | DB | **PostgreSQL** | 관계형 + 지리 확장 |
 | 지리 | **PostGIS** | 반경/근처 쿼리·공간 인덱스 |
 | ORM | **Prisma** | 타입 안전. 단, 공간 쿼리는 아래 주의 |
