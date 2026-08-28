@@ -40,7 +40,7 @@ export default function OnboardingScreen() {
   return (
     <MobileScreen className="py-16">
       <button
-        onClick={() => router.push("/login")}
+        onClick={() => router.push("/city")}
         className="absolute right-6 top-16 z-10 font-latin text-[12px] font-semibold tracking-[0.05em] text-[color:var(--muted)]"
       >
         건너뛰기

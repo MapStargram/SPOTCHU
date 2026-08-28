@@ -20,3 +20,6 @@ Thumbs.db
 .idea/
 # 루트 PDF는 스크래치로 간주(SPOTCHU와 무관한 반입 문서 제외). 필요 시 docs/에 정리 후 추적.
 /*.pdf
+
+.vercel
+.env*

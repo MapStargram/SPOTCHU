@@ -92,6 +92,12 @@ export default function LoginScreen() {
           <span className="font-semibold text-navy">위치기반서비스</span>에
           동의합니다
         </p>
+        <button
+          onClick={() => router.push("/city")}
+          className="mt-1 text-center text-[13px] font-semibold text-navy underline underline-offset-2 active:scale-[0.98]"
+        >
+          로그인 없이 둘러보기 →
+        </button>
       </div>
     </MobileScreen>
   );
