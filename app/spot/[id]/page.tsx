@@ -6,7 +6,11 @@ import { AppShell } from "@/components/shell/AppShell";
 import { CompareSlider } from "@/components/CompareSlider";
 import { SpotActions } from "@/components/SpotActions";
 import { Mascot } from "@/components/ui/Mascot";
-import { SPOTS, getSpot, getWork, type Verified } from "@/lib/mock";
+import { type Verified } from "@/lib/mock";
+import { getSpot, getWork } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
+
+// DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
+export const dynamic = "force-dynamic";
 
 const VERIFIED_LABEL: Record<Verified, string> = {
   official: "공식 인증",
@@ -35,20 +39,16 @@ const REVIEWS = [
   },
 ];
 
-export function generateStaticParams() {
-  return SPOTS.map((s) => ({ id: s.id }));
-}
-
 export default async function SpotDetailScreen({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const s = getSpot(id);
+  const s = await getSpot(id);
   if (!s) notFound();
 
-  const work = s.workId ? getWork(s.workId) : null;
+  const work = s.workId ? await getWork(s.workId) : null;
   const recTime = s.subtitle.split("·").pop()?.trim() ?? "-";
 
   return (

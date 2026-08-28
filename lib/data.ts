@@ -2,11 +2,12 @@
 // 페이지는 lib/mock 대신 여기서 읽으면 env 플래그로 안전하게 전환된다(기본=목업, 데모 유지).
 // ⚠️ DB 행에는 그라디언트/일부 표시 필드가 없어 결정적 폴백으로 매핑한다(실 이미지 준비 전까지 임시).
 import * as mock from "./mock";
-import type { Spot, City, CityId } from "./mock";
+import type { Spot, City, CityId, Work } from "./mock";
 import {
   getSpotsByCityFromDb,
   getCitiesFromDb,
   getSpotFromDb,
+  getWorkWithSpotsFromDb,
 } from "./actions/spots";
 import { unstable_cache } from "next/cache";
 
@@ -46,25 +47,32 @@ interface DbSpotLike {
   imageAuthor?: string | null;
   imageLicense?: string | null;
   imageSource?: string | null;
+  rating?: number | null;
+  subtitle?: string | null;
+  angle?: string | null;
+  infoSource?: string | null;
+  works?: { workId: string; sceneNote?: string | null }[];
 }
 function mapSpot(row: DbSpotLike): Spot {
   const g = gradFor(row.id);
   return {
     id: row.id,
     title: row.name,
-    subtitle: "",
+    subtitle: row.subtitle ?? "",
     city: row.cityId as CityId,
     categoryLabel: row.category?.label ?? "",
     verified: VERIF_BACK[row.verificationStatus] ?? "reported",
     thumbGrad: g,
     heroGrad: g,
-    rating: 0,
+    rating: row.rating ?? 0,
     visits: row.uniqueCheckinCount,
     saves: row.saveCount,
-    workId: null,
-    angle: "",
+    workId: row.works?.[0]?.workId ?? null,
+    scene: row.works?.[0]?.sceneNote ?? undefined,
+    angle: row.angle ?? "",
     lens: row.lens ?? "",
     tip: row.tip ?? "",
+    source: row.infoSource ?? undefined,
     imageUrl: row.coverImageUrl || undefined,
     imageCredit: row.imageSource
       ? {
@@ -131,4 +139,38 @@ export async function getCity(id: string): Promise<City | undefined> {
 export async function getSpot(id: string): Promise<Spot | undefined> {
   if (!USE_DB) return mock.getSpot(id);
   return (await cachedSpot(id)) ?? undefined;
+}
+
+// ── 작품(Work) ──
+const WORKTYPE_LABEL: Record<string, string> = {
+  ANIME: "애니",
+  MOVIE: "영화",
+  DRAMA: "드라마",
+};
+interface DbWorkLike {
+  id: string;
+  title: string;
+  type: string;
+  spots?: unknown[];
+}
+function mapWork(row: DbWorkLike): Work {
+  return {
+    id: row.id,
+    title: row.title,
+    type: WORKTYPE_LABEL[row.type] ?? row.type,
+    spotCount: row.spots?.length ?? 0,
+    progress: 0,
+  };
+}
+const cachedWork = unstable_cache(
+  async (id: string) => {
+    const row = await getWorkWithSpotsFromDb(id);
+    return row ? mapWork(row) : null;
+  },
+  ["db-work"],
+  { revalidate: 300, tags: ["works"] },
+);
+export async function getWork(id: string): Promise<Work | undefined> {
+  if (!USE_DB) return mock.getWork(id);
+  return (await cachedWork(id)) ?? undefined;
 }
