@@ -30,6 +30,7 @@
     "@googlemaps/markerclusterer": "^2.6.2",
     "@prisma/client": "^6",
     "@vis.gl/react-google-maps": "^1.9.0",
+    "cloudinary": "^2.11.0",
     "cobe": "^2.0.1",
     "globe.gl": "^2.46.2",
     "lucide-react": "^1.34.0",

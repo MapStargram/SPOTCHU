@@ -16,6 +16,13 @@ import {
   getWorksFromDb,
 } from "./actions/search";
 import { filterSpots, type SpotSearchCriteria } from "./search";
+import {
+  getPostsByCityFromDb,
+  getPostFromDb,
+  getLikedPostIds,
+  type FeedTab,
+  type DbPost,
+} from "./actions/posts";
 import { unstable_cache } from "next/cache";
 import { getCurrentUser } from "./session";
 import { z } from "zod";
@@ -546,4 +553,99 @@ export async function getVisitHistory(): Promise<VisitRow[]> {
     spot: mapSpot(r.spot),
     when: whenLabel(r.createdAt),
   }));
+}
+
+// ── 커뮤니티 피드 · 게시물(feature 09) ──
+// 게시물 뷰 모델(목업 ↔ DB 공통). 실 이미지가 없으면 결정적 그라디언트로 폴백.
+export type { FeedTab };
+export interface FeedPost {
+  id: string;
+  authorName: string;
+  authorInitial: string;
+  when: string;
+  spotId: string;
+  spotTitle: string;
+  city: CityId;
+  images: string[]; // Cloudinary secure_url. 비면 gradient 폴백(목업).
+  gradient: string;
+  caption: string;
+  isVerifiedShot: boolean;
+  likeCount: number;
+  likedByMe: boolean;
+}
+
+function mapMockPost(p: mock.Post): FeedPost {
+  const spot = mock.getSpot(p.spotId);
+  return {
+    id: p.id,
+    authorName: p.author,
+    authorInitial: p.author.charAt(0),
+    when: p.when,
+    spotId: p.spotId,
+    spotTitle: spot?.title ?? "",
+    city: p.city,
+    images: [],
+    gradient: p.gradient,
+    caption: p.caption,
+    isVerifiedShot: p.verified,
+    likeCount: p.likes,
+    likedByMe: false,
+  };
+}
+
+function mapDbPost(row: DbPost, likedByMe: boolean): FeedPost {
+  const name = row.author.nickname ?? row.author.name ?? "익명";
+  return {
+    id: row.id,
+    authorName: name,
+    authorInitial: name.charAt(0) || "S",
+    when: whenLabel(row.createdAt),
+    spotId: row.spot.id,
+    spotTitle: row.spot.name,
+    city: row.spot.cityId as CityId,
+    images: row.images.map((i) => i.url),
+    gradient: gradFor(row.id),
+    caption: row.caption ?? "",
+    isVerifiedShot: row.isVerifiedShot,
+    likeCount: row._count.likes,
+    likedByMe,
+  };
+}
+
+export async function getFeedPosts(
+  city: CityId,
+  tab: FeedTab = "popular",
+): Promise<FeedPost[]> {
+  if (!USE_DB) {
+    let posts = mock.postsByCity(city);
+    if (tab === "verified") posts = posts.filter((p) => p.verified);
+    else if (tab === "latest") posts = posts.slice().reverse();
+    else posts = posts.slice().sort((a, b) => b.likes - a.likes);
+    return posts.map(mapMockPost);
+  }
+  const user = await getCurrentUser();
+  const rows = await getPostsByCityFromDb(city, tab);
+  const liked = user?.id
+    ? await getLikedPostIds(
+        user.id,
+        rows.map((r) => r.id),
+      )
+    : new Set<string>();
+  return rows.map((r) => mapDbPost(r, liked.has(r.id)));
+}
+
+export async function getPostDetail(id: string): Promise<FeedPost | null> {
+  if (!USE_DB) {
+    const p = mock.getPost(id);
+    return p ? mapMockPost(p) : null;
+  }
+  const row = await getPostFromDb(id);
+  if (!row) return null;
+  const user = await getCurrentUser();
+  const likedByMe = user?.id
+    ? (await db.like.findUnique({
+        where: { postId_userId: { postId: id, userId: user.id } },
+      })) != null
+    : false;
+  return mapDbPost(row, likedByMe);
 }
