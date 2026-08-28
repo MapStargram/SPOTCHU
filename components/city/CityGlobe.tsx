@@ -96,7 +96,7 @@ const COUNTRIES: Country[] = [
   },
 ];
 
-export function CityGlobe() {
+export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<GlobeInstance | null>(null);
   const router = useRouter();
@@ -134,7 +134,7 @@ export function CityGlobe() {
           const sub = o.cities
             ? `${o.cities.length}개 도시`
             : o.available
-              ? `${o.spots}개 스팟`
+              ? `${counts?.[o.id ?? ""] ?? o.spots}개 스팟`
               : "준비 중";
           return `<div style="font-family:Pretendard,sans-serif;background:#17233c;color:#fff;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700">${o.name} · ${sub}</div>`;
         })
@@ -169,6 +169,8 @@ export function CityGlobe() {
       if (onResize) window.removeEventListener("resize", onResize);
       globeRef.current?._destructor?.();
     };
+    // counts는 서버에서 1회 전달되는 안정적 prop → 지구본은 1회만 생성(재생성 불필요).
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router]);
 
   // open 변화 → 마커(나라↔도시) + 카메라 줌 전환
@@ -247,7 +249,7 @@ export function CityGlobe() {
                             {city.name}
                           </span>
                           <span className="text-[11px] font-semibold text-[color:var(--muted)]">
-                            {city.spots}개 스팟
+                            {counts?.[city.id] ?? city.spots}개 스팟
                           </span>
                           <span className="text-[14px] text-coral">→</span>
                         </button>

@@ -19,6 +19,15 @@ export function FeedView({ spots }: { spots: Spot[] }) {
             className="relative aspect-[4/5]"
             style={{ background: s.thumbGrad }}
           >
+            {s.imageUrl && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={s.imageUrl}
+                alt={s.title}
+                loading="lazy"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            )}
             <div className="absolute left-2 top-2">
               <TagPill
                 variant="glass"

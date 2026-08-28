@@ -18,6 +18,7 @@ import {
 import { filterSpots, type SpotSearchCriteria } from "./search";
 import {
   getPostsByCityFromDb,
+  getPostsBySpotFromDb,
   getPostFromDb,
   getLikedPostIds,
   type FeedTab,
@@ -178,6 +179,20 @@ export async function getCity(id: string): Promise<City | undefined> {
 export async function getSpot(id: string): Promise<Spot | undefined> {
   if (!USE_DB) return mock.getSpot(id);
   return (await cachedSpot(id)) ?? undefined;
+}
+
+// 도시별 실제 스팟 수(도시 선택 카드용). 하드코딩 데모값이 아니라 실데이터에서 집계.
+export async function getCitySpotCounts(): Promise<Record<string, number>> {
+  if (!USE_DB) {
+    const out: Record<string, number> = {};
+    for (const c of mock.CITIES) out[c.id] = mock.spotsByCity(c.id).length;
+    return out;
+  }
+  const rows = await db.spot.groupBy({
+    by: ["cityId"],
+    _count: { _all: true },
+  });
+  return Object.fromEntries(rows.map((r) => [r.cityId, r._count._all]));
 }
 
 // ── 작품(Work) ──
@@ -659,6 +674,22 @@ export async function getPostDetail(id: string): Promise<FeedPost | null> {
       })) != null
     : false;
   return mapDbPost(row, likedByMe);
+}
+
+// 스팟 상세 "방문자의 사진" — 해당 스팟의 실제 게시물(최신순). 없으면 빈 배열(더미 없음).
+export async function getSpotPosts(spotId: string): Promise<FeedPost[]> {
+  if (!USE_DB) {
+    return mock.POSTS.filter((p) => p.spotId === spotId).map(mapMockPost);
+  }
+  const user = await getCurrentUser();
+  const rows = await getPostsBySpotFromDb(spotId);
+  const liked = user?.id
+    ? await getLikedPostIds(
+        user.id,
+        rows.map((r) => r.id),
+      )
+    : new Set<string>();
+  return rows.map((r) => mapDbPost(r, liked.has(r.id)));
 }
 
 // J1 · 알림 목록(본인 것만, 발행 역순). 표시 문구는 type+참조 대상명으로 서버 조합.

@@ -8,16 +8,20 @@ import { TagPill } from "./ui/TagPill";
 // 저작권(PRD §24): 위=스팟 '대표 사진'(실촬영), 아래=사용자 사진. 작품 원본 스틸 사용 금지.
 // 현재는 그라디언트 목업. 실제 사진 연동 시 아래 그라디언트를 <Image>로 교체.
 export function CompareSlider({
+  repImg,
   repGrad = "linear-gradient(180deg, #E24352 0%, #17233C 100%)",
   repLabel = "공식 대표 · 노을",
   repTitle = "스가 신사 라스트씬 앵글",
+  userImg,
   userGrad = "linear-gradient(180deg, #FBEFE0 0%, #FF7A85 60%, #E24352 100%)",
   userLabel = "2026.09.14 · 오후 5:34",
   userTitle = "스가 신사 계단에서",
 }: {
+  repImg?: string;
   repGrad?: string;
   repLabel?: string;
   repTitle?: string;
+  userImg?: string;
   userGrad?: string;
   userLabel?: string;
   userTitle?: string;
@@ -55,6 +59,14 @@ export function CompareSlider({
     >
       {/* 아래 = 내 사진 */}
       <div className="absolute inset-0" style={{ background: userGrad }}>
+        {userImg && (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={userImg}
+            alt={userTitle}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        )}
         <div className="absolute right-3.5 top-3.5">
           <TagPill variant="coral">내 사진</TagPill>
         </div>
@@ -75,6 +87,14 @@ export function CompareSlider({
           style={{ width: `${10000 / pct}%` }}
         >
           <div className="absolute inset-0" style={{ background: repGrad }}>
+            {repImg && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={repImg}
+                alt={repTitle}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            )}
             <div className="absolute left-3.5 top-3.5">
               <TagPill variant="navy">대표 사진</TagPill>
             </div>

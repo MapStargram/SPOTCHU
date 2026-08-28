@@ -36,6 +36,16 @@ export function getPostFromDb(id: string) {
   return db.post.findUnique({ where: { id }, include: postInclude });
 }
 
+// 특정 스팟의 방문자 게시물(최신순). 스팟 상세 "방문자의 사진"용.
+export function getPostsBySpotFromDb(spotId: string) {
+  return db.post.findMany({
+    where: { spotId },
+    orderBy: { createdAt: "desc" },
+    take: FEED_LIMIT,
+    include: postInclude,
+  });
+}
+
 // 리스트 내에서 현재 유저가 좋아요한 postId 집합(1쿼리). 비로그인은 빈 집합.
 export async function getLikedPostIds(
   userId: string,

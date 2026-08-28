@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Star,
   Check,
+  Camera,
 } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
@@ -16,7 +17,7 @@ import { SpotActions } from "@/components/SpotActions";
 import { DirectionsButton } from "@/components/spot/DirectionsButton";
 import { Mascot } from "@/components/ui/Mascot";
 import { type Verified } from "@/lib/mock";
-import { getSpot, getWork, getCollections } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
+import { getSpot, getWork, getCollections, getSpotPosts } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 import { getCurrentUser } from "@/lib/session";
 
 // DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
@@ -27,27 +28,6 @@ const VERIFIED_LABEL: Record<Verified, string> = {
   user: "사용자 검증",
   reported: "제보",
 };
-
-const REVIEWS = [
-  {
-    name: "현우",
-    when: "2026.09.12",
-    body: "삼각대 필수. 일몰 30분 후 하늘색이 진짜 매직. 늦은 시간 대기 짧아요.",
-    hasPhoto: true,
-  },
-  {
-    name: "서연",
-    when: "2026.09.08",
-    body: "저는 조금 늦게 도착해서 살짝 어두웠어요. 다음엔 30분 일찍 갈래요!",
-    hasPhoto: false,
-  },
-  {
-    name: "지민",
-    when: "2026.09.02",
-    body: "유료 전망대 말고 무료 구역에서도 각도 잘 나옵니다.",
-    hasPhoto: true,
-  },
-];
 
 export default async function SpotDetailScreen({
   params,
@@ -67,6 +47,9 @@ export default async function SpotDetailScreen({
   const savedIn = ownCollections
     .filter((c) => c.spots.includes(s.id))
     .map((c) => c.id);
+
+  // 방문자의 사진 = 이 스팟의 실제 게시물(없으면 빈 배열 → 빈 상태 노출, 더미 없음)
+  const posts = await getSpotPosts(s.id);
 
   return (
     <AppShell>
@@ -143,7 +126,7 @@ export default async function SpotDetailScreen({
         {/* Stats card */}
         <div className="relative z-10 -mt-8 mx-4 grid grid-cols-3 rounded-2xl bg-white px-4 py-3.5 text-center shadow-[var(--sh-elevated)]">
           {[
-            { v: s.rating.toString(), l: "RATING" },
+            { v: s.visits > 0 ? s.rating.toString() : "신규", l: "RATING" },
             { v: s.visits.toLocaleString(), l: "VISITS" },
             { v: s.saves.toLocaleString(), l: "SAVES" },
           ].map((it, i) => (
@@ -213,6 +196,7 @@ export default async function SpotDetailScreen({
               사진
             </h2>
             <CompareSlider
+              repImg={s.imageUrl}
               repGrad={s.heroGrad}
               repTitle={`${s.title} 앵글`}
               repLabel="공식 대표 사진"
@@ -256,52 +240,85 @@ export default async function SpotDetailScreen({
             </dl>
           </div>
 
-          {/* Reviews */}
+          {/* Reviews — 실제 방문자 게시물(없으면 빈 상태, 더미 없음) */}
           <section>
             <div className="mb-2.5 flex items-baseline justify-between">
               <h2 className="text-[14px] font-extrabold tracking-[-0.02em] text-navy">
                 방문자의 사진 ·{" "}
-                <span className="text-coral">{s.saves.toLocaleString()}</span>
+                <span className="text-coral">{posts.length}</span>
               </h2>
-              <span className="text-[11px] font-semibold text-[color:var(--muted)]">
-                전체 →
-              </span>
-            </div>
-            <ul className="flex flex-col gap-3">
-              {REVIEWS.map((r) => (
-                <li
-                  key={r.name}
-                  className="rounded-[14px] bg-white px-3.5 py-3 shadow-[var(--sh-card)]"
+              {posts.length > 0 && (
+                <Link
+                  href={`/feed/${s.city}`}
+                  className="text-[11px] font-semibold text-[color:var(--muted)]"
                 >
-                  <div className="mb-1.5 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="flex h-6 w-6 items-center justify-center rounded-full bg-mint font-latin text-[10px] font-extrabold text-navy">
-                        {r.name.charAt(0)}
-                      </span>
-                      <span className="text-[12px] font-bold text-navy">
-                        {r.name}
-                      </span>
-                      {r.hasPhoto && (
-                        <TagPill
-                          variant="mint"
-                          style={{ fontSize: 9, padding: "2px 6px" }}
-                        >
-                          <span className="inline-flex items-center gap-0.5">
-                            <Check size={10} strokeWidth={3} /> 인증
+                  전체 →
+                </Link>
+              )}
+            </div>
+            {posts.length === 0 ? (
+              <Link
+                href={`/upload?spot=${s.id}`}
+                className="flex flex-col items-center gap-2 rounded-[14px] border border-dashed border-[color:var(--line-strong)] bg-white px-6 py-8 text-center transition active:scale-[0.99]"
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[color:var(--cream-2)] text-coral">
+                  <Camera size={22} />
+                </span>
+                <span className="text-[12px] leading-[1.6] text-navy">
+                  아직 방문자 사진이 없어요.
+                  <br />첫 사진을 올려 이 스팟을 알려보세요.
+                </span>
+              </Link>
+            ) : (
+              <ul className="flex flex-col gap-3">
+                {posts.map((p) => (
+                  <li
+                    key={p.id}
+                    className="overflow-hidden rounded-[14px] bg-white shadow-[var(--sh-card)]"
+                  >
+                    {p.images[0] && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={p.images[0]}
+                        alt={p.caption || p.spotTitle}
+                        loading="lazy"
+                        className="aspect-[4/3] w-full object-cover"
+                      />
+                    )}
+                    <div className="px-3.5 py-3">
+                      <div className="mb-1.5 flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <span className="flex h-6 w-6 items-center justify-center rounded-full bg-mint font-latin text-[10px] font-extrabold text-navy">
+                            {p.authorInitial}
                           </span>
-                        </TagPill>
+                          <span className="text-[12px] font-bold text-navy">
+                            {p.authorName}
+                          </span>
+                          {p.isVerifiedShot && (
+                            <TagPill
+                              variant="mint"
+                              style={{ fontSize: 9, padding: "2px 6px" }}
+                            >
+                              <span className="inline-flex items-center gap-0.5">
+                                <Check size={10} strokeWidth={3} /> 인증
+                              </span>
+                            </TagPill>
+                          )}
+                        </div>
+                        <span className="font-latin text-[10px] text-[color:var(--muted)]">
+                          {p.when}
+                        </span>
+                      </div>
+                      {p.caption && (
+                        <p className="text-[12px] leading-[1.55] text-navy">
+                          {p.caption}
+                        </p>
                       )}
                     </div>
-                    <span className="font-latin text-[10px] text-[color:var(--muted)]">
-                      {r.when}
-                    </span>
-                  </div>
-                  <p className="text-[12px] leading-[1.55] text-navy">
-                    {r.body}
-                  </p>
-                </li>
-              ))}
-            </ul>
+                  </li>
+                ))}
+              </ul>
+            )}
           </section>
 
           <div className="mt-1 flex flex-col gap-1">

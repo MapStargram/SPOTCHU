@@ -1,9 +1,13 @@
-import { Construction } from "lucide-react";
 import { MobileScreen } from "@/components/ui/MobileScreen";
 import { CityGlobe } from "@/components/city/CityGlobe";
+import { getCitySpotCounts } from "@/lib/data";
 
-// B1 · 도시 선택 — 인터랙티브 지구본(cobe)에서 도시를 골라 진입.
-export default function CityPickerScreen() {
+// B1 · 도시 선택 — 인터랙티브 지구본(globe.gl)에서 도시를 골라 진입.
+// 도시별 스팟 수는 실데이터(DB/목업)에서 집계해 카드에 표시(하드코딩 데모값 아님).
+export const dynamic = "force-dynamic";
+
+export default async function CityPickerScreen() {
+  const counts = await getCitySpotCounts();
   return (
     <MobileScreen className="gap-5 py-16">
       <header className="text-navy">
@@ -20,12 +24,7 @@ export default function CityPickerScreen() {
         </p>
       </header>
 
-      <CityGlobe />
-
-      <div className="flex items-center justify-center gap-1.5 rounded-[22px] border border-dashed border-[color:var(--line-strong)] px-4 py-[18px] text-center text-[12px] text-[color:var(--muted)]">
-        <Construction size={15} className="shrink-0" aria-hidden /> 더 많은
-        도시는 곧 열려요 · 오사카 · 교토 · 부산
-      </div>
+      <CityGlobe counts={counts} />
     </MobileScreen>
   );
 }
