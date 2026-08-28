@@ -17,7 +17,7 @@
 
 ## 주의 / 결정 사항
 - **Prisma + PostGIS**: Prisma는 geometry 타입을 1급으로 지원하지 않는다. 스팟은 `shooterLat`,`shooterLng`(Float) 컬럼을 두고, 근처 검색은 **raw SQL(ST_DWithin)** 또는 생성 컬럼 `geography`로 처리. 초기 스팟 수가 적으면 바운딩박스+하버사인으로도 가능(ponytail: PostGIS는 켜두되 쿼리는 필요 시 raw). 상세는 [`data-model.md`](data-model.md).
-- **이미지 파이프라인**: 업로드 → 서버에서 EXIF 위치 제거 → Cloudinary 저장(자동 최적화·변환·반응형 URL). 원본 좌표는 저장하지 않는다.
+- **이미지 파이프라인**(feature 09 구현): 클라이언트 리사이즈(canvas) → `POST /api/upload`(서버, 이미지당 1요청으로 Vercel 본문 ~4.5MB 회피) → **서버에서 EXIF 위치 제거**(`lib/image/exif.ts`, 저장 전) → Cloudinary 저장(자동 최적화·변환·반응형 URL) → `secure_url` 반환 → `createPostAction(imageUrls)`. API Secret은 서버 전용(`lib/cloudinary.ts`, 클라이언트 노출 금지). 원본 좌표는 저장하지 않는다.
 - **지도 비용**: 뷰포트 기반 로드·디바운스, 지도 로드/세션 지표화. 초과 임계·정적 지도 폴백은 TODO(prd §41).
 - **애플 로그인 웹 심사 요건** 확인 필요(TODO).
 

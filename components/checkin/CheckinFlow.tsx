@@ -256,7 +256,7 @@ export function CheckinFlow({
         </div>
         <div className="relative z-10 flex flex-col gap-2.5 pb-11">
           <button
-            onClick={back}
+            onClick={() => router.push(`/upload?spot=${spot.id}&verified=1`)}
             className="flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-cream font-ko text-[14px] font-extrabold text-coral shadow-[0_8px_20px_-6px_rgba(0,0,0,0.3)]"
           >
             오늘 찍은 사진 올리기

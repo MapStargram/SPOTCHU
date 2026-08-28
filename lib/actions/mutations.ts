@@ -7,9 +7,16 @@ import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
 import { canCheckIn, haversineMeters } from "@/lib/geo";
 import { awardCheckInBadges, type AwardedBadge } from "@/lib/actions/badges";
+import * as mock from "@/lib/mock";
 import { createNotification } from "@/lib/notify";
 
 type Fail = { ok: false; reason: string; [k: string]: unknown };
+
+const USE_DB = process.env.DATA_SOURCE === "db";
+const CLOUD =
+  process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME ??
+  process.env.CLOUDINARY_CLOUD_NAME ??
+  "";
 
 // F · GPS 방문 인증 (반경 100m + accuracy ≤ 50m, unique 1회 + 쿨다운 24h, 결과만 저장)
 export async function checkInAction(
@@ -225,31 +232,137 @@ export async function getSavedSpotIds(): Promise<string[]> {
   return items.map((i) => i.spotId);
 }
 
-// H · 게시물 작성(스팟 필수 연결, 사진 1~5장). imageUrls는 EXIF 위치 제거 후의 업로드 URL.
-export async function createPostAction(input: {
-  spotId: string;
-  caption?: string;
-  imageUrls: string[];
-  isVerifiedShot?: boolean;
-}): Promise<Fail | { ok: true; postId: string }> {
+// H · 게시물 작성(스팟 필수 연결, 사진 1~5장). imageUrls는 /api/upload가 EXIF 위치 제거 후 반환한 Cloudinary URL.
+const CreatePostInput = z.object({
+  spotId: z.string().min(1),
+  caption: z.string().trim().max(500).optional(), // 최대 길이는 rules TODO — 목업 기준 500.
+  imageUrls: z.array(z.string().url()).min(1).max(5),
+  isVerifiedShot: z.boolean().optional(),
+});
+export async function createPostAction(
+  raw: z.input<typeof CreatePostInput>,
+): Promise<Fail | { ok: true; postId: string }> {
   const user = await getCurrentUser();
   if (!user?.id) return { ok: false, reason: "unauthenticated" };
-  if (input.imageUrls.length === 0) return { ok: false, reason: "no_image" };
+  const parsed = CreatePostInput.safeParse(raw);
+  if (!parsed.success) return { ok: false, reason: "invalid" };
+  const input = parsed.data;
+
+  // 신뢰 경계: 클라이언트가 넘긴 URL은 우리 Cloudinary 클라우드 것만 허용
+  // (임의 URL·외부 이미지 핫링크 차단 → 저작권/원본 스틸 호스팅 방지, §24).
+  if (CLOUD) {
+    const prefix = `https://res.cloudinary.com/${CLOUD}/`;
+    if (!input.imageUrls.every((u) => u.startsWith(prefix)))
+      return { ok: false, reason: "invalid_image_url" };
+  }
+
+  const spot = await db.spot.findUnique({
+    where: { id: input.spotId },
+    select: { id: true },
+  });
+  if (!spot) return { ok: false, reason: "spot_not_found" }; // 스팟 필수 연결(불변식)
+
+  // isVerifiedShot는 클라이언트 주장으로 부여하지 않는다 — 해당 스팟 방문 인증(CheckIn) 있을 때만(§16·rules).
+  let isVerifiedShot = false;
+  if (input.isVerifiedShot) {
+    const ci = await db.checkIn.findUnique({
+      where: { userId_spotId: { userId: user.id, spotId: input.spotId } },
+      select: { id: true },
+    });
+    isVerifiedShot = !!ci;
+  }
 
   const post = await db.post.create({
     data: {
       authorId: user.id,
       spotId: input.spotId,
       caption: input.caption,
-      isVerifiedShot: input.isVerifiedShot ?? false,
+      isVerifiedShot,
       images: {
-        create: input.imageUrls
-          .slice(0, 5)
-          .map((url, order) => ({ url, order })),
+        create: input.imageUrls.map((url, order) => ({ url, order })),
       },
     },
   });
   return { ok: true, postId: post.id };
+}
+
+// H · 게시물 좋아요 토글(사용자당 게시물당 1회, 서버 멱등). 스팟 인기도 likeSum 합산 반영(§16).
+export async function toggleLikeAction(
+  postId: string,
+): Promise<Fail | { ok: true; liked: boolean; likeCount: number }> {
+  const user = await getCurrentUser();
+  if (!user?.id) return { ok: false, reason: "unauthenticated" }; // 소프트 게이트
+  const post = await db.post.findUnique({
+    where: { id: postId },
+    select: { spotId: true },
+  });
+  if (!post) return { ok: false, reason: "not_found" };
+
+  const key = { postId_userId: { postId, userId: user.id } };
+  const existing = await db.like.findUnique({ where: key });
+  if (existing) {
+    await db.like.delete({ where: key });
+    await db.spot.update({
+      where: { id: post.spotId },
+      data: { likeSum: { decrement: 1 } },
+    });
+    return {
+      ok: true,
+      liked: false,
+      likeCount: await db.like.count({ where: { postId } }),
+    };
+  }
+  try {
+    await db.like.create({ data: { postId, userId: user.id } });
+  } catch {
+    // 동시 중복 요청(unique 위반) — 멱등: 이미 좋아요 상태로 간주, 중복 카운트 없음.
+    return {
+      ok: true,
+      liked: true,
+      likeCount: await db.like.count({ where: { postId } }),
+    };
+  }
+  await db.spot.update({
+    where: { id: post.spotId },
+    data: { likeSum: { increment: 1 } },
+  });
+  return {
+    ok: true,
+    liked: true,
+    likeCount: await db.like.count({ where: { postId } }),
+  };
+}
+
+// 업로드 스팟 연결용 검색(가벼운 결과만). 고위험 스팟 제외(안전).
+export async function findSpotsAction(
+  q: string,
+): Promise<{ id: string; title: string; cityLabel: string }[]> {
+  const term = q.trim();
+  if (term.length < 1) return [];
+  if (!USE_DB) {
+    return mock.SPOTS.filter(
+      (s) => s.title.includes(term) || s.subtitle?.includes(term),
+    )
+      .slice(0, 12)
+      .map((s) => ({
+        id: s.id,
+        title: s.title,
+        cityLabel: mock.getCity(s.city)?.name ?? "",
+      }));
+  }
+  const rows = await db.spot.findMany({
+    where: {
+      isBlockedHighRisk: false,
+      OR: [
+        { name: { contains: term, mode: "insensitive" } },
+        { subject: { contains: term, mode: "insensitive" } },
+      ],
+    },
+    select: { id: true, name: true, city: { select: { name: true } } },
+    orderBy: { uniqueCheckinCount: "desc" },
+    take: 12,
+  });
+  return rows.map((s) => ({ id: s.id, title: s.name, cityLabel: s.city.name }));
 }
 
 // 신고(스팟·게시물) → 통합 검수 큐

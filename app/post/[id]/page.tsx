@@ -1,20 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  ChevronLeft,
-  MoreHorizontal,
-  Heart,
-  Share2,
-  Bookmark,
-} from "lucide-react";
+import { ChevronLeft, MoreHorizontal, Share2, Bookmark } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
-import { POSTS, getPost, getSpot } from "@/lib/mock";
 import { AppShell } from "@/components/shell/AppShell";
+import { LikeButton } from "@/components/community/LikeButton";
+import { getPostDetail, getSpot } from "@/lib/data";
+import { getCurrentUser } from "@/lib/session";
 
-// H3 · 게시물 상세
-export function generateStaticParams() {
-  return POSTS.map((p) => ({ id: p.id }));
-}
+// H3 · 게시물 상세(실 DB). 사진 캐러셀(1~5) + 좋아요 + 연결 스팟.
+export const dynamic = "force-dynamic";
 
 export default async function PostDetailPage({
   params,
@@ -22,16 +16,35 @@ export default async function PostDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const p = getPost(id);
+  const p = await getPostDetail(id);
   if (!p) notFound();
-  const spot = getSpot(p.spotId);
+
+  const [spot, user] = await Promise.all([getSpot(p.spotId), getCurrentUser()]);
 
   return (
     <AppShell>
       <div className="relative mx-auto flex min-h-dvh w-full max-w-[470px] flex-col bg-cream pb-24 lg:min-h-0 lg:pb-12 lg:pt-6">
-        {/* Photo hero */}
+        {/* Photo carousel (1~5, 가로 스와이프) */}
         <div className="relative">
-          <div className="aspect-[4/5]" style={{ background: p.gradient }} />
+          {p.images.length > 0 ? (
+            <div className="flex snap-x snap-mandatory overflow-x-auto [scrollbar-width:none]">
+              {p.images.map((url, i) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={i}
+                  src={url}
+                  alt={
+                    p.caption
+                      ? `${p.caption} (${i + 1}/${p.images.length})`
+                      : `${p.spotTitle} 사진 ${i + 1}`
+                  }
+                  className="aspect-[4/5] w-full shrink-0 snap-center object-cover"
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="aspect-[4/5]" style={{ background: p.gradient }} />
+          )}
           <div
             className="pointer-events-none absolute inset-x-0 bottom-0 h-16"
             style={{
@@ -56,39 +69,38 @@ export default async function PostDetailPage({
           {/* Author overlay */}
           <div className="absolute inset-x-4 top-28 flex items-center gap-2.5 text-cream">
             <span className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-[rgba(255,249,242,0.7)] bg-mint font-latin text-[13px] font-extrabold text-navy">
-              {p.author.charAt(0)}
+              {p.authorInitial}
             </span>
             <div>
-              <div className="text-[12px] font-bold">{p.author}</div>
+              <div className="text-[12px] font-bold">{p.authorName}</div>
               <div className="mt-0.5 font-latin text-[10px] opacity-85">
-                {p.when} · @ {spot?.title}
+                {p.when} · @ {p.spotTitle}
               </div>
             </div>
-            <span
-              aria-disabled
-              className="ml-auto rounded-full bg-[rgba(255,249,242,0.9)] px-3.5 py-1.5 text-[11px] font-bold text-navy"
-            >
-              팔로우
-            </span>
           </div>
-          <div className="absolute left-4 top-44">
-            <TagPill variant="mint">✓ GPS 인증</TagPill>
-          </div>
+          {p.isVerifiedShot && (
+            <div className="absolute left-4 top-44">
+              <TagPill variant="mint">✓ GPS 인증</TagPill>
+            </div>
+          )}
         </div>
 
         {/* Content */}
         <div className="-mt-2 px-4 pb-10 text-navy">
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5">
-              <Heart size={24} className="text-coral" />
-              <span className="font-latin text-[14px] font-extrabold">
-                {p.likes.toLocaleString()}
-              </span>
-            </span>
+            <LikeButton
+              postId={p.id}
+              initialCount={p.likeCount}
+              initialLiked={p.likedByMe}
+              loggedIn={!!user}
+              size={24}
+            />
             <Share2 size={22} />
             <Bookmark size={22} />
           </div>
-          <p className="mt-3 text-[13px] leading-[1.6]">{p.caption}</p>
+          {p.caption && (
+            <p className="mt-3 text-[13px] leading-[1.6]">{p.caption}</p>
+          )}
 
           {spot && (
             <div className="mt-3.5 flex items-center gap-3 rounded-2xl bg-[color:var(--cream-2)] px-3.5 py-3">
