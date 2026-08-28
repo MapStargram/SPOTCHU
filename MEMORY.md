@@ -82,4 +82,12 @@
 - **백엔드 인프라 착수**: DB — `docker-compose.yml`(postgis 16-3.4)+`docker/initdb/01-postgis.sql`+`lib/db.ts`(Prisma 싱글턴). 인증 — Auth.js v5 골격(`auth.ts`·`/api/auth/[...nextauth]`·@auth/prisma-adapter·**Kakao/Naver/Google/Apple**), Prisma User에 name/image 추가. **시드** `prisma/seed.ts`(목업→DB, `npm run db:seed`, tsx). **읽기 서버액션** `lib/actions/spots.ts`(getCities/getSpotsByCity/getSpot/getWork/getCollections). 빌드·typecheck 통과.
 - **인프라 남은 것**: `docker compose up -d db`+`npm run db:migrate` 실행(개발자 로컬) · OAuth 앱 시크릿(카카오·구글·애플, Apple은 JWT) · **서버 액션 구현(목업→실데이터, api-surface)** · R2 업로드 · 프로덕션 Map ID·키 리퍼러 제한 · 로그인 화면 signIn() 배선.
 - 다음 인프라(미착수): 로컬 Postgres/PostGIS(docker)+첫 마이그레이션·Auth.js 실연동·Google Maps(C1 키 필요).
+- **Phase-j 제보+검수 실동작(feature 10·11, branch `phase-j/registration-moderation`)**:
+  - 제보: `createSpotReportAction`(zod 서버검증·`USER_REPORTED` 강제·`ModerationItem(NEW_SPOT)` 적재·방위각 자동). 제보 폼 실동작(도시·좌표 피커·카테고리·안전태그·매너확인). 대표사진은 선택(업로드/EXIF 파이프라인 후속).
+  - 안전: `lib/safety.ts` — 4종 안전태그 다중선택 + `isBlockedHighRisk`(현재 `RAILWAY`만) 서버·클라 차단, 검수 상세 경고 배너.
+  - **권한: role은 세션에 없음 → `requireModerator()`(`lib/authz.ts`)가 DB에서 role 조회**(신뢰 경계). 어드민 페이지 403 게이트 + 검수 뮤테이션 서버 재검사. 순수 판정 `isModerator`는 `lib/roles.ts`(테스트가 next-auth 부팅 안 하도록 분리).
+  - **검수는 삭제 없이 상태 전이(가역)**: 반려·숨김·병합 스팟은 `getHiddenSpotIds`(`lib/moderation.ts`) 읽기 필터로 지도/피드/검색 제외. 스키마 동결이라 hidden 플래그 없음 → 다음 스키마 페이즈에 `Spot.isHidden` 정식화. 병합=Post/CheckIn/CollectionItem/SpotWork 이관(dedup)+집계 재계산(트랜잭션).
+  - `reportAction`이 이제 `ModerationItem(REPORT)`도 적재(기존 누락 버그 수정).
+  - 검증: typecheck·lint·vitest(36, 권한거부+안전차단 순수 테스트 추가)·build 통과. 런타임 프리뷰로 제보폼·고위험 배너·어드민 403 확인. 스키마 무변경(db push 안 함).
+  - ⚠️ 워크트리에서 lint 시 부모 체크아웃 `.eslintrc.json`과 이중 로드 충돌 → 워크트리 `.eslintrc.json`에 `"root": true` 추가로 해결.
 - ⚠️ 교훈: dev 서버 켠 채 `npm run build` 금지(.next 캐시 오염→500). 빌드는 dev 중지 후.
