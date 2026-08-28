@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { ChevronLeft, Search, X } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { RECENT_SEARCHES, TRENDING } from "@/lib/mock";
+import { AppShell } from "@/components/shell/AppShell";
 
 // C3 · 검색. 최근 검색 + 지금 뜨는 검색어. 실제 검색 연동은 후속(현재 입력만).
 export default function SearchScreen() {
@@ -13,8 +14,8 @@ export default function SearchScreen() {
   const [recent, setRecent] = useState(RECENT_SEARCHES);
 
   return (
-    <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pt-14">
+    <AppShell>
+      <div className="mx-auto flex w-full max-w-[520px] flex-col px-5 pb-28 pt-14 lg:max-w-[680px] lg:pb-12 lg:pt-8">
         {/* Search bar */}
         <div className="flex items-center gap-2.5">
           <button
@@ -109,6 +110,6 @@ export default function SearchScreen() {
           </ol>
         </section>
       </div>
-    </div>
+    </AppShell>
   );
 }

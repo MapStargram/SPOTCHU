@@ -9,7 +9,8 @@ import {
   Settings,
 } from "lucide-react";
 
-// 데스크톱 좌측 사이드바(인스타그램식). 모바일에선 숨김(하단 TabBar 사용).
+// 데스크톱 좌측 사이드바(인스타그램식). 기본은 아이콘만 보이는 좁은 레일(76px),
+// 마우스 호버 시 244px로 확장되어 라벨 노출(콘텐츠 위 오버레이). 모바일은 숨김(하단 TabBar).
 type Active = "home" | "explore" | "collections" | "profile";
 
 const NAV: {
@@ -26,48 +27,68 @@ const NAV: {
   { id: "profile", label: "프로필", Icon: User, href: "/profile" },
 ];
 
+const itemBase =
+  "flex items-center gap-4 rounded-xl px-3 py-2.5 transition-colors hover:bg-[color:var(--cream-2)]";
+const labelBase =
+  "whitespace-nowrap text-[16px] leading-none opacity-0 transition-opacity duration-150 group-hover:opacity-100";
+
 export function Sidebar({ active }: { active?: Active }) {
   return (
-    <aside className="fixed inset-y-0 left-0 z-30 hidden w-[240px] flex-col border-r border-[color:var(--line)] bg-cream px-3 py-6 lg:flex">
-      <Link href="/home/tokyo" className="mb-6 px-3 py-2">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/assets/logo/spotchu-en-horizontal.svg"
-          alt="SPOTCHU"
-          className="h-6"
-        />
-      </Link>
+    <aside className="group fixed inset-y-0 left-0 z-30 hidden w-[76px] flex-col overflow-hidden border-r border-[color:var(--line)] bg-cream transition-[width] duration-200 ease-out hover:w-[244px] hover:shadow-[var(--sh-card)] lg:flex">
+      <div className="flex w-[244px] flex-1 flex-col px-3 py-6">
+        <Link
+          href="/home/tokyo"
+          aria-label="SPOTCHU 홈"
+          className="mb-5 flex h-9 items-center px-2"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/logo/spotchu-symbol.svg"
+            alt=""
+            aria-hidden="true"
+            className="h-8 w-8 shrink-0 group-hover:hidden"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/logo/spotchu-en-horizontal.svg"
+            alt="SPOTCHU"
+            className="hidden h-6 group-hover:block"
+          />
+        </Link>
 
-      <nav className="flex flex-col gap-1">
-        {NAV.map(({ id, label, Icon, href }) => {
-          const on = active === id;
-          return (
-            <Link
-              key={id}
-              href={href}
-              aria-current={on ? "page" : undefined}
-              className={`flex items-center gap-4 rounded-xl px-3 py-3 text-[15px] tracking-[-0.01em] transition hover:bg-[color:var(--cream-2)] ${
-                on ? "font-extrabold text-navy" : "font-medium text-navy"
-              }`}
-            >
-              <Icon
-                size={24}
-                strokeWidth={on ? 2.5 : 2}
-                className={on ? "text-coral" : "text-navy"}
-              />
-              <span>{label}</span>
-            </Link>
-          );
-        })}
-      </nav>
+        <nav className="flex flex-col gap-1">
+          {NAV.map(({ id, label, Icon, href }) => {
+            const on = active === id;
+            return (
+              <Link
+                key={id}
+                href={href}
+                aria-current={on ? "page" : undefined}
+                className={`${itemBase} ${on ? "text-navy" : "text-navy"}`}
+              >
+                <Icon
+                  size={26}
+                  strokeWidth={on ? 2.6 : 2}
+                  className={`shrink-0 ${on ? "text-coral" : "text-navy"}`}
+                />
+                <span
+                  className={`${labelBase} ${on ? "font-bold" : "font-normal"}`}
+                >
+                  {label}
+                </span>
+              </Link>
+            );
+          })}
+        </nav>
 
-      <Link
-        href="/profile/settings"
-        className="mt-auto flex items-center gap-4 rounded-xl px-3 py-3 text-[15px] font-medium text-navy transition hover:bg-[color:var(--cream-2)]"
-      >
-        <Settings size={24} strokeWidth={2} />
-        <span>설정</span>
-      </Link>
+        <Link
+          href="/profile/settings"
+          className={`${itemBase} mt-auto text-navy`}
+        >
+          <Settings size={26} strokeWidth={2} className="shrink-0" />
+          <span className={`${labelBase} font-normal`}>설정</span>
+        </Link>
+      </div>
     </aside>
   );
 }

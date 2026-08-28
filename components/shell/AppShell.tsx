@@ -15,7 +15,7 @@ export function AppShell({
   return (
     <div className="min-h-dvh bg-[color:var(--cream-2)]">
       <Sidebar active={active} />
-      <div className="min-h-dvh lg:pl-[240px]">{children}</div>
+      <div className="min-h-dvh lg:pl-[76px]">{children}</div>
       <TabBar active={active} />
     </div>
   );
