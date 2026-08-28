@@ -15,9 +15,14 @@ import { getSavedSpotIds } from "@/lib/actions/mutations";
 export const dynamic = "force-dynamic";
 
 // B2 도쿄 / B3 서울 — 도시 홈. 상단 히어로 슬롯 + 핀터레스트 메이슨리 그리드(모두 지도에 찍히는 스팟).
-const CITY_HERO: Record<CityId, string> = {
+// 도시별 히어로(오늘의 스팟). 미지정 도시는 해당 도시 첫 스팟으로 폴백.
+const CITY_HERO: Partial<Record<CityId, string>> = {
   tokyo: "mojik",
   seoul: "namsan",
+  osaka: "osaka-castle-tenshukaku",
+  kyoto: "fushimi-inari-senbon-torii",
+  fukuoka: "fukuoka-tower-momochi-beach",
+  busan: "gamcheon-village",
 };
 
 export default async function HomeScreen({
@@ -27,10 +32,12 @@ export default async function HomeScreen({
 }) {
   const { city } = await params;
   const c = await getCity(city);
-  if (!c || (city !== "tokyo" && city !== "seoul")) notFound();
+  if (!c) notFound();
 
-  const heroSpot = (await getSpot(CITY_HERO[city as CityId]))!;
   const all = await getSpotsByCity(city as CityId);
+  const heroId = CITY_HERO[city as CityId];
+  const heroSpot = (heroId ? await getSpot(heroId) : undefined) ?? all[0];
+  if (!heroSpot) notFound(); // 스팟이 아직 없는 도시
   const gridSpots = all.filter((s) => s.id !== heroSpot.id);
   const user = await getCurrentUser();
   const savedIds = await getSavedSpotIds(); // 로그인 시 DB, 게스트는 []

@@ -4,7 +4,7 @@
 > 하네스 5층 구조: **1층 CLAUDE.md/rules · 2층 skills · 3층 hooks/settings/permissions · 4층 agents · 5층 plugins**. 상세: [`docs/collaboration.md`](docs/collaboration.md).
 
 ## 프로젝트 설명
-SPOTCHU: 한·일 사진 스팟/애니 성지를 **정확한 지도 위치와 촬영 구도**로 발견하고, 여행 계획·현장 GPS 방문 인증까지 잇는 지도 기반 여행 커뮤니티. 반응형 웹/PWA MVP. 출시 도시: 서울 + 도쿄.
+SPOTCHU: 한·일 사진 스팟/애니 성지를 **정확한 지도 위치와 촬영 구도**로 발견하고, 여행 계획·현장 GPS 방문 인증까지 잇는 지도 기반 여행 커뮤니티. 반응형 웹/PWA MVP. 출시 도시: 서울·도쿄(1차) + 오사카·교토·후쿠오카·부산(확장, PRD §26).
 
 ## 문서 우선순위 (작업 전 반드시 읽기)
 1. [`prd.md`](prd.md) — 단일 원천. 2. [`docs/glossary.md`](docs/glossary.md) — 용어.

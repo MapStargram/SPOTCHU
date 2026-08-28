@@ -8,7 +8,16 @@ import {
 } from "./spots.research";
 import { SPOT_IMAGES } from "./spot-images";
 
-export type CityId = "tokyo" | "seoul";
+// 출시 도시 id 단일 원천. 도시 추가는 여기만 고치면 CityId·검색/제보 zod enum이 함께 확장된다.
+export const CITY_IDS = [
+  "tokyo",
+  "seoul",
+  "osaka",
+  "kyoto",
+  "fukuoka",
+  "busan",
+] as const;
+export type CityId = (typeof CITY_IDS)[number];
 export type Verified = "official" | "user" | "reported";
 
 export interface City {
@@ -79,6 +88,38 @@ export const CITIES: City[] = [
     country: "한국",
     spotCount: 218,
     heroGrad: "linear-gradient(135deg, #45D6C6 0%, #5BE0D0 60%, #FFC857 100%)",
+  },
+  {
+    id: "osaka",
+    name: "오사카",
+    nameEn: "Osaka",
+    country: "일본",
+    spotCount: 156,
+    heroGrad: "linear-gradient(135deg, #E24352 0%, #FFC857 100%)",
+  },
+  {
+    id: "kyoto",
+    name: "교토",
+    nameEn: "Kyoto",
+    country: "일본",
+    spotCount: 189,
+    heroGrad: "linear-gradient(135deg, #45D6C6 0%, #FFC857 100%)",
+  },
+  {
+    id: "fukuoka",
+    name: "후쿠오카",
+    nameEn: "Fukuoka",
+    country: "일본",
+    spotCount: 98,
+    heroGrad: "linear-gradient(135deg, #FF7A85 0%, #45D6C6 100%)",
+  },
+  {
+    id: "busan",
+    name: "부산",
+    nameEn: "Busan",
+    country: "한국",
+    spotCount: 134,
+    heroGrad: "linear-gradient(135deg, #17233C 0%, #45D6C6 100%)",
   },
 ];
 
@@ -371,6 +412,10 @@ export const SPOT_COORDS: Record<string, { lat: number; lng: number }> = {
 export const CITY_CENTER: Record<CityId, { lat: number; lng: number }> = {
   tokyo: { lat: 35.667, lng: 139.74 },
   seoul: { lat: 37.556, lng: 126.986 },
+  osaka: { lat: 34.6937, lng: 135.5023 },
+  kyoto: { lat: 35.0116, lng: 135.7681 },
+  fukuoka: { lat: 33.5904, lng: 130.4017 },
+  busan: { lat: 35.1796, lng: 129.0756 },
 };
 
 export interface Badge {

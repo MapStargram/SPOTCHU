@@ -32,7 +32,6 @@ export default async function FeedPage({
   searchParams: Promise<{ tab?: string }>;
 }) {
   const { city } = await params;
-  if (city !== "tokyo" && city !== "seoul") notFound();
   const c = await getCity(city);
   if (!c) notFound();
 
@@ -42,7 +41,7 @@ export default async function FeedPage({
     : "popular";
 
   const [posts, user] = await Promise.all([
-    getFeedPosts(city, tab),
+    getFeedPosts(c.id, tab), // c.id: CityId (getCity로 검증된 도시)
     getCurrentUser(),
   ]);
 

@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { AppShell } from "@/components/shell/AppShell";
 import { ExploreView } from "@/components/explore/ExploreView";
-import { getSpotsByCity } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
+import { getCity, getSpotsByCity } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
 import { type CityId } from "@/lib/mock";
 
 // C1~C4 · 탐색(지도⇄피드). 도시별 스팟을 DB(lib/data)에서 읽어 클라이언트 뷰에 전달.
@@ -14,7 +14,7 @@ export default async function ExplorePage({
   params: Promise<{ city: string }>;
 }) {
   const { city } = await params;
-  if (city !== "tokyo" && city !== "seoul") notFound();
+  if (!(await getCity(city))) notFound();
   const spots = await getSpotsByCity(city as CityId);
   return (
     <AppShell active="explore">

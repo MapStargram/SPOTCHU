@@ -391,7 +391,7 @@ export async function reportAction(
 const ReportSpotInput = z.object({
   name: z.string().trim().min(1).max(60),
   categoryId: z.string().trim().min(1),
-  cityId: z.enum(["tokyo", "seoul"]), // 출시 도시 고정(CLAUDE.md: 서울+도쿄)
+  cityId: z.enum(mock.CITY_IDS), // 출시 도시(lib/mock CITY_IDS 단일 원천)
   shooterLat: z.number().finite().gte(-90).lte(90),
   shooterLng: z.number().finite().gte(-180).lte(180),
   subject: z.string().trim().min(1).max(80),

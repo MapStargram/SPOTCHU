@@ -262,7 +262,7 @@ export async function getCollection(
 // 잘못된 값은 500이 아니라 무시(.catch(undefined))해 검색 UX를 깨지 않는다.
 const searchSchema = z.object({
   q: z.string().trim().max(100).optional().catch(undefined),
-  cityId: z.enum(["tokyo", "seoul"]).optional().catch(undefined),
+  cityId: z.enum(mock.CITY_IDS).optional().catch(undefined),
   category: z.string().max(80).optional().catch(undefined),
   work: z.string().max(60).optional().catch(undefined),
   verified: z

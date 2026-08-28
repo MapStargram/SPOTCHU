@@ -44,6 +44,10 @@ export const BADGE_DEFS: BadgeDef[] = [
 export function cityIcon(cityId: string): string {
   if (cityId === "seoul") return "🏙️";
   if (cityId === "tokyo") return "🗼";
+  if (cityId === "osaka") return "🏯";
+  if (cityId === "kyoto") return "⛩️";
+  if (cityId === "fukuoka") return "🌉";
+  if (cityId === "busan") return "🌊";
   return "🌆";
 }
 export const PILGRIMAGE_ICON = "🌠";
