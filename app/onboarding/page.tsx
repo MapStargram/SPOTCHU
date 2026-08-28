@@ -34,13 +34,27 @@ export default function OnboardingScreen() {
   const slide = SLIDES[step];
   const isLast = step === SLIDES.length - 1;
 
-  const next = () => (isLast ? router.push("/login") : setStep((s) => s + 1));
+  // 온보딩을 완료/건너뛰면 다시 보지 않도록 표시(스플래시가 이 플래그로 홈 직행).
+  const markOnboarded = () => {
+    try {
+      localStorage.setItem("spotchu:onboarded", "1");
+    } catch {}
+  };
+  const next = () => {
+    if (!isLast) return setStep((s) => s + 1);
+    markOnboarded();
+    router.push("/login");
+  };
   const back = () => (step === 0 ? router.push("/") : setStep((s) => s - 1));
+  const skip = () => {
+    markOnboarded();
+    router.push("/city");
+  };
 
   return (
     <MobileScreen className="py-16">
       <button
-        onClick={() => router.push("/city")}
+        onClick={skip}
         className="absolute right-6 top-16 z-10 font-latin text-[12px] font-semibold tracking-[0.05em] text-[color:var(--muted)]"
       >
         건너뛰기

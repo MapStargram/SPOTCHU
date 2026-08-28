@@ -10,6 +10,15 @@ export default function SplashScreen() {
   const router = useRouter();
 
   useEffect(() => {
+    // 온보딩을 이미 본 사용자는 스플래시를 건너뛰고 바로 홈으로(매번 온보딩 방지).
+    let onboarded = false;
+    try {
+      onboarded = localStorage.getItem("spotchu:onboarded") === "1";
+    } catch {}
+    if (onboarded) {
+      router.replace("/home");
+      return;
+    }
     const t = setTimeout(() => router.push("/onboarding"), 2200);
     return () => clearTimeout(t);
   }, [router]);
