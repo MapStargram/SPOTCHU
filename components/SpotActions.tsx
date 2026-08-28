@@ -33,7 +33,7 @@ export function SpotActions({
   return (
     <>
       {/* Sticky action row */}
-      <div className="fixed inset-x-0 bottom-0 z-20 lg:pl-[240px]">
+      <div className="fixed inset-x-0 bottom-0 z-20 lg:pl-[76px]">
         <div className="mx-auto flex max-w-[500px] gap-2.5 bg-gradient-to-t from-cream via-cream px-4 pb-6 pt-3 lg:max-w-[720px]">
           <CoralButton
             className="flex-1"
@@ -54,7 +54,7 @@ export function SpotActions({
       {/* Save sheet */}
       {open && (
         <div
-          className="fixed inset-0 z-30 flex items-end justify-center lg:pl-[240px]"
+          className="fixed inset-0 z-30 flex items-end justify-center lg:pl-[76px]"
           role="dialog"
           aria-modal
         >
