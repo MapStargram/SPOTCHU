@@ -22,4 +22,5 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   session: { strategy: "database" },
   providers,
   pages: { signIn: "/login" },
+  trustHost: true, // Vercel 등 프록시 뒤 호스트 신뢰(UntrustedHost 에러 방지)
 });
