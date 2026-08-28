@@ -1,19 +1,17 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Bell, Camera, ChevronDown, ChevronRight } from "lucide-react";
+import { Bell, Camera, ChevronDown } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { TagPill } from "@/components/ui/TagPill";
 import { Sparkle } from "@/components/ui/Sparkle";
-import { CITIES, COLLECTIONS, type CityId } from "@/lib/mock";
-import { getCity, getSpot } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
+import { PinGrid } from "@/components/home/PinGrid";
+import { CITIES, type CityId } from "@/lib/mock";
+import { getCity, getSpot, getSpotsByCity } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
 
-// B2 도쿄 / B3 서울 — 도시 홈. 모바일=앱 컬럼, 데스크톱=사이드바+와이드.
-const CITY_HOME: Record<CityId, { heroId: string; listIds: string[] }> = {
-  tokyo: { heroId: "mojik", listIds: ["suga-shrine", "shibuya", "harajuku"] },
-  seoul: {
-    heroId: "namsan",
-    listIds: ["gyeongbok", "seongsu", "itaewon-danbam"],
-  },
+// B2 도쿄 / B3 서울 — 도시 홈. 상단 히어로 슬롯 + 핀터레스트 메이슨리 그리드(모두 지도에 찍히는 스팟).
+const CITY_HERO: Record<CityId, string> = {
+  tokyo: "mojik",
+  seoul: "namsan",
 };
 
 export function generateStaticParams() {
@@ -29,15 +27,13 @@ export default async function HomeScreen({
   const c = await getCity(city);
   if (!c || (city !== "tokyo" && city !== "seoul")) notFound();
 
-  const conf = CITY_HOME[city as CityId];
-  const heroSpot = (await getSpot(conf.heroId))!;
-  const listRaw = await Promise.all(conf.listIds.map((id) => getSpot(id)));
-  const list = listRaw.filter((s): s is NonNullable<typeof s> => !!s);
-  const curated = COLLECTIONS.filter((col) => col.isOfficial).slice(0, 2);
+  const heroSpot = (await getSpot(CITY_HERO[city as CityId]))!;
+  const all = await getSpotsByCity(city as CityId);
+  const gridSpots = all.filter((s) => s.id !== heroSpot.id);
 
   return (
     <AppShell active="home">
-      <div className="mx-auto w-full max-w-[500px] px-4 pb-28 pt-14 text-navy lg:max-w-[960px] lg:px-8 lg:pb-12 lg:pt-8">
+      <div className="mx-auto w-full max-w-[500px] px-4 pb-28 pt-14 text-navy lg:max-w-[1180px] lg:px-8 lg:pb-12 lg:pt-8">
         {/* Top bar */}
         <header className="flex items-center justify-between">
           <Link href="/city" className="block">
@@ -66,10 +62,10 @@ export default async function HomeScreen({
           </div>
         </header>
 
-        {/* Hero */}
+        {/* Hero — 오늘의 스팟 */}
         <Link
           href={`/spot/${heroSpot.id}`}
-          className="relative mt-6 block h-[196px] overflow-hidden rounded-[22px] shadow-[var(--sh-elevated)] lg:h-[280px]"
+          className="relative mt-6 block h-[196px] overflow-hidden rounded-[22px] shadow-[var(--sh-elevated)] lg:h-[300px]"
           style={{ background: heroSpot.heroGrad }}
         >
           <div
@@ -95,116 +91,16 @@ export default async function HomeScreen({
           </div>
         </Link>
 
-        {/* 큐레이션 컬렉션 */}
-        <section className="mt-6">
-          <div className="mb-3 flex items-baseline justify-between">
-            <h2 className="text-[16px] font-extrabold tracking-[-0.02em] lg:text-[18px]">
-              큐레이션 컬렉션
-            </h2>
-            <Link
-              href="/collections"
-              className="text-[11px] font-semibold text-[color:var(--muted)]"
-            >
-              더보기 →
-            </Link>
-          </div>
-          <div className="-mx-4 flex gap-3 overflow-x-auto px-4 [scrollbar-width:none] lg:mx-0 lg:grid lg:grid-cols-2 lg:gap-4 lg:px-0">
-            {curated.map((col) => {
-              const inner = (
-                <div
-                  className="relative h-[140px] w-[160px] shrink-0 overflow-hidden rounded-2xl text-cream shadow-[var(--sh-card)] lg:h-[180px] lg:w-full"
-                  style={{ background: col.coverGrad }}
-                >
-                  <div className="absolute left-2.5 top-2.5">
-                    <TagPill
-                      variant="yellow"
-                      style={{ fontSize: 9, padding: "2px 8px" }}
-                    >
-                      공식
-                    </TagPill>
-                  </div>
-                  <div className="absolute inset-x-3 bottom-3">
-                    <div className="text-[12px] font-extrabold leading-[1.25] tracking-[-0.01em] lg:text-[15px]">
-                      {col.title}
-                    </div>
-                    <div className="mt-0.5 font-latin text-[10px] opacity-85">
-                      {col.itemCount}개 스팟
-                    </div>
-                  </div>
-                </div>
-              );
-              return col.id === "anime-pilgrimage" ? (
-                <Link
-                  key={col.id}
-                  href="/work/kimi-no-na"
-                  className="shrink-0 lg:shrink"
-                >
-                  {inner}
-                </Link>
-              ) : (
-                <Link
-                  key={col.id}
-                  href="/collections"
-                  className="shrink-0 lg:shrink"
-                >
-                  {inner}
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-
-        {/* 지금 인기 있는 */}
-        <section className="mt-6">
-          <div className="mb-3 flex items-baseline justify-between">
-            <h2 className="text-[16px] font-extrabold tracking-[-0.02em] lg:text-[18px]">
-              지금 인기 있는
-            </h2>
-            <Link
-              href={`/explore/${city}`}
-              className="text-[11px] font-semibold text-[color:var(--muted)]"
-            >
-              전체 →
-            </Link>
-          </div>
-          <ul className="flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:gap-y-3">
-            {list.map((s) => (
-              <li key={s.id}>
-                <Link
-                  href={`/spot/${s.id}`}
-                  className="flex items-center gap-3 lg:rounded-2xl lg:bg-white lg:p-3 lg:shadow-[var(--sh-card)]"
-                >
-                  <div
-                    className="relative h-[60px] w-[60px] shrink-0 rounded-[14px]"
-                    style={{ background: s.thumbGrad }}
-                  >
-                    {s.verified === "official" && (
-                      <span className="absolute -bottom-1 -right-1">
-                        <Sparkle size={18} />
-                      </span>
-                    )}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="truncate text-[13px] font-bold tracking-[-0.01em]">
-                      {s.title}
-                    </div>
-                    <div className="mt-0.5 flex items-center gap-1.5 text-[11px] text-[color:var(--muted)]">
-                      <span>{s.categoryLabel}</span>
-                      <span>·</span>
-                      <span className="font-latin">
-                        {s.visits.toLocaleString()}
-                      </span>
-                    </div>
-                  </div>
-                  <ChevronRight
-                    size={16}
-                    className="text-[color:var(--muted)]"
-                  />
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
+        {/* 지도 속 사진 스팟 — 핀터레스트식 그리드 */}
+        <div className="mt-7 flex items-baseline justify-between">
+          <h2 className="text-[16px] font-extrabold tracking-[-0.02em] lg:text-[19px]">
+            지도 속 사진 스팟
+          </h2>
+          <span className="font-latin text-[11px] text-[color:var(--muted)]">
+            {gridSpots.length}곳
+          </span>
+        </div>
+        <PinGrid spots={gridSpots} city={city} />
       </div>
     </AppShell>
   );
