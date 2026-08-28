@@ -41,6 +41,6 @@
 ## TODO / 미결정
 - **mock location 감지 구체 방식·신뢰 임계**(경량 조작 방어의 구현 방법) — 미정.
 - **'인증 보류' 후속 처리**(통합 검수 큐 연동 여부, 사용자 재시도 안내 수위) — 미정.
-- **서버측 좌표 재검증 여부** 및 원시 좌표 미보관 원칙과의 정합 방식 — 미정.
+- (해결됨) **서버측 판정 + 원시 좌표 미보관**: 클라이언트가 현재 좌표를 서버 액션에 **전송만** 하고, 서버가 스팟 `shooterLat/Lng`와 거리·정확도를 판정한 뒤 **결과만** `CheckIn`에 저장한다(원시 좌표 미보관). 구현: `checkInAction`([`../../../lib/actions/mutations.ts`](../../../lib/actions/mutations.ts)), 클라이언트 배선: [`../../../components/checkin/CheckinFlow.tsx`](../../../components/checkin/CheckinFlow.tsx).
 - **재인증 쿨다운 24h의 기준 시점**(직전 인증 서버 타임스탬프 기준 등)·안내 카피 세부 — 미정(정책 값 24h는 확정, PRD §17).
 - (해결됨) `CheckIn` 필드는 [`../../data-model.md`](../../data-model.md), 인증 서버 액션은 [`../../api-surface.md`](../../api-surface.md)에 정의됨.

@@ -1,12 +1,11 @@
 import { notFound } from "next/navigation";
 import { AppShell } from "@/components/shell/AppShell";
 import { CheckinFlow } from "@/components/checkin/CheckinFlow";
-import { SPOTS, getSpot } from "@/lib/mock";
+import { getSpot } from "@/lib/data";
+import { getCurrentUser } from "@/lib/session";
 
-// F · GPS 방문 인증 플로우
-export function generateStaticParams() {
-  return SPOTS.map((s) => ({ id: s.id }));
-}
+// F · GPS 방문 인증 플로우. 판정·저장은 서버 액션(checkInAction). env DATA_SOURCE로 목업↔DB.
+export const dynamic = "force-dynamic";
 
 export default async function CheckinPage({
   params,
@@ -14,11 +13,12 @@ export default async function CheckinPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const spot = getSpot(id);
+  const spot = await getSpot(id);
   if (!spot) notFound();
+  const user = await getCurrentUser();
   return (
     <AppShell noTabBar>
-      <CheckinFlow spot={spot} />
+      <CheckinFlow spot={spot} loggedIn={!!user} />
     </AppShell>
   );
 }

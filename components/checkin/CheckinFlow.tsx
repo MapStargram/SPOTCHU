@@ -8,23 +8,35 @@ import { MapMarker } from "../map/MapMarker";
 import { CoralButton, GhostButton } from "../ui/CoralButton";
 import { TagPill } from "../ui/TagPill";
 import { Mascot } from "../ui/Mascot";
-import { haversineMeters, canCheckIn } from "@/lib/geo";
-import { SPOT_COORDS, type Spot } from "@/lib/mock";
+import { checkInAction } from "@/lib/actions/mutations";
+import { type Spot } from "@/lib/mock";
 
 // F1~F6 · GPS 방문 인증 플로우. 실제 브라우저 Geolocation 사용.
 // 정책(PRD §17): 반경 100m + accuracy ≤ 50m. 원시 좌표는 저장하지 않음(프로토타입: 판정 후 버림).
 type Phase =
-  "start" | "acquiring" | "success" | "range" | "accuracy" | "permission";
-const RADIUS = 100;
+  | "start"
+  | "acquiring"
+  | "success"
+  | "range"
+  | "accuracy"
+  | "permission"
+  | "cooldown";
 
-export function CheckinFlow({ spot }: { spot: Spot }) {
+export function CheckinFlow({
+  spot,
+  loggedIn,
+}: {
+  spot: Spot;
+  loggedIn: boolean;
+}) {
   const router = useRouter();
   const [phase, setPhase] = useState<Phase>("start");
   const [dist, setDist] = useState<number | null>(null);
   const [acc, setAcc] = useState<number | null>(null);
+  const [first, setFirst] = useState(true);
   const back = () => router.push(`/spot/${spot.id}`);
-  const target = SPOT_COORDS[spot.id];
 
+  // 판정·영속화는 서버(checkInAction)가 담당한다. 원시 좌표는 전송만 하고 저장하지 않는다(rules §불변식).
   const acquire = () => {
     setPhase("acquiring");
     if (typeof navigator === "undefined" || !navigator.geolocation) {
@@ -33,17 +45,29 @@ export function CheckinFlow({ spot }: { spot: Spot }) {
     }
     navigator.geolocation.getCurrentPosition(
       (pos) => {
-        const user = { lat: pos.coords.latitude, lng: pos.coords.longitude };
         const accuracy = pos.coords.accuracy;
         setAcc(Math.round(accuracy));
-        if (target) setDist(Math.round(haversineMeters(user, target)));
-        if (accuracy > 50) setPhase("accuracy");
-        else if (
-          !target ||
-          !canCheckIn(user, target, { radiusM: RADIUS, accuracyM: accuracy })
-        )
-          setPhase("range");
-        else setPhase("success");
+        void checkInAction(spot.id, {
+          lat: pos.coords.latitude,
+          lng: pos.coords.longitude,
+          accuracy,
+        }).then((res) => {
+          if (res.ok) {
+            setFirst(res.first);
+            setPhase("success");
+          } else if (res.reason === "range") {
+            setDist(typeof res.distanceM === "number" ? res.distanceM : null);
+            setPhase("range");
+          } else if (res.reason === "accuracy") {
+            setPhase("accuracy");
+          } else if (res.reason === "cooldown") {
+            setPhase("cooldown");
+          } else if (res.reason === "unauthenticated") {
+            router.push("/login");
+          } else {
+            setPhase("permission");
+          }
+        });
       },
       (err) => {
         setPhase(
@@ -120,13 +144,16 @@ export function CheckinFlow({ spot }: { spot: Spot }) {
           </p>
         </div>
         <div className="mt-auto pb-6">
-          <CoralButton onClick={acquire}>
-            <Crosshair size={20} /> GPS로 방문 인증
-          </CoralButton>
-          {/* 프로토타입: 현장이 아니어도 성공 화면 확인용 */}
-          <GhostButton onClick={() => setPhase("success")}>
-            데모 · 인증 성공 화면 보기
-          </GhostButton>
+          {loggedIn ? (
+            <CoralButton onClick={acquire}>
+              <Crosshair size={20} /> GPS로 방문 인증
+            </CoralButton>
+          ) : (
+            // 소프트 게이트: 비로그인은 인증 불가 → 로그인 유도(rules §데이터·권한)
+            <CoralButton onClick={() => router.push("/login")}>
+              로그인하고 인증하기
+            </CoralButton>
+          )}
         </div>
       </Shell>
     );
@@ -193,24 +220,11 @@ export function CheckinFlow({ spot }: { spot: Spot }) {
             완료!
           </div>
           <div className="mt-3.5 max-w-[280px] text-[14px] opacity-90">
-            {spot.title} 인증을 완료했어요
+            {first
+              ? `${spot.title} 첫 방문 인증을 완료했어요`
+              : `${spot.title} 다시 방문 인증했어요`}
           </div>
-          <div className="mt-6 flex w-full max-w-[300px] items-center gap-3.5 rounded-[20px] bg-[rgba(255,249,242,0.15)] px-5 py-4 backdrop-blur">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-yellow text-[26px] shadow">
-              🌠
-            </span>
-            <div className="flex-1 text-left">
-              <div className="font-latin text-[9px] font-semibold uppercase tracking-[0.18em] opacity-85">
-                New Badge
-              </div>
-              <div className="mt-0.5 text-[14px] font-extrabold tracking-[-0.01em]">
-                성지 순례자 · 4
-              </div>
-              <div className="mt-0.5 text-[11px] opacity-85">
-                너의 이름은. 4/12
-              </div>
-            </div>
-          </div>
+          {/* ponytail: 실제 배지 지급은 feature 08(게임화)에서 연동. 가짜 배지 카드 제거. */}
         </div>
         <div className="relative z-10 flex flex-col gap-2.5 pb-11">
           <button
@@ -270,6 +284,19 @@ export function CheckinFlow({ spot }: { spot: Spot }) {
       body: "브라우저 설정에서 위치 권한을 허용해 주세요. 방문 인증에 필요해요.",
       primary: "다시 시도",
     },
+    cooldown: {
+      mascot: "chu-expression-curious" as const,
+      icon: null,
+      title: "이미 인증한 곳이에요",
+      body: (
+        <>
+          같은 스팟은 <b>24시간에 한 번</b>만 다시 인증할 수 있어요.
+          <br />
+          잠시 후 다시 시도해 주세요.
+        </>
+      ),
+      primary: "돌아가기",
+    },
   } as const;
   const e = errors[phase];
 
@@ -295,8 +322,12 @@ export function CheckinFlow({ spot }: { spot: Spot }) {
         </div>
       </div>
       <div className="flex flex-col gap-2.5 pb-11">
-        <CoralButton onClick={acquire}>{e.primary}</CoralButton>
-        <GhostButton onClick={back}>다음에 하기</GhostButton>
+        <CoralButton onClick={phase === "cooldown" ? back : acquire}>
+          {e.primary}
+        </CoralButton>
+        {phase !== "cooldown" && (
+          <GhostButton onClick={back}>다음에 하기</GhostButton>
+        )}
       </div>
     </Shell>
   );
