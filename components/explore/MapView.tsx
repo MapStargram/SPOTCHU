@@ -22,6 +22,9 @@ import { posOf, iconOf } from "./pin";
 // 없으면 CSS 가짜 지도로 폴백. 핀 인코딩: 색=검증상태, 아이콘=카테고리(색+아이콘/라벨 병기).
 // 방위각(bearing)은 규칙상 탐색 지도에 표시하지 않는다 — 스팟 상세에서만(rules.md).
 const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+// 브랜드 지도 스타일·POI 숨김은 Cloud 기반 Map ID로 관리(§12). 미설정 시 데모 ID 폴백
+// (스타일 미적용·기본 POI 노출, 마커/딥링크는 동일 동작). 설정법은 docs/features/03 spec 참조.
+const MAP_ID = process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID || "DEMO_MAP_ID";
 
 // 폴백(키 없음) — 가짜 지도 + 고정 위치 마커
 const FALLBACK_MARKERS = [
@@ -78,14 +81,42 @@ function ClusteredMarkers({ spots }: { spots: Spot[] }) {
             onClick={() => router.push(`/spot/${s.id}`)}
             title={`${s.title} · ${c.label} · ${s.categoryLabel}`}
           >
-            <span
-              role="img"
-              aria-label={`${s.title}, ${c.label}, ${s.categoryLabel}`}
-              className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white text-[15px] leading-none shadow-[0_4px_10px_rgba(23,35,60,0.35)]"
-              style={{ background: c.color }}
-            >
-              {iconOf(s)}
-            </span>
+            {s.imageUrl ? (
+              // 썸네일 마커: 링 색=검증상태, 코너 배지=카테고리(색+아이콘/라벨 병기, rules §접근성)
+              <div
+                role="img"
+                aria-label={`${s.title}, ${c.label}, ${s.categoryLabel}`}
+                className="relative"
+              >
+                <span
+                  className="block h-11 w-11 overflow-hidden rounded-full border-[2.5px] bg-white shadow-[0_4px_10px_rgba(23,35,60,0.35)]"
+                  style={{ borderColor: c.color }}
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={s.imageUrl}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </span>
+                <span
+                  aria-hidden
+                  className="absolute -bottom-1 -right-1 flex h-[18px] w-[18px] items-center justify-center rounded-full border border-white bg-white text-[10px] leading-none shadow"
+                >
+                  {iconOf(s)}
+                </span>
+              </div>
+            ) : (
+              <span
+                role="img"
+                aria-label={`${s.title}, ${c.label}, ${s.categoryLabel}`}
+                className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white text-[15px] leading-none shadow-[0_4px_10px_rgba(23,35,60,0.35)]"
+                style={{ background: c.color }}
+              >
+                {iconOf(s)}
+              </span>
+            )}
           </AdvancedMarker>
         );
       })}
@@ -99,7 +130,7 @@ function GoogleMapLayer({ spots, city }: { spots: Spot[]; city: CityId }) {
       <Map
         defaultCenter={CITY_CENTER[city]}
         defaultZoom={13}
-        mapId="DEMO_MAP_ID"
+        mapId={MAP_ID}
         disableDefaultUI
         gestureHandling="greedy"
         className="absolute inset-0 h-full w-full"
@@ -153,10 +184,18 @@ export function MapView({ spots, city }: { spots: Spot[]; city: CityId }) {
       {preview && (
         <div className="absolute inset-x-3.5 bottom-[100px] z-[9] flex gap-3 rounded-[22px] bg-white p-3.5 shadow-[var(--sh-elevated)]">
           <div
-            className="relative h-[78px] w-[78px] shrink-0 rounded-2xl"
+            className="relative h-[78px] w-[78px] shrink-0 overflow-hidden rounded-2xl"
             style={{ background: preview.thumbGrad }}
           >
-            <span className="absolute bottom-1.5 right-1.5">
+            {preview.imageUrl && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={preview.imageUrl}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            )}
+            <span className="absolute bottom-1.5 right-1.5 z-10">
               <Sparkle />
             </span>
           </div>
