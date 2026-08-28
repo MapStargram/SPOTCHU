@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { POSTS, getPost, getSpot } from "@/lib/mock";
+import { AppShell } from "@/components/shell/AppShell";
 
 // H3 · 게시물 상세
 export function generateStaticParams() {
@@ -26,8 +27,8 @@ export default async function PostDetailPage({
   const spot = getSpot(p.spotId);
 
   return (
-    <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream">
+    <AppShell>
+      <div className="relative mx-auto flex min-h-dvh w-full max-w-[470px] flex-col bg-cream pb-24 lg:min-h-0 lg:pb-12 lg:pt-6">
         {/* Photo hero */}
         <div className="relative">
           <div className="aspect-[4/5]" style={{ background: p.gradient }} />
@@ -113,6 +114,6 @@ export default async function PostDetailPage({
           )}
         </div>
       </div>
-    </div>
+    </AppShell>
   );
 }

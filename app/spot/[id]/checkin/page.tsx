@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { AppShell } from "@/components/shell/AppShell";
 import { CheckinFlow } from "@/components/checkin/CheckinFlow";
 import { SPOTS, getSpot } from "@/lib/mock";
 
@@ -15,5 +16,9 @@ export default async function CheckinPage({
   const { id } = await params;
   const spot = getSpot(id);
   if (!spot) notFound();
-  return <CheckinFlow spot={spot} />;
+  return (
+    <AppShell noTabBar>
+      <CheckinFlow spot={spot} />
+    </AppShell>
+  );
 }

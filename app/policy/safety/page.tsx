@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { AppShell } from "@/components/shell/AppShell";
 import { ChevronLeft, AlertTriangle } from "lucide-react";
 
 // J3 · 안전 · 저작권 (PRD §24·§25)
@@ -27,8 +28,8 @@ const ITEMS = [
 
 export default function SafetyPolicyPage() {
   return (
-    <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pb-10 pt-14 text-navy">
+    <AppShell>
+      <div className="mx-auto flex w-full max-w-[560px] flex-col px-5 pb-28 pt-14 text-navy lg:max-w-[720px] lg:pb-14 lg:pt-8">
         <header className="flex items-center gap-2.5">
           <Link
             href="/profile/settings"
@@ -85,6 +86,6 @@ export default function SafetyPolicyPage() {
           ))}
         </div>
       </div>
-    </div>
+    </AppShell>
   );
 }

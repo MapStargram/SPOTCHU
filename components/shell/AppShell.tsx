@@ -8,15 +8,17 @@ type Active = "home" | "explore" | "collections" | "profile";
 export function AppShell({
   active,
   children,
+  noTabBar = false,
 }: {
   active?: Active;
   children: React.ReactNode;
+  noTabBar?: boolean; // 하단 컨트롤이 있는 플로우(제보·체크인 등)는 모바일 탭바 숨김
 }) {
   return (
     <div className="min-h-dvh bg-[color:var(--cream-2)]">
       <Sidebar active={active} />
       <div className="min-h-dvh lg:pl-[76px]">{children}</div>
-      <TabBar active={active} />
+      {!noTabBar && <TabBar active={active} />}
     </div>
   );
 }
