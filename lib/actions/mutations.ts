@@ -8,6 +8,7 @@ import { getCurrentUser } from "@/lib/session";
 import { canCheckIn, haversineMeters } from "@/lib/geo";
 import { awardCheckInBadges, type AwardedBadge } from "@/lib/actions/badges";
 import * as mock from "@/lib/mock";
+import { createNotification } from "@/lib/notify";
 
 type Fail = { ok: false; reason: string; [k: string]: unknown };
 
@@ -79,11 +80,18 @@ export async function checkInAction(
   // USER_REPORTED → USER_VERIFIED 자동 승격(서로 다른 3명 이상)
   if (spot.verificationStatus === "USER_REPORTED") {
     const uniq = await db.checkIn.count({ where: { spotId } });
-    if (uniq >= 3)
+    if (uniq >= 3) {
       await db.spot.update({
         where: { id: spotId },
         data: { verificationStatus: "USER_VERIFIED" },
       });
+      // 전이 1회에만 제보자 본인에게 승격 알림(rules §불변식: 이미 USER_VERIFIED면 재발행 안 함)
+      if (spot.createdById)
+        await createNotification(spot.createdById, "SPOT_PROMOTED", {
+          refType: "SPOT",
+          refId: spotId,
+        });
+    }
   }
 
   // 배지 지급(서버 판정·멱등) — 이 인증으로 도시/작품 완주 시 축하 피드백용으로 반환

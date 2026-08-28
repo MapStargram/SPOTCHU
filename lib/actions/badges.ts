@@ -1,6 +1,7 @@
 // 배지 지급 엔진(서버 전용). GPS 인증 이벤트 기준으로 서버에서 멱등 지급한다(rules §Do).
 // 원시 좌표 미사용 — CheckIn(결과)만으로 도시/작품 완주 진행도를 파생한다.
 import { db } from "@/lib/db";
+import { createNotification } from "@/lib/notify";
 import {
   BADGE_KEYS,
   computeCheckInAwards,
@@ -43,6 +44,12 @@ async function grant(
     skipDuplicates: true,
   });
   if (created.count === 0) return null; // 이미 보유(멱등)
+
+  // 신규 지급 시에만 배지 획득 알림(멱등 재지급 시 중복 알림 방지)
+  await createNotification(userId, "BADGE_EARNED", {
+    refType: "BADGE",
+    refId: badge.id,
+  });
 
   return {
     key: badge.key,

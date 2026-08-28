@@ -35,6 +35,11 @@ import {
   FIRST_REPORTER_ICON,
 } from "./badges";
 import {
+  presentNotification,
+  timeAgo,
+  type NotificationView,
+} from "./notifications";
+import {
   buildFunnel,
   verifiedRatio,
   VERIFIED_STATUSES,
@@ -654,6 +659,66 @@ export async function getPostDetail(id: string): Promise<FeedPost | null> {
       })) != null
     : false;
   return mapDbPost(row, likedByMe);
+}
+
+// J1 · 알림 목록(본인 것만, 발행 역순). 표시 문구는 type+참조 대상명으로 서버 조합.
+export async function getNotifications(): Promise<NotificationView[]> {
+  if (!USE_DB) {
+    // 데모: 목업 알림을 그대로 노출(딥링크는 대상 미보유 → 알림 센터 유지)
+    return mock.NOTIFICATIONS.map((n) => ({
+      id: n.id,
+      tone: n.type,
+      icon: n.icon,
+      title: n.title,
+      body: n.body,
+      href: "/notifications",
+      unread: n.unread,
+      time: n.time,
+    }));
+  }
+  const user = await getCurrentUser();
+  if (!user?.id) return []; // GUEST/비로그인 → 알림 없음(rules), 페이지에서 로그인 유도
+  // ponytail: 최근 50건. 보관 기간·페이지네이션은 spec TODO.
+  const rows = await db.notification.findMany({
+    where: { userId: user.id },
+    orderBy: { createdAt: "desc" },
+    take: 50,
+  });
+
+  // 참조 대상명 배치 로드(SPOT→name, BADGE→label)
+  const spotIds = rows
+    .filter((r) => r.refType === "SPOT" && r.refId)
+    .map((r) => r.refId!);
+  const badgeIds = rows
+    .filter((r) => r.refType === "BADGE" && r.refId)
+    .map((r) => r.refId!);
+  const [spots, badges] = await Promise.all([
+    spotIds.length
+      ? db.spot.findMany({
+          where: { id: { in: spotIds } },
+          select: { id: true, name: true },
+        })
+      : [],
+    badgeIds.length
+      ? db.badge.findMany({
+          where: { id: { in: badgeIds } },
+          select: { id: true, label: true },
+        })
+      : [],
+  ]);
+  const labelOf = new Map<string, string>();
+  for (const s of spots) labelOf.set(s.id, s.name);
+  for (const b of badges) labelOf.set(b.id, b.label);
+
+  return rows.map((r) => {
+    const p = presentNotification(
+      r.type,
+      r.refType,
+      r.refId,
+      r.refId ? labelOf.get(r.refId) : undefined,
+    );
+    return { ...p, id: r.id, unread: !r.isRead, time: timeAgo(r.createdAt) };
+  });
 }
 
 // ── 지표·분석(feature 14) — 파생 카운트 집계(내부 대시보드용) ──
