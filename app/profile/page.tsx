@@ -1,10 +1,15 @@
 import Link from "next/link";
-import { Settings, Pencil, ChevronRight } from "lucide-react";
+import { Settings, Pencil, ChevronRight, LogIn } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
+import { getCurrentUser } from "@/lib/session";
 import { BADGES, CITY_PROGRESS } from "@/lib/mock";
 
 // G1 · 프로필(AppShell 내부).
-export default function ProfilePage() {
+export default async function ProfilePage() {
+  const user = await getCurrentUser();
+  const name = user?.name || "게스트";
+  const sub = user?.email || "로그인하고 저장·인증을 시작하세요";
+  const initial = (name.trim()[0] || "S").toUpperCase();
   return (
     <AppShell active="profile">
       <div className="mx-auto w-full max-w-[500px] pb-28 text-navy lg:max-w-[860px] lg:pb-12 lg:pt-6">
@@ -37,23 +42,36 @@ export default function ProfilePage() {
         {/* Profile card */}
         <div className="relative z-10 -mt-14 mx-4 rounded-[22px] bg-white p-5 shadow-[var(--sh-elevated)] lg:mx-6">
           <div className="flex items-center gap-3.5">
-            <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-mint font-latin text-[24px] font-extrabold text-navy lg:h-20 lg:w-20 lg:text-[30px]">
-              지
+            <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-mint font-latin text-[24px] font-extrabold text-navy lg:h-20 lg:w-20 lg:text-[30px]">
+              {user?.image ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={user.image}
+                  alt={name}
+                  className="h-full w-full object-cover"
+                />
+              ) : (
+                initial
+              )}
               <span className="absolute -bottom-0.5 -right-0.5 flex h-[22px] w-[22px] items-center justify-center rounded-full border-2 border-white bg-yellow text-[12px]">
                 🌠
               </span>
             </div>
-            <div className="flex-1">
-              <div className="text-[16px] font-extrabold tracking-[-0.01em] lg:text-[20px]">
-                지민
+            <div className="min-w-0 flex-1">
+              <div className="truncate text-[16px] font-extrabold tracking-[-0.01em] lg:text-[20px]">
+                {name}
               </div>
-              <div className="mt-0.5 font-latin text-[11px] text-[color:var(--muted)]">
-                @jimin.chu · 2026.03 가입
+              <div className="mt-0.5 truncate font-latin text-[11px] text-[color:var(--muted)]">
+                {sub}
               </div>
             </div>
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[color:var(--cream-2)] text-navy">
-              <Pencil size={14} />
-            </span>
+            <Link
+              href={user ? "/profile/settings" : "/login"}
+              aria-label={user ? "프로필 편집" : "로그인"}
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[color:var(--cream-2)] text-navy"
+            >
+              {user ? <Pencil size={14} /> : <LogIn size={14} />}
+            </Link>
           </div>
           <div className="mt-4 grid grid-cols-3 text-center">
             {[

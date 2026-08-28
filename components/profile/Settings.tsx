@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { signOut } from "next-auth/react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -89,7 +90,11 @@ export function Settings() {
           {/* 로그아웃 */}
           <Section>
             <button
-              onClick={() => router.push("/login")}
+              onClick={() =>
+                process.env.NEXT_PUBLIC_AUTH_ENABLED === "true"
+                  ? void signOut({ callbackUrl: "/login" })
+                  : router.push("/login")
+              }
               className="flex w-full items-center gap-3 px-4 py-3.5 text-left"
             >
               <LogOut size={18} className="text-coral" />
