@@ -89,11 +89,11 @@ export function CompareSlider({
       </div>
       {/* Divider + handle */}
       <div
-        className="pointer-events-none absolute inset-y-0 w-[3px] -translate-x-1/2 bg-[#FFF9F2]"
+        className="pointer-events-none absolute inset-y-0 w-[3px] -translate-x-1/2 bg-white"
         style={{ left: `${pct}%`, boxShadow: "0 0 12px rgba(0,0,0,0.35)" }}
       />
       <div
-        className="pointer-events-none absolute top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#FFF9F2] text-navy"
+        className="pointer-events-none absolute top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-navy"
         style={{ left: `${pct}%`, boxShadow: "0 6px 16px rgba(0,0,0,0.25)" }}
       >
         <ChevronLeft size={14} />

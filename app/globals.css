@@ -26,8 +26,8 @@
   /* Neutrals / semantic */
   --line: #efefef;
   --line-strong: #dbdbdb;
-  --muted: #8e8e8e;
-  --muted-soft: #b3b3b3;
+  --muted: #6b6b6b;
+  --muted-soft: #8e8e8e;
   --bg: var(--cream);
   --bg-alt: var(--cream-2);
   --fg: var(--navy);
@@ -41,9 +41,9 @@
   --font-ko:
     "Pretendard Variable", "Pretendard", -apple-system, "Apple SD Gothic Neo",
     "Noto Sans KR", sans-serif;
-  --font-latin: "Poppins", system-ui, -apple-system, sans-serif;
-  --font-mono:
-    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  /* 전 화면 Pretendard 통일(사용자 요청) — latin·mono도 Pretendard로 */
+  --font-latin: var(--font-ko);
+  --font-mono: var(--font-ko);
 
   /* Type scale (mobile-first) */
   --fs-display: 76px;
