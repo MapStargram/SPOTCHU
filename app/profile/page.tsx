@@ -4,6 +4,9 @@ import { AppShell } from "@/components/shell/AppShell";
 import { getCurrentUser } from "@/lib/session";
 import { BADGES, CITY_PROGRESS } from "@/lib/mock";
 
+// 로그인 유저를 매 요청 반영해야 하므로 동적 렌더.
+export const dynamic = "force-dynamic";
+
 // G1 · 프로필(AppShell 내부).
 export default async function ProfilePage() {
   const user = await getCurrentUser();

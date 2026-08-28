@@ -108,6 +108,53 @@ export async function saveSpotAction(
   return { ok: true, collectionId: colId };
 }
 
+// 핀 빠른 저장 토글 — 기본 "저장됨" 컬렉션 기준. 있으면 제거, 없으면 추가.
+export async function toggleSaveAction(
+  spotId: string,
+): Promise<Fail | { ok: true; saved: boolean }> {
+  const user = await getCurrentUser();
+  if (!user?.id) return { ok: false, reason: "unauthenticated" };
+  const col =
+    (await db.collection.findFirst({
+      where: { ownerId: user.id, isDefault: true },
+    })) ??
+    (await db.collection.create({
+      data: { ownerId: user.id, title: "저장됨", isDefault: true },
+    }));
+  const key = { collectionId_spotId: { collectionId: col.id, spotId } };
+  const existing = await db.collectionItem.findUnique({ where: key });
+  if (existing) {
+    await db.collectionItem.delete({ where: key });
+    await db.spot.update({
+      where: { id: spotId },
+      data: { saveCount: { decrement: 1 } },
+    });
+    return { ok: true, saved: false };
+  }
+  await db.collectionItem.create({ data: { collectionId: col.id, spotId } });
+  await db.spot.update({
+    where: { id: spotId },
+    data: { saveCount: { increment: 1 } },
+  });
+  return { ok: true, saved: true };
+}
+
+// 현재 유저의 저장된 스팟 id 목록(기본 컬렉션). 비로그인은 빈 배열.
+export async function getSavedSpotIds(): Promise<string[]> {
+  const user = await getCurrentUser();
+  if (!user?.id) return [];
+  const col = await db.collection.findFirst({
+    where: { ownerId: user.id, isDefault: true },
+    select: { id: true },
+  });
+  if (!col) return [];
+  const items = await db.collectionItem.findMany({
+    where: { collectionId: col.id },
+    select: { spotId: true },
+  });
+  return items.map((i) => i.spotId);
+}
+
 // H · 게시물 작성(스팟 필수 연결, 사진 1~5장). imageUrls는 EXIF 위치 제거 후의 업로드 URL.
 export async function createPostAction(input: {
   spotId: string;

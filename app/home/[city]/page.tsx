@@ -5,18 +5,20 @@ import { AppShell } from "@/components/shell/AppShell";
 import { TagPill } from "@/components/ui/TagPill";
 import { Sparkle } from "@/components/ui/Sparkle";
 import { PinGrid } from "@/components/home/PinGrid";
-import { CITIES, type CityId } from "@/lib/mock";
+import { type CityId } from "@/lib/mock";
 import { getCity, getSpot, getSpotsByCity } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
+import { getCurrentUser } from "@/lib/session";
+import { getSavedSpotIds } from "@/lib/actions/mutations";
+
+// 세션(로그인 유저·저장목록)을 매 요청 반영해야 하므로 동적 렌더.
+// (getCurrentUser의 try/catch가 동적 신호를 삼켜 정적으로 굳는 것 방지)
+export const dynamic = "force-dynamic";
 
 // B2 도쿄 / B3 서울 — 도시 홈. 상단 히어로 슬롯 + 핀터레스트 메이슨리 그리드(모두 지도에 찍히는 스팟).
 const CITY_HERO: Record<CityId, string> = {
   tokyo: "mojik",
   seoul: "namsan",
 };
-
-export function generateStaticParams() {
-  return CITIES.map((c) => ({ city: c.id }));
-}
 
 export default async function HomeScreen({
   params,
@@ -30,6 +32,8 @@ export default async function HomeScreen({
   const heroSpot = (await getSpot(CITY_HERO[city as CityId]))!;
   const all = await getSpotsByCity(city as CityId);
   const gridSpots = all.filter((s) => s.id !== heroSpot.id);
+  const user = await getCurrentUser();
+  const savedIds = await getSavedSpotIds(); // 로그인 시 DB, 게스트는 []
 
   return (
     <AppShell active="home">
@@ -111,7 +115,12 @@ export default async function HomeScreen({
             {gridSpots.length}곳
           </span>
         </div>
-        <PinGrid spots={gridSpots} city={city} />
+        <PinGrid
+          spots={gridSpots}
+          city={city}
+          loggedIn={!!user}
+          initialSaved={savedIds}
+        />
       </div>
     </AppShell>
   );

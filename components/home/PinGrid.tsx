@@ -18,14 +18,24 @@ function pinHeight(id: string) {
   return HEIGHTS[h % HEIGHTS.length];
 }
 
-export function PinGrid({ spots, city }: { spots: Spot[]; city: string }) {
+export function PinGrid({
+  spots,
+  city,
+  loggedIn = false,
+  initialSaved = [],
+}: {
+  spots: Spot[];
+  city: string;
+  loggedIn?: boolean;
+  initialSaved?: string[];
+}) {
   const cats = [
     "전체",
     ...Array.from(new Set(spots.map((s) => s.categoryLabel).filter(Boolean))),
   ];
   const [cat, setCat] = useState("전체");
   const [sort, setSort] = useState<"popular" | "recent" | "rating">("popular");
-  const { toggle, isSaved } = useSaved();
+  const { toggle, isSaved } = useSaved({ loggedIn, initial: initialSaved });
   const filtered =
     cat === "전체" ? spots : spots.filter((s) => s.categoryLabel === cat);
   // 최신순 = 데이터 추가 역순(리서치 스팟이 뒤에 붙음). 그 외는 방문/평점 내림차순.
