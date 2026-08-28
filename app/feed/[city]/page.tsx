@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Camera, Heart, Share2, Bookmark, MoreHorizontal } from "lucide-react";
+import {
+  Camera,
+  Heart,
+  Share2,
+  Bookmark,
+  MoreHorizontal,
+  ChevronLeft,
+} from "lucide-react";
 import { Chip } from "@/components/ui/Chip";
 import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
@@ -24,8 +31,15 @@ export default async function FeedPage({
   return (
     <AppShell active="explore">
       <div className="mx-auto flex w-full max-w-[500px] flex-col bg-cream pb-28 pt-14 lg:pb-12 lg:pt-6">
-        <header className="flex items-center justify-between px-4">
-          <div>
+        <header className="flex items-center gap-2.5 px-4">
+          <Link
+            href={`/home/${city}`}
+            aria-label="뒤로"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)]"
+          >
+            <ChevronLeft size={20} />
+          </Link>
+          <div className="flex-1">
             <div className="font-latin text-[10px] font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
               {c.nameEn} · FEED
             </div>

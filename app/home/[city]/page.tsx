@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Bell, Camera, ChevronDown } from "lucide-react";
+import { Bell, Camera, ChevronDown, ChevronLeft } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { TagPill } from "@/components/ui/TagPill";
 import { Sparkle } from "@/components/ui/Sparkle";
@@ -40,14 +40,23 @@ export default async function HomeScreen({
       <div className="mx-auto w-full max-w-[500px] px-4 pb-28 pt-14 text-navy lg:max-w-[1180px] lg:px-8 lg:pb-12 lg:pt-8">
         {/* Top bar */}
         <header className="flex items-center justify-between">
-          <Link href="/city" className="block">
-            <div className="font-latin text-[10px] font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
-              {c.nameEn}
-            </div>
-            <div className="flex items-center gap-1.5 text-[22px] font-extrabold tracking-[-0.02em] lg:text-[26px]">
-              {c.name} <ChevronDown size={16} />
-            </div>
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href="/city"
+              aria-label="도시 선택으로"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)] lg:hidden"
+            >
+              <ChevronLeft size={20} />
+            </Link>
+            <Link href="/city" className="block">
+              <div className="font-latin text-[10px] font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
+                {c.nameEn}
+              </div>
+              <div className="flex items-center gap-1.5 text-[22px] font-extrabold tracking-[-0.02em] lg:text-[26px]">
+                {c.name} <ChevronDown size={16} />
+              </div>
+            </Link>
+          </div>
           <div className="flex items-center gap-2">
             <Link
               href={`/feed/${city}`}
