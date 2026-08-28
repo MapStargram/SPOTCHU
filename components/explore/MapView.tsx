@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
@@ -43,33 +43,20 @@ const FALLBACK_MARKERS = [
 function ClusteredMarkers({ spots }: { spots: Spot[] }) {
   const map = useMap();
   const router = useRouter();
-  const [markers, setMarkers] = useState<Record<string, Marker>>({});
-
   const clusterer = useMemo(
     () => (map ? new MarkerClusterer({ map }) : null),
     [map],
   );
-
-  useEffect(() => {
-    if (!clusterer) return;
-    clusterer.clearMarkers();
-    clusterer.addMarkers(Object.values(markers));
-  }, [clusterer, markers]);
   useEffect(() => () => clusterer?.clearMarkers(), [clusterer]);
 
-  // 마커 ref를 안정적으로 수집(불필요한 setState/리렌더 방지 — 지도 비용 관리).
+  // 마커 인스턴스는 state가 아니라 ref로 수집한다. state로 모으면 마커 mount마다
+  // setState→리렌더가 연쇄되고 인라인 ref와 겹쳐 React #185(무한 렌더)로 지도가 크래시.
+  const markersRef = useRef<Record<string, Marker>>({});
   const setRef = useCallback((key: string, marker: Marker | null) => {
-    setMarkers((prev) => {
-      if ((marker && prev[key]) || (!marker && !prev[key])) return prev;
-      const next = { ...prev };
-      if (marker) next[key] = marker;
-      else delete next[key];
-      return next;
-    });
+    if (marker) markersRef.current[key] = marker;
+    else delete markersRef.current[key];
   }, []);
-
-  // 키별로 ref 콜백을 캐시해 identity를 고정한다. 인라인 콜백이면 매 렌더마다 새 함수라
-  // React 19가 unmount(null)+mount를 반복 → setState 무한 루프(React #185). 그래서 안정화.
+  // 키별 ref 콜백을 캐시해 identity를 고정(React 19가 매 렌더 재호출하지 않도록).
   const refCbs = useRef<Record<string, (m: Marker | null) => void>>({});
   const getRef = useCallback(
     (key: string) =>
@@ -78,6 +65,13 @@ function ClusteredMarkers({ spots }: { spots: Spot[] }) {
   );
 
   const withPos = useMemo(() => spots.filter((s) => posOf(s)), [spots]);
+
+  // 클러스터러/스팟이 준비되면 수집된 마커로 클러스터 갱신(refs는 커밋 시점에 채워짐).
+  useEffect(() => {
+    if (!clusterer) return;
+    clusterer.clearMarkers();
+    clusterer.addMarkers(Object.values(markersRef.current));
+  }, [clusterer, withPos]);
 
   return (
     <>
