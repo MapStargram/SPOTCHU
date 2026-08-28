@@ -113,6 +113,7 @@ model User {
   id            String    @id @default(cuid())
   email         String?   @unique
   emailVerified DateTime?
+  passwordHash  String? // 이메일/비밀번호 가입자만 값 존재(bcrypt). 소셜 전용은 null. 절대 응답에 노출 금지.
   name          String? // Auth.js 표준
   image         String? // Auth.js 표준
   nickname      String? // 서비스 표시명(name과 별개)

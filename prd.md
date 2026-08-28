@@ -191,7 +191,7 @@
 - 상세: [`docs/features/12-policies-safety-copyright-privacy/spec.md`](docs/features/12-policies-safety-copyright-privacy/spec.md).
 
 ## 26. MVP 범위
-- 인증(카카오·구글·애플), 홈/도시, 탐색(지도⇄피드), 스팟 상세(+비교 슬라이더), 검색·필터, 컬렉션(저장·순서·지도), GPS 방문 인증, 게임화 기본(방문수·도시/작품 달성률·컬렉션 완주·배지 3종), 사진 업로드·도시 피드·좋아요, 스팟 제보, 웹 어드민(검수 큐·신고·마스터데이터), 인앱 알림 최소, 정책(저작권·안전·개인정보).
+- 인증(카카오·네이버·구글·애플 + 이메일/비밀번호), 홈/도시, 탐색(지도⇄피드), 스팟 상세(+비교 슬라이더), 검색·필터, 컬렉션(저장·순서·지도), GPS 방문 인증, 게임화 기본(방문수·도시/작품 달성률·컬렉션 완주·배지 3종), 사진 업로드·도시 피드·좋아요, 스팟 제보, 웹 어드민(검수 큐·신고·마스터데이터), 인앱 알림 최소, 정책(저작권·안전·개인정보).
 - 도시: **서울 + 도쿄**(1차 출시). **오사카·교토·후쿠오카·부산** 확장(2026-08 추가) — 한국인 일본여행 핵심 도시(오사카·교토·후쿠오카) + 국내 거점(부산). 스팟·좌표·CC 실사진(자가호스팅)·출처표기 동일 정책 적용.
 
 ## 27. MVP 제외 범위
@@ -232,14 +232,14 @@
 
 ## 33. 권장 기술 스택
 - **프론트**: Next.js(App Router) + TypeScript + Tailwind, PWA.
-- **백엔드/인증/DB**: Next.js 서버(Route Handlers/Server Actions) + Auth.js(카카오·구글·애플) + PostgreSQL + Prisma.
+- **백엔드/인증/DB**: Next.js 서버(Route Handlers/Server Actions) + Auth.js(카카오·네이버·구글·애플 + 이메일/비밀번호, 세션 jwt) + PostgreSQL + Prisma. 메일 발송(이메일 인증·비밀번호 재설정) Resend.
 - **지리**: PostgreSQL + PostGIS.
 - **스토리지**: Cloudinary(이미지). **호스팅**: Vercel. **지도**: Google Maps.
 - 상세·근거: [`docs/tech-stack.md`](docs/tech-stack.md).
 
 ## 34. 외부 API 후보
 - Google Maps JS API + Geocoding(역지오코딩).
-- 카카오/구글/애플 OAuth.
+- 카카오/네이버/구글/애플 OAuth + 이메일/비밀번호(Credentials).
 - (시딩) 외부 지오태그 콘텐츠는 API/약관 준수 범위에서 **좌표·출처만** 수집 — 법률 검토 필요(§41).
 
 ## 35. 데이터베이스 엔티티 초안

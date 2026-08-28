@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 export default async function ReportPage() {
   const categories = await getCategories();
   return (
-    <AppShell noTabBar>
+    <AppShell noTabBar active="report">
       <ReportFlow categories={categories} />
     </AppShell>
   );

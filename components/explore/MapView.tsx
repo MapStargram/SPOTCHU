@@ -1,18 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import {
-  APIProvider,
-  Map,
-  AdvancedMarker,
-  useMap,
-} from "@vis.gl/react-google-maps";
-import { MarkerClusterer, type Marker } from "@googlemaps/markerclusterer";
+import { APIProvider, useApiIsLoaded } from "@vis.gl/react-google-maps";
 import { Plus, Crosshair, MapPin } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
+import { ErrorBoundary } from "../ui/ErrorBoundary";
 import { Sparkle } from "../ui/Sparkle";
 import { VerifBadge, VERIF_CFG } from "../ui/VerifBadge";
 import { CITY_CENTER, type Spot, type CityId } from "@/lib/mock";
@@ -22,6 +17,9 @@ import { posOf, iconOf } from "./pin";
 // 없으면 CSS 가짜 지도로 폴백. 핀 인코딩: 색=검증상태, 아이콘=카테고리(색+아이콘/라벨 병기).
 // 방위각(bearing)은 규칙상 탐색 지도에 표시하지 않는다 — 스팟 상세에서만(rules.md).
 const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+// 브랜드 지도 스타일·POI 숨김은 Cloud 기반 Map ID로 관리(§12). 미설정 시 데모 ID 폴백
+// (스타일 미적용·기본 POI 노출, 마커/딥링크는 동일 동작). 설정법은 docs/features/03 spec 참조.
+const MAP_ID = process.env.NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID || "DEMO_MAP_ID";
 
 // 폴백(키 없음) — 가짜 지도 + 고정 위치 마커
 const FALLBACK_MARKERS = [
@@ -33,81 +31,101 @@ const FALLBACK_MARKERS = [
   { state: "default" as const, x: 54, y: 50 },
 ];
 
-// 밀집 클러스터링(@googlemaps/markerclusterer 공식 패턴). 숫자 배지로 묶음.
-// ponytail: 지금은 도시 단위 로드(getSpotsByCity) + 클라이언트 클러스터. 서버 뷰포트 로드
-// (listSpotsInViewport·디바운스)는 후속 — 임계·재로드 방식이 rules.md TODO(미결정)라 발명하지 않음.
-function ClusteredMarkers({ spots }: { spots: Spot[] }) {
-  const map = useMap();
-  const router = useRouter();
-  const [markers, setMarkers] = useState<Record<string, Marker>>({});
-
-  const clusterer = useMemo(
-    () => (map ? new MarkerClusterer({ map }) : null),
-    [map],
-  );
-
-  useEffect(() => {
-    if (!clusterer) return;
-    clusterer.clearMarkers();
-    clusterer.addMarkers(Object.values(markers));
-  }, [clusterer, markers]);
-  useEffect(() => () => clusterer?.clearMarkers(), [clusterer]);
-
-  // 마커 ref를 안정적으로 수집(불필요한 setState/리렌더 방지 — 지도 비용 관리).
-  const setRef = useCallback((key: string, marker: Marker | null) => {
-    setMarkers((prev) => {
-      if ((marker && prev[key]) || (!marker && !prev[key])) return prev;
-      const next = { ...prev };
-      if (marker) next[key] = marker;
-      else delete next[key];
-      return next;
-    });
-  }, []);
-
-  const withPos = useMemo(() => spots.filter((s) => posOf(s)), [spots]);
-
-  return (
-    <>
-      {withPos.map((s) => {
-        const c = VERIF_CFG[s.verified];
-        return (
-          <AdvancedMarker
-            key={s.id}
-            position={posOf(s)}
-            ref={(m) => setRef(s.id, m)}
-            onClick={() => router.push(`/spot/${s.id}`)}
-            title={`${s.title} · ${c.label} · ${s.categoryLabel}`}
-          >
-            <span
-              role="img"
-              aria-label={`${s.title}, ${c.label}, ${s.categoryLabel}`}
-              className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white text-[15px] leading-none shadow-[0_4px_10px_rgba(23,35,60,0.35)]"
-              style={{ background: c.color }}
-            >
-              {iconOf(s)}
-            </span>
-          </AdvancedMarker>
-        );
-      })}
-    </>
-  );
-}
-
+// 마커를 선언적으로 직접 렌더한다. @googlemaps/markerclusterer가 AdvancedMarker(React)의
+// DOM을 재부모화하며 React 19와 충돌해 무한 렌더(#185)로 지도가 크래시했다 → 클러스터러 제거.
+// 스팟 수가 도시당 수십 개 규모라 클러스터 없이 충분. 대량화 시 임페러티브 클러스터 재도입(후속).
 function GoogleMapLayer({ spots, city }: { spots: Spot[]; city: CityId }) {
   return (
     <APIProvider apiKey={KEY as string}>
-      <Map
-        defaultCenter={CITY_CENTER[city]}
-        defaultZoom={13}
-        mapId="DEMO_MAP_ID"
-        disableDefaultUI
-        gestureHandling="greedy"
-        className="absolute inset-0 h-full w-full"
-      >
-        <ClusteredMarkers spots={spots} />
-      </Map>
+      <ImperativeMap spots={spots} city={city} />
     </APIProvider>
   );
+}
+
+// @vis.gl 선언적 <Map>이 React 19에서 지도 인스턴스를 생성하지 못해(빈 컨테이너) 지도가
+// 안 떴다. raw google.maps API는 정상이므로 지도·마커를 임페러티브로 생성한다. 클러스터는
+// 뺐다(도시당 수십 개 규모면 불필요, 대량화 시 후속).
+function ImperativeMap({ spots, city }: { spots: Spot[]; city: CityId }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const apiLoaded = useApiIsLoaded();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!apiLoaded || !ref.current || typeof google === "undefined") return;
+    let cancelled = false;
+    const markers: google.maps.marker.AdvancedMarkerElement[] = [];
+    void (async () => {
+      const [{ Map }, { AdvancedMarkerElement }] = await Promise.all([
+        google.maps.importLibrary("maps") as Promise<google.maps.MapsLibrary>,
+        google.maps.importLibrary(
+          "marker",
+        ) as Promise<google.maps.MarkerLibrary>,
+      ]);
+      if (cancelled || !ref.current) return;
+      const map = new Map(ref.current, {
+        center: CITY_CENTER[city],
+        zoom: 13,
+        mapId: MAP_ID,
+        disableDefaultUI: true,
+        gestureHandling: "greedy",
+      });
+      for (const s of spots) {
+        const pos = posOf(s);
+        if (!pos) continue;
+        const c = VERIF_CFG[s.verified];
+        const content = markerContent(s, c);
+        content.style.cursor = "pointer";
+        content.addEventListener("click", () => router.push(`/spot/${s.id}`));
+        markers.push(
+          new AdvancedMarkerElement({
+            map,
+            position: pos,
+            content,
+            title: `${s.title} · ${c.label} · ${s.categoryLabel}`,
+          }),
+        );
+      }
+    })();
+    return () => {
+      cancelled = true;
+      markers.forEach((m) => (m.map = null));
+    };
+  }, [apiLoaded, spots, city, router]);
+
+  return <div ref={ref} className="absolute inset-0 h-full w-full" />;
+}
+
+// AdvancedMarkerElement content = 썸네일 마커 DOM. 링 색=검증상태, 코너 배지=카테고리
+// (색+아이콘/라벨 병기, rules §접근성). 이미지 없으면 이모지 원형 폴백.
+function markerContent(
+  s: Spot,
+  c: { color: string; label: string },
+): HTMLElement {
+  const wrap = document.createElement("div");
+  wrap.setAttribute("role", "img");
+  wrap.setAttribute("aria-label", `${s.title}, ${c.label}, ${s.categoryLabel}`);
+  if (s.imageUrl) {
+    wrap.style.position = "relative";
+    const ring = document.createElement("span");
+    ring.style.cssText = `display:block;height:44px;width:44px;overflow:hidden;border-radius:9999px;border:2.5px solid ${c.color};background:#fff;box-shadow:0 4px 10px rgba(23,35,60,.35)`;
+    const img = document.createElement("img");
+    img.src = s.imageUrl;
+    img.alt = "";
+    img.loading = "lazy";
+    img.style.cssText = "height:100%;width:100%;object-fit:cover";
+    ring.appendChild(img);
+    const badge = document.createElement("span");
+    badge.style.cssText =
+      "position:absolute;bottom:-4px;right:-4px;display:flex;height:18px;width:18px;align-items:center;justify-content:center;border-radius:9999px;border:1px solid #fff;background:#fff;font-size:10px;box-shadow:0 1px 3px rgba(0,0,0,.3)";
+    badge.textContent = iconOf(s);
+    wrap.append(ring, badge);
+  } else {
+    const circle = document.createElement("span");
+    circle.style.cssText = `display:flex;height:32px;width:32px;align-items:center;justify-content:center;border-radius:9999px;border:2px solid #fff;font-size:15px;background:${c.color};box-shadow:0 4px 10px rgba(23,35,60,.35)`;
+    circle.textContent = iconOf(s);
+    wrap.appendChild(circle);
+  }
+  return wrap;
 }
 
 function FallbackLayer() {
@@ -130,7 +148,15 @@ export function MapView({ spots, city }: { spots: Spot[]; city: CityId }) {
 
   return (
     <div className="absolute inset-0 overflow-hidden bg-[#DDE5EE]">
-      {KEY ? <GoogleMapLayer spots={spots} city={city} /> : <FallbackLayer />}
+      {/* Google Maps 로드 실패(키 오류·정책 등)가 전체 라우트를 흰 화면으로 무너뜨리지
+          않도록 폴백 지도로 격리 — 배포 환경에서만 키가 존재하므로 방어적으로 감싼다. */}
+      {KEY ? (
+        <ErrorBoundary fallback={<FallbackLayer />}>
+          <GoogleMapLayer spots={spots} city={city} />
+        </ErrorBoundary>
+      ) : (
+        <FallbackLayer />
+      )}
 
       {/* FABs — 제보(+, Section I 미구현)·내 위치(inert) */}
       <div className="absolute bottom-[210px] right-4 z-[9] flex flex-col gap-2.5">
@@ -153,10 +179,18 @@ export function MapView({ spots, city }: { spots: Spot[]; city: CityId }) {
       {preview && (
         <div className="absolute inset-x-3.5 bottom-[100px] z-[9] flex gap-3 rounded-[22px] bg-white p-3.5 shadow-[var(--sh-elevated)]">
           <div
-            className="relative h-[78px] w-[78px] shrink-0 rounded-2xl"
+            className="relative h-[78px] w-[78px] shrink-0 overflow-hidden rounded-2xl"
             style={{ background: preview.thumbGrad }}
           >
-            <span className="absolute bottom-1.5 right-1.5">
+            {preview.imageUrl && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={preview.imageUrl}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            )}
+            <span className="absolute bottom-1.5 right-1.5 z-10">
               <Sparkle />
             </span>
           </div>
