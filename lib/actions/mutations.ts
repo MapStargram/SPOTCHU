@@ -2,9 +2,11 @@
 
 // 쓰기 서버 액션(체크인·저장·게시물·신고). DB+인증 기동 후 클라이언트에서 호출.
 // 도메인 규칙(PRD §15·§16·§17·§18·§22)을 서버에서 강제한다. 원시 GPS 좌표는 저장하지 않는다.
+import { z } from "zod";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
 import { canCheckIn, haversineMeters } from "@/lib/geo";
+import { awardCheckInBadges, type AwardedBadge } from "@/lib/actions/badges";
 
 type Fail = { ok: false; reason: string; [k: string]: unknown };
 
@@ -12,7 +14,9 @@ type Fail = { ok: false; reason: string; [k: string]: unknown };
 export async function checkInAction(
   spotId: string,
   coord: { lat: number; lng: number; accuracy: number },
-): Promise<Fail | { ok: true; first: boolean }> {
+): Promise<
+  Fail | { ok: true; first: boolean; awardedBadges?: AwardedBadge[] }
+> {
   const user = await getCurrentUser();
   if (!user?.id) return { ok: false, reason: "unauthenticated" };
   const spot = await db.spot.findUnique({ where: { id: spotId } });
@@ -74,7 +78,10 @@ export async function checkInAction(
         data: { verificationStatus: "USER_VERIFIED" },
       });
   }
-  return { ok: true, first: true };
+
+  // 배지 지급(서버 판정·멱등) — 이 인증으로 도시/작품 완주 시 축하 피드백용으로 반환
+  const awardedBadges = await awardCheckInBadges(user.id, spotId);
+  return { ok: true, first: true, awardedBadges };
 }
 
 // E · 스팟 저장(원탭 → 기본함 "저장됨" 또는 지정 컬렉션)
@@ -86,7 +93,14 @@ export async function saveSpotAction(
   if (!user?.id) return { ok: false, reason: "unauthenticated" };
 
   let colId = collectionId;
-  if (!colId) {
+  if (colId) {
+    // 지정 컬렉션은 소유자 본인 것만 허용(타인 소유 컬렉션 편집 차단, rules §데이터·권한)
+    const owned = await db.collection.findFirst({
+      where: { id: colId, ownerId: user.id },
+      select: { id: true },
+    });
+    if (!owned) return { ok: false, reason: "forbidden" };
+  } else {
     const def =
       (await db.collection.findFirst({
         where: { ownerId: user.id, isDefault: true },
@@ -96,16 +110,64 @@ export async function saveSpotAction(
       }));
     colId = def.id;
   }
-  await db.collectionItem.upsert({
-    where: { collectionId_spotId: { collectionId: colId, spotId } },
-    update: {},
-    create: { collectionId: colId, spotId },
-  });
+  // 이미 저장돼 있으면 no-op — 중복 추가 방지 + saveCount 중복 카운트 방지(unique[collectionId,spotId])
+  const key = { collectionId_spotId: { collectionId: colId, spotId } };
+  const existing = await db.collectionItem.findUnique({ where: key });
+  if (existing) return { ok: true, collectionId: colId };
+  await db.collectionItem.create({ data: { collectionId: colId, spotId } });
   await db.spot.update({
     where: { id: spotId },
     data: { saveCount: { increment: 1 } },
   });
   return { ok: true, collectionId: colId };
+}
+
+// E · 지정 컬렉션에서 스팟 항목 제거(저장 해제와 별개 — 다른 컬렉션 저장엔 영향 없음, spec §엣지)
+export async function removeSpotAction(
+  spotId: string,
+  collectionId: string,
+): Promise<Fail | { ok: true }> {
+  const user = await getCurrentUser();
+  if (!user?.id) return { ok: false, reason: "unauthenticated" };
+  const owned = await db.collection.findFirst({
+    where: { id: collectionId, ownerId: user.id },
+    select: { id: true },
+  });
+  if (!owned) return { ok: false, reason: "forbidden" };
+  const key = { collectionId_spotId: { collectionId, spotId } };
+  const existing = await db.collectionItem.findUnique({ where: key });
+  if (!existing) return { ok: true }; // 이미 없음
+  await db.collectionItem.delete({ where: key });
+  await db.spot.update({
+    where: { id: spotId },
+    data: { saveCount: { decrement: 1 } },
+  });
+  return { ok: true };
+}
+
+// E · 새 컬렉션 생성(소유자=현재 유저, 기본 visibility=PRIVATE). rules §불변식
+const CreateCollectionInput = z.object({
+  title: z.string().trim().min(1).max(40),
+  description: z.string().trim().max(280).optional(),
+  visibility: z.enum(["PRIVATE", "LINK"]).optional(),
+});
+export async function createCollectionAction(
+  raw: z.input<typeof CreateCollectionInput>,
+): Promise<Fail | { ok: true; collectionId: string }> {
+  const user = await getCurrentUser();
+  if (!user?.id) return { ok: false, reason: "unauthenticated" };
+  const parsed = CreateCollectionInput.safeParse(raw);
+  if (!parsed.success) return { ok: false, reason: "invalid" };
+  const { title, description, visibility } = parsed.data;
+  const col = await db.collection.create({
+    data: {
+      ownerId: user.id,
+      title,
+      description,
+      visibility: visibility ?? "PRIVATE",
+    },
+  });
+  return { ok: true, collectionId: col.id };
 }
 
 // 핀 빠른 저장 토글 — 기본 "저장됨" 컬렉션 기준. 있으면 제거, 없으면 추가.

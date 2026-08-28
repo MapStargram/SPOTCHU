@@ -3,13 +3,32 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Camera, Lock, Share2 } from "lucide-react";
+import { createCollectionAction } from "@/lib/actions/mutations";
 
-// E4 · 새 컬렉션 생성. 저장 연동은 후속(현재 폼 UI만) — PRD §15.
+// E4 · 새 컬렉션 생성. 저장 시 서버 액션으로 소유자 컬렉션 생성(기본 PRIVATE) — PRD §15.
 export function NewCollection() {
   const router = useRouter();
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [privacy, setPrivacy] = useState<"private" | "link">("private");
+  const [saving, setSaving] = useState(false);
+
+  const submit = async () => {
+    const t = title.trim();
+    if (!t || saving) return;
+    setSaving(true);
+    const res = await createCollectionAction({
+      title: t,
+      description: desc.trim() || undefined,
+      visibility: privacy === "link" ? "LINK" : "PRIVATE",
+    });
+    setSaving(false);
+    if (!res.ok) {
+      if (res.reason === "unauthenticated") router.push("/login");
+      return;
+    }
+    router.replace(`/collections/${res.collectionId}`);
+  };
 
   return (
     <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
@@ -25,10 +44,11 @@ export function NewCollection() {
             새 컬렉션
           </div>
           <button
-            onClick={() => router.back()}
-            className="text-[12px] font-extrabold text-coral"
+            onClick={() => void submit()}
+            disabled={!title.trim() || saving}
+            className="text-[12px] font-extrabold text-coral disabled:opacity-40"
           >
-            저장
+            {saving ? "저장 중…" : "저장"}
           </button>
         </header>
 

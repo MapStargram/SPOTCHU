@@ -7,7 +7,8 @@ import { CompareSlider } from "@/components/CompareSlider";
 import { SpotActions } from "@/components/SpotActions";
 import { Mascot } from "@/components/ui/Mascot";
 import { type Verified } from "@/lib/mock";
-import { getSpot, getWork } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
+import { getSpot, getWork, getCollections } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
+import { getCurrentUser } from "@/lib/session";
 
 // DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
 export const dynamic = "force-dynamic";
@@ -50,6 +51,13 @@ export default async function SpotDetailScreen({
 
   const work = s.workId ? await getWork(s.workId) : null;
   const recTime = s.subtitle.split("·").pop()?.trim() ?? "-";
+
+  // 저장 시트용: 현재 유저의 소유 컬렉션 + 이 스팟이 이미 담긴 컬렉션 id(초기 선택).
+  const user = await getCurrentUser();
+  const ownCollections = (await getCollections()).filter((c) => c.isOwn);
+  const savedIn = ownCollections
+    .filter((c) => c.spots.includes(s.id))
+    .map((c) => c.id);
 
   return (
     <AppShell>
@@ -303,7 +311,18 @@ export default async function SpotDetailScreen({
           </div>
         </div>
 
-        <SpotActions spotTitle={s.title} spotId={s.id} />
+        <SpotActions
+          spotTitle={s.title}
+          spotId={s.id}
+          loggedIn={!!user}
+          collections={ownCollections.map((c) => ({
+            id: c.id,
+            title: c.title,
+            itemCount: c.itemCount,
+            coverGrad: c.coverGrad,
+          }))}
+          savedIn={savedIn}
+        />
       </div>
     </AppShell>
   );
