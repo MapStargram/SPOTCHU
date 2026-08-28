@@ -266,6 +266,17 @@ export default async function SpotDetailScreen({
               ))}
             </ul>
           </section>
+
+          {s.source && (
+            <a
+              href={s.source}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-1 inline-block text-[11px] text-[color:var(--muted)] underline"
+            >
+              정보 출처 ↗
+            </a>
+          )}
         </div>
 
         <SpotActions spotTitle={s.title} spotId={s.id} />

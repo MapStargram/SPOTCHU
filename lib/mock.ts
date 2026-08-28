@@ -1,6 +1,12 @@
 // 목업 데이터 — MVP 화면 프로토타입용(도쿄+서울). 실데이터 연동 전까지 사용.
 // 원천: design_handoff_spotchu_mvp_screens/screens/data.js
 
+import {
+  RESEARCH_SPOTS,
+  RESEARCH_WORKS,
+  RESEARCH_COORDS,
+} from "./spots.research";
+
 export type CityId = "tokyo" | "seoul";
 export type Verified = "official" | "user" | "reported";
 
@@ -30,6 +36,7 @@ export interface Spot {
   angle: string;
   lens: string;
   tip: string;
+  source?: string; // 출처 URL(리서치 반영 스팟의 저작권 투명성)
 }
 
 export interface Work {
@@ -70,7 +77,7 @@ export const CITIES: City[] = [
   },
 ];
 
-export const WORKS: Work[] = [
+const BASE_WORKS: Work[] = [
   {
     id: "kimi-no-na",
     title: "너의 이름은.",
@@ -102,7 +109,9 @@ export const WORKS: Work[] = [
   { id: "parasite", title: "기생충", type: "영화", spotCount: 5, progress: 2 },
 ];
 
-export const SPOTS: Spot[] = [
+export const WORKS: Work[] = [...BASE_WORKS, ...RESEARCH_WORKS];
+
+const BASE_SPOTS: Spot[] = [
   {
     id: "mojik",
     title: "모지항에서 본 후지산",
@@ -243,6 +252,8 @@ export const SPOTS: Spot[] = [
   },
 ];
 
+export const SPOTS: Spot[] = [...BASE_SPOTS, ...RESEARCH_SPOTS];
+
 export const COLLECTIONS: Collection[] = [
   {
     id: "tokyo-3d4n",
@@ -323,7 +334,7 @@ export const TIME_FILTERS = ["🌅 일출", "☀️ 낮", "🌇 일몰", "🌙 �
 export const SORT_OPTIONS = ["인기순", "거리순", "최신순"];
 
 // 스팟 좌표 (지도용, 근사치 데모값). 실데이터 연동 시 Spot.shooterLat/Lng로 대체.
-export const SPOT_COORDS: Record<string, { lat: number; lng: number }> = {
+const BASE_SPOT_COORDS: Record<string, { lat: number; lng: number }> = {
   mojik: { lat: 35.6297, lng: 139.7756 },
   "suga-shrine": { lat: 35.6863, lng: 139.7197 },
   shibuya: { lat: 35.6595, lng: 139.7005 },
@@ -332,6 +343,11 @@ export const SPOT_COORDS: Record<string, { lat: number; lng: number }> = {
   gyeongbok: { lat: 37.5796, lng: 126.977 },
   seongsu: { lat: 37.5445, lng: 127.0559 },
   "itaewon-danbam": { lat: 37.5344, lng: 126.9945 },
+};
+
+export const SPOT_COORDS: Record<string, { lat: number; lng: number }> = {
+  ...BASE_SPOT_COORDS,
+  ...RESEARCH_COORDS,
 };
 
 export const CITY_CENTER: Record<CityId, { lat: number; lng: number }> = {
