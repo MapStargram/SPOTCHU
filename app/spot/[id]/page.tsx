@@ -13,6 +13,7 @@ import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
 import { CompareSlider } from "@/components/CompareSlider";
 import { SpotActions } from "@/components/SpotActions";
+import { DirectionsButton } from "@/components/spot/DirectionsButton";
 import { Mascot } from "@/components/ui/Mascot";
 import { type Verified } from "@/lib/mock";
 import { getSpot, getWork, getCollections } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
@@ -161,6 +162,11 @@ export default async function SpotDetailScreen({
         </div>
 
         <div className="mt-4 flex flex-col gap-5 px-5">
+          {/* 길찾기 (§12 딥링크) */}
+          {s.shooterLat != null && s.shooterLng != null && (
+            <DirectionsButton lat={s.shooterLat} lng={s.shooterLng} />
+          )}
+
           {/* Related work */}
           {work && (
             <Link
