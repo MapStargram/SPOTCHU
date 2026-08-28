@@ -9,9 +9,9 @@
    ============================================================= */
 :root {
   /* Brand */
-  --coral: #ff5f6d;
-  --coral-light: #ff7a85;
-  --coral-deep: #e24352;
+  --coral: #e86b76;
+  --coral-light: #f29aa2;
+  --coral-deep: #d4525f;
   --mint: #45d6c6;
   --mint-light: #5be0d0;
   --mint-deep: #38c4b4;
@@ -68,7 +68,7 @@
   /* Shadow */
   --sh-card:
     0 1px 2px rgba(0, 0, 0, 0.05), 0 6px 18px -10px rgba(0, 0, 0, 0.12);
-  --sh-cta-coral: 0 6px 16px -8px rgba(255, 95, 109, 0.3);
+  --sh-cta-coral: 0 6px 16px -8px rgba(232, 107, 118, 0.3);
 
   /* Motion */
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
@@ -77,10 +77,10 @@
   --dur-base: 220ms;
 
   /* Gradients */
-  --grad-hero: linear-gradient(180deg, #ff7a85 0%, #ff5f6d 45%, #e24352 100%);
-  --grad-body: linear-gradient(180deg, #ff7a85 0%, #ff5f6d 55%, #e24352 100%);
+  --grad-hero: linear-gradient(180deg, #f29aa2 0%, #e86b76 45%, #d4525f 100%);
+  --grad-body: linear-gradient(180deg, #f29aa2 0%, #e86b76 55%, #d4525f 100%);
   --grad-bag: linear-gradient(180deg, #5be0d0 0%, #38c4b4 100%);
-  --grad-thumb: linear-gradient(135deg, #ff7a85 0%, #ffc857 100%);
+  --grad-thumb: linear-gradient(135deg, #f29aa2 0%, #ffc857 100%);
 }
 
 @keyframes chubob {
