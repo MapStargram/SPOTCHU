@@ -142,6 +142,12 @@ export const SPOT_IMAGES: Record<string, SpotImage> = {
     source:
       "https://commons.wikimedia.org/wiki/File:%E5%A4%9A%E6%91%A9%E5%B8%82%E3%81%AE%E8%81%96%E8%B9%9F%E6%A1%9C%E3%83%B6%E4%B8%98%E9%A7%85%E5%89%8D20170812.jpg",
   },
+  "tabata-hill": {
+    url: "/spots/tabata-hill.jpg",
+    author: "Syced",
+    license: "CC0",
+    source: "https://commons.wikimedia.org/wiki/File:Tabata_station.jpg",
+  },
 
   // ── 서울 ──
   namsan: {
@@ -237,6 +243,12 @@ export const SPOT_IMAGES: Record<string, SpotImage> = {
     license: "CC BY-SA 4.0",
     source:
       "https://commons.wikimedia.org/wiki/File:Parasite_filming_location.jpg",
+  },
+  "dwaeji-super": {
+    url: "/spots/dwaeji-super.jpg",
+    author: "Aaaatu",
+    license: "CC BY-SA 4.0",
+    source: "https://commons.wikimedia.org/wiki/File:Doijissal_Supermarket.jpg",
   },
 
   // ── 오사카 ──
