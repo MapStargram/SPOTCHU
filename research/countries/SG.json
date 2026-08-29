@@ -1,0 +1,33 @@
+{
+  "code": "SG",
+  "name": "Singapore",
+  "nativeName": "Singapore",
+  "tier": 2,
+  "languages": [
+    "en"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "photo spots",
+    "instagram spots",
+    "photography viewpoints"
+  ],
+  "cities": [
+    {
+      "id": "singapore",
+      "appImportable": true,
+      "querySeeds": [
+        "singapore photo spots",
+        "marina bay view",
+        "gardens by the bay"
+      ]
+    }
+  ]
+}

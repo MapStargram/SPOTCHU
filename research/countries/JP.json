@@ -3,16 +3,106 @@
   "name": "Japan",
   "nativeName": "日本",
   "tier": 1,
-  "languages": ["ja", "en", "ko"],
-  "categories": ["PHOTO", "ANIME", "MOVIE", "DRAMA", "VIRAL", "BACKFILL"],
+  "languages": [
+    "ja",
+    "en",
+    "ko"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
   "querySeeds": [
-    "撮影スポット", "写真スポット", "穴場", "絶景", "映えスポット",
-    "ロケ地", "撮影地", "聖地巡礼", "舞台", "モデル地", "構図", "見える場所", "ビューポイント"
+    "撮影スポット",
+    "写真スポット",
+    "穴場",
+    "絶景",
+    "映えスポット",
+    "ロケ地",
+    "撮影地",
+    "聖地巡礼",
+    "舞台",
+    "モデル地",
+    "構図",
+    "見える場所",
+    "ビューポイント"
   ],
   "cities": [
-    { "id": "tokyo", "appImportable": true, "querySeeds": ["東京 撮影スポット", "東京 聖地巡礼", "東京 ロケ地"] },
-    { "id": "osaka", "appImportable": true, "querySeeds": ["大阪 撮影スポット", "大阪 映えスポット", "大阪 ロケ地"] },
-    { "id": "kyoto", "appImportable": true, "querySeeds": ["京都 撮影スポット", "京都 穴場", "京都 構図"] },
-    { "id": "fukuoka", "appImportable": true, "querySeeds": ["福岡 撮影スポット", "福岡 絶景", "福岡 ロケ地"] }
+    {
+      "id": "tokyo",
+      "appImportable": true,
+      "querySeeds": [
+        "東京 撮影スポット",
+        "東京 聖地巡礼",
+        "東京 ロケ地"
+      ]
+    },
+    {
+      "id": "osaka",
+      "appImportable": true,
+      "querySeeds": [
+        "大阪 撮影スポット",
+        "大阪 映えスポット",
+        "大阪 ロケ地"
+      ]
+    },
+    {
+      "id": "kyoto",
+      "appImportable": true,
+      "querySeeds": [
+        "京都 撮影スポット",
+        "京都 穴場",
+        "京都 構図"
+      ]
+    },
+    {
+      "id": "fukuoka",
+      "appImportable": true,
+      "querySeeds": [
+        "福岡 撮影スポット",
+        "福岡 絶景",
+        "福岡 ロケ地"
+      ]
+    },
+    {
+      "id": "sapporo",
+      "appImportable": true,
+      "querySeeds": [
+        "札幌 撮影スポット",
+        "札幌 夜景",
+        "札幌 映えスポット"
+      ]
+    },
+    {
+      "id": "yokohama",
+      "appImportable": true,
+      "querySeeds": [
+        "横浜 撮影スポット",
+        "みなとみらい 夜景",
+        "横浜 ロケ地"
+      ]
+    },
+    {
+      "id": "okinawa",
+      "appImportable": true,
+      "querySeeds": [
+        "沖縄 絶景",
+        "沖縄 撮影スポット",
+        "沖縄 ビーチ 映え"
+      ]
+    },
+    {
+      "id": "nara",
+      "appImportable": true,
+      "querySeeds": [
+        "奈良 撮影スポット",
+        "奈良公園 鹿",
+        "奈良 寺 構図"
+      ]
+    }
   ]
 }

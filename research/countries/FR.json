@@ -1,0 +1,34 @@
+{
+  "code": "FR",
+  "name": "France",
+  "nativeName": "France",
+  "tier": 2,
+  "languages": [
+    "fr",
+    "en"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "spots photo",
+    "lieux instagram",
+    "point de vue"
+  ],
+  "cities": [
+    {
+      "id": "paris",
+      "appImportable": true,
+      "querySeeds": [
+        "paris spots photo",
+        "tour eiffel vue",
+        "montmartre view"
+      ]
+    }
+  ]
+}

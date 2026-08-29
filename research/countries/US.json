@@ -1,0 +1,33 @@
+{
+  "code": "US",
+  "name": "United States",
+  "nativeName": "United States",
+  "tier": 2,
+  "languages": [
+    "en"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "photo spots",
+    "instagram spots",
+    "viewpoints"
+  ],
+  "cities": [
+    {
+      "id": "newyork",
+      "appImportable": true,
+      "querySeeds": [
+        "new york photo spots",
+        "manhattan skyline view",
+        "brooklyn bridge dumbo"
+      ]
+    }
+  ]
+}
