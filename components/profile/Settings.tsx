@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
@@ -15,8 +15,13 @@ import {
   Lock,
   AlertTriangle,
   LogOut,
+  Camera,
 } from "lucide-react";
-import { updateNicknameAction } from "@/lib/actions/profile";
+import {
+  updateNicknameAction,
+  updateAvatarAction,
+} from "@/lib/actions/profile";
+import { uploadImageFile } from "@/lib/client-upload";
 
 // G4 · 설정. 닉네임 편집·연결 로그인은 실제 DB, 미구현 기능(다크/언어/알림)은 "준비중"으로 표기.
 const AUTH_ENABLED = process.env.NEXT_PUBLIC_AUTH_ENABLED === "true";
@@ -30,7 +35,11 @@ const PROVIDER_LABEL: Record<string, string> = {
 export function Settings({
   profile,
 }: {
-  profile: { nickname: string; providers: string[] } | null;
+  profile: {
+    nickname: string;
+    providers: string[];
+    image: string | null;
+  } | null;
 }) {
   const router = useRouter();
   const [nick, setNick] = useState(profile?.nickname ?? "");
@@ -38,12 +47,33 @@ export function Settings({
   const [draft, setDraft] = useState(nick);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [avatar, setAvatar] = useState(profile?.image ?? null);
+  const [photoBusy, setPhotoBusy] = useState(false);
+  const fileRef = useRef<HTMLInputElement>(null);
 
   const openEdit = () => {
     if (!profile) return router.push("/login");
     setDraft(nick);
     setError(null);
     setEditing(true);
+  };
+
+  // 아바타 변경: 리사이즈·EXIF 제거 업로드(client-upload) → 우리 Cloudinary URL만 서버 저장.
+  const pickPhoto = async (file: File) => {
+    setPhotoBusy(true);
+    setError(null);
+    try {
+      const url = await uploadImageFile(file);
+      const res = await updateAvatarAction(url);
+      if (res.ok) {
+        setAvatar(res.image);
+        router.refresh(); // 프로필 헤더 아바타 반영
+      } else setError(res.error);
+    } catch {
+      setError("사진 업로드에 실패했어요");
+    } finally {
+      setPhotoBusy(false);
+    }
   };
 
   const save = async () => {
@@ -175,6 +205,46 @@ export function Settings({
             <div className="text-[18px] font-extrabold tracking-[-0.02em]">
               프로필 편집
             </div>
+
+            {/* 아바타 변경 — 탭하면 사진 선택(리사이즈·EXIF 제거 후 업로드) */}
+            <div className="mt-4 flex flex-col items-center">
+              <button
+                type="button"
+                onClick={() => fileRef.current?.click()}
+                disabled={photoBusy}
+                aria-label="프로필 사진 변경"
+                className="relative flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-mint font-latin text-[28px] font-extrabold text-navy disabled:opacity-60"
+              >
+                {avatar ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={avatar}
+                    alt=""
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  (nick.trim()[0] || "S").toUpperCase()
+                )}
+                <span className="absolute inset-x-0 bottom-0 flex h-7 items-center justify-center bg-[rgba(23,35,60,0.55)] text-cream">
+                  <Camera size={14} />
+                </span>
+              </button>
+              <span className="mt-1.5 text-[11px] text-[color:var(--muted)]">
+                {photoBusy ? "업로드 중…" : "사진 변경"}
+              </span>
+              <input
+                ref={fileRef}
+                type="file"
+                accept="image/*"
+                hidden
+                onChange={(e) => {
+                  const f = e.target.files?.[0];
+                  if (f) void pickPhoto(f);
+                  e.target.value = "";
+                }}
+              />
+            </div>
+
             <label
               htmlFor="nickname"
               className="mt-4 block text-[12px] font-semibold text-[color:var(--muted)]"

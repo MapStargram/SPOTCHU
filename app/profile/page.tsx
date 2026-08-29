@@ -17,14 +17,15 @@ export default async function ProfilePage() {
     getCityProgress(),
     getBadgeCards(),
   ]);
-  const nickname = user?.id
-    ? (
-        await db.user.findUnique({
-          where: { id: user.id },
-          select: { nickname: true },
-        })
-      )?.nickname
+  // 닉네임·아바타는 DB에서 읽는다(세션 JWT는 편집 즉시 반영 안 됨 → 업로드 후 revalidate로 최신화).
+  const dbUser = user?.id
+    ? await db.user.findUnique({
+        where: { id: user.id },
+        select: { nickname: true, image: true },
+      })
     : null;
+  const nickname = dbUser?.nickname;
+  const avatarUrl = dbUser?.image ?? user?.image ?? null;
   const name = nickname || user?.name || "게스트";
   const sub = user?.email || "로그인하고 저장·인증을 시작하세요";
   const initial = (name.trim()[0] || "S").toUpperCase();
@@ -61,10 +62,10 @@ export default async function ProfilePage() {
         <div className="relative z-10 -mt-14 mx-4 rounded-[22px] bg-white p-5 shadow-[shadow:var(--sh-elevated)] lg:mx-6">
           <div className="flex items-center gap-3.5">
             <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-mint font-latin text-[24px] font-extrabold text-navy lg:h-20 lg:w-20 lg:text-[30px]">
-              {user?.image ? (
+              {avatarUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={user.image}
+                  src={avatarUrl}
                   alt={name}
                   className="h-full w-full object-cover"
                 />

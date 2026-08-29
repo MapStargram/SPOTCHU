@@ -8,13 +8,18 @@ export const dynamic = "force-dynamic";
 
 export default async function SettingsPage() {
   const sessionUser = await getCurrentUser();
-  let profile: { nickname: string; providers: string[] } | null = null;
+  let profile: {
+    nickname: string;
+    providers: string[];
+    image: string | null;
+  } | null = null;
   if (sessionUser?.id) {
     const u = await db.user.findUnique({
       where: { id: sessionUser.id },
       select: {
         nickname: true,
         name: true,
+        image: true,
         accounts: { select: { provider: true } },
       },
     });
@@ -22,6 +27,7 @@ export default async function SettingsPage() {
       profile = {
         nickname: u.nickname ?? u.name ?? "",
         providers: u.accounts.map((a) => a.provider),
+        image: u.image ?? null,
       };
   }
   return (
