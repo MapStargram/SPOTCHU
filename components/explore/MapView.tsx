@@ -1,8 +1,7 @@
 "use client";
 
-import { createElement, useEffect, useRef } from "react";
+import { createElement, useCallback, useEffect, useRef, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { APIProvider } from "@vis.gl/react-google-maps";
 import { Plus, Crosshair, MapPin } from "lucide-react";
@@ -42,17 +41,24 @@ function nearCity(p: LatLng, city: CityId): boolean {
 }
 
 function GoogleMapLayer({
-  spots,
   city,
   userPos,
+  onViewportSpots,
+  onSelectSpot,
 }: {
-  spots: Spot[];
   city: CityId;
   userPos: LatLng | null;
+  onViewportSpots: (spots: Spot[]) => void;
+  onSelectSpot: (spot: Spot) => void;
 }) {
   return (
     <APIProvider apiKey={KEY as string}>
-      <ImperativeMap spots={spots} city={city} userPos={userPos} />
+      <ImperativeMap
+        city={city}
+        userPos={userPos}
+        onViewportSpots={onViewportSpots}
+        onSelectSpot={onSelectSpot}
+      />
     </APIProvider>
   );
 }
@@ -61,40 +67,85 @@ function GoogleMapLayer({
 // 안 떴다. raw google.maps API는 정상이므로 지도·마커를 임페러티브로 생성한다. 클러스터는
 // 뺐다(도시당 수십 개 규모면 불필요, 대량화 시 후속).
 function ImperativeMap({
-  spots,
   city,
   userPos,
+  onViewportSpots,
+  onSelectSpot,
 }: {
-  spots: Spot[];
   city: CityId;
   userPos: LatLng | null;
+  onViewportSpots: (spots: Spot[]) => void;
+  onSelectSpot: (spot: Spot) => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const router = useRouter();
   const mapRef = useRef<google.maps.Map | null>(null);
+  const markerLibRef = useRef<google.maps.MarkerLibrary | null>(null);
+  const markersRef = useRef<
+    Map<string, google.maps.marker.AdvancedMarkerElement>
+  >(new Map());
   const userMarkerRef = useRef<google.maps.marker.AdvancedMarkerElement | null>(
     null,
   );
   // 지도 생성 시점에 최신 현재 위치를 반영(현재 위치로 바로 열기). deps엔 넣지 않아 재생성 방지.
   const userPosRef = useRef(userPos);
   userPosRef.current = userPos;
+  const onSpotsRef = useRef(onViewportSpots);
+  onSpotsRef.current = onViewportSpots;
+  const onSelectRef = useRef(onSelectSpot);
+  onSelectRef.current = onSelectSpot;
+
+  // 뷰포트 스팟에 맞춰 마커를 id 기준으로 diff(추가/제거). 매번 전 마커를 재생성하지 않아 깜빡임 없음.
+  // 마커 탭 = 미니 카드에 그 스팟 표시(바로 상세로 이동하지 않음, spec §미니 카드).
+  const syncMarkers = useCallback((spots: Spot[]) => {
+    const map = mapRef.current;
+    const lib = markerLibRef.current;
+    if (!map || !lib) return;
+    const next = new Set(spots.map((s) => s.id));
+    for (const [id, m] of markersRef.current) {
+      if (!next.has(id)) {
+        m.map = null;
+        markersRef.current.delete(id);
+      }
+    }
+    for (const s of spots) {
+      if (markersRef.current.has(s.id)) continue;
+      const pos = posOf(s);
+      if (!pos) continue;
+      const c = VERIF_CFG[s.verified];
+      const content = markerContent(s, c);
+      content.style.cursor = "pointer";
+      content.addEventListener("click", () => onSelectRef.current(s));
+      markersRef.current.set(
+        s.id,
+        new lib.AdvancedMarkerElement({
+          map,
+          position: pos,
+          content,
+          title: `${s.title} · ${c.label} · ${s.categoryLabel}`,
+        }),
+      );
+    }
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
-    const markers: google.maps.marker.AdvancedMarkerElement[] = [];
+    let debounce: ReturnType<typeof setTimeout> | undefined;
+    let idleListener: google.maps.MapsEventListener | null = null;
+    const markers = markersRef.current;
     void (async () => {
       // APIProvider가 스크립트를 로드할 때까지 대기(@vis.gl 훅에 의존하지 않음 = React19 견고).
       for (let i = 0; i < 100 && !window.google?.maps?.importLibrary; i++)
         await new Promise((r) => setTimeout(r, 100));
       if (cancelled || !ref.current || !window.google?.maps?.importLibrary)
         return;
-      const [{ Map }, { AdvancedMarkerElement }] = await Promise.all([
+      const [{ Map }, markerLib] = await Promise.all([
         google.maps.importLibrary("maps") as Promise<google.maps.MapsLibrary>,
         google.maps.importLibrary(
           "marker",
         ) as Promise<google.maps.MarkerLibrary>,
       ]);
       if (cancelled || !ref.current) return;
+      markerLibRef.current = markerLib;
       const near =
         userPosRef.current && nearCity(userPosRef.current, city)
           ? userPosRef.current
@@ -107,31 +158,51 @@ function ImperativeMap({
         gestureHandling: "greedy",
       });
       mapRef.current = map;
-      for (const s of spots) {
-        const pos = posOf(s);
-        if (!pos) continue;
-        const c = VERIF_CFG[s.verified];
-        const content = markerContent(s, c);
-        content.style.cursor = "pointer";
-        content.addEventListener("click", () => router.push(`/spot/${s.id}`));
-        markers.push(
-          new AdvancedMarkerElement({
-            map,
-            position: pos,
-            content,
-            title: `${s.title} · ${c.label} · ${s.categoryLabel}`,
-          }),
-        );
-      }
+
+      // 뷰포트 로드: 현재 경계 → 서버(도시 스코프 bbox) → 마커 diff + 미리보기 갱신.
+      // 도시 전체 일괄 로드 금지(rules §불변식) — 클라엔 뷰포트 내 스팟만 온다.
+      const fetchViewport = async () => {
+        const b = map.getBounds();
+        if (!b || cancelled) return;
+        const ne = b.getNorthEast();
+        const sw = b.getSouthWest();
+        const qs = new URLSearchParams({
+          city,
+          n: String(ne.lat()),
+          s: String(sw.lat()),
+          e: String(ne.lng()),
+          w: String(sw.lng()),
+        });
+        try {
+          const res = await fetch(`/api/spots/bounds?${qs}`);
+          if (!res.ok || cancelled) return;
+          const spots = (await res.json()) as Spot[];
+          if (cancelled) return;
+          syncMarkers(spots);
+          onSpotsRef.current(spots);
+        } catch {
+          /* 일시 네트워크/서버 오류 — 기존 마커 유지 */
+        }
+      };
+
+      // idle = 이동/줌이 정착할 때(초기 로드 포함) 발화 → 디바운스(400ms) 후 로드.
+      idleListener = map.addListener("idle", () => {
+        clearTimeout(debounce);
+        debounce = setTimeout(() => void fetchViewport(), 400);
+      });
     })();
     return () => {
       cancelled = true;
+      clearTimeout(debounce);
+      idleListener?.remove();
       markers.forEach((m) => (m.map = null));
+      markers.clear();
       if (userMarkerRef.current) userMarkerRef.current.map = null;
       userMarkerRef.current = null;
+      markerLibRef.current = null;
       mapRef.current = null;
     };
-  }, [spots, city, router]);
+  }, [city, syncMarkers]);
 
   // 현재 위치가 잡히면 중심 이동 + '내 위치' 마커(FAB 재요청 시에도 재중심).
   // 도시 근처일 때만(다른 도시 브라우징 중엔 내 위치로 튀지 않도록).
@@ -222,17 +293,20 @@ function FallbackLayer() {
 }
 
 export function MapView({
-  spots,
   city,
   userPos,
   onLocate,
 }: {
-  spots: Spot[];
   city: CityId;
   userPos: LatLng | null; // 현재 위치(ExploreView가 소유 — 피드 거리순과 공유)
   onLocate: () => void; // FAB '내 위치로 이동' → 재요청
 }) {
-  const preview = spots[0];
+  // 지도는 자체적으로 뷰포트 스팟을 로드(도시 전체 일괄 로드 금지, rules §불변식).
+  const [viewportSpots, setViewportSpots] = useState<Spot[]>([]);
+  // 미니 카드 = 마커 탭한 스팟(spec §미니 카드). 미탭 시 뷰포트 첫 스팟을 힌트로.
+  // 이동/줌(새 뷰포트 로드)하면 선택 해제 → 새 뷰포트 기준으로 갱신.
+  const [selectedSpot, setSelectedSpot] = useState<Spot | null>(null);
+  const preview = selectedSpot ?? viewportSpots[0];
   const loc = preview
     ? preview.subtitle.split("·").slice(0, 2).join("·").trim()
     : "";
@@ -243,7 +317,15 @@ export function MapView({
           않도록 폴백 지도로 격리 — 배포 환경에서만 키가 존재하므로 방어적으로 감싼다. */}
       {KEY ? (
         <ErrorBoundary fallback={<FallbackLayer />}>
-          <GoogleMapLayer spots={spots} city={city} userPos={userPos} />
+          <GoogleMapLayer
+            city={city}
+            userPos={userPos}
+            onViewportSpots={(spots) => {
+              setViewportSpots(spots);
+              setSelectedSpot(null); // 새 뷰포트 로드 시 마커 선택 해제
+            }}
+            onSelectSpot={setSelectedSpot}
+          />
         </ErrorBoundary>
       ) : (
         <FallbackLayer />

@@ -5,11 +5,13 @@ import * as mock from "./mock";
 import type { Spot, City, CityId, Work, Collection, Verified } from "./mock";
 import {
   getSpotsByCityFromDb,
+  getSpotsInBoundsFromDb,
   getCitiesFromDb,
   getSpotFromDb,
   getWorkWithSpotsFromDb,
   getCollectionsFromDb,
 } from "./actions/spots";
+import { inBounds, type Bounds } from "./bounds";
 import {
   searchSpotsFromDb,
   getCategoriesFromDb,
@@ -164,6 +166,20 @@ const cachedSpot = unstable_cache(
 export async function getSpotsByCity(city: CityId): Promise<Spot[]> {
   if (!USE_DB) return mock.spotsByCity(city);
   return cachedSpotsByCity(city);
+}
+
+// 지도 뷰포트 내 스팟(도시 스코프). 지도는 이걸로 뷰포트+디바운스 로드 — 도시 전체 일괄 로드 금지(rules §불변식).
+// 클라엔 뷰포트 subset만 전달된다. bounds는 자주 바뀌어 캐시 이득이 없으므로 캐시하지 않음.
+export async function getSpotsInBounds(
+  city: CityId,
+  b: Bounds,
+): Promise<Spot[]> {
+  if (!USE_DB)
+    return mock
+      .spotsByCity(city)
+      .filter((s) => inBounds(s, b))
+      .slice(0, 500);
+  return (await getSpotsInBoundsFromDb(city, b)).map(mapSpot);
 }
 
 export async function getCities(): Promise<City[]> {
