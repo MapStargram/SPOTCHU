@@ -41,9 +41,11 @@
 - **리스트/캐러셀 실사진 썸네일(반영됨)**: 그라디언트 위에 대표 사진(`imageUrl`) 표시.
 - **스팟 빼기(반영됨)**: 내 컬렉션(`isOwn` && !`isOfficial`)에서 `removeSpotAction`로 제거(서버 소유권 검증) + 낙관적 갱신.
 - **순서 편집(반영됨)**: 내 컬렉션 상세에서 "순서 편집" 모드 → 항목 위/아래 이동 → "완료" 시 `reorderCollectionAction`으로 `CollectionItem.order` 트랜잭션 반영(소유권 검증). 지도 동선·번호도 순서 반영. 드래그앤드롭 인터랙션은 후속 폴리시(모바일 터치는 라이브러리 없이 불안정 → 현재는 위/아래).
+- **공유·관리(반영됨)**: 소유자 상세에서 ⋯(리스트)·연필(지도) → 관리 바텀시트. 이름 변경(`renameCollectionAction`), 공개범위 `PRIVATE`↔`LINK` 토글(`setCollectionVisibilityAction`), `LINK`일 때 링크 복사(상세 URL), 삭제(`deleteCollectionAction`, 확인 후). 기본함 `저장됨`·`isOfficial`은 이름변경·삭제 불가를 **서버 `where` 조건으로 강제**. 삭제 시 항목 `saveCount` 정리 후 항목은 Cascade.
+- **열람 권한 강제(반영됨)**: `getCollection`이 `canViewCollection`(순수 함수, 테스트 있음)로 검사 — `PRIVATE` 비소유자·GUEST 요청은 `undefined`→`notFound`. 공식·`LINK`는 누구나. 목록(`getCollections`)은 공식+소유분만 노출.
 
 ## TODO / 미결정
-- `LINK` 공개 URL 토큰 발급·무효화 정책(`PRIVATE` 재전환 시 링크 재사용/폐기 여부).
+- `LINK` 공개 URL 토큰 발급·무효화 정책: **MVP는 컬렉션 상세 URL(=`id`) 그대로 공유**(별도 토큰 없음). `PRIVATE` 재전환 시 즉시 비열람으로 전환되나, URL은 동일하므로 재공개하면 같은 링크가 다시 유효. 추측 불가 토큰·무효화는 후속.
 - 기본함 `저장됨`의 시스템 식별 방식(전용 플래그 vs 예약 제목) — 데이터 모델 확정 대기.
 - 진행률 기준 사용자(소유자 인증만 vs 열람자 인증 반영) — 기본은 소유자 기준.
 - 컬렉션 커버 자동 지정 규칙(첫 스팟 대표 사진 사용 여부 등).

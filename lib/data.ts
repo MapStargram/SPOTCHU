@@ -12,6 +12,7 @@ import {
   getCollectionsFromDb,
 } from "./actions/spots";
 import { inBounds, type Bounds } from "./bounds";
+import { canViewCollection } from "./collections";
 import {
   searchSpotsFromDb,
   getCategoriesFromDb,
@@ -252,6 +253,8 @@ interface DbCollectionLike {
   title: string;
   description: string | null;
   isOfficial: boolean;
+  isDefault: boolean;
+  visibility: string;
   ownerId: string;
   items?: { spotId: string }[];
 }
@@ -264,6 +267,8 @@ function mapCollection(row: DbCollectionLike, userId?: string): Collection {
     coverGrad: gradFor(row.id),
     isOwn: userId ? row.ownerId === userId : false,
     isOfficial: row.isOfficial,
+    visibility: row.visibility === "LINK" ? "LINK" : "PRIVATE",
+    isDefault: row.isDefault,
     spots: row.items?.map((i) => i.spotId) ?? [],
   };
 }
@@ -285,7 +290,10 @@ export async function getCollection(
   const user = await getCurrentUser();
   const rows = await getCollectionsFromDb();
   const row = rows.find((r) => r.id === id);
-  return row ? mapCollection(row, user?.id) : undefined;
+  if (!row) return undefined;
+  // 열람 권한(rules §데이터·권한): PRIVATE 비소유자 → notFound.
+  if (!canViewCollection(row, user?.id)) return undefined;
+  return mapCollection(row, user?.id);
 }
 
 // ── 검색(Search) ──
