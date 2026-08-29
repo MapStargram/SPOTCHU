@@ -86,8 +86,10 @@ export async function runDoctor(cfg: OrchestratorConfig): Promise<void> {
   console.log(`   ${mark(sup.print)} headless -p / --print`);
   console.log(`   ${mark(sup.outputFormat)} --output-format json`);
   console.log(`   ${mark(sup.jsonSchema)} --json-schema`);
-  console.log(`   ${mark(sup.agent)} --agent`);
-  const agyCli: Gate = agyHelp.ok && sup.print && sup.outputFormat && sup.jsonSchema && sup.agent ? "PASS" : "FAIL";
+  console.log(`   ${sup.agent ? "✓" : "·"} --agent (informational — not used by the pipeline)`);
+  // Required capabilities are only what the pipeline actually uses (-p / --output-format / --json-schema).
+  // --agent is NOT required, so a future agy version dropping it won't fail readiness.
+  const agyCli: Gate = agyHelp.ok && sup.print && sup.outputFormat && sup.jsonSchema ? "PASS" : "FAIL";
 
   // Antigravity auth: agy has no offline status command and stores no readable token file
   // (creds live in the OS keychain), so it cannot be verified without an agent call — which
@@ -177,7 +179,7 @@ export async function runDoctor(cfg: OrchestratorConfig): Promise<void> {
     if (schemasOk) {
       JSON.parse(readFileSync(join(P.schemas, "batch-verdict.schema.json"), "utf8"));
       JSON.parse(readFileSync(join(P.schemas, "discover.schema.json"), "utf8"));
-      DiscoverResult.parse({ schemaVersion: 1, inboxDir: "x" });
+      DiscoverResult.parse({ schemaVersion: 1, candidates: [] });
       CandidateVerdict.parse({ leadId: "x", status: "READY_FOR_REVIEW" });
       BatchVerdict.parse({ schemaVersion: 1, verdicts: [] });
     }
