@@ -212,7 +212,7 @@ export function SpotActions({
                 ) : (
                   <button
                     onClick={() => setCreating(true)}
-                    className="mt-4 flex w-full items-center gap-3 rounded-[14px] bg-coral px-3.5 py-3 text-left text-cream shadow-[var(--sh-cta-coral)] active:scale-[0.99]"
+                    className="mt-4 flex w-full items-center gap-3 rounded-[14px] bg-coral px-3.5 py-3 text-left text-cream shadow-[shadow:var(--sh-cta-coral)] active:scale-[0.99]"
                   >
                     <span className="flex h-9 w-9 items-center justify-center rounded-[10px] bg-[rgba(255,249,242,0.2)]">
                       <Plus size={18} />

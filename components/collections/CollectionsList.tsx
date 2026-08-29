@@ -32,7 +32,7 @@ export function CollectionsList({
         <Link
           href="/collections/new"
           aria-label="새 컬렉션"
-          className="flex h-10 w-10 items-center justify-center rounded-full bg-coral text-cream shadow-[var(--sh-cta-coral)]"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-coral text-cream shadow-[shadow:var(--sh-cta-coral)]"
         >
           <Plus size={22} strokeWidth={2.4} />
         </Link>
@@ -44,7 +44,7 @@ export function CollectionsList({
           <button
             key={t}
             onClick={() => setTab(t)}
-            className={`flex-1 rounded-full py-2 ${tab === t ? "bg-white text-navy shadow-[var(--sh-card)]" : "text-[color:var(--muted)]"}`}
+            className={`flex-1 rounded-full py-2 ${tab === t ? "bg-white text-navy shadow-[shadow:var(--sh-card)]" : "text-[color:var(--muted)]"}`}
           >
             {t === "own" ? "내 컬렉션" : "큐레이션"}
           </button>
@@ -62,7 +62,7 @@ export function CollectionsList({
               action={
                 <Link
                   href="/collections/new"
-                  className="flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-coral font-ko text-[14px] font-bold tracking-[-0.01em] text-cream shadow-[var(--sh-cta-coral)] transition duration-150 active:scale-[0.98] active:bg-coral-deep"
+                  className="flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-coral font-ko text-[14px] font-bold tracking-[-0.01em] text-cream shadow-[shadow:var(--sh-cta-coral)] transition duration-150 active:scale-[0.98] active:bg-coral-deep"
                 >
                   <Plus size={18} strokeWidth={2.4} /> 새 컬렉션 만들기
                 </Link>
@@ -83,14 +83,14 @@ export function CollectionsList({
             <Link
               key={col.id}
               href={`/collections/${col.id}`}
-              className="overflow-hidden rounded-2xl bg-white shadow-[var(--sh-card)]"
+              className="overflow-hidden rounded-2xl bg-white shadow-[shadow:var(--sh-card)]"
             >
               <div
                 className="relative h-[120px] lg:h-[150px]"
                 style={{ background: col.coverGrad }}
               >
                 {tab === "own" ? (
-                  <span className="absolute -bottom-3.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-white shadow-[var(--sh-card)]">
+                  <span className="absolute -bottom-3.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-white shadow-[shadow:var(--sh-card)]">
                     <Lock size={14} className="text-[color:var(--muted)]" />
                   </span>
                 ) : (

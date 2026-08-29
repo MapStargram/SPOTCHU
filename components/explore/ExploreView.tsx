@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   Search,
   SlidersHorizontal,
@@ -10,6 +11,7 @@ import {
   Home,
 } from "lucide-react";
 import { Chip } from "../ui/Chip";
+import { Select } from "../ui/Select";
 import { MapView } from "./MapView";
 import { FeedView } from "./FeedView";
 import { FilterSheet } from "./FilterSheet";
@@ -51,7 +53,16 @@ const FEED_CHIPS = [
 ];
 
 // C1~C4 탐색 콘텐츠(AppShell 내부). 모바일=앱 컬럼 폭, 데스크톱=사이드바 옆 와이드.
-export function ExploreView({ spots, city }: { spots: Spot[]; city: CityId }) {
+export function ExploreView({
+  spots,
+  city,
+  cities,
+}: {
+  spots: Spot[];
+  city: CityId;
+  cities: { id: string; name: string }[];
+}) {
+  const router = useRouter();
   const [view, setView] = useState<"map" | "feed">("map"); // 기본=지도(현재 위치 우선 진입)
   const [chip, setChip] = useState(0);
   const [filterOpen, setFilterOpen] = useState(false);
@@ -100,31 +111,41 @@ export function ExploreView({ spots, city }: { spots: Spot[]; city: CityId }) {
       {/* Header controls — 홈과 동일한 max-w 컨테이너로 정렬(피드 본문과 좌우 폭 일치) */}
       <header className="sticky top-0 z-20 border-b border-[color:var(--line)] bg-[rgba(255,249,242,0.9)] pb-3 pt-14 backdrop-blur lg:pt-6">
         <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-3 px-4 lg:px-8">
-          <div className="flex w-full items-center gap-2.5 rounded-[20px] bg-white px-4 py-3.5 shadow-[var(--sh-search)]">
-            <Search size={18} className="text-navy" />
-            <Link
-              href="/search"
-              className="flex-1 font-ko text-[13px] text-[color:var(--muted)]"
-            >
-              어디에서 찍고 싶어요?
-            </Link>
-            <button
-              onClick={() => setFilterOpen(true)}
-              aria-label="필터"
-              className="text-navy"
-            >
-              <SlidersHorizontal size={20} />
-            </button>
+          <div className="flex w-full items-center gap-2">
+            {/* 도시 전환 — 홈탭처럼 탐색에서도 선택 도시를 바꾼다(→ /explore/[city]) */}
+            <Select<string>
+              value={city}
+              onChange={(id) => router.push(`/explore/${id}`)}
+              options={cities.map((c) => ({ value: c.id, label: c.name }))}
+              ariaLabel="도시 변경"
+              align="left"
+            />
+            <div className="flex flex-1 items-center gap-2.5 rounded-[20px] bg-white px-4 py-3.5 shadow-[shadow:var(--sh-search)]">
+              <Search size={18} className="text-navy" />
+              <Link
+                href="/search"
+                className="flex-1 font-ko text-[13px] text-[color:var(--muted)]"
+              >
+                어디에서 찍고 싶어요?
+              </Link>
+              <button
+                onClick={() => setFilterOpen(true)}
+                aria-label="필터"
+                className="text-navy"
+              >
+                <SlidersHorizontal size={20} />
+              </button>
+            </div>
           </div>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="inline-flex gap-0.5 rounded-full bg-white p-1 shadow-[var(--sh-card)]">
+              <div className="inline-flex gap-0.5 rounded-full bg-white p-1 shadow-[shadow:var(--sh-card)]">
                 {seg("map", MapIcon, "지도")}
                 {seg("feed", LayoutGrid, "피드")}
               </div>
               <Link
                 href={`/home/${city}`}
-                className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-4 py-2 font-ko text-[13px] font-bold text-navy shadow-[var(--sh-card)]"
+                className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-4 py-2 font-ko text-[13px] font-bold text-navy shadow-[shadow:var(--sh-card)]"
               >
                 <Home size={16} /> 홈 그리드
               </Link>
@@ -160,12 +181,7 @@ export function ExploreView({ spots, city }: { spots: Spot[]; city: CityId }) {
       {/* Body */}
       {view === "map" ? (
         <div className="relative flex-1">
-          <MapView
-            spots={spots}
-            city={city}
-            userPos={userPos}
-            onLocate={locate}
-          />
+          <MapView city={city} userPos={userPos} onLocate={locate} />
         </div>
       ) : (
         <div className="mx-auto w-full max-w-[1180px] flex-1 px-4 pb-28 pt-4 lg:px-8 lg:pb-12">

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { AppShell } from "@/components/shell/AppShell";
 import { FeedView } from "@/components/explore/FeedView";
 import { SearchControls } from "@/components/explore/SearchControls";
-import { getCategories, getWorks, searchSpots } from "@/lib/data";
+import { getCategories, getCities, getWorks, searchSpots } from "@/lib/data";
 import { TRENDING } from "@/lib/mock";
 
 // C3 · 검색. 검색은 서버에서 수행(DB/목업은 lib/data façade가 전환).
@@ -39,12 +39,21 @@ export default async function SearchScreen({
     params.verified,
   );
 
-  const [categories, works] = await Promise.all([getCategories(), getWorks()]);
+  const [categories, works, cities] = await Promise.all([
+    getCategories(),
+    getWorks(),
+    getCities(),
+  ]);
+  const cityOpts = cities.map((c) => ({ id: c.id, label: c.name }));
 
   return (
     <AppShell active="explore">
       <div className="mx-auto flex w-full max-w-[520px] flex-col px-5 pb-28 pt-14 lg:max-w-[680px] lg:pb-12 lg:pt-8">
-        <SearchControls categories={categories} works={works} />
+        <SearchControls
+          categories={categories}
+          works={works}
+          cities={cityOpts}
+        />
 
         <div className="mt-6">
           {active ? (

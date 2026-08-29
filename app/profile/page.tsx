@@ -58,7 +58,7 @@ export default async function ProfilePage() {
         </div>
 
         {/* Profile card */}
-        <div className="relative z-10 -mt-14 mx-4 rounded-[22px] bg-white p-5 shadow-[var(--sh-elevated)] lg:mx-6">
+        <div className="relative z-10 -mt-14 mx-4 rounded-[22px] bg-white p-5 shadow-[shadow:var(--sh-elevated)] lg:mx-6">
           <div className="flex items-center gap-3.5">
             <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-mint font-latin text-[24px] font-extrabold text-navy lg:h-20 lg:w-20 lg:text-[30px]">
               {user?.image ? (
@@ -125,6 +125,32 @@ export default async function ProfilePage() {
           </div>
         </div>
 
+        {/* 게스트/무활동 시 하단이 비지 않도록 시작 유도 카드 */}
+        {cityProgress.length === 0 && badges.length === 0 && (
+          <div className="mt-6 px-4 lg:mt-8 lg:px-6">
+            <div className="flex flex-col items-center gap-3 rounded-[20px] border border-dashed border-[color:var(--line-strong)] bg-[color:var(--cream-2)] px-6 py-10 text-center">
+              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-coral shadow-[shadow:var(--sh-card)]">
+                {user ? (
+                  <Sparkles size={22} aria-hidden />
+                ) : (
+                  <LogIn size={22} aria-hidden />
+                )}
+              </span>
+              <p className="text-[13px] leading-[1.6] text-navy">
+                {user
+                  ? "아직 방문·배지가 없어요. 스팟을 저장하고 현장에서 인증하면 여기에 쌓여요."
+                  : "로그인하면 저장·방문 인증·배지가 내 프로필에 쌓여요."}
+              </p>
+              <Link
+                href={user ? "/explore" : "/login"}
+                className="rounded-full bg-coral px-5 py-2.5 text-[13px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
+              >
+                {user ? "스팟 둘러보기 →" : "로그인하고 시작하기"}
+              </Link>
+            </div>
+          </div>
+        )}
+
         <div className="mt-6 flex flex-col gap-6 px-5 lg:mt-8 lg:grid lg:grid-cols-2 lg:gap-8 lg:px-6">
           {/* City progress */}
           {cityProgress.length > 0 && (
@@ -136,7 +162,7 @@ export default async function ProfilePage() {
                 {cityProgress.map((cp) => (
                   <div
                     key={cp.id}
-                    className="rounded-[14px] bg-white px-3.5 py-3 shadow-[var(--sh-card)]"
+                    className="rounded-[14px] bg-white px-3.5 py-3 shadow-[shadow:var(--sh-card)]"
                   >
                     <div className="mb-2 flex justify-between text-[13px]">
                       <span className="font-bold">{cp.name}</span>

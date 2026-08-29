@@ -52,7 +52,8 @@ export default async function SpotDetailScreen({
   const posts = await getSpotPosts(s.id);
 
   return (
-    <AppShell>
+    // noTabBar: 하단 체크인 CTA(SpotActions)가 탭바와 겹치지 않도록 상세는 탭바를 숨긴다(뒤로 버튼으로 이동).
+    <AppShell noTabBar>
       <div className="relative mx-auto flex w-full max-w-[500px] flex-col bg-cream pb-28 lg:max-w-[720px]">
         {/* Hero (D1) */}
         <div
@@ -124,7 +125,7 @@ export default async function SpotDetailScreen({
         </div>
 
         {/* Stats card */}
-        <div className="relative z-10 -mt-8 mx-4 grid grid-cols-3 rounded-2xl bg-white px-4 py-3.5 text-center shadow-[var(--sh-elevated)]">
+        <div className="relative z-10 -mt-8 mx-4 grid grid-cols-3 rounded-2xl bg-white px-4 py-3.5 text-center shadow-[shadow:var(--sh-elevated)]">
           {[
             { v: s.visits > 0 ? s.rating.toString() : "신규", l: "RATING" },
             { v: s.visits.toLocaleString(), l: "VISITS" },
@@ -222,7 +223,7 @@ export default async function SpotDetailScreen({
           </div>
 
           {/* Meta */}
-          <div className="rounded-2xl bg-white px-4 py-3.5 shadow-[var(--sh-card)]">
+          <div className="rounded-2xl bg-white px-4 py-3.5 shadow-[shadow:var(--sh-card)]">
             <div className="mb-2.5 font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
               Meta
             </div>
@@ -274,7 +275,7 @@ export default async function SpotDetailScreen({
                 {posts.map((p) => (
                   <li
                     key={p.id}
-                    className="overflow-hidden rounded-[14px] bg-white shadow-[var(--sh-card)]"
+                    className="overflow-hidden rounded-[14px] bg-white shadow-[shadow:var(--sh-card)]"
                   >
                     {p.images[0] && (
                       // eslint-disable-next-line @next/next/no-img-element

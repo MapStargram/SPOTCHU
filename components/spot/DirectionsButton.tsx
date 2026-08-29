@@ -16,7 +16,7 @@ export function DirectionsButton({ lat, lng }: { lat: number; lng: number }) {
   return (
     <button
       onClick={open}
-      className="flex w-full items-center justify-center gap-2 rounded-2xl border border-[color:var(--line)] bg-white py-3.5 text-[14px] font-bold tracking-[-0.01em] text-navy shadow-[var(--sh-card)] active:scale-[0.98]"
+      className="flex w-full items-center justify-center gap-2 rounded-2xl border border-[color:var(--line)] bg-white py-3.5 text-[14px] font-bold tracking-[-0.01em] text-navy shadow-[shadow:var(--sh-card)] active:scale-[0.98]"
     >
       <Navigation size={18} className="text-[color:var(--mint-deep)]" />
       길찾기 (구글 지도)

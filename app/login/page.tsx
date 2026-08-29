@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import type { FormEvent } from "react";
 import Link from "next/link";
+import { Mail } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { getProviders, signIn } from "next-auth/react";
 import { MobileScreen } from "@/components/ui/MobileScreen";
@@ -74,6 +75,7 @@ export default function LoginScreen() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [showEmail, setShowEmail] = useState(false); // 소셜 우선 — 이메일 폼은 접어 화면 길이 축소
 
   const onProvider = (id: string) => {
     if (AUTH_ENABLED) void signIn(id, { callbackUrl: "/city" });
@@ -123,7 +125,7 @@ export default function LoginScreen() {
           <button
             key={p.id}
             onClick={() => onProvider(p.id)}
-            className="flex items-center justify-center gap-2.5 rounded-2xl px-5 py-3.5 text-[14px] font-bold tracking-[-0.01em] shadow-[var(--sh-card)] transition active:scale-[0.98]"
+            className="flex items-center justify-center gap-2.5 rounded-2xl px-5 py-3.5 text-[14px] font-bold tracking-[-0.01em] shadow-[shadow:var(--sh-card)] transition active:scale-[0.98]"
             style={{
               background: p.bg,
               color: p.color,
@@ -141,55 +143,66 @@ export default function LoginScreen() {
           <span className="h-px flex-1 bg-[color:var(--line)]" aria-hidden />
         </div>
 
-        <form
-          onSubmit={onEmailLogin}
-          className="flex flex-col gap-2.5"
-          noValidate
-        >
-          {error && <Notice variant="error">{error}</Notice>}
-          <Field
-            id="login-email"
-            label="이메일"
-            type="email"
-            autoComplete="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="you@example.com"
-          />
-          <Field
-            id="login-password"
-            label="비밀번호"
-            type="password"
-            autoComplete="current-password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="비밀번호"
-          />
-          <CoralButton
-            type="submit"
-            disabled={loading}
-            className="mt-1 disabled:opacity-60 disabled:active:scale-100"
+        {!showEmail ? (
+          <button
+            onClick={() => setShowEmail(true)}
+            className="flex items-center justify-center gap-2.5 rounded-2xl border border-[color:var(--line)] bg-white px-5 py-3.5 text-[14px] font-bold tracking-[-0.01em] text-navy shadow-[shadow:var(--sh-card)] transition active:scale-[0.98]"
           >
-            {loading ? "로그인 중…" : "로그인"}
-          </CoralButton>
-        </form>
+            <Mail size={17} /> 이메일로 로그인
+          </button>
+        ) : (
+          <>
+            <form
+              onSubmit={onEmailLogin}
+              className="flex flex-col gap-2.5"
+              noValidate
+            >
+              {error && <Notice variant="error">{error}</Notice>}
+              <Field
+                id="login-email"
+                label="이메일"
+                type="email"
+                autoComplete="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="you@example.com"
+              />
+              <Field
+                id="login-password"
+                label="비밀번호"
+                type="password"
+                autoComplete="current-password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="비밀번호"
+              />
+              <CoralButton
+                type="submit"
+                disabled={loading}
+                className="mt-1 disabled:opacity-60 disabled:active:scale-100"
+              >
+                {loading ? "로그인 중…" : "로그인"}
+              </CoralButton>
+            </form>
 
-        <div className="flex items-center justify-between text-[12px] font-semibold text-navy">
-          <Link
-            href="/reset-password"
-            className="underline underline-offset-2 active:scale-[0.98]"
-          >
-            비밀번호 찾기
-          </Link>
-          <Link
-            href="/signup"
-            className="underline underline-offset-2 active:scale-[0.98]"
-          >
-            이메일로 가입
-          </Link>
-        </div>
+            <div className="flex items-center justify-between text-[12px] font-semibold text-navy">
+              <Link
+                href="/reset-password"
+                className="underline underline-offset-2 active:scale-[0.98]"
+              >
+                비밀번호 찾기
+              </Link>
+              <Link
+                href="/signup"
+                className="underline underline-offset-2 active:scale-[0.98]"
+              >
+                이메일로 가입
+              </Link>
+            </div>
+          </>
+        )}
 
         <p className="mt-2 text-center text-[11px] leading-[1.6] text-[color:var(--muted)]">
           계속하면 <span className="font-semibold text-navy">이용약관</span> ·{" "}

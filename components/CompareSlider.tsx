@@ -55,7 +55,7 @@ export function CompareSlider({
       onPointerMove={onMove}
       onPointerUp={onUp}
       onPointerCancel={onUp}
-      className="relative h-[380px] cursor-ew-resize touch-none select-none overflow-hidden rounded-[20px] shadow-[var(--sh-elevated)]"
+      className="relative h-[380px] cursor-ew-resize touch-none select-none overflow-hidden rounded-[20px] shadow-[shadow:var(--sh-elevated)]"
     >
       {/* 아래 = 내 사진 */}
       <div className="absolute inset-0" style={{ background: userGrad }}>

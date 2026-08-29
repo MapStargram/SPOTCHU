@@ -402,7 +402,7 @@ const ReportSpotInput = z.object({
   // 선택
   subjectLat: z.number().finite().gte(-90).lte(90).optional(),
   subjectLng: z.number().finite().gte(-180).lte(180).optional(),
-  coverImageUrl: z.string().trim().url().optional(),
+  coverImageUrl: z.string().trim().url(), // 대표 사진 필수(spec §데이터·권한, EXIF 제거 후 URL)
 });
 
 export async function createSpotReportAction(

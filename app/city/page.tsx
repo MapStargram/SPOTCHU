@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
 import { MobileScreen } from "@/components/ui/MobileScreen";
 import { CityGlobe } from "@/components/city/CityGlobe";
 import { getCitySpotCounts } from "@/lib/data";
@@ -11,6 +13,13 @@ export default async function CityPickerScreen() {
   return (
     <MobileScreen className="gap-5 py-16">
       <header className="text-navy">
+        <Link
+          href="/home"
+          aria-label="뒤로"
+          className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[shadow:var(--sh-card)]"
+        >
+          <ChevronLeft size={20} />
+        </Link>
         <div className="font-latin text-[11px] font-semibold uppercase tracking-[0.16em] text-coral">
           WHERE TO
         </div>

@@ -79,4 +79,5 @@
 - **브랜드 지도**: `@vis.gl/react-google-maps` + AdvancedMarker + Cloud **Map ID**(`NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID`, 미설정 시 데모). **브랜드 스타일·기본 POI 숨김(최소 컨텍스트 유지)은 Google Cloud Console의 Map ID 스타일에서 설정**(계정 액션) — 코드는 env만 읽는다.
 - **마커 썸네일**: 마커 = 대표 사진 원형 썸네일 + 검증상태 링색 + 카테고리 이모지 배지(색+아이콘/라벨 병기). 이미지 없으면 이모지 폴백. `loading="lazy"` + 클러스터로 비용 관리.
 - **길찾기**: 스팟 상세에서 Google Maps 딥링크(`/maps/dir/?api=1&destination=<shooterLat,Lng>&travelmode=walking`). 인앱 라우팅 미구현, origin 생략(현재 위치 자동), 무단 위치 프롬프트 없음.
-- **후속(미반영)**: 뷰포트 서버 로드·디바운스(임계 TODO), 인앱 직선거리 표시(위치 프롬프트 UX 검토 필요).
+- **뷰포트 서버 로드·디바운스**(반영됨): 지도가 자체적으로 뷰포트 내 스팟만 로드한다 — `idle`(이동/줌 정착) → 디바운스 400ms → `GET /api/spots/bounds`(도시 스코프 bbox, 상한 500) → 마커 id-diff. 도시 전체 일괄 로드 폐지(rules §불변식). 데이터 계층: `lib/bounds.ts`(순수 bbox), `lib/data.getSpotsInBounds`(목업 필터 ↔ DB Float 범위 쿼리). 결정값: [`./rules.md`](./rules.md) §결정됨.
+- **후속(미반영)**: 클러스터(상한 초과·밀집), bbox 공간 인덱스, 인앱 직선거리 표시(위치 프롬프트 UX 검토 필요), 피드 리스트 페이지네이션.

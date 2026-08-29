@@ -20,7 +20,7 @@ export function EmptyState({
     <div
       className={`mx-auto flex max-w-[360px] flex-col items-center rounded-3xl border border-dashed border-[color:var(--line-strong)] bg-[color:var(--cream-2)] px-6 py-11 text-center ${className}`}
     >
-      <div className="flex h-[104px] w-[104px] items-center justify-center rounded-full bg-white shadow-[var(--sh-card)]">
+      <div className="flex h-[104px] w-[104px] items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)]">
         <Mascot name={mascot} alt="" bob className="w-[68px]" />
       </div>
       <h2 className="mt-4 font-ko text-[15px] font-extrabold tracking-[-0.01em] text-navy">

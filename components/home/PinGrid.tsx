@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Map as MapIcon, Bookmark } from "lucide-react";
+import { Map as MapIcon, Bookmark, ArrowUp } from "lucide-react";
 import { Sparkle } from "@/components/ui/Sparkle";
 import { Select } from "@/components/ui/Select";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
@@ -48,6 +48,37 @@ export function PinGrid({
           sort === "rating" ? b.rating - a.rating : b.visits - a.visits,
         );
 
+  // 무한스크롤: 화면당 10개씩. 필터/정렬 바뀌면 처음부터.
+  const PAGE = 10;
+  const [visible, setVisible] = useState(PAGE);
+  useEffect(() => setVisible(PAGE), [cat, sort]);
+  const shownSlice = shown.slice(0, visible);
+
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (visible >= shown.length) return;
+    const el = sentinelRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting)
+          setVisible((v) => Math.min(v + PAGE, shown.length));
+      },
+      { rootMargin: "800px" }, // 바닥 닿기 전 미리 로드
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [visible, shown.length]);
+
+  // 맨 위로 버튼: 좀 내려가면 노출.
+  const [showTop, setShowTop] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 600);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
     <div className="mt-3">
       {/* 카테고리 칩 + 지도로 보기 */}
@@ -67,7 +98,7 @@ export function PinGrid({
         ))}
         <Link
           href={`/explore/${city}`}
-          className="ml-auto flex shrink-0 items-center gap-1.5 rounded-full bg-coral px-4 py-2 text-[13px] font-bold text-cream shadow-[var(--sh-cta-coral)]"
+          className="ml-auto flex shrink-0 items-center gap-1.5 rounded-full bg-coral px-4 py-2 text-[13px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
         >
           <MapIcon size={15} /> 지도로 보기
         </Link>
@@ -90,12 +121,12 @@ export function PinGrid({
 
       {/* 메이슨리 그리드 */}
       <div className="columns-2 gap-3 lg:columns-3 xl:columns-4">
-        {shown.map((s) => {
+        {shownSlice.map((s) => {
           const saved = isSaved(s.id);
           return (
             <div
               key={s.id}
-              className="relative mb-3 break-inside-avoid overflow-hidden rounded-2xl shadow-[var(--sh-card)]"
+              className="relative mb-3 break-inside-avoid overflow-hidden rounded-2xl shadow-[shadow:var(--sh-card)]"
             >
               <Link
                 href={`/spot/${s.id}`}
@@ -123,7 +154,7 @@ export function PinGrid({
                     </span>
                   )}
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent p-3 pt-9">
-                    <div className="text-[14px] font-bold leading-tight text-white">
+                    <div className="line-clamp-2 text-[14px] font-bold leading-tight text-white">
                       {s.title}
                     </div>
                     <div className="mt-0.5 line-clamp-1 text-[11px] text-white/85">
@@ -148,6 +179,22 @@ export function PinGrid({
           );
         })}
       </div>
+
+      {/* 무한스크롤 센티넬 */}
+      {visible < shown.length && (
+        <div ref={sentinelRef} className="h-10" aria-hidden />
+      )}
+
+      {/* 맨 위로 */}
+      {showTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="맨 위로"
+          className="fixed bottom-24 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-navy text-cream shadow-[shadow:var(--sh-elevated)] transition active:scale-90 lg:bottom-8 lg:right-8"
+        >
+          <ArrowUp size={22} />
+        </button>
+      )}
     </div>
   );
 }
