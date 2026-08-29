@@ -414,6 +414,14 @@ export async function createSpotReportAction(
   if (!parsed.success) return { ok: false, reason: "invalid" };
   const d = parsed.data;
 
+  // 대표 사진은 우리 Cloudinary 업로드분만 허용 — 외부 URL 주입 차단(신뢰경계 §5,
+  // 작품 스틸 호스팅·EXIF 우회 방지 §24). createPostAction과 동일 가드.
+  if (
+    CLOUD &&
+    !d.coverImageUrl.startsWith(`https://res.cloudinary.com/${CLOUD}/`)
+  )
+    return { ok: false, reason: "invalid_image_url" };
+
   // 고위험(철도 선로 등) 등록 차단 — 클라이언트 우회 방지(서버 강제)
   if (isBlockedHighRisk(d.safetyTags))
     return { ok: false, reason: "high_risk" };
