@@ -1,0 +1,131 @@
+{
+  "researchRun": {
+    "runDate": "2026-08-29",
+    "country": "Japan",
+    "countryCode": "JP",
+    "city": "tokyo",
+    "researchMode": "VERIFICATION"
+  },
+  "candidate": {
+    "titleKo": "쥬켄바시 사카사 스카이트리",
+    "titleLocal": "十間橋 逆さスカイツリー",
+    "category": "PHOTO_VIEWPOINT",
+    "descriptionKo": "도쿄 스카이트리와 키타짓켄천(北十間川) 수면에 대칭으로 반사되는 '사카사(거꾸로) 스카이트리'를 한 프레임에 담을 수 있는 도쿄의 대표적인 랜드마크 반영 포토스팟입니다. 스카이트리로부터 약 700m 동남동쪽에 위치한 쥬켄바시(十間橋, 교장 19.6m, 폭 15.0m)의 서측 보도(西側歩道) 난간 중앙부에서 서북서 방향(283°) 키타짓켄천 수로를 향해 초광각 렌즈를 사용하여 세로 구도로 촬영합니다.",
+    "country": "Japan",
+    "city": "tokyo",
+    "district": "Sumida-ku",
+    "targetName": "東京スカイツリー (Tokyo Skytree)",
+    "shooterLat": 35.708316,
+    "shooterLng": 139.818042,
+    "targetLat": 35.710056,
+    "targetLng": 139.8107,
+    "bearing": 283,
+    "geoStatus": "CONFIRMED",
+    "accessInfo": "도쿄메트로 한조몬선/도에이 아사쿠사선 오시아게(스카이트리마에)역 B3 출구에서 도보 약 8~10분 (키타짓켄천을 따라 동쪽으로 직진). 쥬켄바시(十間橋) 서측 보도(스카이트리를 마주보는 방면) 난간 중앙에 위치.",
+    "shootingTips": "타워 본체(높이 634m)와 키타짓켄천 수면 반영을 한 프레임에 모두 담기 위해 35mm 풀프레임 환산 14~18mm 수준의 초광각 렌즈와 세로(Portrait) 구도가 필수적입니다. 다리 서측 보도 난간 중앙에 서서 수로의 중심선과 스카이트리를 일직선으로 맞추어 촬영합니다. 바람이 적은 잔잔한 날(풍속 2m/s 이하) 일몰 골든아워 또는 일몰 후 야간 라이트업 점등 시간대(18:00~22:00)에 방문하면 수면이 거울처럼 잔잔하여 가장 선명한 대칭 반영을 담을 수 있습니다.",
+    "recommendedTime": "일몰 전후(매직아워/블루아워) 및 야간 조명 점등 시간 (18:00~22:00)",
+    "recommendedSeason": "가을, 겨울 (대기가 맑고 시정이 좋은 계절)",
+    "lensHint": "Ultra-wide 14-18mm (세로 구도 필수)",
+    "riskLevel": "LOW",
+    "warnings": [
+      "쥬켄바시 서측 보도는 공공 보행로이므로 삼각대 설치 시 통행인 및 자전거의 통행 흐름을 방해하지 않도록 주의",
+      "다리 난간 너머로 카메라나 스마트폰이 강물로 추락하지 않도록 핸드/넥 스트랩 착용 필수",
+      "차도 진입 절대 금지 (보도 난간 안쪽의 합법적 보행 공간에서만 촬영할 것)"
+    ]
+  },
+  "work": {
+    "workTitleOriginal": null,
+    "workTitleKo": null,
+    "workType": null,
+    "episode": null,
+    "sceneDescription": null,
+    "matchType": null
+  },
+  "evidence": [
+    {
+      "platform": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC.jpg",
+      "canonicalUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC.jpg",
+      "author": "くろふね (User:Jranar)",
+      "publishedAt": "2017-09-03",
+      "language": "ja",
+      "evidenceSummary": "十間橋からの東京スカイツリーの撮影写真。北十間川の水面とスカイツリーの完全な上下対称構図が記録されている。",
+      "proves": [
+        "photographer_position",
+        "visual_composition",
+        "landmark_reflection"
+      ]
+    },
+    {
+      "platform": "Nightview Guide (Yakei.jp)",
+      "sourceUrl": "https://yakei.jp/japan/spot.php?i=jukken",
+      "canonicalUrl": "https://yakei.jp/japan/spot.php?i=jukken",
+      "author": "yakei.jp",
+      "publishedAt": null,
+      "language": "ja",
+      "evidenceSummary": "十間橋（墨田区業平5丁目）の夜景観賞・撮影ガイド。川面に映る逆さスカイツリーの撮影スポットとしての詳細情報と撮影方角を掲載。",
+      "proves": [
+        "exact_bridge_location",
+        "night_shooting_conditions"
+      ]
+    },
+    {
+      "platform": "Nightview Guide (Nightview.info)",
+      "sourceUrl": "https://www.nightview.info/detail/jukkenbashi/",
+      "canonicalUrl": "https://www.nightview.info/detail/jukkenbashi/",
+      "author": "nightview.info",
+      "publishedAt": null,
+      "language": "ja",
+      "evidenceSummary": "東京都墨田区十間橋の夜景スポット情報。北十間川に映る逆さ東京スカイツリーの鑑賞・撮影ポイントおよびトワイライトタイムの撮影推奨を解説。",
+      "proves": [
+        "viewpoint_reflection",
+        "shooting_conditions"
+      ]
+    },
+    {
+      "platform": "Travel Guide (Tabiiro)",
+      "sourceUrl": "https://tabiiro.jp/article/576/",
+      "canonicalUrl": "https://tabiiro.jp/article/576/",
+      "author": "旅色編集部",
+      "publishedAt": null,
+      "language": "ja",
+      "evidenceSummary": "東京スカイツリーの逆さツリーが撮影できる橋として十間橋を紹介。超広角レンズでの撮影と無風状態の重要性を解説。",
+      "proves": [
+        "photographic_technique",
+        "lens_recommendation"
+      ]
+    }
+  ],
+  "confidence": {
+    "source": 0.98,
+    "geo": 0.98,
+    "composition": 0.98,
+    "workScene": 1.0,
+    "overall": 0.98
+  },
+  "duplicateCheck": {
+    "possibleDuplicate": false,
+    "possibleDuplicateOf": [],
+    "reason": "Verified single distinct lead for Jukkenbashi Skytree reflection viewpoint"
+  },
+  "researchNotes": [
+    "Jukkenbashi (十間橋) spans Kitajikken River (北十間川) in a North-South orientation (length 19.60m, width 15.00m) connecting Narihira 5-chome (south abutment) to Oshiage 1-chome / Bunka 1-chome (north abutment).",
+    "Tokyo Skytree (634m) is located approx 700m WNW (bearing ~283°) along the straight axis of Kitajikken River.",
+    "Shooter standing position is precisely on the WEST sidewalk (西側歩道) at the bridge railing, approximately at the midpoint of the 19.6m river span (35.708316, 139.818042), providing an unobstructed westward view down the channel.",
+    "Standing on the east sidewalk is blocked by traffic/bridge deck; standing in the roadway is illegal/unsafe. The west sidewalk railing provides the legal, safe, and geometrically ideal vantage point."
+  ],
+  "appImportAlignment": {
+    "appImportable": true,
+    "city": "tokyo",
+    "category": "photo",
+    "area": "스미다구 오시아게",
+    "subject": "스카이트리 반영 (사카사 스카이트리)",
+    "tip": "도쿄 스카이트리와 키타짓켄천 수면에 완벽하게 대칭으로 비치는 '사카사 스카이트리'를 촬영하는 명소입니다. 쥬켄바시 서측 보도 난간 중앙에서 14~18mm 초광각 렌즈와 세로 구도로 촬영하며, 바람이 없는 잔잔한 저녁 라이트업 시간에 방문하면 선명한 거울 반영을 담을 수 있습니다.",
+    "appImage": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC.jpg/960px-%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC.jpg",
+      "license": "CC BY-SA 4.0",
+      "author": "くろふね (User:Jranar)",
+      "source": "https://commons.wikimedia.org/wiki/File:%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC.jpg"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "type": "object",
+  "required": ["schemaVersion", "candidates"],
+  "properties": {
+    "schemaVersion": { "type": "integer" },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": { "type": "string" },
+          "titleKo": { "type": "string" },
+          "titleLocal": { "type": "string" },
+          "category": { "type": "string" },
+          "city": { "type": "string" },
+          "district": { "type": "string" },
+          "targetName": { "type": "string" },
+          "shooterLat": { "type": "number", "nullable": true },
+          "shooterLng": { "type": "number", "nullable": true },
+          "targetLat": { "type": "number", "nullable": true },
+          "targetLng": { "type": "number", "nullable": true },
+          "bearing": { "type": "number", "nullable": true },
+          "geoStatus": { "type": "string" },
+          "accessInfo": { "type": "string" },
+          "shootingTips": { "type": "string" },
+          "recommendedTime": { "type": "string" },
+          "lensHint": { "type": "string" },
+          "riskLevel": { "type": "string" },
+          "warnings": { "type": "array", "items": { "type": "string" } },
+          "work": {
+            "type": "object",
+            "properties": {
+              "workTitleOriginal": { "type": "string", "nullable": true },
+              "workTitleKo": { "type": "string", "nullable": true },
+              "workType": { "type": "string", "nullable": true },
+              "sceneDescription": { "type": "string", "nullable": true },
+              "matchType": { "type": "string", "nullable": true }
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "platform": { "type": "string" },
+                "sourceUrl": { "type": "string" },
+                "author": { "type": "string" },
+                "language": { "type": "string" },
+                "evidenceSummary": { "type": "string" },
+                "proves": { "type": "array", "items": { "type": "string" } }
+              }
+            }
+          },
+          "confidence": {
+            "type": "object",
+            "properties": {
+              "source": { "type": "number" },
+              "geo": { "type": "number" },
+              "composition": { "type": "number" },
+              "workScene": { "type": "number" },
+              "overall": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "queriesUsed": { "type": "array", "items": { "type": "string" } },
+    "resolved": { "type": "array", "items": { "type": "string" } },
+    "stillUnresolved": { "type": "array", "items": { "type": "string" } },
+    "notes": { "type": "string" }
+  }
+}

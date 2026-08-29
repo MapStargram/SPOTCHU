@@ -2,6 +2,37 @@
 
 브라우저 조사(Antigravity) → 검증·정규화(Codex) → **앱 임포트**(`scripts/import-leads.ts`) → DB(`db:seed`).
 
+## 🤖 자동 오케스트레이터 (Antigravity ↔ Codex, 무인 루프)
+
+`scripts/research-orchestrator.ts` 하나가 두 에이전트를 자동으로 왕복시킨다 — 사람이 CLI를 번갈아 칠 필요 없음:
+
+```
+Antigravity discover → Codex curate
+   → (필요 시) Antigravity follow-up → Codex reverify   ← 최대 2회, 그 후 NEEDS_HUMAN_REVIEW
+   → READY_FOR_REVIEW → npm run import:leads
+```
+
+명령:
+
+```bash
+npm run research:daily                       # tier 스케줄상 오늘 실행할 국가들
+npm run research:country -- JP               # JP 다음 rotation(도시·카테고리 자동)
+npm run research:country -- JP tokyo PHOTO    # 특정 도시·카테고리
+npm run research:verify                       # 미해결(NEEDS_HUMAN_REVIEW 등) 재검증
+npm run research:global                       # 신규 국가/도시/바이럴 global backlog
+npm run research:status                       # 상태 머신 현황
+npm run research:doctor                        # real 백엔드 준비 상태 진단(읽기전용, 에이전트 미실행)
+```
+
+`research:doctor` 는 real 백엔드 전환 전 프리플라이트다: `agy`/`codex` 존재·버전·플래그(`-p`·`--output-format json`·`--json-schema`·`--agent` / `exec`·`--json`·`--output-schema`·`-o`)·인증·prompt/schema/country/config 를 검사하고 `Real Backend Ready YES/NO` 를 출력한다. 웹 조사·에이전트 실행·프로덕션 접근을 하지 않으며 토큰/키 값은 절대 출력하지 않는다. agy 인증은 오프라인 확인이 불가하므로 로그인 후 `AGY_AUTHED=1` 로 확인한다.
+
+- **백엔드 스위치**: `research/orchestrator.config.json` 의 `"backend"` = `"mock"`(기본, 오프라인 드라이런 — CLI 불필요) | `"real"`(agy/codex 실제 실행). `real` 전환 전 **반드시** `agy --help` / `agy agents` / `codex exec --help` 로 명령·플래그를 확인해 config 의 `agents.*` 를 맞춘다. (전체 permission bypass 플래그는 기본값으로 넣지 않는다.)
+- **상태 머신**: `DISCOVER_PENDING · INVESTIGATING · CURATOR_PENDING · NEEDS_GEO_REVIEW · NEEDS_SOURCE_REVIEW · BROWSER_RESEARCH_PENDING · REVERIFY_PENDING · READY_FOR_REVIEW · POSSIBLE_DUPLICATE · NEEDS_HUMAN_REVIEW · REJECTED · FAILED`. follow-up 는 `maxFollowups`(기본 2)로 상한 — 무한 루프 없음.
+- **스케줄러/rotation**: 국가 profile(`research/countries/<CC>.json`)의 `tier`(1=daily·2=3일·3=weekly) + 최근 실행 기준 도시×카테고리(PHOTO/ANIME/MOVIE/DRAMA/VIRAL/BACKFILL) 최소반복 순환.
+- **상태 저장**: `research/state/tasks.json`(원장) + `research/runs/*.json`(감사) + `research/locks/`(멱등). 프로덕션 DB와 분리 — 병렬 워커 필요 시 동일 `TaskRecord` 스키마를 Prisma로 승격.
+- **안전**: 에이전트는 프로덕션 Spot 을 만들거나 고치지 않는다. 파이프라인 `RawSource → Evidence → SpotLead → READY_FOR_REVIEW → Human/Admin → Spot` 유지.
+- **무인 배포**: cron/Task Scheduler 로 `npm run research:daily`(1일 1회) + `npm run research:global`(1일 1회). 동시성은 `RESEARCH_CONCURRENCY`(기본 2). 상세 옵션은 `orchestrator.config.json` 의 `_README`.
+
 ```
 research/
   inbox/        Antigravity 원시 조사 결과(JSON). 국가/날짜별. 큼 → 커밋 선택(대개 gitignore)

@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schemaVersion", "verdicts"],
+  "properties": {
+    "schemaVersion": { "type": "integer" },
+    "verdicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["leadId", "status"],
+        "properties": {
+          "leadId": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["READY_FOR_REVIEW", "NEEDS_GEO_REVIEW", "NEEDS_SOURCE_REVIEW", "POSSIBLE_DUPLICATE", "REJECTED", "CONFLICTED"]
+          },
+          "sourceConfidence": { "type": "number" },
+          "geoConfidence": { "type": "number" },
+          "compositionConfidence": { "type": "number" },
+          "overallConfidence": { "type": "number" },
+          "issues": { "type": "array", "items": { "type": "string" } },
+          "followUpTask": {
+            "type": "object",
+            "properties": {
+              "leadId": { "type": "string" },
+              "question": { "type": "string" },
+              "known": { "type": "string" },
+              "missing": { "type": "string" },
+              "suggestedSearches": { "type": "array", "items": { "type": "string" } },
+              "priority": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] }
+            }
+          },
+          "readyLeadFile": { "type": "string" }
+        }
+      }
+    },
+    "metrics": { "type": "object" },
+    "reportFile": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

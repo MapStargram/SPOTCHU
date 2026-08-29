@@ -1,0 +1,503 @@
+{
+  "researchRun": {
+    "runDate": "2026-08-29",
+    "runId": "2026-08-29-mtdv93zo-0",
+    "country": "\u65e5\u672c",
+    "countryCode": "JP",
+    "city": "tokyo",
+    "category": "PHOTO",
+    "researchMode": "DISCOVERY",
+    "reverificationAttempt": 1,
+    "verificationPhase": "REVERIFY",
+    "rawFiles": [
+      "research/inbox/2026-08-29/JP/tokyo-jukkenbashi-sakasa-skytree-8a3f.json"
+    ]
+  },
+  "identity": {
+    "leadId": "JP-20260829-tokyo-jukkenbashi-sakasa-skytree-8a3f",
+    "sourceCandidateId": "tokyo-jukkenbashi-sakasa-skytree-8a3f",
+    "normalizedTitle": "jukkenbashi-sakasa-skytree",
+    "appCategory": "photo",
+    "appImportable": false
+  },
+  "ingestion": {
+    "schemaValidation": "PASS",
+    "rawArtifactRecovery": {
+      "occurred": true,
+      "reason": "The orchestrator run referenced the raw file, but it was absent from the workspace inbox. The exact JSON was recovered from the Antigravity scratch artifact at the referenced path and restored to the workspace inbox before curation.",
+      "sourceRunReference": "research/runs/2026-08-29-mtdv93zo-0.json"
+    },
+    "normalizationsApplied": [
+      "Unicode and whitespace normalized in the curated projection",
+      "Country normalized to JP / Japan",
+      "City normalized to tokyo",
+      "Research category PHOTO_VIEWPOINT mapped to app category photo",
+      "Yakei URL canonicalized from ?i=jukken to ?i=jyukken after redirect/search resolution",
+      "Raw shooter coordinates were matched to the DJQ bridge-reference coordinate and retained only as an unverified claim, not as shooter geometry",
+      "Coordinates range-checked",
+      "Bearing range-checked and independently recalculated",
+      "Supplemental reverify sources checked: bridge geometry, bridge safety context, and a geotagged sibling Wikimedia Commons image"
+    ],
+    "malformedOrUncertainFields": [
+      "The raw evidence uses free-form proof labels such as photographer_position rather than the repository's conceptual proof types; these were mapped conservatively during analysis.",
+      "The raw geoStatus CONFIRMED and geoConfidence 0.98 were not accepted because the supplied point is a bridge map pin, not independently documented as the exact photographer standing point.",
+      "The follow-up claim of 35.708316,139.818042 on the west pedestrian railing is not documented in the updated inbox evidence and could not be independently tied to the candidate image; it is not accepted as exact shooter geometry."
+    ],
+    "quarantine": false
+  },
+  "reverification": {
+    "attempt": 1,
+    "inputFiles": [
+      "research/inbox/2026-08-29/JP/tokyo-jukkenbashi-sakasa-skytree-8a3f.json"
+    ],
+    "followUpResult": "CLAIMED_RESOLVED",
+    "curatorDecision": "NOT_RESOLVED",
+    "newlyCheckedSources": [
+      {
+        "url": "https://www.djq.jp/bridge_liblary/river_kitajyukken/tokyo_bridge_kitajyukken007_jyukken.php",
+        "finding": "Confirms Jukkenbashi bridge geometry (approximately 19.60 m long and 15.00 m wide) and bridge-area coordinates, but does not identify the exact photographer standing point or sidewalk side."
+      },
+      {
+        "url": "https://yakei-navi.com/jukkenbashi/",
+        "finding": "Provides bridge-top viewpoint and roadway/pedestrian safety context, but does not identify the exact span, sidewalk side, or candidate-image camera position."
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File%3A%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC_02.jpg",
+        "finding": "A separate 2015 night image by the same creator has camera location 35.708321,139.817993. It corroborates a real shooting position on Jukkenbashi, but does not prove that the 2017 candidate image was shot from the same point or sidewalk."
+      }
+    ],
+    "remainingOpenQuestions": [
+      "Which bridge span and sidewalk side produced the candidate image?",
+      "Is the claimed west-side railing point a legal pedestrian standing position rather than a bridge/roadway map pin?",
+      "Can the candidate image itself, rather than a sibling image, be aligned to a few-meter shooter coordinate?"
+    ],
+    "decision": "Keep shooterLat and shooterLng null and retain NEEDS_GEO_REVIEW."
+  },
+  "candidate": {
+    "titleKo": "\uc96c\ucf04\ubc14\uc2dc \uc0ac\uce74\uc0ac \uc2a4\uce74\uc774\ud2b8\ub9ac",
+    "titleLocal": "\u5341\u9593\u6a4b \u9006\u3055\u30b9\u30ab\u30a4\u30c4\u30ea\u30fc",
+    "category": "PHOTO_VIEWPOINT",
+    "descriptionKo": "\ub3c4\ucfc4 \uc2a4\uce74\uc774\ud2b8\ub9ac\uc640 \ud0a4\ud0c0\uc9d3\ucf04\ucc9c(\u5317\u5341\u9593\u5ddd) \uc218\uba74\uc5d0 \ub300\uce6d\uc73c\ub85c \ubc18\uc0ac\ub418\ub294 \uc0ac\uce74\uc0ac \uc2a4\uce74\uc774\ud2b8\ub9ac \ubc18\uc601 \uad6c\ub3c4\ub97c \ub2f4\ub294 \ud3ec\ud1a0\uc2a4\ud31f.",
+    "country": "\uc77c\ubcf8",
+    "countryCode": "JP",
+    "city": "tokyo",
+    "district": "Sumida-ku",
+    "area": "\uc2a4\ubbf8\ub2e4\uad6c \uc5c5\ud3c9 5\ucd08\uba54 / \uc96c\ucf04\ubc14\uc2dc",
+    "targetName": "\u6771\u4eac\u30b9\u30ab\u30a4\u30c4\u30ea\u30fc (Tokyo Skytree)",
+    "targetLat": 35.710056,
+    "targetLng": 139.8107,
+    "shooterLat": null,
+    "shooterLng": null,
+    "claimedShooterCoordinates": {
+      "lat": 35.708316,
+      "lng": 139.818085,
+      "provenance": "Raw agent claim; approximately 4m from the Yakei/Nightview bridge map pin, but not an independently verified camera standing point."
+    },
+    "bearing": 283,
+    "computedBearing": 286.18,
+    "bearingDifference": 3.18,
+    "approximateDistanceToTargetM": 694.3,
+    "cameraDirection": "WNW / westward along the Kitajikken River toward Tokyo Skytree",
+    "geoStatus": "NEEDS_GEO_REVIEW",
+    "coordinateStatus": "BRIDGE_LOCATION_KNOWN_STANDING_POINT_UNRESOLVED",
+    "accessInfo": "\uc624\uc2dc\uc544\uac8c \uc5ed\uc5d0\uc11c \ub3c4\ubcf4\ub85c \uc774\ub3d9 \uac00\ub2a5\ud55c \uacf5\uac1c \ub3c4\uad50\uc774\ub098, \ud604\uc7a5\uc758 \uc815\ud655\ud55c \ucd2c\uc601 \uc704\uce58\uc640 \uc6b0\uce21/\uc88c\uce21 \ubcf4\ub3c4 \uc811\uadfc\uc131\uc740 \ud604\uc7a5 \uac80\uc99d\uc774 \ud544\uc694\ud558\ub2e4.",
+    "shootingTips": "\uc804\uccb4 \ud0c0\uc6cc\uc640 \ubb3c\uc5d0 \ube44\uce5c \ubc18\uc601\uc744 \ud568\uaed8 \ub2f4\uc73c\ub824\uba74 \uc138\ub85c \uad6c\ub3c4\uc640 \uad11\uac01 \ub80c\uc988\uac00 \uc720\ub9ac\ud558\uba70, \uc218\uba74\uc774 \uc794\uc794\ud55c \uc77c\ubab0 \uc804\ud6c4\uc5d0 \ubc18\uc601\uc774 \ub354 \ub69c\ub837\ud558\ub2e4.",
+    "recommendedTime": "\uc77c\ubab0 \uc804\ud6c4 \ud2b8\uc640\uc77c\ub77c\uc787 \ubc0f \uc57c\uac04 \ub77c\uc774\ud2b8\uc5c5",
+    "recommendedSeason": "\uac00\uc744 \ub610\ub294 \uaca8\uc6b8(\uc2dc\uc815\uc774 \uc88b\uc740 \ub0a0)",
+    "lensHint": "Approximately 18mm full-frame equivalent; wider lens may help for the full reflection",
+    "riskLevel": "LOW",
+    "warnings": [
+      "\ubcf4\ud589\uc790\uc640 \uc790\uc804\uac70 \ud1b5\ud589\uc744 \ubc29\ud574\ud558\uc9c0 \uc54a\ub294\ub2e4.",
+      "\uc870\uc0ac\ub41c Nightview \uc18c\uc2a4\ub294 \uc0bc\uac01\ub300 \uc0ac\uc6a9 \uae08\uc9c0\ub97c \uc548\ub0b4\ud558\ubbc0\ub85c \ud734\ub300 \ucd2c\uc601\uc744 \uc6b0\uc120\ud55c\ub2e4.",
+      "\ub09c\uac04 \ubc14\uae65\uc73c\ub85c \uc2e0\uccb4\uc640 \uc7a5\ube44\ub97c \ub0b4\ubc00\uc9c0 \uc54a\ub294\ub2e4."
+    ]
+  },
+  "work": {
+    "workTitleOriginal": null,
+    "workTitleKo": null,
+    "workType": null,
+    "episode": null,
+    "sceneDescription": null,
+    "matchType": "NOT_APPLICABLE",
+    "workSceneConfidence": 1,
+    "note": "This is a landmark composition/photo viewpoint, not a media-location claim."
+  },
+  "evidence": [
+    {
+      "platform": "Wikimedia Commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC.jpg",
+      "canonicalUrl": "https://commons.wikimedia.org/wiki/File:%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC.jpg",
+      "author": "\u304f\u308d\u3075\u306d (User:Jranar)",
+      "publishedAt": "2017-09-03",
+      "language": "ja",
+      "independenceGroup": "commons-author",
+      "verificationStatus": "VERIFIED",
+      "evidenceSummary": "\u30d5\u30a1\u30a4\u30eb\u306e\u30bf\u30a4\u30c8\u30eb\u3068\u8aac\u660e\u304c\u300c\u5341\u9593\u6a4b\u304b\u3089\u306e\u6771\u4eac\u30b9\u30ab\u30a4\u30c4\u30ea\u30fc\u300d\u3067\u3001\u5317\u5341\u9593\u5ddd\u306e\u6c34\u9762\u53cd\u5c04\u69cb\u56f3\u3092\u8a18\u9332\u3057\u3066\u3044\u308b\u3002",
+      "proves": [
+        "LOCATION_NAME",
+        "TARGET",
+        "CAMERA_DIRECTION",
+        "COMPOSITION"
+      ],
+      "doesNotProve": [
+        "EXACT_SHOOTER_COORDINATE"
+      ],
+      "imageLicense": "CC BY-SA 4.0",
+      "directImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC.jpg/960px-%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC.jpg"
+    },
+    {
+      "platform": "Nightview Guide (Yakei.jp)",
+      "sourceUrl": "https://yakei.jp/japan/spot.php?i=jukken",
+      "canonicalUrl": "https://yakei.jp/japan/spot.php?i=jyukken",
+      "author": "yakei.jp",
+      "publishedAt": "2016-11-20",
+      "lastVerifiedAt": "2026-08-29",
+      "language": "ja",
+      "independenceGroup": "nightview-guides",
+      "verificationStatus": "VERIFIED",
+      "evidenceSummary": "\u5341\u9593\u6a4b\u3092\u5317\u5341\u9593\u5ddd\u306e\u9006\u3055\u30b9\u30ab\u30a4\u30c4\u30ea\u30fc\u64ae\u5f71\u30b9\u30dd\u30c3\u30c8\u3068\u3057\u3066\u7d39\u4ecb\u3057\u3001\u897f\u5411\u304d\u306e\u64ae\u5f71\u3001\u5168\u666f\u306b\u5fc5\u8981\u306a\u7e26\u4f4d\u7f6e\u3068\u7d0418mm\u3092\u8aac\u660e\u3059\u308b\u3002\u30de\u30c3\u30d7\u30ea\u30f3\u30af\u306f35.708311452543,139.81804132462\u3092\u793a\u3059\u3002",
+      "proves": [
+        "LOCATION_NAME",
+        "TARGET",
+        "CAMERA_DIRECTION",
+        "LENS",
+        "ACCESS",
+        "CURRENT_EXISTENCE"
+      ],
+      "doesNotProve": [
+        "EXACT_SHOOTER_STANDING_POINT_WITHIN_THE_BRIDGE"
+      ]
+    },
+    {
+      "platform": "Nightview.info",
+      "sourceUrl": "https://www.nightview.info/detail/jukkenbashi/",
+      "canonicalUrl": "https://www.nightview.info/detail/jukkenbashi/",
+      "author": "Nightview.info",
+      "publishedAt": "2015-03-12",
+      "lastVerifiedAt": "2026-08-29",
+      "language": "ja",
+      "independenceGroup": "nightview-guides",
+      "verificationStatus": "VERIFIED",
+      "evidenceSummary": "\u5341\u9593\u6a4b\u306f\u6771\u4eac\u30b9\u30ab\u30a4\u30c4\u30ea\u30fc\u3092\u897f\u5411\u304d\u306b\u898b\u6e21\u305b\u308b\u5ddd\u6cbf\u3044\u306e\u64ae\u5f71\u30d3\u30e5\u30fc\u30dd\u30a4\u30f3\u30c8\u3067\u3001\u6240\u5728\u5730\u3068\u5730\u56f3\u5ea7\u6a19\u309235.708324,139.818039\u3068\u8a18\u8f09\u3059\u308b\u3002\u4e09\u811a\u4f7f\u7528\u7981\u6b62\u306e\u6ce8\u8a18\u304c\u3042\u308b\u3002",
+      "proves": [
+        "LOCATION_NAME",
+        "TARGET",
+        "CAMERA_DIRECTION",
+        "ACCESS",
+        "SAFETY",
+        "CURRENT_EXISTENCE"
+      ],
+      "doesNotProve": [
+        "EXACT_SHOOTER_STANDING_POINT_WITHIN_THE_BRIDGE"
+      ]
+    },
+    {
+      "platform": "Sumida City official site",
+      "sourceUrl": "https://www.city.sumida.lg.jp/sisetu_info/siryou/kyoudobunka/sonota/hyakusen/stytree/45.html",
+      "canonicalUrl": "https://www.city.sumida.lg.jp/sisetu_info/siryou/kyoudobunka/sonota/hyakusen/stytree/45.html",
+      "author": "Sumida City",
+      "publishedAt": "2012-05-08",
+      "lastVerifiedAt": "2026-08-29",
+      "language": "ja",
+      "independenceGroup": "official-sumida",
+      "verificationStatus": "VERIFIED",
+      "evidenceSummary": "\uad00\ud560 \uc2dc\uac00 \uc2ed\uac04\ubc14\uc2dc\uc5d0\uc11c \uc2a4\uce74\uc774\ud2b8\ub9ac\ub97c \ucd2c\uc601\ud55c \uc0ac\uc9c4\uc758 \ucd2c\uc601 \uc7a5\uc18c\ub97c \uc2ed\uac04\ubc14\uc2dc\ub85c \uae30\ub85d\ud55c\ub2e4. \uc2ed\uac04\ubc14\uc2dc\ub77c\ub294 \uc7a5\uc18c \ud655\uc778\uc5d0 \uc720\uc6a9\ud558\uc9c0\ub9cc \uc815\ud655\ud55c \uc0ac\uc9c4\uac00 \uc704\uce58\ub97c \uc99d\uba85\ud558\uc9c0\ub294 \uc54a\ub294\ub2e4.",
+      "proves": [
+        "LOCATION_NAME",
+        "TARGET"
+      ],
+      "doesNotProve": [
+        "EXACT_SHOOTER_COORDINATE"
+      ]
+    },
+    {
+      "platform": "Mapcarta / OpenStreetMap-derived place record",
+      "sourceUrl": "https://mapcarta.com/28406194",
+      "canonicalUrl": "https://mapcarta.com/28406194",
+      "author": "Mapcarta",
+      "publishedAt": null,
+      "lastVerifiedAt": "2026-08-29",
+      "language": "en",
+      "independenceGroup": "target-map",
+      "verificationStatus": "VERIFIED",
+      "evidenceSummary": "Tokyo Skytree is mapped near 35.71005,139.81071, consistent with the supplied target coordinate 35.710056,139.8107.",
+      "proves": [
+        "TARGET"
+      ],
+      "doesNotProve": [
+        "EXACT_SHOOTER_COORDINATE"
+      ]
+    },
+    {
+      "platform": "Travel Guide (Tabiiro)",
+      "sourceUrl": "https://tabiiro.jp/article/576/",
+      "canonicalUrl": "https://tabiiro.jp/article/576/",
+      "author": "\u65c5\u8272\u7de8\u96c6\u90e8",
+      "publishedAt": null,
+      "lastVerifiedAt": "2026-08-29",
+      "language": "ja",
+      "independenceGroup": "unverified-raw-claim",
+      "verificationStatus": "NOT_VERIFIED_THIS_RUN",
+      "evidenceSummary": "The raw investigator record attributes additional lens and calm-water guidance to this URL, but the exact page could not be safely fetched or matched during this run. Retain as lineage only.",
+      "proves": [],
+      "doesNotProve": [
+        "SHOOTER_POSITION",
+        "EXACT_SHOOTER_COORDINATE",
+        "LENS"
+      ]
+    },
+    {
+      "platform": "Wikimedia Commons (sibling geotagged image)",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File%3A%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC_02.jpg",
+      "canonicalUrl": "https://commons.wikimedia.org/wiki/File%3A%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC_02.jpg",
+      "author": "くろふね (User:Jranar)",
+      "publishedAt": "2015-01-02",
+      "lastVerifiedAt": "2026-08-29",
+      "language": "ja",
+      "independenceGroup": "commons-author",
+      "verificationStatus": "VERIFIED",
+      "evidenceSummary": "A separate night image by the same creator is categorized as a view of Tokyo Skytree from Jukkenbashi and exposes EXIF camera location 35.708321,139.817993.",
+      "proves": [
+        "LOCATION_NAME",
+        "TARGET",
+        "SHOOTER_POSITION",
+        "COMPOSITION"
+      ],
+      "doesNotProve": [
+        "EXACT_SHOOTER_COORDINATE_FOR_CANDIDATE_IMAGE",
+        "CANDIDATE_IMAGE_SIDEWALK_SIDE",
+        "CANDIDATE_IMAGE_BRIDGE_SPAN"
+      ],
+      "cameraLocation": {
+        "lat": 35.708321,
+        "lng": 139.817993,
+        "isCandidateImageLocation": false
+      },
+      "imageLicense": "CC BY-SA 4.0"
+    },
+    {
+      "platform": "Bridge directory (DJQ)",
+      "sourceUrl": "https://www.djq.jp/bridge_liblary/river_kitajyukken/tokyo_bridge_kitajyukken007_jyukken.php",
+      "canonicalUrl": "https://www.djq.jp/bridge_liblary/river_kitajyukken/tokyo_bridge_kitajyukken007_jyukken.php",
+      "author": "DJQ bridge directory",
+      "publishedAt": null,
+      "lastVerifiedAt": "2026-08-29",
+      "language": "ja",
+      "independenceGroup": "bridge-reference",
+      "verificationStatus": "VERIFIED",
+      "evidenceSummary": "Documents Jukkenbashi's approximate bridge dimensions, endpoints, and bridge-area coordinate, with separate left/right-bank and center views.",
+      "proves": [
+        "LOCATION_NAME",
+        "BRIDGE_GEOMETRY",
+        "ACCESS_CONTEXT"
+      ],
+      "doesNotProve": [
+        "EXACT_SHOOTER_COORDINATE",
+        "CANDIDATE_IMAGE_CAMERA_POSITION"
+      ]
+    },
+    {
+      "platform": "Yakei Navi",
+      "sourceUrl": "https://yakei-navi.com/jukkenbashi/",
+      "canonicalUrl": "https://yakei-navi.com/jukkenbashi/",
+      "author": "Yakei Navi",
+      "publishedAt": null,
+      "lastVerifiedAt": "2026-08-29",
+      "language": "ja",
+      "independenceGroup": "nightview-guides",
+      "verificationStatus": "VERIFIED",
+      "evidenceSummary": "Provides a bridge-level viewpoint description and warns visitors not to enter the roadway or obstruct the small bridge, without assigning an exact camera standing point.",
+      "proves": [
+        "LOCATION_NAME",
+        "ACCESS",
+        "SAFETY"
+      ],
+      "doesNotProve": [
+        "EXACT_SHOOTER_COORDINATE",
+        "CANDIDATE_IMAGE_CAMERA_POSITION"
+      ]
+    }
+  ],
+  "sourceIndependence": {
+    "independentEvidenceCount": 3,
+    "independenceGroups": [
+      "commons-author",
+      "nightview-guides",
+      "official-sumida"
+    ],
+    "unverifiedSources": 1,
+    "copyingAssessment": "No direct copying was established. Yakei.jp, Nightview.info, and Yakei Navi are conservatively grouped because they are specialist night-view guides with overlapping bridge claims. The Commons sibling is by the same creator as the candidate image and is treated as corroborating lineage, not an independent proof of the candidate camera point.",
+    "confidenceAdjustment": "The repeated bridge claim is not counted as four independent confirmations. The sibling geotag raises plausibility of a bridge shooting position but does not raise candidate-specific geo confidence because the image and exact span/side differ."
+  },
+  "geospatialValidation": {
+    "coordinateRanges": "PASS",
+    "targetCountryCityConsistency": "PASS",
+    "bridgeMapPin": {
+      "yakei": {
+        "lat": 35.708311452543,
+        "lng": 139.81804132462
+      },
+      "nightview": {
+        "lat": 35.708324,
+        "lng": 139.818039
+      },
+      "distanceBetweenPinsM": 1.4,
+      "distanceFromRawClaimToYakeiPinM": 4,
+      "interpretation": "The raw point is a credible bridge-area location, but agreement between POI pins does not prove where on the bridge the photographer stood."
+    },
+    "supplementalViewpointEvidence": {
+      "source": "https://commons.wikimedia.org/wiki/File%3A%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC_02.jpg",
+      "cameraLocation": {
+        "lat": 35.708321,
+        "lng": 139.817993
+      },
+      "distanceFromRawClaimM": 8.3,
+      "relationship": "Same creator and bridge, but a separate 2015 night image; corroborates that a real shooting position exists on Jukkenbashi.",
+      "limitation": "It does not prove the 2017 candidate image was taken from the same bridge span or sidewalk, and it does not establish the legal standing point for the candidate image."
+    },
+    "accessSafetyCrossCheck": {
+      "sources": [
+        "https://yakei-navi.com/jukkenbashi/",
+        "https://www.nightview.info/detail/jukkenbashi/"
+      ],
+      "finding": "The bridge is a public viewpoint, but visitors must stay out of the roadway and preserve pedestrian clearance; Nightview.info reports that tripods are prohibited.",
+      "status": "PARTIALLY_VERIFIED_EXACT_STANDING_POINT_UNRESOLVED"
+    },
+    "target": {
+      "lat": 35.710056,
+      "lng": 139.8107,
+      "externalMapCheck": "PASS",
+      "distanceFromRawShooterM": 694.3
+    },
+    "bearing": {
+      "reportedDegrees": 283,
+      "computedInitialBearingDegrees": 286.18,
+      "absoluteDifferenceDegrees": 3.18,
+      "assessment": "PASS_WITHIN_APPROXIMATE_DIRECTION_TOLERANCE",
+      "action": "Retain reported 283 degrees as approximate camera direction; do not overwrite it with the computed value."
+    },
+    "postgis": {
+      "available": false,
+      "fallback": "Repository lib/geo bearing and haversine formulas; no staging database was used."
+    }
+  },
+  "duplicateCheck": {
+    "sourceDuplicate": false,
+    "canonicalSourceDuplicates": [],
+    "possibleDuplicate": false,
+    "possibleDuplicateOf": [],
+    "exactLocationComparison": {
+      "existingNormalizedRecords": 0,
+      "existingAppLeadRecords": 0,
+      "existingImportedProductionSpots": 0,
+      "nearbyDistinctViewpointsReviewed": [
+        "Nishijukkenbashi",
+        "Yanagishima pedestrian bridge"
+      ],
+      "assessment": "These are nearby alternatives but are described as distinct viewpoints/compositions by the sources. No merge is warranted."
+    },
+    "reason": "No existing SpotLead or Spot in the repository matched this candidate. Nearby bridges remain distinct candidate viewpoints."
+  },
+  "skepticReview": {
+    "alternativeExplanationsConsidered": [
+      {
+        "question": "Could the supplied coordinates be the landmark rather than the photographer position?",
+        "finding": "No; they are in the Jukkenbashi bridge area and approximately 694m from the Skytree target. However, they are still a bridge map pin rather than a proven camera standing point."
+      },
+      {
+        "question": "Could this be Nishijukkenbashi or Yanagishima pedestrian bridge?",
+        "finding": "Possible nearby alternatives were checked; the independent guide descriptions distinguish them and identify Jukkenbashi as the stronger full-reflection composition."
+      },
+      {
+        "question": "Does the geometry make sense?",
+        "finding": "Yes. The raw-to-target distance is approximately 694m and the calculated bearing is 286.18 degrees versus reported 283 degrees."
+      },
+      {
+        "question": "Is access safe and legal?",
+        "finding": "The bridge is presented as a public walkable viewpoint. Nightview.info warns that tripods are prohibited; pedestrian and cycle clearance must be maintained. Current on-site conditions remain to be checked."
+      },
+      {
+        "question": "Could the image be mirrored or use a different long-lens viewpoint?",
+        "finding": "No evidence of mirroring was found. The Commons file metadata lists a 24mm lens and its title identifies Jukkenbashi, but it does not expose exact photographer coordinates."
+      },
+      {
+        "question": "Did the follow-up's west-side railing claim resolve the exact point?",
+        "finding": "No. The updated inbox does not provide source-specific proof for that claim. Bridge geometry and safety sources remain bridge-level, while the geotagged Commons sibling is a separate image; candidate-specific standing point, span, and sidewalk remain unresolved."
+      }
+    ],
+    "decision": "After reverify attempt 1, do not promote to app import until the exact standing point on the bridge sidewalk is confirmed."
+  },
+  "confidence": {
+    "sourceConfidence": 0.9,
+    "geoConfidence": 0.58,
+    "compositionConfidence": 0.94,
+    "workSceneConfidence": 1,
+    "overallConfidence": 0.66,
+    "scoringMethod": "Not an average. Strong independent location/composition evidence and the sibling geotag support plausibility, but candidate-specific shooter geometry remains unresolved; overall is capped below READY_FOR_REVIEW import quality until geo review."
+  },
+  "status": "NEEDS_GEO_REVIEW",
+  "review": {
+    "humanReviewRequired": true,
+    "reason": "The bridge is confidently identified, but the exact photographer standing position is not. Do not substitute a POI/bridge centroid for shooter coordinates.",
+    "appLeadWritten": false,
+    "productionSpotTouched": false,
+    "reverifyAttempt": 1,
+    "lastVerifiedAt": "2026-08-29"
+  },
+  "browserVerificationQueue": [
+    {
+      "leadId": "JP-20260829-tokyo-jukkenbashi-sakasa-skytree-8a3f",
+      "country": "JP",
+      "city": "tokyo",
+      "researchQuestion": "Determine the exact photographer standing position on Jukkenbashi for the full upside-down Tokyo Skytree reflection composition.",
+      "knownEvidence": "Commons identifies the candidate image as taken from Jukkenbashi; Yakei and Nightview map the bridge within about 1.4m of each other; the raw claimed point is about 4m from those pins; target geometry and westward direction are plausible. A separate 2015 Commons sibling by the same creator exposes camera location 35.708321,139.817993, corroborating a real bridge shooting position but not the candidate image's position.",
+      "conflictingEvidence": "No source identifies the candidate image's exact bridge sidewalk side, span point, or camera position. The follow-up claims a west pedestrian railing point at 35.708316,139.818042, but that assertion is not documented in the updated inbox evidence. The raw agent labeled the bridge map pin as CONFIRMED, which is too strong for the SPOTCHU shooter-coordinate invariant.",
+      "missing": "A Street View/map/photo alignment for the candidate image that identifies the actual standing point, ideally to a few meters, plus confirmation that the point is on a legal pedestrian area and not in the roadway.",
+      "suggestedSearches": [
+        "\u5341\u9593\u6a4b \u64ae\u5f71 \u7acb\u3061\u4f4d\u7f6e",
+        "\u5341\u9593\u6a4b \u9006\u3055\u30b9\u30ab\u30a4\u30c4\u30ea\u30fc \u64ae\u5f71\u5834\u6240 \u6b69\u9053",
+        "Jukkenbashi Skytree reflection exact viewpoint",
+        "Google Street View 35.708316 139.818085",
+        "Compare Commons Jukkenbashi 02 geotag with the candidate composition"
+      ],
+      "suggestedSources": [
+        "https://www.google.com/maps/@35.708316,139.818085,19z",
+        "https://yakei.jp/japan/spot.php?i=jyukken",
+        "https://www.nightview.info/detail/jukkenbashi/",
+        "https://yakei-navi.com/jukkenbashi/",
+        "https://www.djq.jp/bridge_liblary/river_kitajyukken/tokyo_bridge_kitajyukken007_jyukken.php",
+        "https://commons.wikimedia.org/wiki/File:%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC.jpg",
+        "https://commons.wikimedia.org/wiki/File%3A%E5%8D%81%E9%96%93%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E6%9D%B1%E4%BA%AC%E3%82%B9%E3%82%AB%E3%82%A4%E3%83%84%E3%83%AA%E3%83%BC_02.jpg"
+      ],
+      "expectedEvidenceRequiredToResolve": "A candidate-image-specific map/Street View or geotagged image comparison showing the specific bridge span, sidewalk side, and legal pedestrian standing position, with shooterLat/shooterLng updated to that position. The sibling geotag alone is insufficient. If only the bridge centroid can be established, keep coordinates null and status NEEDS_GEO_REVIEW.",
+      "priority": "HIGH"
+    }
+  ],
+  "researchHistory": [
+    {
+      "at": "2026-08-29",
+      "event": "DISCOVERED",
+      "source": "Antigravity discovery run 2026-08-29-mtdv93zo-0"
+    },
+    {
+      "at": "2026-08-29",
+      "event": "CURATED",
+      "decision": "NEEDS_GEO_REVIEW",
+      "note": "Bridge and composition verified; exact shooter point remains unresolved."
+    },
+    {
+      "at": "2026-08-29",
+      "event": "REVERIFIED",
+      "attempt": 1,
+      "decision": "NEEDS_GEO_REVIEW",
+      "note": "Follow-up claimed a west pedestrian railing point, but no independent candidate-specific proof was supplied. Bridge geometry, safety context, and a sibling geotag were checked; exact standing point remains unresolved."
+    }
+  ],
+  "appImportProjection": {
+    "written": false,
+    "reason": "research/leads requires confident shooterLat and shooterLng. Reverify attempt 1 did not establish a candidate-specific standing point, so no importer file was written.",
+    "wouldUseId": "tokyo-jukkenbashi-sakasa-skytree",
+    "wouldUseCategory": "photo",
+    "reverifyAttempt": 1
+  }
+}

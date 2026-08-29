@@ -1,0 +1,16 @@
+{
+  "code": "KR",
+  "name": "Korea",
+  "nativeName": "한국",
+  "tier": 1,
+  "languages": ["ko", "en", "ja"],
+  "categories": ["PHOTO", "ANIME", "MOVIE", "DRAMA", "VIRAL", "BACKFILL"],
+  "querySeeds": [
+    "사진 스팟", "포토 스팟", "숨은 명소", "인생샷", "뷰맛집",
+    "촬영지", "로케이션", "드라마 촬영지", "영화 촬영지", "구도", "보이는 곳", "뷰포인트"
+  ],
+  "cities": [
+    { "id": "seoul", "appImportable": true, "querySeeds": ["서울 사진 스팟", "서울 드라마 촬영지", "서울 인생샷"] },
+    { "id": "busan", "appImportable": true, "querySeeds": ["부산 사진 스팟", "부산 뷰맛집", "부산 촬영지"] }
+  ]
+}

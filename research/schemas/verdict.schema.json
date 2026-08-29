@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["schemaVersion", "taskStatus"],
+  "properties": {
+    "schemaVersion": { "type": "integer" },
+    "taskStatus": {
+      "type": "string",
+      "enum": ["READY_FOR_REVIEW", "NEEDS_GEO_REVIEW", "NEEDS_SOURCE_REVIEW", "POSSIBLE_DUPLICATE", "REJECTED", "CONFLICTED"]
+    },
+    "readyLeadFiles": { "type": "array", "items": { "type": "string" } },
+    "browserVerificationQueue": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "leadId": { "type": "string" },
+          "question": { "type": "string" },
+          "known": { "type": "string" },
+          "missing": { "type": "string" },
+          "suggestedSearches": { "type": "array", "items": { "type": "string" } },
+          "priority": { "type": "string", "enum": ["HIGH", "MEDIUM", "LOW"] }
+        }
+      }
+    },
+    "metrics": { "type": "object" },
+    "reportFile": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

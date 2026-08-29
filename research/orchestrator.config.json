@@ -1,0 +1,42 @@
+{
+  "_README": "Per-machine orchestrator config. Command templates below are the ONLY place the exact agy/codex invocation lives. Tokens substituted at runtime: {PROMPT} (composed prompt, inlined as one argv), {OUTPUT_FILE} (path the CLI should write its final JSON to), {SCHEMA_FILE} (JSON Schema for the phase's contract), {CWD} (repo root), {AGENT} (agent name). A command containing '*' is glob-resolved to the newest match (handles Codex's versioned bin path). Env overrides: RESEARCH_BACKEND, RESEARCH_CONCURRENCY, RESEARCH_TARGET_COUNT, RESEARCH_MAX_FOLLOWUPS, RESEARCH_AGENT_TIMEOUT_MS, CODEX_BIN, AGY_BIN.",
+
+  "backend": "mock",
+
+  "concurrency": 2,
+  "targetCount": 5,
+  "maxFollowups": 2,
+  "curatorBatchSize": 5,
+  "tierIntervalDays": { "1": 1, "2": 3, "3": 7 },
+  "globalDiscoveryTargetCount": 10,
+
+  "agents": {
+    "antigravity": {
+      "_status": "NOT INSTALLED on this machine. `agy` (the Antigravity CLI Go binary) is separate from the Antigravity IDE. Install: PowerShell `irm https://antigravity.google/cli/install.ps1 | iex` OR `winget install Google.AntigravityCLI` → installs to %LOCALAPPDATA%\\agy\\bin. Then authenticate ONCE interactively: run `agy` and sign in (headless uses cached creds; unauthenticated non-TTY runs error out). Confirm the real agent name with `agy --help` / agent list and set agentName below.",
+      "_known_issues": "Alpha headless bugs: `agy -p` may hang or silently drop stdout in non-TTY/subprocess (github.com/google-antigravity/antigravity-cli issues #318, #76). If hit, run through a TTY shim or read results from agy's conversation store; do NOT assume stdout capture works until verified against the installed build.",
+      "command": "agy",
+      "args": ["-p", "{PROMPT}", "--output-format", "json", "--json-schema", "{SCHEMA_FILE}"],
+      "agentName": "",
+      "cwd": "research",
+      "homeDir": "research/runtime/agy-home",
+      "promptDelivery": "arg",
+      "resultSource": "stdout",
+      "envelopeField": "structured_output",
+      "timeoutMs": 900000
+    },
+    "codex": {
+      "_status": "VERIFIED on this machine — codex-cli 0.150.0-alpha.12.2, authenticated (~/.codex/auth.json). Real smoke test passed: `codex exec --json -o <file>` wrote the exact contract JSON. NOTE: `codex exec` has NO `-a/--ask-for-approval` flag (approval is implicit non-interactive). Bare \"codex\" is auto-resolved on Windows to %LOCALAPPDATA%\\OpenAI\\Codex\\bin\\<version>\\codex.exe (newest); set CODEX_BIN to override.",
+      "_safety": "sandbox=workspace-write lets the curator write research/ files. It technically permits writing elsewhere in the repo — the meta prompt forbids touching production Spot data; verify with `git status` after real runs. Tighten with an execpolicy .rules file if needed.",
+      "command": "codex",
+      "args": ["exec", "--json", "-o", "{OUTPUT_FILE}", "-s", "workspace-write", "--skip-git-repo-check", "-C", "{CWD}", "{PROMPT}"],
+      "agentName": "",
+      "promptDelivery": "arg",
+      "resultSource": "file",
+      "envelopeField": "",
+      "reasoningEffort": "medium",
+      "timeoutMs": 900000
+    }
+  },
+
+  "retry": { "maxAttempts": 3, "baseDelayMs": 2000, "maxDelayMs": 30000 }
+}
