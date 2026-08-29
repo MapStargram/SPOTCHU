@@ -1,6 +1,40 @@
 {
-  "generatedAt": "2026-08-29T13:20:27.116Z",
+  "generatedAt": "2026-08-29T14:14:32.439Z",
   "spots": [
+    {
+      "id": "busan-ahopsan-bamboo-portal-a71c",
+      "title": "기장 아홉산숲 대나무 당간지주 차원의 문",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.2662,
+      "lng": 129.1558,
+      "area": "기장군 철마면 아홉산숲 맹종죽림",
+      "subject": "대나무숲 속 두 당간지주 사이의 차원의 문 구도",
+      "tip": "위치는 근사치(구역 수준) — 예약·운영시간을 확인하고 지정 동선에서 촬영하세요. 보호 구역 밖으로 이탈하거나 시설물을 만지지 마세요.",
+      "lens": "35-85mm",
+      "time": "10:00–14:00",
+      "workId": "the-king-eternal-monarch",
+      "scene": "대나무숲 속 당간지주 사이를 통과하는 차원의 문 장면",
+      "verified": "reported",
+      "source": "https://www.visitbusan.net/kr/index.do?menuCd=DOM_000000201001001000&uc_seq=702"
+    },
+    {
+      "id": "busan-beomil-footbridge-friend-c94a",
+      "title": "범일동 구름다리 (영화 친구 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.13785,
+      "lng": 129.0583,
+      "area": "부산 동구 범일동 구름다리",
+      "subject": "철길 위 구름다리 보행 구간과 영화 친구의 달리기 장면",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인하세요. 보행자 우선, 철길·차도·통제 구역 진입 및 통행 방해 금지.",
+      "lens": "35-50mm",
+      "time": "16:00–17:30",
+      "workId": "friend-2001",
+      "scene": "네 친구가 범일동 구름다리를 달리는 장면",
+      "verified": "reported",
+      "source": "https://www.busan.go.kr/tour/filmtour01"
+    },
     {
       "id": "busan-cheongsapo-crossing-beach-train-7f2a",
       "title": "청사포 해변열차 건널목",
@@ -49,6 +83,23 @@
       "scene": "조형물 모티프/reference; 특정 애니메이션 장면 미검증",
       "verified": "reported",
       "source": "https://www.visitbusan.net/kr/index.do?menuId=MO_010100&cntId=20110701001"
+    },
+    {
+      "id": "busan-hocheon-namilbar-deck-b82f",
+      "title": "호천문화플랫폼 남일바 야경 포토존",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.14428,
+      "lng": 129.05125,
+      "area": "부산진구 범천동 호천마을 남일바",
+      "subject": "남일바 옥상 평상과 호천마을 야경",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인하고 주민 통행·주거지의 조용한 이용을 지켜 주세요. 철로·차도·사유지 진입 금지.",
+      "lens": "24-50mm",
+      "time": "19:30–21:30",
+      "workId": "fight-for-my-way",
+      "scene": "남일바에서 주인공 일행이 밤에 모이는 장면",
+      "verified": "reported",
+      "source": "https://www.busanjin.go.kr/index.busanjin?menuCd=DOM_000000103004000000"
     },
     {
       "id": "busan-the-bay-101-marine-city-reflection-b81c",
@@ -162,6 +213,23 @@
       "source": "https://astral-tanbou.com/hakatatonkotsu-anime-seichijunrei-hakata/"
     },
     {
+      "id": "fukuoka-miyake-udon-kodoku-719b",
+      "title": "미야케 우동 (고독한 미식가 하카타 출장편)",
+      "city": "fukuoka",
+      "category": "drama",
+      "lat": 33.59823,
+      "lng": 130.410645,
+      "area": "하카타구 가미고후쿠마치 10-24, 히가시마치스지 인근",
+      "subject": "미야케 우동의 오래된 외관과 노렌을 서쪽 방향으로 담는 촬영 포인트",
+      "tip": "촬영자 위치는 약 6m 오차의 지역 단위 추정입니다. 반드시 공공 보도에서만 촬영하고, 도로·사유지·가게 앞 대기줄을 막지 마세요. 서쪽 외관 구도와 정확한 안전 지점은 현장 또는 Street View로 확인이 필요합니다.",
+      "lens": "35-50mm",
+      "time": "영업 중인 낮 시간대",
+      "workId": "kodoku-no-gourmet-season-4-hakata-special",
+      "scene": "주인공 고로가 방문하는 하카타 우동집 촬영지",
+      "verified": "reported",
+      "source": "https://loca-station.jp/column-vol-204"
+    },
+    {
       "id": "fukuoka-momochihama-marizon-tower-c42e",
       "title": "모모치하마 마리존 산책로 — 후쿠오카 타워 구도",
       "city": "fukuoka",
@@ -192,6 +260,57 @@
       "scene": "오호리 공원 고래 놀이터 장면",
       "verified": "reported",
       "source": "https://hamutane.com/buddydaddies-seichijunrei-fukuoka/"
+    },
+    {
+      "id": "fukuoka-suikyo-tenmangu-umakamon-fukuoka-591c",
+      "title": "스이쿄 텐만구 우마카몬 거리 (영화 '후쿠오카' 붉은 토리이와 골목길)",
+      "city": "fukuoka",
+      "category": "drama",
+      "lat": 33.59235,
+      "lng": 130.4022,
+      "area": "스이쿄 텐만구 옆 우마카몬 거리 골목 입구, Chuo-ku",
+      "subject": "붉은 토리이와 제등, 좁은 우마카몬 거리 골목의 야간 깊이감",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도 확인. 18~21시 제등 점등 후 공개 보도·골목 입구에서 통행을 방해하지 않게 촬영하세요.",
+      "lens": "35-50mm",
+      "time": "18:00-21:00",
+      "workId": "fukuoka-2019",
+      "scene": "스이쿄 텐만구 인근 우마카몬 거리의 야간 골목 장면",
+      "verified": "reported",
+      "source": "https://fukuoka-leapup.jp/entertainment/202203.491"
+    },
+    {
+      "id": "kyoto-gion-tatsumi-bridge-shirakawa-3f8c",
+      "title": "기온 타츠미교 시라카와 영화 촬영지",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.00548,
+      "lng": 135.77428,
+      "area": "기온 시라카와·타츠미교",
+      "subject": "타츠미교와 시라카와 수로, 타츠미 다이묘진의 북동쪽 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도 확인. 공개 보행로에서 촬영하고 기온의 사유지·통행·촬영 규정을 지키세요.",
+      "lens": "35–50mm",
+      "time": "이른 아침 또는 저녁",
+      "workId": "memoirs-of-a-geisha",
+      "scene": "기온 타츠미교·시라카와와 연관된 촬영지",
+      "verified": "reported",
+      "source": "https://www.kyoto-film.jp/location/tatsumibashi/"
+    },
+    {
+      "id": "kyoto-kamogawa-delta-stepping-stones-b49e",
+      "title": "교토 카모가와 델타 징검다리 영화 촬영지",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.02985,
+      "lng": 135.7712,
+      "area": "카모가와 델타, 데마치야나기",
+      "subject": "카모가와 델타와 징검다리의 동쪽 방향 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도 확인. 동쪽 약 105°로 촬영하되 수위와 젖은 돌을 확인하고 통행을 방해하지 마세요.",
+      "lens": "35–85mm",
+      "time": "오후 2:00–4:30",
+      "workId": "my-tomorrow-your-yesterday",
+      "scene": "카모가와 델타의 영화 장면 연관 장소",
+      "verified": "reported",
+      "source": "https://kyoto.travel/ja/see-and-do/kamogawa-delta"
     },
     {
       "id": "kyoto-kamogawa-delta-stepping-stones-k-on-a101",
@@ -273,6 +392,23 @@
       "source": "https://kyoto.travel/ja/see-and-do/hokoji.html"
     },
     {
+      "id": "osaka-aiaubashi-hanzawa-naoki-c89b",
+      "title": "도톤보리 아이아우바시 (드라마 '한자와 나오키' 뺨 맞은 다리)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.66895,
+      "lng": 135.50425,
+      "area": "도톤보리 아이아우바시, 주오구 소에몬초",
+      "subject": "아이아우바시 난간과 도톤보리강 북안 네온 야경",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 안전한 보행 구역과 실제 구도를 확인하세요. 북쪽(NNE) 방향 촬영.",
+      "lens": "35-50mm",
+      "time": "18:30-22:00",
+      "workId": "hanzawa-naoki",
+      "scene": "제4화 아이아우바시 뺨 맞은 장면",
+      "verified": "reported",
+      "source": "https://loca.ash.jp/info/2013/d201307_hanzawa.htm"
+    },
+    {
       "id": "osaka-awaza-junction-cyberpunk-viewpoint-e47a",
       "title": "아와자 교차로 사이버펑크 야경 포토뷰",
       "city": "osaka",
@@ -286,6 +422,23 @@
       "time": "19:00–21:00",
       "verified": "reported",
       "source": "https://www.travel.co.jp/guide/article/35478/"
+    },
+    {
+      "id": "osaka-central-public-hall-boogie-woogie-b41f",
+      "title": "오사카시 중앙공회당 동측 파사드 (드라마 '부기우기' 관련 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.6937,
+      "lng": 135.50474,
+      "area": "오사카시 중앙공회당, 나카노시마",
+      "subject": "중앙공회당 네오 르네상스 동측 파사드와 청동 돔",
+      "tip": "공원 동측의 안전한 보행 구역에서 서남서 방향으로 촬영하세요. 위치는 구역 수준의 근사치이며 실제 파사드와 보행 동선을 현장에서 확인하세요. 부기우기 연관은 내부/회의실 중심의 부분 일치입니다.",
+      "lens": "50-85mm",
+      "time": "16:30-19:30",
+      "workId": "boogie-woogie",
+      "scene": "중앙공회당이 '日宝' 본사 회의실·로비 촬영지로 소개됨; 외관 exact scene은 미확인",
+      "verified": "reported",
+      "source": "https://asa-dora.com/15347/"
     },
     {
       "id": "osaka-conan-osakajo-gokurakubashi-4c2b",
@@ -322,6 +475,23 @@
       "source": "https://joseetora.jp/special/map.php"
     },
     {
+      "id": "osaka-prefectural-government-hero-e72a",
+      "title": "오사카부청 본관 정면 현관 (영화 'HERO' 및 '프린세스 토요토미' 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.68605,
+      "lng": 135.51964,
+      "area": "오사카부청 본관, 오테마에",
+      "subject": "본관 정면 현관과 중후한 네오클래식 석조 파사드",
+      "tip": "정면 맞은편의 합법적인 보행 구역에서 북쪽으로 촬영하세요. 위치는 구역 수준의 근사치이며 업무·촬영 제한을 현장에서 확인하세요.",
+      "lens": "28-35mm",
+      "time": "10:00-15:00",
+      "workId": "hero-princess-toyotomi",
+      "scene": "오사카부청 본관 촬영지",
+      "verified": "reported",
+      "source": "https://www.osaka-fc.jp/locaguide/toyotomi/index.html"
+    },
+    {
       "id": "osaka-tsutenkaku-spaworld-reflection-b19c",
       "title": "스파월드 북측 계단 츠텐카쿠 반사 포토스팟",
       "city": "osaka",
@@ -337,6 +507,23 @@
       "source": "https://abeno.keizai.biz/headline/1487/"
     },
     {
+      "id": "seoul-baekbin-railroad-crossing-my-mister-a78b",
+      "title": "용산 백빈건널목 땡땡거리 (나의 아저씨)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5255,
+      "lng": 126.9657,
+      "area": "용산 백빈건널목, 한강로3가",
+      "subject": "백빈건널목과 땡땡거리 철길 풍경",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 안전한 공공 보행로 구도를 확인하세요. 선로·건널목 내부에 진입하거나 통행을 방해하지 마세요.",
+      "lens": "35-50mm 또는 24-70mm",
+      "time": "해질녘~야간 (19:00~22:00)",
+      "workId": "my-mister",
+      "scene": "백빈건널목 주변을 걷는 장면의 촬영지로 소개됨.",
+      "verified": "reported",
+      "source": "https://korean.visitseoul.net/hallyu/Baekbin-Crossing"
+    },
+    {
       "id": "seoul-eungbongsan-pavilion-seongsu-bridge-e89c",
       "title": "응봉산 팔각정 성수대교 야경 촬영 포인트",
       "city": "seoul",
@@ -350,6 +537,23 @@
       "time": "18:30-20:30",
       "verified": "reported",
       "source": "https://english.seoul.go.kr/eungbongsan-mountain/"
+    },
+    {
+      "id": "seoul-gamgodang-gil-stonewall-goblin-3c9d",
+      "title": "안국동 감고당길 돌담길 (도깨비 첫 만남)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.57785,
+      "lng": 126.9822,
+      "area": "감고당길, 안국동",
+      "subject": "감고당길 돌담과 보행자 전용 골목의 드라마 촬영지 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 돌담 구도 확인. 보행자 우선으로 촬영하고 학교·사유지에 들어가지 마세요.",
+      "lens": "50mm 또는 85mm",
+      "time": "이른 오전 (08:00~10:00)",
+      "workId": "goblin",
+      "scene": "감고당길 돌담에서의 첫 만남 장면으로 소개됨.",
+      "verified": "reported",
+      "source": "https://korean.visitseoul.net/attractions/Gamgodang-gil"
     },
     {
       "id": "seoul-god-of-highschool-sungnyemun-chase-8b1a",
@@ -401,6 +605,23 @@
       "source": "https://www.museum.go.kr/ENG/contents/E0605010000.do"
     },
     {
+      "id": "seoul-noksapyeong-bridge-itaewon-class-241f",
+      "title": "녹사평역 육교 남산타워 뷰포인트 (이태원 클라쓰)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.53472,
+      "lng": 126.9867,
+      "area": "녹사평역 육교, 용산구",
+      "subject": "육교에서 남산서울타워와 이태원 일대를 바라보는 드라마 촬영지 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도 확인. 보행자 흐름을 막지 말고 차도·난간 안쪽에서 촬영하세요.",
+      "lens": "50-85mm",
+      "time": "해질녘~야간 (18:00~21:00)",
+      "workId": "itaewon-class",
+      "scene": "남산서울타워를 바라보는 녹사평 육교 장면으로 소개됨.",
+      "verified": "reported",
+      "source": "https://korean.visitseoul.net/attractions/Noksapyeong-Bridge"
+    },
+    {
       "id": "seoul-seoul-station-culture-station-284-c92f",
       "title": "연상호 애니메이션 서울역의 무대 구 서울역사 뷰포인트",
       "city": "seoul",
@@ -448,6 +669,40 @@
       "source": "https://yakei.jp/japan/spot.php?i=asakusabunka"
     },
     {
+      "id": "tokyo-hana-yori-dango-ebisu-clock-plaza-c4e1",
+      "title": "에비스 가든 플레이스 시계광장 (꽃보다 남자)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.6423,
+      "lng": 139.7133,
+      "area": "Ebisu Garden Place, Shibuya",
+      "subject": "꽃보다 남자와 연관된 에비스 가든 플레이스 시계탑과 석조 시계광장",
+      "tip": "위치는 근사치(구역 수준)입니다 — 광장 가장자리에서 현장 구도를 확인하고 상업시설 출입구와 통행을 방해하지 마세요.",
+      "lens": "50-85mm",
+      "time": "늦은 오후~저녁",
+      "workId": "hana-yori-dango",
+      "scene": "에비스 가든 플레이스 시계광장 만남·대기 장면",
+      "verified": "reported",
+      "source": "https://loca.ash.jp/info/2005/d200510_hanadan.htm"
+    },
+    {
+      "id": "tokyo-hanzawa-naoki-mitsui-main-building-b89d",
+      "title": "미쓰이 본관 콜로네이드와 외관 (한자와 나오키)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.68645,
+      "lng": 139.77335,
+      "area": "Mitsui Main Building, Nihonbashi Muromachi",
+      "subject": "한자와 나오키의 도쿄중앙은행 본점 외관으로 알려진 미쓰이 본관의 콜로네이드와 파사드",
+      "tip": "위치는 근사치(구역 수준)입니다 — 공개 보도에서만 안전하게 촬영하고 차도·출입구·사유지를 막지 마세요.",
+      "lens": "24-35mm",
+      "time": "이른 아침 또는 저녁",
+      "workId": "hanzawa-naoki",
+      "scene": "도쿄중앙은행 본점 외관으로 사용된 미쓰이 본관",
+      "verified": "reported",
+      "source": "https://loca.ash.jp/info/2013/d201307_hanzawa.htm"
+    },
+    {
       "id": "tokyo-hijiribashi-bridge-suzume-b2",
       "title": "히지리바시 다리 (스즈메의 문단속)",
       "city": "tokyo",
@@ -478,6 +733,23 @@
       "time": "일몰 전후 및 야간",
       "verified": "reported",
       "source": "https://yakei.jp/japan/spot.php?i=jyukken"
+    },
+    {
+      "id": "tokyo-silent-setagaya-daita-bench-7f2a",
+      "title": "세타가야다이타역 서쪽 출구 광장 벤치 (silent)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.65814,
+      "lng": 139.66094,
+      "area": "Setagaya-Daita Station west exit, Setagaya",
+      "subject": "silent 드라마와 연관된 서쪽 출구 광장 벤치와 역 주변 보행 공간",
+      "tip": "위치는 근사치(구역 수준)입니다 — 서쪽 출구 광장에서 현장 구도를 확인하고 통행을 막지 마세요.",
+      "lens": "35-50mm",
+      "time": "늦은 오후~저녁",
+      "workId": "silent",
+      "scene": "세타가야다이타역 서쪽 출구 벤치·광장 장면",
+      "verified": "reported",
+      "source": "https://loca.ash.jp/info/2022/d202210_silent.htm"
     },
     {
       "id": "tokyo-suga-shrine-stairs-your-name-a1",
@@ -531,6 +803,20 @@
   ],
   "works": [
     {
+      "id": "the-king-eternal-monarch",
+      "title": "더 킹: 영원의 군주",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "friend-2001",
+      "title": "친구",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "slam-dunk",
       "title": "슬램덩크",
       "type": "애니",
@@ -541,6 +827,13 @@
       "id": "the-little-prince",
       "title": "어린 왕자",
       "type": "기타",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "fight-for-my-way",
+      "title": "쌈, 마이웨이",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
@@ -559,9 +852,37 @@
       "progress": 0
     },
     {
+      "id": "kodoku-no-gourmet-season-4-hakata-special",
+      "title": "고독한 미식가 시즌 4 하카타 출장편",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "buddy-daddies",
       "title": "Buddy Daddies",
       "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "fukuoka-2019",
+      "title": "후쿠오카",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "memoirs-of-a-geisha",
+      "title": "게이샤의 추억 (SAYURI)",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "my-tomorrow-your-yesterday",
+      "title": "나는 내일, 어제의 너와 만난다",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -580,6 +901,20 @@
       "progress": 0
     },
     {
+      "id": "hanzawa-naoki",
+      "title": "한자와 나오키 (시즌 1 - 오사카 편)",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "boogie-woogie",
+      "title": "연속TV소설 부기우기 (2023)",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "detective-conan",
       "title": "명탐정 코난",
       "type": "애니",
@@ -590,6 +925,27 @@
       "id": "josee-the-tiger-and-the-fish",
       "title": "조제, 호랑이 그리고 물고기들",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "hero-princess-toyotomi",
+      "title": "히어로 (2007년 영화판) / 프린세스 토요토미 (2011년)",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "my-mister",
+      "title": "나의 아저씨",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "goblin",
+      "title": "도깨비",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
@@ -608,6 +964,13 @@
       "progress": 0
     },
     {
+      "id": "itaewon-class",
+      "title": "이태원 클라쓰",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "seoul-station",
       "title": "서울역",
       "type": "애니",
@@ -615,9 +978,23 @@
       "progress": 0
     },
     {
+      "id": "hana-yori-dango",
+      "title": "꽃보다 남자",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "suzume-no-tojimari",
       "title": "스즈메의 문단속",
       "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "silent",
+      "title": "silent",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
