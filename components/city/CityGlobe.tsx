@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronDown, Globe2 } from "lucide-react";
 import type { GlobeInstance } from "globe.gl";
+import { CITIES, CITY_CENTER } from "@/lib/mock";
 
 // 도시 선택 지구본(globe.gl). 나라 마커 → 나라 클릭 시 그 나라로 줌인 + 도시 마커를 정확한 좌표에 표시.
 // 도시 마커/버튼 클릭 → /home/[city]. "전체 지구본"으로 줌아웃. globe.gl은 window를 쓰므로 동적 import.
@@ -27,74 +28,41 @@ type Country = {
 type Datum = Partial<Country> &
   Partial<City> & { name: string; lat: number; lng: number };
 
-const COUNTRIES: Country[] = [
-  {
-    id: "jp",
-    name: "일본",
-    nameEn: "JAPAN",
-    lat: 36.5,
-    lng: 138.2,
-    cities: [
-      {
-        id: "tokyo",
-        name: "도쿄",
-        spots: 342,
-        available: true,
-        lat: 35.6762,
-        lng: 139.6503,
-      },
-      {
-        id: "osaka",
-        name: "오사카",
-        spots: 156,
-        available: true,
-        lat: 34.6937,
-        lng: 135.5023,
-      },
-      {
-        id: "kyoto",
-        name: "교토",
-        spots: 189,
-        available: true,
-        lat: 35.0116,
-        lng: 135.7681,
-      },
-      {
-        id: "fukuoka",
-        name: "후쿠오카",
-        spots: 98,
-        available: true,
-        lat: 33.5904,
-        lng: 130.4017,
-      },
-    ],
-  },
-  {
-    id: "kr",
-    name: "한국",
-    nameEn: "KOREA",
-    lat: 36.5,
-    lng: 127.8,
-    cities: [
-      {
-        id: "seoul",
-        name: "서울",
-        spots: 218,
-        available: true,
-        lat: 37.5665,
-        lng: 126.978,
-      },
-      {
-        id: "busan",
-        name: "부산",
-        spots: 134,
-        available: true,
-        lat: 35.1796,
-        lng: 129.0756,
-      },
-    ],
-  },
-];
+// 국가 마커 메타(한국어 국가명 기준). 도시 목록은 lib/mock 의 CITIES/CITY_CENTER 에서 동적으로
+// 그룹핑한다 → 새 도시를 mock 에 추가하면 /city 지구본에 자동으로 나타난다(하드코딩 아님).
+const COUNTRY_META: Record<
+  string,
+  { id: string; nameEn: string; lat: number; lng: number }
+> = {
+  일본: { id: "jp", nameEn: "JAPAN", lat: 36.5, lng: 138.2 },
+  한국: { id: "kr", nameEn: "KOREA", lat: 36.5, lng: 127.8 },
+  대만: { id: "tw", nameEn: "TAIWAN", lat: 23.7, lng: 121.0 },
+  홍콩: { id: "hk", nameEn: "HONG KONG", lat: 22.32, lng: 114.17 },
+  태국: { id: "th", nameEn: "THAILAND", lat: 15.0, lng: 101.0 },
+  싱가포르: { id: "sg", nameEn: "SINGAPORE", lat: 1.35, lng: 103.82 },
+  프랑스: { id: "fr", nameEn: "FRANCE", lat: 46.6, lng: 2.2 },
+  영국: { id: "gb", nameEn: "UK", lat: 54.0, lng: -2.0 },
+  미국: { id: "us", nameEn: "USA", lat: 39.0, lng: -98.0 },
+  스페인: { id: "es", nameEn: "SPAIN", lat: 40.0, lng: -3.7 },
+};
+
+const COUNTRIES: Country[] = Object.entries(COUNTRY_META)
+  .map(([krName, m]) => ({
+    id: m.id,
+    name: krName,
+    nameEn: m.nameEn,
+    lat: m.lat,
+    lng: m.lng,
+    cities: CITIES.filter((c) => c.country === krName).map((c) => ({
+      id: c.id,
+      name: c.name,
+      spots: c.spotCount,
+      available: true,
+      lat: CITY_CENTER[c.id].lat,
+      lng: CITY_CENTER[c.id].lng,
+    })),
+  }))
+  .filter((co) => co.cities.length > 0);
 
 export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
   const containerRef = useRef<HTMLDivElement>(null);
