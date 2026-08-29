@@ -218,6 +218,81 @@ export async function createCollectionAction(
   return { ok: true, collectionId: col.id };
 }
 
+// E · 컬렉션 공개범위 변경(소유자 전용, 공식 제외). PRIVATE ↔ LINK(링크 아는 사람 열람).
+const VisibilityInput = z.object({
+  collectionId: z.string().trim().min(1),
+  visibility: z.enum(["PRIVATE", "LINK"]),
+});
+export async function setCollectionVisibilityAction(
+  raw: z.input<typeof VisibilityInput>,
+): Promise<Fail | { ok: true }> {
+  const user = await getCurrentUser();
+  if (!user?.id) return { ok: false, reason: "unauthenticated" };
+  const parsed = VisibilityInput.safeParse(raw);
+  if (!parsed.success) return { ok: false, reason: "invalid" };
+  const { collectionId, visibility } = parsed.data;
+  const r = await db.collection.updateMany({
+    where: { id: collectionId, ownerId: user.id, isOfficial: false },
+    data: { visibility },
+  });
+  if (r.count === 0) return { ok: false, reason: "forbidden" };
+  return { ok: true };
+}
+
+// E · 컬렉션 이름 변경(소유자 전용, 기본함 "저장됨"·공식 제외 — rules §불변식).
+const RenameInput = z.object({
+  collectionId: z.string().trim().min(1),
+  title: z.string().trim().min(1).max(40),
+});
+export async function renameCollectionAction(
+  raw: z.input<typeof RenameInput>,
+): Promise<Fail | { ok: true }> {
+  const user = await getCurrentUser();
+  if (!user?.id) return { ok: false, reason: "unauthenticated" };
+  const parsed = RenameInput.safeParse(raw);
+  if (!parsed.success) return { ok: false, reason: "invalid" };
+  const { collectionId, title } = parsed.data;
+  const r = await db.collection.updateMany({
+    where: {
+      id: collectionId,
+      ownerId: user.id,
+      isOfficial: false,
+      isDefault: false,
+    },
+    data: { title },
+  });
+  if (r.count === 0) return { ok: false, reason: "forbidden" };
+  return { ok: true };
+}
+
+// E · 컬렉션 삭제(소유자 전용, 기본함·공식 제외). 항목 saveCount 정리 후 삭제(항목은 Cascade).
+export async function deleteCollectionAction(
+  collectionId: string,
+): Promise<Fail | { ok: true }> {
+  const user = await getCurrentUser();
+  if (!user?.id) return { ok: false, reason: "unauthenticated" };
+  const col = await db.collection.findFirst({
+    where: {
+      id: collectionId,
+      ownerId: user.id,
+      isOfficial: false,
+      isDefault: false,
+    },
+    select: { id: true, items: { select: { spotId: true } } },
+  });
+  if (!col) return { ok: false, reason: "forbidden" };
+  await db.$transaction([
+    ...col.items.map((it) =>
+      db.spot.update({
+        where: { id: it.spotId },
+        data: { saveCount: { decrement: 1 } },
+      }),
+    ),
+    db.collection.delete({ where: { id: collectionId } }),
+  ]);
+  return { ok: true };
+}
+
 // 핀 빠른 저장 토글 — 기본 "저장됨" 컬렉션 기준. 있으면 제거, 없으면 추가.
 export async function toggleSaveAction(
   spotId: string,

@@ -74,6 +74,8 @@ export interface Collection {
   coverGrad: string;
   isOwn: boolean;
   isOfficial: boolean;
+  visibility?: "PRIVATE" | "LINK"; // 공개범위(기본 PRIVATE). LINK = 링크 아는 사람 열람.
+  isDefault?: boolean; // 기본함 "저장됨"(이름변경·삭제 불가)
   spots: string[];
 }
 

@@ -13,6 +13,9 @@ import {
   ChevronUp,
   ChevronDown,
   ArrowUpDown,
+  Link2,
+  Check,
+  Copy,
 } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { CategoryLabel } from "../ui/CategoryLabel";
@@ -20,6 +23,9 @@ import { CollectionMap } from "./CollectionMap";
 import {
   removeSpotAction,
   reorderCollectionAction,
+  renameCollectionAction,
+  setCollectionVisibilityAction,
+  deleteCollectionAction,
 } from "@/lib/actions/mutations";
 import type { Collection, Spot } from "@/lib/mock";
 
@@ -40,6 +46,16 @@ export function CollectionDetail({
   const [savingOrder, setSavingOrder] = useState(false);
   const remaining = col.itemCount - items.length;
   const owned = col.isOwn && !col.isOfficial; // 내 컬렉션만 편집·삭제
+  // 관리 시트(이름변경·공유범위·삭제) — 소유자 전용
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [title, setTitle] = useState(col.title);
+  const [vis, setVis] = useState<"PRIVATE" | "LINK">(
+    col.visibility ?? "PRIVATE",
+  );
+  const [savingName, setSavingName] = useState(false);
+  const [savingVis, setSavingVis] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   // 순서 이동(위/아래). 지도 동선·번호도 items 기준이라 함께 갱신.
   const move = (i: number, dir: -1 | 1) =>
@@ -73,6 +89,58 @@ export function CollectionDetail({
       setItems((prev) => prev.filter((s) => s.id !== spotId));
       router.refresh(); // 저장 카운트·상세 반영
     }
+  };
+
+  // 이름 변경(서버 소유권 검증). 로컬 title은 이미 입력값이라 성공 시 새로고침만.
+  const saveName = async () => {
+    const t = title.trim();
+    if (savingName || !t || t === col.title) return;
+    setSavingName(true);
+    const res = await renameCollectionAction({
+      collectionId: col.id,
+      title: t,
+    });
+    setSavingName(false);
+    if (res.ok) router.refresh();
+  };
+
+  // 공개범위 토글 PRIVATE↔LINK(서버 소유권 검증).
+  const toggleVis = async () => {
+    if (savingVis) return;
+    const next = vis === "LINK" ? "PRIVATE" : "LINK";
+    setSavingVis(true);
+    const res = await setCollectionVisibilityAction({
+      collectionId: col.id,
+      visibility: next,
+    });
+    setSavingVis(false);
+    if (res.ok) setVis(next);
+  };
+
+  // 공유 링크 복사(LINK일 때만 노출).
+  const copyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1600);
+    } catch {
+      /* 클립보드 권한 없음 — 무시 */
+    }
+  };
+
+  // 삭제(확인 후, 서버 소유권 검증). 성공 시 목록으로.
+  const del = async () => {
+    if (deleting) return;
+    if (
+      !window.confirm(`'${col.title}' 컬렉션을 삭제할까요? 되돌릴 수 없어요.`)
+    )
+      return;
+    setDeleting(true);
+    const res = await deleteCollectionAction(col.id);
+    if (res.ok) {
+      router.push("/collections");
+      router.refresh();
+    } else setDeleting(false);
   };
 
   const toggle = (
@@ -116,19 +184,37 @@ export function CollectionDetail({
               >
                 <ChevronLeft size={20} />
               </Link>
-              <span
-                aria-disabled
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"
-              >
-                <MoreHorizontal size={20} />
-              </span>
+              {owned ? (
+                <button
+                  onClick={() => setMenuOpen(true)}
+                  aria-label="컬렉션 관리"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur active:scale-90"
+                >
+                  <MoreHorizontal size={20} />
+                </button>
+              ) : (
+                <span
+                  aria-disabled
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"
+                >
+                  <MoreHorizontal size={20} />
+                </span>
+              )}
             </div>
             <div className="absolute inset-x-5 bottom-8 text-cream">
-              <div className="font-latin text-[10px] font-semibold uppercase tracking-[0.18em] opacity-85">
+              <div className="flex items-center gap-1.5 font-latin text-[10px] font-semibold uppercase tracking-[0.18em] opacity-85">
                 {col.isOfficial ? "OFFICIAL" : "MY COLLECTION"}
+                {owned && vis === "LINK" && (
+                  <>
+                    <span aria-hidden>·</span>
+                    <span className="inline-flex items-center gap-0.5 normal-case tracking-normal">
+                      <Link2 size={11} /> 공유 링크
+                    </span>
+                  </>
+                )}
               </div>
               <h1 className="mt-1 text-[22px] font-extrabold leading-[1.2] tracking-[-0.02em]">
-                {col.title}
+                {title}
               </h1>
               <div className="mt-1.5 font-latin text-[11px] opacity-85">
                 {col.subtitle}
@@ -277,14 +363,24 @@ export function CollectionDetail({
               <ChevronLeft size={20} />
             </button>
             <span className="rounded-full bg-[rgba(255,249,242,0.9)] px-4 py-2.5 font-ko text-[13px] font-extrabold tracking-[-0.01em] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur">
-              {col.title}
+              {title}
             </span>
-            <span
-              aria-disabled
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur"
-            >
-              <Pencil size={18} />
-            </span>
+            {owned ? (
+              <button
+                onClick={() => setMenuOpen(true)}
+                aria-label="컬렉션 관리"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur active:scale-90"
+              >
+                <Pencil size={18} />
+              </button>
+            ) : (
+              <span
+                aria-disabled
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur"
+              >
+                <Pencil size={18} />
+              </span>
+            )}
           </div>
           {/* Toggle */}
           <div className="absolute left-1/2 top-24 z-[9] -translate-x-1/2">
@@ -325,6 +421,120 @@ export function CollectionDetail({
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      )}
+
+      {/* 관리 시트 — 이름 변경·공유 링크·삭제 (소유자 전용) */}
+      {menuOpen && owned && (
+        <div
+          className="fixed inset-0 z-[60] flex items-end justify-center"
+          role="dialog"
+          aria-modal="true"
+          aria-label="컬렉션 관리"
+        >
+          <button
+            className="absolute inset-0 bg-navy/40 backdrop-blur-[1px]"
+            aria-label="닫기"
+            onClick={() => setMenuOpen(false)}
+          />
+          <div className="relative z-10 w-full max-w-[500px] rounded-t-[26px] bg-cream px-5 pb-9 pt-3 shadow-[shadow:var(--sh-elevated)] lg:max-w-[720px]">
+            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line)]" />
+            <h2 className="px-1 text-[15px] font-extrabold tracking-[-0.01em] text-navy">
+              컬렉션 관리
+            </h2>
+
+            {/* 이름 변경 — 기본함 "저장됨"은 변경 불가 */}
+            {!col.isDefault && (
+              <div className="mt-4">
+                <label
+                  htmlFor="col-rename"
+                  className="px-1 text-[11px] font-bold text-[color:var(--muted)]"
+                >
+                  이름
+                </label>
+                <div className="mt-1.5 flex gap-2">
+                  <input
+                    id="col-rename"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    maxLength={40}
+                    className="min-w-0 flex-1 rounded-xl border border-[color:var(--line)] bg-white px-3.5 py-2.5 text-[14px] font-semibold text-navy outline-none focus:border-coral"
+                  />
+                  <button
+                    onClick={() => void saveName()}
+                    disabled={
+                      savingName || !title.trim() || title.trim() === col.title
+                    }
+                    className="shrink-0 rounded-xl bg-navy px-4 text-[13px] font-bold text-cream disabled:opacity-40"
+                  >
+                    {savingName ? "저장 중" : "저장"}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* 공유 링크 — PRIVATE↔LINK */}
+            <div className="mt-5 rounded-[16px] bg-white p-4 shadow-[shadow:var(--sh-card)]">
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex min-w-0 items-center gap-2.5">
+                  <Link2 size={16} className="shrink-0 text-coral" />
+                  <div className="min-w-0">
+                    <div className="text-[13px] font-bold text-navy">
+                      공유 링크
+                    </div>
+                    <div className="truncate text-[11px] text-[color:var(--muted)]">
+                      {vis === "LINK"
+                        ? "링크가 있으면 누구나 열람"
+                        : "나만 볼 수 있음"}
+                    </div>
+                  </div>
+                </div>
+                <button
+                  role="switch"
+                  aria-checked={vis === "LINK"}
+                  aria-label="공유 링크 켜기"
+                  onClick={() => void toggleVis()}
+                  disabled={savingVis}
+                  className={`relative h-[26px] w-[46px] shrink-0 rounded-full transition-colors disabled:opacity-50 ${
+                    vis === "LINK" ? "bg-coral" : "bg-[color:var(--line)]"
+                  }`}
+                >
+                  <span
+                    className={`absolute top-[3px] h-5 w-5 rounded-full bg-white shadow-[shadow:var(--sh-card)] transition-all ${
+                      vis === "LINK" ? "left-[23px]" : "left-[3px]"
+                    }`}
+                  />
+                </button>
+              </div>
+              {vis === "LINK" && (
+                <button
+                  onClick={() => void copyLink()}
+                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-[color:var(--cream-2)] py-2.5 text-[12px] font-bold text-navy active:scale-[0.99]"
+                >
+                  {copied ? (
+                    <>
+                      <Check size={14} /> 복사됨
+                    </>
+                  ) : (
+                    <>
+                      <Copy size={14} /> 링크 복사
+                    </>
+                  )}
+                </button>
+              )}
+            </div>
+
+            {/* 삭제 — 기본함 "저장됨"은 삭제 불가 */}
+            {!col.isDefault && (
+              <button
+                onClick={() => void del()}
+                disabled={deleting}
+                className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-[#f0c9cc] bg-white py-3 text-[13px] font-bold text-coral active:scale-[0.99] disabled:opacity-50"
+              >
+                <Trash2 size={15} /> {deleting ? "삭제 중…" : "컬렉션 삭제"}
+              </button>
+            )}
           </div>
         </div>
       )}
