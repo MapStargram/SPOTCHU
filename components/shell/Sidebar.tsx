@@ -37,7 +37,8 @@ const labelBase =
   "whitespace-nowrap text-[16px] leading-none opacity-0 transition-opacity duration-150 group-hover:opacity-100";
 
 export function Sidebar({ active }: { active?: Active }) {
-  const city = useCurrentCity(); // 탐색은 현재/마지막으로 보던 도시로
+  const city = useCurrentCity(); // 탐색은 현재/마지막 도시로, 없으면 /explore 리졸버(위치 기반)
+  const exploreHref = city ? `/explore/${city}` : "/explore";
   return (
     <aside className="group peer fixed inset-y-0 left-0 z-30 hidden w-[76px] flex-col overflow-hidden border-r border-[color:var(--line)] bg-cream transition-[width] duration-200 ease-out hover:w-[244px] hover:shadow-[var(--sh-card)] lg:flex">
       <div className="flex w-[244px] flex-1 flex-col px-3 py-6">
@@ -64,7 +65,7 @@ export function Sidebar({ active }: { active?: Active }) {
         <nav className="flex flex-col gap-1">
           {NAV.map(({ id, label, Icon, href }) => {
             const on = active === id;
-            const to = id === "explore" ? `/explore/${city}` : href;
+            const to = id === "explore" ? exploreHref : href;
             return (
               <Link
                 key={id}

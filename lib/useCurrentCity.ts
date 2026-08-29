@@ -8,12 +8,12 @@ import type { CityId } from "./mock";
 const KEY = "spotchu_city";
 
 // 네비 '탐색' 링크용 현재 도시. 도시 페이지면 그 도시(+마지막 선택으로 저장),
-// 도시 페이지가 아니면(발견 홈·컬렉션·프로필 등) 마지막 선택 도시 → 없으면 tokyo.
-// → 어디서 탐색을 눌러도 마지막으로 보던 도시로 이동(하드코딩 tokyo 방지).
-export function useCurrentCity(): CityId {
+// 아니면 마지막 선택 도시. 선호 도시가 아직 없으면 null → 나비는 /explore 리졸버로
+// 보내 위치 기반으로 결정한다(하드코딩 tokyo 방지).
+export function useCurrentCity(): CityId | null {
   const pathname = usePathname();
   const matched = matchCityInPath(pathname);
-  const [city, setCity] = useState<CityId>(matched ?? "tokyo");
+  const [city, setCity] = useState<CityId | null>(matched);
 
   useEffect(() => {
     if (matched) {
@@ -25,8 +25,7 @@ export function useCurrentCity(): CityId {
       }
     } else {
       try {
-        const saved = localStorage.getItem(KEY) as CityId | null;
-        if (saved) setCity(saved);
+        setCity(localStorage.getItem(KEY) as CityId | null);
       } catch {
         /* noop */
       }
