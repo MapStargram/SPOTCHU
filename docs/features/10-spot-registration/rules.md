@@ -38,7 +38,8 @@
 - 서버 액션 `createSpotReportAction`(`lib/actions/mutations.ts`): 필수(이름·카테고리·도시·촬영자 좌표·촬영 대상) zod 검증, `verificationStatus=USER_REPORTED` 강제, 생성 후 `ModerationItem(NEW_SPOT)` 큐 적재.
 - **안전 태그 모델**: `SafetyTag` 4종(사유지/철도/차도/영업장) **다중 선택** + "안전·촬영 매너 확인" 체크 **필수**. 판정은 안전 태그 기반(자동 감지 아님).
 - **고위험 차단**: 현재 확정값은 **철도(`RAILWAY`)** 뿐(`lib/safety.ts` `HIGH_RISK_TAGS`). 서버·클라 공통 `isBlockedHighRisk`로 차단. 전체 목록 확정 시 배열만 확장.
-- **대표 사진**: 이번 페이즈 **선택 입력**(업로드+EXIF 위치 제거 파이프라인 미배선). 파이프라인 배선 시 필수화 재검토(spec §26·§23).
+- **대표 사진**: **필수**(반영됨). 제보 폼에서 사진 1장 선택 → `POST /api/upload`(서버 `stripJpegExif`로 EXIF 위치 제거 → Cloudinary `secure_url`) → `coverImageUrl`로 저장. 클라 리사이즈는 `lib/client-upload`(게시물 업로드와 공용). 서버 스키마 `coverImageUrl` 필수화.
+- **도시 선택**: 하드코딩(서울·도쿄) 폐지 → `getCities`로 실제 도시 주입(검색·탐색과 동일).
 - **좌표 유효성**: lat/lng 범위(-90~90 / -180~180) 검증 적용. 도시 경계 검증은 미정.
 - **방위각**: `subjectLat/Lng`가 있으면 `bearingDeg`로 서버 자동 계산. 지도상 '촬영 대상 지점' 탭 UI는 후속.
 

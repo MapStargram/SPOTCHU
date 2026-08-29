@@ -6,48 +6,13 @@ import { Plus, X, Search, MapPin, LogIn, Loader2, Check } from "lucide-react";
 import { TagPill } from "../ui/TagPill";
 import { CoralButton } from "../ui/CoralButton";
 import { createPostAction, findSpotsAction } from "@/lib/actions/mutations";
+import { uploadImageFile } from "@/lib/client-upload";
 
 type PickedSpot = { id: string; title: string };
 type Picked = { id: string; file: File; previewUrl: string };
 type SpotResult = { id: string; title: string; cityLabel: string };
 
 const MAX_PHOTOS = 5;
-
-// 클라이언트 리사이즈: canvas 재인코딩으로 용량↓ + EXIF 제거(1차 방어, 서버가 최종 제거).
-async function resizeToBlob(
-  file: File,
-  maxDim = 1600,
-  quality = 0.85,
-): Promise<Blob> {
-  const bitmap = await createImageBitmap(file);
-  const scale = Math.min(1, maxDim / Math.max(bitmap.width, bitmap.height));
-  const w = Math.max(1, Math.round(bitmap.width * scale));
-  const h = Math.max(1, Math.round(bitmap.height * scale));
-  const canvas = document.createElement("canvas");
-  canvas.width = w;
-  canvas.height = h;
-  const ctx = canvas.getContext("2d");
-  if (!ctx) return file;
-  ctx.drawImage(bitmap, 0, 0, w, h);
-  bitmap.close();
-  return new Promise<Blob>((resolve) =>
-    canvas.toBlob((b) => resolve(b ?? file), "image/jpeg", quality),
-  );
-}
-
-async function uploadOne(file: File): Promise<string> {
-  const blob = await resizeToBlob(file);
-  const fd = new FormData();
-  fd.append("file", blob, "photo.jpg");
-  const res = await fetch("/api/upload", { method: "POST", body: fd });
-  const data = (await res.json()) as {
-    ok: boolean;
-    url?: string;
-    reason?: string;
-  };
-  if (!data.ok || !data.url) throw new Error(data.reason ?? "upload_failed");
-  return data.url;
-}
 
 // H2 · 게시물 업로드. 사진(1~5)·스팟 연결(필수)·캡션·인증 뱃지. 저장은 Cloudinary(서버) + createPostAction.
 export function UploadForm({
@@ -130,7 +95,7 @@ export function UploadForm({
     setSubmitting(true);
     try {
       const imageUrls: string[] = [];
-      for (const p of photos) imageUrls.push(await uploadOne(p.file));
+      for (const p of photos) imageUrls.push(await uploadImageFile(p.file));
       const res = await createPostAction({
         spotId: spot.id,
         caption: caption.trim() || undefined,
