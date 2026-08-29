@@ -2,24 +2,22 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   ChevronLeft,
   MoreHorizontal,
   Layers,
   Map as MapIcon,
   Pencil,
+  Trash2,
 } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
-import { MapMarker } from "../map/MapMarker";
 import { CategoryLabel } from "../ui/CategoryLabel";
+import { CollectionMap } from "./CollectionMap";
+import { removeSpotAction } from "@/lib/actions/mutations";
 import type { Collection, Spot } from "@/lib/mock";
 
-const MARK_POS = [
-  { x: 26, y: 30 },
-  { x: 51, y: 38 },
-  { x: 72, y: 47 },
-  { x: 51, y: 62 },
-];
+const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
 export function CollectionDetail({
   col,
@@ -28,8 +26,23 @@ export function CollectionDetail({
   col: Collection;
   spots: Spot[];
 }) {
+  const router = useRouter();
   const [view, setView] = useState<"list" | "map">("list");
-  const remaining = col.itemCount - spots.length;
+  const [items, setItems] = useState<Spot[]>(spots); // 낙관적 제거 반영
+  const [removing, setRemoving] = useState<string | null>(null);
+  const remaining = col.itemCount - items.length;
+
+  // 내 컬렉션에서 스팟 빼기(서버 소유권 검증). 성공 시 목록·지도 즉시 갱신.
+  const remove = async (spotId: string) => {
+    if (removing) return;
+    setRemoving(spotId);
+    const res = await removeSpotAction(spotId, col.id);
+    setRemoving(null);
+    if (res.ok) {
+      setItems((prev) => prev.filter((s) => s.id !== spotId));
+      router.refresh(); // 저장 카운트·상세 반영
+    }
+  };
 
   const toggle = (
     <div className="inline-flex gap-0.5 rounded-full bg-white p-1 shadow-[shadow:var(--sh-elevated)]">
@@ -96,19 +109,32 @@ export function CollectionDetail({
 
           {/* Numbered list */}
           <ul className="mt-4 flex flex-col gap-2.5 px-4">
-            {spots.map((s, i) => (
-              <li key={s.id}>
+            {items.map((s, i) => (
+              <li
+                key={s.id}
+                className="flex items-center gap-2 rounded-[14px] bg-white px-3 py-2.5 shadow-[shadow:var(--sh-card)]"
+              >
                 <Link
                   href={`/spot/${s.id}`}
-                  className="flex items-center gap-3 rounded-[14px] bg-white px-3 py-2.5 shadow-[shadow:var(--sh-card)]"
+                  className="flex min-w-0 flex-1 items-center gap-3"
                 >
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[color:var(--cream-2)] font-latin text-[14px] font-extrabold text-coral">
                     {i + 1}
                   </span>
                   <span
-                    className="h-[52px] w-[52px] shrink-0 rounded-[10px]"
+                    className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-[10px]"
                     style={{ background: s.thumbGrad }}
-                  />
+                  >
+                    {s.imageUrl && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={s.imageUrl}
+                        alt=""
+                        loading="lazy"
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    )}
+                  </span>
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-[13px] font-bold tracking-[-0.01em] text-navy">
                       {s.title}
@@ -121,13 +147,29 @@ export function CollectionDetail({
                       </span>
                     </span>
                   </span>
+                </Link>
+                {col.isOwn && !col.isOfficial ? (
+                  <button
+                    onClick={() => void remove(s.id)}
+                    disabled={removing === s.id}
+                    aria-label={`${s.title} 컬렉션에서 빼기`}
+                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[color:var(--muted)] transition active:scale-90 disabled:opacity-40"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                ) : (
                   <MoreHorizontal
                     size={16}
-                    className="text-[color:var(--muted)]"
+                    className="shrink-0 text-[color:var(--muted)]"
                   />
-                </Link>
+                )}
               </li>
             ))}
+            {items.length === 0 && (
+              <li className="py-10 text-center text-[13px] text-[color:var(--muted)]">
+                아직 담긴 스팟이 없어요.
+              </li>
+            )}
             {remaining > 0 && (
               <li className="py-2 text-center text-[12px] text-[color:var(--muted)]">
                 + {remaining}개 더 있음
@@ -137,70 +179,53 @@ export function CollectionDetail({
         </>
       ) : (
         <div className="relative flex-1 overflow-hidden bg-[#DDE5EE]">
-          <MapBackground />
+          {/* 실제 지도(핀=촬영자 위치, 번호=순서, 점선=동선). 키 없으면 폴백 배경. */}
+          {KEY ? <CollectionMap spots={items} /> : <MapBackground />}
           {/* Top bar */}
           <div className="absolute inset-x-4 top-14 z-10 flex items-center justify-between">
             <button
               onClick={() => setView("list")}
               aria-label="뒤로"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur"
             >
               <ChevronLeft size={20} />
             </button>
-            <span className="rounded-full bg-[rgba(255,249,242,0.9)] px-4 py-2.5 font-ko text-[13px] font-extrabold tracking-[-0.01em] text-navy backdrop-blur">
+            <span className="rounded-full bg-[rgba(255,249,242,0.9)] px-4 py-2.5 font-ko text-[13px] font-extrabold tracking-[-0.01em] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur">
               {col.title}
             </span>
             <span
               aria-disabled
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur"
             >
               <Pencil size={18} />
             </span>
           </div>
-          {/* Path */}
-          <svg
-            className="absolute inset-0 h-full w-full"
-            viewBox="0 0 390 844"
-            preserveAspectRatio="none"
-            aria-hidden
-          >
-            <path
-              d="M 100 260 L 200 320 L 280 400 L 200 520"
-              stroke="#FF5F6D"
-              strokeWidth="3"
-              strokeDasharray="6 6"
-              fill="none"
-              opacity="0.7"
-            />
-          </svg>
-          {/* Numbered markers */}
-          {spots.slice(0, 4).map((s, i) => (
-            <MapMarker
-              key={s.id}
-              state={i === 2 ? "visited" : "saved"}
-              x={MARK_POS[i].x}
-              y={MARK_POS[i].y}
-              badge={String(i + 1)}
-              focused={i === 0}
-            />
-          ))}
           {/* Toggle */}
           <div className="absolute left-1/2 top-24 z-[9] -translate-x-1/2">
             {toggle}
           </div>
-          {/* Carousel */}
+          {/* Carousel — 담긴 스팟 스와이프(실사진·번호) */}
           <div className="absolute inset-x-0 bottom-[100px] z-[9] flex gap-2.5 overflow-x-auto px-3.5 [scrollbar-width:none]">
-            {spots.slice(0, 3).map((s, i) => (
+            {items.map((s, i) => (
               <Link
                 key={s.id}
                 href={`/spot/${s.id}`}
                 className="flex w-[260px] shrink-0 items-center gap-2.5 rounded-2xl bg-white p-3 shadow-[shadow:var(--sh-elevated)]"
               >
                 <div
-                  className="relative h-14 w-14 shrink-0 rounded-xl"
+                  className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl"
                   style={{ background: s.thumbGrad }}
                 >
-                  <span className="absolute -left-1.5 -top-1.5 flex h-[22px] w-[22px] items-center justify-center rounded-full bg-coral font-latin text-[11px] font-extrabold text-cream">
+                  {s.imageUrl && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={s.imageUrl}
+                      alt=""
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  )}
+                  <span className="absolute -left-1.5 -top-1.5 z-10 flex h-[22px] w-[22px] items-center justify-center rounded-full bg-coral font-latin text-[11px] font-extrabold text-cream">
                     {i + 1}
                   </span>
                 </div>

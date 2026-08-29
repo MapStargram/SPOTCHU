@@ -36,6 +36,12 @@
 - 커버 이미지 저작권: [`../12-policies-safety-copyright-privacy/`](../12-policies-safety-copyright-privacy/)
 - 운영자 `isOfficial` 관리: [`../11-admin-moderation/`](../11-admin-moderation/)
 
+## 구현 현황
+- **컬렉션 상세 지도(반영됨)**: 가짜 배경·하드코딩 좌표 폐지 → 실제 Google Maps(`components/collections/CollectionMap`). 핀=촬영자 위치(shooterLat/Lng), 번호=순서, 점선=동선 경로, 전체 스팟 경계 맞춤(fitBounds), 클릭 시 상세. 키 없으면 폴백 배경.
+- **리스트/캐러셀 실사진 썸네일(반영됨)**: 그라디언트 위에 대표 사진(`imageUrl`) 표시.
+- **스팟 빼기(반영됨)**: 내 컬렉션(`isOwn` && !`isOfficial`)에서 `removeSpotAction`로 제거(서버 소유권 검증) + 낙관적 갱신.
+- **순서 편집(미반영)**: 드래그앤드롭 재정렬 + 서버 `order` 반영은 후속(전용 액션 신설 필요).
+
 ## TODO / 미결정
 - `LINK` 공개 URL 토큰 발급·무효화 정책(`PRIVATE` 재전환 시 링크 재사용/폐기 여부).
 - 기본함 `저장됨`의 시스템 식별 방식(전용 플래그 vs 예약 제목) — 데이터 모델 확정 대기.
