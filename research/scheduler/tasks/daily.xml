@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-16"?>
+<!-- Template. install-tasks.ps1 substitutes {{USER}} {{REPO}} {{TIME}} {{COUNTRY}} and registers
+     one instance per country (JP, KR). LogonType=Password so Windows Credential Manager (agy's
+     Google auth) is accessible when no one is interactively logged on. -->
+<Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+  <RegistrationInfo>
+    <Description>SPOTCHU Research — daily country research ({{COUNTRY}})</Description>
+    <URI>\SPOTCHU\Research-Daily-{{COUNTRY}}</URI>
+  </RegistrationInfo>
+  <Triggers>
+    <CalendarTrigger>
+      <StartBoundary>2026-01-01T{{TIME}}:00</StartBoundary>
+      <Enabled>true</Enabled>
+      <ScheduleByDay>
+        <DaysInterval>1</DaysInterval>
+      </ScheduleByDay>
+    </CalendarTrigger>
+  </Triggers>
+  <Principals>
+    <Principal id="Author">
+      <UserId>{{USER}}</UserId>
+      <LogonType>Password</LogonType>
+      <RunLevel>LeastPrivilege</RunLevel>
+    </Principal>
+  </Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>false</StopIfGoingOnBatteries>
+    <AllowHardTerminate>true</AllowHardTerminate>
+    <StartWhenAvailable>true</StartWhenAvailable>
+    <RunOnlyIfNetworkAvailable>true</RunOnlyIfNetworkAvailable>
+    <AllowStartOnDemand>true</AllowStartOnDemand>
+    <Enabled>true</Enabled>
+    <Hidden>false</Hidden>
+    <ExecutionTimeLimit>PT2H</ExecutionTimeLimit>
+    <Priority>7</Priority>
+  </Settings>
+  <Actions Context="Author">
+    <Exec>
+      <Command>powershell.exe</Command>
+      <Arguments>-NoProfile -ExecutionPolicy Bypass -File "{{REPO}}\research\scheduler\daily.ps1" -Country {{COUNTRY}}</Arguments>
+      <WorkingDirectory>{{REPO}}</WorkingDirectory>
+    </Exec>
+  </Actions>
+</Task>
