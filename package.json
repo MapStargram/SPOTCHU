@@ -21,6 +21,14 @@
     "db:deploy": "prisma migrate deploy",
     "db:seed": "tsx prisma/seed.ts",
     "import:leads": "tsx scripts/import-leads.ts",
+    "research": "tsx scripts/research-orchestrator.ts",
+    "research:daily": "tsx scripts/research-orchestrator.ts daily",
+    "research:country": "tsx scripts/research-orchestrator.ts country",
+    "research:verify": "tsx scripts/research-orchestrator.ts verify",
+    "research:global": "tsx scripts/research-orchestrator.ts global",
+    "research:status": "tsx scripts/research-orchestrator.ts status",
+    "research:doctor": "tsx scripts/research-orchestrator.ts doctor",
+    "research:summary": "tsx scripts/research-orchestrator.ts summary",
     "postinstall": "prisma generate"
   },
   "prisma": {
