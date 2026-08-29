@@ -20,11 +20,32 @@ CANDIDATES (each line gives the leadId and its inbox file):
 valid leadIds for this batch are: {{LEAD_IDS}}.
 
 For EACH candidate: ingest, canonicalize URLs, check source independence, validate shooter
-geometry/bearing (the coordinate must be the photographer's position, never a POI/bridge pin),
-validate any image license, run duplicate detection, score the four confidences, classify status.
-Preserve the full rich record in `research/normalized/`. Write an import-ready file to
-`research/leads/<leadId>.json` (importer contract) ONLY for a candidate you classify
-READY_FOR_REVIEW with a confident shooter coordinate. Update `research/reports/{{RUN_DATE}}.md`.
+geometry/bearing, validate any image license, run duplicate detection, score the four confidences,
+classify status. Preserve the full rich record in `research/normalized/`. Update
+`research/reports/{{RUN_DATE}}.md`.
+
+## POSITION CONFIDENCE POLICY (app coverage — read carefully)
+The shooter coordinate is still the photographer's standing point, never blindly a POI centroid.
+BUT do not reject/withhold a real, well-evidenced spot just because the position is not pinpoint.
+Use two tiers:
+- **Exact position** (Street-View/photo-matched, or a clearly documented standing point) →
+  READY_FOR_REVIEW with `verified: "official"` or `"user"`.
+- **Area-level estimate** (a real spot with ≥2 independent sources and a clear photographic
+  composition, but the exact standing point is only known to ~a block/bridge span) → **still
+  READY_FOR_REVIEW**, using the best defensible approximate coordinate, `verified: "reported"`, and
+  a `tip` that states the position is approximate (e.g. "위치는 근사치(구역 수준) — 현장에서 구도 확인").
+Only use `NEEDS_GEO_REVIEW` when you cannot even place the spot at area level, `POSSIBLE_DUPLICATE`
+for genuine dupes, and `REJECTED` only for fabricated / unlocatable / dangerous / no-evidence spots.
+For EACH `READY_FOR_REVIEW` candidate write an import-ready `research/leads/<leadId>.json` in the
+importer contract (titleKo, city ∈ the six app cities, category, shooterLat/Lng, area, subject,
+tip, verified, source, optional work/image).
+
+## MALFORMED HANDLING
+The orchestrator writes each inbox file with `JSON.stringify` — it IS valid JSON. If your first read
+looks malformed (e.g. an "unterminated string"), it is almost certainly a read/parse artifact on
+your side: re-read the whole file and parse it robustly before concluding. Do NOT REJECT a valid
+candidate as malformed. Only quarantine if the file genuinely fails a strict JSON parse after a
+careful re-read.
 
 ## SCOPE — validation only (§3, performance)
 Do ONLY research-data validation: JSON/schema, the research zod contract, geo checks, license

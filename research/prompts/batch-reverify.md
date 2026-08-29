@@ -7,9 +7,20 @@ RUN_DATE = {{RUN_DATE}}
 INBOX_DIR = {{INBOX_DIR}}
 
 Antigravity has re-investigated the leads below. Re-ingest each updated inbox candidate,
-re-run geo/source/dedupe/skeptic checks, and re-score. Each lead is INDEPENDENT; a malformed
-one becomes REJECTED without failing the batch. Promote to `research/leads/<leadId>.json` only
-what is now genuinely READY_FOR_REVIEW with a confident shooter coordinate. Update the report.
+re-run geo/source/dedupe/skeptic checks, and re-score. Each lead is INDEPENDENT.
+
+## POSITION CONFIDENCE POLICY (same as batch-curate)
+Apply the two-tier rule: a real, well-evidenced spot (≥2 independent sources + clear composition)
+is **READY_FOR_REVIEW** even when the standing point is only area-level — use the best defensible
+approximate coordinate with `verified: "reported"` and a `tip` noting the position is approximate.
+Reserve `NEEDS_GEO_REVIEW` for spots you cannot place even at area level, and `REJECTED` for
+fabricated / unlocatable / dangerous / no-evidence spots. Promote every READY lead to
+`research/leads/<leadId>.json` in the importer contract.
+
+## MALFORMED HANDLING
+Inbox files are written by the orchestrator with `JSON.stringify` and ARE valid JSON. If a read
+looks malformed, re-read and parse robustly before concluding — do NOT reject a valid candidate as
+malformed.
 
 LEADS BEING RE-VERIFIED (with their open questions):
 {{BROWSER_QUEUE}}
