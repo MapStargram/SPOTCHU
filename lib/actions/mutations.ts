@@ -162,6 +162,37 @@ export async function removeSpotAction(
   return { ok: true };
 }
 
+// E · 컬렉션 스팟 순서 변경(소유자 전용). orderedSpotIds 순서대로 CollectionItem.order 갱신.
+const ReorderInput = z.object({
+  collectionId: z.string().trim().min(1),
+  orderedSpotIds: z.array(z.string().trim().min(1)).min(1).max(500),
+});
+
+export async function reorderCollectionAction(
+  raw: z.input<typeof ReorderInput>,
+): Promise<Fail | { ok: true }> {
+  const user = await getCurrentUser();
+  if (!user?.id) return { ok: false, reason: "unauthenticated" };
+  const parsed = ReorderInput.safeParse(raw);
+  if (!parsed.success) return { ok: false, reason: "invalid" };
+  const { collectionId, orderedSpotIds } = parsed.data;
+  const owned = await db.collection.findFirst({
+    where: { id: collectionId, ownerId: user.id }, // 타인·공식 컬렉션 편집 차단
+    select: { id: true },
+  });
+  if (!owned) return { ok: false, reason: "forbidden" };
+  // 순서대로 order 부여(트랜잭션). 없는 항목은 updateMany가 조용히 무시.
+  await db.$transaction(
+    orderedSpotIds.map((spotId, i) =>
+      db.collectionItem.updateMany({
+        where: { collectionId, spotId },
+        data: { order: i },
+      }),
+    ),
+  );
+  return { ok: true };
+}
+
 // E · 새 컬렉션 생성(소유자=현재 유저, 기본 visibility=PRIVATE). rules §불변식
 const CreateCollectionInput = z.object({
   title: z.string().trim().min(1).max(40),
