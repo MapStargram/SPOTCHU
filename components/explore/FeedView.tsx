@@ -50,7 +50,7 @@ export function FeedView({ spots }: { spots: Spot[] }) {
               {s.title}
             </div>
             <div className="mt-1 font-latin text-[10px] text-[color:var(--muted)]">
-              {s.visits.toLocaleString()} 방문
+              {s.visits > 0 ? `${s.visits.toLocaleString()} 방문` : "신규"}
             </div>
           </div>
         </Link>

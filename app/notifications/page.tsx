@@ -60,7 +60,7 @@ export default async function NotificationsPage() {
         </header>
 
         {notifications.length === 0 ? (
-          <div className="mt-14">
+          <div className="flex min-h-[62vh] items-center justify-center">
             <EmptyState
               mascot="chu-mascot-front"
               title="아직 받은 알림이 없어요"

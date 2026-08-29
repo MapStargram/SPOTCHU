@@ -15,11 +15,13 @@ export function Select<T extends string>({
   options,
   onChange,
   ariaLabel,
+  align = "right",
 }: {
   value: T;
   options: SelectOption<T>[];
   onChange: (v: T) => void;
   ariaLabel?: string;
+  align?: "left" | "right"; // 메뉴 정렬 — 왼쪽 배치 트리거는 "left"로 화면 밖 이탈 방지
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -61,7 +63,7 @@ export function Select<T extends string>({
         <ul
           role="listbox"
           aria-label={ariaLabel}
-          className="absolute right-0 z-30 mt-1.5 min-w-[132px] overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white p-1 shadow-[shadow:var(--sh-search)]"
+          className={`absolute z-30 mt-1.5 min-w-[132px] overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white p-1 shadow-[shadow:var(--sh-search)] ${align === "left" ? "left-0" : "right-0"}`}
         >
           {options.map((o) => {
             const sel = o.value === value;

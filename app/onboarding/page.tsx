@@ -55,7 +55,7 @@ export default function OnboardingScreen() {
     <MobileScreen className="py-16">
       <button
         onClick={skip}
-        className="absolute right-6 top-16 z-10 font-latin text-[12px] font-semibold tracking-[0.05em] text-[color:var(--muted)]"
+        className="absolute right-6 top-16 z-10 rounded-full bg-[rgba(23,35,60,0.28)] px-3 py-1.5 font-latin text-[12px] font-semibold tracking-[0.05em] text-cream backdrop-blur"
       >
         건너뛰기
       </button>

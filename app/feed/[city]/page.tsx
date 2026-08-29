@@ -93,22 +93,24 @@ export default async function FeedPage({
         </nav>
 
         {posts.length === 0 ? (
-          <div className="mx-4 mt-10 flex flex-col items-center gap-4 rounded-[20px] bg-white px-6 py-12 text-center shadow-[shadow:var(--sh-card)]">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[color:var(--cream-2)] text-coral">
-              <Camera size={26} />
-            </span>
-            <p className="text-[13px] leading-[1.6] text-navy">
-              {tab === "verified"
-                ? "아직 방문 인증 사진이 없어요."
-                : "아직 이 도시의 사진이 없어요."}
-              <br />첫 사진을 올려 스팟을 알려보세요.
-            </p>
-            <Link
-              href="/upload"
-              className="rounded-full bg-coral px-4 py-2 text-[12px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
-            >
-              사진 올리기
-            </Link>
+          <div className="flex min-h-[62vh] items-center justify-center px-4">
+            <div className="flex w-full max-w-[360px] flex-col items-center gap-4 rounded-[20px] bg-white px-6 py-12 text-center shadow-[shadow:var(--sh-card)]">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[color:var(--cream-2)] text-coral">
+                <Camera size={26} />
+              </span>
+              <p className="text-[13px] leading-[1.6] text-navy">
+                {tab === "verified"
+                  ? "아직 방문 인증 사진이 없어요."
+                  : "아직 이 도시의 사진이 없어요."}
+                <br />첫 사진을 올려 스팟을 알려보세요.
+              </p>
+              <Link
+                href="/upload"
+                className="rounded-full bg-coral px-4 py-2 text-[12px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
+              >
+                사진 올리기
+              </Link>
+            </div>
           </div>
         ) : (
           <div className="mt-4 flex flex-col gap-4 px-4">
