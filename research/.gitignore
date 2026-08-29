@@ -1,0 +1,5 @@
+# 임시 증거 캐시·스크린샷(저작권 증거 임시 보관) — 커밋 금지
+cache/
+*.tmp
+*.screenshot.*
+# 조사 자료(inbox/normalized/leads/conflicts/rejected/reports)는 커밋해 보존한다.

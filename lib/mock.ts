@@ -6,6 +6,11 @@ import {
   RESEARCH_WORKS,
   RESEARCH_COORDS,
 } from "./spots.research";
+import {
+  IMPORTED_SPOTS,
+  IMPORTED_WORKS,
+  IMPORTED_COORDS,
+} from "./spots.imported";
 import { SPOT_IMAGES } from "./spot-images";
 
 // 출시 도시 id 단일 원천. 도시 추가는 여기만 고치면 CityId·검색/제보 zod enum이 함께 확장된다.
@@ -155,7 +160,11 @@ const BASE_WORKS: Work[] = [
   { id: "parasite", title: "기생충", type: "영화", spotCount: 5, progress: 2 },
 ];
 
-export const WORKS: Work[] = [...BASE_WORKS, ...RESEARCH_WORKS];
+export const WORKS: Work[] = [
+  ...BASE_WORKS,
+  ...RESEARCH_WORKS,
+  ...IMPORTED_WORKS,
+];
 
 const BASE_SPOTS: Spot[] = [
   {
@@ -298,7 +307,12 @@ const BASE_SPOTS: Spot[] = [
   },
 ];
 
-export const SPOTS: Spot[] = [...BASE_SPOTS, ...RESEARCH_SPOTS].map((s) => {
+// IMPORTED_SPOTS는 imageUrl/imageCredit이 이미 구워져 있음(SPOT_IMAGES에 없어 map이 그대로 통과).
+export const SPOTS: Spot[] = [
+  ...BASE_SPOTS,
+  ...RESEARCH_SPOTS,
+  ...IMPORTED_SPOTS,
+].map((s) => {
   const img = SPOT_IMAGES[s.id];
   return img
     ? {
@@ -407,6 +421,7 @@ const BASE_SPOT_COORDS: Record<string, { lat: number; lng: number }> = {
 export const SPOT_COORDS: Record<string, { lat: number; lng: number }> = {
   ...BASE_SPOT_COORDS,
   ...RESEARCH_COORDS,
+  ...IMPORTED_COORDS,
 };
 
 export const CITY_CENTER: Record<CityId, { lat: number; lng: number }> = {

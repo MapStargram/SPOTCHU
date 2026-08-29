@@ -1,0 +1,42 @@
+[
+  {
+    "id": "osaka-castle-example",
+    "titleKo": "오사카성 천수각 (예시)",
+    "city": "osaka",
+    "category": "landmark",
+    "shooterLat": 34.68678,
+    "shooterLng": 135.52337,
+    "area": "Osaka Castle, Chuo",
+    "subject": "니시노마루 정원 너머로 보이는 천수각과 해자",
+    "tip": "니시노마루 정원(유료)에서 서쪽 구도가 대표적. 벚꽃철엔 천수각과 벚꽃을 함께.",
+    "lens": "24-70mm",
+    "time": "늦은 오후",
+    "verified": "official",
+    "source": "https://osaka-info.jp/spot/osaka-castle-nishinomaru-garden/",
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Osaka_Castle_Keep_Tower_in_201504_001.JPG/960px-Osaka_Castle_Keep_Tower_in_201504_001.JPG",
+      "license": "CC BY-SA 4.0",
+      "author": "Mc681",
+      "source": "https://commons.wikimedia.org/wiki/File:Osaka_Castle_Keep_Tower_in_201504_001.JPG"
+    }
+  },
+  {
+    "titleKo": "예시 애니 성지 (CC 이미지 없음 → 그라디언트)",
+    "city": "kyoto",
+    "category": "anime",
+    "shooterLat": 35.0308,
+    "shooterLng": 135.7723,
+    "area": "Sakyo-ku Shimogamo, Kyoto",
+    "subject": "삼각주 징검돌 위에서 시내 방향",
+    "tip": "해질녘 노을. 젖은 징검돌 미끄럼 주의(우천 직후 건너지 말 것).",
+    "time": "해질녘",
+    "verified": "user",
+    "source": "https://ja.wikipedia.org/wiki/%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF",
+    "work": {
+      "id": "example-anime",
+      "titleKo": "예시 작품",
+      "type": "ANIME",
+      "scene": "오프닝 삼각주 장면"
+    }
+  }
+]

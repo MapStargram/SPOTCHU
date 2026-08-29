@@ -20,6 +20,7 @@
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
     "db:seed": "tsx prisma/seed.ts",
+    "import:leads": "tsx scripts/import-leads.ts",
     "postinstall": "prisma generate"
   },
   "prisma": {
