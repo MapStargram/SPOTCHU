@@ -10,11 +10,17 @@ import {
   Map as MapIcon,
   Pencil,
   Trash2,
+  ChevronUp,
+  ChevronDown,
+  ArrowUpDown,
 } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { CategoryLabel } from "../ui/CategoryLabel";
 import { CollectionMap } from "./CollectionMap";
-import { removeSpotAction } from "@/lib/actions/mutations";
+import {
+  removeSpotAction,
+  reorderCollectionAction,
+} from "@/lib/actions/mutations";
 import type { Collection, Spot } from "@/lib/mock";
 
 const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
@@ -28,9 +34,34 @@ export function CollectionDetail({
 }) {
   const router = useRouter();
   const [view, setView] = useState<"list" | "map">("list");
-  const [items, setItems] = useState<Spot[]>(spots); // 낙관적 제거 반영
+  const [items, setItems] = useState<Spot[]>(spots); // 낙관적 제거/순서 반영
   const [removing, setRemoving] = useState<string | null>(null);
+  const [editing, setEditing] = useState(false); // 순서 편집 모드
+  const [savingOrder, setSavingOrder] = useState(false);
   const remaining = col.itemCount - items.length;
+  const owned = col.isOwn && !col.isOfficial; // 내 컬렉션만 편집·삭제
+
+  // 순서 이동(위/아래). 지도 동선·번호도 items 기준이라 함께 갱신.
+  const move = (i: number, dir: -1 | 1) =>
+    setItems((prev) => {
+      const j = i + dir;
+      if (j < 0 || j >= prev.length) return prev;
+      const next = [...prev];
+      [next[i], next[j]] = [next[j], next[i]];
+      return next;
+    });
+
+  // 편집 완료 → 서버에 순서 반영(소유권 검증). 성공 시 로컬 순서가 곧 DB 순서.
+  const saveOrder = async () => {
+    if (savingOrder) return;
+    setSavingOrder(true);
+    await reorderCollectionAction({
+      collectionId: col.id,
+      orderedSpotIds: items.map((s) => s.id),
+    });
+    setSavingOrder(false);
+    setEditing(false);
+  };
 
   // 내 컬렉션에서 스팟 빼기(서버 소유권 검증). 성공 시 목록·지도 즉시 갱신.
   const remove = async (spotId: string) => {
@@ -107,17 +138,34 @@ export function CollectionDetail({
 
           <div className="-mt-5 flex justify-center">{toggle}</div>
 
-          {/* Numbered list */}
-          <ul className="mt-4 flex flex-col gap-2.5 px-4">
-            {items.map((s, i) => (
-              <li
-                key={s.id}
-                className="flex items-center gap-2 rounded-[14px] bg-white px-3 py-2.5 shadow-[shadow:var(--sh-card)]"
+          {/* 순서 편집(내 컬렉션·2개 이상) — 여행 계획 동선 순서 */}
+          {owned && items.length > 1 && (
+            <div className="mt-3 flex justify-end px-4">
+              <button
+                onClick={() => (editing ? void saveOrder() : setEditing(true))}
+                disabled={savingOrder}
+                className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-1.5 text-[12px] font-bold text-navy shadow-[shadow:var(--sh-card)] active:scale-[0.98] disabled:opacity-50"
               >
-                <Link
-                  href={`/spot/${s.id}`}
-                  className="flex min-w-0 flex-1 items-center gap-3"
-                >
+                {editing ? (
+                  savingOrder ? (
+                    "저장 중…"
+                  ) : (
+                    "완료"
+                  )
+                ) : (
+                  <>
+                    <ArrowUpDown size={13} /> 순서 편집
+                  </>
+                )}
+              </button>
+            </div>
+          )}
+
+          {/* Numbered list */}
+          <ul className="mt-3 flex flex-col gap-2.5 px-4">
+            {items.map((s, i) => {
+              const inner = (
+                <>
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[color:var(--cream-2)] font-latin text-[14px] font-extrabold text-coral">
                     {i + 1}
                   </span>
@@ -147,24 +195,62 @@ export function CollectionDetail({
                       </span>
                     </span>
                   </span>
-                </Link>
-                {col.isOwn && !col.isOfficial ? (
-                  <button
-                    onClick={() => void remove(s.id)}
-                    disabled={removing === s.id}
-                    aria-label={`${s.title} 컬렉션에서 빼기`}
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[color:var(--muted)] transition active:scale-90 disabled:opacity-40"
-                  >
-                    <Trash2 size={16} />
-                  </button>
-                ) : (
-                  <MoreHorizontal
-                    size={16}
-                    className="shrink-0 text-[color:var(--muted)]"
-                  />
-                )}
-              </li>
-            ))}
+                </>
+              );
+              return (
+                <li
+                  key={s.id}
+                  className="flex items-center gap-2 rounded-[14px] bg-white px-3 py-2.5 shadow-[shadow:var(--sh-card)]"
+                >
+                  {editing ? (
+                    <div className="flex min-w-0 flex-1 items-center gap-3">
+                      {inner}
+                    </div>
+                  ) : (
+                    <Link
+                      href={`/spot/${s.id}`}
+                      className="flex min-w-0 flex-1 items-center gap-3"
+                    >
+                      {inner}
+                    </Link>
+                  )}
+                  {editing ? (
+                    <div className="flex shrink-0 flex-col">
+                      <button
+                        onClick={() => move(i, -1)}
+                        disabled={i === 0}
+                        aria-label={`${s.title} 위로`}
+                        className="flex h-6 w-8 items-center justify-center rounded-md text-navy active:scale-90 disabled:opacity-25"
+                      >
+                        <ChevronUp size={18} />
+                      </button>
+                      <button
+                        onClick={() => move(i, 1)}
+                        disabled={i === items.length - 1}
+                        aria-label={`${s.title} 아래로`}
+                        className="flex h-6 w-8 items-center justify-center rounded-md text-navy active:scale-90 disabled:opacity-25"
+                      >
+                        <ChevronDown size={18} />
+                      </button>
+                    </div>
+                  ) : owned ? (
+                    <button
+                      onClick={() => void remove(s.id)}
+                      disabled={removing === s.id}
+                      aria-label={`${s.title} 컬렉션에서 빼기`}
+                      className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[color:var(--muted)] transition active:scale-90 disabled:opacity-40"
+                    >
+                      <Trash2 size={16} />
+                    </button>
+                  ) : (
+                    <MoreHorizontal
+                      size={16}
+                      className="shrink-0 text-[color:var(--muted)]"
+                    />
+                  )}
+                </li>
+              );
+            })}
             {items.length === 0 && (
               <li className="py-10 text-center text-[13px] text-[color:var(--muted)]">
                 아직 담긴 스팟이 없어요.
