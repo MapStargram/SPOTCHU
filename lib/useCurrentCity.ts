@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { matchCityInPath } from "./city-path";
-import type { CityId } from "./mock";
+import { CITY_IDS, type CityId } from "./mock";
 
 const KEY = "spotchu_city";
 
@@ -25,7 +25,13 @@ export function useCurrentCity(): CityId | null {
       }
     } else {
       try {
-        setCity(localStorage.getItem(KEY) as CityId | null);
+        // 저장값 검증 — 변조·구버전 값이면 null(→ /explore 리졸버). /explore/<invalid> 방지.
+        const saved = localStorage.getItem(KEY);
+        setCity(
+          saved && (CITY_IDS as readonly string[]).includes(saved)
+            ? (saved as CityId)
+            : null,
+        );
       } catch {
         /* noop */
       }

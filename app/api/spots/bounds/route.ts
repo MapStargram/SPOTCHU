@@ -8,12 +8,14 @@ import { CITY_IDS, type CityId } from "@/lib/mock";
 // 모든 외부 입력은 서버에서 스키마 검증(CLAUDE.md §5). 좌표는 유한값만.
 export const dynamic = "force-dynamic";
 
+const LAT = z.coerce.number().min(-90).max(90);
+const LNG = z.coerce.number().min(-180).max(180);
 const Query = z.object({
   city: z.string().refine((c) => (CITY_IDS as readonly string[]).includes(c)),
-  n: z.coerce.number().finite(), // north
-  s: z.coerce.number().finite(), // south
-  e: z.coerce.number().finite(), // east
-  w: z.coerce.number().finite(), // west
+  n: LAT, // north
+  s: LAT, // south
+  e: LNG, // east
+  w: LNG, // west
 });
 
 export async function GET(req: Request) {

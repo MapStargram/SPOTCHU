@@ -24,7 +24,7 @@ const NAV: {
   href: string;
 }[] = [
   { id: "home", label: "홈", Icon: Home, href: "/home" },
-  { id: "explore", label: "탐색", Icon: Compass, href: "/explore/tokyo" },
+  { id: "explore", label: "탐색", Icon: Compass, href: "/explore" }, // 실제 href는 useCurrentCity로 결정(아래)
   { id: "collections", label: "컬렉션", Icon: Bookmark, href: "/collections" },
   { id: "notifications", label: "알림", Icon: Bell, href: "/notifications" },
   { id: "report", label: "제보", Icon: PlusSquare, href: "/report" },
