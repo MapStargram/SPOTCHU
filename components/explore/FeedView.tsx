@@ -13,7 +13,7 @@ export function FeedView({ spots }: { spots: Spot[] }) {
         <Link
           key={s.id}
           href={`/spot/${s.id}`}
-          className="overflow-hidden rounded-2xl bg-white shadow-[var(--sh-card)]"
+          className="overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white shadow-[shadow:var(--sh-card)]"
         >
           <div
             className="relative aspect-[4/5]"
