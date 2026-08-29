@@ -38,8 +38,14 @@
 - **게임화**(feature 08): unique 인증이 방문수·도시/작품 달성률·배지의 입력.
 - **지표·분석**(feature 14): 방문 인증 완료 = NSM, 퍼널의 방문 인증 단계(PRD §31).
 
+## 구현 현황
+- **판정·저장(반영됨)**: 반경(`canCheckIn`, 기본 100m)·`accuracy`≤50m·쿨다운 24h·unique 1회·서버 타임스탬프·원시 좌표 미보관·`USER_REPORTED`→`USER_VERIFIED`(≥3인) 모두 서버(`checkInAction`)에서 처리. 감사 결과 규칙 부합.
+- **안전차단 가드(반영됨)**: `isBlockedHighRisk` 스팟은 인증 불가(`reason:"blocked"`). 단건 조회(`getSpotFromDb`)는 blocked를 거르지 않으므로 `checkInAction`에서 방어(CLAUDE §6). UI에 전용 안내 상태.
+- **연타·동시요청 방어(반영됨)**: 최초 인증을 `createMany({skipDuplicates})`로 생성 — 경합 시 `count===0`이면 집계 스킵(중복 카운트 없음, spec §38).
+- **시작화면 실제 미니지도(반영됨)**: 가짜 배경·하드코딩 핀 폐지 → 스팟 촬영자 위치 핀 + 인증 반경 원(`components/checkin/CheckinMiniMap`). 키 없으면 폴백 배경.
+
 ## TODO / 미결정
-- **mock location 감지 구체 방식·신뢰 임계**(경량 조작 방어의 구현 방법) — 미정.
+- **mock location 감지 구체 방식·신뢰 임계**(경량 조작 방어의 구현 방법) — 미정. **웹 Geolocation은 mock 여부를 노출하지 않아** 현재 미구현(네이티브 전환 시 재검토). spec의 'mock 감지 보류' 상태는 그때 배선.
 - **'인증 보류' 후속 처리**(통합 검수 큐 연동 여부, 사용자 재시도 안내 수위) — 미정.
 - (해결됨) **서버측 판정 + 원시 좌표 미보관**: 클라이언트가 현재 좌표를 서버 액션에 **전송만** 하고, 서버가 스팟 `shooterLat/Lng`와 거리·정확도를 판정한 뒤 **결과만** `CheckIn`에 저장한다(원시 좌표 미보관). 구현: `checkInAction`([`../../../lib/actions/mutations.ts`](../../../lib/actions/mutations.ts)), 클라이언트 배선: [`../../../components/checkin/CheckinFlow.tsx`](../../../components/checkin/CheckinFlow.tsx).
 - **재인증 쿨다운 24h의 기준 시점**(직전 인증 서버 타임스탬프 기준 등)·안내 카피 세부 — 미정(정책 값 24h는 확정, PRD §17).

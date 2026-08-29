@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { X, Crosshair, Check, AlertTriangle, Octagon } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
-import { MapMarker } from "../map/MapMarker";
+import { CheckinMiniMap } from "./CheckinMiniMap";
 import { CoralButton, GhostButton } from "../ui/CoralButton";
 import { TagPill } from "../ui/TagPill";
 import { CategoryLabel } from "../ui/CategoryLabel";
@@ -15,6 +15,7 @@ import { type Spot } from "@/lib/mock";
 
 // F1~F6 · GPS 방문 인증 플로우. 실제 브라우저 Geolocation 사용.
 // 정책(PRD §17): 반경 100m + accuracy ≤ 50m. 원시 좌표는 저장하지 않음(프로토타입: 판정 후 버림).
+const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 type Phase =
   | "start"
   | "acquiring"
@@ -22,7 +23,8 @@ type Phase =
   | "range"
   | "accuracy"
   | "permission"
-  | "cooldown";
+  | "cooldown"
+  | "blocked";
 
 export function CheckinFlow({
   spot,
@@ -68,6 +70,8 @@ export function CheckinFlow({
             setPhase("accuracy");
           } else if (res.reason === "cooldown") {
             setPhase("cooldown");
+          } else if (res.reason === "blocked") {
+            setPhase("blocked");
           } else if (res.reason === "unauthenticated") {
             router.push("/login");
           } else {
@@ -127,9 +131,8 @@ export function CheckinFlow({
       <Shell>
         <TopBar label="방문 인증" />
         <div className="relative mt-4 h-[260px] overflow-hidden rounded-[20px] bg-[#DDE5EE] shadow-[shadow:var(--sh-card)]">
-          <MapBackground />
-          <MapMarker state="verified" x={58} y={40} focused />
-          <span className="absolute left-[42%] top-[62%] h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-white bg-coral shadow-[0_0_0_10px_rgba(255,95,109,0.22)]" />
+          {/* 실제 미니지도(스팟 위치 + 인증 반경). 키 없으면 폴백 배경. */}
+          {KEY ? <CheckinMiniMap spot={spot} /> : <MapBackground />}
         </div>
         <div className="mt-5">
           <TagPill variant="cream" className="mb-2">
@@ -327,6 +330,20 @@ export function CheckinFlow({
       ),
       primary: "돌아가기",
     },
+    blocked: {
+      mascot: null,
+      icon: <Octagon size={56} strokeWidth={1.6} className="text-coral" />,
+      iconBg: "rgba(255,95,109,0.15)",
+      title: "인증할 수 없는 스팟이에요",
+      body: (
+        <>
+          안전 문제로 방문 인증이 제한된 스팟이에요.
+          <br />
+          현장 접근에 주의해 주세요.
+        </>
+      ),
+      primary: "돌아가기",
+    },
   } as const;
   const e = errors[phase];
 
@@ -352,10 +369,12 @@ export function CheckinFlow({
         </div>
       </div>
       <div className="flex flex-col gap-2.5 pb-11">
-        <CoralButton onClick={phase === "cooldown" ? back : acquire}>
+        <CoralButton
+          onClick={phase === "cooldown" || phase === "blocked" ? back : acquire}
+        >
           {e.primary}
         </CoralButton>
-        {phase !== "cooldown" && (
+        {phase !== "cooldown" && phase !== "blocked" && (
           <GhostButton onClick={back}>다음에 하기</GhostButton>
         )}
       </div>

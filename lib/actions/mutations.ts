@@ -31,6 +31,8 @@ export async function checkInAction(
   if (!user?.id) return { ok: false, reason: "unauthenticated" };
   const spot = await db.spot.findUnique({ where: { id: spotId } });
   if (!spot) return { ok: false, reason: "not_found" };
+  // 안전차단(고위험) 스팟은 인증 불가 — 단건 조회는 blocked를 거르지 않으므로 여기서 방어(CLAUDE §6).
+  if (spot.isBlockedHighRisk) return { ok: false, reason: "blocked" };
 
   if (coord.accuracy > 50)
     return {
@@ -67,10 +69,13 @@ export async function checkInAction(
     return { ok: true, first: false };
   }
 
-  // 최초 인증 — 결과만 저장(원시 좌표 미보관)
-  await db.checkIn.create({
-    data: { userId: user.id, spotId, deviceAccuracyM: coord.accuracy },
+  // 최초 인증 — 결과만 저장(원시 좌표 미보관). skipDuplicates로 동시 요청 경합(연타·멀티탭) 방어(§38).
+  const created = await db.checkIn.createMany({
+    data: [{ userId: user.id, spotId, deviceAccuracyM: coord.accuracy }],
+    skipDuplicates: true,
   });
+  // 경합에서 밀림(이미 다른 요청이 생성) — 집계는 그 요청이 담당하므로 여기선 성공만 반환.
+  if (created.count === 0) return { ok: true, first: false };
   await db.spot.update({
     where: { id: spotId },
     data: {
