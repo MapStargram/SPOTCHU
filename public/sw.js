@@ -1,6 +1,8 @@
 // SPOTCHU 최소 서비스워커 (Workbox 없이). 설치가능 + 오프라인 기본.
 // 전략: 네비게이션=네트워크 우선(항상 최신), 정적 자산=캐시 우선. 외부 오리진(구글맵 등)은 건드리지 않음.
-const CACHE = "spotchu-v1";
+// 버전 올리면 activate에서 옛 캐시 전부 삭제 → 재방문 사용자도 새 자산을 받는다.
+// (v1은 404 응답까지 캐시하던 버그가 있어, 배포 전 잠깐 깨진 이미지를 영구 캐시하던 문제 방지)
+const CACHE = "spotchu-v2";
 
 self.addEventListener("install", () => {
   self.skipWaiting();
@@ -36,8 +38,10 @@ self.addEventListener("fetch", (event) => {
       (async () => {
         try {
           const fresh = await fetch(request);
-          const cache = await caches.open(CACHE);
-          cache.put(request, fresh.clone());
+          if (fresh.ok) {
+            const cache = await caches.open(CACHE);
+            cache.put(request, fresh.clone());
+          }
           return fresh;
         } catch {
           return (
@@ -60,8 +64,10 @@ self.addEventListener("fetch", (event) => {
         if (cached) return cached;
         try {
           const fresh = await fetch(request);
-          const cache = await caches.open(CACHE);
-          cache.put(request, fresh.clone());
+          if (fresh.ok) {
+            const cache = await caches.open(CACHE);
+            cache.put(request, fresh.clone()); // 200일 때만 캐시(404/에러 캐시 방지)
+          }
           return fresh;
         } catch {
           return cached || Response.error();
