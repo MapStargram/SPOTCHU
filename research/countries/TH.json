@@ -1,0 +1,35 @@
+{
+  "code": "TH",
+  "name": "Thailand",
+  "nativeName": "ไทย",
+  "tier": 2,
+  "languages": [
+    "th",
+    "en"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "จุดถ่ายรูป",
+    "มุมถ่ายรูป",
+    "cafe ถ่ายรูป",
+    "photo spot"
+  ],
+  "cities": [
+    {
+      "id": "bangkok",
+      "appImportable": true,
+      "querySeeds": [
+        "กรุงเทพ จุดถ่ายรูป",
+        "bangkok rooftop view",
+        "วัด ถ่ายรูป"
+      ]
+    }
+  ]
+}

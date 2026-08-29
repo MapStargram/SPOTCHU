@@ -1,0 +1,33 @@
+{
+  "code": "GB",
+  "name": "United Kingdom",
+  "nativeName": "United Kingdom",
+  "tier": 2,
+  "languages": [
+    "en"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "photo spots",
+    "instagram spots",
+    "viewpoints"
+  ],
+  "cities": [
+    {
+      "id": "london",
+      "appImportable": true,
+      "querySeeds": [
+        "london photo spots",
+        "tower bridge view",
+        "notting hill"
+      ]
+    }
+  ]
+}

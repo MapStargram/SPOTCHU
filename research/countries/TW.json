@@ -1,0 +1,35 @@
+{
+  "code": "TW",
+  "name": "Taiwan",
+  "nativeName": "台灣",
+  "tier": 2,
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "台北 攝影景點",
+    "台北 打卡",
+    "台北 夜景",
+    "網美景點"
+  ],
+  "cities": [
+    {
+      "id": "taipei",
+      "appImportable": true,
+      "querySeeds": [
+        "台北 攝影景點",
+        "台北 打卡點",
+        "台北 夜景"
+      ]
+    }
+  ]
+}

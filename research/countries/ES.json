@@ -1,0 +1,34 @@
+{
+  "code": "ES",
+  "name": "Spain",
+  "nativeName": "España",
+  "tier": 2,
+  "languages": [
+    "es",
+    "en"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "lugares fotos",
+    "spots instagram",
+    "miradores"
+  ],
+  "cities": [
+    {
+      "id": "barcelona",
+      "appImportable": true,
+      "querySeeds": [
+        "barcelona spots fotos",
+        "sagrada familia view",
+        "park guell"
+      ]
+    }
+  ]
+}
