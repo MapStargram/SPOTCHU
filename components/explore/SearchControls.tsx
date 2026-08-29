@@ -8,10 +8,7 @@ import type { FilterOption } from "@/lib/data";
 
 // C3 · 검색 컨트롤(클라이언트 섬). URL 쿼리를 갱신하면 서버가 결과를 다시 렌더한다.
 // 검색은 서버에서 수행 — 여기선 파라미터만 만든다(전체 스팟 다운로드 없음).
-const CITY_OPTS: FilterOption[] = [
-  { id: "tokyo", label: "도쿄" },
-  { id: "seoul", label: "서울" },
-];
+// 지역 옵션은 서버(getCities)에서 주입 — 하드코딩하지 않아 확장 도시가 자동 반영된다.
 const VERIFY_OPTS: FilterOption[] = [
   { id: "official", label: "공식 인증" },
   { id: "user", label: "사용자 검증" },
@@ -65,9 +62,11 @@ function Field({
 export function SearchControls({
   categories,
   works,
+  cities,
 }: {
   categories: FilterOption[];
   works: FilterOption[];
+  cities: FilterOption[];
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -142,7 +141,7 @@ export function SearchControls({
             <Chip active={!cur("cityId")} onClick={() => setParam("cityId")}>
               전체
             </Chip>
-            {CITY_OPTS.map((c) => (
+            {cities.map((c) => (
               <Chip
                 key={c.id}
                 active={cur("cityId") === c.id}

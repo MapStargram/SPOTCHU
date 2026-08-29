@@ -154,7 +154,7 @@ export function PinGrid({
                     </span>
                   )}
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent p-3 pt-9">
-                    <div className="text-[14px] font-bold leading-tight text-white">
+                    <div className="line-clamp-2 text-[14px] font-bold leading-tight text-white">
                       {s.title}
                     </div>
                     <div className="mt-0.5 line-clamp-1 text-[11px] text-white/85">

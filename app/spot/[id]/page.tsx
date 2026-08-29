@@ -52,7 +52,8 @@ export default async function SpotDetailScreen({
   const posts = await getSpotPosts(s.id);
 
   return (
-    <AppShell>
+    // noTabBar: 하단 체크인 CTA(SpotActions)가 탭바와 겹치지 않도록 상세는 탭바를 숨긴다(뒤로 버튼으로 이동).
+    <AppShell noTabBar>
       <div className="relative mx-auto flex w-full max-w-[500px] flex-col bg-cream pb-28 lg:max-w-[720px]">
         {/* Hero (D1) */}
         <div
