@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T12:25:12.205Z",
+  "generatedAt": "2026-08-29T13:20:27.116Z",
   "spots": [
     {
       "id": "busan-cheongsapo-crossing-beach-train-7f2a",
@@ -15,6 +15,40 @@
       "time": "맑은 날 10:00-15:00 또는 일몰 전",
       "verified": "reported",
       "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201001001000&uc_seq=1311"
+    },
+    {
+      "id": "busan-cheongsapo-slamdunk-crossing-7a1b",
+      "title": "청사포 해변열차 건널목 (슬램덩크 영감 구도)",
+      "city": "busan",
+      "category": "anime",
+      "lat": 35.1619,
+      "lng": 129.2008,
+      "area": "청사포역·청사포로",
+      "subject": "바다와 해변열차 건널목을 함께 담는 구도",
+      "tip": "위치는 구역 수준 근사치 — 현장에서 구도를 확인하세요. 안전 펜스 안쪽 보도에서 촬영하고 차도·선로에 들어가지 마세요.",
+      "lens": "70-135mm",
+      "time": "10:00–15:00",
+      "workId": "slam-dunk",
+      "scene": "해변열차와 바다 구도가 작품의 해안 장면을 연상시킨다는 영감 관계(특정 장면 미검증)",
+      "verified": "reported",
+      "source": "https://www.busan.com/view/busan/view.php?code=2023030218274944983"
+    },
+    {
+      "id": "busan-gamcheon-little-prince-viewpoint-9c3d",
+      "title": "감천문화마을 어린 왕자와 사막여우 전망",
+      "city": "busan",
+      "category": "anime",
+      "lat": 35.09743,
+      "lng": 129.00938,
+      "area": "감천문화마을 감내2로",
+      "subject": "어린 왕자·사막여우 조형물과 마을 전경",
+      "tip": "위치는 구역 수준 근사치 — 현장에서 구도를 확인하세요. 계단·보행 동선을 막지 말고 조형물에 올라가지 마세요.",
+      "lens": "24-35mm",
+      "time": "16:00–18:30",
+      "workId": "the-little-prince",
+      "scene": "조형물 모티프/reference; 특정 애니메이션 장면 미검증",
+      "verified": "reported",
+      "source": "https://www.visitbusan.net/kr/index.do?menuId=MO_010100&cntId=20110701001"
     },
     {
       "id": "busan-the-bay-101-marine-city-reflection-b81c",
@@ -47,6 +81,23 @@
       "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201001001000&uc_seq=1268"
     },
     {
+      "id": "busan-yeongdo-huinnyeoul-tunnel-portal-e4f2",
+      "title": "흰여울 해안터널 입구 (센과 치히로 영감 구도)",
+      "city": "busan",
+      "category": "anime",
+      "lat": 35.07538,
+      "lng": 129.0479,
+      "area": "흰여울문화마을 해안터널",
+      "subject": "터널 입구와 바다를 함께 담는 포털형 구도",
+      "tip": "위치는 구역 수준 근사치 — 현장에서 구도를 확인하세요. 통행을 막지 말고 미끄러운 해안·물가에 접근하지 마세요.",
+      "lens": "24-50mm",
+      "time": "14:00–18:00",
+      "workId": "spirited-away",
+      "scene": "터널과 바다 구도가 작품의 경계 이미지를 연상시킨다는 영감 관계(특정 장면 미검증)",
+      "verified": "reported",
+      "source": "https://www.yeongdo.go.kr/tour/01475/01476.web"
+    },
+    {
       "id": "fukuoka-atago-shrine-viewpoint-8a1c",
       "title": "후쿠오카 아타고 신사 전망대 — 후쿠오카 타워 야경",
       "city": "fukuoka",
@@ -60,6 +111,23 @@
       "time": "일몰 전후 및 야간",
       "verified": "reported",
       "source": "https://yakei.jp/japan/spot.php?i=atago_temple"
+    },
+    {
+      "id": "fukuoka-fukuhaku-deai-bridge-kimi-sui-7a2b",
+      "title": "후쿠하쿠 데아이 다리 - 너의 췌장을 먹고 싶어",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.592,
+      "lng": 130.4048,
+      "area": "후쿠하쿠 데아이 다리, 나카스",
+      "subject": "나카강 강변 네온과 다리 구도 (작품 성지순례)",
+      "tip": "위치는 다리 구역 수준의 근사치입니다. 현장에서 구도를 확인하고 보행로를 막지 마세요. 24-50mm 권장.",
+      "lens": "24-50mm",
+      "time": "18:00-20:00",
+      "workId": "kimi-no-suizou-wo-tabetai",
+      "scene": "후쿠하쿠 데아이 다리·나카스 강변 성지순례 장면",
+      "verified": "reported",
+      "source": "https://yokanavi.com/feature/146030/"
     },
     {
       "id": "fukuoka-fukuhaku-deai-bridge-nakasu-f79b",
@@ -77,6 +145,23 @@
       "source": "https://yokanavi.com/spots/86414/"
     },
     {
+      "id": "fukuoka-hakata-station-plaza-tonkotsu-ramens-3e1f",
+      "title": "하카타역 광장 - 너의 췌장을 먹고 싶어",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.5904,
+      "lng": 130.4191,
+      "area": "JR 하카타역 광장",
+      "subject": "하카타역 전면과 역 시계",
+      "tip": "위치는 하카타역 광장 구역의 근사치입니다. 혼잡을 피하고 보행을 방해하지 않는 위치에서 촬영하세요.",
+      "lens": "16-28mm",
+      "time": "07:00-09:00 또는 19:00-21:00",
+      "workId": "kimi-no-suizou-wo-tabetai",
+      "scene": "하카타역 전면 광장과 역 시계 장면",
+      "verified": "reported",
+      "source": "https://astral-tanbou.com/hakatatonkotsu-anime-seichijunrei-hakata/"
+    },
+    {
       "id": "fukuoka-momochihama-marizon-tower-c42e",
       "title": "모모치하마 마리존 산책로 — 후쿠오카 타워 구도",
       "city": "fukuoka",
@@ -92,6 +177,40 @@
       "source": "https://www.fukuokatower.co.jp/sightseeing/area_s.php"
     },
     {
+      "id": "fukuoka-ohori-park-kujira-playground-buddy-daddies-4d8a",
+      "title": "오호리 공원 고래 놀이터 - Buddy Daddies",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.5878,
+      "lng": 130.3786,
+      "area": "오호리 공원 어린이놀이터",
+      "subject": "고래 놀이시설과 공원 풍경",
+      "tip": "위치는 어린이놀이터 구역의 근사치입니다. 어린이·보호자의 사생활을 존중하고 놀이기구에 올라가거나 동선을 방해하지 마세요.",
+      "lens": "35-50mm",
+      "time": "10:00-15:00",
+      "workId": "buddy-daddies",
+      "scene": "오호리 공원 고래 놀이터 장면",
+      "verified": "reported",
+      "source": "https://hamutane.com/buddydaddies-seichijunrei-fukuoka/"
+    },
+    {
+      "id": "kyoto-kamogawa-delta-stepping-stones-k-on-a101",
+      "title": "교토 카모가와 델타 징검다리",
+      "city": "kyoto",
+      "category": "anime",
+      "lat": 35.02945,
+      "lng": 135.7713,
+      "area": "카모가와 델타, 데마치야나기",
+      "subject": "카모가와·타카노가와 합류부의 거북이 모양 징검다리",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도 확인. 북동쪽 약 40°로 촬영하되 수위와 젖은 돌을 확인하고 통행을 방해하지 마세요.",
+      "lens": "35–50mm",
+      "time": "이른 아침 또는 늦은 오후",
+      "workId": "k-on-tamako-kamogawa",
+      "scene": "카모가와 델타와 징검다리가 작품의 성지로 연관된 장소",
+      "verified": "reported",
+      "source": "https://kyotolove.kyoto/I0000009/"
+    },
+    {
       "id": "kyoto-kifune-shrine-kasuga-lantern-staircase",
       "title": "기후네 신사 돌계단과 등롱",
       "city": "kyoto",
@@ -105,6 +224,23 @@
       "time": "이른 아침 또는 등롱 점등 후",
       "verified": "reported",
       "source": "https://kifunejinja.jp/"
+    },
+    {
+      "id": "kyoto-nanzenji-suirokaku-aqueduct-k-on-b202",
+      "title": "교토 난젠지 수로각 붉은 벽돌 아치",
+      "city": "kyoto",
+      "category": "anime",
+      "lat": 35.01103,
+      "lng": 135.79385,
+      "area": "난젠지 수로각, 사쿄구",
+      "subject": "난젠지 수로각의 연속 붉은 벽돌 아치",
+      "tip": "수로각 접근로의 공개 보행로에서 촬영하세요. 위치는 근사치(구역 수준) — 현장에서 아치 구도를 확인하고 구조물에 오르거나 통행을 막지 마세요.",
+      "lens": "50–85mm",
+      "time": "이른 아침",
+      "workId": "k-on",
+      "scene": "1기 OP의 난젠지 수로각 붉은 벽돌 배경",
+      "verified": "official",
+      "source": "https://www.nanzenji.or.jp/"
     },
     {
       "id": "kyoto-nanzenji-suirokaku-brick-arch-corridor",
@@ -152,6 +288,40 @@
       "source": "https://www.travel.co.jp/guide/article/35478/"
     },
     {
+      "id": "osaka-conan-osakajo-gokurakubashi-4c2b",
+      "title": "명탐정 코난 - 오사카성 고쿠라쿠바시 천수각 뷰포인트",
+      "city": "osaka",
+      "category": "anime",
+      "lat": 34.68968,
+      "lng": 135.52445,
+      "area": "오사카성 극락교 북단",
+      "subject": "극락교 붉은 난간과 해자 너머 오사카성 천수각",
+      "tip": "위치는 극락교 북단 구역의 근사치입니다. 다리 중앙 통행을 막지 말고 현장에서 난간·해자·천수각 정렬을 확인하세요.",
+      "lens": "50-85mm",
+      "time": "오전 9시–오후 1시",
+      "workId": "detective-conan",
+      "scene": "263화 오사카성 사건 배경",
+      "verified": "reported",
+      "source": "https://www.ytv.co.jp/conan/archive/k200200107.html"
+    },
+    {
+      "id": "osaka-josee-aizenzaka-slope-8f12",
+      "title": "조제, 호랑이 그리고 물고기들 - 아이젠자카 언덕길",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.65592,
+      "lng": 135.51348,
+      "area": "아이젠자카 상단, 쇼만인/아이젠도 북서측",
+      "subject": "영화의 모델이 된 아이젠자카 파형 석재 언덕과 사찰 담장 구도",
+      "tip": "위치는 구역 수준의 근사치입니다. 현장에서 파형 석재와 담장 구도를 확인하고 보행 동선을 막지 마세요.",
+      "lens": "28-50mm",
+      "time": "해질녘 골든아워",
+      "workId": "josee-the-tiger-and-the-fish",
+      "scene": "아이젠자카는 두 사람이 만나는 언덕의 모델",
+      "verified": "reported",
+      "source": "https://joseetora.jp/special/map.php"
+    },
+    {
       "id": "osaka-tsutenkaku-spaworld-reflection-b19c",
       "title": "스파월드 북측 계단 츠텐카쿠 반사 포토스팟",
       "city": "osaka",
@@ -182,6 +352,40 @@
       "source": "https://english.seoul.go.kr/eungbongsan-mountain/"
     },
     {
+      "id": "seoul-god-of-highschool-sungnyemun-chase-8b1a",
+      "title": "갓 오브 하이스쿨 1화 자전거 추격전 숭례문 뷰포인트",
+      "city": "seoul",
+      "category": "anime",
+      "lat": 37.55938,
+      "lng": 126.97535,
+      "area": "숭례문 남측 광장, 중구",
+      "subject": "남측 보행 광장에서 북쪽 숭례문 정면과 도심 배경",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도와 보행 동선을 확인하세요. 주변 도로·회전교차로에는 내려가지 말고 보행 광장 안에서 촬영하세요.",
+      "lens": "24-50mm",
+      "time": "골든아워·매직아워",
+      "workId": "god-of-high-school",
+      "scene": "숭례문이 등장하는 작품 연관 뷰포인트; 정확한 1화 프레임은 리뷰 필요",
+      "verified": "reported",
+      "source": "https://serieson.naver.com/v2/movie/391090"
+    },
+    {
+      "id": "seoul-lost-in-the-moonlight-changdeokgung-injeongjeon-e47b",
+      "title": "애니메이션 달빛궁궐의 무대 창덕궁 인정전 마당 뷰포인트",
+      "city": "seoul",
+      "category": "anime",
+      "lat": 37.5789,
+      "lng": 126.99103,
+      "area": "창덕궁 인정전 앞마당, 종로구",
+      "subject": "인정전 앞마당에서 인정전 전각과 지붕 잡상",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인하세요. 관람료·휴궁일·플래시·삼각대 등 창덕궁의 당일 관람 규정을 따르고 문화재를 보호하세요.",
+      "lens": "35-50mm",
+      "time": "오전 10시-오후 3시",
+      "workId": "lost-in-the-moonlight",
+      "scene": "창덕궁에서 영감을 받은 작품 연관 뷰포인트; 인정전 특정 장면은 리뷰 필요",
+      "verified": "reported",
+      "source": "https://www.cdg.go.kr/"
+    },
+    {
       "id": "seoul-nmk-open-plaza-namsan-view-a1f8",
       "title": "국립중앙박물관 열린마당 남산서울타워 프레임 포토존",
       "city": "seoul",
@@ -195,6 +399,23 @@
       "time": "17:30-19:30",
       "verified": "reported",
       "source": "https://www.museum.go.kr/ENG/contents/E0605010000.do"
+    },
+    {
+      "id": "seoul-seoul-station-culture-station-284-c92f",
+      "title": "연상호 애니메이션 서울역의 무대 구 서울역사 뷰포인트",
+      "city": "seoul",
+      "category": "anime",
+      "lat": 37.55535,
+      "lng": 126.97275,
+      "area": "문화역서울284·서울역 광장, 중구",
+      "subject": "서울역 광장에서 문화역서울284 중앙 돔과 붉은 벽돌 파사드",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 서북쪽 구도와 보행 흐름을 확인하세요. 유동인구가 많으므로 삼각대와 통행 방해에 주의하세요.",
+      "lens": "28-35mm",
+      "time": "늦은 오후·야간",
+      "workId": "seoul-station",
+      "scene": "서울역을 배경으로 한 애니메이션 연관 뷰포인트; 정확한 돔/파사드 프레임은 리뷰 필요",
+      "verified": "reported",
+      "source": "https://www.seoul284.org/"
     },
     {
       "id": "seoul-yongyangbongjeojeong-sky-deck-hangang-bridge-b73a",
@@ -227,6 +448,23 @@
       "source": "https://yakei.jp/japan/spot.php?i=asakusabunka"
     },
     {
+      "id": "tokyo-hijiribashi-bridge-suzume-b2",
+      "title": "히지리바시 다리 (스즈메의 문단속)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.69985,
+      "lng": 139.7645,
+      "area": "히지리바시, 오차노미즈",
+      "subject": "칸다가와와 마루노우치선 터널, JR 오차노미즈 철도 레이어",
+      "tip": "위치는 히지리바시 구역 수준의 근사치입니다. 서측 보행로에서 현장 구도를 확인하고 통행을 막지 마세요. 난간 밖으로 몸을 내밀거나 철도·차도로 들어가지 마세요.",
+      "lens": "70-135mm",
+      "time": "일몰 직전부터 블루아워",
+      "workId": "suzume-no-tojimari",
+      "scene": "히지리바시와 오차노미즈 철도 풍경이 연결되는 도쿄 장면",
+      "verified": "reported",
+      "source": "https://www.pitat.com/town/tokyo/ochanomizu/spot/1897"
+    },
+    {
       "id": "tokyo-jukkenbashi-skytree-reflection-a81e",
       "title": "쥬켄바시 도쿄 스카이트리 반영 (사카사 스카이트리)",
       "city": "tokyo",
@@ -240,6 +478,40 @@
       "time": "일몰 전후 및 야간",
       "verified": "reported",
       "source": "https://yakei.jp/japan/spot.php?i=jyukken"
+    },
+    {
+      "id": "tokyo-suga-shrine-stairs-your-name-a1",
+      "title": "스가 신사 계단 (너의 이름은.)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.68535,
+      "lng": 139.72295,
+      "area": "스가 신사 오토코자카, 신주쿠",
+      "subject": "붉은 난간이 있는 스가 신사 계단과 영화 속 계단 구도",
+      "tip": "위치는 구역 수준의 근사치입니다. 신사 입구 쪽 붉은 난간 옆에서 계단 아래를 바라보며 현장에서 구도를 확인하세요. 주민 통행을 막지 말고 삼각대 장시간 사용을 피하세요.",
+      "lens": "35-50mm",
+      "time": "늦은 오후 골든아워 또는 이른 아침",
+      "workId": "your-name",
+      "scene": "스가 신사 계단의 상징적인 엔딩/포스터 구도",
+      "verified": "reported",
+      "source": "https://www.travel.co.jp/guide/article/21571/"
+    },
+    {
+      "id": "tokyo-tabata-station-south-slope-tenkinoko-c3",
+      "title": "타바타역 남쪽 출구 언덕길 (날씨의 아이)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.73685,
+      "lng": 139.7608,
+      "area": "타바타역 남쪽 출구, 기타구",
+      "subject": "선로 옆 비탈길의 펜스와 열차 풍경",
+      "tip": "위치는 타바타역 남쪽 출구 비탈길 구역 수준의 근사치입니다. 좁은 보행로 중턱에서 현장 구도를 확인하세요. 주민 통행을 방해하거나 철도 부지에 들어가지 말고 이른 아침·야간에는 정숙을 지키세요.",
+      "lens": "35-50mm",
+      "time": "맑은 날 아침 또는 비 뒤 부드러운 빛",
+      "workId": "weathering-with-you",
+      "scene": "타바타역 남쪽 출구 언덕길과 선로 옆 풍경",
+      "verified": "reported",
+      "source": "https://tenkinokoseichi.link/tabata-station/"
     },
     {
       "id": "tokyo-tower-parking-staircase-f4c2",
@@ -257,5 +529,111 @@
       "source": "https://nightscape.tokyo/minato/tokyo-tower-stairs/"
     }
   ],
-  "works": []
+  "works": [
+    {
+      "id": "slam-dunk",
+      "title": "슬램덩크",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-little-prince",
+      "title": "어린 왕자",
+      "type": "기타",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "spirited-away",
+      "title": "센과 치히로의 행방불명",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "kimi-no-suizou-wo-tabetai",
+      "title": "너의 췌장을 먹고 싶어",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "buddy-daddies",
+      "title": "Buddy Daddies",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "k-on-tamako-kamogawa",
+      "title": "케이온! / 타마코 러브 스토리",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "k-on",
+      "title": "케이온!",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "detective-conan",
+      "title": "명탐정 코난",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "josee-the-tiger-and-the-fish",
+      "title": "조제, 호랑이 그리고 물고기들",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "god-of-high-school",
+      "title": "갓 오브 하이스쿨",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "lost-in-the-moonlight",
+      "title": "달빛궁궐",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "seoul-station",
+      "title": "서울역",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "suzume-no-tojimari",
+      "title": "스즈메의 문단속",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "your-name",
+      "title": "너의 이름은.",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "weathering-with-you",
+      "title": "날씨의 아이",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    }
+  ]
 }
