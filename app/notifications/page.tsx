@@ -30,7 +30,7 @@ export default async function NotificationsPage() {
           <Link
             href="/home/tokyo"
             aria-label="뒤로"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[var(--sh-card)] lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)] lg:hidden"
           >
             <ChevronLeft size={20} />
           </Link>
@@ -68,7 +68,7 @@ export default async function NotificationsPage() {
               action={
                 <Link
                   href="/explore/tokyo"
-                  className="flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-coral font-ko text-[14px] font-bold tracking-[-0.01em] text-cream shadow-[var(--sh-cta-coral)] transition duration-150 active:scale-[0.98] active:bg-coral-deep"
+                  className="flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-coral font-ko text-[14px] font-bold tracking-[-0.01em] text-cream shadow-[shadow:var(--sh-cta-coral)] transition duration-150 active:scale-[0.98] active:bg-coral-deep"
                 >
                   스팟 둘러보기 →
                 </Link>

@@ -128,7 +128,7 @@ export default async function PostDetailPage({
               </div>
               <Link
                 href={`/spot/${spot.id}`}
-                className="rounded-full bg-coral px-3 py-1.5 font-ko text-[11px] font-bold text-cream shadow-[var(--sh-cta-coral)]"
+                className="rounded-full bg-coral px-3 py-1.5 font-ko text-[11px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
               >
                 보기 →
               </Link>

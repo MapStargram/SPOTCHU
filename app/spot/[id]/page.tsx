@@ -124,7 +124,7 @@ export default async function SpotDetailScreen({
         </div>
 
         {/* Stats card */}
-        <div className="relative z-10 -mt-8 mx-4 grid grid-cols-3 rounded-2xl bg-white px-4 py-3.5 text-center shadow-[var(--sh-elevated)]">
+        <div className="relative z-10 -mt-8 mx-4 grid grid-cols-3 rounded-2xl bg-white px-4 py-3.5 text-center shadow-[shadow:var(--sh-elevated)]">
           {[
             { v: s.visits > 0 ? s.rating.toString() : "신규", l: "RATING" },
             { v: s.visits.toLocaleString(), l: "VISITS" },
@@ -222,7 +222,7 @@ export default async function SpotDetailScreen({
           </div>
 
           {/* Meta */}
-          <div className="rounded-2xl bg-white px-4 py-3.5 shadow-[var(--sh-card)]">
+          <div className="rounded-2xl bg-white px-4 py-3.5 shadow-[shadow:var(--sh-card)]">
             <div className="mb-2.5 font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
               Meta
             </div>
@@ -274,7 +274,7 @@ export default async function SpotDetailScreen({
                 {posts.map((p) => (
                   <li
                     key={p.id}
-                    className="overflow-hidden rounded-[14px] bg-white shadow-[var(--sh-card)]"
+                    className="overflow-hidden rounded-[14px] bg-white shadow-[shadow:var(--sh-card)]"
                   >
                     {p.images[0] && (
                       // eslint-disable-next-line @next/next/no-img-element

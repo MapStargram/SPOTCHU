@@ -41,7 +41,7 @@ export default function PrivacyPolicyPage() {
           <Link
             href="/profile/settings"
             aria-label="뒤로"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[var(--sh-card)]"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)]"
           >
             <ChevronLeft size={20} />
           </Link>
@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
           {ITEMS.map(({ Icon, title, body }) => (
             <div
               key={title}
-              className="flex items-start gap-3 rounded-2xl bg-white px-3.5 py-3.5 shadow-[var(--sh-card)]"
+              className="flex items-start gap-3 rounded-2xl bg-white px-3.5 py-3.5 shadow-[shadow:var(--sh-card)]"
             >
               <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[color:var(--cream-2)] text-coral">
                 <Icon size={20} />

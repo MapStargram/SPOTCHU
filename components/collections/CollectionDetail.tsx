@@ -32,7 +32,7 @@ export function CollectionDetail({
   const remaining = col.itemCount - spots.length;
 
   const toggle = (
-    <div className="inline-flex gap-0.5 rounded-full bg-white p-1 shadow-[var(--sh-elevated)]">
+    <div className="inline-flex gap-0.5 rounded-full bg-white p-1 shadow-[shadow:var(--sh-elevated)]">
       {(["list", "map"] as const).map((v) => (
         <button
           key={v}
@@ -100,7 +100,7 @@ export function CollectionDetail({
               <li key={s.id}>
                 <Link
                   href={`/spot/${s.id}`}
-                  className="flex items-center gap-3 rounded-[14px] bg-white px-3 py-2.5 shadow-[var(--sh-card)]"
+                  className="flex items-center gap-3 rounded-[14px] bg-white px-3 py-2.5 shadow-[shadow:var(--sh-card)]"
                 >
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[color:var(--cream-2)] font-latin text-[14px] font-extrabold text-coral">
                     {i + 1}
@@ -194,7 +194,7 @@ export function CollectionDetail({
               <Link
                 key={s.id}
                 href={`/spot/${s.id}`}
-                className="flex w-[260px] shrink-0 items-center gap-2.5 rounded-2xl bg-white p-3 shadow-[var(--sh-elevated)]"
+                className="flex w-[260px] shrink-0 items-center gap-2.5 rounded-2xl bg-white p-3 shadow-[shadow:var(--sh-elevated)]"
               >
                 <div
                   className="relative h-14 w-14 shrink-0 rounded-xl"

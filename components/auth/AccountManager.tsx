@@ -79,7 +79,7 @@ export function AccountManager({
           <Link
             href="/profile"
             aria-label="뒤로"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[var(--sh-card)]"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)]"
           >
             <ChevronLeft size={20} />
           </Link>
@@ -296,7 +296,7 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
       <div className="mb-1.5 pl-1.5 font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
         {title}
       </div>
-      <div className="overflow-hidden rounded-2xl bg-white shadow-[var(--sh-card)]">
+      <div className="overflow-hidden rounded-2xl bg-white shadow-[shadow:var(--sh-card)]">
         {children}
       </div>
     </div>

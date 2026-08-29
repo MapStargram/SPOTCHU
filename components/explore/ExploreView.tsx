@@ -100,7 +100,7 @@ export function ExploreView({ spots, city }: { spots: Spot[]; city: CityId }) {
       {/* Header controls — 홈과 동일한 max-w 컨테이너로 정렬(피드 본문과 좌우 폭 일치) */}
       <header className="sticky top-0 z-20 border-b border-[color:var(--line)] bg-[rgba(255,249,242,0.9)] pb-3 pt-14 backdrop-blur lg:pt-6">
         <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-3 px-4 lg:px-8">
-          <div className="flex w-full items-center gap-2.5 rounded-[20px] bg-white px-4 py-3.5 shadow-[var(--sh-search)]">
+          <div className="flex w-full items-center gap-2.5 rounded-[20px] bg-white px-4 py-3.5 shadow-[shadow:var(--sh-search)]">
             <Search size={18} className="text-navy" />
             <Link
               href="/search"
@@ -118,13 +118,13 @@ export function ExploreView({ spots, city }: { spots: Spot[]; city: CityId }) {
           </div>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="inline-flex gap-0.5 rounded-full bg-white p-1 shadow-[var(--sh-card)]">
+              <div className="inline-flex gap-0.5 rounded-full bg-white p-1 shadow-[shadow:var(--sh-card)]">
                 {seg("map", MapIcon, "지도")}
                 {seg("feed", LayoutGrid, "피드")}
               </div>
               <Link
                 href={`/home/${city}`}
-                className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-4 py-2 font-ko text-[13px] font-bold text-navy shadow-[var(--sh-card)]"
+                className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-4 py-2 font-ko text-[13px] font-bold text-navy shadow-[shadow:var(--sh-card)]"
               >
                 <Home size={16} /> 홈 그리드
               </Link>

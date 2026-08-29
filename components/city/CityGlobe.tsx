@@ -199,7 +199,7 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
       {open && (
         <button
           onClick={() => setOpen(null)}
-          className="mb-1 mt-1 inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-1.5 text-[12px] font-semibold text-navy shadow-[var(--sh-card)]"
+          className="mb-1 mt-1 inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-1.5 text-[12px] font-semibold text-navy shadow-[shadow:var(--sh-card)]"
         >
           <Globe2 size={14} /> 전체 지구본
         </button>
@@ -211,7 +211,7 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
           return (
             <div
               key={country.id}
-              className="overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white shadow-[var(--sh-card)]"
+              className="overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white shadow-[shadow:var(--sh-card)]"
             >
               <button
                 onClick={() => setOpen(isOpen ? null : country.id)}

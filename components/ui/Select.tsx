@@ -48,7 +48,7 @@ export function Select<T extends string>({
         aria-haspopup="listbox"
         aria-expanded={open}
         aria-label={ariaLabel}
-        className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-2 text-[13px] font-semibold text-navy shadow-[var(--sh-card)] transition hover:bg-[color:var(--cream-2)]"
+        className="inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-2 text-[13px] font-semibold text-navy shadow-[shadow:var(--sh-card)] transition hover:bg-[color:var(--cream-2)]"
       >
         {current?.label}
         <ChevronDown
@@ -61,7 +61,7 @@ export function Select<T extends string>({
         <ul
           role="listbox"
           aria-label={ariaLabel}
-          className="absolute right-0 z-30 mt-1.5 min-w-[132px] overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white p-1 shadow-[var(--sh-search)]"
+          className="absolute right-0 z-30 mt-1.5 min-w-[132px] overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white p-1 shadow-[shadow:var(--sh-search)]"
         >
           {options.map((o) => {
             const sel = o.value === value;

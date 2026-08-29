@@ -27,7 +27,7 @@ export default async function BadgeDexPage() {
           <Link
             href="/profile"
             aria-label="뒤로"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[var(--sh-card)]"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)]"
           >
             <ChevronLeft size={20} />
           </Link>
@@ -76,7 +76,7 @@ export default async function BadgeDexPage() {
               <div
                 key={b.id}
                 aria-label={`${b.title} — ${b.earned ? "획득" : "미획득"}`}
-                className="rounded-2xl bg-white px-3 py-3.5 text-center shadow-[var(--sh-card)]"
+                className="rounded-2xl bg-white px-3 py-3.5 text-center shadow-[shadow:var(--sh-card)]"
                 style={{ opacity: b.earned ? 1 : 0.7 }}
               >
                 <div

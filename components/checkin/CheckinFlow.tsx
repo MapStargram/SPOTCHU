@@ -89,7 +89,7 @@ export function CheckinFlow({
       <button
         onClick={back}
         aria-label="닫기"
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)]"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[shadow:var(--sh-card)]"
       >
         <X size={20} />
       </button>
@@ -126,7 +126,7 @@ export function CheckinFlow({
     return (
       <Shell>
         <TopBar label="방문 인증" />
-        <div className="relative mt-4 h-[260px] overflow-hidden rounded-[20px] bg-[#DDE5EE] shadow-[var(--sh-card)]">
+        <div className="relative mt-4 h-[260px] overflow-hidden rounded-[20px] bg-[#DDE5EE] shadow-[shadow:var(--sh-card)]">
           <MapBackground />
           <MapMarker state="verified" x={58} y={40} focused />
           <span className="absolute left-[42%] top-[62%] h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-white bg-coral shadow-[0_0_0_10px_rgba(255,95,109,0.22)]" />

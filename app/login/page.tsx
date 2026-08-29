@@ -123,7 +123,7 @@ export default function LoginScreen() {
           <button
             key={p.id}
             onClick={() => onProvider(p.id)}
-            className="flex items-center justify-center gap-2.5 rounded-2xl px-5 py-3.5 text-[14px] font-bold tracking-[-0.01em] shadow-[var(--sh-card)] transition active:scale-[0.98]"
+            className="flex items-center justify-center gap-2.5 rounded-2xl px-5 py-3.5 text-[14px] font-bold tracking-[-0.01em] shadow-[shadow:var(--sh-card)] transition active:scale-[0.98]"
             style={{
               background: p.bg,
               color: p.color,

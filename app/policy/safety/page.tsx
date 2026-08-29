@@ -47,7 +47,7 @@ export default function SafetyPolicyPage() {
           <Link
             href="/profile/settings"
             aria-label="뒤로"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[var(--sh-card)]"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)]"
           >
             <ChevronLeft size={20} />
           </Link>
@@ -87,7 +87,7 @@ export default function SafetyPolicyPage() {
           {ITEMS.map((r) => (
             <div
               key={r.title}
-              className="rounded-2xl bg-white px-3.5 py-3.5 shadow-[var(--sh-card)]"
+              className="rounded-2xl bg-white px-3.5 py-3.5 shadow-[shadow:var(--sh-card)]"
             >
               <div className="flex items-center gap-1.5 text-[13px] font-extrabold tracking-[-0.01em]">
                 <r.Icon

@@ -254,7 +254,7 @@ export function MapView({
         <Link
           href="/report"
           aria-label="스팟 제보"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-coral text-cream shadow-[var(--sh-cta-coral)]"
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-coral text-cream shadow-[shadow:var(--sh-cta-coral)]"
         >
           <Plus size={22} />
         </Link>
@@ -262,7 +262,7 @@ export function MapView({
           type="button"
           onClick={onLocate}
           aria-label="현재 위치로 이동"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)] transition active:scale-95"
+          className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-navy shadow-[shadow:var(--sh-card)] transition active:scale-95"
         >
           <Crosshair size={22} />
         </button>
@@ -270,7 +270,7 @@ export function MapView({
 
       {/* 스팟 미리보기 카드 */}
       {preview && (
-        <div className="absolute inset-x-3.5 bottom-[100px] z-[9] flex gap-3 rounded-[22px] bg-white p-3.5 shadow-[var(--sh-elevated)]">
+        <div className="absolute inset-x-3.5 bottom-[100px] z-[9] flex gap-3 rounded-[22px] bg-white p-3.5 shadow-[shadow:var(--sh-elevated)]">
           <div
             className="relative h-[78px] w-[78px] shrink-0 overflow-hidden rounded-2xl"
             style={{ background: preview.thumbGrad }}
@@ -301,7 +301,7 @@ export function MapView({
               </span>
               <Link
                 href={`/spot/${preview.id}`}
-                className="rounded-full bg-coral px-3 py-1.5 font-ko text-[11px] font-bold text-cream shadow-[var(--sh-cta-coral)]"
+                className="rounded-full bg-coral px-3 py-1.5 font-ko text-[11px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
               >
                 앵글 보기 →
               </Link>

@@ -114,14 +114,14 @@ export function SearchControls({
           type="button"
           onClick={() => router.back()}
           aria-label="뒤로"
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)]"
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-navy shadow-[shadow:var(--sh-card)]"
         >
           <ChevronLeft size={20} />
         </button>
         <label htmlFor="search-q" className="sr-only">
           스팟, 작품, 지역 검색
         </label>
-        <div className="flex flex-1 items-center gap-2.5 rounded-[20px] bg-white px-4 py-3 shadow-[var(--sh-card)]">
+        <div className="flex flex-1 items-center gap-2.5 rounded-[20px] bg-white px-4 py-3 shadow-[shadow:var(--sh-card)]">
           <Search size={18} className="text-navy" aria-hidden />
           <input
             id="search-q"
@@ -136,7 +136,7 @@ export function SearchControls({
       </form>
 
       {/* 필터 패널 — 그룹별 경계를 둬서 정렬감을 준다 */}
-      <div className="flex flex-col gap-4 rounded-[20px] border border-[color:var(--line)] bg-white p-4 shadow-[var(--sh-card)]">
+      <div className="flex flex-col gap-4 rounded-[20px] border border-[color:var(--line)] bg-white p-4 shadow-[shadow:var(--sh-card)]">
         <Field label="지역">
           <div className="flex flex-wrap gap-1.5">
             <Chip active={!cur("cityId")} onClick={() => setParam("cityId")}>

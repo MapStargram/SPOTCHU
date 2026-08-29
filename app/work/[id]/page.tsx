@@ -110,7 +110,7 @@ export default async function WorkDetailScreen({
         </div>
 
         {/* Progress card */}
-        <div className="relative z-10 -mt-7 mx-4 rounded-[20px] bg-white p-4 shadow-[var(--sh-elevated)]">
+        <div className="relative z-10 -mt-7 mx-4 rounded-[20px] bg-white p-4 shadow-[shadow:var(--sh-elevated)]">
           <div className="mb-2.5 flex items-baseline justify-between">
             <div className="text-[13px] font-extrabold tracking-[-0.01em] text-navy">
               성지순례 진행률

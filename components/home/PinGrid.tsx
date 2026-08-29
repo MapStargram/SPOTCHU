@@ -98,7 +98,7 @@ export function PinGrid({
         ))}
         <Link
           href={`/explore/${city}`}
-          className="ml-auto flex shrink-0 items-center gap-1.5 rounded-full bg-coral px-4 py-2 text-[13px] font-bold text-cream shadow-[var(--sh-cta-coral)]"
+          className="ml-auto flex shrink-0 items-center gap-1.5 rounded-full bg-coral px-4 py-2 text-[13px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
         >
           <MapIcon size={15} /> 지도로 보기
         </Link>
@@ -126,7 +126,7 @@ export function PinGrid({
           return (
             <div
               key={s.id}
-              className="relative mb-3 break-inside-avoid overflow-hidden rounded-2xl shadow-[var(--sh-card)]"
+              className="relative mb-3 break-inside-avoid overflow-hidden rounded-2xl shadow-[shadow:var(--sh-card)]"
             >
               <Link
                 href={`/spot/${s.id}`}
@@ -190,7 +190,7 @@ export function PinGrid({
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="맨 위로"
-          className="fixed bottom-24 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-navy text-cream shadow-[var(--sh-elevated)] transition active:scale-90 lg:bottom-8 lg:right-8"
+          className="fixed bottom-24 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-navy text-cream shadow-[shadow:var(--sh-elevated)] transition active:scale-90 lg:bottom-8 lg:right-8"
         >
           <ArrowUp size={22} />
         </button>

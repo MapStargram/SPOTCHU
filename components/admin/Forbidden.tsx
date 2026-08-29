@@ -10,7 +10,7 @@ export function Forbidden({
   const unauth = reason === "unauthenticated";
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-[color:var(--cream-2)] px-8 text-center font-ko text-navy">
-      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-coral shadow-[var(--sh-card)]">
+      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-coral shadow-[shadow:var(--sh-card)]">
         <ShieldAlert size={26} />
       </span>
       <div>
@@ -27,7 +27,7 @@ export function Forbidden({
       </p>
       <Link
         href={unauth ? "/login" : "/city"}
-        className="rounded-2xl bg-coral px-5 py-3 text-[13px] font-bold text-cream shadow-[var(--sh-cta-coral)]"
+        className="rounded-2xl bg-coral px-5 py-3 text-[13px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
       >
         {unauth ? "로그인하기" : "홈으로"}
       </Link>

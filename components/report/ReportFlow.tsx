@@ -94,7 +94,7 @@ export function ReportFlow({
             <button
               onClick={() => router.back()}
               aria-label="닫기"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[var(--sh-card)]"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)]"
             >
               <X size={20} />
             </button>
@@ -104,7 +104,7 @@ export function ReportFlow({
             <span className="w-10" />
           </header>
 
-          <div className="mt-5 flex items-center gap-2.5 rounded-2xl bg-white px-3.5 py-3 shadow-[var(--sh-card)]">
+          <div className="mt-5 flex items-center gap-2.5 rounded-2xl bg-white px-3.5 py-3 shadow-[shadow:var(--sh-card)]">
             <Mascot
               name="chu-expression-curious"
               alt=""
@@ -162,7 +162,7 @@ export function ReportFlow({
             <button
               onClick={() => setStep("location")}
               aria-label="뒤로"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[var(--sh-card)]"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)]"
             >
               <ChevronLeft size={20} />
             </button>

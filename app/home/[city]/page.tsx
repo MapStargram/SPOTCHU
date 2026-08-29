@@ -51,7 +51,7 @@ export default async function HomeScreen({
             <Link
               href="/city"
               aria-label="도시 선택으로"
-              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)] lg:hidden"
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-navy shadow-[shadow:var(--sh-card)] lg:hidden"
             >
               <ChevronLeft size={20} />
             </Link>
@@ -68,14 +68,14 @@ export default async function HomeScreen({
             <Link
               href={`/feed/${city}`}
               aria-label="도시 피드"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)]"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[shadow:var(--sh-card)]"
             >
               <Camera size={20} />
             </Link>
             <Link
               href="/notifications"
               aria-label="알림"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[var(--sh-card)] lg:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[shadow:var(--sh-card)] lg:hidden"
             >
               <Bell size={20} />
             </Link>
@@ -85,7 +85,7 @@ export default async function HomeScreen({
         {/* Hero — 오늘의 스팟 */}
         <Link
           href={`/spot/${heroSpot.id}`}
-          className="relative mt-6 block h-[196px] overflow-hidden rounded-[22px] shadow-[var(--sh-elevated)] lg:h-[300px]"
+          className="relative mt-6 block h-[196px] overflow-hidden rounded-[22px] shadow-[shadow:var(--sh-elevated)] lg:h-[300px]"
           style={{ background: heroSpot.heroGrad }}
         >
           {heroSpot.imageUrl && (

@@ -41,7 +41,7 @@ export default async function HomeDiscoverScreen() {
           </div>
           <Link
             href="/city"
-            className="flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-2 text-[12px] font-bold text-navy shadow-[var(--sh-card)]"
+            className="flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-2 text-[12px] font-bold text-navy shadow-[shadow:var(--sh-card)]"
           >
             <Globe2 size={14} /> 도시별로
           </Link>

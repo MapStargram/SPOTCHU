@@ -58,7 +58,7 @@ export default async function ProfilePage() {
         </div>
 
         {/* Profile card */}
-        <div className="relative z-10 -mt-14 mx-4 rounded-[22px] bg-white p-5 shadow-[var(--sh-elevated)] lg:mx-6">
+        <div className="relative z-10 -mt-14 mx-4 rounded-[22px] bg-white p-5 shadow-[shadow:var(--sh-elevated)] lg:mx-6">
           <div className="flex items-center gap-3.5">
             <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-mint font-latin text-[24px] font-extrabold text-navy lg:h-20 lg:w-20 lg:text-[30px]">
               {user?.image ? (
@@ -136,7 +136,7 @@ export default async function ProfilePage() {
                 {cityProgress.map((cp) => (
                   <div
                     key={cp.id}
-                    className="rounded-[14px] bg-white px-3.5 py-3 shadow-[var(--sh-card)]"
+                    className="rounded-[14px] bg-white px-3.5 py-3 shadow-[shadow:var(--sh-card)]"
                   >
                     <div className="mb-2 flex justify-between text-[13px]">
                       <span className="font-bold">{cp.name}</span>

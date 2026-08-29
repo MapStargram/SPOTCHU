@@ -70,7 +70,7 @@ export function Settings({
           <Link
             href="/profile"
             aria-label="뒤로"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[var(--sh-card)]"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)]"
           >
             <ChevronLeft size={20} />
           </Link>
@@ -197,7 +197,7 @@ export function Settings({
             <button
               onClick={() => void save()}
               disabled={saving}
-              className="mt-4 flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-coral font-ko text-[14px] font-extrabold text-cream shadow-[var(--sh-cta-coral)] disabled:opacity-60"
+              className="mt-4 flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-coral font-ko text-[14px] font-extrabold text-cream shadow-[shadow:var(--sh-cta-coral)] disabled:opacity-60"
             >
               {saving ? "저장 중…" : "저장"}
             </button>
@@ -222,7 +222,7 @@ function Section({
           {title}
         </div>
       )}
-      <div className="overflow-hidden rounded-2xl bg-white shadow-[var(--sh-card)]">
+      <div className="overflow-hidden rounded-2xl bg-white shadow-[shadow:var(--sh-card)]">
         {children}
       </div>
     </div>

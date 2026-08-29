@@ -17,7 +17,7 @@ export default async function HistoryPage() {
           <Link
             href="/profile"
             aria-label="뒤로"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[var(--sh-card)]"
+            className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)]"
           >
             <ChevronLeft size={20} />
           </Link>
@@ -41,7 +41,7 @@ export default async function HistoryPage() {
               <li key={i}>
                 <Link
                   href={`/spot/${r.spot.id}`}
-                  className="flex items-center gap-3 rounded-[14px] bg-white px-3.5 py-3 shadow-[var(--sh-card)]"
+                  className="flex items-center gap-3 rounded-[14px] bg-white px-3.5 py-3 shadow-[shadow:var(--sh-card)]"
                 >
                   <div
                     className="relative h-[52px] w-[52px] shrink-0 rounded-xl"
