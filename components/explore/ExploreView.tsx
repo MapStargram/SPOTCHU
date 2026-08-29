@@ -181,12 +181,7 @@ export function ExploreView({
       {/* Body */}
       {view === "map" ? (
         <div className="relative flex-1">
-          <MapView
-            spots={spots}
-            city={city}
-            userPos={userPos}
-            onLocate={locate}
-          />
+          <MapView city={city} userPos={userPos} onLocate={locate} />
         </div>
       ) : (
         <div className="mx-auto w-full max-w-[1180px] flex-1 px-4 pb-28 pt-4 lg:px-8 lg:pb-12">

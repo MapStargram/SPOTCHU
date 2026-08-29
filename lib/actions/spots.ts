@@ -2,6 +2,7 @@
 // 예: const spots = await getSpotsByCityFromDb("tokyo")
 import { db } from "@/lib/db";
 import { getHiddenSpotIds } from "@/lib/moderation";
+import type { Bounds } from "@/lib/bounds";
 
 export function getCitiesFromDb() {
   return db.city.findMany({
@@ -20,6 +21,24 @@ export async function getSpotsByCityFromDb(cityId: string) {
     },
     orderBy: [{ uniqueCheckinCount: "desc" }, { createdAt: "desc" }],
     include: { category: true },
+  });
+}
+
+// 지도 뷰포트(경계 상자) 내 스팟 — 도시 스코프 + shooter 좌표 범위 필터. 뷰포트 로드용(rules §불변식).
+// bbox는 Float 범위 비교로 충분(근처 반경 검색만 PostGIS ST_DWithin). take 상한으로 넓은 줌 페이로드 방어.
+export async function getSpotsInBoundsFromDb(cityId: string, b: Bounds) {
+  const hidden = await getHiddenSpotIds();
+  return db.spot.findMany({
+    where: {
+      cityId,
+      isBlockedHighRisk: false,
+      id: { notIn: hidden },
+      shooterLat: { gte: b.south, lte: b.north },
+      shooterLng: { gte: b.west, lte: b.east },
+    },
+    orderBy: [{ uniqueCheckinCount: "desc" }, { createdAt: "desc" }],
+    include: { category: true },
+    take: 500, // 넓은 줌 상한(최대 도시 스팟 수 < 500 → 실사용 손실 없음, rules TODO 상한 결정)
   });
 }
 
