@@ -1,0 +1,6 @@
+# 앱(Next.js)과 무관한 도구·세션·데이터 디렉터리는 배포 업로드에서 제외.
+# .claude/worktrees(세션 git 워크트리)에 dangling 파일이 있으면 lstat ENOENT로 배포가 깨진다.
+.claude
+.agent
+research
+meta-prompt
