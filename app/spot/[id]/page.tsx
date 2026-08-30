@@ -2,7 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   ChevronLeft,
-  Share2,
   Heart,
   ChevronRight,
   Star,
@@ -16,6 +15,7 @@ import { CompareSlider } from "@/components/CompareSlider";
 import { SpotActions } from "@/components/SpotActions";
 import { DirectionsButton } from "@/components/spot/DirectionsButton";
 import { SafetyBanner } from "@/components/spot/SafetyBanner";
+import { ShareButton } from "@/components/ui/ShareButton";
 import { Mascot } from "@/components/ui/Mascot";
 import { type Verified } from "@/lib/mock";
 import { getSpot, getWork, getCollections, getSpotPosts } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
@@ -95,12 +95,11 @@ export default async function SpotDetailScreen({
               <ChevronLeft size={20} />
             </Link>
             <div className="flex gap-2">
-              <span
-                aria-disabled
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"
-              >
-                <Share2 size={18} />
-              </span>
+              <ShareButton
+                title={s.title}
+                size={18}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur active:scale-90"
+              />
               <span
                 aria-disabled
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"

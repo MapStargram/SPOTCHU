@@ -1,15 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  ChevronLeft,
-  MoreHorizontal,
-  Share2,
-  Bookmark,
-  Check,
-} from "lucide-react";
+import { ChevronLeft, MoreHorizontal, Bookmark, Check } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
 import { LikeButton } from "@/components/community/LikeButton";
+import { ShareButton } from "@/components/ui/ShareButton";
 import { getPostDetail, getSpot } from "@/lib/data";
 import { getCurrentUser } from "@/lib/session";
 
@@ -105,7 +100,7 @@ export default async function PostDetailPage({
               loggedIn={!!user}
               size={24}
             />
-            <Share2 size={22} />
+            <ShareButton title={p.spotTitle} size={22} className="text-navy" />
             <Bookmark size={22} />
           </div>
           {p.caption && (

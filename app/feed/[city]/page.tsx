@@ -2,7 +2,6 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import {
   Camera,
-  Share2,
   Bookmark,
   MoreHorizontal,
   ChevronLeft,
@@ -12,6 +11,7 @@ import { Chip } from "@/components/ui/Chip";
 import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
 import { LikeButton } from "@/components/community/LikeButton";
+import { ShareButton } from "@/components/ui/ShareButton";
 import { getCity, getCities, getFeedPosts, type FeedTab } from "@/lib/data";
 import { getCurrentUser } from "@/lib/session";
 
@@ -179,7 +179,12 @@ export default async function FeedPage({
                       initialLiked={p.likedByMe}
                       loggedIn={!!user}
                     />
-                    <Share2 size={18} className="text-navy" />
+                    <ShareButton
+                      path={`/post/${p.id}`}
+                      title={p.spotTitle}
+                      size={18}
+                      className="text-navy"
+                    />
                     <Link
                       href={`/spot/${p.spotId}`}
                       aria-label="연결 스팟 보기"
