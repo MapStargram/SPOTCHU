@@ -1,18 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  ChevronLeft,
-  Heart,
-  ChevronRight,
-  Star,
-  Check,
-  Camera,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Star, Check, Camera } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
 import { CompareSlider } from "@/components/CompareSlider";
 import { SpotActions } from "@/components/SpotActions";
+import { SpotSaveHeart } from "@/components/spot/SpotSaveHeart";
 import { DirectionsButton } from "@/components/spot/DirectionsButton";
 import { SafetyBanner } from "@/components/spot/SafetyBanner";
 import { ShareButton } from "@/components/ui/ShareButton";
@@ -20,6 +14,7 @@ import { Mascot } from "@/components/ui/Mascot";
 import { type Verified } from "@/lib/mock";
 import { getSpot, getWork, getCollections, getSpotPosts } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 import { getCurrentUser } from "@/lib/session";
+import { getSavedSpotIds } from "@/lib/actions/mutations";
 
 // DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
 export const dynamic = "force-dynamic";
@@ -48,6 +43,7 @@ export default async function SpotDetailScreen({
   const savedIn = ownCollections
     .filter((c) => c.spots.includes(s.id))
     .map((c) => c.id);
+  const savedIds = await getSavedSpotIds(); // 히어로 ♥ 초기 상태(로그인=DB, 게스트=[])
 
   // 방문자의 사진 = 이 스팟의 실제 게시물(없으면 빈 배열 → 빈 상태 노출, 더미 없음)
   const posts = await getSpotPosts(s.id);
@@ -100,12 +96,11 @@ export default async function SpotDetailScreen({
                 size={18}
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur active:scale-90"
               />
-              <span
-                aria-disabled
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"
-              >
-                <Heart size={18} />
-              </span>
+              <SpotSaveHeart
+                spotId={s.id}
+                loggedIn={!!user}
+                initialSaved={savedIds}
+              />
             </div>
           </div>
           <div className="absolute inset-x-5 bottom-14 text-cream">
