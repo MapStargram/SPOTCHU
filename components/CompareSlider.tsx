@@ -11,11 +11,11 @@ export function CompareSlider({
   repImg,
   repGrad = "linear-gradient(180deg, #E24352 0%, #17233C 100%)",
   repLabel = "공식 대표 · 노을",
-  repTitle = "스가 신사 라스트씬 앵글",
+  repTitle = "대표 앵글",
   userImg,
   userGrad = "linear-gradient(180deg, #FBEFE0 0%, #FF7A85 60%, #E24352 100%)",
-  userLabel = "2026.09.14 · 오후 5:34",
-  userTitle = "스가 신사 계단에서",
+  userLabel,
+  userTitle,
 }: {
   repImg?: string;
   repGrad?: string;
@@ -71,10 +71,19 @@ export function CompareSlider({
           <TagPill variant="coral">내 사진</TagPill>
         </div>
         <div className="absolute inset-x-5 bottom-5 text-cream">
-          <div className="text-[11px] opacity-85">{userLabel}</div>
-          <div className="mt-0.5 text-[15px] font-bold tracking-[-0.01em]">
-            {userTitle}
-          </div>
+          {userImg ? (
+            <>
+              <div className="text-[11px] opacity-85">{userLabel}</div>
+              <div className="mt-0.5 text-[15px] font-bold tracking-[-0.01em]">
+                {userTitle}
+              </div>
+            </>
+          ) : (
+            // ponytail: 실제 유저 사진 없을 때 가짜 캡션 대신 인증 유도(NSM)
+            <div className="text-[13px] font-semibold tracking-[-0.01em]">
+              방문 인증하면 내 사진이 여기에 나와요
+            </div>
+          )}
         </div>
       </div>
       {/* 위 = 대표 (width로 클립) */}
