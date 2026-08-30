@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { CategoryLabel } from "../ui/CategoryLabel";
+import { ShareButton } from "../ui/ShareButton";
 import { CollectionMap } from "./CollectionMap";
 import {
   removeSpotAction,
@@ -193,12 +194,11 @@ export function CollectionDetail({
                   <MoreHorizontal size={20} />
                 </button>
               ) : (
-                <span
-                  aria-disabled
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"
-                >
-                  <MoreHorizontal size={20} />
-                </span>
+                <ShareButton
+                  title={col.title}
+                  size={20}
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur active:scale-90"
+                />
               )}
             </div>
             <div className="absolute inset-x-5 bottom-8 text-cream">
@@ -374,12 +374,11 @@ export function CollectionDetail({
                 <Pencil size={18} />
               </button>
             ) : (
-              <span
-                aria-disabled
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur"
-              >
-                <Pencil size={18} />
-              </span>
+              <ShareButton
+                title={col.title}
+                size={18}
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur active:scale-90"
+              />
             )}
           </div>
           {/* Toggle */}

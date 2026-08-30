@@ -1,15 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  ChevronLeft,
-  Share2,
-  Check,
-  ChevronRight,
-  Sparkles,
-} from "lucide-react";
+import { ChevronLeft, Check, ChevronRight, Sparkles } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
+import { ShareButton } from "@/components/ui/ShareButton";
 import { getWork } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 
 // DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
@@ -89,12 +84,11 @@ export default async function WorkDetailScreen({
             >
               <ChevronLeft size={20} />
             </Link>
-            <span
-              aria-disabled
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"
-            >
-              <Share2 size={18} />
-            </span>
+            <ShareButton
+              title={w.title}
+              size={18}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur active:scale-90"
+            />
           </div>
           <div className="absolute inset-x-5 bottom-5 text-cream">
             <TagPill variant="glass" className="mb-2.5">

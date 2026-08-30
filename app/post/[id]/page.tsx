@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronLeft, MoreHorizontal, Bookmark, Check } from "lucide-react";
+import { ChevronLeft, Bookmark, Check } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
 import { LikeButton } from "@/components/community/LikeButton";
@@ -60,12 +60,11 @@ export default async function PostDetailPage({
             >
               <ChevronLeft size={20} />
             </Link>
-            <span
-              aria-disabled
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"
-            >
-              <MoreHorizontal size={20} />
-            </span>
+            <ShareButton
+              title={p.spotTitle}
+              size={20}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur active:scale-90"
+            />
           </div>
           {/* Author overlay */}
           <div className="absolute inset-x-4 top-28 flex items-center gap-2.5 text-cream">
