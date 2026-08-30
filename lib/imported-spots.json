@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T07:12:21.660Z",
+  "generatedAt": "2026-08-30T07:35:52.172Z",
   "spots": [
     {
       "id": "bangkok-khlong-ong-ang-king-the-land-3f4d",
@@ -16,7 +16,13 @@
       "workId": "king-the-land",
       "scene": "방콕 야시장과 클롱 옹앙 산책로를 걷는 10화 장면.",
       "verified": "reported",
-      "source": "https://thesmartlocal.co.th/locations-in-king-the-land/"
+      "source": "https://thesmartlocal.co.th/locations-in-king-the-land/",
+      "imageUrl": "/spots/bangkok-khlong-ong-ang-king-the-land-3f4d.jpg",
+      "imageCredit": {
+        "author": "CKasa",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%AA%E0%B8%B0%E0%B8%9E%E0%B8%B2%E0%B8%99%E0%B8%A0%E0%B8%B2%E0%B8%93%E0%B8%B8%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B8%B8%E0%B9%8C973.jpg"
+      }
     },
     {
       "id": "bangkok-lebua-skybar-hangover-2-7b1c",
@@ -33,7 +39,13 @@
       "workId": "hangover-part-ii",
       "scene": "르부아 rooftop bar/restaurant에서 방콕 전경을 배경으로 한 장면.",
       "verified": "reported",
-      "source": "https://lebua.com/restaurants/sky-bar/"
+      "source": "https://lebua.com/restaurants/sky-bar/",
+      "imageUrl": "/spots/bangkok-lebua-skybar-hangover-2-7b1c.jpg",
+      "imageCredit": {
+        "author": "Wolfgang Weber",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cupola_Of_The_Lebua_Tower_(190650123).jpeg"
+      }
     },
     {
       "id": "bangkok-loha-prasat-king-the-land-e92a",
@@ -50,7 +62,13 @@
       "workId": "king-the-land",
       "scene": "방콕 포상휴가 중 로하 쁘라삿 야경을 바라보는 10화 장면.",
       "verified": "reported",
-      "source": "https://www.timeout.com/bangkok/news/where-did-the-korean-drama-king-the-land-film-in-thailand-072123"
+      "source": "https://www.timeout.com/bangkok/news/where-did-the-korean-drama-king-the-land-film-in-thailand-072123",
+      "imageUrl": "/spots/bangkok-loha-prasat-king-the-land-e92a.jpg",
+      "imageCredit": {
+        "author": "Ahoerstemeier",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Loha_Prasat.jpg"
+      }
     },
     {
       "id": "bangkok-mahanakhon-chong-nonsi-skywalk-e31d",
@@ -145,7 +163,13 @@
       "workId": "perfume-the-story-of-a-murderer",
       "scene": "리치스 정원과 미로 장면",
       "verified": "reported",
-      "source": "https://www.barcelona.cat/ca/que-pots-fer-a-bcn/parcs-i-jardins/parc-del-laberint-dhorta_92086011915.html"
+      "source": "https://www.barcelona.cat/ca/que-pots-fer-a-bcn/parcs-i-jardins/parc-del-laberint-dhorta_92086011915.html",
+      "imageUrl": "/spots/barcelona-laberint-dhorta-perfume-richis-maze-3b9e.jpg",
+      "imageCredit": {
+        "author": "pepe.cornet",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Eroslaberinthorta.JPG"
+      }
     },
     {
       "id": "barcelona-palau-musica-blue-sea-umbrella-4c2a",
@@ -162,7 +186,13 @@
       "workId": "legend-of-the-blue-sea",
       "scene": "팔라우 음악당 입구의 우산 장면",
       "verified": "reported",
-      "source": "https://spainscreentourism.com/en/filming-locations/the-legend-of-the-blue-sea/"
+      "source": "https://spainscreentourism.com/en/filming-locations/the-legend-of-the-blue-sea/",
+      "imageUrl": "/spots/barcelona-palau-musica-blue-sea-umbrella-4c2a.jpg",
+      "imageCredit": {
+        "author": "Pili Redondo Rodríguez",
+        "license": "CC BY-SA 3.0 es",
+        "source": "https://commons.wikimedia.org/wiki/File:Grup_escult%C3%B2ric_de_Miquel_Blay..jpg"
+      }
     },
     {
       "id": "barcelona-placa-sant-felip-neri-perfume-plum-girl-8d3f",
@@ -581,7 +611,13 @@
       "workId": "chungking-express",
       "scene": "센트럴 미드레벨 에스컬레이터와 코크란 스트리트 일대의 장면으로 알려진 구도; 정확한 프레임은 검토 필요",
       "verified": "reported",
-      "source": "https://en.wikipedia.org/wiki/Central%E2%80%93Mid-Levels_escalator"
+      "source": "https://en.wikipedia.org/wiki/Central%E2%80%93Mid-Levels_escalator",
+      "imageUrl": "/spots/hongkong-central-mid-levels-escalator-cochrane-4a91.jpg",
+      "imageCredit": {
+        "author": "N509FZ",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ser_Wong_Fun_Restaurant,_Hong_Kong_(20181012150936).jpg"
+      }
     },
     {
       "id": "hongkong-choi-hung-estate-court-p03",
@@ -678,7 +714,13 @@
       "workId": "hong-kong-police-film-locations",
       "scene": "공식 자료는 경찰서 외부가 여러 고전 홍콩 영화에 사용되었음을 확인하지만 개별 작품의 정확한 프레임은 검토 필요",
       "verified": "reported",
-      "source": "https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=The+Former+Yau+Ma+Tei+Police+Station"
+      "source": "https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=The+Former+Yau+Ma+Tei+Police+Station",
+      "imageUrl": "/spots/hongkong-old-yau-ma-tei-police-station-6c34.jpg",
+      "imageCredit": {
+        "author": "Exploringlife",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Old_Yau_Ma_Tei_Police_Station_(full_blue_sky).jpg"
+      }
     },
     {
       "id": "incheon-incheon-bridge-bongjaesan-s-line-a7f1",
@@ -838,7 +880,13 @@
       "workId": "work-jeju",
       "scene": "JTBC 드라마 <웰컴투 삼달리>에서 조삼달(신혜선)과 조용필(지창욱)의 아지트이자 과거와 현재를 잇는 비밀스러운 장소로 등장하며, 바다 위 돌담길을 걷는 상징적인 씬의 무대. 또한 KBS2 드라마 <공항 가는 길>에서 서도우(이상윤)의 제주 바닷가 작업실이 있던 고즈넉한 포구.",
       "verified": "reported",
-      "source": "https://www.visitjeju.net"
+      "source": "https://www.visitjeju.net",
+      "imageUrl": "/spots/jeju-ojo-port-samdalri-b61e.jpg",
+      "imageCredit": {
+        "author": "Korea.net / Korean Culture and Information Service",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seongsan_Ilchulbong_from_the_air.jpg"
+      }
     },
     {
       "id": "jeju-sinchang-windmill-bridge-4f2d",
@@ -1090,7 +1138,13 @@
       "workId": "sherlock",
       "scene": "Speedy's Cafe at 187 North Gower Street as the BBC Sherlock 221B exterior",
       "verified": "reported",
-      "source": "https://en.wikipedia.org/wiki/Speedy%27s_Sandwich_Bar_%26_Cafe"
+      "source": "https://en.wikipedia.org/wiki/Speedy%27s_Sandwich_Bar_%26_Cafe",
+      "imageUrl": "/spots/london-sherlock-221b-north-gower-6a8b.jpg",
+      "imageCredit": {
+        "author": "Frombowen",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Numbers_168_And_170_And_Attached_Railings.jpg"
+      }
     },
     {
       "id": "london-st-dunstan-in-the-east-gothic-garden-4e2d",
@@ -1130,7 +1184,13 @@
       "workId": "ted-lasso",
       "scene": "Paved Court의 Ted 아파트 입구와 The Prince's Head의 Crown & Anchor 촬영지",
       "verified": "reported",
-      "source": "https://britmovietours.com/ted-lasso-filming-locations-richmond-london/"
+      "source": "https://britmovietours.com/ted-lasso-filming-locations-richmond-london/",
+      "imageUrl": "/spots/london-ted-lasso-paved-court-richmond-3f1e.jpg",
+      "imageCredit": {
+        "author": "No Swan So Fine",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:25_Richmond_Green,_Richmond,_June_2022.jpg"
+      }
     },
     {
       "id": "nara-beyond-the-boundary-kintetsu-gyoki-c741",
@@ -1147,7 +1207,13 @@
       "workId": "beyond-the-boundary",
       "scene": "킨테츠 나라역 행기보살 분수대가 나가츠키역 앞 광장으로 등장하는 성지순례 구도",
       "verified": "reported",
-      "source": "https://seichi-map.com/kyoukainokanata-nara/"
+      "source": "https://seichi-map.com/kyoukainokanata-nara/",
+      "imageUrl": "/spots/nara-beyond-the-boundary-kintetsu-gyoki-c741.jpg",
+      "imageCredit": {
+        "author": "Degueulasse",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kintetsu_Nara_station_20140902.jpg"
+      }
     },
     {
       "id": "nara-beyond-the-boundary-nara-hotel-e38a",
@@ -1181,7 +1247,13 @@
       "workId": "demon-slayer",
       "scene": "최종선별 바위 절단 장면과 유사한 영감·모델지 관계(정확한 작품 촬영지는 아님)",
       "verified": "reported",
-      "source": "https://narashikanko.or.jp/spot/detail_10118.html"
+      "source": "https://narashikanko.or.jp/spot/detail_10118.html",
+      "imageUrl": "/spots/nara-demon-slayer-yagyu-ittoseki-f92c.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Ama-no-Iwatate_Shrine-05_photo.jpg"
+      }
     },
     {
       "id": "nara-sagiike-ukimido-pavilion-view-b32a",
@@ -1198,7 +1270,13 @@
       "workId": "35nenme-no-love-letter",
       "scene": "우키미도에서 젊은 연인이 데이트하는 장면",
       "verified": "reported",
-      "source": "https://www.city.nara.lg.jp/site/kanko/224213.html"
+      "source": "https://www.city.nara.lg.jp/site/kanko/224213.html",
+      "imageUrl": "/spots/nara-sagiike-ukimido-pavilion-view-b32a.jpg",
+      "imageCredit": {
+        "author": "Humanoid one",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nara_Japan_2.jpg"
+      }
     },
     {
       "id": "nara-sagiike-ukimido-reflection-a43c",
@@ -1253,7 +1331,13 @@
       "workId": "shikaotoko-ao-ni-yoshi",
       "scene": "네코단과 종루로 이어지는 통학길 장면",
       "verified": "reported",
-      "source": "https://small-life.com/archives/08/02/0919.php"
+      "source": "https://small-life.com/archives/08/02/0919.php",
+      "imageUrl": "/spots/nara-todaiji-nekodan-stone-steps-7c4d.jpg",
+      "imageCredit": {
+        "author": "Nekosuki",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Todai-ji_Syourou_Bell_tower_National_Treasure_%E5%9B%BD%E5%AE%9D%E6%9D%B1%E5%A4%A7%E5%AF%BA%E9%90%98%E6%A5%BC13.JPG"
+      }
     },
     {
       "id": "nara-todaiji-nigatsudo-sunset-b81f",
@@ -1268,7 +1352,13 @@
       "lens": "24-70mm 표준 줌 렌즈 (전경의 낚시등롱과 중경 대불전 지붕을 함께 조화롭게 배치하는 35-50mm 화각 권장)",
       "time": "일몰 30분 전 ~ 매직아워(황혼)",
       "verified": "reported",
-      "source": "https://www.todaiji.or.jp/annual-hall/nigatsudo/"
+      "source": "https://www.todaiji.or.jp/annual-hall/nigatsudo/",
+      "imageUrl": "/spots/nara-todaiji-nigatsudo-sunset-b81f.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Daibutsu-den_in_Todaiji_Nara01bs3200.jpg"
+      }
     },
     {
       "id": "nara-wakakusayama-summit-deer-c79d",
@@ -1329,7 +1419,13 @@
       "workId": "joker",
       "scene": "Arthur Fleck이 계단에서 춤추는 장면으로 알려진 촬영 장소",
       "verified": "reported",
-      "source": "https://www.filmoblivion.com/locations/joker-stairs-bronx"
+      "source": "https://www.filmoblivion.com/locations/joker-stairs-bronx",
+      "imageUrl": "/spots/newyork-joker-stairs-bronx-8a3b.jpg",
+      "imageCredit": {
+        "author": "Moviebuff1921",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Jokerstairstourists.jpg"
+      }
     },
     {
       "id": "newyork-staple-street-skybridge-tribeca-b74d",
@@ -1409,7 +1505,13 @@
       "workId": "the-aquatope-on-white-sand",
       "scene": "Nanjo/Cape Chinen chapter; exact frame is PARTIAL_MATCH pending review",
       "verified": "reported",
-      "source": "https://www.city.nanjo.okinawa.jp/topics/1625200182/"
+      "source": "https://www.city.nanjo.okinawa.jp/topics/1625200182/",
+      "imageUrl": "/spots/okinawa-cape-chinen-park-aquatope-3b42.jpg",
+      "imageCredit": {
+        "author": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cape_Chinen_Park_and_Kudakajima_Island.JPG"
+      }
     },
     {
       "id": "okinawa-cape-manzamo-elephant-rock-c91d",
@@ -1502,7 +1604,13 @@
       "workId": "its-okay-thats-love",
       "scene": "8화 오키나와 여행 장면과 만좌모 코끼리바위 산책로",
       "verified": "reported",
-      "source": "https://www.okinawastory.jp/spot/1077"
+      "source": "https://www.okinawastory.jp/spot/1077",
+      "imageUrl": "/spots/okinawa-manzamo-elephant-rock-viewpoint-e41a.jpg",
+      "imageCredit": {
+        "author": "CEphoto, Uwe Aranas",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Onna_Okinawa_Japan_Cape-Manzamo-01.jpg"
+      }
     },
     {
       "id": "okinawa-nirai-kanai-tunnel-observatory-a82f",
@@ -1723,7 +1831,13 @@
       "workId": "emily-in-paris",
       "scene": "Place de l'Estrapade의 아파트·레스토랑·제과점 주변 장면",
       "verified": "reported",
-      "source": "https://www.screenbie.com/en/planes-geniales/filming-places-emily-in-paris/"
+      "source": "https://www.screenbie.com/en/planes-geniales/filming-places-emily-in-paris/",
+      "imageUrl": "/spots/paris-emily-in-paris-estrapade-c419.jpg",
+      "imageCredit": {
+        "author": "LPLT",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:21_rue_de_l%27Estrapade.JPG"
+      }
     },
     {
       "id": "paris-inception-bir-hakeim-viaduct-e91b",
@@ -1740,7 +1854,13 @@
       "workId": "inception",
       "scene": "아리아드네와 코브가 오르는 비르하켐 다리의 꿈 건축 장면",
       "verified": "reported",
-      "source": "https://www.movie-locations.com/movies/i/Inception.php"
+      "source": "https://www.movie-locations.com/movies/i/Inception.php",
+      "imageUrl": "/spots/paris-inception-bir-hakeim-viaduct-e91b.jpg",
+      "imageCredit": {
+        "author": "No machine-readable author provided. Gede~commonswiki assumed (based on copyright claims).",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Pont_bir_hakeim_paris_riveteurs.jpg"
+      }
     },
     {
       "id": "paris-midnight-in-paris-steps-f82a",
@@ -1757,7 +1877,13 @@
       "workId": "midnight-in-paris",
       "scene": "생테티엔 뒤 몽 성당 북쪽 계단에서 시작되는 자정의 타임슬립 장면",
       "verified": "reported",
-      "source": "https://www.movie-locations.com/movies/m/Midnight-In-Paris.php"
+      "source": "https://www.movie-locations.com/movies/m/Midnight-In-Paris.php",
+      "imageUrl": "/spots/paris-midnight-in-paris-steps-f82a.jpg",
+      "imageCredit": {
+        "author": "Diliff",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:St-Etienne-du-Mont_Exterior,_Paris,_France_-_Diliff.jpg"
+      }
     },
     {
       "id": "paris-montmartre-sinking-house-c7d9",
@@ -1837,7 +1963,13 @@
       "workId": "golden-kamuy",
       "scene": "구 야마모토 이발관이 등장하는 장소 모델로 알려진 장면",
       "verified": "reported",
-      "source": "https://naaatm.com/2021/12/17/goldenkamuy-kaitakunomura/"
+      "source": "https://naaatm.com/2021/12/17/goldenkamuy-kaitakunomura/",
+      "imageUrl": "/spots/sapporo-golden-kamuy-yamamoto-barbershop-d82a.jpg",
+      "imageCredit": {
+        "author": "t-konno",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E5%8C%97%E6%B5%B7%E9%81%93%E9%96%8B%E6%8B%93%E3%81%AE%E6%9D%91(Historical_Village_of_Hokkaido)_-_panoramio_(1).jpg"
+      }
     },
     {
       "id": "sapporo-hiragishi-takadai-park-suiyo-dodesho-7e3d",
@@ -1854,7 +1986,13 @@
       "workId": "suiyo-dodesho",
       "scene": "평岸高台公園 전틀·후틀 고정 촬영 장면",
       "verified": "reported",
-      "source": "https://www.htb.co.jp/htb/kouhou/photo/20210430/20210430_02.pdf"
+      "source": "https://www.htb.co.jp/htb/kouhou/photo/20210430/20210430_02.pdf",
+      "imageUrl": "/spots/sapporo-hiragishi-takadai-park-suiyo-dodesho-7e3d.jpg",
+      "imageCredit": {
+        "author": "dutyterms",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:%E5%B9%B3%E5%B2%B8%E9%AB%98%E5%8F%B0%E5%85%AC%E5%9C%92.jpg"
+      }
     },
     {
       "id": "sapporo-horohira-bridge-arch-firstlove-8b2c",
@@ -1871,7 +2009,13 @@
       "workId": "first-love-hatsukoi",
       "scene": "제7화 호로히라바시 새벽 아이스크림 대화 장면",
       "verified": "reported",
-      "source": "https://www.showa-vod.com/hokkaido-location-guide/drama-locations/sapporo-otaru-first-love-drama-tour/"
+      "source": "https://www.showa-vod.com/hokkaido-location-guide/drama-locations/sapporo-otaru-first-love-drama-tour/",
+      "imageUrl": "/spots/sapporo-horohira-bridge-arch-firstlove-8b2c.jpg",
+      "imageCredit": {
+        "author": "Kinori",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:HorohiraBashi2004-2-25.jpg"
+      }
     },
     {
       "id": "sapporo-horomi-pass-lavender-view-8c1d",
@@ -1909,7 +2053,13 @@
       "workId": "first-love-hatsukoi",
       "scene": "삿포로시 천문대에서 화성을 관측한 장면",
       "verified": "reported",
-      "source": "https://www.screensapporo.jp/wp/wp-content/uploads/2022/12/First-Love-Sapporo-Location-Map-PDF.pdf"
+      "source": "https://www.screensapporo.jp/wp/wp-content/uploads/2022/12/First-Love-Sapporo-Location-Map-PDF.pdf",
+      "imageUrl": "/spots/sapporo-nakajima-park-astronomical-observatory-f41a.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Nakajima_Park_Sapporo14n4272.jpg"
+      }
     },
     {
       "id": "sapporo-nami-yo-kiitekure-horohirabashi-f41c",
@@ -1926,7 +2076,13 @@
       "workId": "nami-yo-kiitekure",
       "scene": "삿포로 호로히라바시로 알려진 배경 장면",
       "verified": "reported",
-      "source": "https://www.city.sapporo.jp/kensetsu/stn/h15/hashi/horohirabashi.html"
+      "source": "https://www.city.sapporo.jp/kensetsu/stn/h15/hashi/horohirabashi.html",
+      "imageUrl": "/spots/sapporo-nami-yo-kiitekure-horohirabashi-f41c.jpg",
+      "imageCredit": {
+        "author": "Kinori",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:HorohiraBashi2004-2-25.jpg"
+      }
     },
     {
       "id": "sapporo-odori-park-fountain-tvtower-anime-e19b",
@@ -1943,7 +2099,13 @@
       "workId": "nami-yo-kiitekure-dosanko-gal",
       "scene": "오도리 공원·TV탑 배경과 연결된 부분 매치 후보",
       "verified": "reported",
-      "source": "https://www.visit-hokkaido.jp/en/spot/detail_10004.html"
+      "source": "https://www.visit-hokkaido.jp/en/spot/detail_10004.html",
+      "imageUrl": "/spots/sapporo-odori-park-fountain-tvtower-anime-e19b.jpg",
+      "imageCredit": {
+        "author": "欅 (Keyaki)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sapporo_television_tower_01.jpg"
+      }
     },
     {
       "id": "sapporo-susukino-cocono-terrace-nikka-e54b",
@@ -2233,7 +2395,13 @@
       "workId": "work-singapore",
       "scene": "콜린 쿠(Colin Khoo)와 아라민타 리(Araminta Lee)의 화려한 4천만 달러 규모 세기의 결혼식이 열린 성당 장면. 하객들이 입장하는 외관 및 물길과 풀밭으로 꾸며진 예배당 내부 런웨이 버진로드의 배경.",
       "verified": "reported",
-      "source": "https://theoccasionaltraveller.com/crazy-rich-asians-singapore-filming-locations/"
+      "source": "https://theoccasionaltraveller.com/crazy-rich-asians-singapore-filming-locations/",
+      "imageUrl": "/spots/singapore-chijmes-hall-crazy-rich-asians-e39a.jpg",
+      "imageCredit": {
+        "author": "Terence Ong",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:CHIJMES_5.JPG"
+      }
     },
     {
       "id": "singapore-fullerton-hotel-little-women-c42b",
@@ -2250,7 +2418,13 @@
       "workId": "work-singapore",
       "scene": "700억 비자금을 찾기 위해 싱가포르에 도착한 오인주(김고은)와 최도일(위하준)이 머무르는 고급 본거지이자 싱가포르 입성을 상징하는 주요 배경 (8화). 호텔 전경, 로비 및 싱가포르 강변 산책 장면.",
       "verified": "reported",
-      "source": "https://www.straitstimes.com/life/entertainment/k-drama-little-women-stars-kim-go-eun-and-wi-ha-joon-filming-in-singapore"
+      "source": "https://www.straitstimes.com/life/entertainment/k-drama-little-women-stars-kim-go-eun-and-wi-ha-joon-filming-in-singapore",
+      "imageUrl": "/spots/singapore-fullerton-hotel-little-women-c42b.jpg",
+      "imageCredit": {
+        "author": "Basile Morin",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Aerial_photographs_of_The_Fullerton_Hotel_of_Singapore_at_night.jpg"
+      }
     },
     {
       "id": "singapore-marina-one-green-heart-westworld-7d1a",
@@ -2267,7 +2441,13 @@
       "workId": "3-singapore",
       "scene": "HBO SF 드라마 <웨스트월드> 시즌 3 (1화, 4화)에서 거대 테크 기업 인사이트(Incite Inc.)의 미래지향적 본사 건물 외관 및 중앙 정원으로 등장. 샬럿 헤일과 메이브가 미래 도시 로스앤젤레스의 인공지능 기업을 거니는 주요 장면.",
       "verified": "reported",
-      "source": "https://www.timeout.com/singapore/news/hbo-westworld-season-3-singapore-locations-guide-031620"
+      "source": "https://www.timeout.com/singapore/news/hbo-westworld-season-3-singapore-locations-guide-031620",
+      "imageUrl": "/spots/singapore-marina-one-green-heart-westworld-7d1a.jpg",
+      "imageCredit": {
+        "author": "LittleT889",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Marina_One.jpg"
+      }
     },
     {
       "id": "taipei-in-time-with-you-jiannan-mountain-4e92",
@@ -2284,7 +2464,13 @@
       "workId": "in-time-with-you",
       "scene": "지안난산에서 미라마와 101 야경을 바라보는 전망 장면",
       "verified": "reported",
-      "source": "https://www.gov.taipei/News_Content.aspx?n=F29A02A9E36C268F&s=213854"
+      "source": "https://www.gov.taipei/News_Content.aspx?n=F29A02A9E36C268F&s=213854",
+      "imageUrl": "/spots/taipei-in-time-with-you-jiannan-mountain-4e92.jpg",
+      "imageCredit": {
+        "author": "阿道",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Miramar_Ferris_Wheel-01.2023-06-02.jpg"
+      }
     },
     {
       "id": "taipei-light-the-night-sugar-bar-849c",
@@ -2356,7 +2542,13 @@
       "workId": "turn-left-turn-right",
       "scene": "베이터우 공원 분수대 재회 장면",
       "verified": "reported",
-      "source": "https://udn.com/news/story/7155/5432190"
+      "source": "https://udn.com/news/story/7155/5432190",
+      "imageUrl": "/spots/taipei-turn-left-turn-right-beitou-park-fountain-7d31.jpg",
+      "imageCredit": {
+        "author": "lienyuan lee",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Old_Fountain_in_Beitou_Park_%E5%8C%97%E6%8A%95%E5%85%AC%E5%9C%92%E5%99%B4%E6%B0%B4%E6%B1%A0_-_panoramio.jpg"
+      }
     },
     {
       "id": "taipei-xiangshan-six-giant-rocks-e5f6",
@@ -2616,7 +2808,13 @@
       "workId": "bocchi-the-rock",
       "scene": "6화 비와지마 신사·히라가타만 일대 만남 장면",
       "verified": "reported",
-      "source": "https://motsu-tanbou.com/bocchi-kanazawahakkei/"
+      "source": "https://motsu-tanbou.com/bocchi-kanazawahakkei/",
+      "imageUrl": "/spots/yokohama-biwajima-shrine-bocchi-6a1f.jpg",
+      "imageCredit": {
+        "author": "与謝野鋼管",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Biwajima,_Yokohama.jpg"
+      }
     },
     {
       "id": "yokohama-grand-central-tower-richman-02",
@@ -2633,7 +2831,13 @@
       "workId": "richman-poor-woman",
       "scene": "NEXT INNOVATION 외관 및 1층 현관·입장 게이트",
       "verified": "reported",
-      "source": "https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%83%E3%83%81%E3%83%9E%E3%83%B3%E3%80%81%E3%83%97%E3%82%A2%E3%82%A6%E3%83%BC%E3%83%9E%E3%83%B3"
+      "source": "https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%83%E3%83%81%E3%83%9E%E3%83%B3%E3%80%81%E3%83%97%E3%82%A2%E3%82%A6%E3%83%BC%E3%83%9E%E3%83%B3",
+      "imageUrl": "/spots/yokohama-grand-central-tower-richman-02.jpg",
+      "imageCredit": {
+        "author": "Thirteen-fri",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:MM_-_Grand_Central_Tower_10.jpg"
+      }
     },
     {
       "id": "yokohama-harbor-view-park-baybridge-3e7b",
@@ -2671,7 +2875,13 @@
       "workId": "nigehaji",
       "scene": "제2화 기타나카교 장면",
       "verified": "reported",
-      "source": "https://asikotz.com/entertainment/drama/nigehaji/"
+      "source": "https://asikotz.com/entertainment/drama/nigehaji/",
+      "imageUrl": "/spots/yokohama-kitanaka-bridge-nigehaji-01.jpg",
+      "imageCredit": {
+        "author": "Yokohama_Landmark_Tower_02.JPG: Σ64 derivative work: 0607crp (talk)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Landmark_Tower_02_cropped.jpg"
+      }
     },
     {
       "id": "yokohama-osanbashi-kujira-skyline-8c2d",
@@ -2726,7 +2936,13 @@
       "workId": "bungo-stray-dogs",
       "scene": "조노하나 파크 항만 배경 관련 PARTIAL_MATCH/영감 가능성",
       "verified": "reported",
-      "source": "https://www.motsu-tanbou.com/entry/pilgrimage-bungo_straydogs"
+      "source": "https://www.motsu-tanbou.com/entry/pilgrimage-bungo_straydogs",
+      "imageUrl": "/spots/yokohama-zounohana-dazai-view-7c3d.jpg",
+      "imageCredit": {
+        "author": "Kakidai",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Red_Brick_Warehouse_2012.JPG"
+      }
     }
   ],
   "works": [
