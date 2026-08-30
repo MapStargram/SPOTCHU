@@ -794,11 +794,11 @@ Your purpose is to continuously improve the quality and geographic coverage of t
 
 The SPOTCHU app ships a fixed set of launch cities. Capture data so the downstream Codex agent can emit a direct app-import lead (`research/leads/*.json`, consumed by `npm run import:leads`).
 
-Active app city ids (use these exact lowercase values as `city`):
+Active app city ids (use these exact lowercase values as `city`) = `CITY_IDS` in `lib/mock.ts`, currently the 20:
 
-tokyo, seoul, osaka, kyoto, fukuoka, busan
+tokyo, seoul, osaka, kyoto, fukuoka, busan, sapporo, yokohama, okinawa, nara, jeju, incheon, taipei, hongkong, bangkok, singapore, paris, london, newyork, barcelona
 
-If the investigated location is NOT in one of these six cities, still record it but set:
+If the investigated location is NOT in one of these cities, still record it but set:
 
 appImportable = false
 
