@@ -15,6 +15,7 @@ import { AppShell } from "@/components/shell/AppShell";
 import { CompareSlider } from "@/components/CompareSlider";
 import { SpotActions } from "@/components/SpotActions";
 import { DirectionsButton } from "@/components/spot/DirectionsButton";
+import { SafetyBanner } from "@/components/spot/SafetyBanner";
 import { Mascot } from "@/components/ui/Mascot";
 import { type Verified } from "@/lib/mock";
 import { getSpot, getWork, getCollections, getSpotPosts } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
@@ -146,6 +147,13 @@ export default async function SpotDetailScreen({
         </div>
 
         <div className="mt-4 flex flex-col gap-5 px-5">
+          {/* 위험 경고 배너 (§12 §5) — 위험 태그/주의사항/차단 시 상단 필수 노출 */}
+          <SafetyBanner
+            tags={s.safetyTags}
+            caution={s.caution}
+            blocked={s.blocked}
+          />
+
           {/* 길찾기 (§12 딥링크) */}
           {s.shooterLat != null && s.shooterLng != null && (
             <DirectionsButton lat={s.shooterLat} lng={s.shooterLng} />

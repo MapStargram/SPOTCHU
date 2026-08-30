@@ -92,6 +92,9 @@ interface DbSpotLike {
   subtitle?: string | null;
   angle?: string | null;
   infoSource?: string | null;
+  safetyTags?: string[];
+  caution?: string | null;
+  isBlockedHighRisk?: boolean;
   works?: { workId: string; sceneNote?: string | null }[];
 }
 function mapSpot(row: DbSpotLike): Spot {
@@ -116,6 +119,9 @@ function mapSpot(row: DbSpotLike): Spot {
     lens: row.lens ?? "",
     tip: row.tip ?? "",
     source: row.infoSource ?? undefined,
+    safetyTags: (row.safetyTags ?? []) as Spot["safetyTags"],
+    caution: row.caution ?? undefined,
+    blocked: row.isBlockedHighRisk ?? false,
     imageUrl: row.coverImageUrl || undefined,
     imageCredit: row.imageSource
       ? {
