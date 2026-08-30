@@ -139,12 +139,25 @@ interface DbCityLike {
   nameEn: string | null;
   country: string;
 }
+// DB Country enum → 한국어 국가명(지구본 국가 그룹핑 키와 일치, CityGlobe COUNTRY_META).
+const COUNTRY_KO: Record<string, string> = {
+  KR: "한국",
+  JP: "일본",
+  TW: "대만",
+  HK: "홍콩",
+  TH: "태국",
+  SG: "싱가포르",
+  FR: "프랑스",
+  GB: "영국",
+  US: "미국",
+  ES: "스페인",
+};
 function mapCity(row: DbCityLike): City {
   return {
     id: row.id as CityId,
     name: row.name,
     nameEn: row.nameEn ?? row.name,
-    country: row.country === "KR" ? "한국" : "일본",
+    country: COUNTRY_KO[row.country] ?? "일본",
     spotCount: 0,
     heroGrad: gradFor(row.id),
   };
