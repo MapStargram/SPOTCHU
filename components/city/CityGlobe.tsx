@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ChevronDown, Globe2 } from "lucide-react";
+import { ChevronRight, Globe2 } from "lucide-react";
 import type { GlobeInstance } from "globe.gl";
 import { CITIES, CITY_CENTER } from "@/lib/mock";
 
@@ -166,88 +166,92 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
     }
   }, [open, countries]);
 
+  // 선택된 나라. 지구본은 위 effect가 open 변화로 줌인/줌아웃. 리스트는 globe와 동기화해
+  // "전체 나라 그리드 ↔ 그 나라 도시 그리드"로 전환한다(중복 리스트 제거 + 초기 스크롤 축소).
+  const selected = countries.find((c) => c.id === open) ?? null;
+
   return (
     <div className="flex flex-col items-center">
       <div ref={containerRef} className="aspect-square w-full max-w-[340px]" />
 
-      {open && (
-        <button
-          onClick={() => setOpen(null)}
-          className="mb-1 mt-1 inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-1.5 text-[12px] font-semibold text-navy shadow-[shadow:var(--sh-card)]"
-        >
-          <Globe2 size={14} /> 전체 지구본
-        </button>
-      )}
-
-      <div className="mt-1 flex w-full max-w-[360px] flex-col gap-2.5">
-        {countries.map((country) => {
-          const isOpen = open === country.id;
-          return (
-            <div
-              key={country.id}
-              className="overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white shadow-[shadow:var(--sh-card)]"
-            >
+      {selected ? (
+        <div className="w-full max-w-[360px]">
+          <button
+            onClick={() => setOpen(null)}
+            className="mb-2.5 inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-1.5 text-[12px] font-semibold text-navy shadow-[shadow:var(--sh-card)] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--coral-light)]"
+          >
+            <Globe2 size={14} /> 전체 나라
+          </button>
+          <div className="mb-2 flex items-baseline gap-2 px-0.5">
+            <span className="text-[17px] font-extrabold tracking-[-0.02em] text-navy">
+              {selected.name}
+            </span>
+            <span className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+              {selected.nameEn} · {selected.cities.length}
+            </span>
+          </div>
+          <ul className="grid grid-cols-2 gap-2">
+            {selected.cities.map((city) =>
+              city.available ? (
+                <li key={city.id}>
+                  <button
+                    onClick={() => router.push(`/home/${city.id}`)}
+                    className="flex w-full items-center gap-2 rounded-xl border border-[color:var(--line)] bg-white px-3 py-2.5 text-left shadow-[shadow:var(--sh-card)] transition hover:bg-[color:var(--cream-2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--coral-light)]"
+                  >
+                    <span className="min-w-0 flex-1">
+                      <span className="block truncate text-[14px] font-bold text-navy">
+                        {city.name}
+                      </span>
+                      <span className="block text-[11px] font-semibold text-[color:var(--muted)]">
+                        {counts?.[city.id] ?? city.spots}개 스팟
+                      </span>
+                    </span>
+                    <span className="shrink-0 text-[14px] text-coral">→</span>
+                  </button>
+                </li>
+              ) : (
+                <li
+                  key={city.id}
+                  className="flex items-center gap-2 rounded-xl border border-dashed border-[color:var(--line)] px-3 py-2.5 text-[color:var(--muted-soft)]"
+                >
+                  <span className="min-w-0 flex-1 truncate text-[14px] font-semibold">
+                    {city.name}
+                  </span>
+                  <span className="shrink-0 rounded-full bg-[color:var(--cream-2)] px-2 py-0.5 text-[10px] font-semibold">
+                    준비 중
+                  </span>
+                </li>
+              ),
+            )}
+          </ul>
+        </div>
+      ) : (
+        <ul className="grid w-full max-w-[360px] grid-cols-2 gap-2">
+          {countries.map((country) => (
+            <li key={country.id}>
               <button
-                onClick={() => setOpen(isOpen ? null : country.id)}
-                aria-expanded={isOpen}
-                className="flex w-full items-center gap-3.5 px-4 py-3.5 text-left transition active:scale-[0.99]"
+                onClick={() => setOpen(country.id)}
+                aria-label={`${country.name} ${country.cities.length}개 도시`}
+                className="flex w-full items-center gap-2.5 rounded-2xl border border-[color:var(--line)] bg-white px-3 py-3 text-left shadow-[shadow:var(--sh-card)] transition active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--coral-light)]"
               >
                 <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-coral" />
                 <span className="min-w-0 flex-1">
-                  <span className="block font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
-                    {country.nameEn}
+                  <span className="block font-latin text-[9px] font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">
+                    {country.nameEn} · {country.cities.length}
                   </span>
-                  <span className="block text-[18px] font-extrabold tracking-[-0.02em] text-navy">
+                  <span className="block truncate text-[15px] font-extrabold tracking-[-0.02em] text-navy">
                     {country.name}
                   </span>
                 </span>
-                <span className="shrink-0 text-[11px] font-semibold text-[color:var(--muted)]">
-                  {country.cities.length}개 도시
-                </span>
-                <ChevronDown
-                  size={18}
-                  className={`shrink-0 text-[color:var(--muted)] transition ${isOpen ? "rotate-180" : ""}`}
+                <ChevronRight
+                  size={16}
+                  className="shrink-0 text-[color:var(--muted)]"
                 />
               </button>
-
-              {isOpen && (
-                <ul className="border-t border-[color:var(--line)] px-2.5 pb-2.5 pt-1.5">
-                  {country.cities.map((city) =>
-                    city.available ? (
-                      <li key={city.id}>
-                        <button
-                          onClick={() => router.push(`/home/${city.id}`)}
-                          className="flex w-full items-center gap-2.5 rounded-xl px-2.5 py-2.5 text-left transition hover:bg-[color:var(--cream-2)]"
-                        >
-                          <span className="flex-1 text-[14px] font-bold text-navy">
-                            {city.name}
-                          </span>
-                          <span className="text-[11px] font-semibold text-[color:var(--muted)]">
-                            {counts?.[city.id] ?? city.spots}개 스팟
-                          </span>
-                          <span className="text-[14px] text-coral">→</span>
-                        </button>
-                      </li>
-                    ) : (
-                      <li
-                        key={city.id}
-                        className="flex items-center gap-2.5 px-2.5 py-2.5 text-[color:var(--muted-soft)]"
-                      >
-                        <span className="flex-1 text-[14px] font-semibold">
-                          {city.name}
-                        </span>
-                        <span className="rounded-full bg-[color:var(--cream-2)] px-2 py-0.5 text-[10px] font-semibold">
-                          준비 중
-                        </span>
-                      </li>
-                    ),
-                  )}
-                </ul>
-              )}
-            </div>
-          );
-        })}
-      </div>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }
