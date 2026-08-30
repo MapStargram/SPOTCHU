@@ -291,6 +291,28 @@ export async function getWorkSpots(workId: string): Promise<WorkSpot[]> {
   }));
 }
 
+// 작품 성지순례 진행률 = 로그인 유저가 이 작품의 스팟 중 방문 인증한 distinct 수 / 전체.
+// 개인 데이터라 캐시 금지(getWork는 캐시라 progress를 안 담음). 비로그인·데모=0.
+export async function getWorkProgress(
+  workId: string,
+): Promise<{ visited: number; total: number }> {
+  if (!USE_DB) {
+    const total = mock.SPOTS.filter((s) => s.workId === workId).length;
+    return { visited: 0, total }; // 데모: 실 방문 데이터 없음
+  }
+  const row = await getWorkWithSpotsFromDb(workId);
+  const spotIds = row?.spots.map((sw) => sw.spot.id) ?? [];
+  const total = spotIds.length;
+  const user = await getCurrentUser();
+  if (!user?.id || total === 0) return { visited: 0, total };
+  const rows = await db.checkIn.findMany({
+    where: { userId: user.id, spotId: { in: spotIds } },
+    select: { spotId: true },
+    distinct: ["spotId"],
+  });
+  return { visited: rows.length, total };
+}
+
 // ── 컬렉션(Collection) ──
 // 큐레이션(official)은 콘텐츠, 내 것(ownerId===유저)은 유저별. 비로그인은 official만 보임.
 interface DbCollectionLike {

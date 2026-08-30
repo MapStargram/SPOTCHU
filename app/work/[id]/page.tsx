@@ -5,7 +5,7 @@ import { TagPill } from "@/components/ui/TagPill";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
 import { ShareButton } from "@/components/ui/ShareButton";
-import { getWork, getWorkSpots } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
+import { getWork, getWorkSpots, getWorkProgress } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 
 // DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
 export const dynamic = "force-dynamic";
@@ -22,8 +22,9 @@ export default async function WorkDetailScreen({
   if (!w) notFound();
 
   const scenes = await getWorkSpots(id);
+  const prog = await getWorkProgress(id); // 로그인 유저 실제 방문 / 전체(비로그인·데모=0)
   const progressPct =
-    w.spotCount > 0 ? Math.round((w.progress / w.spotCount) * 100) : 0;
+    prog.total > 0 ? Math.round((prog.visited / prog.total) * 100) : 0;
 
   return (
     <AppShell>
@@ -83,9 +84,9 @@ export default async function WorkDetailScreen({
               성지순례 진행률
             </div>
             <div className="font-latin text-[18px] font-extrabold tracking-[-0.02em] text-coral">
-              {w.progress}
+              {prog.visited}
               <span className="text-[12px] text-[color:var(--muted)]">
-                /{w.spotCount}
+                /{prog.total}
               </span>
             </div>
           </div>
