@@ -6,7 +6,7 @@
 // 멱등: 이미 호스팅된 스팟(기존 생성 JSON에 imageUrl 존재)은 재업로드하지 않는다.
 // 사용: npm run import:leads   (Cloudinary 저장하려면 .env.local에 CLOUDINARY_* 필요, 없으면 public/spots 폴백)
 import { readdir, readFile, writeFile, mkdir } from "node:fs/promises";
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import { join } from "node:path";
 import { z } from "zod";
 import { CITY_IDS } from "../lib/mock";
@@ -113,16 +113,44 @@ async function getUploader() {
   return null;
 }
 
+// Wikimedia(upload.wikimedia.org) 등은 연속 다운로드에 429를 준다 → 요청 간격 + 429 백오프 재시도.
+let lastImgFetch = 0;
+async function fetchImageBuffer(url: string): Promise<Buffer> {
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const since = Date.now() - lastImgFetch;
+    if (since < 1200) await new Promise((r) => setTimeout(r, 1200 - since));
+    lastImgFetch = Date.now();
+    const res = await fetch(url, { headers: { "User-Agent": UA } });
+    if (res.status === 429) {
+      const ra = Number(res.headers.get("retry-after")) || 12;
+      await new Promise((r) => setTimeout(r, ra * 1000));
+      continue;
+    }
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return Buffer.from(await res.arrayBuffer());
+  }
+  throw new Error("429 재시도 초과");
+}
+
 // CC/PD 이미지 다운로드 → Cloudinary(설정 시) 또는 public/spots 저장. 실패/비호환 시 null.
 async function hostImage(
   id: string,
   image: NonNullable<Lead["image"]>,
 ): Promise<{ url: string; credit: { author: string; license: string; source: string } } | null> {
   if (!licenseOk(image.license)) return null;
+  // 이미 자가호스팅된 로컬 파일이 있으면 재다운로드 생략(멱등·재시작 안전; Cloudinary 미설정 시).
+  const localPath = join(LOCAL_DIR, `${id}.jpg`);
+  const useCloudinary = !!(process.env.CLOUDINARY_CLOUD_NAME && process.env.CLOUDINARY_API_SECRET);
+  if (!useCloudinary && existsSync(localPath) && statSync(localPath).size > 1000) {
+    return {
+      url: `/spots/${id}.jpg`,
+      credit: { author: image.author, license: image.license, source: image.source },
+    };
+  }
+  // 재사용 전용 모드: 아직 로컬에 없는 이미지는 다운로드 생략(스로틀/오프라인 시 진행분만 반영).
+  if (process.env.IMPORT_REUSE_ONLY === "1") return null;
   try {
-    const res = await fetch(image.url, { headers: { "User-Agent": UA } });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const buf = Buffer.from(await res.arrayBuffer());
+    const buf = await fetchImageBuffer(image.url);
     if (buf.length < 1000) throw new Error(`too small (${buf.length}B)`);
     const upload = await getUploader();
     let url: string;
