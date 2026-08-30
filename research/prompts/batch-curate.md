@@ -37,7 +37,10 @@ Use two tiers:
 Only use `NEEDS_GEO_REVIEW` when you cannot even place the spot at area level, `POSSIBLE_DUPLICATE`
 for genuine dupes, and `REJECTED` only for fabricated / unlocatable / dangerous / no-evidence spots.
 For EACH `READY_FOR_REVIEW` candidate write an import-ready `research/leads/<leadId>.json` in the
-importer contract (titleKo, city ∈ the six app cities, category, shooterLat/Lng, area, subject,
+importer contract (titleKo, city ∈ the app cities = `CITY_IDS` in `lib/mock.ts` — currently the 20:
+tokyo, seoul, osaka, kyoto, fukuoka, busan, sapporo, yokohama, okinawa, nara, jeju, incheon, taipei,
+hongkong, bangkok, singapore, paris, london, newyork, barcelona — read the file if unsure; do NOT
+treat the newer cities as out-of-allowlist), category, shooterLat/Lng, area, subject,
 tip, verified, source, optional work/image).
 
 ## MALFORMED HANDLING

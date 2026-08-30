@@ -981,7 +981,7 @@ Accuracy, provenance, deduplication, and exact shooting geometry are the highest
 
 The repository ships an importer — `scripts/import-leads.ts` (`npm run import:leads`) — that turns leads into live app data and self-hosts compliant images to the image server (Cloudinary `spotchu/spots`, with a `public/spots/` fallback). Your verified, import-ready leads MUST be written in the exact contract below so the importer consumes them directly. See `research/leads/EXAMPLE.json` for a working example (that file is not imported).
 
-For every lead that is (a) READY_FOR_REVIEW quality, (b) has confident shooterLat/shooterLng, and (c) is in one of the six active app cities (tokyo, seoul, osaka, kyoto, fukuoka, busan), write one file:
+For every lead that is (a) READY_FOR_REVIEW quality, (b) has confident shooterLat/shooterLng, and (c) is in one of the active app cities = `CITY_IDS` in `lib/mock.ts` — currently the 20: tokyo, seoul, osaka, kyoto, fukuoka, busan, sapporo, yokohama, okinawa, nara, jeju, incheon, taipei, hongkong, bangkok, singapore, paris, london, newyork, barcelona (read the file if unsure; the newer cities ARE importable — do NOT reject them as out-of-allowlist), write one file:
 
 research/leads/<city>-<kebab-id>.json
 
@@ -990,7 +990,7 @@ Content = a single object OR an array of these objects. Fields (the importer val
 {
   "id": "osaka-castle-tenshukaku",        // optional kebab id; omit → derived from titleKo
   "titleKo": "오사카성 천수각",             // required
-  "city": "osaka",                         // required — tokyo|seoul|osaka|kyoto|fukuoka|busan ONLY
+  "city": "osaka",                         // required — any CITY_IDS in lib/mock.ts (20 cities incl. sapporo, jeju, taipei, paris, …)
   "category": "landmark",                  // required — landmark|anime|drama|photo|nature
   "shooterLat": 34.68678,                  // required — PHOTOGRAPHER position (never the landmark POI)
   "shooterLng": 135.52337,                 // required

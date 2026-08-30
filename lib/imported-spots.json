@@ -1,6 +1,57 @@
 {
-  "generatedAt": "2026-08-30T03:57:29.841Z",
+  "generatedAt": "2026-08-30T07:12:21.660Z",
   "spots": [
+    {
+      "id": "bangkok-khlong-ong-ang-king-the-land-3f4d",
+      "title": "클롱 옹앙 워킹 스트리트 (킹더랜드 길거리 야시장 촬영지)",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.7445,
+      "lng": 100.50338,
+      "area": "Khlong Ong Ang east-bank promenade near Saphan Han",
+      "subject": "운하·벽화·조명·다리를 함께 담는 킹더랜드 야시장 장면 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 벽화와 다리 구도를 확인하세요. 야시장 혼잡 시 보행을 막지 말고 장비를 안전하게 관리하세요.",
+      "lens": "28–50mm",
+      "time": "금–일 17:30–20:30",
+      "workId": "king-the-land",
+      "scene": "방콕 야시장과 클롱 옹앙 산책로를 걷는 10화 장면.",
+      "verified": "reported",
+      "source": "https://thesmartlocal.co.th/locations-in-king-the-land/"
+    },
+    {
+      "id": "bangkok-lebua-skybar-hangover-2-7b1c",
+      "title": "르부아 스테이트 타워 스카이바 (더 행오버 2 촬영지)",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.72148,
+      "lng": 100.51698,
+      "area": "Sky Bar / The Dome, lebua at State Tower, 1055 Silom Road",
+      "subject": "르부아 rooftop에서 원형 바와 방콕 도심을 담는 더 행오버 2 연계 구도",
+      "tip": "위치는 근사치(구역 수준) — 업장 허용 구역에서 서쪽으로 핸드헬드 촬영하세요. 삼각대·셀카봉·외부 플래시는 금지되며 드레스코드를 확인하세요.",
+      "lens": "16–24mm",
+      "time": "18:00–19:30",
+      "workId": "hangover-part-ii",
+      "scene": "르부아 rooftop bar/restaurant에서 방콕 전경을 배경으로 한 장면.",
+      "verified": "reported",
+      "source": "https://lebua.com/restaurants/sky-bar/"
+    },
+    {
+      "id": "bangkok-loha-prasat-king-the-land-e92a",
+      "title": "왓 랏차나다람 로하 쁘라삿 야경 (킹더랜드 촬영지)",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.75548,
+      "lng": 100.50448,
+      "area": "Maha Chetsadabodin Pavilion Court / Ratchadamnoen Klang Road",
+      "subject": "조명된 로하 쁘라삿의 37개 첨탑을 정면으로 담는 킹더랜드 야경 구도",
+      "tip": "위치는 근사치(구역 수준) — 마하 체사다보딘 광장 공공 보도에서 현장 구도를 확인하세요. 경내 복장 규정과 보행 동선을 지키세요.",
+      "lens": "35–50mm 또는 24–70mm",
+      "time": "18:30–20:30",
+      "workId": "king-the-land",
+      "scene": "방콕 포상휴가 중 로하 쁘라삿 야경을 바라보는 10화 장면.",
+      "verified": "reported",
+      "source": "https://www.timeout.com/bangkok/news/where-did-the-korean-drama-king-the-land-film-in-thailand-072123"
+    },
     {
       "id": "bangkok-mahanakhon-chong-nonsi-skywalk-e31d",
       "title": "킹파워 마하나콘 & 총논시 스카이워크 야경 뷰포인트",
@@ -78,6 +129,57 @@
       "time": "늦은 오후 골든아워 (폐장 1시간 전, 하절기 18:00~19:00 / 동절기 16:30~17:30)",
       "verified": "reported",
       "source": "https://melia.com/es/experience/espana/barcelona/bunkers-del-carmel-mirador"
+    },
+    {
+      "id": "barcelona-laberint-dhorta-perfume-richis-maze-3b9e",
+      "title": "향수: 어느 살인자의 이야기 리치스 미로 장면",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.44045,
+      "lng": 2.1456,
+      "area": "Parc del Laberint d'Horta, Horta-Guinardó",
+      "subject": "리치스 정원 장면의 신고전주의 사이프러스 미로",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 지정된 보행로의 구도를 확인. 입장 규정과 관람객 흐름을 따르세요.",
+      "lens": "24–35mm 또는 70–200mm",
+      "time": "개장 시간의 오전 또는 늦은 오후",
+      "workId": "perfume-the-story-of-a-murderer",
+      "scene": "리치스 정원과 미로 장면",
+      "verified": "reported",
+      "source": "https://www.barcelona.cat/ca/que-pots-fer-a-bcn/parcs-i-jardins/parc-del-laberint-dhorta_92086011915.html"
+    },
+    {
+      "id": "barcelona-palau-musica-blue-sea-umbrella-4c2a",
+      "title": "푸른 바다의 전설 팔라우 음악당 우산 장면",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.38746,
+      "lng": 2.1754,
+      "area": "Palau de la Música Catalana, Ciutat Vella",
+      "subject": "팔라우 음악당 파사드와 코너 입구의 우산 장면",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도 확인. 공공 보행 공간에서 북동쪽으로 촬영하고 통행을 방해하지 마세요.",
+      "lens": "35–50mm",
+      "time": "블루아워 또는 저녁",
+      "workId": "legend-of-the-blue-sea",
+      "scene": "팔라우 음악당 입구의 우산 장면",
+      "verified": "reported",
+      "source": "https://spainscreentourism.com/en/filming-locations/the-legend-of-the-blue-sea/"
+    },
+    {
+      "id": "barcelona-placa-sant-felip-neri-perfume-plum-girl-8d3f",
+      "title": "향수: 어느 살인자의 이야기 산 펠립 네리 광장 장면",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.38332,
+      "lng": 2.17485,
+      "area": "Plaça de Sant Felip Neri, Ciutat Vella",
+      "subject": "산 펠립 네리 교회와 분수의 자두 소녀 장면",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 광장 가장자리의 구도를 확인. 학교·예배 공간의 정숙과 통행을 존중하세요.",
+      "lens": "35–50mm f/1.8–2.8",
+      "time": "늦은 오후 또는 저녁",
+      "workId": "perfume-the-story-of-a-murderer",
+      "scene": "산 펠립 네리 광장의 자두 소녀 장면",
+      "verified": "reported",
+      "source": "https://www.meet.barcelona/ca/descobreix-barcelona/cultura/barcelona-plato-de-cinema"
     },
     {
       "id": "barcelona-pont-del-bisbe-gothic-quarter-9b4e",
@@ -465,6 +567,23 @@
       }
     },
     {
+      "id": "hongkong-central-mid-levels-escalator-cochrane-4a91",
+      "title": "중경삼림 센트럴 미드레벨 에스컬레이터 코크란 스트리트 구간",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.28313,
+      "lng": 114.15443,
+      "area": "Central–Mid-Levels Escalator, Cochrane Street / Wellington Street",
+      "subject": "코크란 스트리트 통라우 아파트와 하부 골목을 내려다보는 에스컬레이터 보행로 구도",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 구도 확인. 승객 통행을 방해하지 말고 주거지 창문을 과도하게 촬영하지 마세요.",
+      "lens": "35mm–50mm",
+      "time": "11:00–17:00 및 황혼",
+      "workId": "chungking-express",
+      "scene": "센트럴 미드레벨 에스컬레이터와 코크란 스트리트 일대의 장면으로 알려진 구도; 정확한 프레임은 검토 필요",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Central%E2%80%93Mid-Levels_escalator"
+    },
+    {
       "id": "hongkong-choi-hung-estate-court-p03",
       "title": "초이홍 에스테이트 주차장 옥상 무지개 농구장",
       "city": "hongkong",
@@ -486,6 +605,23 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:HK_Wong_Tai_Sin_District_%E5%BD%A9%E8%99%B9%E9%82%A8_Choi_Hung_Estate_sidewalk_6_shop_Nov-2010_Fast_food_shop.JPG"
       }
+    },
+    {
+      "id": "hongkong-duddell-street-steps-gas-lamps-8f12",
+      "title": "두델 스트리트 석계와 가스등",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.27985,
+      "lng": 114.15685,
+      "area": "Duddell Street Steps, Central",
+      "subject": "홍콩에 남은 네 기의 빅토리아식 가스등과 화강암 석계",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 하단 공공 보도 구도를 확인. 계단을 막지 말고 보호된 가스등과 난간을 만지거나 훼손하지 마세요.",
+      "lens": "24mm–35mm",
+      "time": "일몰 무렵 및 가스등 점등 후",
+      "workId": "hong-kong-film-locations-duddell",
+      "scene": "공식 자료는 다수 홍콩 영화·TV 드라마 촬영지임을 확인하지만 개별 작품의 정확한 프레임은 검토 필요",
+      "verified": "reported",
+      "source": "https://www.amo.gov.hk/en/historic-buildings/monuments/hong-kong-island/monuments_08/index.html"
     },
     {
       "id": "hongkong-lugard-road-lookout-p01",
@@ -526,6 +662,23 @@
         "license": "CC BY 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Yick_Cheong_Building_and_Yick_Fat_Building._Aug._2015.A.JPG"
       }
+    },
+    {
+      "id": "hongkong-old-yau-ma-tei-police-station-6c34",
+      "title": "구 유마테이 경찰서 에드워드 양식 코너 뷰",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.3095,
+      "lng": 114.16875,
+      "area": "627 Canton Road, Yau Ma Tei",
+      "subject": "구 유마테이 경찰서의 V자형 코너 주랑과 청백색 외벽",
+      "tip": "위치는 구역 수준의 근사치 — 캔톤 로드 맞은편 공공 보도에서 현장 구도 확인. 절대 차도로 내려가지 말고 보행 통행을 방해하지 마세요.",
+      "lens": "28mm–50mm",
+      "time": "16:00–18:30",
+      "workId": "hong-kong-police-film-locations",
+      "scene": "공식 자료는 경찰서 외부가 여러 고전 홍콩 영화에 사용되었음을 확인하지만 개별 작품의 정확한 프레임은 검토 필요",
+      "verified": "reported",
+      "source": "https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=The+Former+Yau+Ma+Tei+Police+Station"
     },
     {
       "id": "incheon-incheon-bridge-bongjaesan-s-line-a7f1",
@@ -652,6 +805,57 @@
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Seongsan_Ilchulbong_from_the_air.jpg"
       }
+    },
+    {
+      "id": "jeju-honeymoon-house-corridor-8c4a",
+      "title": "서귀포 허니문하우스 아치형 회랑 (수리남 저택)",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.24414,
+      "lng": 126.60276,
+      "area": "토평동",
+      "subject": "허니문하우스 지중해풍 아치형 회랑 및 서귀포 해안 절벽 오션뷰",
+      "tip": "옛 파라다이스호텔 본관에서 카페로 이어지는 긴 아치형 석조 회랑 입구에서 소실점 원근 구도로 촬영합니다. 아치 기둥 사이로 이국적인 야자수와 서귀포 앞바다의 푸른 수평선이 프레임 안에 들어오며, 피사체를 회랑 중앙 기둥 옆에 위치시키면 <수리남> 속 남미 대저택의 웅장하고 클래식한 분위기를 연출할 수 있습니다. 실제 영업 중인 카페 공간 및 올레길 산책로이므로 타 방문객의 통행을 가로막지 않도록 배려 필요",
+      "lens": "24mm~35mm 광각/표준 렌즈 (긴 회랑의 연속적인 아치 원근감과 높은 층고, 야자수와 바다를 한 화면에 조화롭게 배치)",
+      "time": "10:30~15:00 (회랑 기둥 사이로 자연 채광이 쏟아져 기둥 그림자와 빛의 대비가 아름다운 시간대)",
+      "workId": "work-jeju",
+      "scene": "넷플릭스 오리지널 드라마 <수리남>에서 마약 대부 전요환(황정민) 목사의 수리남 내 호화 저택 외관 및 산책로로 등장. 강인구(하정우)와 전요환이 회랑을 거닐며 대화를 나누는 주요 장면의 배경. (과거 MBC <내 이름은 김삼순> 제주 촬영지로도 활용)",
+      "verified": "reported",
+      "source": "https://www.harpersbazaar.co.kr"
+    },
+    {
+      "id": "jeju-ojo-port-samdalri-b61e",
+      "title": "오조포구 양어장 돌담길 (성산일출봉 뷰)",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.4645,
+      "lng": 126.9185,
+      "area": "성산읍",
+      "subject": "성산일출봉 및 오조포구 수면 반영",
+      "tip": "옛 양어장(내수면)을 가로지르는 좁은 현무암 돌담길 중간에 서서 동남동쪽(약 110도) 바다 건너 우뚝 솟은 성산일출봉을 배경으로 촬영합니다. 만조 전후 잔잔한 수면에 일출봉과 하늘이 거울처럼 반영되며, 일출 무렵 또는 해질녘 부드러운 사광에서 감성적인 실루엣 샷을 완성할 수 있습니다. 양어장 돌담길은 폭이 약 1~1.5m로 좁고 별도의 안전 난간이 없으므로 촬영 중 실족 및 낙수에 주의 필요",
+      "lens": "35mm~70mm 표준/준망원 렌즈 (배경의 성산일출봉을 압축하고 잔잔한 수면 반영과 인물 전신을 안정적으로 배치)",
+      "time": "일출 시간대(06:00~07:30) 및 늦은 오후 골든아워(16:30~18:00)",
+      "workId": "work-jeju",
+      "scene": "JTBC 드라마 <웰컴투 삼달리>에서 조삼달(신혜선)과 조용필(지창욱)의 아지트이자 과거와 현재를 잇는 비밀스러운 장소로 등장하며, 바다 위 돌담길을 걷는 상징적인 씬의 무대. 또한 KBS2 드라마 <공항 가는 길>에서 서도우(이상윤)의 제주 바닷가 작업실이 있던 고즈넉한 포구.",
+      "verified": "reported",
+      "source": "https://www.visitjeju.net"
+    },
+    {
+      "id": "jeju-sinchang-windmill-bridge-4f2d",
+      "title": "신창풍차해안도로 싱계물공원 해상인도교",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.3442,
+      "lng": 126.1738,
+      "area": "한경면",
+      "subject": "신창 해상풍력발전기 단지 및 차귀도 일몰 수평선",
+      "tip": "바다 위로 길게 연결된 해상인도교 전망 데크에서 서북서쪽(약 295도) 바다를 향해 카메라를 배치합니다. 일렬로 회전하는 해상 풍력발전기와 차귀도 방면 수평선의 일몰 그라데이션을 배경으로 피사체를 다리 중앙에 세우고 수평선을 피사체의 허리 높이에 맞춰 드라마 포스터 같은 웅장한 여백 구도를 완성합니다. 만조(밀물) 시간대나 풍랑/강풍 주의보 발효 시 파도가 인도교를 덮칠 수 있어 출입문이 자동 통제됨 (방문 전 물때 및 기상 확인 필수)",
+      "lens": "24mm~50mm 광각/표준 렌즈 (광활한 에메랄드빛 바다, 붉게 물드는 노을 하늘, 거대한 풍력발전기의 스케일을 시원하게 포착)",
+      "time": "일몰 1시간 전~일몰 직후 매직아워(17:30~19:30, 계절별 일몰 시간 기준)",
+      "workId": "work-jeju",
+      "scene": "tvN 드라마 <우리들의 블루스>에서 제주 푸릉마을 인물들(김우빈, 한지민 등)의 낭만적인 해안 드라이브 및 바닷가 데이트 배경으로 등장. SBS 드라마 <시크릿 가든> 자전거 라이딩 명장면 촬영지.",
+      "verified": "reported",
+      "source": "https://www.visitjeju.net"
     },
     {
       "id": "kyoto-gion-tatsumi-bridge-shirakawa-3f8c",
@@ -832,6 +1036,23 @@
       }
     },
     {
+      "id": "london-love-actually-pink-house-st-lukes-mews-9c4d",
+      "title": "Love Actually Pink House",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51765,
+      "lng": -0.20365,
+      "area": "St Luke's Mews, Kensington and Chelsea",
+      "subject": "27 St Luke's Mews pink house and the Love Actually cue-card scene alley composition",
+      "tip": "The position is an area-level estimate. Use only the public route in this quiet residential mews; respect residents, doorways, windows, and private steps.",
+      "lens": "28-35mm",
+      "time": "Morning to early afternoon",
+      "workId": "love-actually",
+      "scene": "Exterior of Juliet and Peter's home at 27 St Luke's Mews and the cue-card scene",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/l/Love-Actually.php"
+    },
+    {
       "id": "london-millennium-bridge-st-pauls-3c8b",
       "title": "밀레니엄 브릿지 세인트 폴 대성당 리딩라인 뷰포인트",
       "city": "london",
@@ -853,6 +1074,23 @@
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:St_Pauls_aerial_(cropped).jpg"
       }
+    },
+    {
+      "id": "london-sherlock-221b-north-gower-6a8b",
+      "title": "BBC 셜록 221B 베이커가 & 스피디스 카페",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.52642,
+      "lng": -0.13615,
+      "area": "Camden, North Gower Street",
+      "subject": "187 North Gower Street의 221B Baker Street 외관과 Speedy's Cafe",
+      "tip": "북고워 스트리트의 공공 보도에서 촬영하세요. 위치는 구역 수준의 근사치이므로 현장에서 구도를 확인하고, 차도·카페 출입구·주거 공간을 방해하지 마세요.",
+      "lens": "28-35mm",
+      "time": "10:00-14:00",
+      "workId": "sherlock",
+      "scene": "Speedy's Cafe at 187 North Gower Street as the BBC Sherlock 221B exterior",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Speedy%27s_Sandwich_Bar_%26_Cafe"
     },
     {
       "id": "london-st-dunstan-in-the-east-gothic-garden-4e2d",
@@ -878,6 +1116,91 @@
       }
     },
     {
+      "id": "london-ted-lasso-paved-court-richmond-3f1e",
+      "title": "테드 래소 페이브드 코트 & 크라운 앤 앵커",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.460697,
+      "lng": -0.306397,
+      "area": "Paved Court, Richmond upon Thames",
+      "subject": "Paved Court 골목과 The Prince's Head(극 중 Crown & Anchor) 외관",
+      "tip": "위치는 구역 수준의 근사치입니다. 북쪽 입구의 공공 보도에서 남쪽을 바라보되 상점 출입구·보행 흐름·주거 공간을 방해하지 마세요.",
+      "lens": "35-50mm",
+      "time": "15:00-18:00",
+      "workId": "ted-lasso",
+      "scene": "Paved Court의 Ted 아파트 입구와 The Prince's Head의 Crown & Anchor 촬영지",
+      "verified": "reported",
+      "source": "https://britmovietours.com/ted-lasso-filming-locations-richmond-london/"
+    },
+    {
+      "id": "nara-beyond-the-boundary-kintetsu-gyoki-c741",
+      "title": "경계의 저편 나가츠키 역전 만남의 광장 (킨테츠 나라역 행기보살 분수대)",
+      "city": "nara",
+      "category": "anime",
+      "lat": 34.68412,
+      "lng": 135.8279,
+      "area": "킨테츠 나라역 동쪽 출구 행기보살 분수대",
+      "subject": "행기보살상과 분수대를 작품 속 나가츠키역 앞 만남의 광장 구도로 담는 포인트",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 65도 방향의 구도를 확인하세요. 역 이용객·택시·버스 동선을 비워 두고 분수대에 올라가지 마세요.",
+      "lens": "35-50mm",
+      "time": "이른 아침 또는 혼잡이 적은 시간대",
+      "workId": "beyond-the-boundary",
+      "scene": "킨테츠 나라역 행기보살 분수대가 나가츠키역 앞 광장으로 등장하는 성지순례 구도",
+      "verified": "reported",
+      "source": "https://seichi-map.com/kyoukainokanata-nara/"
+    },
+    {
+      "id": "nara-beyond-the-boundary-nara-hotel-e38a",
+      "title": "경계의 저편 나세 가문 저택 (나라 호텔 본관 및 아라이케 뷰포인트)",
+      "city": "nara",
+      "category": "anime",
+      "lat": 34.68045,
+      "lng": 135.83385,
+      "area": "아라이케 북측·나라 호텔 본관",
+      "subject": "아라이케 너머 나라 호텔 본관을 나세 가문 저택 모델 구도로 담는 포인트",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 나라 호텔 본관과 아라이케의 정렬을 확인하세요. 호텔·보행자·차량 동선을 방해하지 말고 현재 촬영 규정을 따르세요.",
+      "lens": "50-85mm",
+      "time": "이른 아침 또는 해질 무렵",
+      "workId": "beyond-the-boundary",
+      "scene": "나라 호텔 본관이 나세 가문 저택 모델로 소개된 외관·내부 장면; 정확한 standing point는 사람 검토",
+      "verified": "reported",
+      "source": "https://kspkk.co.jp/butaitanbou/kyokai_nara.html"
+    },
+    {
+      "id": "nara-demon-slayer-yagyu-ittoseki-f92c",
+      "title": "귀멸의 칼날 탄지로 바위 베기 수련 모델지 (야규 잇토세키)",
+      "city": "nara",
+      "category": "anime",
+      "lat": 34.72666,
+      "lng": 135.95938,
+      "area": "야규 잇토세키 접근로",
+      "subject": "갈라진 야규 잇토세키를 귀멸의 칼날 바위 베기 장면의 영감 구도로 담는 포인트",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인하세요. 지정 보행로를 이용하고 바위에 오르거나 시설을 만지지 마세요.",
+      "lens": "24-70mm",
+      "time": "10:00-15:00",
+      "workId": "demon-slayer",
+      "scene": "최종선별 바위 절단 장면과 유사한 영감·모델지 관계(정확한 작품 촬영지는 아님)",
+      "verified": "reported",
+      "source": "https://narashikanko.or.jp/spot/detail_10118.html"
+    },
+    {
+      "id": "nara-sagiike-ukimido-pavilion-view-b32a",
+      "title": "사기이케 우키미도 정자 뷰 (영화 35년째의 러브레터)",
+      "city": "nara",
+      "category": "drama",
+      "lat": 34.68052,
+      "lng": 135.8383,
+      "area": "高畑町·鷺池 북서쪽 수변 (Takahatacho / Sagi-ike)",
+      "subject": "사기이케 수면 반영과 우키미도·蓬莱橋·수양버들",
+      "tip": "위치는 근사치(구역 수준) — 북서쪽 수변 산책로에서 현장 구도를 확인하세요. 낮은 난간과 야간 어두운 길에 주의하세요.",
+      "lens": "35-85mm",
+      "time": "일몰 직전 또는 현재 라이트업 시간",
+      "workId": "35nenme-no-love-letter",
+      "scene": "우키미도에서 젊은 연인이 데이트하는 장면",
+      "verified": "reported",
+      "source": "https://www.city.nara.lg.jp/site/kanko/224213.html"
+    },
+    {
       "id": "nara-sagiike-ukimido-reflection-a43c",
       "title": "나라공원 사기이케 우키미도 반영 뷰포인트",
       "city": "nara",
@@ -897,6 +1220,55 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Nara_Japan_2.jpg"
       }
+    },
+    {
+      "id": "nara-tobihino-deer-camphor-tree-f18a",
+      "title": "나라공원 토비히노 사슴남자의 큰 녹나무",
+      "city": "nara",
+      "category": "drama",
+      "lat": 34.68195,
+      "lng": 135.84035,
+      "area": "春日野町·飛火野 (Kasuganocho / Tobihino)",
+      "subject": "飛火野의 큰 녹나무와 잔디밭·사슴·春日山 능선",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 드라마 구도와 안전한 촬영 지점을 확인하세요. 사슴과 거리를 유지하고 통행을 방해하지 마세요.",
+      "lens": "24-70mm",
+      "time": "이른 아침 또는 늦은 오후",
+      "workId": "shikaotoko-ao-ni-yoshi",
+      "scene": "飛火野의 큰 녹나무와 사슴이 등장하는 드라마 장면",
+      "verified": "reported",
+      "source": "https://bigtrees.life/spot/tobihino-kusunoki/"
+    },
+    {
+      "id": "nara-todaiji-nekodan-stone-steps-7c4d",
+      "title": "도다이지 네코단과 종루 길 (드라마 사슴남자)",
+      "city": "nara",
+      "category": "drama",
+      "lat": 34.68855,
+      "lng": 135.84155,
+      "area": "雑司町·도다이지 네코단 (Zoshicho / Todaiji Nekodan)",
+      "subject": "네코단 돌계단 아래에서 바라본 도다이지 종루",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 계단 아래의 안전한 공공 위치와 구도를 확인하세요. 돌계단은 미끄러울 수 있고 보행을 막지 마세요.",
+      "lens": "35-50mm",
+      "time": "오전 08:00-10:00",
+      "workId": "shikaotoko-ao-ni-yoshi",
+      "scene": "네코단과 종루로 이어지는 통학길 장면",
+      "verified": "reported",
+      "source": "https://small-life.com/archives/08/02/0919.php"
+    },
+    {
+      "id": "nara-todaiji-nigatsudo-sunset-b81f",
+      "title": "도다이지 니가쓰도 무대 일몰 뷰포인트",
+      "city": "nara",
+      "category": "photo",
+      "lat": 34.68935,
+      "lng": 135.84415,
+      "area": "Zoshicho",
+      "subject": "東大寺 大仏殿 屋根 & 奈良盆地・生駒山 (Todai-ji Daibutsuden Roof & Nara Basin / Mt. Ikoma Sunset)",
+      "tip": "니가쓰도 서쪽 회랑 난간에 매달린 청동 낚시등롱(釣灯籠)을 프레임 전경(전초점 또는 실루엣)에 걸치고, 서쪽(약 266°)으로 내려다보이는 도다이지 대불전의 웅장한 기와지붕과 나라 분지 및 생駒산 너머로 지는 석양을 함께 담습니다. 해가 진 직후 매직아워에 등롱에 불이 들어오는 타이밍도 훌륭합니다. 사찰 경내이므로 정숙을 유지하고 참배객 통행을 방해하지 않아야 합니다.",
+      "lens": "24-70mm 표준 줌 렌즈 (전경의 낚시등롱과 중경 대불전 지붕을 함께 조화롭게 배치하는 35-50mm 화각 권장)",
+      "time": "일몰 30분 전 ~ 매직아워(황혼)",
+      "verified": "reported",
+      "source": "https://www.todaiji.or.jp/annual-hall/nigatsudo/"
     },
     {
       "id": "nara-wakakusayama-summit-deer-c79d",
@@ -941,6 +1313,23 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Manhattan_Bridge_2007.jpg"
       }
+    },
+    {
+      "id": "newyork-joker-stairs-bronx-8a3b",
+      "title": "조커 계단 (브롱크스 167번가)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.83595,
+      "lng": -73.9238,
+      "area": "The Bronx, Highbridge / W 167th Street",
+      "subject": "Joker 계단 장면으로 알려진 167번가 스텝 스트리트의 경사 계단과 도시 풍경",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 정확한 계단 단과 구도를 확인하세요. 24–35mm 또는 50mm를 사용하고 통행을 막지 않는 공공 계단 가장자리에서 안전하게 촬영하세요.",
+      "lens": "24–35mm 또는 50mm",
+      "time": "이른 오전 08:00–10:30",
+      "workId": "joker",
+      "scene": "Arthur Fleck이 계단에서 춤추는 장면으로 알려진 촬영 장소",
+      "verified": "reported",
+      "source": "https://www.filmoblivion.com/locations/joker-stairs-bronx"
     },
     {
       "id": "newyork-staple-street-skybridge-tribeca-b74d",
@@ -989,6 +1378,40 @@
       }
     },
     {
+      "id": "okinawa-bise-fukugi-tree-lane-motobu-7c82",
+      "title": "비세 후쿠기 가로수길 메인 로드",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.70175,
+      "lng": 127.88065,
+      "area": "비세 후쿠기 가로수길, 모토부정",
+      "subject": "후쿠기 나무 터널과 모래길을 담는 NHK 드라마 연관 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인. 오전 9~10시경 보행로에서 촬영하고 주민 사생활과 차량 통행을 존중한다.",
+      "lens": "50mm",
+      "time": "오전 8:30~10:30",
+      "workId": "chimudondon",
+      "scene": "오프닝 및 비세 후쿠기 가로수길의 오키나와 원풍경 장면",
+      "verified": "reported",
+      "source": "https://www.motobu-ka.com/sightseeing/sightseeing-03/"
+    },
+    {
+      "id": "okinawa-cape-chinen-park-aquatope-3b42",
+      "title": "知念岬公園と久高島の眺望",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.16734,
+      "lng": 127.829,
+      "area": "Cape Chinen Park, Nanjo",
+      "subject": "赤瓦屋根の東屋と久高島を望む太平洋",
+      "tip": "위치는 공원 전망 구역의 근사치입니다 — 현장에서 동쪽 방향의 구도를 확인하세요. 해안 강풍과 난간에 주의하고 지정 산책로를 이용하세요.",
+      "lens": "16-35mm",
+      "time": "오전",
+      "workId": "the-aquatope-on-white-sand",
+      "scene": "Nanjo/Cape Chinen chapter; exact frame is PARTIAL_MATCH pending review",
+      "verified": "reported",
+      "source": "https://www.city.nanjo.okinawa.jp/topics/1625200182/"
+    },
+    {
       "id": "okinawa-cape-manzamo-elephant-rock-c91d",
       "title": "만자모 코끼리 바위 산책로 전망 포인트",
       "city": "okinawa",
@@ -1008,6 +1431,23 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Onna_Okinawa_Japan_Cape-Manzamo-01.jpg"
       }
+    },
+    {
+      "id": "okinawa-gushikawa-beach-harukana-8f15",
+      "title": "具志川ビーチ海岸防波堤",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.3751,
+      "lng": 127.8708,
+      "area": "Gushikawa Beach, Uruma",
+      "subject": "具志川ビーチの防波堤と金武湾",
+      "tip": "위치는 해안 방파제 구역의 근사치입니다 — 현장에서 안전한 보행 구역의 구도를 확인하세요. 조수·파도·날씨를 확인하고 주민 통행을 방해하지 마세요.",
+      "lens": "35-70mm",
+      "time": "일출 직후 또는 늦은 오후",
+      "workId": "harukana-receive",
+      "scene": "Gushikawa Beach coastal scene association",
+      "verified": "reported",
+      "source": "https://ani-tabi.com/03042019-8625.html"
     },
     {
       "id": "okinawa-kouri-bridge-south-approach-b43e",
@@ -1031,6 +1471,40 @@
       }
     },
     {
+      "id": "okinawa-kouri-bridge-south-viewpoint-f92d",
+      "title": "코우리 대교 남단 전망 포인트 (야가지섬 방면)",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.68665,
+      "lng": 128.0172,
+      "area": "코우리 대교 남단 전망소, 나고·나키진",
+      "subject": "코우리 대교와 바다를 북동쪽으로 담는 드라마 연관 전망 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인. 70~200mm로 촬영하되 교량 본선·차도에 서거나 정차하지 않고 공식 전망소와 보행로를 이용한다.",
+      "lens": "70-200mm",
+      "time": "오전 11시~오후 2시",
+      "workId": "its-okay-thats-love",
+      "scene": "8화 오키나와 드라이브 장면과 코우리 대교",
+      "verified": "reported",
+      "source": "https://www.nakijin.jp/sightseeing_info/sightseeing_spot/577.html"
+    },
+    {
+      "id": "okinawa-manzamo-elephant-rock-viewpoint-e41a",
+      "title": "만좌모 코끼리바위 전망 산책로",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.50495,
+      "lng": 127.8501,
+      "area": "만좌모, 온나촌",
+      "subject": "코끼리바위와 바다를 담는 전망 산책로 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인. 지정 산책로와 난간 안쪽에서 촬영하고 절벽·방문객 동선을 침범하지 않는다.",
+      "lens": "24-70mm",
+      "time": "오후 3시~일몰",
+      "workId": "its-okay-thats-love",
+      "scene": "8화 오키나와 여행 장면과 만좌모 코끼리바위 산책로",
+      "verified": "reported",
+      "source": "https://www.okinawastory.jp/spot/1077"
+    },
+    {
       "id": "okinawa-nirai-kanai-tunnel-observatory-a82f",
       "title": "니라이카나이 다리 터널 전망대 S자 해안도로 뷰포인트",
       "city": "okinawa",
@@ -1050,6 +1524,23 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Sugarcane_field_near_Chinen-misaki_South_Beach_and_Nirai-Kanaibashi_Bridges.JPG"
       }
+    },
+    {
+      "id": "okinawa-ocean-expo-water-stairs-jujutsu-7a91",
+      "title": "海洋博公園 水の階段 アニメ巡礼スポット",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.69389,
+      "lng": 127.8778,
+      "area": "Ocean Expo Park, Motobu",
+      "subject": "Kaiyohaku Park Water Stairs and the East China Sea / Iejima view",
+      "tip": "위치는 구역 수준의 근사치입니다 — 현장에서 물의 계단 상부의 구도를 확인하세요. 지정 동선과 계단을 이용하고 미끄러운 곳·통행 방해를 피하세요.",
+      "lens": "24-50mm",
+      "time": "늦은 오후",
+      "workId": "jujutsu-kaisen-2",
+      "scene": "EP3 Water Stairs (Kaiyohaku Park)",
+      "verified": "reported",
+      "source": "https://www.animepilgrimage.com/ja/maps/place/2c1d0b66-0f31-4fb3-8f00-0afc5b5b9942"
     },
     {
       "id": "osaka-aiaubashi-hanzawa-naoki-c89b",
@@ -1218,6 +1709,57 @@
       }
     },
     {
+      "id": "paris-emily-in-paris-estrapade-c419",
+      "title": "에스트라파드 광장 (에밀리 인 파리 아파트·레스토랑)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.84522,
+      "lng": 2.34488,
+      "area": "Place de l'Estrapade, 5e arrondissement",
+      "subject": "에밀리의 아파트와 가브리엘의 레스토랑이 있는 광장 풍경",
+      "tip": "공공 광장·벤치 구역에서 촬영하세요. 위치는 구역 수준의 근사치이므로 현장에서 분수대 주변의 정확한 구도를 확인하고 주거 건물 내부에 들어가지 마세요.",
+      "lens": "24-35mm",
+      "time": "오전",
+      "workId": "emily-in-paris",
+      "scene": "Place de l'Estrapade의 아파트·레스토랑·제과점 주변 장면",
+      "verified": "reported",
+      "source": "https://www.screenbie.com/en/planes-geniales/filming-places-emily-in-paris/"
+    },
+    {
+      "id": "paris-inception-bir-hakeim-viaduct-e91b",
+      "title": "비르하켐 다리 회랑 (인셉션)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.85565,
+      "lng": 2.28775,
+      "area": "Pont de Bir-Hakeim, 15e/16e arrondissement",
+      "subject": "철제 기둥이 반복되는 보행 회랑과 인셉션의 꿈 건축 장면",
+      "tip": "보행자 구역에서 촬영하고 자전거·킥보드 통행로를 막지 마세요. 위치는 다리 구간 수준의 근사치이므로 현장에서 정확한 기둥 정렬과 소실점을 확인하세요.",
+      "lens": "50-85mm",
+      "time": "이른 아침",
+      "workId": "inception",
+      "scene": "아리아드네와 코브가 오르는 비르하켐 다리의 꿈 건축 장면",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/i/Inception.php"
+    },
+    {
+      "id": "paris-midnight-in-paris-steps-f82a",
+      "title": "생테티엔 뒤 몽 성당 옆 계단 (미드나잇 인 파리)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.84661,
+      "lng": 2.34812,
+      "area": "Place de l'Abbé-Basset, 5e arrondissement",
+      "subject": "생테티엔 뒤 몽 성당 북쪽 계단과 영화 속 자정의 푸조 도착 장면",
+      "tip": "공공 보행 구역에서 촬영하세요. 위치는 구역 수준의 근사치이므로 현장에서 정확한 계단과 구도를 확인하고, 주거지·학교 인근 소음을 피하세요.",
+      "lens": "35-50mm",
+      "time": "블루아워 또는 저녁",
+      "workId": "midnight-in-paris",
+      "scene": "생테티엔 뒤 몽 성당 북쪽 계단에서 시작되는 자정의 타임슬립 장면",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/m/Midnight-In-Paris.php"
+    },
+    {
       "id": "paris-montmartre-sinking-house-c7d9",
       "title": "몽마르트르 사크레쾨르 기울어진 집 착시 포토스팟",
       "city": "paris",
@@ -1281,6 +1823,57 @@
       }
     },
     {
+      "id": "sapporo-golden-kamuy-yamamoto-barbershop-d82a",
+      "title": "골든 카무이 야마모토 이발관",
+      "city": "sapporo",
+      "category": "anime",
+      "lat": 43.04825,
+      "lng": 141.49815,
+      "area": "北海道開拓の村・旧山本理髪店",
+      "subject": "구 야마모토 이발관과 골든 카무이 장면 모델",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도와 촬영 가능 여부를 확인하세요. 보존시설 규칙을 준수하세요.",
+      "lens": "35-50mm",
+      "time": "10:00-14:30",
+      "workId": "golden-kamuy",
+      "scene": "구 야마모토 이발관이 등장하는 장소 모델로 알려진 장면",
+      "verified": "reported",
+      "source": "https://naaatm.com/2021/12/17/goldenkamuy-kaitakunomura/"
+    },
+    {
+      "id": "sapporo-hiragishi-takadai-park-suiyo-dodesho-7e3d",
+      "title": "히라기시 다카다이 공원 잔디 언덕 (수요일 어떠신가요 오프닝・엔딩 토크 성지)",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.02668,
+      "lng": 141.3747,
+      "area": "히라기시 다카다이 공원 잔디 경사면·구 HTB 본사 인접 구역",
+      "subject": "잔디 언덕과 기념비의 水曜どうでしょう 전틀·후틀 촬영지",
+      "tip": "위치는 근사치(공원 구역 수준) — 경사면 아래 공공 보행 구역에서 구도를 확인하세요. 주민과 어린이 이용을 배려하고 잔디·주택 사생활을 침해하지 마세요.",
+      "lens": "16-24mm 또는 8-15mm 어안",
+      "time": "맑은 낮 또는 계절별 잔디·설경 시간대",
+      "workId": "suiyo-dodesho",
+      "scene": "평岸高台公園 전틀·후틀 고정 촬영 장면",
+      "verified": "reported",
+      "source": "https://www.htb.co.jp/htb/kouhou/photo/20210430/20210430_02.pdf"
+    },
+    {
+      "id": "sapporo-horohira-bridge-arch-firstlove-8b2c",
+      "title": "호로히라바시 포틀랜드 광장 전망 아치 (퍼스트 러브 하츠코이 새벽 아이스크림 다리)",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.03945,
+      "lng": 141.3575,
+      "area": "호로히라바시 북측 보행자 전망 아치",
+      "subject": "포틀랜드 광장 전망 아치와 강변의 First Love 初恋 제7화 새벽 장면",
+      "tip": "위치는 근사치(교량 구역 수준) — 현장에서 아치·난간 구도를 확인하세요. 보행자 통행을 막지 말고 겨울철 결빙·승강 통제를 확인하세요.",
+      "lens": "50-85mm",
+      "time": "새벽 일출 전후",
+      "workId": "first-love-hatsukoi",
+      "scene": "제7화 호로히라바시 새벽 아이스크림 대화 장면",
+      "verified": "reported",
+      "source": "https://www.showa-vod.com/hokkaido-location-guide/drama-locations/sapporo-otaru-first-love-drama-tour/"
+    },
+    {
       "id": "sapporo-horomi-pass-lavender-view-8c1d",
       "title": "호로미토게 라벤더원 전망대 (라벤더 너머 삿포로 도심 뷰포인트)",
       "city": "sapporo",
@@ -1300,6 +1893,57 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Sapporo_television_tower_01.jpg"
       }
+    },
+    {
+      "id": "sapporo-nakajima-park-astronomical-observatory-f41a",
+      "title": "나카지마 공원 삿포로시 천문대 언덕 (퍼스트 러브 하츠코이 화성 관측 장소)",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.04545,
+      "lng": 141.3526,
+      "area": "나카지마 공원 삿포로시 천문대 및 앞 언덕",
+      "subject": "천문대 돔과 앞 언덕의 First Love 初恋 화성 관측 장면",
+      "tip": "위치는 근사치(천문대 앞 언덕 구역 수준) — 현장에서 구도와 안전한 공공 보행 위치를 확인하세요. 야간 관측 일정·예약과 겨울철 결빙을 확인하세요.",
+      "lens": "35-50mm 또는 24-70mm",
+      "time": "천문대 야간 공개일 일몰 후",
+      "workId": "first-love-hatsukoi",
+      "scene": "삿포로시 천문대에서 화성을 관측한 장면",
+      "verified": "reported",
+      "source": "https://www.screensapporo.jp/wp/wp-content/uploads/2022/12/First-Love-Sapporo-Location-Map-PDF.pdf"
+    },
+    {
+      "id": "sapporo-nami-yo-kiitekure-horohirabashi-f41c",
+      "title": "파도여 들어다오 호로히라바시",
+      "city": "sapporo",
+      "category": "anime",
+      "lat": 43.0394,
+      "lng": 141.3572,
+      "area": "幌平橋 보행자 계단/아치교 구역",
+      "subject": "호로히라바시 아치교와 강변 배경",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 아치와 배경을 확인하세요. 보행자·자전거 통행을 방해하지 마세요.",
+      "lens": "24-35mm",
+      "time": "17:30-20:00",
+      "workId": "nami-yo-kiitekure",
+      "scene": "삿포로 호로히라바시로 알려진 배경 장면",
+      "verified": "reported",
+      "source": "https://www.city.sapporo.jp/kensetsu/stn/h15/hashi/horohirabashi.html"
+    },
+    {
+      "id": "sapporo-odori-park-fountain-tvtower-anime-e19b",
+      "title": "오도리 공원 분수와 TV탑",
+      "city": "sapporo",
+      "category": "anime",
+      "lat": 43.0605,
+      "lng": 141.3524,
+      "area": "오도리 공원 서쪽 분수대/TV탑 조망 구역",
+      "subject": "오도리 공원 분수와 삿포로 TV탑",
+      "tip": "위치는 근사치(공원 구역 수준) — 분수와 TV탑이 함께 들어오는 지점을 현장에서 확인하세요. 작품 연관성은 부분 매치로 확인이 필요합니다.",
+      "lens": "35-70mm",
+      "time": "11:00-14:00 또는 18:30-20:30",
+      "workId": "nami-yo-kiitekure-dosanko-gal",
+      "scene": "오도리 공원·TV탑 배경과 연결된 부분 매치 후보",
+      "verified": "reported",
+      "source": "https://www.visit-hokkaido.jp/en/spot/detail_10004.html"
     },
     {
       "id": "sapporo-susukino-cocono-terrace-nikka-e54b",
@@ -1352,7 +1996,13 @@
       "lens": "24-70mm 또는 70-200mm",
       "time": "18:30-20:30",
       "verified": "reported",
-      "source": "https://english.seoul.go.kr/eungbongsan-mountain/"
+      "source": "https://english.seoul.go.kr/eungbongsan-mountain/",
+      "imageUrl": "/spots/seoul-eungbongsan-pavilion-seongsu-bridge-e89c.jpg",
+      "imageCredit": {
+        "author": "Kaitak89(talk / Contributions) at the Korean Wikipedia",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Seongsu_bridge_night.JPG"
+      }
     },
     {
       "id": "seoul-gamgodang-gil-stonewall-goblin-3c9d",
@@ -1569,6 +2219,91 @@
       }
     },
     {
+      "id": "singapore-chijmes-hall-crazy-rich-asians-e39a",
+      "title": "차임스 홀 (크레이지 리치 아시안 결혼식 촬영지)",
+      "city": "singapore",
+      "category": "drama",
+      "lat": 1.29505,
+      "lng": 103.8525,
+      "area": "Downtown Core",
+      "subject": "CHIJMES Hall 1904 Gothic Chapel & Spire",
+      "tip": "낮 시간대 화사한 흰색 고딕 양식 파사드와 잔디밭의 조화를 24mm 광각으로 담거나, 해 질 녘과 야간 조명이 켜지는 시간대에 낭만적인 분위기를 연출할 수 있습니다. 영화 속 하객들이 입장하던 잔디광장 앞 계단 데크에서 로우 앵글로 촬영하면 첨탑의 웅장함이 잘 드러납니다. 상업 레스토랑 및 바가 밀집한 구역이므로 삼각대 설치 시 보행자 통행 방해 주의",
+      "lens": "20-35mm 광각 렌즈 (높은 고딕 첨탑과 전면 회랑을 한 프레임에 담기에 적합)",
+      "time": "17:30 - 19:30 (골든아워 및 블루아워 야간 조명 점등 시간)",
+      "workId": "work-singapore",
+      "scene": "콜린 쿠(Colin Khoo)와 아라민타 리(Araminta Lee)의 화려한 4천만 달러 규모 세기의 결혼식이 열린 성당 장면. 하객들이 입장하는 외관 및 물길과 풀밭으로 꾸며진 예배당 내부 런웨이 버진로드의 배경.",
+      "verified": "reported",
+      "source": "https://theoccasionaltraveller.com/crazy-rich-asians-singapore-filming-locations/"
+    },
+    {
+      "id": "singapore-fullerton-hotel-little-women-c42b",
+      "title": "더 풀러턴 호텔 싱가포르 & 캐버너 다리 (작은 아씨들 싱가포르 촬영지)",
+      "city": "singapore",
+      "category": "drama",
+      "lat": 1.28682,
+      "lng": 103.85215,
+      "area": "Downtown Core",
+      "subject": "The Fullerton Hotel Singapore (신고전주의 파사드 및 도리스식 열주)",
+      "tip": "싱가포르 강 북쪽 보행로(아시안 문명 박물관 앞)에서 역사적인 현수교인 캐버너 브리지와 1928년 완공된 웅장한 풀러턴 호텔의 신고전주의 석조 외관을 대각선 프레임으로 포착합니다. 드라마 <작은 아씨들> 8화에서 싱가포르에 첫발을 디딘 오인주(김고은)와 최도일(위하준)의 긴장감 넘치는 이국적 도시 풍경을 재현하기에 가장 이상적인 앵글입니다. 강변 난간에 기대어 촬영 시 소지품/스마트폰 추락 주의",
+      "lens": "24-70mm 표준 줌 렌즈 (강과 다리, 호텔 전경을 담거나 50mm대로 호텔 기둥을 압축 촬영하기에 최적)",
+      "time": "18:00 - 20:00 (일몰 골든아워부터 싱가포르 강과 호텔 외관 조명이 켜지는 야경 시간대)",
+      "workId": "work-singapore",
+      "scene": "700억 비자금을 찾기 위해 싱가포르에 도착한 오인주(김고은)와 최도일(위하준)이 머무르는 고급 본거지이자 싱가포르 입성을 상징하는 주요 배경 (8화). 호텔 전경, 로비 및 싱가포르 강변 산책 장면.",
+      "verified": "reported",
+      "source": "https://www.straitstimes.com/life/entertainment/k-drama-little-women-stars-kim-go-eun-and-wi-ha-joon-filming-in-singapore"
+    },
+    {
+      "id": "singapore-marina-one-green-heart-westworld-7d1a",
+      "title": "마리나 원 그린 하트 (웨스트월드 시즌3 인사이트 본사 촬영지)",
+      "city": "singapore",
+      "category": "drama",
+      "lat": 1.27742,
+      "lng": 103.85303,
+      "area": "Downtown Core",
+      "subject": "Marina One Curvilinear Louvres & 3-Story Waterfall Garden",
+      "tip": "1층 중앙 정원 보행 덱에서 올려다보는 14-24mm 초광각 앵글을 사용하세요. 4개 타워를 감싸며 유기적인 파도 형태로 굽이치는 350여 개의 금속 루버와 3개 층 높이의 인공 폭포수가 어우러져, 드라마 <웨스트월드> 속 2058년 미래 도시의 초현대적 분위기를 그대로 담아낼 수 있습니다. 오피스/주거 복합 단지이므로 상업적 대형 장비나 드론 비행 금지",
+      "lens": "12-24mm 초광각 렌즈 (수직으로 솟은 거대한 곡선형 건축 구조 전체를 프레임에 담기 위해 필수)",
+      "time": "10:00 - 15:00 (자연광이 정원 중앙으로 수직으로 쏟아져 루버의 음영 대비가 극대화되는 시간) 또는 19:30 - 21:00 (정원 야간 조명 점등)",
+      "workId": "3-singapore",
+      "scene": "HBO SF 드라마 <웨스트월드> 시즌 3 (1화, 4화)에서 거대 테크 기업 인사이트(Incite Inc.)의 미래지향적 본사 건물 외관 및 중앙 정원으로 등장. 샬럿 헤일과 메이브가 미래 도시 로스앤젤레스의 인공지능 기업을 거니는 주요 장면.",
+      "verified": "reported",
+      "source": "https://www.timeout.com/singapore/news/hbo-westworld-season-3-singapore-locations-guide-031620"
+    },
+    {
+      "id": "taipei-in-time-with-you-jiannan-mountain-4e92",
+      "title": "드라마 '아가능불회애니' 지안난산 야경 전망대",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.08991,
+      "lng": 121.54991,
+      "area": "지안난산 전망대 구역",
+      "subject": "미라마 대관람차와 타이베이 101 원경",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도와 방위를 확인하세요. 야간 산길의 안전 동선과 차량 진입을 지키세요.",
+      "lens": "50–85mm 또는 24mm",
+      "time": "18:30–21:30",
+      "workId": "in-time-with-you",
+      "scene": "지안난산에서 미라마와 101 야경을 바라보는 전망 장면",
+      "verified": "reported",
+      "source": "https://www.gov.taipei/News_Content.aspx?n=F29A02A9E36C268F&s=213854"
+    },
+    {
+      "id": "taipei-light-the-night-sugar-bar-849c",
+      "title": "드라마 '화등초상' 히카리 주점 입구 (슈가 바)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.05036,
+      "lng": 121.52485,
+      "area": "중산구 条通 골목 Sugar Bar 앞",
+      "subject": "화등초상 히카리 주점(Sugar Bar) 외관",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인하세요. 영업 중인 매장과 보행·차량 동선을 방해하지 말고 촬영하세요.",
+      "lens": "35–50mm",
+      "time": "20:00–23:00",
+      "workId": "light-the-night",
+      "scene": "중산구 条通의 히카리 주점 외관 촬영지",
+      "verified": "reported",
+      "source": "https://www.dramaqueen.com.tw/news/20211206/004.html"
+    },
+    {
       "id": "taipei-sisinancun-lawn-101-c3d4",
       "title": "쓰쓰난춘(사사남촌) 잔디언덕 타이베이 101 뷰포인트",
       "city": "taipei",
@@ -1588,6 +2323,40 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Taipei_101_from_Xiangshan_20250731.jpg"
       }
+    },
+    {
+      "id": "taipei-takemura-izakaya-101-b84a",
+      "title": "타케무라 이자카야 골목 타이베이 101 뷰포인트",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.025591,
+      "lng": 121.569253,
+      "area": "信義區 (Xinyi District)",
+      "subject": "타이베이 101 (Taipei 101)",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인하세요.  초점거리 50mm~85mm(스마트폰 2~3배 줌)를 사용하여 전경에 타케무라 이자카야의 붉은 홍등과 오래된 대만식 주택가(步登公寓) 골목 건물을 배치하고, 원경에 타이베이 101을 압축하여 담습니다. 일몰 후 30분~1시간 사이의 매직아워(블루아워)에 홍등의 따뜻한 붉은 조명과 타이베이 101의 차가운 야간 조명이 극적인 대비를 이룹니다. 좁은 주택가 골목길로 오토바이 및 차량 통행이 빈번하므로 도로 가장자리 안전선 안쪽에서 촬영하고 통행을 방해하지 않도록 주의해야 합니다.",
+      "lens": "50mm-85mm 준망원 (스마트폰 2x-3x 망원)",
+      "time": "일몰 직후 블루아워 및 야경 시간대 (18:00~19:30, 계절별 일몰시간 기준)",
+      "workId": "in-time-with-you-taipei",
+      "scene": "남녀 주인공 리다런(李大仁, 진백림 분)과 청유칭(程又青, 임의신 분)이 퇴근 후 꼬치구이와 맥주를 마시며 깊은 대화를 나누던 아지트 단골 이자카야 실제 촬영지.",
+      "verified": "reported",
+      "source": "https://www.travel.taipei/zh-tw/pictorial/article/59178"
+    },
+    {
+      "id": "taipei-turn-left-turn-right-beitou-park-fountain-7d31",
+      "title": "영화 '턴 레프트 턴 라이트' 베이터우 공원 분수대",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.1367,
+      "lng": 121.5061,
+      "area": "베이터우 공원 대만지 분수대 구역",
+      "subject": "영화의 분수대 재회 장면",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 분수대 기준으로 구도를 확인하세요. 공원 보행 동선을 막지 말고 운영시간과 촬영 매너를 지키세요.",
+      "lens": "35–50mm",
+      "time": "10:00–16:00",
+      "workId": "turn-left-turn-right",
+      "scene": "베이터우 공원 분수대 재회 장면",
+      "verified": "reported",
+      "source": "https://udn.com/news/story/7155/5432190"
     },
     {
       "id": "taipei-xiangshan-six-giant-rocks-e5f6",
@@ -1833,6 +2602,40 @@
       }
     },
     {
+      "id": "yokohama-biwajima-shrine-bocchi-6a1f",
+      "title": "가나자와 핫케이 비와지마 신사 참도",
+      "city": "yokohama",
+      "category": "anime",
+      "lat": 35.33152,
+      "lng": 139.62228,
+      "area": "가나자와핫케이역 동쪽 출구·비와지마 신사 참도 입구",
+      "subject": "비와지마 신사 도리이와 히라가타만을 담는 봇치 더 록! 6화 관련 구도",
+      "tip": "위치는 입구 보도 기준의 근사치(구역 수준) — 현장에서 도리이·만·섬 구도를 확인하세요.",
+      "lens": "24-35mm",
+      "time": "오후~일몰 전",
+      "workId": "bocchi-the-rock",
+      "scene": "6화 비와지마 신사·히라가타만 일대 만남 장면",
+      "verified": "reported",
+      "source": "https://motsu-tanbou.com/bocchi-kanazawahakkei/"
+    },
+    {
+      "id": "yokohama-grand-central-tower-richman-02",
+      "title": "미나토미라이 그랜드 센트럴 타워 광장 (리치맨 푸어우먼 넥스트 이노베이션 사옥)",
+      "city": "yokohama",
+      "category": "drama",
+      "lat": 35.45825,
+      "lng": 139.62885,
+      "area": "Minatomirai Grand Central Tower / Grand Mall Park",
+      "subject": "그랑몰 공원 측 공개 광장에서 NEXT INNOVATION 외관과 캐노피를 담는 리치맨, 푸어우먼 로케이션",
+      "tip": "위치는 공개 광장 구역의 근사치입니다. 현장에서 파사드 구도를 확인하고 오피스 로비·사유지 내부 촬영과 보행자 동선 방해를 피하세요.",
+      "lens": "20–35mm",
+      "time": "오전~오후 자연광",
+      "workId": "richman-poor-woman",
+      "scene": "NEXT INNOVATION 외관 및 1층 현관·입장 게이트",
+      "verified": "reported",
+      "source": "https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%83%E3%83%81%E3%83%9E%E3%83%B3%E3%80%81%E3%83%97%E3%82%A2%E3%82%A6%E3%83%BC%E3%83%9E%E3%83%B3"
+    },
+    {
       "id": "yokohama-harbor-view-park-baybridge-3e7b",
       "title": "항구가 보이는 언덕 공원 전망대 베이브리지 뷰포인트",
       "city": "yokohama",
@@ -1845,7 +2648,30 @@
       "lens": "中望遠〜望遠レンズ（35mm判換算 70-200mm または 85mm単焦点）",
       "time": "日没後ブルーアワー〜夜間（毎時20-30分、50-00分のベイブリッジ青色ライトアップ時が最適）",
       "verified": "reported",
-      "source": "https://nightview.info/yokohama/minatonomieruoka/"
+      "source": "https://nightview.info/yokohama/minatonomieruoka/",
+      "imageUrl": "/spots/yokohama-harbor-view-park-baybridge-3e7b.jpg",
+      "imageCredit": {
+        "author": "Captain76",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sunset_of_Yokohama_Bay_Bridge.JPG"
+      }
+    },
+    {
+      "id": "yokohama-kitanaka-bridge-nigehaji-01",
+      "title": "기타나카교 (도망치는 건 부끄럽지만 도움이 된다 명장면 촬영지)",
+      "city": "yokohama",
+      "category": "drama",
+      "lat": 35.45204,
+      "lng": 139.63315,
+      "area": "北仲橋 / 大岡川, Sakuragicho–Bashamichi",
+      "subject": "기타나카교 보행자 구간에서 오오카천과 미나토미라이 스카이라인을 배경으로 드라마 장면의 분위기를 재현",
+      "tip": "위치는 구역 수준의 근사치입니다. 북측 보도에서 현장 구도를 확인하고 보행자·자전거 통행을 막지 마세요. 차도와 난간 밖으로 내려가거나 몸을 내밀지 마세요.",
+      "lens": "24–50mm",
+      "time": "일몰 후 매직아워 및 야경",
+      "workId": "nigehaji",
+      "scene": "제2화 기타나카교 장면",
+      "verified": "reported",
+      "source": "https://asikotz.com/entertainment/drama/nigehaji/"
     },
     {
       "id": "yokohama-osanbashi-kujira-skyline-8c2d",
@@ -1860,10 +2686,78 @@
       "lens": "超広角レンズ（16-35mm：デッキの曲線と全景用）、中望遠〜望遠（70-200mm：三塔・観覧車引き寄せ用）",
       "time": "マジックアワー（日没直後）〜夜間",
       "verified": "reported",
-      "source": "https://yakei.jp/spot/spot.php?id=38"
+      "source": "https://yakei.jp/spot/spot.php?id=38",
+      "imageUrl": "/spots/yokohama-osanbashi-kujira-skyline-8c2d.jpg",
+      "imageCredit": {
+        "author": "Yokohama_Landmark_Tower_02.JPG: Σ64 derivative work: 0607crp (talk)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Landmark_Tower_02_cropped.jpg"
+      }
+    },
+    {
+      "id": "yokohama-yamate-diplomat-house-bsd-4e9b",
+      "title": "야마테 이탈리아산 정원 외교관의 집",
+      "city": "yokohama",
+      "category": "anime",
+      "lat": 35.43715,
+      "lng": 139.6457,
+      "area": "야마테 이탈리아산 정원 외교관의 집 정원",
+      "subject": "외교관의 집 목조 타워와 정원을 촬영하는 문호 스트레이독스 관련 장소",
+      "tip": "위치는 정원 남동쪽의 근사치(구역 수준) — 현장에서 타워·지붕·정원 계단 구도를 확인하고 개방시간과 촬영 규정을 따르세요.",
+      "lens": "24-50mm",
+      "time": "10:00-14:00",
+      "workId": "bungo-stray-dogs",
+      "scene": "15세편 서양식 저택 모델로 보고된 장소; EXACT_MATCH 미확정",
+      "verified": "reported",
+      "source": "https://travelyokohama.jp/bungosd-yamate-italian-garden/"
+    },
+    {
+      "id": "yokohama-zounohana-dazai-view-7c3d",
+      "title": "조노하나 파크 개항의 언덕",
+      "city": "yokohama",
+      "category": "anime",
+      "lat": 35.450528,
+      "lng": 139.642722,
+      "area": "조노하나 파크 개항의 언덕 잔디 상단",
+      "subject": "아카렌가·신코 부두를 향한 요코하마 항만 전망과 문호 스트레이독스 관련 부분 구도",
+      "tip": "위치는 개항의 언덕 상단의 근사치(구역 수준) — 현장에서 북쪽 항만 구도와 공원 이용 규정을 확인하세요.",
+      "lens": "35-50mm",
+      "time": "일몰 전후 매직아워",
+      "workId": "bungo-stray-dogs",
+      "scene": "조노하나 파크 항만 배경 관련 PARTIAL_MATCH/영감 가능성",
+      "verified": "reported",
+      "source": "https://www.motsu-tanbou.com/entry/pilgrimage-bungo_straydogs"
     }
   ],
   "works": [
+    {
+      "id": "king-the-land",
+      "title": "킹더랜드",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "hangover-part-ii",
+      "title": "더 행오버 2",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "perfume-the-story-of-a-murderer",
+      "title": "향수: 어느 살인자의 이야기",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "legend-of-the-blue-sea",
+      "title": "푸른 바다의 전설",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
     {
       "id": "the-king-eternal-monarch",
       "title": "더 킹: 영원의 군주",
@@ -1935,8 +2829,22 @@
       "progress": 0
     },
     {
+      "id": "chungking-express",
+      "title": "중경삼림",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "13---love-live-mv-hongkong",
       "title": "이달의 소녀 1/3 - 지금, 좋아해 (Love & Live) MV",
+      "type": "기타",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "hong-kong-film-locations-duddell",
+      "title": "홍콩 영화·드라마 촬영지 (작품별 검토 필요)",
       "type": "기타",
       "spotCount": 1,
       "progress": 0
@@ -1945,6 +2853,20 @@
       "id": "-hongkong",
       "title": "홍콩 야경 대표 뷰포인트",
       "type": "기타",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "hong-kong-police-film-locations",
+      "title": "홍콩 경찰 영화·드라마 촬영지 (작품별 검토 필요)",
+      "type": "기타",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "work-jeju",
+      "title": "수리남",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
@@ -1984,9 +2906,100 @@
       "progress": 0
     },
     {
+      "id": "love-actually",
+      "title": "Love Actually",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "sherlock",
+      "title": "셜록",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "ted-lasso",
+      "title": "테드 래소",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "beyond-the-boundary",
+      "title": "경계의 저편",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "demon-slayer",
+      "title": "귀멸의 칼날",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "35nenme-no-love-letter",
+      "title": "35년째의 러브레터",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "shikaotoko-ao-ni-yoshi",
+      "title": "사슴남자",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "-newyork",
       "title": "원스 어폰 어 타임 인 아메리카",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "joker",
+      "title": "조커",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "chimudondon",
+      "title": "치무돈돈",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-aquatope-on-white-sand",
+      "title": "白い砂のアクアトープ",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "harukana-receive",
+      "title": "はるかなレシーブ",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "its-okay-thats-love",
+      "title": "괜찮아, 사랑이야",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "jujutsu-kaisen-2",
+      "title": "呪術廻戦 2期",
+      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
@@ -2022,6 +3035,62 @@
       "id": "hero-princess-toyotomi",
       "title": "히어로 (2007년 영화판) / 프린세스 토요토미 (2011년)",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "emily-in-paris",
+      "title": "에밀리, 파리에 가다",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "inception",
+      "title": "인셉션",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "midnight-in-paris",
+      "title": "미드나잇 인 파리",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "golden-kamuy",
+      "title": "골든 카무이",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "suiyo-dodesho",
+      "title": "수요일 어떠신가요",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "first-love-hatsukoi",
+      "title": "퍼스트 러브 하츠코이",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "nami-yo-kiitekure",
+      "title": "파도여 들어다오",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "nami-yo-kiitekure-dosanko-gal",
+      "title": "파도여 들어다오 / 도산코 갸루는 초초 귀여워",
+      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
@@ -2068,6 +3137,48 @@
       "progress": 0
     },
     {
+      "id": "work-singapore",
+      "title": "크레이지 리치 아시안",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "3-singapore",
+      "title": "웨스트월드 시즌 3",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "in-time-with-you",
+      "title": "아가능불회애니 (연애의 조건)",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "light-the-night",
+      "title": "화등초상",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "in-time-with-you-taipei",
+      "title": "아가능불회애니 (연애의 조건 / In Time With You)",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "turn-left-turn-right",
+      "title": "턴 레프트, 턴 라이트 (향좌주, 향우주)",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "hana-yori-dango",
       "title": "꽃보다 남자",
       "type": "드라마",
@@ -2098,6 +3209,34 @@
     {
       "id": "weathering-with-you",
       "title": "날씨의 아이",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "bocchi-the-rock",
+      "title": "봇치 더 록!",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "richman-poor-woman",
+      "title": "리치맨, 푸어우먼",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "nigehaji",
+      "title": "도망치는 건 부끄럽지만 도움이 된다",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "bungo-stray-dogs",
+      "title": "문호 스트레이독스",
       "type": "애니",
       "spotCount": 1,
       "progress": 0

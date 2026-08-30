@@ -61,7 +61,7 @@ research/
 |---|---|---|
 | `id` | ✕ | kebab-case 고유 id. 생략 시 `titleKo`에서 자동 생성 |
 | `titleKo` | ✓ | 한국어 스팟명 |
-| `city` | ✓ | **앱 도시 id만**: `tokyo` `seoul` `osaka` `kyoto` `fukuoka` `busan`. 이외 도시는 임포트 불가(백로그) |
+| `city` | ✓ | **앱 도시 id만** = `lib/mock.ts`의 `CITY_IDS`(현재 20개: tokyo·seoul·osaka·kyoto·fukuoka·busan·sapporo·yokohama·okinawa·nara·jeju·incheon·taipei·hongkong·bangkok·singapore·paris·london·newyork·barcelona). 이외 도시는 임포트 불가(백로그) |
 | `category` | ✓ | `landmark` `anime` `drama` `photo` `nature` 중 하나 |
 | `shooterLat` `shooterLng` | ✓ | **촬영자가 서는 위치**(피사체 아님). 확신 없으면 리드를 `leads/`에 내보내지 말 것 |
 | `area` | 권장 | 동네/구 |
