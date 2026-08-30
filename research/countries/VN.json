@@ -1,0 +1,46 @@
+{
+  "code": "VN",
+  "name": "Vietnam",
+  "nativeName": "Việt Nam",
+  "tier": 2,
+  "languages": [
+    "vi",
+    "en",
+    "ko"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "địa điểm chụp ảnh",
+    "view đẹp",
+    "check-in",
+    "sống ảo",
+    "photo spot"
+  ],
+  "cities": [
+    {
+      "id": "danang",
+      "appImportable": true,
+      "querySeeds": [
+        "Đà Nẵng địa điểm sống ảo",
+        "Da Nang photo spots",
+        "다낭 포토스팟"
+      ]
+    },
+    {
+      "id": "hanoi",
+      "appImportable": true,
+      "querySeeds": [
+        "Hà Nội chụp ảnh đẹp",
+        "Hanoi photo spots",
+        "하노이 포토스팟"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "code": "NL",
+  "name": "Netherlands",
+  "nativeName": "Nederland",
+  "tier": 2,
+  "languages": [
+    "nl",
+    "en",
+    "ko"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "fotolocaties",
+    "instagram plekken",
+    "photo spots"
+  ],
+  "cities": [
+    {
+      "id": "amsterdam",
+      "appImportable": true,
+      "querySeeds": [
+        "Amsterdam fotolocaties",
+        "Amsterdam photo spots",
+        "암스테르담 포토스팟"
+      ]
+    }
+  ]
+}

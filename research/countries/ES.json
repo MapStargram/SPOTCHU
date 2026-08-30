@@ -29,6 +29,15 @@
         "sagrada familia view",
         "park guell"
       ]
+    },
+    {
+      "id": "madrid",
+      "appImportable": true,
+      "querySeeds": [
+        "Madrid lugares fotográficos",
+        "Madrid photo spots",
+        "마드리드 포토스팟"
+      ]
     }
   ]
 }
