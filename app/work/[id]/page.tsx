@@ -1,44 +1,17 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronLeft, Check, ChevronRight, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
 import { ShareButton } from "@/components/ui/ShareButton";
-import { getWork } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
+import { getWork, getWorkSpots } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 
 // DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
 export const dynamic = "force-dynamic";
 
 // B4 · 작품 상세 — 애니 성지 강조. 성지순례 진행률 카드가 1급 요소.
-type Scene = { ep: string; title: string; label: string; visited: boolean };
-
-const SCENES: Record<string, Scene[]> = {
-  "kimi-no-na": [
-    { ep: "#7", title: "스가 신사 계단", label: "라스트씬", visited: true },
-    {
-      ep: "#3",
-      title: "요츠야 역 앞 육교",
-      label: "미츠하 상경",
-      visited: true,
-    },
-    {
-      ep: "#9",
-      title: "롯폰기 힐즈 전망대",
-      label: "서로를 찾는 밤",
-      visited: true,
-    },
-    { ep: "#5", title: "신주쿠 스텝스", label: "출근길", visited: true },
-    { ep: "#11", title: "뉴 스가모 신사", label: "재회", visited: false },
-    {
-      ep: "#2",
-      title: "국립신미술관 계단",
-      label: "디자인 미팅",
-      visited: false,
-    },
-  ],
-};
-
+// 회차별 스팟은 하드코딩 데모가 아니라 실제 연결 스팟(SpotWork.sceneNote)에서 가져온다.
 export default async function WorkDetailScreen({
   params,
 }: {
@@ -48,7 +21,7 @@ export default async function WorkDetailScreen({
   const w = await getWork(id);
   if (!w) notFound();
 
-  const scenes = SCENES[id] ?? [];
+  const scenes = await getWorkSpots(id);
   const progressPct =
     w.spotCount > 0 ? Math.round((w.progress / w.spotCount) * 100) : 0;
 
@@ -141,55 +114,42 @@ export default async function WorkDetailScreen({
           </h2>
           {scenes.length === 0 ? (
             <p className="py-6 text-center text-[12px] text-[color:var(--muted)]">
-              회차별 스팟 정보는 준비 중이에요.
+              아직 연결된 스팟이 없어요.
             </p>
           ) : (
             <ul className="flex flex-col gap-2">
-              {scenes.map((sc, i) => (
-                <li
-                  key={i}
-                  className="flex items-center gap-3 rounded-[14px] px-3 py-2.5"
-                  style={
-                    sc.visited
-                      ? { background: "var(--cream-2)" }
-                      : { background: "#fff", border: "1px solid var(--line)" }
-                  }
-                >
-                  <div
-                    className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-latin text-[11px] font-extrabold"
-                    style={
-                      sc.visited
-                        ? { background: "var(--mint)", color: "var(--navy)" }
-                        : {
-                            background: "#fff",
-                            border: "1px solid var(--line)",
-                            color: "var(--muted)",
-                          }
-                    }
+              {scenes.map((sc) => (
+                <li key={sc.id}>
+                  <Link
+                    href={`/spot/${sc.id}`}
+                    className="flex items-center gap-3 rounded-[14px] border border-[color:var(--line)] bg-white px-3 py-2.5 transition active:scale-[0.99]"
                   >
-                    {sc.visited ? <Check size={16} /> : sc.ep}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <div className="text-[12px] font-bold tracking-[-0.01em] text-navy">
-                      {sc.title}
+                    <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-[10px] bg-[color:var(--cream-2)]">
+                      {sc.imageUrl && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={sc.imageUrl}
+                          alt=""
+                          loading="lazy"
+                          className="absolute inset-0 h-full w-full object-cover"
+                        />
+                      )}
                     </div>
-                    <div className="mt-0.5 text-[10px] text-[color:var(--muted)]">
-                      {sc.ep} · {sc.label}
+                    <div className="min-w-0 flex-1">
+                      <div className="line-clamp-1 text-[12px] font-bold tracking-[-0.01em] text-navy">
+                        {sc.title}
+                      </div>
+                      {sc.scene && (
+                        <div className="mt-0.5 line-clamp-1 text-[10px] text-[color:var(--muted)]">
+                          {sc.scene}
+                        </div>
+                      )}
                     </div>
-                  </div>
-                  {sc.visited ? (
-                    <TagPill
-                      variant="mint"
-                      style={{ fontSize: 9, padding: "3px 8px" }}
-                    >
-                      인증
-                    </TagPill>
-                  ) : (
                     <ChevronRight
                       size={14}
-                      className="text-[color:var(--muted)]"
+                      className="shrink-0 text-[color:var(--muted)]"
                     />
-                  )}
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -18,9 +18,10 @@ export function AppShell({
   return (
     <div className="min-h-dvh bg-[color:var(--cream-2)]">
       <Sidebar active={active} />
-      <div className="min-h-dvh transition-[padding] duration-200 ease-out lg:pl-[76px] lg:peer-hover:pl-[244px]">
-        {children}
-      </div>
+      {/* 사이드바는 hover 시 244px로 확장되지만 콘텐츠 위 '오버레이'로 뜬다(콘텐츠·fixed 하단 바를
+          밀지 않음). 예전 peer-hover 밀어내기는 fixed 하단 CTA(SpotActions 등)가 따라오지 못해
+          어긋났다 → 정렬 유지 위해 콘텐츠 오프셋은 좁은 레일(76px)로 고정. */}
+      <div className="min-h-dvh lg:pl-[76px]">{children}</div>
       {!noTabBar && <TabBar active={active} />}
     </div>
   );

@@ -265,6 +265,32 @@ export async function getWork(id: string): Promise<Work | undefined> {
   return (await cachedWork(id)) ?? undefined;
 }
 
+// 작품에 연결된 실제 스팟(성지 목록). 하드코딩 회차 데모 대신 SpotWork에서.
+export interface WorkSpot {
+  id: string;
+  title: string;
+  scene: string; // SpotWork.sceneNote(장면 메모)
+  imageUrl?: string;
+}
+export async function getWorkSpots(workId: string): Promise<WorkSpot[]> {
+  if (!USE_DB) {
+    return mock.SPOTS.filter((s) => s.workId === workId).map((s) => ({
+      id: s.id,
+      title: s.title,
+      scene: s.scene ?? "",
+      imageUrl: s.imageUrl,
+    }));
+  }
+  const row = await getWorkWithSpotsFromDb(workId);
+  if (!row) return [];
+  return row.spots.map((sw) => ({
+    id: sw.spot.id,
+    title: sw.spot.name,
+    scene: sw.sceneNote ?? "",
+    imageUrl: sw.spot.coverImageUrl ?? undefined,
+  }));
+}
+
 // ── 컬렉션(Collection) ──
 // 큐레이션(official)은 콘텐츠, 내 것(ownerId===유저)은 유저별. 비로그인은 official만 보임.
 interface DbCollectionLike {
