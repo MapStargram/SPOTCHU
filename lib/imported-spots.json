@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T07:35:52.172Z",
+  "generatedAt": "2026-08-30T11:11:23.838Z",
   "spots": [
     {
       "id": "bangkok-khlong-ong-ang-king-the-land-3f4d",
@@ -17,7 +17,7 @@
       "scene": "방콕 야시장과 클롱 옹앙 산책로를 걷는 10화 장면.",
       "verified": "reported",
       "source": "https://thesmartlocal.co.th/locations-in-king-the-land/",
-      "imageUrl": "/spots/bangkok-khlong-ong-ang-king-the-land-3f4d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088317/spotchu/spots/bangkok-khlong-ong-ang-king-the-land-3f4d.jpg",
       "imageCredit": {
         "author": "CKasa",
         "license": "CC BY-SA 3.0",
@@ -40,7 +40,7 @@
       "scene": "르부아 rooftop bar/restaurant에서 방콕 전경을 배경으로 한 장면.",
       "verified": "reported",
       "source": "https://lebua.com/restaurants/sky-bar/",
-      "imageUrl": "/spots/bangkok-lebua-skybar-hangover-2-7b1c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088318/spotchu/spots/bangkok-lebua-skybar-hangover-2-7b1c.jpg",
       "imageCredit": {
         "author": "Wolfgang Weber",
         "license": "CC BY 3.0",
@@ -63,12 +63,29 @@
       "scene": "방콕 포상휴가 중 로하 쁘라삿 야경을 바라보는 10화 장면.",
       "verified": "reported",
       "source": "https://www.timeout.com/bangkok/news/where-did-the-korean-drama-king-the-land-film-in-thailand-072123",
-      "imageUrl": "/spots/bangkok-loha-prasat-king-the-land-e92a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088319/spotchu/spots/bangkok-loha-prasat-king-the-land-e92a.jpg",
       "imageCredit": {
         "author": "Ahoerstemeier",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Loha_Prasat.jpg"
       }
+    },
+    {
+      "id": "bangkok-loy-la-long-wat-pathum-khongkha",
+      "title": "로이 라 롱 — 방콕 트래픽 러브 스토리 촬영지",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.73165,
+      "lng": 100.5126,
+      "area": "Loy La Long Hotel, Wat Pathum Khongkha, Talat Noi",
+      "subject": "차오프라야강을 바라보는 로이 라 롱 목조 숙소와 강변 테라스",
+      "tip": "위치는 근사치(구역 수준) — 숙소·사찰의 촬영 허용 범위를 먼저 확인하고 테라스에서 현장 구도를 확인하세요. 비 온 뒤 목재 데크와 강변 가장자리에 주의하세요.",
+      "lens": "24–35mm f/2.8",
+      "time": "일몰–야간 17:30–20:30",
+      "workId": "bangkok-traffic-love-story",
+      "scene": "로이 라 롱에 해당하는 롱의 강변 숙소와 목조 테라스 장면",
+      "verified": "reported",
+      "source": "https://www.loylalong.com/en"
     },
     {
       "id": "bangkok-mahanakhon-chong-nonsi-skywalk-e31d",
@@ -84,11 +101,34 @@
       "time": "18:00 - 20:30 (Blue Hour & Night City Lights)",
       "verified": "reported",
       "source": "https://lukfoto.com/bangkok-photography-spots",
-      "imageUrl": "/spots/bangkok-mahanakhon-chong-nonsi-skywalk-e31d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088320/spotchu/spots/bangkok-mahanakhon-chong-nonsi-skywalk-e31d.jpg",
       "imageCredit": {
         "author": "Chainwit.",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Bangkok_-_King_Power_Mahanakhon_%E0%B8%84%E0%B8%B4%E0%B8%87_%E0%B9%80%E0%B8%9E%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C_%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3_2021_May.jpg"
+      }
+    },
+    {
+      "id": "bangkok-old-customs-house-in-the-mood-for-love",
+      "title": "올드 커스텀스 하우스 — 화양연화·2046 촬영지",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.72522,
+      "lng": 100.51435,
+      "area": "Charoen Krung Soi 36, Bang Rak",
+      "subject": "올드 커스텀스 하우스의 신고전주의 외관과 오래된 방락 골목",
+      "tip": "위치는 근사치(구역 수준) — 공개 보행로에서 서쪽 외관을 향해 현장 구도를 확인하세요. 펜스·복원 구역과 인접 기관에 들어가거나 통행을 방해하지 마세요.",
+      "lens": "35–50mm f/1.8",
+      "time": "골든아워–블루아워 16:30–18:30",
+      "workId": "in-the-mood-for-love",
+      "scene": "방콕의 올드 커스텀스 하우스와 인근 골목으로 재현한 1960년대 홍콩 분위기",
+      "verified": "reported",
+      "source": "https://www.bangkok101.com/memory-lane-a-stroll-through-kong-rithdees-bangrak-district/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088321/spotchu/spots/bangkok-old-customs-house-in-the-mood-for-love.jpg",
+      "imageCredit": {
+        "author": "Ggsaru",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%AD%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B8%E0%B8%A5%E0%B8%81%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99_01.jpg"
       }
     },
     {
@@ -105,11 +145,34 @@
       "time": "17:30 - 19:00 (Sunset into Blue Hour illumination)",
       "verified": "reported",
       "source": "https://aroundus.com/th/place/nagaraphirom-park",
-      "imageUrl": "/spots/bangkok-wat-arun-nagaraphirom-park-7c4a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088322/spotchu/spots/bangkok-wat-arun-nagaraphirom-park-7c4a.jpg",
       "imageCredit": {
         "author": "Diliff",
         "license": "CC BY 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:Wat_Arun_from_Chao_Phraya_River.jpg"
+      }
+    },
+    {
+      "id": "bangkok-wat-nang-chi-khlong-dan-007-chase",
+      "title": "007 황금총을 가진 사나이 — 클롱 단 보트 추격전",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.71665,
+      "lng": 100.46808,
+      "area": "Wat Nang Chi Chotikaram western waterfront, Khlong Dan",
+      "subject": "왓 낭 치 사찰 앞 클롱 단 수로와 007 보트 추격 장면의 분위기",
+      "tip": "위치는 근사치(구역 수준) — 사찰의 공개 수변에서 현장 구도를 확인하세요. 북북동을 향해 촬영하고 난간 없는 제티와 물보라에 주의하세요.",
+      "lens": "35–85mm",
+      "time": "오전 8:00–10:30 또는 늦은 오후 16:00–17:30",
+      "workId": "the-man-with-the-golden-gun",
+      "scene": "클롱 단과 왓 낭 치 치토카라람 앞 수로의 보트 추격 장면",
+      "verified": "reported",
+      "source": "https://huntingbond.com/khlong-dan-bangkok/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088323/spotchu/spots/bangkok-wat-nang-chi-khlong-dan-007-chase.jpg",
+      "imageCredit": {
+        "author": "Chainwit.",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bangkok_-_Wat_Nang_Chi_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%99%E0%B8%B2%E0%B8%87%E0%B8%8A%E0%B8%B5_%E0%B8%81%E0%B8%A3%E0%B8%B8%E0%B8%87%E0%B9%80%E0%B8%97%E0%B8%9E%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3_(2025)_-_img_01.jpg"
       }
     },
     {
@@ -126,7 +189,7 @@
       "time": "16:00 - 18:30 (Late afternoon & Golden Hour)",
       "verified": "reported",
       "source": "https://pantip.com/topic/41196144",
-      "imageUrl": "/spots/bangkok-wat-paknam-khun-chan-bridge-b82f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088325/spotchu/spots/bangkok-wat-paknam-khun-chan-bridge-b82f.jpg",
       "imageCredit": {
         "author": "Pablotorrado",
         "license": "CC BY-SA 4.0",
@@ -164,7 +227,7 @@
       "scene": "리치스 정원과 미로 장면",
       "verified": "reported",
       "source": "https://www.barcelona.cat/ca/que-pots-fer-a-bcn/parcs-i-jardins/parc-del-laberint-dhorta_92086011915.html",
-      "imageUrl": "/spots/barcelona-laberint-dhorta-perfume-richis-maze-3b9e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088326/spotchu/spots/barcelona-laberint-dhorta-perfume-richis-maze-3b9e.jpg",
       "imageCredit": {
         "author": "pepe.cornet",
         "license": "CC BY-SA 3.0",
@@ -187,7 +250,7 @@
       "scene": "팔라우 음악당 입구의 우산 장면",
       "verified": "reported",
       "source": "https://spainscreentourism.com/en/filming-locations/the-legend-of-the-blue-sea/",
-      "imageUrl": "/spots/barcelona-palau-musica-blue-sea-umbrella-4c2a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088328/spotchu/spots/barcelona-palau-musica-blue-sea-umbrella-4c2a.jpg",
       "imageCredit": {
         "author": "Pili Redondo Rodríguez",
         "license": "CC BY-SA 3.0 es",
@@ -225,11 +288,34 @@
       "time": "이른 아침 (07:00~08:30, 인파가 없고 좁은 골목으로 들어오는 부드러운 아침 햇살)",
       "verified": "reported",
       "source": "https://somosentrespacios.com/pont-del-bisbe-barcelona/",
-      "imageUrl": "/spots/barcelona-pont-del-bisbe-gothic-quarter-9b4e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088329/spotchu/spots/barcelona-pont-del-bisbe-gothic-quarter-9b4e.jpg",
       "imageCredit": {
         "author": "Enfo",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:01_Carrer_del_Bisbe,_arc_neog%C3%B2tic_11set2012.jpg"
+      }
+    },
+    {
+      "id": "barcelona-rec-apartment-casa-argelich-8c3a",
+      "title": "영화 [REC] 카사 아르겔리치 촬영지",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.39001,
+      "lng": 2.16315,
+      "area": "Rambla de Catalunya 34, Eixample",
+      "subject": "Casa Argelich / Edifici Cedimatexsa의 영화 [REC] 외관과 인접 골목 구도",
+      "tip": "람블라 데 카탈루냐 보행 구역에서 촬영합니다. 위치는 근사치(구역 수준) — 현장에서 구도를 확인하고 보행자·차량 통행을 방해하지 마세요. 건물 내부나 사유지에 진입하지 마세요.",
+      "lens": "24-50mm",
+      "time": "오후 15:00-18:00",
+      "workId": "rec",
+      "scene": "Casa Argelich/Edifici Cedimatexsa와 인접 골목의 영화 촬영 장면",
+      "verified": "reported",
+      "source": "https://www.elperiodico.com/es/barcelona/20240321/edificio-pelicula-rec-rambla-catalunya-barcelona-99757656",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088330/spotchu/spots/barcelona-rec-apartment-casa-argelich-8c3a.jpg",
+      "imageCredit": {
+        "author": "User:Emme17",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Rambla_Catalunya_34.jpg"
       }
     },
     {
@@ -246,11 +332,34 @@
       "time": "이른 아침 (07:30~09:00, 바람이 적고 탄생의 파사드 정면 순광)",
       "verified": "reported",
       "source": "https://pasaportesindestino.net/donde-sacar-mejores-fotos-sagrada-familia/",
-      "imageUrl": "/spots/barcelona-sagrada-familia-placa-gaudi-pond-f31a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088332/spotchu/spots/barcelona-sagrada-familia-placa-gaudi-pond-f31a.jpg",
       "imageCredit": {
         "author": "Bill Tyne from Oxford, England",
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:La_Sagadra_-_Flickr_-_wit.jpg"
+      }
+    },
+    {
+      "id": "barcelona-uncharted-santa-maria-del-pi-9a1b",
+      "title": "영화 언차티드 산타 마리아 델 피 성당",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.38205,
+      "lng": 2.17355,
+      "area": "Plaça del Pi, Barri Gòtic",
+      "subject": "산타 마리아 델 피 성당 정면과 장미창을 담는 영화 언차티드 촬영지 구도",
+      "tip": "Plaça del Pi 광장 가장자리에서 촬영합니다. 위치는 근사치(구역 수준) — 현장에서 구도를 확인하고 보행 동선을 방해하지 마세요. 계단·포장면에 장비를 안전하게 두세요.",
+      "lens": "16-35mm",
+      "time": "오전 09:00-11:00",
+      "workId": "uncharted",
+      "scene": "Plaça del Pi에서 바라보는 Santa Maria del Pi 성당 정면과 장미창",
+      "verified": "reported",
+      "source": "https://www.sceen-it.com/sceen/5243/Uncharted/Santa-Maria-del-Pi",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088333/spotchu/spots/barcelona-uncharted-santa-maria-del-pi-9a1b.jpg",
+      "imageCredit": {
+        "author": "Chabe01",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Basilique_Ste_Marie_Pin_Barcelone_6.jpg"
       }
     },
     {
@@ -301,7 +410,7 @@
       "time": "맑은 날 10:00-15:00 또는 일몰 전",
       "verified": "reported",
       "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201001001000&uc_seq=1311",
-      "imageUrl": "/spots/busan-cheongsapo-crossing-beach-train-7f2a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088334/spotchu/spots/busan-cheongsapo-crossing-beach-train-7f2a.jpg",
       "imageCredit": {
         "author": "Andrewssi2",
         "license": "CC BY-SA 3.0",
@@ -324,7 +433,7 @@
       "scene": "해변열차와 바다 구도가 작품의 해안 장면을 연상시킨다는 영감 관계(특정 장면 미검증)",
       "verified": "reported",
       "source": "https://www.busan.com/view/busan/view.php?code=2023030218274944983",
-      "imageUrl": "/spots/busan-cheongsapo-slamdunk-crossing-7a1b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088335/spotchu/spots/busan-cheongsapo-slamdunk-crossing-7a1b.jpg",
       "imageCredit": {
         "author": "Andrewssi2",
         "license": "CC BY-SA 3.0",
@@ -347,7 +456,7 @@
       "scene": "조형물 모티프/reference; 특정 애니메이션 장면 미검증",
       "verified": "reported",
       "source": "https://www.visitbusan.net/kr/index.do?menuId=MO_010100&cntId=20110701001",
-      "imageUrl": "/spots/busan-gamcheon-little-prince-viewpoint-9c3d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088336/spotchu/spots/busan-gamcheon-little-prince-viewpoint-9c3d.jpg",
       "imageCredit": {
         "author": "Christophe95",
         "license": "CC BY-SA 4.0",
@@ -372,6 +481,46 @@
       "source": "https://www.busanjin.go.kr/index.busanjin?menuCd=DOM_000000103004000000"
     },
     {
+      "id": "busan-huinnyeoul-attorney-view-8c3d",
+      "title": "영화 <변호인> 흰여울문화마을 진우네 집 창문 포토존",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.0772,
+      "lng": 129.0435,
+      "area": "흰여울문화마을 흰여울길 379 일대",
+      "subject": "흰여울문화마을 진우네 집/창문과 바다",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 공개 보행 지점과 구도를 확인하세요. 주민 통행과 사생활을 방해하지 말고 사유지에 들어가지 마세요.",
+      "lens": "24-35mm",
+      "time": "늦은 오후",
+      "workId": "the-attorney",
+      "scene": "흰여울문화마을의 진우네 집과 바다를 함께 담는 촬영지 구도",
+      "verified": "reported",
+      "source": "https://www.yeongdo.go.kr"
+    },
+    {
+      "id": "busan-jungangdong-40steps-nowheretohide-4f1e",
+      "title": "영화 <인정사정 볼 것 없다> 중앙동 40계단 오프닝 명장면 스팟",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1039,
+      "lng": 129.0345,
+      "area": "중앙동 40계단 문화관광테마거리",
+      "subject": "중앙동 40계단 상단부와 인접 골목 경관",
+      "tip": "위치는 근사치(계단·하단 보도 수준) — 현장에서 공공 보행면 안쪽의 안전한 지점을 확인하세요. 계단 통행을 방해하거나 차도에 서지 마세요.",
+      "lens": "35-50mm",
+      "time": "저녁",
+      "workId": "nowhere-to-hide",
+      "scene": "중앙동 40계단에서 촬영된 오프닝 시퀀스 관련 구도",
+      "verified": "reported",
+      "source": "https://www.bsjunggu.go.kr",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088337/spotchu/spots/busan-jungangdong-40steps-nowheretohide-4f1e.jpg",
+      "imageCredit": {
+        "author": "Original uploader was Filmlove at ko.wikipedia",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:40_stairs.jpg"
+      }
+    },
+    {
       "id": "busan-the-bay-101-marine-city-reflection-b81c",
       "title": "더베이101 동백섬 마린시티 반영 스팟",
       "city": "busan",
@@ -385,7 +534,7 @@
       "time": "일몰 직후 매직아워·야간",
       "verified": "reported",
       "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9dfae55a-e64e-4f81-a3f1-4b1046487e41",
-      "imageUrl": "/spots/busan-the-bay-101-marine-city-reflection-b81c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088340/spotchu/spots/busan-the-bay-101-marine-city-reflection-b81c.png",
       "imageCredit": {
         "author": "steveilott",
         "license": "CC BY 2.0",
@@ -438,7 +587,7 @@
       "time": "일몰 전후 및 야간",
       "verified": "reported",
       "source": "https://yakei.jp/japan/spot.php?i=atago_temple",
-      "imageUrl": "/spots/fukuoka-atago-shrine-viewpoint-8a1c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088341/spotchu/spots/fukuoka-atago-shrine-viewpoint-8a1c.jpg",
       "imageCredit": {
         "author": "STA3816",
         "license": "CC BY-SA 3.0",
@@ -461,7 +610,7 @@
       "scene": "후쿠하쿠 데아이 다리·나카스 강변 성지순례 장면",
       "verified": "reported",
       "source": "https://yokanavi.com/feature/146030/",
-      "imageUrl": "/spots/fukuoka-fukuhaku-deai-bridge-kimi-sui-7a2b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088342/spotchu/spots/fukuoka-fukuhaku-deai-bridge-kimi-sui-7a2b.jpg",
       "imageCredit": {
         "author": "Hirho",
         "license": "CC BY-SA 4.0",
@@ -482,7 +631,7 @@
       "time": "일몰 후 30분부터 야간",
       "verified": "reported",
       "source": "https://yokanavi.com/spots/86414/",
-      "imageUrl": "/spots/fukuoka-fukuhaku-deai-bridge-nakasu-f79b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088343/spotchu/spots/fukuoka-fukuhaku-deai-bridge-nakasu-f79b.jpg",
       "imageCredit": {
         "author": "Hirho",
         "license": "CC BY-SA 4.0",
@@ -505,7 +654,7 @@
       "scene": "하카타역 전면 광장과 역 시계 장면",
       "verified": "reported",
       "source": "https://astral-tanbou.com/hakatatonkotsu-anime-seichijunrei-hakata/",
-      "imageUrl": "/spots/fukuoka-hakata-station-plaza-tonkotsu-ramens-3e1f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088344/spotchu/spots/fukuoka-hakata-station-plaza-tonkotsu-ramens-3e1f.jpg",
       "imageCredit": {
         "author": "ぱちょぴ",
         "license": "CC BY-SA 3.0",
@@ -543,7 +692,7 @@
       "time": "일몰 전후 또는 야간 조명",
       "verified": "reported",
       "source": "https://www.fukuokatower.co.jp/sightseeing/area_s.php",
-      "imageUrl": "/spots/fukuoka-momochihama-marizon-tower-c42e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088345/spotchu/spots/fukuoka-momochihama-marizon-tower-c42e.jpg",
       "imageCredit": {
         "author": "STA3816",
         "license": "CC BY-SA 3.0",
@@ -566,7 +715,7 @@
       "scene": "오호리 공원 고래 놀이터 장면",
       "verified": "reported",
       "source": "https://hamutane.com/buddydaddies-seichijunrei-fukuoka/",
-      "imageUrl": "/spots/fukuoka-ohori-park-kujira-playground-buddy-daddies-4d8a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088346/spotchu/spots/fukuoka-ohori-park-kujira-playground-buddy-daddies-4d8a.jpg",
       "imageCredit": {
         "author": "そらみみ (Soramimi)",
         "license": "CC BY-SA 4.0",
@@ -589,12 +738,29 @@
       "scene": "스이쿄 텐만구 인근 우마카몬 거리의 야간 골목 장면",
       "verified": "reported",
       "source": "https://fukuoka-leapup.jp/entertainment/202203.491",
-      "imageUrl": "/spots/fukuoka-suikyo-tenmangu-umakamon-fukuoka-591c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088347/spotchu/spots/fukuoka-suikyo-tenmangu-umakamon-fukuoka-591c.jpg",
       "imageCredit": {
         "author": "Pontafon",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Mizukagamitenmanguu01.jpg"
       }
+    },
+    {
+      "id": "fukuoka-zhang-lu-daimyo-irie-shoten-3b1a",
+      "title": "영화 ‘후쿠오카’ — 다이묘 이리에 서점 골목",
+      "city": "fukuoka",
+      "category": "drama",
+      "lat": 33.58756,
+      "lng": 130.39519,
+      "area": "다이묘 콘야마치도리·이리에 서점 일대, 후쿠오카 주오구",
+      "subject": "이리에 서점 외관과 콘야마치 골목을 담는 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인하세요. 공공 보도에서만 촬영하고 영업 중인 서점 출입구·보행·차량 동선을 막지 마세요.",
+      "lens": "28-35mm",
+      "time": "14:00-17:00",
+      "workId": "fukuoka-2019",
+      "scene": "다이묘 이리에 서점과 콘야마치 골목에서 인물들이 만나고 대화하는 장면",
+      "verified": "reported",
+      "source": "https://gofukuoka.jp/articles/detail/89"
     },
     {
       "id": "hongkong-central-mid-levels-escalator-cochrane-4a91",
@@ -612,7 +778,7 @@
       "scene": "센트럴 미드레벨 에스컬레이터와 코크란 스트리트 일대의 장면으로 알려진 구도; 정확한 프레임은 검토 필요",
       "verified": "reported",
       "source": "https://en.wikipedia.org/wiki/Central%E2%80%93Mid-Levels_escalator",
-      "imageUrl": "/spots/hongkong-central-mid-levels-escalator-cochrane-4a91.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088348/spotchu/spots/hongkong-central-mid-levels-escalator-cochrane-4a91.jpg",
       "imageCredit": {
         "author": "N509FZ",
         "license": "CC BY-SA 4.0",
@@ -635,7 +801,7 @@
       "scene": "걸그룹 이달의 소녀 1/3의 데뷔 타이틀곡 '지금, 좋아해 (Love & Live)' 뮤직비디오 메인 댄스 시퀀스 및 앨범 썸네일로 등장하는 파스텔톤 농구장 장면.",
       "verified": "reported",
       "source": "https://www.housingauthority.gov.hk/",
-      "imageUrl": "/spots/hongkong-choi-hung-estate-court-p03.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088349/spotchu/spots/hongkong-choi-hung-estate-court-p03.jpg",
       "imageCredit": {
         "author": "StanleyFiona",
         "license": "CC BY-SA 3.0",
@@ -677,6 +843,29 @@
       "source": "https://en.wikipedia.org/wiki/Lugard_Road"
     },
     {
+      "id": "hongkong-mido-cafe-temple-street-4b8a",
+      "title": "미도 카페 (템플 스트리트 코너 뷰)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.31015,
+      "lng": 114.17015,
+      "area": "Yau Ma Tei, 63 Temple Street",
+      "subject": "미도 카페 외관과 창가 풍경",
+      "tip": "위치는 근사치(구역 수준) — 맞은편 보도에서 24–35mm로 구도를 확인하세요. 실내 촬영은 직원 허가와 주문이 필요합니다.",
+      "lens": "24-35mm exterior; 35-50mm interior",
+      "time": "11:30–15:00 또는 저녁",
+      "workId": "moonlight-express-ptu",
+      "scene": "Mido Cafe is associated with classic Hong Kong film locations; claim-level scene confirmation remains a review item.",
+      "verified": "reported",
+      "source": "https://www.discoverhongkong.com",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088352/spotchu/spots/hongkong-mido-cafe-temple-street-4b8a.jpg",
+      "imageCredit": {
+        "author": "Wpcpey",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mido_Cafe_202011.jpg"
+      }
+    },
+    {
       "id": "hongkong-monster-building-courtyard-p02",
       "title": "쿼리베이 익청 빌딩 '몬스터 빌딩' 중정 앙각 뷰포인트",
       "city": "hongkong",
@@ -692,7 +881,7 @@
       "scene": "마이클 베이 감독의 영화 '트랜스포머: 사라진 시대(2014)'에서 오토봇과 케이드 예거 일행이 디셉티콘과 전투를 벌이는 홍콩 도심 아파트 중정 및 옥상 장면.",
       "verified": "reported",
       "source": "https://en.wikipedia.org/wiki/Monster_Building",
-      "imageUrl": "/spots/hongkong-monster-building-courtyard-p02.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088353/spotchu/spots/hongkong-monster-building-courtyard-p02.jpg",
       "imageCredit": {
         "author": "Sakaori (talk)",
         "license": "CC BY 3.0",
@@ -715,12 +904,29 @@
       "scene": "공식 자료는 경찰서 외부가 여러 고전 홍콩 영화에 사용되었음을 확인하지만 개별 작품의 정확한 프레임은 검토 필요",
       "verified": "reported",
       "source": "https://www.gohk.gov.hk/en/spots/spot_detail.php?spot=The+Former+Yau+Ma+Tei+Police+Station",
-      "imageUrl": "/spots/hongkong-old-yau-ma-tei-police-station-6c34.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088354/spotchu/spots/hongkong-old-yau-ma-tei-police-station-6c34.jpg",
       "imageCredit": {
         "author": "Exploringlife",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Old_Yau_Ma_Tei_Police_Station_(full_blue_sky).jpg"
       }
+    },
+    {
+      "id": "incheon-beauty-inside-studio-valor-e81a",
+      "title": "스튜디오 발로 이수로드 (영화 뷰티 인사이드)",
+      "city": "incheon",
+      "category": "drama",
+      "lat": 37.4721,
+      "lng": 126.7028,
+      "area": "부평구 십정동, 스튜디오 발로",
+      "subject": "영화 뷰티 인사이드에 등장한 빈티지 가구 스튜디오 내부 통로",
+      "tip": "위치는 스튜디오 내부 구역의 근사치입니다. 현장에서 구도를 확인하고 상업 촬영·전문 장비는 사전 허가를 받으며 손님과 직원 동선을 막지 마세요.",
+      "lens": "50–85mm",
+      "time": "11:00–15:00",
+      "workId": "the-beauty-inside-2015",
+      "scene": "이수의 직장으로 등장한 발로 빈티지 가구 스튜디오 내부 통로",
+      "verified": "reported",
+      "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=efd555a9-eb08-4c0d-8ddd-345522417b5e"
     },
     {
       "id": "incheon-incheon-bridge-bongjaesan-s-line-a7f1",
@@ -736,7 +942,7 @@
       "time": "17:30~19:30 (일몰 골든아워 ~ 매직아워 야경)",
       "verified": "reported",
       "source": "https://www.chosun.com",
-      "imageUrl": "/spots/incheon-incheon-bridge-bongjaesan-s-line-a7f1.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088355/spotchu/spots/incheon-incheon-bridge-bongjaesan-s-line-a7f1.jpg",
       "imageCredit": {
         "author": "Jinho Jung on Flickr",
         "license": "Public domain",
@@ -757,7 +963,7 @@
       "time": "08:00~10:30 (오전 부드러운 사광 및 관광객 인파 없는 시간대)",
       "verified": "reported",
       "source": "https://www.heritage.go.kr",
-      "imageUrl": "/spots/incheon-qing-japan-concession-stairs-c9d3.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088356/spotchu/spots/incheon-qing-japan-concession-stairs-c9d3.jpg",
       "imageCredit": {
         "author": "Lawinc82",
         "license": "CC BY-SA 3.0",
@@ -778,11 +984,51 @@
       "time": "18:30~21:00 (일몰 직후 매직아워 및 야간 경관조명 점등 시간)",
       "verified": "reported",
       "source": "https://travel.incheon.go.kr",
-      "imageUrl": "/spots/incheon-songdo-tri-bowl-reflection-b8e2.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088357/spotchu/spots/incheon-songdo-tri-bowl-reflection-b8e2.jpg",
       "imageCredit": {
         "author": "Vincent van Zeijst",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:South_Korea,_Incheon,_Songdo,_the_Sharp_Central_Park_Towers.jpg"
+      }
+    },
+    {
+      "id": "incheon-the-classic-hongyemun-gate-f29c",
+      "title": "홍예문 터널 아치 뷰포인트 (영화 클래식)",
+      "city": "incheon",
+      "category": "drama",
+      "lat": 37.47425,
+      "lng": 126.6265,
+      "area": "중구 송학동, 홍예문 주변 공공 보도",
+      "subject": "홍예문 화강암 아치와 개항장 골목 분위기",
+      "tip": "위치는 홍예문 주변 보도 구역의 근사치입니다. 차도나 터널 중앙에 서지 말고 공공 보도에서 현장 구도를 확인하세요.",
+      "lens": "35–50mm",
+      "time": "07:30–09:00 또는 18:30–19:30",
+      "workId": "the-classic-2003",
+      "scene": "홍예문과 인천 개항장 골목의 영화 로케이션 연관 구도",
+      "verified": "reported",
+      "source": "https://www.incheon.go.kr/tour/TR010101"
+    },
+    {
+      "id": "jeju-abu-oreum-crater-cedar-6e9f",
+      "title": "아부오름 서북측 능선 분화구 삼나무 원형림 조망점",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.4481,
+      "lng": 126.7761,
+      "area": "제주시 구좌읍 송당리 아부오름 서북측 능선 탐방로",
+      "subject": "분화구 바닥의 원형 삼나무림과 능선",
+      "tip": "위치는 서북측 능선 구역 수준의 근사치 — 현장에서 구도 확인. 정해진 탐방로를 벗어나 분화구 내부로 들어가지 마세요.",
+      "lens": "16-28mm",
+      "time": "08:30-11:00 또는 16:30-18:00",
+      "workId": "yeonpung-yeonga",
+      "scene": "아부오름 분화구와 삼나무 군락이 영화 촬영·배경 장소로 기록됨",
+      "verified": "reported",
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CONT_000000000500465",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088359/spotchu/spots/jeju-abu-oreum-crater-cedar-6e9f.jpg",
+      "imageCredit": {
+        "author": "Rastignac9",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%EC%A0%9C%EC%A3%BC%EB%8F%84_%EC%95%84%EB%B6%80%EC%98%A4%EB%A6%841.jpg"
       }
     },
     {
@@ -799,7 +1045,7 @@
       "time": "맑은 날 10:00~14:00 (선명한 에메랄드빛 바다 연출) 또는 일몰 30분 전 (노을 실루엣)",
       "verified": "reported",
       "source": "https://www.visitjeju.net/kr/detail/view?menuId=DOM_000001718001000000&contId=CONT_000000000500140",
-      "imageUrl": "/spots/jeju-dodubong-kisses-zone-a82f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088360/spotchu/spots/jeju-dodubong-kisses-zone-a82f.jpg",
       "imageCredit": {
         "author": "ChongDae",
         "license": "CC BY-SA 4.0",
@@ -820,7 +1066,7 @@
       "time": "맑은 날 일몰 45분 전 ~ 일몰 직후 매직아워 (17:30~19:30, 계절별 일몰 시각 기준)",
       "verified": "reported",
       "source": "https://www.visitjeju.net/kr/detail/view?menuId=DOM_000001718001000000&contId=CONT_000000000500057",
-      "imageUrl": "/spots/jeju-geumoreum-crater-sunset-c93d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088361/spotchu/spots/jeju-geumoreum-crater-sunset-c93d.jpg",
       "imageCredit": {
         "author": "Liszt uhm",
         "license": "CC BY-SA 3.0",
@@ -841,7 +1087,7 @@
       "time": "간조(썰물) 시간대와 겹치는 일출 전후 30분 (골든아워 및 매직아워)",
       "verified": "reported",
       "source": "https://www.visitjeju.net/kr/detail/view?menuId=DOM_000001718001000000&contId=CONT_000000000500021",
-      "imageUrl": "/spots/jeju-gwangchigi-seongsan-sunrise-b14e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088363/spotchu/spots/jeju-gwangchigi-seongsan-sunrise-b14e.jpg",
       "imageCredit": {
         "author": "Korea.net / Korean Culture and Information Service",
         "license": "CC BY-SA 2.0",
@@ -866,6 +1112,23 @@
       "source": "https://www.harpersbazaar.co.kr"
     },
     {
+      "id": "jeju-mulyeongari-werewolf-meadow-5c8b",
+      "title": "물영아리오름 입구 목초지 삼나무 숲길 포토스팟",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.3668,
+      "lng": 126.6912,
+      "area": "서귀포시 남원읍 물영아리오름 입구 탐방로",
+      "subject": "목초지와 삼나무 방풍림, 물영아리오름 능선",
+      "tip": "위치는 입구 구역 수준의 근사치 — 현장에서 구도 확인. 울타리 안쪽 사유지·방목지에 들어가지 말고 공공 탐방로에서 촬영하세요.",
+      "lens": "35-70mm",
+      "time": "07:30-10:00 또는 15:30-17:00",
+      "workId": "a-werewolf-boy",
+      "scene": "물영아리오름 입구 목초지와 삼나무 숲길 야외 촬영지",
+      "verified": "reported",
+      "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9be9c7f6-6c17-48f8-b1fc-cb84523bb6f1"
+    },
+    {
       "id": "jeju-ojo-port-samdalri-b61e",
       "title": "오조포구 양어장 돌담길 (성산일출봉 뷰)",
       "city": "jeju",
@@ -881,12 +1144,29 @@
       "scene": "JTBC 드라마 <웰컴투 삼달리>에서 조삼달(신혜선)과 조용필(지창욱)의 아지트이자 과거와 현재를 잇는 비밀스러운 장소로 등장하며, 바다 위 돌담길을 걷는 상징적인 씬의 무대. 또한 KBS2 드라마 <공항 가는 길>에서 서도우(이상윤)의 제주 바닷가 작업실이 있던 고즈넉한 포구.",
       "verified": "reported",
       "source": "https://www.visitjeju.net",
-      "imageUrl": "/spots/jeju-ojo-port-samdalri-b61e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088364/spotchu/spots/jeju-ojo-port-samdalri-b61e.jpg",
       "imageCredit": {
         "author": "Korea.net / Korean Culture and Information Service",
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Seongsan_Ilchulbong_from_the_air.jpg"
       }
+    },
+    {
+      "id": "jeju-seoyeon-house-window-7b4a",
+      "title": "카페 서연의집 1층 폴딩도어 오션뷰 액자 프레임",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.26947,
+      "lng": 126.65568,
+      "area": "서귀포시 남원읍 위미해안로 86, 카페 서연의집",
+      "subject": "건축학개론 촬영지의 1층 통창 폴딩도어와 위미리 해안선",
+      "tip": "위치는 카페 내부 구역 수준의 근사치 — 현장에서 구도 확인. 영업 중인 상업 공간이므로 통행과 다른 방문객의 시야를 가리지 마세요.",
+      "lens": "24-35mm",
+      "time": "11:00-16:00 또는 17:30-18:30",
+      "workId": "architecture-101",
+      "scene": "제주 바닷가 집의 1층 대형 통창 폴딩도어 장면",
+      "verified": "reported",
+      "source": "https://www.visitjeju.net/kr/detail/view?contentsid=CNTS_000000000021666"
     },
     {
       "id": "jeju-sinchang-windmill-bridge-4f2d",
@@ -906,6 +1186,52 @@
       "source": "https://www.visitjeju.net"
     },
     {
+      "id": "kyoto-chionin-otokozaka-steps-8d3f",
+      "title": "지온인 오토코자카 돌계단",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.00552,
+      "lng": 135.78315,
+      "area": "Chion-in Sanmon / Otokozaka, Higashiyama",
+      "subject": "오토코자카 돌계단을 올려다보는 영화 장면 구도",
+      "tip": "위치는 근사치(구역 수준) — 계단 아래에서 현장 구도를 확인하세요. 계단을 막지 말고 조용히 촬영하며 보행 흐름을 우선하세요.",
+      "lens": "24-35mm",
+      "time": "오전",
+      "workId": "the-last-samurai",
+      "scene": "지온인 오토코자카가 황궁 계단으로 사용된 상승 장면",
+      "verified": "reported",
+      "source": "https://kyoto.travel/ja/see-and-do/chionin.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088365/spotchu/spots/kyoto-chionin-otokozaka-steps-8d3f.jpg",
+      "imageCredit": {
+        "author": "PlusMinus",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E7%9F%A5%E6%81%A9%E9%99%A2%E9%81%A0%E6%99%AF.jpg"
+      }
+    },
+    {
+      "id": "kyoto-fushimi-inari-senbon-torii-e41c",
+      "title": "후시미 이나리 센본토리이",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 34.96716,
+      "lng": 135.77323,
+      "area": "Fushimi Inari Taisha, Senbon Torii, Fushimi",
+      "subject": "센본토리이 터널의 반복되는 주홍색 기둥과 깊이감",
+      "tip": "위치는 근사치(구역 수준) — 센본토리이 초입의 실제 통로에서 구도를 확인하세요. 이른 아침에 방문하고 통행을 막거나 예배자를 촬영하지 마세요.",
+      "lens": "35-50mm",
+      "time": "이른 아침",
+      "workId": "memoirs-of-a-geisha",
+      "scene": "센본토리이 터널을 달리는 SAYURI 장면",
+      "verified": "reported",
+      "source": "https://tokyofox.net/2012/05/27/kyoto-filming-locations-memoirs-of-a-geisha-2005/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088366/spotchu/spots/kyoto-fushimi-inari-senbon-torii-e41c.jpg",
+      "imageCredit": {
+        "author": "Saigen Jiro",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fushimiinari-taisha,_naihaiden-1.jpg"
+      }
+    },
+    {
       "id": "kyoto-gion-tatsumi-bridge-shirakawa-3f8c",
       "title": "기온 타츠미교 시라카와 영화 촬영지",
       "city": "kyoto",
@@ -921,7 +1247,7 @@
       "scene": "기온 타츠미교·시라카와와 연관된 촬영지",
       "verified": "reported",
       "source": "https://www.kyoto-film.jp/location/tatsumibashi/",
-      "imageUrl": "/spots/kyoto-gion-tatsumi-bridge-shirakawa-3f8c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088367/spotchu/spots/kyoto-gion-tatsumi-bridge-shirakawa-3f8c.jpg",
       "imageCredit": {
         "author": "Basile Morin",
         "license": "CC BY-SA 4.0",
@@ -944,7 +1270,7 @@
       "scene": "카모가와 델타의 영화 장면 연관 장소",
       "verified": "reported",
       "source": "https://kyoto.travel/ja/see-and-do/kamogawa-delta",
-      "imageUrl": "/spots/kyoto-kamogawa-delta-stepping-stones-b49e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088368/spotchu/spots/kyoto-kamogawa-delta-stepping-stones-b49e.jpg",
       "imageCredit": {
         "author": "sayo ts",
         "license": "CC0",
@@ -967,7 +1293,7 @@
       "scene": "카모가와 델타와 징검다리가 작품의 성지로 연관된 장소",
       "verified": "reported",
       "source": "https://kyotolove.kyoto/I0000009/",
-      "imageUrl": "/spots/kyoto-kamogawa-delta-stepping-stones-k-on-a101.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088370/spotchu/spots/kyoto-kamogawa-delta-stepping-stones-k-on-a101.jpg",
       "imageCredit": {
         "author": "sayo ts",
         "license": "CC0",
@@ -988,7 +1314,7 @@
       "time": "이른 아침 또는 등롱 점등 후",
       "verified": "reported",
       "source": "https://kifunejinja.jp/",
-      "imageUrl": "/spots/kyoto-kifune-shrine-kasuga-lantern-staircase.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088371/spotchu/spots/kyoto-kifune-shrine-kasuga-lantern-staircase.jpg",
       "imageCredit": {
         "author": "Chi King",
         "license": "CC BY 2.0",
@@ -1011,7 +1337,7 @@
       "scene": "1기 OP의 난젠지 수로각 붉은 벽돌 배경",
       "verified": "official",
       "source": "https://www.nanzenji.or.jp/",
-      "imageUrl": "/spots/kyoto-nanzenji-suirokaku-aqueduct-k-on-b202.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088372/spotchu/spots/kyoto-nanzenji-suirokaku-aqueduct-k-on-b202.jpg",
       "imageCredit": {
         "author": "663highland",
         "license": "CC BY-SA 4.0",
@@ -1032,7 +1358,7 @@
       "time": "이른 아침 또는 늦은 오후",
       "verified": "reported",
       "source": "https://nanzenji.or.jp/",
-      "imageUrl": "/spots/kyoto-nanzenji-suirokaku-brick-arch-corridor.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088374/spotchu/spots/kyoto-nanzenji-suirokaku-brick-arch-corridor.jpg",
       "imageCredit": {
         "author": "663highland",
         "license": "CC BY-SA 4.0",
@@ -1053,7 +1379,7 @@
       "time": "이른 아침 또는 해질녘",
       "verified": "reported",
       "source": "https://kyoto.travel/ja/see-and-do/hokoji.html",
-      "imageUrl": "/spots/kyoto-yasaka-pagoda-yasaka-dori-viewpoint.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088376/spotchu/spots/kyoto-yasaka-pagoda-yasaka-dori-viewpoint.jpg",
       "imageCredit": {
         "author": "663highland",
         "license": "CC BY 2.5",
@@ -1076,11 +1402,57 @@
       "scene": "Quintessential British establishing shot featured in numerous travel documentaries, films, and international media.",
       "verified": "reported",
       "source": "https://www.explorest.com/destinations/london/great-george-street-telephone-box-big-ben",
-      "imageUrl": "/spots/london-big-ben-phonebox-great-george-7f1a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088377/spotchu/spots/london-big-ben-phonebox-great-george-7f1a.jpg",
       "imageCredit": {
         "author": "Christian David",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster,_London.jpg"
+      }
+    },
+    {
+      "id": "london-harry-potter-leaky-cauldron-bulls-head-passage",
+      "title": "해리 포터 리키 콜드런 입구 (불스 헤드 패시지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5124,
+      "lng": -0.0839,
+      "area": "Bull's Head Passage, Leadenhall Market",
+      "subject": "42 Bull's Head Passage의 Leaky Cauldron 입구 외관",
+      "tip": "좁은 보행 통로의 위치는 근사치입니다. 현장에서 구도를 확인하고 보행자·상점 직원의 통행을 막지 마세요. 신고된 방향(약 315도)과 대상점 계산 방향에 차이가 있어 촬영 전 확인이 필요합니다.",
+      "lens": "28-50mm",
+      "time": "주말 오전",
+      "workId": "harry-potter-philosophers-stone",
+      "scene": "Leadenhall Market의 42 Bull's Head Passage가 Leaky Cauldron 입구 외관으로 사용됨",
+      "verified": "reported",
+      "source": "https://www.atlasobscura.com/places/leadenhall-market-leaky-cauldron",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088378/spotchu/spots/london-harry-potter-leaky-cauldron-bulls-head-passage.jpg",
+      "imageCredit": {
+        "author": "Robert Lamb",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:View_down_Bulls_Head_Passage_from_Gracechurch_Street_-_geograph.org.uk_-_4022314.jpg"
+      }
+    },
+    {
+      "id": "london-kingsman-savile-row-huntsman",
+      "title": "킹스맨 시크릿 서비스 헌츠맨 테일러숍",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51092,
+      "lng": -0.13998,
+      "area": "Savile Row, Mayfair",
+      "subject": "11 Savile Row H. Huntsman & Sons Kingsman HQ 외관",
+      "tip": "공공 보도 위에서 촬영하세요. 위치는 구역 수준 근사치이므로 현장에서 11번 매장 외관과 구도를 확인하고, 도로에 서거나 출입구를 막지 마세요.",
+      "lens": "35-50mm",
+      "time": "오전~이른 오후",
+      "workId": "kingsman-the-secret-service",
+      "scene": "11 Savile Row의 Huntsman 매장이 Kingsman 본부 외관으로 등장",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/k/Kingsman-The-Secret-Service.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088379/spotchu/spots/london-kingsman-savile-row-huntsman.jpg",
+      "imageCredit": {
+        "author": "Jhsteel",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:11_Savile_Row.jpg"
       }
     },
     {
@@ -1116,11 +1488,34 @@
       "scene": "Opening sequence where Death Eaters swoop over London, twisting and collapsing the Millennium Bridge into the Thames.",
       "verified": "reported",
       "source": "https://www.locationscout.net/united-kingdom/431-millennium-bridge-st-pauls-cathedral",
-      "imageUrl": "/spots/london-millennium-bridge-st-pauls-3c8b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088380/spotchu/spots/london-millennium-bridge-st-pauls-3c8b.jpg",
       "imageCredit": {
         "author": "Mark Fosh",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:St_Pauls_aerial_(cropped).jpg"
+      }
+    },
+    {
+      "id": "london-paddington-windsor-gardens-chalcot-crescent",
+      "title": "패딩턴 윈저 가든스 촬영지 (찰콧 크레센트)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.54026,
+      "lng": -0.1556,
+      "area": "Chalcot Crescent, Primrose Hill",
+      "subject": "패딩턴의 Windsor Gardens로 등장한 곡선형 파스텔 주택가와 30번지 외관",
+      "tip": "위치는 구역 수준 근사치입니다. 조용한 주거지의 공공 보도에서 현장 구도를 확인하고, 사유지·현관·지하 출입구를 침범하지 마세요.",
+      "lens": "24-35mm",
+      "time": "맑은 날 오전~이른 오후",
+      "workId": "paddington",
+      "scene": "30 Chalcot Crescent가 Brown 가족의 Windsor Gardens 주택 외관으로 사용됨",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/p/Paddington.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088381/spotchu/spots/london-paddington-windsor-gardens-chalcot-crescent.jpg",
+      "imageCredit": {
+        "author": "Matt Brown",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Chalcot_Crescent_2024-11-22.jpg"
       }
     },
     {
@@ -1139,7 +1534,7 @@
       "scene": "Speedy's Cafe at 187 North Gower Street as the BBC Sherlock 221B exterior",
       "verified": "reported",
       "source": "https://en.wikipedia.org/wiki/Speedy%27s_Sandwich_Bar_%26_Cafe",
-      "imageUrl": "/spots/london-sherlock-221b-north-gower-6a8b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088383/spotchu/spots/london-sherlock-221b-north-gower-6a8b.jpg",
       "imageCredit": {
         "author": "Frombowen",
         "license": "CC BY-SA 4.0",
@@ -1162,7 +1557,7 @@
       "scene": "Historic Blitz-surviving medieval ruin turned enchanting urban garden, featured in numerous British period dramas and music videos.",
       "verified": "reported",
       "source": "https://www.cityoflondon.gov.uk/things-to-do/city-gardens/find-a-green-space/st-dunstan-in-the-east",
-      "imageUrl": "/spots/london-st-dunstan-in-the-east-gothic-garden-4e2d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088384/spotchu/spots/london-st-dunstan-in-the-east-gothic-garden-4e2d.jpg",
       "imageCredit": {
         "author": "Elisa.rolle",
         "license": "CC BY-SA 3.0",
@@ -1185,7 +1580,7 @@
       "scene": "Paved Court의 Ted 아파트 입구와 The Prince's Head의 Crown & Anchor 촬영지",
       "verified": "reported",
       "source": "https://britmovietours.com/ted-lasso-filming-locations-richmond-london/",
-      "imageUrl": "/spots/london-ted-lasso-paved-court-richmond-3f1e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088386/spotchu/spots/london-ted-lasso-paved-court-richmond-3f1e.jpg",
       "imageCredit": {
         "author": "No Swan So Fine",
         "license": "CC BY-SA 4.0",
@@ -1208,7 +1603,7 @@
       "scene": "킨테츠 나라역 행기보살 분수대가 나가츠키역 앞 광장으로 등장하는 성지순례 구도",
       "verified": "reported",
       "source": "https://seichi-map.com/kyoukainokanata-nara/",
-      "imageUrl": "/spots/nara-beyond-the-boundary-kintetsu-gyoki-c741.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088387/spotchu/spots/nara-beyond-the-boundary-kintetsu-gyoki-c741.jpg",
       "imageCredit": {
         "author": "Degueulasse",
         "license": "CC BY 3.0",
@@ -1248,12 +1643,52 @@
       "scene": "최종선별 바위 절단 장면과 유사한 영감·모델지 관계(정확한 작품 촬영지는 아님)",
       "verified": "reported",
       "source": "https://narashikanko.or.jp/spot/detail_10118.html",
-      "imageUrl": "/spots/nara-demon-slayer-yagyu-ittoseki-f92c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088388/spotchu/spots/nara-demon-slayer-yagyu-ittoseki-f92c.jpg",
       "imageCredit": {
         "author": "663highland",
         "license": "CC BY 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:Ama-no-Iwatate_Shrine-05_photo.jpg"
       }
+    },
+    {
+      "id": "nara-onmyoji-suzakumon-plaza-8a3b",
+      "title": "헤이조궁터 주작문 광장 (영화 '음양사' 촬영지)",
+      "city": "nara",
+      "category": "drama",
+      "lat": 34.68818,
+      "lng": 135.79585,
+      "area": "헤이조궁터 주작문 광장, 사키초",
+      "subject": "주작대로 남쪽 광장에서 북쪽 주작문을 정면으로 바라보는 영화 촬영지 구도",
+      "tip": "위치는 주작문 남쪽 광장의 근사치(구역 수준) — 현장에서 중앙 축선과 개방 시간을 확인하세요. 드론은 허가 없이 사용하지 마세요.",
+      "lens": "50–85mm",
+      "time": "늦은 오후",
+      "workId": "onmyoji-2001",
+      "scene": "헤이조궁터 주작문이 영화의 주작문 장면 촬영지로 사용됨",
+      "verified": "reported",
+      "source": "https://jl-db.nfaj.go.jp/location/290200041/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088389/spotchu/spots/nara-onmyoji-suzakumon-plaza-8a3b.jpg",
+      "imageCredit": {
+        "author": "Tsuyoshi chiba",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E5%BE%A9%E5%85%83%E3%81%95%E3%82%8C%E3%81%9F%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%A4%A7%E6%A5%B5%E6%AE%BF.jpg"
+      }
+    },
+    {
+      "id": "nara-rurouni-kenshin-masakizaka-dojo-4f1e",
+      "title": "야규 마사키자카 검선도장 (영화 '바람의 검심 최종장: 더 파이널' 마에카와 도장 습격 씬)",
+      "city": "nara",
+      "category": "drama",
+      "lat": 34.72782,
+      "lng": 135.95764,
+      "area": "야규시모초, 나라",
+      "subject": "마사키자카 검선도장 본당·현관을 아래 접근로에서 바라보는 영화 촬영지 구도",
+      "tip": "위치는 도장 아래 접근로의 근사치(구역 수준) — 현장에서 계단과 현관 구도를 확인하세요. 현역 수련 시설이므로 외관 촬영만 하고 정숙을 지키세요.",
+      "lens": "35–50mm",
+      "time": "오전 9–11시 또는 가을 낮",
+      "workId": "rurouni-kenshin-the-final",
+      "scene": "야규 마사키자카 검선도장에서 촬영된 마에카와 도장 습격 결투 장면",
+      "verified": "reported",
+      "source": "https://www.cinematoday.jp/page/A0007820"
     },
     {
       "id": "nara-sagiike-ukimido-pavilion-view-b32a",
@@ -1271,7 +1706,7 @@
       "scene": "우키미도에서 젊은 연인이 데이트하는 장면",
       "verified": "reported",
       "source": "https://www.city.nara.lg.jp/site/kanko/224213.html",
-      "imageUrl": "/spots/nara-sagiike-ukimido-pavilion-view-b32a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088390/spotchu/spots/nara-sagiike-ukimido-pavilion-view-b32a.jpg",
       "imageCredit": {
         "author": "Humanoid one",
         "license": "CC BY-SA 3.0",
@@ -1292,11 +1727,34 @@
       "time": "바람이 적은 청명한 이른 아침 (일출 직후 ~ 오전 8시) 또는 늦가을 아침 물안개 시간대",
       "verified": "reported",
       "source": "https://www.pref.nara.jp/1715.htm",
-      "imageUrl": "/spots/nara-sagiike-ukimido-reflection-a43c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088392/spotchu/spots/nara-sagiike-ukimido-reflection-a43c.jpg",
       "imageCredit": {
         "author": "Humanoid one",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Nara_Japan_2.jpg"
+      }
+    },
+    {
+      "id": "nara-sharasojyu-naramachi-koshindo-2c8d",
+      "title": "나라마치 경신당 골목 (영화 '사라소주' 촬영지)",
+      "city": "nara",
+      "category": "drama",
+      "lat": 34.67645,
+      "lng": 135.8298,
+      "area": "나라마치 니시신야초",
+      "subject": "경신당과 처마 밑 미가와리자루를 좁은 골목에서 바라보는 영화 촬영지 구도",
+      "tip": "위치는 경신당 앞 골목의 근사치(구역 수준) — 현장에서 안전한 가장자리와 구도를 확인하세요. 주민 통행을 막지 말고 촬영은 조용하고 짧게 하세요.",
+      "lens": "35–50mm f/1.8",
+      "time": "이른 아침",
+      "workId": "sharasojyu",
+      "scene": "나라마치와 경신당이 영화 촬영지로 소개된 장면",
+      "verified": "reported",
+      "source": "https://yamatoji.nara-kankou.or.jp/18course/09naratabi-course/01north_area/2nvyejoagy/1day/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088393/spotchu/spots/nara-sharasojyu-naramachi-koshindo-2c8d.jpg",
+      "imageCredit": {
+        "author": "Kochizufan",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Isagawa_Shrine_(NishiShinya-cho)_Nara_Gate.jpg"
       }
     },
     {
@@ -1332,7 +1790,7 @@
       "scene": "네코단과 종루로 이어지는 통학길 장면",
       "verified": "reported",
       "source": "https://small-life.com/archives/08/02/0919.php",
-      "imageUrl": "/spots/nara-todaiji-nekodan-stone-steps-7c4d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088394/spotchu/spots/nara-todaiji-nekodan-stone-steps-7c4d.jpg",
       "imageCredit": {
         "author": "Nekosuki",
         "license": "CC BY-SA 4.0",
@@ -1353,7 +1811,7 @@
       "time": "일몰 30분 전 ~ 매직아워(황혼)",
       "verified": "reported",
       "source": "https://www.todaiji.or.jp/annual-hall/nigatsudo/",
-      "imageUrl": "/spots/nara-todaiji-nigatsudo-sunset-b81f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088395/spotchu/spots/nara-todaiji-nigatsudo-sunset-b81f.jpg",
       "imageCredit": {
         "author": "663highland",
         "license": "CC BY 2.5",
@@ -1374,7 +1832,7 @@
       "time": "일몰 45분 전 ~ 일몰 직후 매직아워 (오후 5시~6시 30분, 계절별 변동)",
       "verified": "reported",
       "source": "https://www.pref.nara.jp/58269.htm",
-      "imageUrl": "/spots/nara-wakakusayama-summit-deer-c79d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088396/spotchu/spots/nara-wakakusayama-summit-deer-c79d.jpg",
       "imageCredit": {
         "author": "The original uploader was OhMyDeer at English Wikipedia.",
         "license": "CC BY-SA 2.1 jp",
@@ -1397,11 +1855,57 @@
       "scene": "1984년 영화 포스터 및 소년 시절 주인공들이 맨해튼 브리지를 배경으로 자갈길을 걷는 상징적인 명장면",
       "verified": "reported",
       "source": "https://www.nyctourism.com",
-      "imageUrl": "/spots/newyork-dumbo-manhattan-bridge-a81e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088397/spotchu/spots/newyork-dumbo-manhattan-bridge-a81e.jpg",
       "imageCredit": {
         "author": "Original uploader was Dav5nyc at en.wikipedia",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Manhattan_Bridge_2007.jpg"
+      }
+    },
+    {
+      "id": "newyork-ghostbusters-hook-ladder-8-fdny-e81a",
+      "title": "Ghostbusters Hook Ladder 8",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.71982,
+      "lng": -74.00678,
+      "area": "Tribeca, Manhattan - North Moore St and Varick St",
+      "subject": "FDNY firehouse facade used as Ghostbusters headquarters",
+      "tip": "Shoot from the northwest public sidewalk with a 24-28mm lens; keep the firehouse driveway and roadway clear.",
+      "lens": "24-35mm",
+      "time": "Morning or golden hour",
+      "workId": "ghostbusters",
+      "scene": "Iconic exterior headquarters.",
+      "verified": "user",
+      "source": "https://www.nyctourism.com/attractions-tours/hook-ladder-company-8/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088397/spotchu/spots/newyork-ghostbusters-hook-ladder-8-fdny-e81a.jpg",
+      "imageCredit": {
+        "author": "Phillip Ritz; cropped by Beyond My Ken (talk) 00:35, 14 December 2015 (UTC)",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ghostbusters_Firehouse_crop.jpg"
+      }
+    },
+    {
+      "id": "newyork-home-alone-2-gapstow-bridge-pigeon-lady-f92c",
+      "title": "Home Alone 2 Gapstow Bridge",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.76726,
+      "lng": -73.97394,
+      "area": "Central Park, Manhattan - The Pond east shoreline",
+      "subject": "Gapstow Bridge, The Pond, and Central Park South skyline",
+      "tip": "Shoot southwest from the east shoreline; rocks may be slippery, so stay safe and do not disturb wildlife.",
+      "lens": "35-50mm",
+      "time": "Sunrise or early morning",
+      "workId": "home-alone-2-lost-in-new-york",
+      "scene": "Kevin encounters the Pigeon Lady near Gapstow Bridge.",
+      "verified": "user",
+      "source": "https://www.centralparknyc.org/locations/gapstow-bridge",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088399/spotchu/spots/newyork-home-alone-2-gapstow-bridge-pigeon-lady-f92c.jpg",
+      "imageCredit": {
+        "author": "Bryan Schorn",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Gapstow_bridge_of_central_park_in_november.jpg"
       }
     },
     {
@@ -1420,7 +1924,7 @@
       "scene": "Arthur Fleck이 계단에서 춤추는 장면으로 알려진 촬영 장소",
       "verified": "reported",
       "source": "https://www.filmoblivion.com/locations/joker-stairs-bronx",
-      "imageUrl": "/spots/newyork-joker-stairs-bronx-8a3b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088400/spotchu/spots/newyork-joker-stairs-bronx-8a3b.jpg",
       "imageCredit": {
         "author": "Moviebuff1921",
         "license": "CC BY-SA 4.0",
@@ -1443,7 +1947,7 @@
       "scene": "트라이베카 특유의 고풍스러운 골목 및 공중회랑을 배경으로 한 다수의 뉴욕 드라마 촬영지",
       "verified": "reported",
       "source": "https://tribecacitizen.com",
-      "imageUrl": "/spots/newyork-staple-street-skybridge-tribeca-b74d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088401/spotchu/spots/newyork-staple-street-skybridge-tribeca-b74d.jpg",
       "imageCredit": {
         "author": "Kidfly182",
         "license": "CC BY-SA 4.0",
@@ -1466,12 +1970,29 @@
       "scene": "영화 스파이더맨(2002)에서 노먼 오스본(그린 고블린)의 펜트하우스 배경 및 수많은 뉴욕 배경 영화의 42번가 전경",
       "verified": "reported",
       "source": "https://www.photohound.co",
-      "imageUrl": "/spots/newyork-tudor-city-overpass-chrysler-c92f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088402/spotchu/spots/newyork-tudor-city-overpass-chrysler-c92f.jpg",
       "imageCredit": {
         "author": "w:User:Overand derivative work: Overand (talk)",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Chrysler_Building_by_David_Shankbone_Retouched.jpg"
       }
+    },
+    {
+      "id": "okinawa-azama-sunsun-checkitout-d87e",
+      "title": "아자마 산산 비치 해변 무대 & '태양의 종' (영화 <체케랏초!!> 클라이맥스 촬영지)",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.177312,
+      "lng": 127.822089,
+      "area": "あざまサンサンビーチ, 南城市",
+      "subject": "해변 무대와 태양의 종, 쿠다카섬 방향 바다",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 무대와 쿠다카섬 방향 구도를 확인하세요. 유영구역 밖으로 들어가지 말고 자외선과 수분을 관리하세요.",
+      "lens": "24–70mm or 35mm",
+      "time": "09:30–12:00",
+      "workId": "chekeraccho",
+      "scene": "아자마 산산 비치 클라이맥스 라이브 무대",
+      "verified": "reported",
+      "source": "https://loca-station.jp/spot/okinawa/nanjo/azama/"
     },
     {
       "id": "okinawa-bise-fukugi-tree-lane-motobu-7c82",
@@ -1506,7 +2027,7 @@
       "scene": "Nanjo/Cape Chinen chapter; exact frame is PARTIAL_MATCH pending review",
       "verified": "reported",
       "source": "https://www.city.nanjo.okinawa.jp/topics/1625200182/",
-      "imageUrl": "/spots/okinawa-cape-chinen-park-aquatope-3b42.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088403/spotchu/spots/okinawa-cape-chinen-park-aquatope-3b42.jpg",
       "imageCredit": {
         "author": "そらみみ",
         "license": "CC BY-SA 4.0",
@@ -1527,11 +2048,34 @@
       "time": "09:00 - 13:00 (에메랄드 바다 순광 촬영) 또는 17:30 - 일몰 (석양 실루엣)",
       "verified": "reported",
       "source": "https://www.vill.onna.okinawa.jp/tourism/tourism_facilities/manzamou/",
-      "imageUrl": "/spots/okinawa-cape-manzamo-elephant-rock-c91d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088404/spotchu/spots/okinawa-cape-manzamo-elephant-rock-c91d.jpg",
       "imageCredit": {
         "author": "CEphoto, Uwe Aranas",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Onna_Okinawa_Japan_Cape-Manzamo-01.jpg"
+      }
+    },
+    {
+      "id": "okinawa-cape-zanpa-rendezvous-c41f",
+      "title": "잔파곶 단애절벽 & 등대 전망 산책로 (영화 <오키나와 랑데부> 촬영지)",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.440612,
+      "lng": 127.71421,
+      "area": "残波岬, 読谷村",
+      "subject": "잔파곶 등대와 산호 절벽",
+      "tip": "위치는 구역 수준의 근사치 — 안전한 보행로에서 등대와 절벽 구도를 확인하세요. 울타리 밖과 절벽 가장자리에 접근하지 마세요.",
+      "lens": "16–35mm",
+      "time": "16:00–18:30",
+      "workId": "okinawa-rendezvous",
+      "scene": "잔파곶 등대·절벽 일대 로케이션",
+      "verified": "reported",
+      "source": "https://ja.wikipedia.org/wiki/%E6%81%8B%E6%88%A6%E3%80%82%E6%B2%96%E7%B8%84_Okinawa_Rendez-vous",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088405/spotchu/spots/okinawa-cape-zanpa-rendezvous-c41f.jpg",
+      "imageCredit": {
+        "author": "Kugel~commonswiki",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Zanpa_Misaki_Lighthouse_201905.JPG"
       }
     },
     {
@@ -1565,7 +2109,7 @@
       "time": "10:30 - 15:00 (바다 발색 최적) 또는 일몰 직전 (선셋 실루엣)",
       "verified": "reported",
       "source": "https://www.navitime.co.jp/poi?spot=00011-060417066",
-      "imageUrl": "/spots/okinawa-kouri-bridge-south-approach-b43e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088407/spotchu/spots/okinawa-kouri-bridge-south-approach-b43e.jpg",
       "imageCredit": {
         "author": "Captain76",
         "license": "CC BY-SA 3.0",
@@ -1605,7 +2149,7 @@
       "scene": "8화 오키나와 여행 장면과 만좌모 코끼리바위 산책로",
       "verified": "reported",
       "source": "https://www.okinawastory.jp/spot/1077",
-      "imageUrl": "/spots/okinawa-manzamo-elephant-rock-viewpoint-e41a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088408/spotchu/spots/okinawa-manzamo-elephant-rock-viewpoint-e41a.jpg",
       "imageCredit": {
         "author": "CEphoto, Uwe Aranas",
         "license": "CC BY-SA 3.0",
@@ -1626,7 +2170,7 @@
       "time": "11:00 - 14:00 (순광 및 바다 에메랄드색 최적 시간) 또는 일출 시간대",
       "verified": "reported",
       "source": "https://www.kankou-nanjo.okinawa/tokusyu/view/niraikanai",
-      "imageUrl": "/spots/okinawa-nirai-kanai-tunnel-observatory-a82f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088409/spotchu/spots/okinawa-nirai-kanai-tunnel-observatory-a82f.jpg",
       "imageCredit": {
         "author": "そらみみ (Soramimi)",
         "license": "CC BY-SA 4.0",
@@ -1651,6 +2195,23 @@
       "source": "https://www.animepilgrimage.com/ja/maps/place/2c1d0b66-0f31-4fb3-8f00-0afc5b5b9942"
     },
     {
+      "id": "okinawa-toyosaki-aniinii-hill-a92c",
+      "title": "토요사키 츄라선 비치 '니니의 언덕' (영화 <눈물이 주룩주룩> 촬영지)",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.156966,
+      "lng": 127.647288,
+      "area": "豊崎美らSUNビーチ, 豊見城市",
+      "subject": "니니의 언덕 기념비와 동중국해 석양 수평선",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 기념비와 수평선 구도를 확인하세요. 공원 개방시간과 강풍에 주의하세요.",
+      "lens": "24–70mm",
+      "time": "17:30–19:00",
+      "workId": "tears-for-you",
+      "scene": "豊崎美らSUNビーチ 니니의 언덕 촬영 로케이션",
+      "verified": "reported",
+      "source": "https://www.city.tomigusuku.lg.jp/kanko_bunka_sports/shizen_koen/3275.html"
+    },
+    {
       "id": "osaka-aiaubashi-hanzawa-naoki-c89b",
       "title": "도톤보리 아이아우바시 (드라마 '한자와 나오키' 뺨 맞은 다리)",
       "city": "osaka",
@@ -1666,7 +2227,7 @@
       "scene": "제4화 아이아우바시 뺨 맞은 장면",
       "verified": "reported",
       "source": "https://loca.ash.jp/info/2013/d201307_hanzawa.htm",
-      "imageUrl": "/spots/osaka-aiaubashi-hanzawa-naoki-c89b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088410/spotchu/spots/osaka-aiaubashi-hanzawa-naoki-c89b.jpg",
       "imageCredit": {
         "author": "Kansai explorer",
         "license": "CC BY 3.0",
@@ -1689,6 +2250,29 @@
       "source": "https://www.travel.co.jp/guide/article/35478/"
     },
     {
+      "id": "osaka-black-rain-ebisubashi-d93a",
+      "title": "도톤보리 에비스바시 다리 (영화 '블랙 레인' 네온 야경 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.66873,
+      "lng": 135.50128,
+      "area": "도톤보리 에비스바시, Chuo Ward",
+      "subject": "도톤보리 운하와 네온사인 거리의 영화 '블랙 레인' 오프닝 야경 구도",
+      "tip": "위치는 근사치(에비스바시 구역 수준) — 현장에서 구도 확인. 야간 혼잡 시 보행 동선을 막지 말고 삼각대·차도 점유를 피하세요.",
+      "lens": "28-50mm",
+      "time": "해질녘 이후 19:00-22:00",
+      "workId": "black-rain",
+      "scene": "도톤보리 에비스바시에서 동쪽 운하와 네온을 향하는 오프닝 야경 시퀀스",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/b/Black-Rain.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088412/spotchu/spots/osaka-black-rain-ebisubashi-d93a.jpg",
+      "imageCredit": {
+        "author": "Dudva",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ebisu_Tower_(2023,_Osaka).jpg"
+      }
+    },
+    {
       "id": "osaka-central-public-hall-boogie-woogie-b41f",
       "title": "오사카시 중앙공회당 동측 파사드 (드라마 '부기우기' 관련 촬영지)",
       "city": "osaka",
@@ -1704,7 +2288,7 @@
       "scene": "중앙공회당이 '日宝' 본사 회의실·로비 촬영지로 소개됨; 외관 exact scene은 미확인",
       "verified": "reported",
       "source": "https://asa-dora.com/15347/",
-      "imageUrl": "/spots/osaka-central-public-hall-boogie-woogie-b41f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088413/spotchu/spots/osaka-central-public-hall-boogie-woogie-b41f.jpg",
       "imageCredit": {
         "author": "Sakai Yayoi",
         "license": "CC0",
@@ -1727,7 +2311,7 @@
       "scene": "263화 오사카성 사건 배경",
       "verified": "reported",
       "source": "https://www.ytv.co.jp/conan/archive/k200200107.html",
-      "imageUrl": "/spots/osaka-conan-osakajo-gokurakubashi-4c2b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088414/spotchu/spots/osaka-conan-osakajo-gokurakubashi-4c2b.jpg",
       "imageCredit": {
         "author": "663highland",
         "license": "CC BY 2.5",
@@ -1767,12 +2351,29 @@
       "scene": "오사카부청 본관 촬영지",
       "verified": "reported",
       "source": "https://www.osaka-fc.jp/locaguide/toyotomi/index.html",
-      "imageUrl": "/spots/osaka-prefectural-government-hero-e72a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088415/spotchu/spots/osaka-prefectural-government-hero-e72a.jpg",
       "imageCredit": {
         "author": "KishujiRapid",
         "license": "CC BY 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Osaka_Prefectural_Government_Main_Building_view_from_Osaka_Castle.jpg"
       }
+    },
+    {
+      "id": "osaka-setoutsumi-uchikawa-steps-b47e",
+      "title": "사카이 우치카와 강변 계단 (영화 '세토우츠미' 방과 후 대화 계단)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.57685,
+      "lng": 135.47102,
+      "area": "사카이 우치카와 강변 산책로, Sakai Ward",
+      "subject": "우치카와 강변 석단 계단에서 세토와 우츠미가 대화하는 영화 시그니처 장면",
+      "tip": "위치는 근사치(우치카와 계단 구역 수준) — 현장에서 구도 확인. 계단 가장자리와 산책로를 막지 말고 젖은 표면·자전거에 주의하세요.",
+      "lens": "35-50mm",
+      "time": "15:00-17:00 및 해질녘",
+      "workId": "seto-utsumi",
+      "scene": "우치카와 강변 돌계단에서 방과 후 대화를 나누는 핵심 장면",
+      "verified": "reported",
+      "source": "https://www.sakai-film.jp/"
     },
     {
       "id": "osaka-tsutenkaku-spaworld-reflection-b19c",
@@ -1788,11 +2389,34 @@
       "time": "18:00–21:00",
       "verified": "reported",
       "source": "https://abeno.keizai.biz/headline/1487/",
-      "imageUrl": "/spots/osaka-tsutenkaku-spaworld-reflection-b19c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088417/spotchu/spots/osaka-tsutenkaku-spaworld-reflection-b19c.jpg",
       "imageCredit": {
         "author": "Dick Thomas Johnson from Tokyo, Japan",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Shinsekai_(49251920793).jpg"
+      }
+    },
+    {
+      "id": "paris-amelie-maison-collignon-01",
+      "title": "영화 <아멜리에> 메종 콜리뇽 식료품점",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.88448,
+      "lng": 2.33935,
+      "area": "Rue des Trois-Frères / Rue Androuet, Montmartre",
+      "subject": "Maison Collignon (Au Marché de la Butte)와 아멜리에 촬영 배경",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도 확인. 24–35mm로 상점 전면과 골목을 담고 보도와 상점 출입을 방해하지 않는다.",
+      "lens": "24–35mm",
+      "time": "오전 08:30–11:00",
+      "workId": "amelie",
+      "scene": "아멜리에의 동네 식료품점으로 등장하는 Maison Collignon",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/a/Amelie.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088418/spotchu/spots/paris-amelie-maison-collignon-01.jpg",
+      "imageCredit": {
+        "author": "Mbzt",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:P1270082_Paris_XVIII_rue_La_Vieuville_rwk.jpg"
       }
     },
     {
@@ -1809,11 +2433,34 @@
       "time": "Sunrise to early morning for soft morning light and zero crowds; or blue hour for the sparkling Eiffel Tower light show.",
       "verified": "reported",
       "source": "https://www.solosophie.com/avenue-de-camoens-paris/",
-      "imageUrl": "/spots/paris-avenue-de-camoens-eiffel-view-a8f1.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088420/spotchu/spots/paris-avenue-de-camoens-eiffel-view-a8f1.jpg",
       "imageCredit": {
         "author": "Benh LIEU SONG",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+      }
+    },
+    {
+      "id": "paris-before-sunset-shakespeare-and-company-03",
+      "title": "영화 <비포 선셋> 셰익스피어 앤 컴퍼니 서점 전망",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.85272,
+      "lng": 2.34728,
+      "area": "37 Rue de la Bûcherie / Square René-Viviani, Latin Quarter",
+      "subject": "셰익스피어 앤 컴퍼니 서점과 광장 가장자리의 비포 선셋 촬영지 구도",
+      "tip": "위치는 근사치(광장 가장자리 수준) — 현장에서 구도 확인. 35–50mm로 서점 전면을 조정하고 입장 줄과 보행 동선을 방해하지 않는다.",
+      "lens": "35–50mm",
+      "time": "오후 15:00–18:00 또는 이른 오전",
+      "workId": "before-sunset",
+      "scene": "제시가 책을 홍보하는 셰익스피어 앤 컴퍼니 장면",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/b/Before-Sunset.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088420/spotchu/spots/paris-before-sunset-shakespeare-and-company-03.jpg",
+      "imageCredit": {
+        "author": "Jon Hurd",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Shakespeare_and_Company_store_in_Paris.jpg"
       }
     },
     {
@@ -1832,7 +2479,7 @@
       "scene": "Place de l'Estrapade의 아파트·레스토랑·제과점 주변 장면",
       "verified": "reported",
       "source": "https://www.screenbie.com/en/planes-geniales/filming-places-emily-in-paris/",
-      "imageUrl": "/spots/paris-emily-in-paris-estrapade-c419.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088421/spotchu/spots/paris-emily-in-paris-estrapade-c419.jpg",
       "imageCredit": {
         "author": "LPLT",
         "license": "CC BY-SA 3.0",
@@ -1855,11 +2502,34 @@
       "scene": "아리아드네와 코브가 오르는 비르하켐 다리의 꿈 건축 장면",
       "verified": "reported",
       "source": "https://www.movie-locations.com/movies/i/Inception.php",
-      "imageUrl": "/spots/paris-inception-bir-hakeim-viaduct-e91b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088422/spotchu/spots/paris-inception-bir-hakeim-viaduct-e91b.jpg",
       "imageCredit": {
         "author": "No machine-readable author provided. Gede~commonswiki assumed (based on copyright claims).",
         "license": "CC BY 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:Pont_bir_hakeim_paris_riveteurs.jpg"
+      }
+    },
+    {
+      "id": "paris-john-wick-4-rue-foyatier-stairs-02",
+      "title": "영화 <존 윅 4> 몽마르트르 루 푸아티에 계단",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.88458,
+      "lng": 2.34262,
+      "area": "Rue Foyatier / Place Suzanne-Valadon, Montmartre",
+      "subject": "사크레쾨르로 이어지는 222계단의 존 윅 4 액션 장면",
+      "tip": "위치는 근사치(계단 하단 구역 수준) — 현장에서 구도 확인. 50–85mm로 계단 축을 담고 통행을 막지 않으며 계단에서 안전거리를 둔다.",
+      "lens": "50–85mm",
+      "time": "해질 무렵 20:00–22:00",
+      "workId": "john-wick-chapter-4",
+      "scene": "존 윅이 사크레쾨르를 향해 Rue Foyatier 계단을 오르는 액션 장면",
+      "verified": "reported",
+      "source": "https://www.sceen-it.com/sceen/5730/John-Wick-Chapter-4/Rue-Foyatier",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088424/spotchu/spots/paris-john-wick-4-rue-foyatier-stairs-02.jpg",
+      "imageCredit": {
+        "author": "Peter Potrowl",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Funiculaire_de_Montmartre_devant_le_Sacr%C3%A9-C%C5%93ur.jpg"
       }
     },
     {
@@ -1878,7 +2548,7 @@
       "scene": "생테티엔 뒤 몽 성당 북쪽 계단에서 시작되는 자정의 타임슬립 장면",
       "verified": "reported",
       "source": "https://www.movie-locations.com/movies/m/Midnight-In-Paris.php",
-      "imageUrl": "/spots/paris-midnight-in-paris-steps-f82a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088426/spotchu/spots/paris-midnight-in-paris-steps-f82a.jpg",
       "imageCredit": {
         "author": "Diliff",
         "license": "CC BY-SA 3.0",
@@ -1899,7 +2569,7 @@
       "time": "Morning to midday on bright clear days when the grass is vibrant green and sunlight evenly illuminates the building facade.",
       "verified": "reported",
       "source": "https://www.thewholeworldisaplayground.com/sinking-house-paris/",
-      "imageUrl": "/spots/paris-montmartre-sinking-house-c7d9.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088427/spotchu/spots/paris-montmartre-sinking-house-c7d9.jpg",
       "imageCredit": {
         "author": "Mbzt",
         "license": "CC BY-SA 3.0",
@@ -1920,11 +2590,34 @@
       "time": "Mid-morning to afternoon for balanced illumination on the facade details, or early evening as the street lamps turn on.",
       "verified": "reported",
       "source": "https://www.locationscout.net/locations/3990-square-rapp",
-      "imageUrl": "/spots/paris-square-rapp-eiffel-framing-b4e2.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088429/spotchu/spots/paris-square-rapp-eiffel-framing-b4e2.jpg",
       "imageCredit": {
         "author": "Benh LIEU SONG",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+      }
+    },
+    {
+      "id": "sapporo-asahiyama-park-banana-movie-5c8e",
+      "title": "아사히야마 기념공원 전망 테라스",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.03938,
+      "lng": 141.31388,
+      "area": "아사히야마 기념공원 전망대·계단형 분수",
+      "subject": "아사히야마 기념공원 파노라마와 영화 ‘이런 야밤에 바나나라니’ 촬영지",
+      "tip": "위치는 근사치(공원 구역 수준)입니다. 현장에서 분수·시내 구도와 안전한 전망 테라스를 확인하고 겨울철 결빙에 주의하세요.",
+      "lens": "50–85mm",
+      "time": "11:00–14:00 또는 18:30–20:30",
+      "workId": "kon-na-yofuke-ni-banana-ka-yo",
+      "scene": "아사히야마 기념공원 장면; 정확한 분수·테라스 프레임은 추가 확인 필요",
+      "verified": "reported",
+      "source": "https://www.screensapporo.jp/works/7445",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088429/spotchu/spots/sapporo-asahiyama-park-banana-movie-5c8e.jpg",
+      "imageCredit": {
+        "author": "Ozizo",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Asahiyama_Memorial_Park.jpg"
       }
     },
     {
@@ -1941,12 +2634,29 @@
       "time": "10:00 - 11:30 (순광 주간 촬영), 18:00 - 21:30 (야간 라이트업)",
       "verified": "reported",
       "source": "https://www.tabirai.net/sightseeing/column/0002130.aspx",
-      "imageUrl": "/spots/sapporo-clocktower-mn-terrace-3f2a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088430/spotchu/spots/sapporo-clocktower-mn-terrace-3f2a.jpg",
       "imageCredit": {
         "author": "Balon Greyjoy",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:20200119_Sapporo_Clock_Tower.jpg"
       }
+    },
+    {
+      "id": "sapporo-community-plaza-first-love-4e1b",
+      "title": "삿포로 시민교류플라자 SCARTS 광장",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.06222,
+      "lng": 141.35615,
+      "area": "札幌市民交流プラザ / 創世スクエア",
+      "subject": "유리 아트리움과 ‘First Love 初恋’ 노던 라이츠 빌딩 촬영지",
+      "tip": "위치는 근사치(플라자 구역 수준)입니다. 현장에서 외부 광장 구도를 확인하고 출입구·보행 동선을 막지 마세요.",
+      "lens": "28–35mm",
+      "time": "16:30–19:30 또는 겨울 저녁",
+      "workId": "first-love-hatsukoi",
+      "scene": "삿포로 시민교류플라자는 노던 라이츠 빌딩 촬영지; 정확한 외부 프레임은 추가 확인 필요",
+      "verified": "official",
+      "source": "https://www.screensapporo.jp/works/9921"
     },
     {
       "id": "sapporo-golden-kamuy-yamamoto-barbershop-d82a",
@@ -1964,7 +2674,7 @@
       "scene": "구 야마모토 이발관이 등장하는 장소 모델로 알려진 장면",
       "verified": "reported",
       "source": "https://naaatm.com/2021/12/17/goldenkamuy-kaitakunomura/",
-      "imageUrl": "/spots/sapporo-golden-kamuy-yamamoto-barbershop-d82a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088431/spotchu/spots/sapporo-golden-kamuy-yamamoto-barbershop-d82a.jpg",
       "imageCredit": {
         "author": "t-konno",
         "license": "CC BY-SA 3.0",
@@ -1987,7 +2697,7 @@
       "scene": "평岸高台公園 전틀·후틀 고정 촬영 장면",
       "verified": "reported",
       "source": "https://www.htb.co.jp/htb/kouhou/photo/20210430/20210430_02.pdf",
-      "imageUrl": "/spots/sapporo-hiragishi-takadai-park-suiyo-dodesho-7e3d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088432/spotchu/spots/sapporo-hiragishi-takadai-park-suiyo-dodesho-7e3d.jpg",
       "imageCredit": {
         "author": "dutyterms",
         "license": "Public domain",
@@ -2010,7 +2720,7 @@
       "scene": "제7화 호로히라바시 새벽 아이스크림 대화 장면",
       "verified": "reported",
       "source": "https://www.showa-vod.com/hokkaido-location-guide/drama-locations/sapporo-otaru-first-love-drama-tour/",
-      "imageUrl": "/spots/sapporo-horohira-bridge-arch-firstlove-8b2c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088433/spotchu/spots/sapporo-horohira-bridge-arch-firstlove-8b2c.jpg",
       "imageCredit": {
         "author": "Kinori",
         "license": "Public domain",
@@ -2031,7 +2741,7 @@
       "time": "7월 상순~하순 18:30 - 20:00 (일몰 및 블루아워 매직아워)",
       "verified": "reported",
       "source": "https://www.sapporo.travel/spot/feature/horomitoge/",
-      "imageUrl": "/spots/sapporo-horomi-pass-lavender-view-8c1d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088434/spotchu/spots/sapporo-horomi-pass-lavender-view-8c1d.jpg",
       "imageCredit": {
         "author": "欅 (Keyaki)",
         "license": "CC BY-SA 3.0",
@@ -2054,7 +2764,7 @@
       "scene": "삿포로시 천문대에서 화성을 관측한 장면",
       "verified": "reported",
       "source": "https://www.screensapporo.jp/wp/wp-content/uploads/2022/12/First-Love-Sapporo-Location-Map-PDF.pdf",
-      "imageUrl": "/spots/sapporo-nakajima-park-astronomical-observatory-f41a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088435/spotchu/spots/sapporo-nakajima-park-astronomical-observatory-f41a.jpg",
       "imageCredit": {
         "author": "663highland",
         "license": "CC BY 2.5",
@@ -2077,7 +2787,7 @@
       "scene": "삿포로 호로히라바시로 알려진 배경 장면",
       "verified": "reported",
       "source": "https://www.city.sapporo.jp/kensetsu/stn/h15/hashi/horohirabashi.html",
-      "imageUrl": "/spots/sapporo-nami-yo-kiitekure-horohirabashi-f41c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088436/spotchu/spots/sapporo-nami-yo-kiitekure-horohirabashi-f41c.jpg",
       "imageCredit": {
         "author": "Kinori",
         "license": "Public domain",
@@ -2100,7 +2810,7 @@
       "scene": "오도리 공원·TV탑 배경과 연결된 부분 매치 후보",
       "verified": "reported",
       "source": "https://www.visit-hokkaido.jp/en/spot/detail_10004.html",
-      "imageUrl": "/spots/sapporo-odori-park-fountain-tvtower-anime-e19b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088437/spotchu/spots/sapporo-odori-park-fountain-tvtower-anime-e19b.jpg",
       "imageCredit": {
         "author": "欅 (Keyaki)",
         "license": "CC BY-SA 3.0",
@@ -2121,11 +2831,57 @@
       "time": "19:00 - 22:30 (야간 네온사인 및 노면전차 운행 시간대)",
       "verified": "reported",
       "source": "https://cocono-susukino.jp/",
-      "imageUrl": "/spots/sapporo-susukino-cocono-terrace-nikka-e54b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088438/spotchu/spots/sapporo-susukino-cocono-terrace-nikka-e54b.jpg",
       "imageCredit": {
         "author": "Ninosan",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Susukino_Sta_subway_4.jpg"
+      }
+    },
+    {
+      "id": "sapporo-susukino-nikka-bar-detective-7a3d",
+      "title": "스스키노 교차로 니카 위스키 간판",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.05537,
+      "lng": 141.35324,
+      "area": "すすきの交差点 / COCONO SUSUKINO 주변",
+      "subject": "스스키노 교차로 니카 위스키 간판과 영화 ‘탐정은 바에 있다’ 촬영지 구도",
+      "tip": "위치는 근사치(구역 수준)입니다. 현장에서 안전한 보행자 지점을 확인하고 차도·교차로에 서거나 통행을 막지 마세요.",
+      "lens": "35–50mm",
+      "time": "18:00–22:00",
+      "workId": "tantei-wa-bar-ni-iru",
+      "scene": "스스키노 교차로와 니카 간판이 등장하는 시리즈 촬영지; 특정 프레임은 추가 확인 필요",
+      "verified": "reported",
+      "source": "https://www.screensapporo.jp/locations/2126",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088439/spotchu/spots/sapporo-susukino-nikka-bar-detective-7a3d.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Chuo_Sapporo_S4W4S4W3_01s4s3200.jpg"
+      }
+    },
+    {
+      "id": "seoul-avengers-some-sevit-banpo-e5f6",
+      "title": "어벤져스: 에이지 오브 울트론 세빛섬 야경",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.51035,
+      "lng": 126.9945,
+      "area": "반포한강공원·세빛섬, 서초구",
+      "subject": "반포한강공원에서 바라본 세빛섬과 한강 야경",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인하세요. 보행로와 자전거도로를 막지 말고 차도·교량 진입로·강변 위험 구역에 들어가지 마세요.",
+      "lens": "24-70mm 또는 16-35mm",
+      "time": "해질 무렵부터 야간 조명 시간대(19:30~22:00)",
+      "workId": "avengers-age-of-ultron",
+      "scene": "세빛섬과 한강 야경이 연결된 서울 촬영 장면 후보",
+      "verified": "reported",
+      "source": "https://www.seoulfc.or.kr",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088440/spotchu/spots/seoul-avengers-some-sevit-banpo-e5f6.jpg",
+      "imageCredit": {
+        "author": "Republic of Korea from Seoul, Republic of Korea",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Korea_Sevit_Island_15_(15540663165).jpg"
       }
     },
     {
@@ -2159,7 +2915,7 @@
       "time": "18:30-20:30",
       "verified": "reported",
       "source": "https://english.seoul.go.kr/eungbongsan-mountain/",
-      "imageUrl": "/spots/seoul-eungbongsan-pavilion-seongsu-bridge-e89c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088441/spotchu/spots/seoul-eungbongsan-pavilion-seongsu-bridge-e89c.jpg",
       "imageCredit": {
         "author": "Kaitak89(talk / Contributions) at the Korean Wikipedia",
         "license": "Public domain",
@@ -2199,7 +2955,7 @@
       "scene": "숭례문이 등장하는 작품 연관 뷰포인트; 정확한 1화 프레임은 리뷰 필요",
       "verified": "reported",
       "source": "https://serieson.naver.com/v2/movie/391090",
-      "imageUrl": "/spots/seoul-god-of-highschool-sungnyemun-chase-8b1a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088442/spotchu/spots/seoul-god-of-highschool-sungnyemun-chase-8b1a.jpg",
       "imageCredit": {
         "author": "DoulosCore",
         "license": "CC BY-SA 3.0",
@@ -2222,7 +2978,7 @@
       "scene": "창덕궁에서 영감을 받은 작품 연관 뷰포인트; 인정전 특정 장면은 리뷰 필요",
       "verified": "reported",
       "source": "https://www.cdg.go.kr/",
-      "imageUrl": "/spots/seoul-lost-in-the-moonlight-changdeokgung-injeongjeon-e47b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088444/spotchu/spots/seoul-lost-in-the-moonlight-changdeokgung-injeongjeon-e47b.jpg",
       "imageCredit": {
         "author": "kallerna",
         "license": "CC BY-SA 4.0",
@@ -2243,7 +2999,7 @@
       "time": "17:30-19:30",
       "verified": "reported",
       "source": "https://www.museum.go.kr/ENG/contents/E0605010000.do",
-      "imageUrl": "/spots/seoul-nmk-open-plaza-namsan-view-a1f8.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088445/spotchu/spots/seoul-nmk-open-plaza-namsan-view-a1f8.jpg",
       "imageCredit": {
         "author": "Anthony Jackson",
         "license": "Public domain",
@@ -2266,7 +3022,7 @@
       "scene": "남산서울타워를 바라보는 녹사평 육교 장면으로 소개됨.",
       "verified": "reported",
       "source": "https://korean.visitseoul.net/attractions/Noksapyeong-Bridge",
-      "imageUrl": "/spots/seoul-noksapyeong-bridge-itaewon-class-241f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088446/spotchu/spots/seoul-noksapyeong-bridge-itaewon-class-241f.jpg",
       "imageCredit": {
         "author": "Anthony Jackson",
         "license": "Public domain",
@@ -2289,12 +3045,29 @@
       "scene": "서울역을 배경으로 한 애니메이션 연관 뷰포인트; 정확한 돔/파사드 프레임은 리뷰 필요",
       "verified": "reported",
       "source": "https://www.seoul284.org/",
-      "imageUrl": "/spots/seoul-seoul-station-culture-station-284-c92f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088447/spotchu/spots/seoul-seoul-station-culture-station-284-c92f.jpg",
       "imageCredit": {
         "author": "Mobius6",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Seoul_Station_(Seoul_Subway_Line_1)_20230408_003.jpg"
       }
+    },
+    {
+      "id": "seoul-the-classic-yonsei-yeonhuigwan-c3d4",
+      "title": "클래식 연세대학교 연희관 촬영지",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.56685,
+      "lng": 126.93902,
+      "area": "연세대학교 연희관·중앙계단, 서대문구",
+      "subject": "연희관 외관과 중앙계단을 배경으로 한 영화 <클래식> 장면",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인하세요. 공공 보행 동선에서 촬영하고 캠퍼스 출입·촬영 규정, 학생과 교직원 통행을 확인하세요.",
+      "lens": "50mm 또는 85mm",
+      "time": "주중 이른 아침 또는 한산한 오후",
+      "workId": "the-classic",
+      "scene": "연세대학교 연희관과 계단을 배경으로 한 회상·등교 장면 후보",
+      "verified": "reported",
+      "source": "https://www.yonsei.ac.kr"
     },
     {
       "id": "seoul-yongyangbongjeojeong-sky-deck-hangang-bridge-b73a",
@@ -2310,7 +3083,7 @@
       "time": "17:40-19:50",
       "verified": "reported",
       "source": "https://english.seoul.go.kr/yongyangbongjeojeong-park/",
-      "imageUrl": "/spots/seoul-yongyangbongjeojeong-sky-deck-hangang-bridge-b73a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088448/spotchu/spots/seoul-yongyangbongjeojeong-sky-deck-hangang-bridge-b73a.jpg",
       "imageCredit": {
         "author": "elaine ross baylon",
         "license": "CC BY 2.0",
@@ -2331,7 +3104,7 @@
       "time": "07:30 - 09:30 (이른 아침 부드러운 자연광 및 대기열 최소화)",
       "verified": "reported",
       "source": "https://www.nparks.gov.sg/gardens-parks-and-nature/parks-and-nature-reserves/fort-canning-park",
-      "imageUrl": "/spots/sg-fort-canning-tree-tunnel-fc01.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088449/spotchu/spots/sg-fort-canning-tree-tunnel-fc01.jpg",
       "imageCredit": {
         "author": "Michael Coghlan.",
         "license": "CC BY-SA 2.0",
@@ -2352,7 +3125,7 @@
       "time": "08:00 - 10:30 (오전 부드러운 자연광 및 도로변 주차 차량 적은 시간대)",
       "verified": "reported",
       "source": "https://www.visitsingapore.com/see-do-singapore/places-to-see/joo-chiat-katong/",
-      "imageUrl": "/spots/sg-koon-seng-peranakan-shophouses-ks02.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088450/spotchu/spots/sg-koon-seng-peranakan-shophouses-ks02.jpg",
       "imageCredit": {
         "author": "Photograph by Mike Peel (www.mikepeel.net).",
         "license": "CC BY-SA 4.0",
@@ -2373,7 +3146,7 @@
       "time": "07:30 - 09:30 (이른 아침 동측 순광 및 도로 차량 통행이 적은 시간)",
       "verified": "reported",
       "source": "https://www.photohound.co/spot/old-hill-street-police-station-singapore",
-      "imageUrl": "/spots/sg-old-hill-street-police-station-oh03.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088451/spotchu/spots/sg-old-hill-street-police-station-oh03.jpg",
       "imageCredit": {
         "author": "JuneAugust",
         "license": "CC BY-SA 4.0",
@@ -2396,7 +3169,7 @@
       "scene": "콜린 쿠(Colin Khoo)와 아라민타 리(Araminta Lee)의 화려한 4천만 달러 규모 세기의 결혼식이 열린 성당 장면. 하객들이 입장하는 외관 및 물길과 풀밭으로 꾸며진 예배당 내부 런웨이 버진로드의 배경.",
       "verified": "reported",
       "source": "https://theoccasionaltraveller.com/crazy-rich-asians-singapore-filming-locations/",
-      "imageUrl": "/spots/singapore-chijmes-hall-crazy-rich-asians-e39a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088452/spotchu/spots/singapore-chijmes-hall-crazy-rich-asians-e39a.jpg",
       "imageCredit": {
         "author": "Terence Ong",
         "license": "CC BY 2.5",
@@ -2419,11 +3192,34 @@
       "scene": "700억 비자금을 찾기 위해 싱가포르에 도착한 오인주(김고은)와 최도일(위하준)이 머무르는 고급 본거지이자 싱가포르 입성을 상징하는 주요 배경 (8화). 호텔 전경, 로비 및 싱가포르 강변 산책 장면.",
       "verified": "reported",
       "source": "https://www.straitstimes.com/life/entertainment/k-drama-little-women-stars-kim-go-eun-and-wi-ha-joon-filming-in-singapore",
-      "imageUrl": "/spots/singapore-fullerton-hotel-little-women-c42b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088453/spotchu/spots/singapore-fullerton-hotel-little-women-c42b.jpg",
       "imageCredit": {
         "author": "Basile Morin",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Aerial_photographs_of_The_Fullerton_Hotel_of_Singapore_at_night.jpg"
+      }
+    },
+    {
+      "id": "singapore-henderson-waves-equals-c24f",
+      "title": "헨더슨 웨이브 다리 (영화 '이퀄스' 촬영지)",
+      "city": "singapore",
+      "category": "drama",
+      "lat": 1.27602,
+      "lng": 103.81575,
+      "area": "Henderson Waves, Southern Ridges",
+      "subject": "이퀄스에 등장한 헨더슨 웨이브의 곡선 목재 리브와 보행 데크",
+      "tip": "동쪽 wave section의 공용 보행 데크에서 서쪽~서북서 방향으로 촬영하세요. 위치는 다리 구간 수준의 근사치이므로 현장에서 구도를 확인하고 보행 동선을 방해하지 마세요.",
+      "lens": "24-70mm (보통 24-35mm)",
+      "time": "이른 아침 또는 해질녘",
+      "workId": "equals",
+      "scene": "헨더슨 웨이브의 미래적인 곡선 보행교 장면",
+      "verified": "reported",
+      "source": "https://mothership.sg/2015/08/kristen-stewarts-sci-fi-movie-equals-features-henderson-waves-and-marina-barrage/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088454/spotchu/spots/singapore-henderson-waves-equals-c24f.jpg",
+      "imageCredit": {
+        "author": "Zairon",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Singapore_Southern_Ridges_Henderson_Waves_05.jpg"
       }
     },
     {
@@ -2442,12 +3238,29 @@
       "scene": "HBO SF 드라마 <웨스트월드> 시즌 3 (1화, 4화)에서 거대 테크 기업 인사이트(Incite Inc.)의 미래지향적 본사 건물 외관 및 중앙 정원으로 등장. 샬럿 헤일과 메이브가 미래 도시 로스앤젤레스의 인공지능 기업을 거니는 주요 장면.",
       "verified": "reported",
       "source": "https://www.timeout.com/singapore/news/hbo-westworld-season-3-singapore-locations-guide-031620",
-      "imageUrl": "/spots/singapore-marina-one-green-heart-westworld-7d1a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088455/spotchu/spots/singapore-marina-one-green-heart-westworld-7d1a.jpg",
       "imageCredit": {
         "author": "LittleT889",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Marina_One.jpg"
       }
+    },
+    {
+      "id": "taipei-eatdrink-grandhotel-lobby-03",
+      "title": "영화 음식남녀와 하나 그리고 둘 - 타이베이 그랜드 호텔 로비",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.07765,
+      "lng": 121.5235,
+      "area": "The Grand Hotel Taipei main entrance and lobby",
+      "subject": "음식남녀와 하나 그리고 둘 관련 그랜드 호텔 로비 구도",
+      "tip": "위치는 구역 수준 근사치입니다. 호텔 규정과 촬영 허가를 확인하고 투숙객 동선을 방해하지 마세요.",
+      "lens": "14-24mm",
+      "time": "18:00-19:30",
+      "workId": "eat-drink-man-woman-yi-yi",
+      "scene": "Grand Hotel entrance/lobby filming context",
+      "verified": "reported",
+      "source": "https://www.filmcommission.taipei/film-location/the-grand-hotel"
     },
     {
       "id": "taipei-in-time-with-you-jiannan-mountain-4e92",
@@ -2465,7 +3278,7 @@
       "scene": "지안난산에서 미라마와 101 야경을 바라보는 전망 장면",
       "verified": "reported",
       "source": "https://www.gov.taipei/News_Content.aspx?n=F29A02A9E36C268F&s=213854",
-      "imageUrl": "/spots/taipei-in-time-with-you-jiannan-mountain-4e92.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088457/spotchu/spots/taipei-in-time-with-you-jiannan-mountain-4e92.jpg",
       "imageCredit": {
         "author": "阿道",
         "license": "CC BY-SA 4.0",
@@ -2490,6 +3303,23 @@
       "source": "https://www.dramaqueen.com.tw/news/20211206/004.html"
     },
     {
+      "id": "taipei-monga-bopiliao-lane173-01",
+      "title": "영화 몽가 촬영지 - 보필랴오 역사거리 Lane 173",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.03643,
+      "lng": 121.50153,
+      "area": "Bopiliao Historic Block, Lane 173",
+      "subject": "영화 몽가의 Lane 173 역사거리 골목 구도",
+      "tip": "위치는 구역 수준 근사치입니다. 현장에서 구도를 확인하고 보존 규정과 촬영 허가를 지키세요.",
+      "lens": "24-50mm",
+      "time": "09:30-11:30 or 15:30-17:00",
+      "workId": "monga",
+      "scene": "Bopiliao Lane 173 historic-block scene",
+      "verified": "reported",
+      "source": "https://www.filmcommission.taipei/film-location/taipei-historic-bopiliao-kangding-road-173"
+    },
+    {
       "id": "taipei-sisinancun-lawn-101-c3d4",
       "title": "쓰쓰난춘(사사남촌) 잔디언덕 타이베이 101 뷰포인트",
       "city": "taipei",
@@ -2503,7 +3333,7 @@
       "time": "오전 09:00~10:00 (부드러운 사광) 또는 오후 16:00~17:30 (골든아워)",
       "verified": "reported",
       "source": "https://www.travel.taipei/zh-tw/attraction/details/264",
-      "imageUrl": "/spots/taipei-sisinancun-lawn-101-c3d4.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088458/spotchu/spots/taipei-sisinancun-lawn-101-c3d4.jpg",
       "imageCredit": {
         "author": "User:Sinsyuan",
         "license": "CC BY-SA 4.0",
@@ -2543,11 +3373,34 @@
       "scene": "베이터우 공원 분수대 재회 장면",
       "verified": "reported",
       "source": "https://udn.com/news/story/7155/5432190",
-      "imageUrl": "/spots/taipei-turn-left-turn-right-beitou-park-fountain-7d31.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088459/spotchu/spots/taipei-turn-left-turn-right-beitou-park-fountain-7d31.jpg",
       "imageCredit": {
         "author": "lienyuan lee",
         "license": "CC BY 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Old_Fountain_in_Beitou_Park_%E5%8C%97%E6%8A%95%E5%85%AC%E5%9C%92%E5%99%B4%E6%B0%B4%E6%B1%A0_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "taipei-vivelamour-daan-amphitheater-02",
+      "title": "영화 사랑만세 - 다안 삼림공원 야외음악당",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.03065,
+      "lng": 121.5361,
+      "area": "Daan Forest Park outdoor amphitheater",
+      "subject": "Vive L'Amour 야외음악당 벤치 장면",
+      "tip": "위치는 구역 수준 근사치입니다. 객석 통로에서 구도를 확인하고 행사 진행을 방해하지 마세요.",
+      "lens": "35-85mm",
+      "time": "Late afternoon or early evening",
+      "workId": "vive-l-amour",
+      "scene": "Daan Forest Park outdoor amphitheater bench scene",
+      "verified": "reported",
+      "source": "https://www.tfai.org.tw/en/program/detail/2c958082877a561101878d65dc35002a",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088460/spotchu/spots/taipei-vivelamour-daan-amphitheater-02.jpg",
+      "imageCredit": {
+        "author": "玄史生",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Daan_Park_Ecological_Pool_West_Zone.jpg"
       }
     },
     {
@@ -2564,7 +3417,7 @@
       "time": "일몰 45분 전 ~ 일몰 후 45분 (17:30~19:30, 골든아워 및 블루아워)",
       "verified": "reported",
       "source": "https://www.travel.taipei/zh-tw/attraction/details/251",
-      "imageUrl": "/spots/taipei-xiangshan-six-giant-rocks-e5f6.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088461/spotchu/spots/taipei-xiangshan-six-giant-rocks-e5f6.jpg",
       "imageCredit": {
         "author": "User:Sinsyuan",
         "license": "CC BY-SA 4.0",
@@ -2585,7 +3438,7 @@
       "time": "일몰 후 트와일라이트",
       "verified": "reported",
       "source": "https://yakei.jp/japan/spot.php?i=asakusabunka",
-      "imageUrl": "/spots/tokyo-asakusa-culture-center-terrace-b391.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088463/spotchu/spots/tokyo-asakusa-culture-center-terrace-b391.jpg",
       "imageCredit": {
         "author": "Ajay Suresh from New York, NY, USA",
         "license": "CC BY 2.0",
@@ -2608,7 +3461,7 @@
       "scene": "에비스 가든 플레이스 시계광장 만남·대기 장면",
       "verified": "reported",
       "source": "https://loca.ash.jp/info/2005/d200510_hanadan.htm",
-      "imageUrl": "/spots/tokyo-hana-yori-dango-ebisu-clock-plaza-c4e1.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088464/spotchu/spots/tokyo-hana-yori-dango-ebisu-clock-plaza-c4e1.jpg",
       "imageCredit": {
         "author": "Harani0403",
         "license": "CC BY-SA 3.0",
@@ -2631,7 +3484,7 @@
       "scene": "도쿄중앙은행 본점 외관으로 사용된 미쓰이 본관",
       "verified": "reported",
       "source": "https://loca.ash.jp/info/2013/d201307_hanzawa.htm",
-      "imageUrl": "/spots/tokyo-hanzawa-naoki-mitsui-main-building-b89d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088466/spotchu/spots/tokyo-hanzawa-naoki-mitsui-main-building-b89d.jpg",
       "imageCredit": {
         "author": "Wiiii",
         "license": "CC BY-SA 3.0",
@@ -2654,11 +3507,34 @@
       "scene": "히지리바시와 오차노미즈 철도 풍경이 연결되는 도쿄 장면",
       "verified": "reported",
       "source": "https://www.pitat.com/town/tokyo/ochanomizu/spot/1897",
-      "imageUrl": "/spots/tokyo-hijiribashi-bridge-suzume-b2.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088466/spotchu/spots/tokyo-hijiribashi-bridge-suzume-b2.jpg",
       "imageCredit": {
         "author": "Unknown",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Hijiribashi_Bridge.jpg"
+      }
+    },
+    {
+      "id": "tokyo-joganji-temple-lost-in-translation-9b2c",
+      "title": "조간지 경내 참배길 & 종루당 (로스트 인 번역 샬럿의 사찰 산책로)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.69405,
+      "lng": 139.6818,
+      "area": "中野区 本町 (Nakano-ku Honcho)",
+      "subject": "조간지 본당과 종루당을 담는 로스트 인 트랜스레이션 사찰 장면 연관 구도",
+      "tip": "위치는 근사치(구역 수준) — 산문 뒤 공개 참배길에서 서북서 방향으로 현장 구도를 확인하세요. 묘역과 법요를 존중하고 방문객·승려를 근접 촬영하지 마세요.",
+      "lens": "35mm 또는 50mm",
+      "time": "08:30~10:30 또는 비/흐린 날",
+      "workId": "lost-in-translation",
+      "scene": "샬럿이 사찰에서 불교 의식을 바라보는 장면 연관 장소",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/l/Lost-In-Translation.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088467/spotchu/spots/tokyo-joganji-temple-lost-in-translation-9b2c.jpg",
+      "imageCredit": {
+        "author": "ウィキ太郎 (Wiki Taro)",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Tahouzan_Jouganji_Temple,_Nakano_City,_Tokyo.jpg"
       }
     },
     {
@@ -2675,7 +3551,7 @@
       "time": "일몰 전후 및 야간",
       "verified": "reported",
       "source": "https://yakei.jp/japan/spot.php?i=jyukken",
-      "imageUrl": "/spots/tokyo-jukkenbashi-skytree-reflection-a81e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088469/spotchu/spots/tokyo-jukkenbashi-skytree-reflection-a81e.jpg",
       "imageCredit": {
         "author": "Akonnchiroll",
         "license": "CC0",
@@ -2698,7 +3574,7 @@
       "scene": "세타가야다이타역 서쪽 출구 벤치·광장 장면",
       "verified": "reported",
       "source": "https://loca.ash.jp/info/2022/d202210_silent.htm",
-      "imageUrl": "/spots/tokyo-silent-setagaya-daita-bench-7f2a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088470/spotchu/spots/tokyo-silent-setagaya-daita-bench-7f2a.jpg",
       "imageCredit": {
         "author": "LERK",
         "license": "CC BY-SA 4.0",
@@ -2721,7 +3597,7 @@
       "scene": "스가 신사 계단의 상징적인 엔딩/포스터 구도",
       "verified": "reported",
       "source": "https://www.travel.co.jp/guide/article/21571/",
-      "imageUrl": "/spots/tokyo-suga-shrine-stairs-your-name-a1.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088471/spotchu/spots/tokyo-suga-shrine-stairs-your-name-a1.jpg",
       "imageCredit": {
         "author": "Harani0403",
         "license": "CC BY-SA 3.0",
@@ -2744,7 +3620,7 @@
       "scene": "타바타역 남쪽 출구 언덕길과 선로 옆 풍경",
       "verified": "reported",
       "source": "https://tenkinokoseichi.link/tabata-station/",
-      "imageUrl": "/spots/tokyo-tabata-station-south-slope-tenkinoko-c3.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088472/spotchu/spots/tokyo-tabata-station-south-slope-tenkinoko-c3.jpg",
       "imageCredit": {
         "author": "MaedaAkihiko",
         "license": "CC BY-SA 4.0",
@@ -2765,7 +3641,53 @@
       "time": "아침 또는 야간 점등",
       "verified": "reported",
       "source": "https://nightscape.tokyo/minato/tokyo-tower-stairs/",
-      "imageUrl": "/spots/tokyo-tower-parking-staircase-f4c2.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088473/spotchu/spots/tokyo-tower-parking-staircase-f4c2.jpg",
+      "imageCredit": {
+        "author": "Akonnchiroll",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_2023.jpg"
+      }
+    },
+    {
+      "id": "tokyo-yoyogi-fukamachi-perfect-days-7e3a",
+      "title": "요요기 후카마치 소공원 시게루 반 투명 화장실 (퍼펙트 데이즈 코모레비 스팟)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.66946,
+      "lng": 139.69045,
+      "area": "渋谷区 富ヶ谷 (Shibuya-ku Tomigaya)",
+      "subject": "시게루 반의 투명 스마트 글래스 공중화장실과 공원 수목을 담는 퍼펙트 데이즈 연관 구도",
+      "tip": "위치는 근사치(구역 수준) — 공원 산책로 진입부에서 북동쪽(약 45도)으로 현장 구도를 확인하세요. 화장실 이용자·얼굴·내부를 촬영하지 말고 출입구와 보행 동선을 비우세요.",
+      "lens": "28-35mm",
+      "time": "07:30~09:30 또는 18:30~20:00",
+      "workId": "perfect-days",
+      "scene": "요요기 후카마치 소공원 공중화장실이 등장하는 도쿄 공공화장실 시퀀스",
+      "verified": "reported",
+      "source": "https://tokyotoilet.jp/yoyogi_fukamachi_mini_park/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088474/spotchu/spots/tokyo-yoyogi-fukamachi-perfect-days-7e3a.jpg",
+      "imageCredit": {
+        "author": "鋸香具師",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hukamachi_230524.jpg"
+      }
+    },
+    {
+      "id": "tokyo-zojoji-daiden-tokyo-tower-wolverine-4a8f",
+      "title": "조조지 대전 광장 & 도쿄 타워 프레이밍",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.65744,
+      "lng": 139.74835,
+      "area": "港区 芝公園 (Minato-ku Shibakoen)",
+      "subject": "증상사 대전 지붕 위로 도쿄 타워를 담는 전통 사찰과 현대 도시의 대비",
+      "tip": "위치는 근사치(구역 수준) — 대전 앞 공개 보행 구역에서 서북서(약 295도)로 현장 구도를 확인하세요. 사찰 정숙, 참배객 동선, 삼각대 제한을 지키세요.",
+      "lens": "24-70mm",
+      "time": "17:00~19:30",
+      "workId": "the-wolverine",
+      "scene": "증상사 대전과 도쿄 타워가 보이는 장례식·액션 시퀀스 연관 장소",
+      "verified": "reported",
+      "source": "https://www.locationbox.metro.tokyo.lg.jp/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088475/spotchu/spots/tokyo-zojoji-daiden-tokyo-tower-wolverine-4a8f.jpg",
       "imageCredit": {
         "author": "Akonnchiroll",
         "license": "CC BY-SA 4.0",
@@ -2786,7 +3708,7 @@
       "time": "日没直後（トワイライト・ブルーアワー）〜夜間",
       "verified": "reported",
       "source": "https://zekkei.info/spot/kanagawa/yokohama/bankokubashi/",
-      "imageUrl": "/spots/yokohama-bankoku-bridge-skyline-f4a1.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088476/spotchu/spots/yokohama-bankoku-bridge-skyline-f4a1.jpg",
       "imageCredit": {
         "author": "Volfgang",
         "license": "CC BY-SA 3.0",
@@ -2809,7 +3731,7 @@
       "scene": "6화 비와지마 신사·히라가타만 일대 만남 장면",
       "verified": "reported",
       "source": "https://motsu-tanbou.com/bocchi-kanazawahakkei/",
-      "imageUrl": "/spots/yokohama-biwajima-shrine-bocchi-6a1f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088477/spotchu/spots/yokohama-biwajima-shrine-bocchi-6a1f.jpg",
       "imageCredit": {
         "author": "与謝野鋼管",
         "license": "CC BY-SA 4.0",
@@ -2832,7 +3754,7 @@
       "scene": "NEXT INNOVATION 외관 및 1층 현관·입장 게이트",
       "verified": "reported",
       "source": "https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%83%E3%83%81%E3%83%9E%E3%83%B3%E3%80%81%E3%83%97%E3%82%A2%E3%82%A6%E3%83%BC%E3%83%9E%E3%83%B3",
-      "imageUrl": "/spots/yokohama-grand-central-tower-richman-02.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088478/spotchu/spots/yokohama-grand-central-tower-richman-02.jpg",
       "imageCredit": {
         "author": "Thirteen-fri",
         "license": "CC BY-SA 3.0",
@@ -2853,7 +3775,7 @@
       "time": "日没後ブルーアワー〜夜間（毎時20-30分、50-00分のベイブリッジ青色ライトアップ時が最適）",
       "verified": "reported",
       "source": "https://nightview.info/yokohama/minatonomieruoka/",
-      "imageUrl": "/spots/yokohama-harbor-view-park-baybridge-3e7b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088480/spotchu/spots/yokohama-harbor-view-park-baybridge-3e7b.jpg",
       "imageCredit": {
         "author": "Captain76",
         "license": "CC BY-SA 3.0",
@@ -2876,7 +3798,30 @@
       "scene": "제2화 기타나카교 장면",
       "verified": "reported",
       "source": "https://asikotz.com/entertainment/drama/nigehaji/",
-      "imageUrl": "/spots/yokohama-kitanaka-bridge-nigehaji-01.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088480/spotchu/spots/yokohama-kitanaka-bridge-nigehaji-01.jpg",
+      "imageCredit": {
+        "author": "Yokohama_Landmark_Tower_02.JPG: Σ64 derivative work: 0607crp (talk)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Landmark_Tower_02_cropped.jpg"
+      }
+    },
+    {
+      "id": "yokohama-nippon-maru-memorial-park-tokyo-mer-b91c",
+      "title": "닛폰마루 메모리얼 파크 (극장판 TOKYO MER 촬영지)",
+      "city": "yokohama",
+      "category": "drama",
+      "lat": 35.45305,
+      "lng": 139.6331,
+      "area": "Nippon Maru Memorial Park outdoor plaza, Minatomirai",
+      "subject": "범선 닛폰마루와 요코하마 랜드마크 타워를 함께 담는 TOKYO MER 촬영지 구도",
+      "tip": "위치는 구역 수준의 근사치 — 광장 남동쪽 계단·잔디 주변에서 현장 구도를 확인하세요. 돛 전개 행사와 시설 운영 안내를 따르고 보행을 방해하지 마세요.",
+      "lens": "16-35mm",
+      "time": "오전 10시~오후 3시 또는 일몰 후",
+      "workId": "gekijoban-tokyo-mer",
+      "scene": "닛폰마루 메모리얼 파크 광장에 ER카와 임시 구호소가 전개되는 장면",
+      "verified": "reported",
+      "source": "https://www.cinematoday.jp/news/N0136531",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088482/spotchu/spots/yokohama-nippon-maru-memorial-park-tokyo-mer-b91c.jpg",
       "imageCredit": {
         "author": "Yokohama_Landmark_Tower_02.JPG: Σ64 derivative work: 0607crp (talk)",
         "license": "CC BY-SA 3.0",
@@ -2897,11 +3842,34 @@
       "time": "マジックアワー（日没直後）〜夜間",
       "verified": "reported",
       "source": "https://yakei.jp/spot/spot.php?id=38",
-      "imageUrl": "/spots/yokohama-osanbashi-kujira-skyline-8c2d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088482/spotchu/spots/yokohama-osanbashi-kujira-skyline-8c2d.jpg",
       "imageCredit": {
         "author": "Yokohama_Landmark_Tower_02.JPG: Σ64 derivative work: 0607crp (talk)",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Landmark_Tower_02_cropped.jpg"
+      }
+    },
+    {
+      "id": "yokohama-red-brick-warehouse-abunai-deka-a82f",
+      "title": "요코하마 아카렌가 창고 (위험한 형사 촬영지)",
+      "city": "yokohama",
+      "category": "drama",
+      "lat": 35.4522,
+      "lng": 139.6433,
+      "area": "Yokohama Red Brick Warehouse Building No. 2, Naka-ku",
+      "subject": "붉은 벽돌 2호관 외벽과 옛 화물선 철로 유구를 전경에 담는 영화 촬영지 구도",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 구도 확인. 일몰 직후 외벽을 촬영하되 보행 동선을 막지 말고 행사·상업 촬영 규정을 확인하세요.",
+      "lens": "24-70mm",
+      "time": "일몰 직후 매직아워",
+      "workId": "abunai-deka",
+      "scene": "붉은 벽돌 창고 앞 액션 장면 및 촬영지 연계",
+      "verified": "reported",
+      "source": "https://hamarepo.com/story.php?page_id=3144",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088483/spotchu/spots/yokohama-red-brick-warehouse-abunai-deka-a82f.jpg",
+      "imageCredit": {
+        "author": "Kakidai",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Red_Brick_Warehouse_2012.JPG"
       }
     },
     {
@@ -2937,7 +3905,7 @@
       "scene": "조노하나 파크 항만 배경 관련 PARTIAL_MATCH/영감 가능성",
       "verified": "reported",
       "source": "https://www.motsu-tanbou.com/entry/pilgrimage-bungo_straydogs",
-      "imageUrl": "/spots/yokohama-zounohana-dazai-view-7c3d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088485/spotchu/spots/yokohama-zounohana-dazai-view-7c3d.jpg",
       "imageCredit": {
         "author": "Kakidai",
         "license": "CC BY-SA 3.0",
@@ -2961,6 +3929,27 @@
       "progress": 0
     },
     {
+      "id": "bangkok-traffic-love-story",
+      "title": "방콕 트래픽 러브 스토리",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "in-the-mood-for-love",
+      "title": "화양연화 / 2046",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-man-with-the-golden-gun",
+      "title": "007 황금총을 가진 사나이",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "perfume-the-story-of-a-murderer",
       "title": "향수: 어느 살인자의 이야기",
       "type": "영화",
@@ -2971,6 +3960,20 @@
       "id": "legend-of-the-blue-sea",
       "title": "푸른 바다의 전설",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "rec",
+      "title": "[REC]",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "uncharted",
+      "title": "언차티드",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -3006,6 +4009,20 @@
       "id": "fight-for-my-way",
       "title": "쌈, 마이웨이",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-attorney",
+      "title": "변호인",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "nowhere-to-hide",
+      "title": "인정사정 볼 것 없다",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -3073,9 +4090,37 @@
       "progress": 0
     },
     {
+      "id": "moonlight-express-ptu",
+      "title": "Moonlight Express & PTU",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "hong-kong-police-film-locations",
       "title": "홍콩 경찰 영화·드라마 촬영지 (작품별 검토 필요)",
       "type": "기타",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-beauty-inside-2015",
+      "title": "뷰티 인사이드",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-classic-2003",
+      "title": "클래식",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "yeonpung-yeonga",
+      "title": "연풍연가",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -3087,8 +4132,29 @@
       "progress": 0
     },
     {
+      "id": "a-werewolf-boy",
+      "title": "늑대소년",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "architecture-101",
+      "title": "건축학개론",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-last-samurai",
+      "title": "라스트 사무라이",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "memoirs-of-a-geisha",
-      "title": "게이샤의 추억 (SAYURI)",
+      "title": "게이샤의 추억",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -3122,8 +4188,29 @@
       "progress": 0
     },
     {
+      "id": "harry-potter-philosophers-stone",
+      "title": "해리 포터와 마법사의 돌",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "kingsman-the-secret-service",
+      "title": "킹스맨: 시크릿 서비스",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "love-actually",
       "title": "Love Actually",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "paddington",
+      "title": "패딩턴",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -3157,8 +4244,29 @@
       "progress": 0
     },
     {
+      "id": "onmyoji-2001",
+      "title": "음양사",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "rurouni-kenshin-the-final",
+      "title": "바람의 검심 최종장: 더 파이널",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "35nenme-no-love-letter",
       "title": "35년째의 러브레터",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "sharasojyu",
+      "title": "사라소주",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -3178,8 +4286,29 @@
       "progress": 0
     },
     {
+      "id": "ghostbusters",
+      "title": "Ghostbusters",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "home-alone-2-lost-in-new-york",
+      "title": "Home Alone 2",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "joker",
       "title": "조커",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "chekeraccho",
+      "title": "체케랏초!!",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -3195,6 +4324,13 @@
       "id": "the-aquatope-on-white-sand",
       "title": "白い砂のアクアトープ",
       "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "okinawa-rendezvous",
+      "title": "오키나와 랑데부",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -3220,9 +4356,23 @@
       "progress": 0
     },
     {
+      "id": "tears-for-you",
+      "title": "눈물이 주룩주룩",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "hanzawa-naoki",
       "title": "한자와 나오키 (시즌 1 - 오사카 편)",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "black-rain",
+      "title": "블랙 레인",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -3255,6 +4405,27 @@
       "progress": 0
     },
     {
+      "id": "seto-utsumi",
+      "title": "세토우츠미",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "amelie",
+      "title": "아멜리에",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "before-sunset",
+      "title": "비포 선셋",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "emily-in-paris",
       "title": "에밀리, 파리에 가다",
       "type": "드라마",
@@ -3269,9 +4440,30 @@
       "progress": 0
     },
     {
+      "id": "john-wick-chapter-4",
+      "title": "존 윅 4",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "midnight-in-paris",
       "title": "미드나잇 인 파리",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "kon-na-yofuke-ni-banana-ka-yo",
+      "title": "이런 야밤에 바나나라니 사랑스러운 실화",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "first-love-hatsukoi",
+      "title": "퍼스트 러브 하츠코이",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
@@ -3290,13 +4482,6 @@
       "progress": 0
     },
     {
-      "id": "first-love-hatsukoi",
-      "title": "퍼스트 러브 하츠코이",
-      "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
       "id": "nami-yo-kiitekure",
       "title": "파도여 들어다오",
       "type": "애니",
@@ -3307,6 +4492,20 @@
       "id": "nami-yo-kiitekure-dosanko-gal",
       "title": "파도여 들어다오 / 도산코 갸루는 초초 귀여워",
       "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "tantei-wa-bar-ni-iru",
+      "title": "탐정은 바에 있다",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "avengers-age-of-ultron",
+      "title": "어벤져스: 에이지 오브 울트론",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -3353,8 +4552,22 @@
       "progress": 0
     },
     {
+      "id": "the-classic",
+      "title": "클래식",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "work-singapore",
       "title": "크레이지 리치 아시안",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "equals",
+      "title": "이퀄스",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -3363,6 +4576,13 @@
       "id": "3-singapore",
       "title": "웨스트월드 시즌 3",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "eat-drink-man-woman-yi-yi",
+      "title": "음식남녀 (Eat Drink Man Woman) / 하나 그리고 둘 (Yi Yi)",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -3381,6 +4601,13 @@
       "progress": 0
     },
     {
+      "id": "monga",
+      "title": "몽가 (Monga)",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "in-time-with-you-taipei",
       "title": "아가능불회애니 (연애의 조건 / In Time With You)",
       "type": "드라마",
@@ -3390,6 +4617,13 @@
     {
       "id": "turn-left-turn-right",
       "title": "턴 레프트, 턴 라이트 (향좌주, 향우주)",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "vive-l-amour",
+      "title": "사랑만세 (Vive L'Amour)",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -3405,6 +4639,13 @@
       "id": "suzume-no-tojimari",
       "title": "스즈메의 문단속",
       "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "lost-in-translation",
+      "title": "사랑도 통역이 되나요? (로스트 인 트랜스레이션)",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -3430,6 +4671,20 @@
       "progress": 0
     },
     {
+      "id": "perfect-days",
+      "title": "퍼펙트 데이즈",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-wolverine",
+      "title": "더 울버린",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "bocchi-the-rock",
       "title": "봇치 더 록!",
       "type": "애니",
@@ -3447,6 +4702,20 @@
       "id": "nigehaji",
       "title": "도망치는 건 부끄럽지만 도움이 된다",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "gekijoban-tokyo-mer",
+      "title": "극장판 TOKYO MER: 달리는 응급실",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "abunai-deka",
+      "title": "위험한 형사",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
