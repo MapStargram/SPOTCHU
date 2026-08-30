@@ -71,7 +71,13 @@ export interface Spot {
   imageCredit?: { author: string; license: string; source: string }; // CC 출처표기(필수)
   shooterLat?: number; // 불변식: 촬영자가 서는 위치(지도 핀). 목업은 SPOT_COORDS로 대체
   shooterLng?: number;
+  safetyTags?: SafetyTag[]; // 현장 안전 주의(사유지·선로·차도·상업시설) — 상세 경고 배너 트리거
+  caution?: string; // 주의사항 문구(선택)
+  blocked?: boolean; // 고위험 차단(isBlockedHighRisk) — 이용 제한 경고
 }
+
+// 현장 안전 태그(prisma SafetyTag enum과 동일 값). 색만으로 전달 금지 → 배너에 아이콘+라벨 병기.
+export type SafetyTag = "PRIVATE_PROPERTY" | "RAILWAY" | "ROADWAY" | "BUSINESS";
 
 export interface Work {
   id: string;
