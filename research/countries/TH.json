@@ -30,6 +30,24 @@
         "bangkok rooftop view",
         "วัด ถ่ายรูป"
       ]
+    },
+    {
+      "id": "chiangmai",
+      "appImportable": true,
+      "querySeeds": [
+        "เชียงใหม่ จุดถ่ายรูป",
+        "Chiang Mai photo spots",
+        "치앙마이 포토스팟"
+      ]
+    },
+    {
+      "id": "phuket",
+      "appImportable": true,
+      "querySeeds": [
+        "ภูเก็ต จุดถ่ายรูป",
+        "Phuket photo spots",
+        "푸껫 포토스팟"
+      ]
     }
   ]
 }

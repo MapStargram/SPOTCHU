@@ -1,0 +1,44 @@
+{
+  "code": "AU",
+  "name": "Australia",
+  "nativeName": "Australia",
+  "tier": 2,
+  "languages": [
+    "en",
+    "ko"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "photo spots",
+    "lookouts",
+    "instagrammable",
+    "viewpoints"
+  ],
+  "cities": [
+    {
+      "id": "sydney",
+      "appImportable": true,
+      "querySeeds": [
+        "Sydney photo spots",
+        "Sydney lookouts",
+        "시드니 포토스팟"
+      ]
+    },
+    {
+      "id": "melbourne",
+      "appImportable": true,
+      "querySeeds": [
+        "Melbourne photo spots",
+        "Melbourne laneways",
+        "멜버른 포토스팟"
+      ]
+    }
+  ]
+}

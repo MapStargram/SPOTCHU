@@ -103,6 +103,24 @@
         "奈良公園 鹿",
         "奈良 寺 構図"
       ]
+    },
+    {
+      "id": "nagoya",
+      "appImportable": true,
+      "querySeeds": [
+        "名古屋 撮影スポット",
+        "Nagoya photo spots",
+        "나고야 포토스팟"
+      ]
+    },
+    {
+      "id": "kobe",
+      "appImportable": true,
+      "querySeeds": [
+        "神戸 撮影スポット",
+        "Kobe photo spots",
+        "고베 포토스팟"
+      ]
     }
   ]
 }

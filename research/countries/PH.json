@@ -1,0 +1,35 @@
+{
+  "code": "PH",
+  "name": "Philippines",
+  "nativeName": "Philippines",
+  "tier": 2,
+  "languages": [
+    "en",
+    "tl",
+    "ko"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "photo spots",
+    "instagrammable spots",
+    "viewpoints"
+  ],
+  "cities": [
+    {
+      "id": "cebu",
+      "appImportable": true,
+      "querySeeds": [
+        "Cebu photo spots",
+        "Cebu instagrammable",
+        "세부 포토스팟"
+      ]
+    }
+  ]
+}

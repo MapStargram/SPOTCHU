@@ -1,0 +1,35 @@
+{
+  "code": "AE",
+  "name": "United Arab Emirates",
+  "nativeName": "الإمارات العربية المتحدة",
+  "tier": 2,
+  "languages": [
+    "ar",
+    "en",
+    "ko"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "photo spots",
+    "viewpoints",
+    "أماكن تصوير"
+  ],
+  "cities": [
+    {
+      "id": "dubai",
+      "appImportable": true,
+      "querySeeds": [
+        "Dubai photo spots",
+        "Dubai viewpoints",
+        "두바이 포토스팟"
+      ]
+    }
+  ]
+}

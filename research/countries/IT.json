@@ -1,0 +1,54 @@
+{
+  "code": "IT",
+  "name": "Italy",
+  "nativeName": "Italia",
+  "tier": 2,
+  "languages": [
+    "it",
+    "en",
+    "ko"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "luoghi fotografici",
+    "spot instagrammabili",
+    "panorami",
+    "photo spots"
+  ],
+  "cities": [
+    {
+      "id": "rome",
+      "appImportable": true,
+      "querySeeds": [
+        "Roma spot fotografici",
+        "Rome photo spots",
+        "로마 포토스팟"
+      ]
+    },
+    {
+      "id": "venice",
+      "appImportable": true,
+      "querySeeds": [
+        "Venezia luoghi fotografici",
+        "Venice photo spots",
+        "베네치아 포토스팟"
+      ]
+    },
+    {
+      "id": "florence",
+      "appImportable": true,
+      "querySeeds": [
+        "Firenze spot fotografici",
+        "Florence photo spots",
+        "피렌체 포토스팟"
+      ]
+    }
+  ]
+}

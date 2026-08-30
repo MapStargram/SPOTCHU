@@ -1,0 +1,35 @@
+{
+  "code": "CZ",
+  "name": "Czechia",
+  "nativeName": "Česko",
+  "tier": 2,
+  "languages": [
+    "cs",
+    "en",
+    "ko"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "fotografická místa",
+    "výhledy",
+    "photo spots"
+  ],
+  "cities": [
+    {
+      "id": "prague",
+      "appImportable": true,
+      "querySeeds": [
+        "Praha fotografická místa",
+        "Prague photo spots",
+        "프라하 포토스팟"
+      ]
+    }
+  ]
+}

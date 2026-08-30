@@ -1,0 +1,36 @@
+{
+  "code": "ID",
+  "name": "Indonesia",
+  "nativeName": "Indonesia",
+  "tier": 2,
+  "languages": [
+    "id",
+    "en",
+    "ko"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "spot foto",
+    "tempat instagramable",
+    "wisata foto",
+    "photo spot"
+  ],
+  "cities": [
+    {
+      "id": "bali",
+      "appImportable": true,
+      "querySeeds": [
+        "Bali photo spots",
+        "tempat foto Bali",
+        "발리 포토스팟"
+      ]
+    }
+  ]
+}

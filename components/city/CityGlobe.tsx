@@ -44,6 +44,15 @@ const COUNTRY_META: Record<
   영국: { id: "gb", nameEn: "UK", lat: 54.0, lng: -2.0 },
   미국: { id: "us", nameEn: "USA", lat: 39.0, lng: -98.0 },
   스페인: { id: "es", nameEn: "SPAIN", lat: 40.0, lng: -3.7 },
+  베트남: { id: "vn", nameEn: "VIETNAM", lat: 16.0, lng: 107.5 },
+  인도네시아: { id: "id", nameEn: "INDONESIA", lat: -2.5, lng: 118.0 },
+  필리핀: { id: "ph", nameEn: "PHILIPPINES", lat: 12.8, lng: 121.8 },
+  이탈리아: { id: "it", nameEn: "ITALY", lat: 42.5, lng: 12.5 },
+  독일: { id: "de", nameEn: "GERMANY", lat: 51.0, lng: 10.0 },
+  체코: { id: "cz", nameEn: "CZECHIA", lat: 49.8, lng: 15.5 },
+  네덜란드: { id: "nl", nameEn: "NETHERLANDS", lat: 52.1, lng: 5.3 },
+  호주: { id: "au", nameEn: "AUSTRALIA", lat: -25.0, lng: 133.0 },
+  아랍에미리트: { id: "ae", nameEn: "UAE", lat: 24.0, lng: 54.0 },
 };
 
 // 국가별 도시 그룹 빌드. available = 실제 서비스(스팟 보유) 도시만 — 미시딩 도시는 "준비 중"으로

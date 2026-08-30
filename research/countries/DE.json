@@ -1,0 +1,45 @@
+{
+  "code": "DE",
+  "name": "Germany",
+  "nativeName": "Deutschland",
+  "tier": 2,
+  "languages": [
+    "de",
+    "en",
+    "ko"
+  ],
+  "categories": [
+    "PHOTO",
+    "ANIME",
+    "MOVIE",
+    "DRAMA",
+    "VIRAL",
+    "BACKFILL"
+  ],
+  "querySeeds": [
+    "Fotospots",
+    "Instagram Orte",
+    "Aussichtspunkte",
+    "photo spots"
+  ],
+  "cities": [
+    {
+      "id": "berlin",
+      "appImportable": true,
+      "querySeeds": [
+        "Berlin Fotospots",
+        "Berlin photo spots",
+        "베를린 포토스팟"
+      ]
+    },
+    {
+      "id": "munich",
+      "appImportable": true,
+      "querySeeds": [
+        "München Fotospots",
+        "Munich photo spots",
+        "뮌헨 포토스팟"
+      ]
+    }
+  ]
+}
