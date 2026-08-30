@@ -92,6 +92,9 @@ export function ExploreView({
     [spots, chip, userPos],
   );
 
+  // 지도 카테고리 필터: 추천(chip 0)=전체(null), 그 외 칩은 그 라벨(categoryLabel과 매칭).
+  const mapCategory = view === "map" && chip > 0 ? MAP_CHIPS[chip].label : null;
+
   const seg = (v: "map" | "feed", Icon: typeof MapIcon, label: string) => (
     <button
       onClick={() => {
@@ -181,7 +184,12 @@ export function ExploreView({
       {/* Body */}
       {view === "map" ? (
         <div className="relative flex-1">
-          <MapView city={city} userPos={userPos} onLocate={locate} />
+          <MapView
+            city={city}
+            userPos={userPos}
+            onLocate={locate}
+            category={mapCategory}
+          />
         </div>
       ) : (
         <div className="mx-auto w-full max-w-[1180px] flex-1 px-4 pb-28 pt-4 lg:px-8 lg:pb-12">
