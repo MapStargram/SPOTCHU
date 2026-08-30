@@ -5,6 +5,7 @@
 import { revalidateTag } from "next/cache";
 import { db } from "@/lib/db";
 import { requireModerator } from "@/lib/authz";
+import { createNotification } from "@/lib/notify";
 
 type Fail = { ok: false; reason: string };
 
@@ -19,7 +20,7 @@ export async function resolveModerationAction(
 
   const item = await db.moderationItem.findUnique({
     where: { id: itemId },
-    select: { status: true },
+    select: { status: true, type: true, refType: true, refId: true },
   });
   if (!item) return { ok: false, reason: "not_found" };
   if (item.status !== "PENDING")
@@ -34,6 +35,21 @@ export async function resolveModerationAction(
       resolvedAt: new Date(),
     },
   });
+
+  // 제보자에게 검수 결과 알림(REPORT_REVIEWED) — NEW_SPOT 제보 한정, 제보자=spot.createdById.
+  // 승인/반려/숨김 모두 통지(문구는 일반형). 딥링크는 스팟 상세(refType SPOT).
+  if (item.type === "NEW_SPOT" && item.refType === "Spot") {
+    const spot = await db.spot.findUnique({
+      where: { id: item.refId },
+      select: { createdById: true },
+    });
+    if (spot?.createdById)
+      await createNotification(spot.createdById, "REPORT_REVIEWED", {
+        refType: "SPOT",
+        refId: item.refId,
+      });
+  }
+
   revalidateTag("spots"); // 반려·숨김이 지도/피드/검색에 반영되도록
   return { ok: true };
 }

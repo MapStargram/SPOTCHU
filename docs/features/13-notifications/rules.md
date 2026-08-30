@@ -33,7 +33,7 @@
 
 ## TODO / 미결정
 - **알림 센터 진입점 위치** 미정(프로필 탭 vs 전역 헤더 알림 아이콘). 현재 알림 페이지 자체에 미읽음 카운트를 표시하고, 전역 내비 배지는 미배선.
-- **`REPORT_REVIEWED` 트리거 미배선**: 검수 승인/반려 서버 액션 부재(어드민 목업 단계) → 액션 도입 시 발행 배선. `SPOT_PROMOTED`·`BADGE_EARNED`는 배선 완료.
+- (배선 완료) **`REPORT_REVIEWED`**: `resolveModerationAction`([`../../../lib/actions/moderation.ts`](../../../lib/actions/moderation.ts))이 `NEW_SPOT` 제보를 승인/반려/숨김 처리할 때 제보자(`spot.createdById`)에게 발행(딥링크=스팟 상세). `SPOT_PROMOTED`·`BADGE_EARNED`도 배선 완료. 신고(`REPORT`)·후보(`OFFICIAL_CANDIDATE`) 유형의 통지 여부는 후속.
 - **반려 사유 노출 범위**(검수 결과 알림에 사유 문구 포함 여부) — 검수 정책에 종속.
 - **알림 보관 기간·페이지네이션** 미정(현재 최근 50건만 조회).
 - **병합·신고 임시 숨김 대상의 딥링크** 세부 정책 미정(현재는 대상 미상 시 알림 센터로 폴백).
