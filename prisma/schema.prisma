@@ -91,6 +91,14 @@ enum WorkType {
 enum Country {
   KR
   JP
+  TW
+  HK
+  TH
+  SG
+  FR
+  GB
+  US
+  ES
 }
 
 enum SourcePlatform {

@@ -22,7 +22,22 @@ const CATEGORY_KEY: Record<string, string> = {
   드라마: "drama",
   "포토 스팟": "photo",
 };
-const COUNTRY: Record<string, "KR" | "JP"> = { 한국: "KR", 일본: "JP" };
+// 도시 국가(한국어명) → DB enum 코드. 글로벌 확장 10개국(schema Country enum과 일치).
+const COUNTRY: Record<
+  string,
+  "KR" | "JP" | "TW" | "HK" | "TH" | "SG" | "FR" | "GB" | "US" | "ES"
+> = {
+  한국: "KR",
+  일본: "JP",
+  대만: "TW",
+  홍콩: "HK",
+  태국: "TH",
+  싱가포르: "SG",
+  프랑스: "FR",
+  영국: "GB",
+  미국: "US",
+  스페인: "ES",
+};
 const VERIF: Record<string, "OFFICIAL" | "USER_VERIFIED" | "USER_REPORTED"> = {
   official: "OFFICIAL",
   user: "USER_VERIFIED",
