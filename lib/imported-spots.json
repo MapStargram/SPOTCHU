@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T03:11:44.559Z",
+  "generatedAt": "2026-08-30T03:57:29.841Z",
   "spots": [
     {
       "id": "bangkok-mahanakhon-chong-nonsi-skywalk-e31d",
@@ -168,7 +168,13 @@
       "lens": "50-85mm",
       "time": "맑은 날 10:00-15:00 또는 일몰 전",
       "verified": "reported",
-      "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201001001000&uc_seq=1311"
+      "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000201001001000&uc_seq=1311",
+      "imageUrl": "/spots/busan-cheongsapo-crossing-beach-train-7f2a.jpg",
+      "imageCredit": {
+        "author": "Andrewssi2",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cheongsapo.jpg"
+      }
     },
     {
       "id": "busan-cheongsapo-slamdunk-crossing-7a1b",
@@ -185,7 +191,13 @@
       "workId": "slam-dunk",
       "scene": "해변열차와 바다 구도가 작품의 해안 장면을 연상시킨다는 영감 관계(특정 장면 미검증)",
       "verified": "reported",
-      "source": "https://www.busan.com/view/busan/view.php?code=2023030218274944983"
+      "source": "https://www.busan.com/view/busan/view.php?code=2023030218274944983",
+      "imageUrl": "/spots/busan-cheongsapo-slamdunk-crossing-7a1b.jpg",
+      "imageCredit": {
+        "author": "Andrewssi2",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cheongsapo.jpg"
+      }
     },
     {
       "id": "busan-gamcheon-little-prince-viewpoint-9c3d",
@@ -240,7 +252,13 @@
       "lens": "16-24mm",
       "time": "일몰 직후 매직아워·야간",
       "verified": "reported",
-      "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9dfae55a-e64e-4f81-a3f1-4b1046487e41"
+      "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=9dfae55a-e64e-4f81-a3f1-4b1046487e41",
+      "imageUrl": "/spots/busan-the-bay-101-marine-city-reflection-b81c.jpg",
+      "imageCredit": {
+        "author": "steveilott",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:View_of_the_Haeundae_Skyline.png"
+      }
     },
     {
       "id": "busan-yeongdo-cheonghak-reservoir-deck-e49f",
@@ -415,7 +433,13 @@
       "workId": "buddy-daddies",
       "scene": "오호리 공원 고래 놀이터 장면",
       "verified": "reported",
-      "source": "https://hamutane.com/buddydaddies-seichijunrei-fukuoka/"
+      "source": "https://hamutane.com/buddydaddies-seichijunrei-fukuoka/",
+      "imageUrl": "/spots/fukuoka-ohori-park-kujira-playground-buddy-daddies-4d8a.jpg",
+      "imageCredit": {
+        "author": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sky_and_cherry_blossoms_in_Ohori_Park.jpg"
+      }
     },
     {
       "id": "fukuoka-suikyo-tenmangu-umakamon-fukuoka-591c",
@@ -516,7 +540,13 @@
       "lens": "70-200mm 또는 100-400mm 망원 줌 렌즈 (200mm 부근 최적)",
       "time": "17:30~19:30 (일몰 골든아워 ~ 매직아워 야경)",
       "verified": "reported",
-      "source": "https://www.chosun.com"
+      "source": "https://www.chosun.com",
+      "imageUrl": "/spots/incheon-incheon-bridge-bongjaesan-s-line-a7f1.jpg",
+      "imageCredit": {
+        "author": "Jinho Jung on Flickr",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Incheon_bridge_(12).jpg"
+      }
     },
     {
       "id": "incheon-qing-japan-concession-stairs-c9d3",
@@ -552,7 +582,13 @@
       "lens": "12-24mm 또는 16-35mm 초광각 렌즈",
       "time": "18:30~21:00 (일몰 직후 매직아워 및 야간 경관조명 점등 시간)",
       "verified": "reported",
-      "source": "https://travel.incheon.go.kr"
+      "source": "https://travel.incheon.go.kr",
+      "imageUrl": "/spots/incheon-songdo-tri-bowl-reflection-b8e2.jpg",
+      "imageCredit": {
+        "author": "Vincent van Zeijst",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:South_Korea,_Incheon,_Songdo,_the_Sharp_Central_Park_Towers.jpg"
+      }
     },
     {
       "id": "jeju-dodubong-kisses-zone-a82f",
@@ -567,7 +603,13 @@
       "lens": "24-35mm 광각~표준 렌즈 (삼각형 나무 프레임 전체와 바다 수평선을 함께 담기 적합)",
       "time": "맑은 날 10:00~14:00 (선명한 에메랄드빛 바다 연출) 또는 일몰 30분 전 (노을 실루엣)",
       "verified": "reported",
-      "source": "https://www.visitjeju.net/kr/detail/view?menuId=DOM_000001718001000000&contId=CONT_000000000500140"
+      "source": "https://www.visitjeju.net/kr/detail/view?menuId=DOM_000001718001000000&contId=CONT_000000000500140",
+      "imageUrl": "/spots/jeju-dodubong-kisses-zone-a82f.jpg",
+      "imageCredit": {
+        "author": "ChongDae",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%EC%A0%9C%EC%A3%BC%EC%8B%9C_%EB%8F%84%EB%91%90%ED%95%AD_01.jpg"
+      }
     },
     {
       "id": "jeju-geumoreum-crater-sunset-c93d",
@@ -582,7 +624,13 @@
       "lens": "16-35mm 광각 (분화구의 광활한 곡선과 하늘 담기) 또는 50-85mm 단렌즈 (능선 위 인물 실루엣 압축)",
       "time": "맑은 날 일몰 45분 전 ~ 일몰 직후 매직아워 (17:30~19:30, 계절별 일몰 시각 기준)",
       "verified": "reported",
-      "source": "https://www.visitjeju.net/kr/detail/view?menuId=DOM_000001718001000000&contId=CONT_000000000500057"
+      "source": "https://www.visitjeju.net/kr/detail/view?menuId=DOM_000001718001000000&contId=CONT_000000000500057",
+      "imageUrl": "/spots/jeju-geumoreum-crater-sunset-c93d.jpg",
+      "imageCredit": {
+        "author": "Liszt uhm",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%EA%B8%88%EC%95%85%EC%98%A4%EB%A6%84_%EC%A0%95%EC%83%81_%EB%B6%84%ED%99%94%EA%B5%AC.jpg"
+      }
     },
     {
       "id": "jeju-gwangchigi-seongsan-sunrise-b14e",
@@ -687,7 +735,13 @@
       "lens": "50–85mm",
       "time": "이른 아침 또는 등롱 점등 후",
       "verified": "reported",
-      "source": "https://kifunejinja.jp/"
+      "source": "https://kifunejinja.jp/",
+      "imageUrl": "/spots/kyoto-kifune-shrine-kasuga-lantern-staircase.jpg",
+      "imageCredit": {
+        "author": "Chi King",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E8%B2%B4%E8%88%B9%E7%A5%9E%E7%A4%BE_Kibune_Jinja_(KYOTO-JAPAN)_(4951368080).jpg"
+      }
     },
     {
       "id": "kyoto-nanzenji-suirokaku-aqueduct-k-on-b202",
@@ -857,7 +911,13 @@
       "lens": "70-200mm (망원 렌즈, 사슴과 석양 배경 압축 및 실루엣 촬영용) 또는 24-70mm (표준 줌)",
       "time": "일몰 45분 전 ~ 일몰 직후 매직아워 (오후 5시~6시 30분, 계절별 변동)",
       "verified": "reported",
-      "source": "https://www.pref.nara.jp/58269.htm"
+      "source": "https://www.pref.nara.jp/58269.htm",
+      "imageUrl": "/spots/nara-wakakusayama-summit-deer-c79d.jpg",
+      "imageCredit": {
+        "author": "The original uploader was OhMyDeer at English Wikipedia.",
+        "license": "CC BY-SA 2.1 jp",
+        "source": "https://commons.wikimedia.org/wiki/File:MtWakakusa_Nara_Japan.jpg"
+      }
     },
     {
       "id": "newyork-dumbo-manhattan-bridge-a81e",
@@ -983,7 +1043,13 @@
       "lens": "24-70mm (광각~표준 줌, 다리 S커브와 바다 수평선 동시 프레이밍)",
       "time": "11:00 - 14:00 (순광 및 바다 에메랄드색 최적 시간) 또는 일출 시간대",
       "verified": "reported",
-      "source": "https://www.kankou-nanjo.okinawa/tokusyu/view/niraikanai"
+      "source": "https://www.kankou-nanjo.okinawa/tokusyu/view/niraikanai",
+      "imageUrl": "/spots/okinawa-nirai-kanai-tunnel-observatory-a82f.jpg",
+      "imageCredit": {
+        "author": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sugarcane_field_near_Chinen-misaki_South_Beach_and_Nirai-Kanaibashi_Bridges.JPG"
+      }
     },
     {
       "id": "osaka-aiaubashi-hanzawa-naoki-c89b",
@@ -1000,7 +1066,13 @@
       "workId": "hanzawa-naoki",
       "scene": "제4화 아이아우바시 뺨 맞은 장면",
       "verified": "reported",
-      "source": "https://loca.ash.jp/info/2013/d201307_hanzawa.htm"
+      "source": "https://loca.ash.jp/info/2013/d201307_hanzawa.htm",
+      "imageUrl": "/spots/osaka-aiaubashi-hanzawa-naoki-c89b.jpg",
+      "imageCredit": {
+        "author": "Kansai explorer",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Aiaubashi,_Chuo-ku,_Osaka01.JPG"
+      }
     },
     {
       "id": "osaka-awaza-junction-cyberpunk-viewpoint-e47a",
@@ -1116,7 +1188,13 @@
       "lens": "24-35mm",
       "time": "18:00–21:00",
       "verified": "reported",
-      "source": "https://abeno.keizai.biz/headline/1487/"
+      "source": "https://abeno.keizai.biz/headline/1487/",
+      "imageUrl": "/spots/osaka-tsutenkaku-spaworld-reflection-b19c.jpg",
+      "imageCredit": {
+        "author": "Dick Thomas Johnson from Tokyo, Japan",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Shinsekai_(49251920793).jpg"
+      }
     },
     {
       "id": "paris-avenue-de-camoens-eiffel-view-a8f1",
@@ -1131,7 +1209,13 @@
       "lens": "35mm - 50mm (Full Frame) or 24-70mm standard zoom. Wide angles below 24mm make the Eiffel Tower too small; 35-50mm preserves natural scale of both foreground balustrade and the tower.",
       "time": "Sunrise to early morning for soft morning light and zero crowds; or blue hour for the sparkling Eiffel Tower light show.",
       "verified": "reported",
-      "source": "https://www.solosophie.com/avenue-de-camoens-paris/"
+      "source": "https://www.solosophie.com/avenue-de-camoens-paris/",
+      "imageUrl": "/spots/paris-avenue-de-camoens-eiffel-view-a8f1.jpg",
+      "imageCredit": {
+        "author": "Benh LIEU SONG",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+      }
     },
     {
       "id": "paris-montmartre-sinking-house-c7d9",
@@ -1209,7 +1293,13 @@
       "lens": "50mm - 135mm 중망원 렌즈 (라벤더 밭과 도심 마천루 거리 압축)",
       "time": "7월 상순~하순 18:30 - 20:00 (일몰 및 블루아워 매직아워)",
       "verified": "reported",
-      "source": "https://www.sapporo.travel/spot/feature/horomitoge/"
+      "source": "https://www.sapporo.travel/spot/feature/horomitoge/",
+      "imageUrl": "/spots/sapporo-horomi-pass-lavender-view-8c1d.jpg",
+      "imageCredit": {
+        "author": "欅 (Keyaki)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sapporo_television_tower_01.jpg"
+      }
     },
     {
       "id": "sapporo-susukino-cocono-terrace-nikka-e54b",
@@ -1407,7 +1497,13 @@
       "lens": "16-35mm 또는 24-70mm",
       "time": "17:40-19:50",
       "verified": "reported",
-      "source": "https://english.seoul.go.kr/yongyangbongjeojeong-park/"
+      "source": "https://english.seoul.go.kr/yongyangbongjeojeong-park/",
+      "imageUrl": "/spots/seoul-yongyangbongjeojeong-sky-deck-hangang-bridge-b73a.jpg",
+      "imageCredit": {
+        "author": "elaine ross baylon",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Overlooking_han_river.jpg"
+      }
     },
     {
       "id": "sg-fort-canning-tree-tunnel-fc01",
@@ -1422,7 +1518,13 @@
       "lens": "14-24mm 초광각 렌즈 또는 스마트폰 0.5x 초광각 모드",
       "time": "07:30 - 09:30 (이른 아침 부드러운 자연광 및 대기열 최소화)",
       "verified": "reported",
-      "source": "https://www.nparks.gov.sg/gardens-parks-and-nature/parks-and-nature-reserves/fort-canning-park"
+      "source": "https://www.nparks.gov.sg/gardens-parks-and-nature/parks-and-nature-reserves/fort-canning-park",
+      "imageUrl": "/spots/sg-fort-canning-tree-tunnel-fc01.jpg",
+      "imageCredit": {
+        "author": "Michael Coghlan.",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fort_Canning_Park_sign,_Singapore_-_20110506.jpg"
+      }
     },
     {
       "id": "sg-koon-seng-peranakan-shophouses-ks02",
@@ -1590,7 +1692,13 @@
       "workId": "suzume-no-tojimari",
       "scene": "히지리바시와 오차노미즈 철도 풍경이 연결되는 도쿄 장면",
       "verified": "reported",
-      "source": "https://www.pitat.com/town/tokyo/ochanomizu/spot/1897"
+      "source": "https://www.pitat.com/town/tokyo/ochanomizu/spot/1897",
+      "imageUrl": "/spots/tokyo-hijiribashi-bridge-suzume-b2.jpg",
+      "imageCredit": {
+        "author": "Unknown",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hijiribashi_Bridge.jpg"
+      }
     },
     {
       "id": "tokyo-jukkenbashi-skytree-reflection-a81e",
@@ -1674,7 +1782,13 @@
       "workId": "weathering-with-you",
       "scene": "타바타역 남쪽 출구 언덕길과 선로 옆 풍경",
       "verified": "reported",
-      "source": "https://tenkinokoseichi.link/tabata-station/"
+      "source": "https://tenkinokoseichi.link/tabata-station/",
+      "imageUrl": "/spots/tokyo-tabata-station-south-slope-tenkinoko-c3.jpg",
+      "imageCredit": {
+        "author": "MaedaAkihiko",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:JRE_Tabata-STA_Platform3-4.jpg"
+      }
     },
     {
       "id": "tokyo-tower-parking-staircase-f4c2",
