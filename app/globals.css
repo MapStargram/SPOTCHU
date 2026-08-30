@@ -127,3 +127,29 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* 접근성: 키보드 포커스 가시성. 여러 컴포넌트가 outline-none으로 기본 아웃라인을 지워
+   키보드 사용자가 포커스를 못 봤다 → 키보드 이동(:focus-visible)에만 보이는 포커스 링 보장.
+   마우스 클릭엔 뜨지 않는다. 커스텀 focus-visible:ring이 있는 곳은 특이도상 그쪽이 우선. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+
+/* 접근성: 모션 최소화 선호 존중(전정기관 질환 등). 애니메이션·전환을 사실상 제거. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
