@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T16:06:56.588Z",
+  "generatedAt": "2026-08-30T03:11:44.559Z",
   "spots": [
     {
       "id": "bangkok-mahanakhon-chong-nonsi-skywalk-e31d",
@@ -14,7 +14,13 @@
       "lens": "16-35mm ultra-wide angle (to frame the dramatic bridge arches alongside the 314m skyscraper)",
       "time": "18:00 - 20:30 (Blue Hour & Night City Lights)",
       "verified": "reported",
-      "source": "https://lukfoto.com/bangkok-photography-spots"
+      "source": "https://lukfoto.com/bangkok-photography-spots",
+      "imageUrl": "/spots/bangkok-mahanakhon-chong-nonsi-skywalk-e31d.jpg",
+      "imageCredit": {
+        "author": "Chainwit.",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bangkok_-_King_Power_Mahanakhon_%E0%B8%84%E0%B8%B4%E0%B8%87_%E0%B9%80%E0%B8%9E%E0%B8%B2%E0%B9%80%E0%B8%A7%E0%B8%AD%E0%B8%A3%E0%B9%8C_%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3_2021_May.jpg"
+      }
     },
     {
       "id": "bangkok-wat-arun-nagaraphirom-park-7c4a",
@@ -29,7 +35,13 @@
       "lens": "50-135mm (Medium telephoto to isolate the main Prang and spire reflections) or 24-35mm (for wide river panorama)",
       "time": "17:30 - 19:00 (Sunset into Blue Hour illumination)",
       "verified": "reported",
-      "source": "https://aroundus.com/th/place/nagaraphirom-park"
+      "source": "https://aroundus.com/th/place/nagaraphirom-park",
+      "imageUrl": "/spots/bangkok-wat-arun-nagaraphirom-park-7c4a.jpg",
+      "imageCredit": {
+        "author": "Diliff",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Wat_Arun_from_Chao_Phraya_River.jpg"
+      }
     },
     {
       "id": "bangkok-wat-paknam-khun-chan-bridge-b82f",
@@ -44,7 +56,13 @@
       "lens": "24-70mm standard zoom (wide for water reflections and boats, 50-70mm for compressed view of the 69m Buddha)",
       "time": "16:00 - 18:30 (Late afternoon & Golden Hour)",
       "verified": "reported",
-      "source": "https://pantip.com/topic/41196144"
+      "source": "https://pantip.com/topic/41196144",
+      "imageUrl": "/spots/bangkok-wat-paknam-khun-chan-bridge-b82f.jpg",
+      "imageCredit": {
+        "author": "Pablotorrado",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:La_nueva_estupa_de_Wat_Paknam_Bhasicharoen.jpg"
+      }
     },
     {
       "id": "barcelona-bunkers-del-carmel-turo-rovira-7d2c",
@@ -74,7 +92,13 @@
       "lens": "24-35mm 광각 또는 50mm 표준 렌즈 (세로 구도 권장)",
       "time": "이른 아침 (07:00~08:30, 인파가 없고 좁은 골목으로 들어오는 부드러운 아침 햇살)",
       "verified": "reported",
-      "source": "https://somosentrespacios.com/pont-del-bisbe-barcelona/"
+      "source": "https://somosentrespacios.com/pont-del-bisbe-barcelona/",
+      "imageUrl": "/spots/barcelona-pont-del-bisbe-gothic-quarter-9b4e.jpg",
+      "imageCredit": {
+        "author": "Enfo",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:01_Carrer_del_Bisbe,_arc_neog%C3%B2tic_11set2012.jpg"
+      }
     },
     {
       "id": "barcelona-sagrada-familia-placa-gaudi-pond-f31a",
@@ -89,7 +113,13 @@
       "lens": "초광각 16-24mm 또는 수직 파노라마 (로우 앵글)",
       "time": "이른 아침 (07:30~09:00, 바람이 적고 탄생의 파사드 정면 순광)",
       "verified": "reported",
-      "source": "https://pasaportesindestino.net/donde-sacar-mejores-fotos-sagrada-familia/"
+      "source": "https://pasaportesindestino.net/donde-sacar-mejores-fotos-sagrada-familia/",
+      "imageUrl": "/spots/barcelona-sagrada-familia-placa-gaudi-pond-f31a.jpg",
+      "imageCredit": {
+        "author": "Bill Tyne from Oxford, England",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:La_Sagadra_-_Flickr_-_wit.jpg"
+      }
     },
     {
       "id": "busan-ahopsan-bamboo-portal-a71c",
@@ -172,7 +202,13 @@
       "workId": "the-little-prince",
       "scene": "조형물 모티프/reference; 특정 애니메이션 장면 미검증",
       "verified": "reported",
-      "source": "https://www.visitbusan.net/kr/index.do?menuId=MO_010100&cntId=20110701001"
+      "source": "https://www.visitbusan.net/kr/index.do?menuId=MO_010100&cntId=20110701001",
+      "imageUrl": "/spots/busan-gamcheon-little-prince-viewpoint-9c3d.jpg",
+      "imageCredit": {
+        "author": "Christophe95",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Gamcheon_Culture_Village_1.jpg"
+      }
     },
     {
       "id": "busan-hocheon-namilbar-deck-b82f",
@@ -251,7 +287,13 @@
       "lens": "50–135mm (넓은 파노라마는 24–35mm)",
       "time": "일몰 전후 및 야간",
       "verified": "reported",
-      "source": "https://yakei.jp/japan/spot.php?i=atago_temple"
+      "source": "https://yakei.jp/japan/spot.php?i=atago_temple",
+      "imageUrl": "/spots/fukuoka-atago-shrine-viewpoint-8a1c.jpg",
+      "imageCredit": {
+        "author": "STA3816",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fukuoka_Tower_October_2011_01.jpg"
+      }
     },
     {
       "id": "fukuoka-fukuhaku-deai-bridge-kimi-sui-7a2b",
@@ -268,7 +310,13 @@
       "workId": "kimi-no-suizou-wo-tabetai",
       "scene": "후쿠하쿠 데아이 다리·나카스 강변 성지순례 장면",
       "verified": "reported",
-      "source": "https://yokanavi.com/feature/146030/"
+      "source": "https://yokanavi.com/feature/146030/",
+      "imageUrl": "/spots/fukuoka-fukuhaku-deai-bridge-kimi-sui-7a2b.jpg",
+      "imageCredit": {
+        "author": "Hirho",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nakasu_view_from_Fuku-haku-deai-bashi_Bridge_Fukuoka_City_20221129.jpg"
+      }
     },
     {
       "id": "fukuoka-fukuhaku-deai-bridge-nakasu-f79b",
@@ -283,7 +331,13 @@
       "lens": "24–70mm",
       "time": "일몰 후 30분부터 야간",
       "verified": "reported",
-      "source": "https://yokanavi.com/spots/86414/"
+      "source": "https://yokanavi.com/spots/86414/",
+      "imageUrl": "/spots/fukuoka-fukuhaku-deai-bridge-nakasu-f79b.jpg",
+      "imageCredit": {
+        "author": "Hirho",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nishi-nakasu_%C5%8Cd%C5%8Dri_the_SSE_view_from_Suij%C5%8D_Park_Nishi-nakasu_Ch%C5%AB%C5%8D-ku_Fukuoka_20250721.jpg"
+      }
     },
     {
       "id": "fukuoka-hakata-station-plaza-tonkotsu-ramens-3e1f",
@@ -300,7 +354,13 @@
       "workId": "kimi-no-suizou-wo-tabetai",
       "scene": "하카타역 전면 광장과 역 시계 장면",
       "verified": "reported",
-      "source": "https://astral-tanbou.com/hakatatonkotsu-anime-seichijunrei-hakata/"
+      "source": "https://astral-tanbou.com/hakatatonkotsu-anime-seichijunrei-hakata/",
+      "imageUrl": "/spots/fukuoka-hakata-station-plaza-tonkotsu-ramens-3e1f.jpg",
+      "imageCredit": {
+        "author": "ぱちょぴ",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:JR_Hakata_City_2011_Jan.jpg"
+      }
     },
     {
       "id": "fukuoka-miyake-udon-kodoku-719b",
@@ -332,7 +392,13 @@
       "lens": "14–20mm",
       "time": "일몰 전후 또는 야간 조명",
       "verified": "reported",
-      "source": "https://www.fukuokatower.co.jp/sightseeing/area_s.php"
+      "source": "https://www.fukuokatower.co.jp/sightseeing/area_s.php",
+      "imageUrl": "/spots/fukuoka-momochihama-marizon-tower-c42e.jpg",
+      "imageCredit": {
+        "author": "STA3816",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fukuoka_Tower_October_2011_01.jpg"
+      }
     },
     {
       "id": "fukuoka-ohori-park-kujira-playground-buddy-daddies-4d8a",
@@ -366,7 +432,13 @@
       "workId": "fukuoka-2019",
       "scene": "스이쿄 텐만구 인근 우마카몬 거리의 야간 골목 장면",
       "verified": "reported",
-      "source": "https://fukuoka-leapup.jp/entertainment/202203.491"
+      "source": "https://fukuoka-leapup.jp/entertainment/202203.491",
+      "imageUrl": "/spots/fukuoka-suikyo-tenmangu-umakamon-fukuoka-591c.jpg",
+      "imageCredit": {
+        "author": "Pontafon",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mizukagamitenmanguu01.jpg"
+      }
     },
     {
       "id": "hongkong-choi-hung-estate-court-p03",
@@ -383,7 +455,13 @@
       "workId": "13---love-live-mv-hongkong",
       "scene": "걸그룹 이달의 소녀 1/3의 데뷔 타이틀곡 '지금, 좋아해 (Love & Live)' 뮤직비디오 메인 댄스 시퀀스 및 앨범 썸네일로 등장하는 파스텔톤 농구장 장면.",
       "verified": "reported",
-      "source": "https://www.housingauthority.gov.hk/"
+      "source": "https://www.housingauthority.gov.hk/",
+      "imageUrl": "/spots/hongkong-choi-hung-estate-court-p03.jpg",
+      "imageCredit": {
+        "author": "StanleyFiona",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:HK_Wong_Tai_Sin_District_%E5%BD%A9%E8%99%B9%E9%82%A8_Choi_Hung_Estate_sidewalk_6_shop_Nov-2010_Fast_food_shop.JPG"
+      }
     },
     {
       "id": "hongkong-lugard-road-lookout-p01",
@@ -417,7 +495,13 @@
       "workId": "-hongkong",
       "scene": "마이클 베이 감독의 영화 '트랜스포머: 사라진 시대(2014)'에서 오토봇과 케이드 예거 일행이 디셉티콘과 전투를 벌이는 홍콩 도심 아파트 중정 및 옥상 장면.",
       "verified": "reported",
-      "source": "https://en.wikipedia.org/wiki/Monster_Building"
+      "source": "https://en.wikipedia.org/wiki/Monster_Building",
+      "imageUrl": "/spots/hongkong-monster-building-courtyard-p02.jpg",
+      "imageCredit": {
+        "author": "Sakaori (talk)",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yick_Cheong_Building_and_Yick_Fat_Building._Aug._2015.A.JPG"
+      }
     },
     {
       "id": "incheon-incheon-bridge-bongjaesan-s-line-a7f1",
@@ -447,7 +531,13 @@
       "lens": "35mm 또는 50mm 단렌즈 / 24-70mm 표준 줌 렌즈",
       "time": "08:00~10:30 (오전 부드러운 사광 및 관광객 인파 없는 시간대)",
       "verified": "reported",
-      "source": "https://www.heritage.go.kr"
+      "source": "https://www.heritage.go.kr",
+      "imageUrl": "/spots/incheon-qing-japan-concession-stairs-c9d3.jpg",
+      "imageCredit": {
+        "author": "Lawinc82",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Incheonbu_office.JPG"
+      }
     },
     {
       "id": "incheon-songdo-tri-bowl-reflection-b8e2",
@@ -507,7 +597,13 @@
       "lens": "14-24mm 또는 16-35mm 초광각 렌즈 (전경의 이끼 웅덩이 반영과 웅장한 성산일출봉을 광각으로 압축)",
       "time": "간조(썰물) 시간대와 겹치는 일출 전후 30분 (골든아워 및 매직아워)",
       "verified": "reported",
-      "source": "https://www.visitjeju.net/kr/detail/view?menuId=DOM_000001718001000000&contId=CONT_000000000500021"
+      "source": "https://www.visitjeju.net/kr/detail/view?menuId=DOM_000001718001000000&contId=CONT_000000000500021",
+      "imageUrl": "/spots/jeju-gwangchigi-seongsan-sunrise-b14e.jpg",
+      "imageCredit": {
+        "author": "Korea.net / Korean Culture and Information Service",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seongsan_Ilchulbong_from_the_air.jpg"
+      }
     },
     {
       "id": "kyoto-gion-tatsumi-bridge-shirakawa-3f8c",
@@ -524,7 +620,13 @@
       "workId": "memoirs-of-a-geisha",
       "scene": "기온 타츠미교·시라카와와 연관된 촬영지",
       "verified": "reported",
-      "source": "https://www.kyoto-film.jp/location/tatsumibashi/"
+      "source": "https://www.kyoto-film.jp/location/tatsumibashi/",
+      "imageUrl": "/spots/kyoto-gion-tatsumi-bridge-shirakawa-3f8c.jpg",
+      "imageCredit": {
+        "author": "Basile Morin",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Wooden_and_bamboo_facades_of_dwellings_with_sudare_in_a_cobbled_street_of_Gion,_perspective_effect_with_vanishing_point,_Kyoto,_Japan.jpg"
+      }
     },
     {
       "id": "kyoto-kamogawa-delta-stepping-stones-b49e",
@@ -541,7 +643,13 @@
       "workId": "my-tomorrow-your-yesterday",
       "scene": "카모가와 델타의 영화 장면 연관 장소",
       "verified": "reported",
-      "source": "https://kyoto.travel/ja/see-and-do/kamogawa-delta"
+      "source": "https://kyoto.travel/ja/see-and-do/kamogawa-delta",
+      "imageUrl": "/spots/kyoto-kamogawa-delta-stepping-stones-b49e.jpg",
+      "imageCredit": {
+        "author": "sayo ts",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF3.jpg"
+      }
     },
     {
       "id": "kyoto-kamogawa-delta-stepping-stones-k-on-a101",
@@ -558,7 +666,13 @@
       "workId": "k-on-tamako-kamogawa",
       "scene": "카모가와 델타와 징검다리가 작품의 성지로 연관된 장소",
       "verified": "reported",
-      "source": "https://kyotolove.kyoto/I0000009/"
+      "source": "https://kyotolove.kyoto/I0000009/",
+      "imageUrl": "/spots/kyoto-kamogawa-delta-stepping-stones-k-on-a101.jpg",
+      "imageCredit": {
+        "author": "sayo ts",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF3.jpg"
+      }
     },
     {
       "id": "kyoto-kifune-shrine-kasuga-lantern-staircase",
@@ -590,7 +704,13 @@
       "workId": "k-on",
       "scene": "1기 OP의 난젠지 수로각 붉은 벽돌 배경",
       "verified": "official",
-      "source": "https://www.nanzenji.or.jp/"
+      "source": "https://www.nanzenji.or.jp/",
+      "imageUrl": "/spots/kyoto-nanzenji-suirokaku-aqueduct-k-on-b202.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:251213_Nanzen-ji_Kyoto_Japan01s3.jpg"
+      }
     },
     {
       "id": "kyoto-nanzenji-suirokaku-brick-arch-corridor",
@@ -605,7 +725,13 @@
       "lens": "35–50mm",
       "time": "이른 아침 또는 늦은 오후",
       "verified": "reported",
-      "source": "https://nanzenji.or.jp/"
+      "source": "https://nanzenji.or.jp/",
+      "imageUrl": "/spots/kyoto-nanzenji-suirokaku-brick-arch-corridor.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:251213_Nanzen-ji_Suirokaku_Kyoto_Japan01s3.jpg"
+      }
     },
     {
       "id": "kyoto-yasaka-pagoda-yasaka-dori-viewpoint",
@@ -620,7 +746,13 @@
       "lens": "50–85mm",
       "time": "이른 아침 또는 해질녘",
       "verified": "reported",
-      "source": "https://kyoto.travel/ja/see-and-do/hokoji.html"
+      "source": "https://kyoto.travel/ja/see-and-do/hokoji.html",
+      "imageUrl": "/spots/kyoto-yasaka-pagoda-yasaka-dori-viewpoint.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Hokanji_Kyoto01n4272.jpg"
+      }
     },
     {
       "id": "london-big-ben-phonebox-great-george-7f1a",
@@ -637,7 +769,13 @@
       "workId": "-london",
       "scene": "Quintessential British establishing shot featured in numerous travel documentaries, films, and international media.",
       "verified": "reported",
-      "source": "https://www.explorest.com/destinations/london/great-george-street-telephone-box-big-ben"
+      "source": "https://www.explorest.com/destinations/london/great-george-street-telephone-box-big-ben",
+      "imageUrl": "/spots/london-big-ben-phonebox-great-george-7f1a.jpg",
+      "imageCredit": {
+        "author": "Christian David",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster,_London.jpg"
+      }
     },
     {
       "id": "london-millennium-bridge-st-pauls-3c8b",
@@ -654,7 +792,13 @@
       "workId": "-london",
       "scene": "Opening sequence where Death Eaters swoop over London, twisting and collapsing the Millennium Bridge into the Thames.",
       "verified": "reported",
-      "source": "https://www.locationscout.net/united-kingdom/431-millennium-bridge-st-pauls-cathedral"
+      "source": "https://www.locationscout.net/united-kingdom/431-millennium-bridge-st-pauls-cathedral",
+      "imageUrl": "/spots/london-millennium-bridge-st-pauls-3c8b.jpg",
+      "imageCredit": {
+        "author": "Mark Fosh",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:St_Pauls_aerial_(cropped).jpg"
+      }
     },
     {
       "id": "london-st-dunstan-in-the-east-gothic-garden-4e2d",
@@ -671,7 +815,13 @@
       "workId": "-london",
       "scene": "Historic Blitz-surviving medieval ruin turned enchanting urban garden, featured in numerous British period dramas and music videos.",
       "verified": "reported",
-      "source": "https://www.cityoflondon.gov.uk/things-to-do/city-gardens/find-a-green-space/st-dunstan-in-the-east"
+      "source": "https://www.cityoflondon.gov.uk/things-to-do/city-gardens/find-a-green-space/st-dunstan-in-the-east",
+      "imageUrl": "/spots/london-st-dunstan-in-the-east-gothic-garden-4e2d.jpg",
+      "imageCredit": {
+        "author": "Elisa.rolle",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Church_of_St_Dunstan_in_the_East,_2001_(2).jpg"
+      }
     },
     {
       "id": "nara-sagiike-ukimido-reflection-a43c",
@@ -686,7 +836,13 @@
       "lens": "24-70mm (표준 줌) 또는 16-35mm (광각), 수면 반사 조절용 C-PL 필터 권장",
       "time": "바람이 적은 청명한 이른 아침 (일출 직후 ~ 오전 8시) 또는 늦가을 아침 물안개 시간대",
       "verified": "reported",
-      "source": "https://www.pref.nara.jp/1715.htm"
+      "source": "https://www.pref.nara.jp/1715.htm",
+      "imageUrl": "/spots/nara-sagiike-ukimido-reflection-a43c.jpg",
+      "imageCredit": {
+        "author": "Humanoid one",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nara_Japan_2.jpg"
+      }
     },
     {
       "id": "nara-wakakusayama-summit-deer-c79d",
@@ -718,7 +874,13 @@
       "workId": "-newyork",
       "scene": "1984년 영화 포스터 및 소년 시절 주인공들이 맨해튼 브리지를 배경으로 자갈길을 걷는 상징적인 명장면",
       "verified": "reported",
-      "source": "https://www.nyctourism.com"
+      "source": "https://www.nyctourism.com",
+      "imageUrl": "/spots/newyork-dumbo-manhattan-bridge-a81e.jpg",
+      "imageCredit": {
+        "author": "Original uploader was Dav5nyc at en.wikipedia",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Manhattan_Bridge_2007.jpg"
+      }
     },
     {
       "id": "newyork-staple-street-skybridge-tribeca-b74d",
@@ -735,7 +897,13 @@
       "workId": "-newyork",
       "scene": "트라이베카 특유의 고풍스러운 골목 및 공중회랑을 배경으로 한 다수의 뉴욕 드라마 촬영지",
       "verified": "reported",
-      "source": "https://tribecacitizen.com"
+      "source": "https://tribecacitizen.com",
+      "imageUrl": "/spots/newyork-staple-street-skybridge-tribeca-b74d.jpg",
+      "imageCredit": {
+        "author": "Kidfly182",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tribeca_Manhattan_December_2022_021.jpg"
+      }
     },
     {
       "id": "newyork-tudor-city-overpass-chrysler-c92f",
@@ -752,7 +920,13 @@
       "workId": "-newyork",
       "scene": "영화 스파이더맨(2002)에서 노먼 오스본(그린 고블린)의 펜트하우스 배경 및 수많은 뉴욕 배경 영화의 42번가 전경",
       "verified": "reported",
-      "source": "https://www.photohound.co"
+      "source": "https://www.photohound.co",
+      "imageUrl": "/spots/newyork-tudor-city-overpass-chrysler-c92f.jpg",
+      "imageCredit": {
+        "author": "w:User:Overand derivative work: Overand (talk)",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Chrysler_Building_by_David_Shankbone_Retouched.jpg"
+      }
     },
     {
       "id": "okinawa-cape-manzamo-elephant-rock-c91d",
@@ -767,7 +941,13 @@
       "lens": "24-50mm (코끼리 바위와 바다 수평선을 균형 있게 담는 광각/표준 화각)",
       "time": "09:00 - 13:00 (에메랄드 바다 순광 촬영) 또는 17:30 - 일몰 (석양 실루엣)",
       "verified": "reported",
-      "source": "https://www.vill.onna.okinawa.jp/tourism/tourism_facilities/manzamou/"
+      "source": "https://www.vill.onna.okinawa.jp/tourism/tourism_facilities/manzamou/",
+      "imageUrl": "/spots/okinawa-cape-manzamo-elephant-rock-c91d.jpg",
+      "imageCredit": {
+        "author": "CEphoto, Uwe Aranas",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Onna_Okinawa_Japan_Cape-Manzamo-01.jpg"
+      }
     },
     {
       "id": "okinawa-kouri-bridge-south-approach-b43e",
@@ -782,7 +962,13 @@
       "lens": "35-70mm (직선 교량의 소실점과 에메랄드 바다 압축 프레이밍) 또는 16-35mm (해변 로우앵글)",
       "time": "10:30 - 15:00 (바다 발색 최적) 또는 일몰 직전 (선셋 실루엣)",
       "verified": "reported",
-      "source": "https://www.navitime.co.jp/poi?spot=00011-060417066"
+      "source": "https://www.navitime.co.jp/poi?spot=00011-060417066",
+      "imageUrl": "/spots/okinawa-kouri-bridge-south-approach-b43e.jpg",
+      "imageCredit": {
+        "author": "Captain76",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:View_of_Kouri_Ohashi_from_road.JPG"
+      }
     },
     {
       "id": "okinawa-nirai-kanai-tunnel-observatory-a82f",
@@ -846,7 +1032,13 @@
       "workId": "boogie-woogie",
       "scene": "중앙공회당이 '日宝' 본사 회의실·로비 촬영지로 소개됨; 외관 exact scene은 미확인",
       "verified": "reported",
-      "source": "https://asa-dora.com/15347/"
+      "source": "https://asa-dora.com/15347/",
+      "imageUrl": "/spots/osaka-central-public-hall-boogie-woogie-b41f.jpg",
+      "imageCredit": {
+        "author": "Sakai Yayoi",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Osaka_Nakanoshima_Public_Hall.jpg"
+      }
     },
     {
       "id": "osaka-conan-osakajo-gokurakubashi-4c2b",
@@ -863,7 +1055,13 @@
       "workId": "detective-conan",
       "scene": "263화 오사카성 사건 배경",
       "verified": "reported",
-      "source": "https://www.ytv.co.jp/conan/archive/k200200107.html"
+      "source": "https://www.ytv.co.jp/conan/archive/k200200107.html",
+      "imageUrl": "/spots/osaka-conan-osakajo-gokurakubashi-4c2b.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Osaka_Castle_01bs3200.jpg"
+      }
     },
     {
       "id": "osaka-josee-aizenzaka-slope-8f12",
@@ -897,7 +1095,13 @@
       "workId": "hero-princess-toyotomi",
       "scene": "오사카부청 본관 촬영지",
       "verified": "reported",
-      "source": "https://www.osaka-fc.jp/locaguide/toyotomi/index.html"
+      "source": "https://www.osaka-fc.jp/locaguide/toyotomi/index.html",
+      "imageUrl": "/spots/osaka-prefectural-government-hero-e72a.jpg",
+      "imageCredit": {
+        "author": "KishujiRapid",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Osaka_Prefectural_Government_Main_Building_view_from_Osaka_Castle.jpg"
+      }
     },
     {
       "id": "osaka-tsutenkaku-spaworld-reflection-b19c",
@@ -942,7 +1146,13 @@
       "lens": "28mm - 50mm (Full Frame) or standard smartphone wide camera (1x / 24-28mm equivalent). Wide enough to incorporate both the sloping green lawn and the full building facade.",
       "time": "Morning to midday on bright clear days when the grass is vibrant green and sunlight evenly illuminates the building facade.",
       "verified": "reported",
-      "source": "https://www.thewholeworldisaplayground.com/sinking-house-paris/"
+      "source": "https://www.thewholeworldisaplayground.com/sinking-house-paris/",
+      "imageUrl": "/spots/paris-montmartre-sinking-house-c7d9.jpg",
+      "imageCredit": {
+        "author": "Mbzt",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:P1210452_Paris_XVIII_rue_Maurice-Utrillo_rwk.jpg"
+      }
     },
     {
       "id": "paris-square-rapp-eiffel-framing-b4e2",
@@ -957,7 +1167,13 @@
       "lens": "50mm - 85mm or short telephoto (70-200mm). The telephoto compression pulls the Eiffel Tower forward, making it loom dramatically over the intimate courtyard.",
       "time": "Mid-morning to afternoon for balanced illumination on the facade details, or early evening as the street lamps turn on.",
       "verified": "reported",
-      "source": "https://www.locationscout.net/locations/3990-square-rapp"
+      "source": "https://www.locationscout.net/locations/3990-square-rapp",
+      "imageUrl": "/spots/paris-square-rapp-eiffel-framing-b4e2.jpg",
+      "imageCredit": {
+        "author": "Benh LIEU SONG",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+      }
     },
     {
       "id": "sapporo-clocktower-mn-terrace-3f2a",
@@ -972,7 +1188,13 @@
       "lens": "35mm - 50mm 표준 단렌즈 / 24-70mm 줌렌즈",
       "time": "10:00 - 11:30 (순광 주간 촬영), 18:00 - 21:30 (야간 라이트업)",
       "verified": "reported",
-      "source": "https://www.tabirai.net/sightseeing/column/0002130.aspx"
+      "source": "https://www.tabirai.net/sightseeing/column/0002130.aspx",
+      "imageUrl": "/spots/sapporo-clocktower-mn-terrace-3f2a.jpg",
+      "imageCredit": {
+        "author": "Balon Greyjoy",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:20200119_Sapporo_Clock_Tower.jpg"
+      }
     },
     {
       "id": "sapporo-horomi-pass-lavender-view-8c1d",
@@ -1002,7 +1224,13 @@
       "lens": "28mm - 50mm 광각~표준 줌렌즈 (야경 장노출 또는 스냅)",
       "time": "19:00 - 22:30 (야간 네온사인 및 노면전차 운행 시간대)",
       "verified": "reported",
-      "source": "https://cocono-susukino.jp/"
+      "source": "https://cocono-susukino.jp/",
+      "imageUrl": "/spots/sapporo-susukino-cocono-terrace-nikka-e54b.jpg",
+      "imageCredit": {
+        "author": "Ninosan",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Susukino_Sta_subway_4.jpg"
+      }
     },
     {
       "id": "seoul-baekbin-railroad-crossing-my-mister-a78b",
@@ -1068,7 +1296,13 @@
       "workId": "god-of-high-school",
       "scene": "숭례문이 등장하는 작품 연관 뷰포인트; 정확한 1화 프레임은 리뷰 필요",
       "verified": "reported",
-      "source": "https://serieson.naver.com/v2/movie/391090"
+      "source": "https://serieson.naver.com/v2/movie/391090",
+      "imageUrl": "/spots/seoul-god-of-highschool-sungnyemun-chase-8b1a.jpg",
+      "imageCredit": {
+        "author": "DoulosCore",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sungnyemun_Gate,_front,_2013.jpg"
+      }
     },
     {
       "id": "seoul-lost-in-the-moonlight-changdeokgung-injeongjeon-e47b",
@@ -1085,7 +1319,13 @@
       "workId": "lost-in-the-moonlight",
       "scene": "창덕궁에서 영감을 받은 작품 연관 뷰포인트; 인정전 특정 장면은 리뷰 필요",
       "verified": "reported",
-      "source": "https://www.cdg.go.kr/"
+      "source": "https://www.cdg.go.kr/",
+      "imageUrl": "/spots/seoul-lost-in-the-moonlight-changdeokgung-injeongjeon-e47b.jpg",
+      "imageCredit": {
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Changdeokgung_Seoul_3.jpg"
+      }
     },
     {
       "id": "seoul-nmk-open-plaza-namsan-view-a1f8",
@@ -1100,7 +1340,13 @@
       "lens": "70-200mm",
       "time": "17:30-19:30",
       "verified": "reported",
-      "source": "https://www.museum.go.kr/ENG/contents/E0605010000.do"
+      "source": "https://www.museum.go.kr/ENG/contents/E0605010000.do",
+      "imageUrl": "/spots/seoul-nmk-open-plaza-namsan-view-a1f8.jpg",
+      "imageCredit": {
+        "author": "Anthony Jackson",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:S7300388.JPG"
+      }
     },
     {
       "id": "seoul-noksapyeong-bridge-itaewon-class-241f",
@@ -1117,7 +1363,13 @@
       "workId": "itaewon-class",
       "scene": "남산서울타워를 바라보는 녹사평 육교 장면으로 소개됨.",
       "verified": "reported",
-      "source": "https://korean.visitseoul.net/attractions/Noksapyeong-Bridge"
+      "source": "https://korean.visitseoul.net/attractions/Noksapyeong-Bridge",
+      "imageUrl": "/spots/seoul-noksapyeong-bridge-itaewon-class-241f.jpg",
+      "imageCredit": {
+        "author": "Anthony Jackson",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:S7300388.JPG"
+      }
     },
     {
       "id": "seoul-seoul-station-culture-station-284-c92f",
@@ -1134,7 +1386,13 @@
       "workId": "seoul-station",
       "scene": "서울역을 배경으로 한 애니메이션 연관 뷰포인트; 정확한 돔/파사드 프레임은 리뷰 필요",
       "verified": "reported",
-      "source": "https://www.seoul284.org/"
+      "source": "https://www.seoul284.org/",
+      "imageUrl": "/spots/seoul-seoul-station-culture-station-284-c92f.jpg",
+      "imageCredit": {
+        "author": "Mobius6",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seoul_Station_(Seoul_Subway_Line_1)_20230408_003.jpg"
+      }
     },
     {
       "id": "seoul-yongyangbongjeojeong-sky-deck-hangang-bridge-b73a",
@@ -1179,7 +1437,13 @@
       "lens": "24-50mm 표준 줌 렌즈 (원근 왜곡 방지 및 파사드 수평 대칭 구도)",
       "time": "08:00 - 10:30 (오전 부드러운 자연광 및 도로변 주차 차량 적은 시간대)",
       "verified": "reported",
-      "source": "https://www.visitsingapore.com/see-do-singapore/places-to-see/joo-chiat-katong/"
+      "source": "https://www.visitsingapore.com/see-do-singapore/places-to-see/joo-chiat-katong/",
+      "imageUrl": "/spots/sg-koon-seng-peranakan-shophouses-ks02.jpg",
+      "imageCredit": {
+        "author": "Photograph by Mike Peel (www.mikepeel.net).",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:At_Singapore_2023_016.jpg"
+      }
     },
     {
       "id": "sg-old-hill-street-police-station-oh03",
@@ -1194,7 +1458,13 @@
       "lens": "18-35mm 광각 렌즈 (파사드 전체) 또는 70-200mm 망원 (무지개 덧창 디테일)",
       "time": "07:30 - 09:30 (이른 아침 동측 순광 및 도로 차량 통행이 적은 시간)",
       "verified": "reported",
-      "source": "https://www.photohound.co/spot/old-hill-street-police-station-singapore"
+      "source": "https://www.photohound.co/spot/old-hill-street-police-station-singapore",
+      "imageUrl": "/spots/sg-old-hill-street-police-station-oh03.jpg",
+      "imageCredit": {
+        "author": "JuneAugust",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E6%96%B0%E5%8A%A0%E5%9D%A1%E9%80%9A%E8%AE%AF%E5%8F%8A%E6%96%B0%E9%97%BB%E9%83%A82.jpg"
+      }
     },
     {
       "id": "taipei-sisinancun-lawn-101-c3d4",
@@ -1209,7 +1479,13 @@
       "lens": "16mm-28mm 광각 렌즈 (스마트폰 0.5x~1x 초광각)",
       "time": "오전 09:00~10:00 (부드러운 사광) 또는 오후 16:00~17:30 (골든아워)",
       "verified": "reported",
-      "source": "https://www.travel.taipei/zh-tw/attraction/details/264"
+      "source": "https://www.travel.taipei/zh-tw/attraction/details/264",
+      "imageUrl": "/spots/taipei-sisinancun-lawn-101-c3d4.jpg",
+      "imageCredit": {
+        "author": "User:Sinsyuan",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Taipei_101_from_Xiangshan_20250731.jpg"
+      }
     },
     {
       "id": "taipei-xiangshan-six-giant-rocks-e5f6",
@@ -1224,7 +1500,13 @@
       "lens": "24mm-70mm 표준 줌 렌즈 (광각~표준 화각)",
       "time": "일몰 45분 전 ~ 일몰 후 45분 (17:30~19:30, 골든아워 및 블루아워)",
       "verified": "reported",
-      "source": "https://www.travel.taipei/zh-tw/attraction/details/251"
+      "source": "https://www.travel.taipei/zh-tw/attraction/details/251",
+      "imageUrl": "/spots/taipei-xiangshan-six-giant-rocks-e5f6.jpg",
+      "imageCredit": {
+        "author": "User:Sinsyuan",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Taipei_101_from_Xiangshan_20250731.jpg"
+      }
     },
     {
       "id": "tokyo-asakusa-culture-center-terrace-b391",
@@ -1239,7 +1521,13 @@
       "lens": "24-35mm 또는 50-135mm",
       "time": "일몰 후 트와일라이트",
       "verified": "reported",
-      "source": "https://yakei.jp/japan/spot.php?i=asakusabunka"
+      "source": "https://yakei.jp/japan/spot.php?i=asakusabunka",
+      "imageUrl": "/spots/tokyo-asakusa-culture-center-terrace-b391.jpg",
+      "imageCredit": {
+        "author": "Ajay Suresh from New York, NY, USA",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Day2-2_(40909714314).jpg"
+      }
     },
     {
       "id": "tokyo-hana-yori-dango-ebisu-clock-plaza-c4e1",
@@ -1256,7 +1544,13 @@
       "workId": "hana-yori-dango",
       "scene": "에비스 가든 플레이스 시계광장 만남·대기 장면",
       "verified": "reported",
-      "source": "https://loca.ash.jp/info/2005/d200510_hanadan.htm"
+      "source": "https://loca.ash.jp/info/2005/d200510_hanadan.htm",
+      "imageUrl": "/spots/tokyo-hana-yori-dango-ebisu-clock-plaza-c4e1.jpg",
+      "imageCredit": {
+        "author": "Harani0403",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yebisu_Garden_Place_Tower_2012.jpg"
+      }
     },
     {
       "id": "tokyo-hanzawa-naoki-mitsui-main-building-b89d",
@@ -1273,7 +1567,13 @@
       "workId": "hanzawa-naoki",
       "scene": "도쿄중앙은행 본점 외관으로 사용된 미쓰이 본관",
       "verified": "reported",
-      "source": "https://loca.ash.jp/info/2013/d201307_hanzawa.htm"
+      "source": "https://loca.ash.jp/info/2013/d201307_hanzawa.htm",
+      "imageUrl": "/spots/tokyo-hanzawa-naoki-mitsui-main-building-b89d.jpg",
+      "imageCredit": {
+        "author": "Wiiii",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mitsui_Main_Building_2009.jpg"
+      }
     },
     {
       "id": "tokyo-hijiribashi-bridge-suzume-b2",
@@ -1305,7 +1605,13 @@
       "lens": "14-18mm",
       "time": "일몰 전후 및 야간",
       "verified": "reported",
-      "source": "https://yakei.jp/japan/spot.php?i=jyukken"
+      "source": "https://yakei.jp/japan/spot.php?i=jyukken",
+      "imageUrl": "/spots/tokyo-jukkenbashi-skytree-reflection-a81e.jpg",
+      "imageCredit": {
+        "author": "Akonnchiroll",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Skytree_2023.jpg"
+      }
     },
     {
       "id": "tokyo-silent-setagaya-daita-bench-7f2a",
@@ -1322,7 +1628,13 @@
       "workId": "silent",
       "scene": "세타가야다이타역 서쪽 출구 벤치·광장 장면",
       "verified": "reported",
-      "source": "https://loca.ash.jp/info/2022/d202210_silent.htm"
+      "source": "https://loca.ash.jp/info/2022/d202210_silent.htm",
+      "imageUrl": "/spots/tokyo-silent-setagaya-daita-bench-7f2a.jpg",
+      "imageCredit": {
+        "author": "LERK",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Odakyu-electric-railway-OH08-Setagaya-daita-station-platform-20190420-101300.jpg"
+      }
     },
     {
       "id": "tokyo-suga-shrine-stairs-your-name-a1",
@@ -1339,7 +1651,13 @@
       "workId": "your-name",
       "scene": "스가 신사 계단의 상징적인 엔딩/포스터 구도",
       "verified": "reported",
-      "source": "https://www.travel.co.jp/guide/article/21571/"
+      "source": "https://www.travel.co.jp/guide/article/21571/",
+      "imageUrl": "/spots/tokyo-suga-shrine-stairs-your-name-a1.jpg",
+      "imageCredit": {
+        "author": "Harani0403",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Suga_Jinjya_2012_Yotsuya_Tokyo.JPG"
+      }
     },
     {
       "id": "tokyo-tabata-station-south-slope-tenkinoko-c3",
@@ -1371,7 +1689,13 @@
       "lens": "20-28mm",
       "time": "아침 또는 야간 점등",
       "verified": "reported",
-      "source": "https://nightscape.tokyo/minato/tokyo-tower-stairs/"
+      "source": "https://nightscape.tokyo/minato/tokyo-tower-stairs/",
+      "imageUrl": "/spots/tokyo-tower-parking-staircase-f4c2.jpg",
+      "imageCredit": {
+        "author": "Akonnchiroll",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_2023.jpg"
+      }
     },
     {
       "id": "yokohama-bankoku-bridge-skyline-f4a1",
@@ -1386,7 +1710,13 @@
       "lens": "広角〜標準ズームレンズ（35mm判換算 20-35mm または 24-70mm）",
       "time": "日没直後（トワイライト・ブルーアワー）〜夜間",
       "verified": "reported",
-      "source": "https://zekkei.info/spot/kanagawa/yokohama/bankokubashi/"
+      "source": "https://zekkei.info/spot/kanagawa/yokohama/bankokubashi/",
+      "imageUrl": "/spots/yokohama-bankoku-bridge-skyline-f4a1.jpg",
+      "imageCredit": {
+        "author": "Volfgang",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Nipponmaru_3.jpg"
+      }
     },
     {
       "id": "yokohama-harbor-view-park-baybridge-3e7b",
