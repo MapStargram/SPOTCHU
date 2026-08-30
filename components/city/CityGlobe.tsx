@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronDown, Globe2 } from "lucide-react";
 import type { GlobeInstance } from "globe.gl";
@@ -46,29 +46,35 @@ const COUNTRY_META: Record<
   스페인: { id: "es", nameEn: "SPAIN", lat: 40.0, lng: -3.7 },
 };
 
-const COUNTRIES: Country[] = Object.entries(COUNTRY_META)
-  .map(([krName, m]) => ({
-    id: m.id,
-    name: krName,
-    nameEn: m.nameEn,
-    lat: m.lat,
-    lng: m.lng,
-    cities: CITIES.filter((c) => c.country === krName).map((c) => ({
-      id: c.id,
-      name: c.name,
-      spots: c.spotCount,
-      available: true,
-      lat: CITY_CENTER[c.id].lat,
-      lng: CITY_CENTER[c.id].lng,
-    })),
-  }))
-  .filter((co) => co.cities.length > 0);
+// 국가별 도시 그룹 빌드. available = 실제 서비스(스팟 보유) 도시만 — 미시딩 도시는 "준비 중"으로
+// 표시하고 진입을 막는다(코드 카탈로그 20 ⊋ DB 시딩. /home/<미시딩> 404 방지, 시딩되면 자동 활성).
+function buildCountries(counts?: Record<string, number>): Country[] {
+  return Object.entries(COUNTRY_META)
+    .map(([krName, m]) => ({
+      id: m.id,
+      name: krName,
+      nameEn: m.nameEn,
+      lat: m.lat,
+      lng: m.lng,
+      cities: CITIES.filter((c) => c.country === krName).map((c) => ({
+        id: c.id,
+        name: c.name,
+        spots: counts?.[c.id] ?? c.spotCount,
+        available: (counts?.[c.id] ?? 0) > 0,
+        lat: CITY_CENTER[c.id].lat,
+        lng: CITY_CENTER[c.id].lng,
+      })),
+    }))
+    .filter((co) => co.cities.length > 0);
+}
 
 export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<GlobeInstance | null>(null);
   const router = useRouter();
   const [open, setOpen] = useState<string | null>(null);
+  // 국가/도시 마커 데이터 — 스팟 수(counts)로 available 판정. counts는 서버 1회 전달로 안정적.
+  const countries = useMemo(() => buildCountries(counts), [counts]);
 
   // 지구본 생성(1회). 마커 데이터/카메라는 open 변화에 따라 별도 effect에서 갱신.
   useEffect(() => {
@@ -89,7 +95,7 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
         .bumpImageUrl("/textures/earth-topology.png")
         .atmosphereColor("#a9d2ff")
         .atmosphereAltitude(0.16)
-        .pointsData(COUNTRIES as Datum[])
+        .pointsData(countries as Datum[])
         .pointLat("lat")
         .pointLng("lng")
         .pointColor((d: object) =>
@@ -145,7 +151,7 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
   useEffect(() => {
     const globe = globeRef.current;
     if (!globe) return;
-    const country = COUNTRIES.find((c) => c.id === open);
+    const country = countries.find((c) => c.id === open);
     if (country) {
       globe.pointsData(country.cities as Datum[]);
       globe.pointOfView(
@@ -154,11 +160,11 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
       ); // 줌인
       globe.controls().autoRotate = false;
     } else {
-      globe.pointsData(COUNTRIES as Datum[]);
+      globe.pointsData(countries as Datum[]);
       globe.pointOfView({ lat: 34, lng: 132, altitude: 2.3 }, 1000); // 줌아웃
       globe.controls().autoRotate = true;
     }
-  }, [open]);
+  }, [open, countries]);
 
   return (
     <div className="flex flex-col items-center">
@@ -174,7 +180,7 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
       )}
 
       <div className="mt-1 flex w-full max-w-[360px] flex-col gap-2.5">
-        {COUNTRIES.map((country) => {
+        {countries.map((country) => {
           const isOpen = open === country.id;
           return (
             <div
