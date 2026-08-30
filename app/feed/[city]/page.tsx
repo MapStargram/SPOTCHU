@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import {
   Camera,
   Share2,
@@ -12,7 +12,7 @@ import { Chip } from "@/components/ui/Chip";
 import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
 import { LikeButton } from "@/components/community/LikeButton";
-import { getCity, getFeedPosts, type FeedTab } from "@/lib/data";
+import { getCity, getCities, getFeedPosts, type FeedTab } from "@/lib/data";
 import { getCurrentUser } from "@/lib/session";
 
 // H1 · 도시 피드. 스팟 연결 사진 게시물(실 DB). 카메라 → 업로드, 게시물 → 상세.
@@ -34,7 +34,13 @@ export default async function FeedPage({
 }) {
   const { city } = await params;
   const c = await getCity(city);
-  if (!c) notFound();
+  if (!c) {
+    // 코드 카탈로그(20) ⊋ DB 시딩. 미시딩/무효 도시는 서비스 도시로 안전 리다이렉트(404 방지). tokyo 우선.
+    const cities = await getCities();
+    const fb = cities.find((x) => x.id === "tokyo")?.id ?? cities[0]?.id;
+    if (fb) redirect(`/feed/${fb}`);
+    notFound();
+  }
 
   const sp = await searchParams;
   const tab: FeedTab = TABS.some((t) => t.key === sp.tab)

@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { Bell, Camera, ChevronDown, ChevronLeft } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { TagPill } from "@/components/ui/TagPill";
 import { Sparkle } from "@/components/ui/Sparkle";
 import { PinGrid } from "@/components/home/PinGrid";
 import { type CityId } from "@/lib/mock";
-import { getCity, getSpot, getSpotsByCity } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
+import { getCity, getCities, getSpot, getSpotsByCity } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
 import { getCurrentUser } from "@/lib/session";
 import { getSavedSpotIds } from "@/lib/actions/mutations";
 
@@ -32,7 +32,13 @@ export default async function HomeScreen({
 }) {
   const { city } = await params;
   const c = await getCity(city);
-  if (!c) notFound();
+  if (!c) {
+    // 코드 카탈로그(20) ⊋ DB 시딩. 미시딩/무효 도시는 서비스 도시로 안전 리다이렉트(404 방지). tokyo 우선.
+    const cities = await getCities();
+    const fb = cities.find((x) => x.id === "tokyo")?.id ?? cities[0]?.id;
+    if (fb) redirect(`/home/${fb}`);
+    notFound();
+  }
 
   const all = await getSpotsByCity(city as CityId);
   const heroId = CITY_HERO[city as CityId];
