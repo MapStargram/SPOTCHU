@@ -5,8 +5,40 @@
 // 무거우므로(수 MB) Spot3DSection에서 dynamic(ssr:false)로 온디맨드 로드한다.
 import { useEffect, useRef, useState } from "react";
 import "cesium/Build/Cesium/Widgets/widgets.css";
+import type * as CesiumNS from "cesium";
 
 const TOKEN = process.env.NEXT_PUBLIC_CESIUM_ION_TOKEN;
+
+declare global {
+  interface Window {
+    Cesium?: typeof CesiumNS;
+    CESIUM_BASE_URL?: string;
+  }
+}
+
+// Cesium 자체 prebuilt(/cesium/Cesium.js)를 script로 1회 로드 → window.Cesium 반환.
+// 번들러로 소스를 재번들·재미니파이하지 않아 SWC의 octal-in-template 버그를 회피한다.
+let cesiumPromise: Promise<typeof CesiumNS> | null = null;
+function loadCesium(): Promise<typeof CesiumNS> {
+  if (window.Cesium) return Promise.resolve(window.Cesium);
+  if (cesiumPromise) return cesiumPromise;
+  cesiumPromise = new Promise((resolve, reject) => {
+    window.CESIUM_BASE_URL = "/cesium";
+    const s = document.createElement("script");
+    s.src = "/cesium/Cesium.js";
+    s.async = true;
+    s.onload = () =>
+      window.Cesium
+        ? resolve(window.Cesium)
+        : reject(new Error("Cesium 전역 미탑재"));
+    s.onerror = () => {
+      cesiumPromise = null; // 실패 시 재시도 가능하게
+      reject(new Error("Cesium 스크립트 로드 실패"));
+    };
+    document.head.appendChild(s);
+  });
+  return cesiumPromise;
+}
 
 export default function CesiumSpotGlobe({
   lat,
@@ -27,16 +59,13 @@ export default function CesiumSpotGlobe({
       setError("토큰 미설정");
       return;
     }
-    // CESIUM_BASE_URL은 cesium 로드 전에 지정해야 워커/에셋을 public/cesium에서 찾는다.
-    (window as unknown as { CESIUM_BASE_URL: string }).CESIUM_BASE_URL =
-      "/cesium";
 
     let cancelled = false;
-    let viewer: import("cesium").Viewer | null = null;
+    let viewer: CesiumNS.Viewer | null = null;
 
     (async () => {
       try {
-        const Cesium = await import("cesium");
+        const Cesium = await loadCesium();
         if (cancelled || !containerRef.current) return;
         Cesium.Ion.defaultAccessToken = TOKEN;
 

@@ -16,4 +16,7 @@ for (const d of ["Workers", "Assets", "ThirdParty", "Widgets"]) {
   const s = join(src, d);
   if (existsSync(s)) cpSync(s, join(dst, d), { recursive: true });
 }
+// prebuilt 엔트리(Cesium.js)도 복사 → 클라이언트가 script로 로드(번들 재미니파이 회피).
+const mainJs = join(src, "Cesium.js");
+if (existsSync(mainJs)) cpSync(mainJs, join(dst, "Cesium.js"));
 console.log("Cesium 에셋 → public/cesium/ 복사 완료");
