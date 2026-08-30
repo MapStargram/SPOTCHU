@@ -29,7 +29,7 @@
     "research:status": "tsx scripts/research-orchestrator.ts status",
     "research:doctor": "tsx scripts/research-orchestrator.ts doctor",
     "research:summary": "tsx scripts/research-orchestrator.ts summary",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate && node scripts/copy-cesium-assets.mjs"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
@@ -40,6 +40,7 @@
     "@prisma/client": "^6",
     "@vis.gl/react-google-maps": "^1.9.0",
     "bcryptjs": "^3.0.3",
+    "cesium": "^1.144.0",
     "cloudinary": "^2.11.0",
     "cobe": "^2.0.1",
     "globe.gl": "^2.46.2",

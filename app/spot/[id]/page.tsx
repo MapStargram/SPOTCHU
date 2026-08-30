@@ -8,6 +8,7 @@ import { CompareSlider } from "@/components/CompareSlider";
 import { SpotActions } from "@/components/SpotActions";
 import { SpotSaveHeart } from "@/components/spot/SpotSaveHeart";
 import { DirectionsButton } from "@/components/spot/DirectionsButton";
+import { Spot3DSection } from "@/components/spot/Spot3DSection";
 import { SafetyBanner } from "@/components/spot/SafetyBanner";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { Mascot } from "@/components/ui/Mascot";
@@ -151,6 +152,15 @@ export default async function SpotDetailScreen({
           {/* 길찾기 (§12 딥링크) */}
           {s.shooterLat != null && s.shooterLng != null && (
             <DirectionsButton lat={s.shooterLat} lng={s.shooterLng} />
+          )}
+
+          {/* 3D 위치 (온디맨드 Cesium 플라이오버 — 촬영자 위치 기준) */}
+          {s.shooterLat != null && s.shooterLng != null && (
+            <Spot3DSection
+              lat={s.shooterLat}
+              lng={s.shooterLng}
+              title={s.title}
+            />
           )}
 
           {/* Related work */}
