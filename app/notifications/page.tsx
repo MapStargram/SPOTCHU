@@ -28,7 +28,7 @@ export default async function NotificationsPage() {
       <div className="mx-auto w-full max-w-[500px] px-4 pb-28 pt-14 text-navy lg:max-w-[680px] lg:pb-12 lg:pt-8">
         <header className="flex items-center justify-between">
           <Link
-            href="/home/tokyo"
+            href="/home"
             aria-label="뒤로"
             className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-[shadow:var(--sh-card)] lg:hidden"
           >
@@ -67,7 +67,7 @@ export default async function NotificationsPage() {
               description="검수 결과와 배지 획득, 컬렉션 소식이 여기에 도착해요. 스팟을 저장하고 방문 인증부터 시작해 보세요."
               action={
                 <Link
-                  href="/explore/tokyo"
+                  href="/explore"
                   className="flex h-[52px] w-full items-center justify-center gap-2 rounded-2xl bg-coral font-ko text-[14px] font-bold tracking-[-0.01em] text-cream shadow-[shadow:var(--sh-cta-coral)] transition duration-150 active:scale-[0.98] active:bg-coral-deep"
                 >
                   스팟 둘러보기 →

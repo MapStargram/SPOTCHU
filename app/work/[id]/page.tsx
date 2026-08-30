@@ -78,7 +78,7 @@ export default async function WorkDetailScreen({
           />
           <div className="absolute inset-x-4 top-14 z-10 flex justify-between">
             <Link
-              href="/home/tokyo"
+              href="/home"
               aria-label="뒤로"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur"
             >
