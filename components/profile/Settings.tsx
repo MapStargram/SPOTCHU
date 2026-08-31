@@ -236,6 +236,7 @@ export function Settings({
                 ref={fileRef}
                 type="file"
                 accept="image/*"
+                aria-label="프로필 사진 선택"
                 hidden
                 onChange={(e) => {
                   const f = e.target.files?.[0];

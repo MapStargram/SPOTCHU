@@ -68,10 +68,14 @@ export function NewCollection() {
         {/* Fields */}
         <div className="mt-6 flex flex-col gap-5">
           <div>
-            <label className="mb-1.5 block font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+            <label
+              htmlFor="nc-title"
+              className="mb-1.5 block font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]"
+            >
               Title
             </label>
             <input
+              id="nc-title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               maxLength={40}
@@ -80,10 +84,14 @@ export function NewCollection() {
             />
           </div>
           <div>
-            <label className="mb-1.5 block font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+            <label
+              htmlFor="nc-desc"
+              className="mb-1.5 block font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]"
+            >
               Description (선택)
             </label>
             <textarea
+              id="nc-desc"
               value={desc}
               onChange={(e) => setDesc(e.target.value)}
               placeholder="이 여행에 대한 짧은 메모를 남겨보세요"
