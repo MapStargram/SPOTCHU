@@ -39,11 +39,14 @@ function sortFeed(spots: Spot[], chip: number, userPos: LatLng | null): Spot[] {
   return arr; // 전체
 }
 
+// 카테고리 필터 칩. 라벨은 데이터 categoryLabel과 정확히 일치해야 필터가 걸린다(포토 스팟 누락 시
+// 포토 카테고리 스팟이 지도에서 걸러지지 않는다). 데이터 4종(애니·드라마·랜드마크·포토)을 모두 포함.
 const MAP_CHIPS = [
   { label: "추천", dot: "var(--yellow)" },
   { label: "애니 성지", dot: "var(--mint)" },
   { label: "드라마", dot: "var(--coral)" },
   { label: "랜드마크", dot: "var(--navy-2)" },
+  { label: "포토 스팟", dot: "var(--coral-light)" },
 ];
 const FEED_CHIPS = [
   { label: "전체", dot: "var(--yellow)" },
