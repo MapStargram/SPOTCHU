@@ -63,7 +63,7 @@ export default function CesiumSpotGlobe({
   const containerRef = useRef<HTMLDivElement>(null);
   const [error, setError] = useState<string | null>(null);
   // HUD 라이브 값(카메라 이동에 따라 갱신)
-  const [alt, setAlt] = useState(1200);
+  const [alt, setAlt] = useState(600);
   const [hdg, setHdg] = useState(Math.round(heading));
   const [rec, setRec] = useState("--:--:--");
 
@@ -148,12 +148,12 @@ export default function CesiumSpotGlobe({
         };
         viewer.camera.changed.addEventListener(onCam);
 
-        // 촬영자 위치로 fly-to (건물이 입체로 보이게 낮고 더 기울인 오블리크 시점)
+        // 촬영자 위치로 fly-to (타이트한 오블리크: 낮은 고도 + 세운 각도로 스팟 주변 집중)
         viewer.camera.flyTo({
-          destination: Cesium.Cartesian3.fromDegrees(lng, lat, 900),
+          destination: Cesium.Cartesian3.fromDegrees(lng, lat, 600),
           orientation: {
             heading: Cesium.Math.toRadians(heading),
-            pitch: Cesium.Math.toRadians(-42),
+            pitch: Cesium.Math.toRadians(-52),
             roll: 0,
           },
           duration: 2.5,
