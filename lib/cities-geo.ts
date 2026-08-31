@@ -143,14 +143,25 @@ export function boxOf(pts: { lat: number; lng: number }[]): Box {
   const latMax = Math.max(...lats);
   const lngMin = Math.min(...lngs);
   const lngMax = Math.max(...lngs);
-  const padLat = Math.max((latMax - latMin) * 0.22, 7);
-  const padLng = Math.max((lngMax - lngMin) * 0.22, 7);
-  return {
+  // 여백을 작게 → 지역 국가들이 지도 프레임을 꽉 채워 마커가 넓게 퍼진다(빈 여백·밀집 감소).
+  const padLat = Math.max((latMax - latMin) * 0.12, 5);
+  const padLng = Math.max((lngMax - lngMin) * 0.12, 5);
+  const box: Box = {
     latMin: latMin - padLat,
     latMax: latMax + padLat,
     lngMin: lngMin - padLng,
     lngMax: lngMax + padLng,
   };
+  // 종횡비 상한: 넓게 퍼진 그룹('그 외' = 미국·호주·UAE)이 얇은 가로 스트립이 되지 않게 위도를 넓혀 보정.
+  const w = box.lngMax - box.lngMin;
+  const h = box.latMax - box.latMin;
+  const MAX_ASPECT = 2.2;
+  if (w / h > MAX_ASPECT) {
+    const add = (w / MAX_ASPECT - h) / 2;
+    box.latMin -= add;
+    box.latMax += add;
+  }
+  return box;
 }
 
 // 경위도 → 박스 내 백분율 좌표(좌상단 원점, y는 위도 반전).

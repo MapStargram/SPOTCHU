@@ -59,7 +59,9 @@ export function CityMap({ counts }: { counts?: Record<string, number> }) {
     () => new Map(countries.map((c) => [c.id, c])),
     [countries],
   );
-  const [region, setRegion] = useState<RegionId>("world");
+  // 기본은 아시아(스팟 대부분·주력 시장이 여기 → 첫 화면이 시원하게 펼쳐진 지역 지도).
+  // '전체'(세계 오버뷰)는 가로로 납작한 스트립이라 첫인상용으로 부적합.
+  const [region, setRegion] = useState<RegionId>("asia");
   const [openId, setOpenId] = useState<string | null>(null); // 다도시국 팝오버
 
   const box = useMemo(() => {
@@ -162,7 +164,7 @@ export function CityMap({ counts }: { counts?: Record<string, number> }) {
       {/* 지도 */}
       <div
         className="relative w-full overflow-hidden rounded-2xl border border-[color:var(--line)] bg-[#0b1424] shadow-[shadow:var(--sh-card)]"
-        style={{ aspectRatio: `${lngSpan} / ${latSpan}`, maxHeight: 300 }}
+        style={{ aspectRatio: `${lngSpan} / ${latSpan}`, maxHeight: 430 }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
