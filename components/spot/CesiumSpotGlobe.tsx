@@ -149,6 +149,10 @@ export default function CesiumSpotGlobe({
         viewer.camera.changed.addEventListener(onCam);
 
         // 촬영자 위치로 fly-to (타이트한 오블리크: 낮은 고도 + 세운 각도로 스팟 주변 집중)
+        // 모션 최소 선호 시 비행 애니메이션 생략(즉시 이동).
+        const reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
         viewer.camera.flyTo({
           destination: Cesium.Cartesian3.fromDegrees(lng, lat, 600),
           orientation: {
@@ -156,7 +160,7 @@ export default function CesiumSpotGlobe({
             pitch: Cesium.Math.toRadians(-52),
             roll: 0,
           },
-          duration: 2.5,
+          duration: reduceMotion ? 0 : 2.5,
           complete: onCam,
         });
       } catch (e) {
@@ -178,13 +182,21 @@ export default function CesiumSpotGlobe({
 
   const showHud = !error;
   return (
-    <div className="relative h-[360px] w-full overflow-hidden rounded-2xl bg-navy">
+    <div
+      role="img"
+      aria-label={`${title} 3D 위성 지도`}
+      className="relative h-[360px] w-full overflow-hidden rounded-2xl bg-navy"
+    >
       <div ref={containerRef} className="h-full w-full" />
 
       {showHud && (
-        // God's Eye 크롬. 전부 pointer-events-none → Cesium 드래그/줌 그대로.
+        // God's Eye 크롬(장식). 전부 pointer-events-none → Cesium 드래그/줌 그대로.
+        // aria-hidden: 스크린리더엔 장식 HUD 미노출(지도 설명은 컨테이너 aria-label).
         // 하단 저작자표시(Cesium/Bing) 영역은 가리지 않게 여백을 둔다.
-        <div className="pointer-events-none absolute inset-0 z-10 font-mono text-cream">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 z-10 font-mono text-cream"
+        >
           {/* 원형 비네트(포트홀) */}
           <div
             className="absolute inset-0"
