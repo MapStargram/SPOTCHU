@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T01:18:56.840Z",
+  "generatedAt": "2026-08-31T01:37:33.394Z",
   "spots": [
     {
       "id": "amsterdam-damrak-waterfront-dancing-houses-9f12",
@@ -143,7 +143,13 @@
       "workId": "eat-pray-love",
       "scene": "파당파당 비치에서 촬영된 리즈와 펠리페의 해변 장면. 영화 속 바는 촬영용 임시 세트.",
       "verified": "reported",
-      "source": "https://travel.detik.com/cerita-perjalanan/d-5394662/pantai-di-bali-yang-jadi-tempat-syuting-film-eat-pray-love"
+      "source": "https://travel.detik.com/cerita-perjalanan/d-5394662/pantai-di-bali-yang-jadi-tempat-syuting-film-eat-pray-love",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140012/spotchu/spots/h57vei5dmdus9qqolnct.jpg",
+      "imageCredit": {
+        "author": "TMFalkner",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=79127956"
+      }
     },
     {
       "id": "bali-pura-lempuyang-gates-of-heaven-7d2c",
@@ -181,7 +187,13 @@
       "workId": "memories-of-bali",
       "scene": "울루와뚜 사원이 드라마 촬영지로 알려진 broad association; 제출된 구체적 에피소드 동선은 후속 프레임 확인 필요.",
       "verified": "reported",
-      "source": "https://www.beautyhankook.com/news/articleView.html?idxno=20422"
+      "source": "https://www.beautyhankook.com/news/articleView.html?idxno=20422",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140013/spotchu/spots/duqlfqcwwvt1t6etjd2r.jpg",
+      "imageCredit": {
+        "author": "williamcho",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/84493444@N00/2688013935"
+      }
     },
     {
       "id": "bangkok-khlong-ong-ang-king-the-land-3f4d",
@@ -574,7 +586,13 @@
       "workId": "the-queens-gambit",
       "scene": "Season 1 episode 7 finale association with the Moscow park chess scene; exact path and table position remain for review",
       "verified": "reported",
-      "source": "https://www.tip-berlin.de/kino-stream/damengambit-berlin-drehorte-queens-gambit/"
+      "source": "https://www.tip-berlin.de/kino-stream/damengambit-berlin-drehorte-queens-gambit/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140014/spotchu/spots/oz39gez8d5y370uva2pc.jpg",
+      "imageCredit": {
+        "author": "dalbera",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/72746018@N00/9628765094"
+      }
     },
     {
       "id": "berlin-marie-elisabeth-lueders-haus-oculum-03",
@@ -872,7 +890,13 @@
       "workId": "cant-help-falling-in-love",
       "scene": "Boljoon Church facade/plaza scene association; exact frame match remains for review.",
       "verified": "reported",
-      "source": "https://entertainment.inquirer.net/222397/kathniel-travels-to-scenic-cebu-for-cant-help-falling-in-love"
+      "source": "https://entertainment.inquirer.net/222397/kathniel-travels-to-scenic-cebu-for-cant-help-falling-in-love",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140251/spotchu/spots/cmtywbpj8fs2sveme3kj.jpg",
+      "imageCredit": {
+        "author": "Adamdaley",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=56641667"
+      }
     },
     {
       "id": "cebu-sirao-hand-of-god-7f2a",
@@ -1046,7 +1070,13 @@
       "workId": "the-protege",
       "scene": "다낭 용다리가 직접 등장하는 도시 전경 촬영지; 정확한 프레임은 관리자 검토 필요",
       "verified": "reported",
-      "source": "https://tuoitre.vn/cau-rong-da-nang-xuat-hien-trong-phim-hanh-dong-my-co-da-nu-goc-viet-maggie-q-20210901085301081.htm"
+      "source": "https://tuoitre.vn/cau-rong-da-nang-xuat-hien-trong-phim-hanh-dong-my-co-da-nu-goc-viet-maggie-q-20210901085301081.htm",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140024/spotchu/spots/tggfhsx2b7cg6egel39v.jpg",
+      "imageCredit": {
+        "author": "lightwrite",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/77442936@N00/14568154543"
+      }
     },
     {
       "id": "danang-golden-bridge-giant-hands-02",
@@ -1217,7 +1247,13 @@
       "workId": "hannibal",
       "scene": "Pazzi washes blood from his hands at Fontana del Porcellino",
       "verified": "reported",
-      "source": "https://www.movie-locations.com/movies/h/Hannibal.php"
+      "source": "https://www.movie-locations.com/movies/h/Hannibal.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140025/spotchu/spots/xtwrrn0xfipuoohj2reu.jpg",
+      "imageCredit": {
+        "author": "Andy Hay",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/29172291@N00/9783801103"
+      }
     },
     {
       "id": "florence-giardino-delle-rose-folon-partir-frame-c4b2",
@@ -1232,7 +1268,13 @@
       "lens": "35-50mm",
       "time": "late afternoon / golden hour",
       "verified": "reported",
-      "source": "https://www.feelflorence.it/it/node/14878"
+      "source": "https://www.feelflorence.it/it/node/14878",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140026/spotchu/spots/paasb3nqyx6kfi9s1gdl.jpg",
+      "imageCredit": {
+        "author": "Marco Bellucci",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/50451886@N00/14978638738"
+      }
     },
     {
       "id": "florence-ponte-santa-trinita-ponte-vecchio-view-e8a1",
@@ -2026,7 +2068,13 @@
       "lens": "24-70mm, 70-200mm",
       "time": "일몰 직후 매직아워 및 맑은 동절기 저녁",
       "verified": "reported",
-      "source": "https://www.feel-kobe.jp/facilities/detail.php?code=0000000140"
+      "source": "https://www.feel-kobe.jp/facilities/detail.php?code=0000000140",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140043/spotchu/spots/sxjrmvdlnjlmqhnn5ko9.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=7381169"
+      }
     },
     {
       "id": "kobe-ninomiya-market-suzume-b82e",
@@ -2597,7 +2645,13 @@
       "workId": "im-sorry-i-love-you",
       "scene": "호지어 레인 그래피티 골목과 연결된 장면으로 알려진 2004년 KBS2 드라마 촬영지 주장; 정확한 구간은 현장 대조 필요",
       "verified": "reported",
-      "source": "https://www.melbourne.vic.gov.au/arts-and-culture/art-outdoors/Pages/street-art.aspx"
+      "source": "https://www.melbourne.vic.gov.au/arts-and-culture/art-outdoors/Pages/street-art.aspx",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140045/spotchu/spots/dke1jfymli4648xolr1n.jpg",
+      "imageCredit": {
+        "author": "Tiws",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/43164453@N08/6859457547"
+      }
     },
     {
       "id": "melbourne-pin-oak-court-ramsay-street-8f4a",
@@ -2711,7 +2765,13 @@
       "workId": "suspiria",
       "scene": "다니엘이 밤의 쾨니히스플라츠를 걷고 안내견에게 공격받는 장면",
       "verified": "reported",
-      "source": "https://www.movie-locations.com/movies/s/Suspiria-1977.php"
+      "source": "https://www.movie-locations.com/movies/s/Suspiria-1977.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140048/spotchu/spots/xew2vplbztpjxbgy5lqg.jpg",
+      "imageCredit": {
+        "author": "David Holt London",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=73026959"
+      }
     },
     {
       "id": "munich-lmu-lichthof-sophie-scholl-8f2a",
@@ -4004,7 +4064,13 @@
       "workId": "lovers-in-prague-2005",
       "scene": "얀 후스 기념비 하단에 임시 설치된 소원의 벽 장면",
       "verified": "reported",
-      "source": "https://www.travie.com/news/articleView.html?idxno=7671"
+      "source": "https://www.travie.com/news/articleView.html?idxno=7671",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140050/spotchu/spots/mtnutdod3bp8n9obrjnb.jpg",
+      "imageCredit": {
+        "author": "Debarshi Ray",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/39423133@N04/7471680128"
+      }
     },
     {
       "id": "prague-mission-impossible-kampa-stairs-m7f2",
@@ -4095,7 +4161,13 @@
       "lens": "50mm or 24-70mm",
       "time": "Sunset and blue hour",
       "verified": "official",
-      "source": "https://www.explorest.com/places/italy/rome/ponte-umberto-bridge-view-of-vatican-city-river-tiber"
+      "source": "https://www.explorest.com/places/italy/rome/ponte-umberto-bridge-view-of-vatican-city-river-tiber",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140051/spotchu/spots/kpt3nmrtfumyl28skn4p.jpg",
+      "imageCredit": {
+        "author": "Dave Hamster",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/14265068@N00/2974933466"
+      }
     },
     {
       "id": "rome-spanish-steps-roman-holiday-gelato-e91a",
@@ -4112,7 +4184,13 @@
       "workId": "roman-holiday",
       "scene": "스페인 계단에서 앤 공주와 조 브래들리가 만나는 장면",
       "verified": "reported",
-      "source": "https://www.turismoroma.it/it/luoghi/piazza-di-spagna"
+      "source": "https://www.turismoroma.it/it/luoghi/piazza-di-spagna",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140056/spotchu/spots/h6woxf17ediqmpzp0mk2.jpg",
+      "imageCredit": {
+        "author": "2pi.pl",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=15202594"
+      }
     },
     {
       "id": "rome-trevi-fountain-la-dolce-vita-midnight-b47c",
@@ -4129,7 +4207,13 @@
       "workId": "la-dolce-vita",
       "scene": "안ita 에크베르그의 트레비 분수 장면",
       "verified": "reported",
-      "source": "https://www.turismoroma.it/it/luoghi/fontana-di-trevi"
+      "source": "https://www.turismoroma.it/it/luoghi/fontana-di-trevi",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140057/spotchu/spots/xygrirhybcdtx4vt21xc.jpg",
+      "imageCredit": {
+        "author": "Grace.Donaghue",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/30774016@N00/6809920326"
+      }
     },
     {
       "id": "rome-via-nicola-salvi-colosseum-7d4f",
@@ -4883,7 +4967,13 @@
       "workId": "the-matrix",
       "scene": "마틴 플레이스 분수 주변의 빨간 드레스 장면",
       "verified": "reported",
-      "source": "https://www.movie-locations.com/movies/m/Matrix.php"
+      "source": "https://www.movie-locations.com/movies/m/Matrix.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140058/spotchu/spots/qqwgplauwtlpoecqllai.jpg",
+      "imageCredit": {
+        "author": "avlxyz",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/10559879@N00/3814472582"
+      }
     },
     {
       "id": "taipei-eatdrink-grandhotel-lobby-03",
@@ -4900,7 +4990,13 @@
       "workId": "eat-drink-man-woman-yi-yi",
       "scene": "Grand Hotel entrance/lobby filming context",
       "verified": "reported",
-      "source": "https://www.filmcommission.taipei/film-location/the-grand-hotel"
+      "source": "https://www.filmcommission.taipei/film-location/the-grand-hotel",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140061/spotchu/spots/hqdu3p4wycqpw7d1mygh.jpg",
+      "imageCredit": {
+        "author": "立羽（Yi-Ting Chen）",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=116953362"
+      }
     },
     {
       "id": "taipei-in-time-with-you-jiannan-mountain-4e92",
@@ -4957,7 +5053,13 @@
       "workId": "monga",
       "scene": "Bopiliao Lane 173 historic-block scene",
       "verified": "reported",
-      "source": "https://www.filmcommission.taipei/film-location/taipei-historic-bopiliao-kangding-road-173"
+      "source": "https://www.filmcommission.taipei/film-location/taipei-historic-bopiliao-kangding-road-173",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140069/spotchu/spots/otwv6hbhy1vxnncxbpkf.jpg",
+      "imageCredit": {
+        "author": "HSIAO, WEN-CHIEN",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=82719219"
+      }
     },
     {
       "id": "taipei-sisinancun-lawn-101-c3d4",
@@ -5355,7 +5457,13 @@
       "workId": "indiana-jones-last-crusade",
       "scene": "산 바르나바 성당 외관이 영화 속 베네치아 도서관 외관으로 사용된 장면과 광장 촬영지",
       "verified": "reported",
-      "source": "https://en.wikipedia.org/wiki/San_Barnaba,_Venice"
+      "source": "https://en.wikipedia.org/wiki/San_Barnaba,_Venice",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140070/spotchu/spots/ztgpqfjjgwq8c1vcqw3d.jpg",
+      "imageCredit": {
+        "author": "Nick Bramhall",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/53725815@N00/2734996070"
+      }
     },
     {
       "id": "venice-molo-san-marco-gondolas-san-giorgio-6d1b",
@@ -5429,7 +5537,13 @@
       "workId": "othello",
       "scene": "오손 웰스의 오셀로에서 브라반시오 저택으로 등장하며 나선형 계단탑이 두드러지는 장면",
       "verified": "reported",
-      "source": "https://www.italyformovies.it/itinerari/detail/7036/cinegastronomia-il-veneto-degli-artisti"
+      "source": "https://www.italyformovies.it/itinerari/detail/7036/cinegastronomia-il-veneto-degli-artisti",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788140253/spotchu/spots/qadj301w62bxpkz6s1dq.jpg",
+      "imageCredit": {
+        "author": "Didier Descouens",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=37574786"
+      }
     },
     {
       "id": "yokohama-bankoku-bridge-skyline-f4a1",
