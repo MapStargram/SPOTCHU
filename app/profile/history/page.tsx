@@ -12,7 +12,7 @@ export default async function HistoryPage() {
   const rows = await getVisitHistory();
   return (
     <AppShell active="profile">
-      <div className="mx-auto w-full max-w-[500px] px-5 pb-28 pt-14 lg:max-w-[720px] lg:px-8 lg:pb-12 lg:pt-6">
+      <div className="mx-auto w-full max-w-[500px] px-5 pb-28 pt-safe-top lg:max-w-[720px] lg:px-8 lg:pb-12 lg:pt-6">
         <header className="flex items-center gap-2.5 text-navy">
           <Link
             href="/profile"

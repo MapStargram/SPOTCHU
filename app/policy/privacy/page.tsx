@@ -36,7 +36,7 @@ const ITEMS = [
 export default function PrivacyPolicyPage() {
   return (
     <AppShell>
-      <div className="mx-auto flex w-full max-w-[560px] flex-col px-5 pb-28 pt-14 text-navy lg:max-w-[720px] lg:pb-14 lg:pt-8">
+      <div className="mx-auto flex w-full max-w-[560px] flex-col px-5 pb-28 pt-safe-top text-navy lg:max-w-[720px] lg:pb-14 lg:pt-8">
         <header className="flex items-center gap-2.5">
           <Link
             href="/profile/settings"

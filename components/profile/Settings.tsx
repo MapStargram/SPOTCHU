@@ -95,7 +95,7 @@ export function Settings({
 
   return (
     <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-4 pb-10 pt-14">
+      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-4 pb-10 pt-safe-top">
         <header className="mb-6 flex items-center gap-2.5 text-navy">
           <Link
             href="/profile"

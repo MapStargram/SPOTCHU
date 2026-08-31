@@ -22,6 +22,11 @@ const config: Config = {
         latin: "var(--font-latin)",
         mono: "var(--font-mono)",
       },
+      spacing: {
+        // iOS PWA(viewport-fit=cover) 상단 노치/상태바 인셋 + 16px. 전 화면 상단 여백의
+        // 단일 원천(#62). pt-safe-top 하나로 관리해 화면마다 재구현하다 새는 것을 막는다.
+        "safe-top": "calc(1rem + env(safe-area-inset-top))",
+      },
     },
   },
   plugins: [],

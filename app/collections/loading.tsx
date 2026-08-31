@@ -2,7 +2,7 @@
 export default function CollectionsLoading() {
   return (
     <div className="min-h-dvh bg-[color:var(--cream-2)] lg:pl-[76px]">
-      <div className="mx-auto w-full max-w-[500px] px-4 pt-14 lg:max-w-[900px] lg:pt-8">
+      <div className="mx-auto w-full max-w-[500px] px-4 pt-safe-top lg:max-w-[900px] lg:pt-8">
         <div className="h-8 w-32 animate-pulse rounded-lg bg-[color:var(--line)]" />
         <div className="mt-6 h-11 w-full animate-pulse rounded-full bg-[color:var(--line)]" />
         <div className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-3">

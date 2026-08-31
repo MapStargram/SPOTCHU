@@ -25,7 +25,7 @@ export default async function NotificationsPage() {
 
   return (
     <AppShell active="notifications">
-      <div className="mx-auto w-full max-w-[500px] px-4 pb-28 pt-14 text-navy lg:max-w-[680px] lg:pb-12 lg:pt-8">
+      <div className="mx-auto w-full max-w-[500px] px-4 pb-28 pt-safe-top text-navy lg:max-w-[680px] lg:pb-12 lg:pt-8">
         <header className="flex items-center justify-between">
           <Link
             href="/home"

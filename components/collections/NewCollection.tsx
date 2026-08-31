@@ -32,7 +32,7 @@ export function NewCollection() {
 
   return (
     <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pt-14 text-navy">
+      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pt-safe-top text-navy">
         <header className="flex items-center justify-between">
           <button
             onClick={() => router.back()}
