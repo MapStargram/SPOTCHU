@@ -4,79 +4,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChevronRight, Globe2 } from "lucide-react";
 import type { GlobeInstance } from "globe.gl";
-import { CITIES, CITY_CENTER } from "@/lib/mock";
+import { buildCountries, type Datum } from "@/lib/cities-geo";
 
-// 도시 선택 지구본(globe.gl). 나라 마커 → 나라 클릭 시 그 나라로 줌인 + 도시 마커를 정확한 좌표에 표시.
-// 도시 마커/버튼 클릭 → /home/[city]. "전체 지구본"으로 줌아웃. globe.gl은 window를 쓰므로 동적 import.
-type City = {
-  id: string;
-  name: string;
-  spots?: number;
-  available: boolean;
-  lat: number;
-  lng: number;
-};
-type Country = {
-  id: string;
-  name: string;
-  nameEn: string;
-  lat: number;
-  lng: number;
-  cities: City[];
-};
-// 지구본 마커로 쓰는 공통 형태(나라=cities 있음 / 도시=available 있음)
-type Datum = Partial<Country> &
-  Partial<City> & { name: string; lat: number; lng: number };
-
-// 국가 마커 메타(한국어 국가명 기준). 도시 목록은 lib/mock 의 CITIES/CITY_CENTER 에서 동적으로
-// 그룹핑한다 → 새 도시를 mock 에 추가하면 /city 지구본에 자동으로 나타난다(하드코딩 아님).
-const COUNTRY_META: Record<
-  string,
-  { id: string; nameEn: string; lat: number; lng: number }
-> = {
-  일본: { id: "jp", nameEn: "JAPAN", lat: 36.5, lng: 138.2 },
-  한국: { id: "kr", nameEn: "KOREA", lat: 36.5, lng: 127.8 },
-  대만: { id: "tw", nameEn: "TAIWAN", lat: 23.7, lng: 121.0 },
-  홍콩: { id: "hk", nameEn: "HONG KONG", lat: 22.32, lng: 114.17 },
-  태국: { id: "th", nameEn: "THAILAND", lat: 15.0, lng: 101.0 },
-  싱가포르: { id: "sg", nameEn: "SINGAPORE", lat: 1.35, lng: 103.82 },
-  프랑스: { id: "fr", nameEn: "FRANCE", lat: 46.6, lng: 2.2 },
-  영국: { id: "gb", nameEn: "UK", lat: 54.0, lng: -2.0 },
-  미국: { id: "us", nameEn: "USA", lat: 39.0, lng: -98.0 },
-  스페인: { id: "es", nameEn: "SPAIN", lat: 40.0, lng: -3.7 },
-  베트남: { id: "vn", nameEn: "VIETNAM", lat: 16.0, lng: 107.5 },
-  인도네시아: { id: "id", nameEn: "INDONESIA", lat: -2.5, lng: 118.0 },
-  필리핀: { id: "ph", nameEn: "PHILIPPINES", lat: 12.8, lng: 121.8 },
-  이탈리아: { id: "it", nameEn: "ITALY", lat: 42.5, lng: 12.5 },
-  독일: { id: "de", nameEn: "GERMANY", lat: 51.0, lng: 10.0 },
-  체코: { id: "cz", nameEn: "CZECHIA", lat: 49.8, lng: 15.5 },
-  네덜란드: { id: "nl", nameEn: "NETHERLANDS", lat: 52.1, lng: 5.3 },
-  호주: { id: "au", nameEn: "AUSTRALIA", lat: -25.0, lng: 133.0 },
-  아랍에미리트: { id: "ae", nameEn: "UAE", lat: 24.0, lng: 54.0 },
-};
-
-// 국가별 도시 그룹 빌드. available = 실제 서비스(스팟 보유) 도시만 — 미시딩 도시는 "준비 중"으로
-// 표시하고 진입을 막는다(코드 카탈로그 20 ⊋ DB 시딩. /home/<미시딩> 404 방지, 시딩되면 자동 활성).
-function buildCountries(counts?: Record<string, number>): Country[] {
-  return Object.entries(COUNTRY_META)
-    .map(([krName, m]) => ({
-      id: m.id,
-      name: krName,
-      nameEn: m.nameEn,
-      lat: m.lat,
-      lng: m.lng,
-      cities: CITIES.filter((c) => c.country === krName).map((c) => ({
-        id: c.id,
-        name: c.name,
-        spots: counts?.[c.id] ?? c.spotCount,
-        available: (counts?.[c.id] ?? 0) > 0,
-        lat: CITY_CENTER[c.id].lat,
-        lng: CITY_CENTER[c.id].lng,
-      })),
-    }))
-    .filter((co) => co.cities.length > 0);
-}
-
+// 도시 선택 지구본(globe.gl) — 평면 지도(CityMap)의 대안 뷰. 나라 마커 → 나라 클릭 시 그 나라로
+// 줌인 + 도시 마커를 정확한 좌표에 표시. 도시 마커/버튼 클릭 → /home/[city]. "전체 지구본"으로 줌아웃.
+// globe.gl은 window를 쓰므로 동적 import. 마커 데이터/카메라는 open 변화에 따라 별도 effect에서 갱신.
 export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const globeRef = useRef<GlobeInstance | null>(null);
@@ -243,7 +175,9 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
                 aria-label={`${country.name} ${country.cities.length}개 도시`}
                 className="flex w-full items-center gap-2.5 rounded-2xl border border-[color:var(--line)] bg-white px-3 py-3 text-left shadow-[shadow:var(--sh-card)] transition active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--coral-light)]"
               >
-                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-coral" />
+                <span aria-hidden className="shrink-0 text-[18px]">
+                  {country.flag}
+                </span>
                 <span className="min-w-0 flex-1">
                   <span className="block font-latin text-[9px] font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">
                     {country.nameEn} · {country.cities.length}

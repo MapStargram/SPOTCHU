@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
 import { MobileScreen } from "@/components/ui/MobileScreen";
-import { CityGlobe } from "@/components/city/CityGlobe";
+import { CityPicker } from "@/components/city/CityPicker";
 import { getCitySpotCounts } from "@/lib/data";
 
-// B1 · 도시 선택 — 인터랙티브 지구본(globe.gl)에서 도시를 골라 진입.
+// B1 · 도시 선택 — 기본 평면 세계지도(전 국가 마커 한눈에) + 지구본 토글. CityPicker가 두 뷰를 전환.
 // 도시별 스팟 수는 실데이터(DB/목업)에서 집계해 카드에 표시(하드코딩 데모값 아님).
 export const dynamic = "force-dynamic";
 
@@ -29,11 +29,11 @@ export default async function CityPickerScreen() {
           떠나볼까요?
         </h1>
         <p className="mt-2 text-[13px] text-[color:var(--muted)]">
-          지구본을 돌려 도시를 골라보세요
+          지도에서 도시를 골라보세요
         </p>
       </header>
 
-      <CityGlobe counts={counts} />
+      <CityPicker counts={counts} />
     </MobileScreen>
   );
 }
