@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { ChevronRight, Globe2 } from "lucide-react";
+import { Globe2 } from "lucide-react";
 import type { GlobeInstance } from "globe.gl";
 import { buildCountries, type Datum } from "@/lib/cities-geo";
 
@@ -113,7 +113,7 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
 
   return (
     <div className="flex flex-col items-center">
-      <div ref={containerRef} className="aspect-square w-full max-w-[340px]" />
+      <div ref={containerRef} className="aspect-square w-full max-w-[288px]" />
 
       {selected ? (
         <div className="w-full max-w-[360px]">
@@ -167,29 +167,25 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
           </ul>
         </div>
       ) : (
-        <ul className="grid w-full max-w-[360px] grid-cols-2 gap-2">
+        // 나라를 칩으로 감싸(flex-wrap) 세로 스크롤을 최소화 — 폭에 맞춰 줄바꿈되어 반응형.
+        // (예전엔 19개 × 2열 카드 = 10줄로 길게 스크롤됐다.)
+        <ul className="mt-4 flex w-full max-w-[380px] flex-wrap justify-center gap-2">
           {countries.map((country) => (
             <li key={country.id}>
               <button
                 onClick={() => setOpen(country.id)}
                 aria-label={`${country.name} ${country.cities.length}개 도시`}
-                className="flex w-full items-center gap-2.5 rounded-2xl border border-[color:var(--line)] bg-white px-3 py-3 text-left shadow-[shadow:var(--sh-card)] transition active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--coral-light)]"
+                className="flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white py-2 pl-3 pr-3.5 shadow-[shadow:var(--sh-card)] transition active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--coral-light)]"
               >
-                <span aria-hidden className="shrink-0 text-[18px]">
+                <span aria-hidden className="text-[15px] leading-none">
                   {country.flag}
                 </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block font-latin text-[9px] font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">
-                    {country.nameEn} · {country.cities.length}
-                  </span>
-                  <span className="block truncate text-[15px] font-extrabold tracking-[-0.02em] text-navy">
-                    {country.name}
-                  </span>
+                <span className="text-[13px] font-bold tracking-[-0.01em] text-navy">
+                  {country.name}
                 </span>
-                <ChevronRight
-                  size={16}
-                  className="shrink-0 text-[color:var(--muted)]"
-                />
+                <span className="font-latin text-[11px] font-bold text-[color:var(--muted)]">
+                  {country.cities.length}
+                </span>
               </button>
             </li>
           ))}
