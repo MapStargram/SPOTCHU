@@ -16,12 +16,16 @@ import { type Spot } from "@/lib/mock";
 // F1~F6 · GPS 방문 인증 플로우. 실제 브라우저 Geolocation 사용.
 // 정책(PRD §17): 반경 100m + accuracy ≤ 50m. 원시 좌표는 저장하지 않음(프로토타입: 판정 후 버림).
 const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+// 남은 거리 표기: 1km 이상은 km로(1524m → 1.5km).
+const fmtDist = (m: number) =>
+  m >= 1000 ? `${(m / 1000).toFixed(1)}km` : `${m}m`;
 type Phase =
   | "start"
   | "acquiring"
   | "success"
   | "range"
   | "accuracy"
+  | "failed" // 측위 실패(신호 약함·시간초과) — 정확도 초과(accuracy)와 구분
   | "permission"
   | "cooldown"
   | "blocked";
@@ -74,15 +78,17 @@ export function CheckinFlow({
             setPhase("blocked");
           } else if (res.reason === "unauthenticated") {
             router.push("/login");
+          } else if (res.reason === "not_found") {
+            back(); // 스팟이 사라짐 → 상세로(그 페이지가 브랜드 404 처리)
           } else {
             setPhase("permission");
           }
         });
       },
       (err) => {
-        setPhase(
-          err.code === err.PERMISSION_DENIED ? "permission" : "accuracy",
-        );
+        // 측위 실패(POSITION_UNAVAILABLE·TIMEOUT)는 '정확도 낮음'과 다르다(좌표 자체를 못 얻음).
+        // 정확도 초과는 좌표를 얻은 뒤 서버가 reason:"accuracy"로 판정한다.
+        setPhase(err.code === err.PERMISSION_DENIED ? "permission" : "failed");
       },
       { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 },
     );
@@ -285,7 +291,9 @@ export function CheckinFlow({
       title: "아직 도착하지 않았어요",
       body: (
         <>
-          스팟에서 <b className="text-coral">{dist ?? "?"}m</b> 떨어져 있어요.
+          스팟에서{" "}
+          <b className="text-coral">{dist != null ? fmtDist(dist) : "?m"}</b>{" "}
+          떨어져 있어요.
           <br />
           인증은 <b>100m 이내</b>에서만 가능해요.
         </>
@@ -305,6 +313,19 @@ export function CheckinFlow({
           이내가 필요해요.
           <br />
           실외로 이동한 뒤 다시 시도해 주세요.
+        </>
+      ),
+      primary: "다시 시도",
+    },
+    failed: {
+      mascot: "chu-expression-curious" as const,
+      icon: null,
+      title: "위치를 확인하지 못했어요",
+      body: (
+        <>
+          GPS 신호가 약하거나 시간이 초과됐어요.
+          <br />
+          실외에서 잠시 후 다시 시도해 주세요.
         </>
       ),
       primary: "다시 시도",
