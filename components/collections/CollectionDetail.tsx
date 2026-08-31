@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useFocusTrap } from "@/lib/useFocusTrap";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -49,6 +50,8 @@ export function CollectionDetail({
   const owned = col.isOwn && !col.isOfficial; // 내 컬렉션만 편집·삭제
   // 관리 시트(이름변경·공유범위·삭제) — 소유자 전용
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  useFocusTrap(menuOpen && owned, menuRef, () => setMenuOpen(false));
   const [title, setTitle] = useState(col.title);
   const [vis, setVis] = useState<"PRIVATE" | "LINK">(
     col.visibility ?? "PRIVATE",
@@ -437,7 +440,11 @@ export function CollectionDetail({
             aria-label="닫기"
             onClick={() => setMenuOpen(false)}
           />
-          <div className="relative z-10 w-full max-w-[500px] rounded-t-[26px] bg-cream px-5 pb-9 pt-3 shadow-[shadow:var(--sh-elevated)] lg:max-w-[720px]">
+          <div
+            ref={menuRef}
+            tabIndex={-1}
+            className="relative z-10 w-full max-w-[500px] rounded-t-[26px] bg-cream px-5 pb-9 pt-3 shadow-[shadow:var(--sh-elevated)] outline-none lg:max-w-[720px]"
+          >
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line)]" />
             <h2 className="px-1 text-[15px] font-extrabold tracking-[-0.01em] text-navy">
               컬렉션 관리

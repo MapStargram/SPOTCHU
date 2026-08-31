@@ -22,6 +22,7 @@ import {
   updateAvatarAction,
 } from "@/lib/actions/profile";
 import { uploadImageFile } from "@/lib/client-upload";
+import { useFocusTrap } from "@/lib/useFocusTrap";
 
 // G4 · 설정. 닉네임 편집·연결 로그인은 실제 DB, 미구현 기능(다크/언어/알림)은 "준비중"으로 표기.
 const AUTH_ENABLED = process.env.NEXT_PUBLIC_AUTH_ENABLED === "true";
@@ -50,6 +51,8 @@ export function Settings({
   const [avatar, setAvatar] = useState(profile?.image ?? null);
   const [photoBusy, setPhotoBusy] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
+  const editRef = useRef<HTMLDivElement>(null);
+  useFocusTrap(editing, editRef, () => setEditing(false));
 
   const openEdit = () => {
     if (!profile) return router.push("/login");
@@ -200,7 +203,11 @@ export function Settings({
             onClick={() => setEditing(false)}
             className="absolute inset-0 bg-[rgba(23,35,60,0.5)]"
           />
-          <div className="relative z-10 w-full max-w-[430px] rounded-t-[28px] bg-cream px-6 pb-8 pt-5 text-navy">
+          <div
+            ref={editRef}
+            tabIndex={-1}
+            className="relative z-10 w-full max-w-[430px] rounded-t-[28px] bg-cream px-6 pb-8 pt-5 text-navy outline-none"
+          >
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line-strong)]" />
             <div className="text-[18px] font-extrabold tracking-[-0.02em]">
               프로필 편집

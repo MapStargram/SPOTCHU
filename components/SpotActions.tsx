@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Bookmark, Plus, Check, LogIn } from "lucide-react";
 import { CoralButton } from "./ui/CoralButton";
+import { useFocusTrap } from "@/lib/useFocusTrap";
 import {
   saveSpotAction,
   removeSpotAction,
@@ -39,16 +40,8 @@ export function SpotActions({
   const [saving, setSaving] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
 
-  // 다이얼로그 a11y: 열리면 시트로 포커스 이동, Esc로 닫기.
-  useEffect(() => {
-    if (!open) return;
-    panelRef.current?.focus();
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [open]);
+  // 다이얼로그 a11y: 포커스 진입·Esc·포커스 트랩·트리거 복귀(공통 훅).
+  useFocusTrap(open, panelRef, () => setOpen(false));
 
   // 열 때마다 최신 서버 props로 재동기화(저장 후 router.refresh 반영).
   const openSheet = () => {

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { LucideIcon } from "lucide-react";
 import { Sunrise, Sun, Sunset, Moon } from "lucide-react";
 import { CoralButton } from "../ui/CoralButton";
+import { useFocusTrap } from "@/lib/useFocusTrap";
 import { CATEGORY_ICONS } from "@/lib/categories";
 import { CATEGORY_FILTERS, VERIFY_FILTERS, TIME_FILTERS } from "@/lib/mock";
 
@@ -110,6 +111,8 @@ export function FilterSheet({
     setNearby(false);
   };
 
+  const panelRef = useRef<HTMLDivElement>(null);
+  useFocusTrap(open, panelRef, onClose);
   if (!open) return null;
   return (
     <div
@@ -122,7 +125,11 @@ export function FilterSheet({
         onClick={onClose}
         className="absolute inset-0 bg-[rgba(23,35,60,0.5)]"
       />
-      <div className="relative z-10 max-h-[82%] w-full max-w-[430px] overflow-y-auto rounded-t-[28px] bg-cream px-6 pb-8 pt-5 text-navy">
+      <div
+        ref={panelRef}
+        tabIndex={-1}
+        className="relative z-10 max-h-[82%] w-full max-w-[430px] overflow-y-auto rounded-t-[28px] bg-cream px-6 pb-8 pt-5 text-navy outline-none"
+      >
         <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line-strong)]" />
         <div className="mb-5 flex items-baseline justify-between">
           <div className="text-[20px] font-extrabold tracking-[-0.02em]">
