@@ -56,13 +56,17 @@ export default async function HomeScreen({
     notFound();
   }
 
-  const all = await getSpotsByCity(city as CityId);
   const heroId = CITY_HERO[city as CityId];
-  const heroSpot = (heroId ? await getSpot(heroId) : undefined) ?? all[0];
+  // getCity 가드(리다이렉트) 이후는 서로 독립 — 순차 await 대신 병렬 로드.
+  const [all, heroMaybe, user, savedIds] = await Promise.all([
+    getSpotsByCity(city as CityId),
+    heroId ? getSpot(heroId) : Promise.resolve(undefined),
+    getCurrentUser(),
+    getSavedSpotIds(), // 로그인 시 DB, 게스트는 []
+  ]);
+  const heroSpot = heroMaybe ?? all[0];
   if (!heroSpot) notFound(); // 스팟이 아직 없는 도시
   const gridSpots = all.filter((s) => s.id !== heroSpot.id);
-  const user = await getCurrentUser();
-  const savedIds = await getSavedSpotIds(); // 로그인 시 DB, 게스트는 []
 
   return (
     <AppShell active="home">

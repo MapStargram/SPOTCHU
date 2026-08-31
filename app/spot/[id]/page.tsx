@@ -65,21 +65,23 @@ export default async function SpotDetailScreen({
   const { id } = await params;
   const s = await getSpot(id);
   if (!s) notFound();
-
-  const work = s.workId ? await getWork(s.workId) : null;
   const recTime = s.subtitle.split("·").pop()?.trim() ?? "-";
 
-  // 저장 시트용: 현재 유저의 소유 컬렉션 + 이 스팟이 이미 담긴 컬렉션 id(초기 선택).
-  const user = await getCurrentUser();
-  const ownCollections = (await getCollections()).filter((c) => c.isOwn);
+  // s 확정 후 나머지는 서로 독립 — 순차 await 워터폴 대신 병렬로(Neon 왕복 합산 → 최댓값).
+  // getCurrentUser는 cache()라 아래 호출들이 내부에서 재호출해도 auth()는 1회.
+  const [work, user, collections, savedIds, checkedIn, posts] =
+    await Promise.all([
+      s.workId ? getWork(s.workId) : Promise.resolve(null),
+      getCurrentUser(),
+      getCollections(), // 저장 시트: 소유 컬렉션 + 이 스팟이 담긴 컬렉션 id(초기 선택)
+      getSavedSpotIds(), // 히어로 ♥ 초기 상태(로그인=DB, 게스트=[])
+      getUserCheckedIn(s.id), // '방문 완료' 상태(로그인 유저 인증 이력, 게스트=false)
+      getSpotPosts(s.id), // 방문자의 사진 = 이 스팟의 실제 게시물(없으면 빈 배열)
+    ]);
+  const ownCollections = collections.filter((c) => c.isOwn);
   const savedIn = ownCollections
     .filter((c) => c.spots.includes(s.id))
     .map((c) => c.id);
-  const savedIds = await getSavedSpotIds(); // 히어로 ♥ 초기 상태(로그인=DB, 게스트=[])
-  const checkedIn = await getUserCheckedIn(s.id); // '방문 완료' 상태(로그인 유저 인증 이력, 게스트=false)
-
-  // 방문자의 사진 = 이 스팟의 실제 게시물(없으면 빈 배열 → 빈 상태 노출, 더미 없음)
-  const posts = await getSpotPosts(s.id);
 
   return (
     // noTabBar: 하단 체크인 CTA(SpotActions)가 탭바와 겹치지 않도록 상세는 탭바를 숨긴다(뒤로 버튼으로 이동).
