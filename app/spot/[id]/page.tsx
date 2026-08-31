@@ -13,6 +13,7 @@ import { Spot3DSection } from "@/components/spot/Spot3DSection";
 import { SafetyBanner } from "@/components/spot/SafetyBanner";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { Mascot } from "@/components/ui/Mascot";
+import { SpotImage } from "@/components/ui/SpotImage";
 import { type Verified } from "@/lib/mock";
 import { getSpot, getWork, getCollections, getSpotPosts } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 import { getCurrentUser } from "@/lib/session";
@@ -82,12 +83,7 @@ export default async function SpotDetailScreen({
         >
           {s.imageUrl && (
             <>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={s.imageUrl}
-                alt={s.title}
-                className="absolute inset-0 h-full w-full object-cover"
-              />
+              <SpotImage src={s.imageUrl} alt={s.title} loading="eager" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25" />
             </>
           )}
@@ -312,13 +308,13 @@ export default async function SpotDetailScreen({
                     className="overflow-hidden rounded-[14px] bg-white shadow-[shadow:var(--sh-card)]"
                   >
                     {p.images[0] && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={p.images[0]}
-                        alt={p.caption || p.spotTitle}
-                        loading="lazy"
-                        className="aspect-[4/3] w-full object-cover"
-                      />
+                      <div className="relative aspect-[4/3] w-full bg-[color:var(--cream-2)]">
+                        <SpotImage
+                          src={p.images[0]}
+                          alt={p.caption || p.spotTitle}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
                     )}
                     <div className="px-3.5 py-3">
                       <div className="mb-1.5 flex items-center justify-between">

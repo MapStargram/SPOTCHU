@@ -6,6 +6,7 @@ import { AppShell } from "@/components/shell/AppShell";
 import { TagPill } from "@/components/ui/TagPill";
 import { Sparkle } from "@/components/ui/Sparkle";
 import { PinGrid } from "@/components/home/PinGrid";
+import { SpotImage } from "@/components/ui/SpotImage";
 import { type CityId } from "@/lib/mock";
 import { getCity, getCities, getSpot, getSpotsByCity } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
 import { getCurrentUser } from "@/lib/session";
@@ -111,11 +112,10 @@ export default async function HomeScreen({
         >
           {heroSpot.imageUrl && (
             <>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <SpotImage
                 src={heroSpot.imageUrl}
                 alt={heroSpot.title}
-                className="absolute inset-0 h-full w-full object-cover"
+                loading="eager"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
             </>

@@ -7,6 +7,7 @@ import { Sparkle } from "@/components/ui/Sparkle";
 import { Select } from "@/components/ui/Select";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { useSaved } from "@/lib/useSaved";
+import { SpotImage } from "@/components/ui/SpotImage";
 import type { Spot } from "@/lib/mock";
 
 // 홈 핀터레스트식 메이슨리 그리드. 모든 핀 = 지도에 찍히는 스팟 → 탭하면 상세(지도+앵글).
@@ -136,15 +137,7 @@ export function PinGrid({
                   className="relative"
                   style={{ height: pinHeight(s.id), background: s.thumbGrad }}
                 >
-                  {s.imageUrl && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={s.imageUrl}
-                      alt={s.title}
-                      loading="lazy"
-                      className="absolute inset-0 h-full w-full object-cover"
-                    />
-                  )}
+                  <SpotImage src={s.imageUrl} alt={s.title} />
                   <span className="absolute left-2 top-2 rounded-full bg-black/30 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
                     <CategoryLabel label={s.categoryLabel} size={11} />
                   </span>
