@@ -75,22 +75,24 @@ export function CityMap({ counts }: { counts?: Record<string, number> }) {
 
   const lngSpan = box.lngMax - box.lngMin;
   const latSpan = box.latMax - box.latMin;
-  // 배경 이미지: 전체 등장방형(360x180)을 박스가 컨테이너를 꽉 채우도록 확대·이동.
+  // 여백(inset): 마커 라벨이 프레임 밖으로 잘리지 않게 안쪽 밴드에 배치한다.
+  // 핵심 — 배경 지도도 '같은' 밴드에 맞춰 넣어야(아래 bgStyle) 핀이 지도상의 실제 나라 위에 정확히 얹힌다.
+  // (예전엔 마커만 inset하고 배경은 꽉 채워 → 핀이 나라에서 밀려 보였다. 세로 여백이 특히 커 오차가 컸다.)
+  const PAD = 6; // 컨테이너 대비 %, 가로·세로 동일 → 지도 왜곡 없이 균일 프레임
+  const inner = 100 - 2 * PAD; // 안쪽 밴드 크기(%)
+  // 배경 이미지: 전체 등장방형(360x180)을 박스가 '안쪽 밴드'를 꽉 채우도록 확대·이동(마커와 동일 밴드).
   const bgStyle = {
-    width: `${(360 / lngSpan) * 100}%`,
-    height: `${(180 / latSpan) * 100}%`,
-    left: `${(-(box.lngMin + 180) / lngSpan) * 100}%`,
-    top: `${(-(90 - box.latMax) / latSpan) * 100}%`,
+    width: `${(360 / lngSpan) * inner}%`,
+    height: `${(180 / latSpan) * inner}%`,
+    left: `${PAD - ((box.lngMin + 180) / lngSpan) * inner}%`,
+    top: `${PAD - ((90 - box.latMax) / latSpan) * inner}%`,
   };
 
-  // 마커 배치: 투영 좌표를 가장자리 여백(inset) 안으로 눌러 핀 라벨이 지도 밖으로 잘리지 않게.
-  const PADX = 7;
-  const PADY = 13;
   const place = (lat: number, lng: number) => {
     const p = project(lat, lng, box);
     return {
-      x: PADX + (p.x * (100 - 2 * PADX)) / 100,
-      y: PADY + (p.y * (100 - 2 * PADY)) / 100,
+      x: PAD + (p.x * inner) / 100,
+      y: PAD + (p.y * inner) / 100,
     };
   };
 
