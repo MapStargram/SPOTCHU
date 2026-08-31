@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
@@ -9,6 +10,23 @@ import { getWork, getWorkSpots, getWorkProgress } from "@/lib/data"; // env DATA
 
 // DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
 export const dynamic = "force-dynamic";
+
+// 작품 링크 공유·검색 노출용 메타데이터.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const w = await getWork(id);
+  if (!w) return { title: "작품을 찾을 수 없어요" };
+  const description = `${w.type} 촬영지 성지순례 · 정확한 위치와 구도로`;
+  return {
+    title: w.title,
+    description,
+    openGraph: { title: w.title, description },
+  };
+}
 
 // B4 · 작품 상세 — 애니 성지 강조. 성지순례 진행률 카드가 1급 요소.
 // 회차별 스팟은 하드코딩 데모가 아니라 실제 연결 스팟(SpotWork.sceneNote)에서 가져온다.

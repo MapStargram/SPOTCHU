@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronLeft, ChevronRight, Star, Check, Camera } from "lucide-react";
@@ -19,6 +20,27 @@ import { getSavedSpotIds } from "@/lib/actions/mutations";
 
 // DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
 export const dynamic = "force-dynamic";
+
+// 스팟 링크 공유(카톡/SNS)·검색 노출용 메타데이터. 제목=스팟명, OG 이미지=대표 사진.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const s = await getSpot(id);
+  if (!s) return { title: "스팟을 찾을 수 없어요" };
+  const description = s.subtitle || s.categoryLabel;
+  return {
+    title: s.title,
+    description,
+    openGraph: {
+      title: s.title,
+      description,
+      images: s.imageUrl ? [s.imageUrl] : undefined,
+    },
+  };
+}
 
 const VERIFIED_LABEL: Record<Verified, string> = {
   official: "공식 인증",

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { Bell, Camera, ChevronDown, ChevronLeft } from "lucide-react";
@@ -13,6 +14,20 @@ import { getSavedSpotIds } from "@/lib/actions/mutations";
 // 세션(로그인 유저·저장목록)을 매 요청 반영해야 하므로 동적 렌더.
 // (getCurrentUser의 try/catch가 동적 신호를 삼켜 정적으로 굳는 것 방지)
 export const dynamic = "force-dynamic";
+
+// 도시 홈 공유·검색 노출용 메타데이터.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ city: string }>;
+}): Promise<Metadata> {
+  const { city } = await params;
+  const c = await getCity(city);
+  if (!c) return {};
+  const title = `${c.name} 사진 스팟`;
+  const description = `${c.name}의 사진 명소·촬영 스팟을 정확한 지도 위치와 구도로`;
+  return { title, description, openGraph: { title, description } };
+}
 
 // B2 도쿄 / B3 서울 — 도시 홈. 상단 히어로 슬롯 + 핀터레스트 메이슨리 그리드(모두 지도에 찍히는 스팟).
 // 도시별 히어로(오늘의 스팟). 미지정 도시는 해당 도시 첫 스팟으로 폴백.
