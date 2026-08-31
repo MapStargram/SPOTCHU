@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T01:37:33.394Z",
+  "generatedAt": "2026-08-31T13:18:31.224Z",
   "spots": [
     {
       "id": "amsterdam-damrak-waterfront-dancing-houses-9f12",
@@ -3697,6 +3697,21 @@
       "source": "https://joseetora.jp/special/map.php"
     },
     {
+      "id": "osaka-naniwabashi-lion-public-hall-8b2c",
+      "title": "난바바시 사자상 & 오사카 시립 중앙공회당 뷰포인트",
+      "city": "osaka",
+      "category": "landmark",
+      "lat": 34.69235,
+      "lng": 135.50695,
+      "area": "Naniwabashi 서쪽 보도, 남서쪽 사자상",
+      "subject": "난바바시 사자상을 전경으로 오사카 시립 중앙공회당을 담는 구도",
+      "tip": "위치는 구역 수준의 근사치입니다. 서쪽 보도에서 현장 구도를 확인하고 보행자·자전거 통행을 막지 마세요.",
+      "lens": "35–70mm",
+      "time": "블루아워 또는 오전",
+      "verified": "reported",
+      "source": "https://osaka-info.jp/spot/naniwabashi-bridge/"
+    },
+    {
       "id": "osaka-prefectural-government-hero-e72a",
       "title": "오사카부청 본관 정면 현관 (영화 'HERO' 및 '프린세스 토요토미' 촬영지)",
       "city": "osaka",
@@ -3735,6 +3750,27 @@
       "scene": "우치카와 강변 돌계단에서 방과 후 대화를 나누는 핵심 장면",
       "verified": "reported",
       "source": "https://www.sakai-film.jp/"
+    },
+    {
+      "id": "osaka-sumiyoshi-toriimae-hankai-tram-4d9e",
+      "title": "스미요시토리이마에 한카이 노면전차 & 스미요시 대사 도리이 뷰포인트",
+      "city": "osaka",
+      "category": "photo",
+      "lat": 34.61252,
+      "lng": 135.49095,
+      "area": "스미요시토리이마에 서쪽 보도",
+      "subject": "스미요시 대사 도리이와 한카이 노면전차가 함께 들어오는 구도",
+      "tip": "위치는 구역 수준의 근사치입니다. 보도에 머물고 차도·전차 선로에 들어가지 않으며 현장에서 도리이 정렬을 확인하세요.",
+      "lens": "50–85mm",
+      "time": "오전 10시–오후 3시",
+      "verified": "reported",
+      "source": "https://www.sumiyoshitaisha.net/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788182310/spotchu/spots/wrdbykghhhmc8dqc8f0k.jpg",
+      "imageCredit": {
+        "author": "Hyppolyte de Saint-Rambert",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=152618034"
+      }
     },
     {
       "id": "osaka-tsutenkaku-spaworld-reflection-b19c",
@@ -5304,6 +5340,27 @@
         "author": "Akonnchiroll",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Skytree_2023.jpg"
+      }
+    },
+    {
+      "id": "tokyo-roppongi-keyakizaka-tower-framing-9c34",
+      "title": "롯폰기 케야키자카도리 보도교 도쿄타워 가로수길 프레이밍",
+      "city": "tokyo",
+      "category": "landmark",
+      "lat": 35.6591,
+      "lng": 139.7303,
+      "area": "롯폰기 케야키자카도리 보도교, Minato",
+      "subject": "케야키자카 가로수길의 불빛 너머 도쿄타워를 망원 압축으로 촬영",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도 확인. 70-200mm로 촬영하고 혼잡 시 삼각대 없이 보행 흐름과 보도교 안전 규칙을 지키세요.",
+      "lens": "70-200mm",
+      "time": "매직아워 또는 겨울 일루미네이션 점등 후",
+      "verified": "reported",
+      "source": "https://japan-neartokyo.com/roppongi-hills-keyakizaka-tokyo-tower/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788182279/spotchu/spots/qoq1ywbvopgcbcno7erh.jpg",
+      "imageCredit": {
+        "author": "kawanet",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/50902562@N00/5387643026"
       }
     },
     {
