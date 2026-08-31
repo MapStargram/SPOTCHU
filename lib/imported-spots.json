@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T22:54:09.201Z",
+  "generatedAt": "2026-08-31T23:48:27.447Z",
   "spots": [
     {
       "id": "amsterdam-damrak-waterfront-dancing-houses-9f12",
@@ -749,6 +749,29 @@
       }
     },
     {
+      "id": "busan-gukje-market-kkotbunine-c93d",
+      "title": "국제시장 꽃분이네 상점 앞",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.09905,
+      "lng": 129.02795,
+      "area": "부산 중구 국제시장 3공구 꽃분이네 앞 아케이드",
+      "subject": "꽃분이네 상점 외관·간판과 국제시장 아케이드 골목",
+      "tip": "공용 통로의 위치는 근사치 — 보행자와 상인의 동선을 비우고 현재 점포·간판 상태를 확인하며 짧게 촬영하세요.",
+      "lens": "35mm",
+      "time": "10:30–12:00",
+      "workId": "ode-to-my-father",
+      "scene": "영화 속 꽃분이네 상점과 국제시장 골목 장면",
+      "verified": "reported",
+      "source": "https://www.busan.go.kr/news/specnews/view?dataNo=46532&gugun=Prev",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788220101/spotchu/spots/tqv2p4hfeayhyae5om7g.jpg",
+      "imageCredit": {
+        "author": "Hankook12",
+        "license": "CC0 1.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=145162647"
+      }
+    },
+    {
       "id": "busan-hocheon-namilbar-deck-b82f",
       "title": "호천문화플랫폼 남일바 야경 포토존",
       "city": "busan",
@@ -781,6 +804,23 @@
       "scene": "흰여울문화마을의 진우네 집과 바다를 함께 담는 촬영지 구도",
       "verified": "reported",
       "source": "https://www.yeongdo.go.kr"
+    },
+    {
+      "id": "busan-hwagukbanjeom-noir-interior-b18e",
+      "title": "화국반점 느와르 테이블",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.10182,
+      "lng": 129.03453,
+      "area": "부산 중구 동광동 화국반점 1층",
+      "subject": "화국반점 레트로 중식당 홀과 영화 속 식사 장면의 테이블 구도",
+      "tip": "위치는 식당 내부 구역의 근사치 — 방문·주문·촬영 허가를 먼저 확인하고 다른 손님과 영업 동선을 방해하지 마세요. 삼각대·플래시는 피하세요.",
+      "lens": "28–50mm",
+      "time": "14:00–15:00 또는 17:00–17:30",
+      "workId": "new-world-nameless-gangster",
+      "scene": "화국반점에서 소개된 신세계 회식 장면과 범죄와의 전쟁 먹방 장면",
+      "verified": "reported",
+      "source": "https://www.busan.go.kr/news/totalnews01/view?dataNo=57228"
     },
     {
       "id": "busan-jungangdong-40steps-nowheretohide-4f1e",
@@ -4903,6 +4943,23 @@
       "source": "https://korean.visitseoul.net/attractions/Gamgodang-gil"
     },
     {
+      "id": "seoul-goblin-yongdap-station-bridge-3d1e",
+      "title": "용답역 육교 사근용답 인도교 도깨비 촬영지",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.56233,
+      "lng": 127.04938,
+      "area": "용답역 2번 출구 / 사근용답 인도교",
+      "subject": "보행로 소실점과 도깨비 속 저승사자·써니 만남 장면의 분위기",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도 확인. 보행로 가장자리에서 통행을 막지 않고 촬영하세요.",
+      "lens": "50-85mm f/1.8",
+      "time": "16:00-18:00",
+      "workId": "goblin",
+      "scene": "용답역 육교에서 저승사자와 써니가 만나는 장면으로 알려진 장소",
+      "verified": "reported",
+      "source": "http://www.st-news.co.kr/news/articleView.html?idxno=6452"
+    },
+    {
       "id": "seoul-god-of-highschool-sungnyemun-chase-8b1a",
       "title": "갓 오브 하이스쿨 1화 자전거 추격전 숭례문 뷰포인트",
       "city": "seoul",
@@ -5031,6 +5088,29 @@
       "scene": "연세대학교 연희관과 계단을 배경으로 한 회상·등교 장면 후보",
       "verified": "reported",
       "source": "https://www.yonsei.ac.kr"
+    },
+    {
+      "id": "seoul-vincenzo-seewon-plaza-geumga-5c8f",
+      "title": "세운상가 보행데크 빈센조 금가프라자 촬영지",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.56963,
+      "lng": 126.99505,
+      "area": "세운상가 3층 공중보행데크 및 세운옥상",
+      "subject": "세운상가의 기하학적 콘크리트 구조와 빈센조 속 금가프라자 분위기",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도 확인. 상점과 보행자의 통행을 방해하지 말고 세운옥상 운영시간을 확인하세요.",
+      "lens": "24-35mm",
+      "time": "14:00-17:00",
+      "workId": "vincenzo",
+      "scene": "세운상가가 드라마 속 금가프라자로 사용된 촬영지",
+      "verified": "reported",
+      "source": "https://korean.visitseoul.net/attractions/Sewoon-Plaza_/1501",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788220107/spotchu/spots/assrqxun3jmlg4goft01.jpg",
+      "imageCredit": {
+        "author": "MaRail",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=121452672"
+      }
     },
     {
       "id": "seoul-yongyangbongjeojeong-sky-deck-hangang-bridge-b73a",
@@ -6288,6 +6368,13 @@
       "progress": 0
     },
     {
+      "id": "ode-to-my-father",
+      "title": "국제시장",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "fight-for-my-way",
       "title": "쌈, 마이웨이",
       "type": "드라마",
@@ -6297,6 +6384,13 @@
     {
       "id": "the-attorney",
       "title": "변호인",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "new-world-nameless-gangster",
+      "title": "신세계 / 범죄와의 전쟁",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -7089,6 +7183,13 @@
       "id": "the-classic",
       "title": "클래식",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "vincenzo",
+      "title": "빈센조",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
