@@ -89,7 +89,7 @@ export function CheckinFlow({
   };
 
   const TopBar = ({ label }: { label?: string }) => (
-    <div className="flex items-center justify-between pt-14">
+    <div className="flex items-center justify-between pt-safe-top">
       <button
         onClick={back}
         aria-label="닫기"

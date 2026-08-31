@@ -2,7 +2,7 @@
 export default function SearchLoading() {
   return (
     <div className="min-h-dvh bg-[color:var(--cream-2)] lg:pl-[76px]">
-      <div className="mx-auto w-full max-w-[520px] px-4 pt-14 lg:pt-8">
+      <div className="mx-auto w-full max-w-[520px] px-4 pt-safe-top lg:pt-8">
         <div className="h-12 w-full animate-pulse rounded-[20px] bg-[color:var(--line)]" />
         <div className="mt-6 h-3 w-16 animate-pulse rounded bg-[color:var(--line)]" />
         <div className="mt-3 flex flex-wrap gap-2">

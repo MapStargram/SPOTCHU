@@ -31,8 +31,8 @@ export default async function ProfilePage() {
   const initial = (name.trim()[0] || "S").toUpperCase();
   return (
     <AppShell active="profile">
-      <div className="mx-auto w-full max-w-[500px] pb-28 pt-14 text-navy lg:max-w-[860px] lg:pb-12 lg:pt-6">
-        {/* Header band — 상단 세이프에어리어는 래퍼의 pt-14(홈·컬렉션과 동일)가 담당,
+      <div className="mx-auto w-full max-w-[500px] pb-28 pt-safe-top text-navy lg:max-w-[860px] lg:pb-12 lg:pt-6">
+        {/* Header band — 상단 세이프에어리어는 래퍼의 pt-safe-top(홈·컬렉션과 동일)가 담당,
             여기선 밴드 안쪽 여백만 살짝(#54, edge-to-edge 통일). */}
         <div
           className="relative h-[200px] overflow-hidden lg:rounded-b-[28px]"

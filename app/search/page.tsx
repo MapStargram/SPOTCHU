@@ -48,7 +48,7 @@ export default async function SearchScreen({
 
   return (
     <AppShell active="explore">
-      <div className="mx-auto flex w-full max-w-[520px] flex-col px-5 pb-28 pt-14 lg:max-w-[680px] lg:pb-12 lg:pt-8">
+      <div className="mx-auto flex w-full max-w-[520px] flex-col px-5 pb-28 pt-safe-top lg:max-w-[680px] lg:pb-12 lg:pt-8">
         <SearchControls
           categories={categories}
           works={works}

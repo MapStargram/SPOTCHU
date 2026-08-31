@@ -125,7 +125,7 @@ export function ReportFlow({
   if (step === "location") {
     return (
       <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-        <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pt-14 text-navy">
+        <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pt-safe-top text-navy">
           <header className="flex items-center justify-between">
             <button
               onClick={() => router.back()}
@@ -193,7 +193,7 @@ export function ReportFlow({
   if (step === "form") {
     return (
       <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-        <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pt-14 text-navy">
+        <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-5 pt-safe-top text-navy">
           <header className="flex items-center justify-between">
             <button
               onClick={() => setStep("location")}
@@ -414,7 +414,7 @@ export function ReportFlow({
   // ---------- I3 완료 ----------
   return (
     <div className="flex min-h-dvh w-full justify-center bg-[color:var(--cream-2)]">
-      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-6 pb-11 pt-14 text-navy">
+      <div className="relative flex min-h-dvh w-full max-w-[430px] flex-col bg-cream px-6 pb-11 pt-safe-top text-navy">
         <div className="mt-12 flex-1 text-center">
           <Mascot
             name="chu-expression-joy"

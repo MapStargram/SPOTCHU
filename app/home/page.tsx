@@ -29,7 +29,7 @@ export default async function HomeDiscoverScreen() {
 
   return (
     <AppShell active="home">
-      <div className="mx-auto w-full max-w-[500px] px-4 pb-28 pt-14 text-navy lg:max-w-[1180px] lg:px-8 lg:pb-12 lg:pt-8">
+      <div className="mx-auto w-full max-w-[500px] px-4 pb-28 pt-safe-top text-navy lg:max-w-[1180px] lg:px-8 lg:pb-12 lg:pt-8">
         <header className="flex items-center justify-between">
           <div>
             <div className="font-latin text-[10px] font-semibold uppercase tracking-[0.18em] text-[color:var(--muted)]">
