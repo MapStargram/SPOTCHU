@@ -120,6 +120,9 @@ html {
   background: var(--bg);
 }
 body {
+  /* 명시적 배경 필요 — 없으면 Safari가 세이프에어리어 영역을 기본값(흰색)으로 채워
+     edge-to-edge가 깨진다(viewport-fit=cover와 함께 필요). */
+  background: var(--bg);
   font-family: var(--font-ko);
   font-size: var(--fs-body);
   line-height: var(--lh-body);
