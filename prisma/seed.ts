@@ -149,7 +149,7 @@ async function main() {
     if (s.workId) {
       await db.spotWork.upsert({
         where: { spotId_workId: { spotId: s.id, workId: s.workId } },
-        update: {},
+        update: { sceneNote: s.scene }, // 재시드로 씬 텍스트 수정 반영(기존 write-once 버그)
         create: { spotId: s.id, workId: s.workId, sceneNote: s.scene },
       });
     }
