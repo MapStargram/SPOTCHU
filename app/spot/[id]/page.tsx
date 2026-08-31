@@ -18,7 +18,7 @@ import { SpotImage } from "@/components/ui/SpotImage";
 import { type Verified } from "@/lib/mock";
 import { getSpot, getWork, getCollections, getSpotPosts } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 import { getCurrentUser } from "@/lib/session";
-import { getSavedSpotIds } from "@/lib/actions/mutations";
+import { getSavedSpotIds, getUserCheckedIn } from "@/lib/actions/mutations";
 
 // DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
 export const dynamic = "force-dynamic";
@@ -76,6 +76,7 @@ export default async function SpotDetailScreen({
     .filter((c) => c.spots.includes(s.id))
     .map((c) => c.id);
   const savedIds = await getSavedSpotIds(); // 히어로 ♥ 초기 상태(로그인=DB, 게스트=[])
+  const checkedIn = await getUserCheckedIn(s.id); // '방문 완료' 상태(로그인 유저 인증 이력, 게스트=false)
 
   // 방문자의 사진 = 이 스팟의 실제 게시물(없으면 빈 배열 → 빈 상태 노출, 더미 없음)
   const posts = await getSpotPosts(s.id);
@@ -397,6 +398,7 @@ export default async function SpotDetailScreen({
             coverGrad: c.coverGrad,
           }))}
           savedIn={savedIn}
+          checkedIn={checkedIn}
         />
       </div>
     </AppShell>

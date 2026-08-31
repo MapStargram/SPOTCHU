@@ -21,12 +21,14 @@ export function SpotActions({
   loggedIn,
   collections,
   savedIn,
+  checkedIn = false,
 }: {
   spotTitle: string;
   spotId: string;
   loggedIn: boolean;
   collections: Col[];
   savedIn: string[];
+  checkedIn?: boolean; // 로그인 유저가 이 스팟을 방문 인증한 적 있으면 '방문 완료'로 표기
 }) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -108,12 +110,22 @@ export function SpotActions({
       {/* Sticky action row */}
       <div className="fixed inset-x-0 bottom-0 z-20 lg:pl-[76px]">
         <div className="mx-auto flex max-w-[500px] gap-2.5 bg-gradient-to-t from-cream via-cream px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-3 lg:max-w-[720px]">
-          <CoralButton
-            className="flex-1"
-            onClick={() => router.push(`/spot/${spotId}/checkin`)}
-          >
-            체크인 하고 수집하기
-          </CoralButton>
+          {checkedIn ? (
+            // 방문 완료(재방문은 쿨다운 경과 후 가능 → 탭 유지, 체크인 화면이 쿨다운 안내). 색+아이콘+라벨 병기.
+            <button
+              onClick={() => router.push(`/spot/${spotId}/checkin`)}
+              className="flex h-[52px] flex-1 items-center justify-center gap-2 rounded-2xl bg-[color:var(--mint-deep)] font-ko text-[15px] font-bold text-white active:scale-[0.98]"
+            >
+              <Check size={20} /> 방문 완료
+            </button>
+          ) : (
+            <CoralButton
+              className="flex-1"
+              onClick={() => router.push(`/spot/${spotId}/checkin`)}
+            >
+              체크인 하고 수집하기
+            </CoralButton>
+          )}
           <button
             onClick={openSheet}
             aria-label="컬렉션에 저장"

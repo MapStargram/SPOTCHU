@@ -345,6 +345,18 @@ export async function getSavedSpotIds(): Promise<string[]> {
   return items.map((i) => i.spotId);
 }
 
+// 현재 유저가 이 스팟을 방문 인증한 적 있는지(스팟 상세의 '방문 완료' 상태 표기용). 게스트=false.
+// 결과만 확인(원시 좌표 미조회) — rules §불변식(인증 결과만 저장) 준수.
+export async function getUserCheckedIn(spotId: string): Promise<boolean> {
+  const user = await getCurrentUser();
+  if (!user?.id) return false;
+  const c = await db.checkIn.findUnique({
+    where: { userId_spotId: { userId: user.id, spotId } },
+    select: { id: true },
+  });
+  return !!c;
+}
+
 // H · 게시물 작성(스팟 필수 연결, 사진 1~5장). imageUrls는 /api/upload가 EXIF 위치 제거 후 반환한 Cloudinary URL.
 const CreatePostInput = z.object({
   spotId: z.string().min(1),
