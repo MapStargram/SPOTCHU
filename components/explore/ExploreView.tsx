@@ -115,7 +115,7 @@ export function ExploreView({
   return (
     <div className="relative flex min-h-dvh flex-col bg-cream">
       {/* Header controls — 홈과 동일한 max-w 컨테이너로 정렬(피드 본문과 좌우 폭 일치) */}
-      <header className="sticky top-0 z-20 border-b border-[color:var(--line)] bg-[rgba(255,249,242,0.9)] pb-3 pt-14 backdrop-blur lg:pt-6">
+      <header className="sticky top-0 z-20 border-b border-[color:var(--line)] bg-[rgba(255,249,242,0.9)] pb-3 pt-[calc(3.5rem+env(safe-area-inset-top))] backdrop-blur lg:pt-6">
         <div className="mx-auto flex w-full max-w-[1180px] flex-col gap-3 px-4 lg:px-8">
           <div className="flex w-full items-center gap-2">
             {/* 도시 전환 — 홈탭처럼 탐색에서도 선택 도시를 바꾼다(→ /explore/[city]) */}
