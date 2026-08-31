@@ -183,7 +183,7 @@ export function PinGrid({
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="맨 위로"
-          className="fixed bottom-24 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-navy text-cream shadow-[shadow:var(--sh-elevated)] transition active:scale-90 lg:bottom-8 lg:right-8"
+          className="fixed bottom-[calc(96px+env(safe-area-inset-bottom))] right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-navy text-cream shadow-[shadow:var(--sh-elevated)] transition active:scale-90 lg:bottom-8 lg:right-8"
         >
           <ArrowUp size={22} />
         </button>

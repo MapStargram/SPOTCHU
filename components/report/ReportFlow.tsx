@@ -181,7 +181,7 @@ export function ReportFlow({
             <LocationPicker city={city} value={coord} onChange={setCoord} />
           </div>
 
-          <div className="sticky bottom-0 z-10 -mx-5 mt-auto bg-gradient-to-t from-cream via-cream px-5 pb-6 pt-6">
+          <div className="sticky bottom-0 z-10 -mx-5 mt-auto bg-gradient-to-t from-cream via-cream px-5 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6">
             <CoralButton onClick={() => setStep("form")}>다음 →</CoralButton>
           </div>
         </div>
@@ -397,7 +397,7 @@ export function ReportFlow({
             </p>
           )}
 
-          <div className="sticky bottom-0 z-10 -mx-5 mt-auto bg-gradient-to-t from-cream via-cream px-5 pb-6 pt-6">
+          <div className="sticky bottom-0 z-10 -mx-5 mt-auto bg-gradient-to-t from-cream via-cream px-5 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6">
             <CoralButton
               disabled={!canSubmit || submitting}
               onClick={submit}

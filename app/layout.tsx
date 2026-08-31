@@ -18,7 +18,9 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     title: "SPOTCHU",
-    statusBarStyle: "default",
+    // black-translucent: iOS deprecated값이지만 공식 대체가 없음(Airbnb 등 대기업도 그대로 사용) —
+    // viewport-fit=cover와 함께 있어야 콘텐츠가 상태바 뒤까지 그려짐(edge-to-edge).
+    statusBarStyle: "black-translucent",
   },
   openGraph: {
     siteName: "SPOTCHU",
@@ -35,6 +37,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  viewportFit: "cover", // 노치/상태바/홈 인디케이터 영역까지 콘텐츠 확장 허용 (edge-to-edge 필수 전제)
 };
 
 export default async function RootLayout({

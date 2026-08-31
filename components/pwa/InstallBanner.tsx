@@ -66,7 +66,7 @@ export function InstallBanner() {
     <div
       role="note"
       aria-label="앱 설치 안내"
-      className="fixed inset-x-0 bottom-[72px] z-30 mx-auto flex max-w-[430px] items-center gap-2.5 rounded-2xl border px-3.5 py-3 shadow-lg lg:bottom-4"
+      className="fixed inset-x-0 bottom-[calc(72px+env(safe-area-inset-bottom))] z-30 mx-auto flex max-w-[430px] items-center gap-2.5 rounded-2xl border px-3.5 py-3 shadow-lg lg:bottom-4"
       style={{ background: "var(--mint)", borderColor: "var(--mint-deep)" }}
     >
       <span

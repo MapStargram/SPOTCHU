@@ -386,7 +386,7 @@ export function CollectionDetail({
             {toggle}
           </div>
           {/* Carousel — 담긴 스팟 스와이프(실사진·번호) */}
-          <div className="absolute inset-x-0 bottom-[100px] z-[9] flex gap-2.5 overflow-x-auto px-3.5 [scrollbar-width:none]">
+          <div className="absolute inset-x-0 bottom-[calc(100px+env(safe-area-inset-bottom))] z-[9] flex gap-2.5 overflow-x-auto px-3.5 [scrollbar-width:none]">
             {items.map((s, i) => (
               <Link
                 key={s.id}

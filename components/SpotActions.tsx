@@ -107,7 +107,7 @@ export function SpotActions({
     <>
       {/* Sticky action row */}
       <div className="fixed inset-x-0 bottom-0 z-20 lg:pl-[76px]">
-        <div className="mx-auto flex max-w-[500px] gap-2.5 bg-gradient-to-t from-cream via-cream px-4 pb-6 pt-3 lg:max-w-[720px]">
+        <div className="mx-auto flex max-w-[500px] gap-2.5 bg-gradient-to-t from-cream via-cream px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-3 lg:max-w-[720px]">
           <CoralButton
             className="flex-1"
             onClick={() => router.push(`/spot/${spotId}/checkin`)}
