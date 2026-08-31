@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-30T18:17:46.737Z",
+  "generatedAt": "2026-08-31T01:18:56.840Z",
   "spots": [
     {
       "id": "amsterdam-damrak-waterfront-dancing-houses-9f12",
@@ -21,6 +21,40 @@
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Huis_met_gevel_onder_19e-eeuwse_klokvormige_top_met_rollagen_en_fronton.jpg"
       }
+    },
+    {
+      "id": "amsterdam-diamonds-are-forever-tiffany-case-house-e821",
+      "title": "007 다이아몬드는 영원히 - 티파니 케이스 아파트 (레휠리어스흐라흐트 36)",
+      "city": "amsterdam",
+      "category": "drama",
+      "lat": 52.3637,
+      "lng": 4.89595,
+      "area": "Reguliersgracht 36 opposite-side public canal walkway",
+      "subject": "007 영화에서 티파니 케이스 아파트 외관으로 사용된 운하 주택",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 운하 건너편 구도를 확인하세요. 실거주 주택의 외관만 촬영하고 사생활·자전거 통행을 존중하세요.",
+      "lens": "50mm–85mm",
+      "time": "이른 아침 또는 정오 전후",
+      "workId": "diamonds-are-forever",
+      "scene": "Reguliersgracht 36 티파니 케이스 아파트 외관",
+      "verified": "reported",
+      "source": "https://huntingbond.com/tiffany-case-house-amsterdam/"
+    },
+    {
+      "id": "amsterdam-fault-in-our-stars-bench-b49f",
+      "title": "안녕, 헤이즐 운하 벤치 (레이트서흐라흐트)",
+      "city": "amsterdam",
+      "category": "drama",
+      "lat": 52.36805,
+      "lng": 4.88588,
+      "area": "Leidsegracht 4 / Herengracht intersection",
+      "subject": "영화 속 헤이즐과 어거스터스의 운하 벤치 장면",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 벤치와 운하 배경 구도를 확인하세요. 안전한 보행 공간에서 촬영하고 물가·자전거 통행을 방해하지 마세요.",
+      "lens": "35mm–50mm",
+      "time": "늦은 오후 골든아워",
+      "workId": "the-fault-in-our-stars",
+      "scene": "Leidsegracht 4 운하 벤치 장면",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/f/Fault-In-Our-Stars.php"
     },
     {
       "id": "amsterdam-reguliersgracht-seven-bridges-8d4e",
@@ -95,6 +129,23 @@
       "source": "https://www.lahangansweet.com/"
     },
     {
+      "id": "bali-padang-padang-beach-eatpraylove-e4b2",
+      "title": "파당파당 비치 (영화 '먹고 기도하고 사랑하라' 촬영지)",
+      "city": "bali",
+      "category": "drama",
+      "lat": -8.81125,
+      "lng": 115.10335,
+      "area": "Padang Padang Beach cove / Labuan Sait access, Pecatu",
+      "subject": "Eat Pray Love 해변 장면의 파당파당 비치 코브와 인도양 바위",
+      "tip": "위치는 구역 수준의 근사치(약 145m 범위) — 현장에서 구도를 확인하세요. 공용 해변과 계단·바위에서 안전거리를 유지하고 영화 속 임시 바는 현재 존재하지 않습니다.",
+      "lens": "24-50mm",
+      "time": "08:00-10:00",
+      "workId": "eat-pray-love",
+      "scene": "파당파당 비치에서 촬영된 리즈와 펠리페의 해변 장면. 영화 속 바는 촬영용 임시 세트.",
+      "verified": "reported",
+      "source": "https://travel.detik.com/cerita-perjalanan/d-5394662/pantai-di-bali-yang-jadi-tempat-syuting-film-eat-pray-love"
+    },
+    {
       "id": "bali-pura-lempuyang-gates-of-heaven-7d2c",
       "title": "푸라 렘푸양 천국의 문과 아궁산 포토스팟",
       "city": "bali",
@@ -114,6 +165,23 @@
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Bali_Pura_Lempuyang_Luhur.jpg"
       }
+    },
+    {
+      "id": "bali-uluwatu-cliff-temple-memoriesofbali-a7f1",
+      "title": "울루와뚜 사원 절벽 산책로 ('발리에서 생긴 일' 촬영지)",
+      "city": "bali",
+      "category": "drama",
+      "lat": -8.82845,
+      "lng": 115.0848,
+      "area": "Uluwatu Temple cliff promenade, Pecatu",
+      "subject": "인도양 절벽 위 울루와뚜 사원과 해안 풍경",
+      "tip": "위치는 구역 수준의 근사치(약 137m 범위) — 지정된 절벽 산책로에서 현장 구도를 확인하세요. 사롱·띠 착용과 사원 규정을 지키고 난간 밖으로 나가지 마세요.",
+      "lens": "35-70mm",
+      "time": "16:30-18:15",
+      "workId": "memories-of-bali",
+      "scene": "울루와뚜 사원이 드라마 촬영지로 알려진 broad association; 제출된 구체적 에피소드 동선은 후속 프레임 확인 필요.",
+      "verified": "reported",
+      "source": "https://www.beautyhankook.com/news/articleView.html?idxno=20422"
     },
     {
       "id": "bangkok-khlong-ong-ang-king-the-land-3f4d",
@@ -492,6 +560,23 @@
       "source": "https://www.photohound.co/spot/elsenbrucke-2117"
     },
     {
+      "id": "berlin-karl-marx-allee-rosengarten-queens-gambit-7c9b",
+      "title": "Berlin Karl-Marx-Allee Rosengarten (The Queen's Gambit)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.51753,
+      "lng": 13.4444,
+      "area": "Rosengarten, Karl-Marx-Allee 103-105, Friedrichshain",
+      "subject": "Rosengarten promenade composition toward the monumental Karl-Marx-Allee facade",
+      "tip": "Approximate position at area level. Confirm the exact public path and table position on site; respect residents, visitors, privacy, and pedestrian flow.",
+      "lens": "35mm or 50mm",
+      "time": "Morning to late afternoon",
+      "workId": "the-queens-gambit",
+      "scene": "Season 1 episode 7 finale association with the Moscow park chess scene; exact path and table position remain for review",
+      "verified": "reported",
+      "source": "https://www.tip-berlin.de/kino-stream/damengambit-berlin-drehorte-queens-gambit/"
+    },
+    {
       "id": "berlin-marie-elisabeth-lueders-haus-oculum-03",
       "title": "마리-엘리자베트-뤼더스 하우스 오큘럼",
       "city": "berlin",
@@ -511,6 +596,23 @@
         "license": "CC BY 3.0 de",
         "source": "https://commons.wikimedia.org/wiki/File:Marie-Elisabeth-L%C3%BCders-Haus,_Berlin-Mitte,_160328,_ako.jpg"
       }
+    },
+    {
+      "id": "berlin-messedamm-icc-underpass-a3e1",
+      "title": "Berlin Messedamm ICC underpass (Hunger Games / Captain America)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.50584,
+      "lng": 13.27972,
+      "area": "Messedamm / Neue Kantstrasse / Masurenallee, ICC Berlin",
+      "subject": "Orange pillars and circular ceiling lights forming a cinematic tunnel vanishing point",
+      "tip": "Approximate position at area level. Confirm the exact main-corridor camera position on site; keep pedestrian routes clear and obey maintenance closures.",
+      "lens": "24-35mm or 50mm",
+      "time": "Daytime to evening",
+      "workId": "the-hunger-games-mockingjay-part-2",
+      "scene": "Film-location association with the ICC Messedamm underpass and underground tunnel sequence; exact frame remains for review",
+      "verified": "reported",
+      "source": "https://www.visitberlin.de/en/berlin-film-locations"
     },
     {
       "id": "berlin-monbijoubruecke-bode-museum-viewpoint-02",
@@ -739,6 +841,40 @@
       "source": "https://www.yeongdo.go.kr/tour/01475/01476.web"
     },
     {
+      "id": "cebu-camp-sawi-obo-ob-boardwalk-b2a1",
+      "title": "罹좏봽 ?ъ쐞 ?ㅻ낫??留밴렇濡쒕툕 蹂대뱶?뚰겕 (諛섑?? ??",
+      "city": "cebu",
+      "category": "drama",
+      "lat": 11.15008,
+      "lng": 123.75011,
+      "area": "Omagieca Obo-ob Mangrove Garden, Barangay Obo-ob, Bantayan Island",
+      "subject": "Camp Sawi boardwalk, mangrove lagoon, wooden sign, and watchtower composition",
+      "tip": "보드워크 중앙에서 남서쪽을 향해 촬영하세요. 위치는 구역 수준의 근사치이므로 현장에서 구도와 안전한 촬영 지점을 확인하고, 대나무 난간 밖 보호구역에는 들어가지 마세요.",
+      "lens": "24-35mm wide angle",
+      "time": "08:00-10:30 또는 15:30-17:00 (조수·운영시간 확인)",
+      "workId": "camp-sawi",
+      "scene": "Omagieca Obo-ob mangrove boardwalk filming-location composition; exact frame match remains for review.",
+      "verified": "reported",
+      "source": "https://syramay.com/obo-ob-mangrove-garden-bantayan-island-camp-sawi/"
+    },
+    {
+      "id": "cebu-cant-help-falling-in-love-boljoon-church-c8f4",
+      "title": "蹂쇳썕 ?깅떦 愿묒옣 (?곹솕 '?щ옉??鍮좎?吏 ?딆쓣 ???놁뼱' 珥ъ쁺吏)",
+      "city": "cebu",
+      "category": "drama",
+      "lat": 9.62992,
+      "lng": 123.47985,
+      "area": "Boljoon Church plaza, Poblacion, Boljoon, Cebu",
+      "subject": "Boljoon Church coral-stone facade and octagonal bell tower against the mountain ridge",
+      "tip": "공개된 앞마당에서 서북서쪽을 향해 촬영하세요. 위치는 구역 수준의 근사치이므로 현장에서 정확한 구도와 공개된 촬영 지점을 확인하고, 미사 중에는 방해하지 않으며 도로에는 서지 마세요.",
+      "lens": "28-50mm",
+      "time": "07:30-10:00 (예배 일정과 현장 접근 규정 확인)",
+      "workId": "cant-help-falling-in-love",
+      "scene": "Boljoon Church facade/plaza scene association; exact frame match remains for review.",
+      "verified": "reported",
+      "source": "https://entertainment.inquirer.net/222397/kathniel-travels-to-scenic-cebu-for-cant-help-falling-in-love"
+    },
+    {
       "id": "cebu-sirao-hand-of-god-7f2a",
       "title": "시라오 피토리얼 가든 '신의 손' 전망대 포토스팟",
       "city": "cebu",
@@ -799,6 +935,23 @@
       "source": "https://en.wikipedia.org/wiki/Chiang_Mai_University"
     },
     {
+      "id": "chiangmai-pha-dok-siew-ruk-jung-b84e",
+      "title": "파 독 시에우 폭포 7단과 대나무 다리 - 락짱 촬영지",
+      "city": "chiangmai",
+      "category": "drama",
+      "lat": 18.53825,
+      "lng": 98.53595,
+      "area": "Pha Dok Siew Waterfall, Ban Mae Klang Luang, Doi Inthanon",
+      "subject": "폭포 7단과 대나무 다리를 함께 담는 영화 락짱의 자연 장면",
+      "tip": "공개 트레일의 안전한 지점에서 촬영한다. 위치는 구역 수준 근사치이므로 현장에서 구도를 확인하고, 미끄러운 바위·급경사·혼잡한 다리에 주의하며 국립공원 규정과 현지 가이드 조건을 따른다.",
+      "lens": "50-85mm 또는 24-70mm",
+      "time": "09:30-13:00",
+      "workId": "rak-jang-the-memory",
+      "scene": "도이인타논의 폭포 7단과 대나무 다리를 건너는 장면",
+      "verified": "reported",
+      "source": "https://www.traveloka.com/th-th/explore/destination/pha-dok-siew-waterfall-chiang-mai/275323"
+    },
+    {
       "id": "chiangmai-thaphae-gate-pigeon-viewpoint-01",
       "title": "타패 게이트 비둘기 플라잉 샷 포토존",
       "city": "chiangmai",
@@ -841,6 +994,23 @@
       }
     },
     {
+      "id": "chiangmai-wat-ton-kwen-kasalong-a73b",
+      "title": "왓 톤 콴 전통 목조 사원 - 향기로운 까살롱 촬영지",
+      "city": "chiangmai",
+      "category": "drama",
+      "lat": 18.72275,
+      "lng": 98.92522,
+      "area": "Wat Ton Kwen (Wat Inthrawat), Hang Dong",
+      "subject": "란나 전통 목조 비한과 짜뚜묵 정자를 함께 담는 드라마 촬영 구도",
+      "tip": "사원 안뜰의 공개된 보행 공간에서 촬영한다. 위치는 구역 수준 근사치이므로 현장에서 구도를 확인하고, 운영시간·촬영 규정과 사원 예절을 지킨다.",
+      "lens": "35-50mm 또는 24-70mm",
+      "time": "08:00-10:00, 16:00-17:00",
+      "workId": "klin-kasalong",
+      "scene": "란나 전통 사원에서 주인공들이 만나 기도하고 대화하는 장면",
+      "verified": "reported",
+      "source": "https://mgronline.com/travel/detail/9620000062402"
+    },
+    {
       "id": "danang-dragon-bridge-love-pier-03",
       "title": "용다리와 사랑의 부두 불쇼 야경 뷰포인트",
       "city": "danang",
@@ -860,6 +1030,23 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:C%E1%BA%A7u_R%E1%BB%93ng.jpg"
       }
+    },
+    {
+      "id": "danang-dragon-bridge-the-protege-e91b",
+      "title": "다낭 용다리 동쪽 수변 산책로 (영화 프로티제 촬영지)",
+      "city": "danang",
+      "category": "drama",
+      "lat": 16.06149,
+      "lng": 108.22977,
+      "area": "한강 동쪽 수변 산책로, Trần Hưng Đạo 거리, Sơn Trà",
+      "subject": "한강을 가로지르는 용다리와 서쪽 도심 스카이라인",
+      "tip": "위치는 구역 수준의 근사치입니다 — 현장에서 구도를 확인하세요. 난간에 오르지 말고 주말 야간 쇼 인파를 피하세요.",
+      "lens": "24-70mm",
+      "time": "일몰·블루아워 또는 야간 조명",
+      "workId": "the-protege",
+      "scene": "다낭 용다리가 직접 등장하는 도시 전경 촬영지; 정확한 프레임은 관리자 검토 필요",
+      "verified": "reported",
+      "source": "https://tuoitre.vn/cau-rong-da-nang-xuat-hien-trong-phim-hanh-dong-my-co-da-nu-goc-viet-maggie-q-20210901085301081.htm"
     },
     {
       "id": "danang-golden-bridge-giant-hands-02",
@@ -896,6 +1083,23 @@
       "time": "11:00-13:30, 맑은 날",
       "verified": "reported",
       "source": "https://hoiandaytrip.com/huyen-khong-cave-marble-mountain/"
+    },
+    {
+      "id": "dubai-jumeirah-zabeel-saray-mi4-7d2a",
+      "title": "주메이라 자빌 사라이 그랜드 로비 (미션 임파서블: 고스트 프로토콜)",
+      "city": "dubai",
+      "category": "drama",
+      "lat": 25.09825,
+      "lng": 55.12455,
+      "area": "Jumeirah Zabeel Saray, West Crescent, Palm Jumeirah",
+      "subject": "주메이라 자빌 사라이 그랜드 로비의 중앙 계단과 샹들리에",
+      "tip": "위치는 근사치(구역 수준)입니다. 현장에서 공개적으로 허용된 지점과 호텔 촬영 허가를 확인하고 중앙 계단과 샹들리에를 향해 구도를 맞추세요. 이용객의 사생활과 통행을 존중하세요.",
+      "lens": "16-24mm",
+      "time": "오전 10시~정오 또는 저녁 조명 시간대",
+      "workId": "mission-impossible-ghost-protocol",
+      "scene": "주메이라 자빌 사라이 그랜드 로비로 알려진 두바이 로비 장면",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/m/Mission-Impossible-Ghost-Protocol.php"
     },
     {
       "id": "dubai-sunset-beach-burj-al-arab-e81f",
@@ -974,6 +1178,46 @@
       "time": "late afternoon / sunset",
       "verified": "reported",
       "source": "https://cultura.comune.fi.it/delle-oblate"
+    },
+    {
+      "id": "florence-duomo-cupola-calmi-cuori-d48e",
+      "title": "산타 마리아 델 피오레 대성당 쿠폴라 전망대",
+      "city": "florence",
+      "category": "drama",
+      "lat": 43.77312,
+      "lng": 11.25635,
+      "area": "Centro Storico, Duomo",
+      "subject": "쿠폴라 최상단에서 지오토의 종탑과 피렌체 역사 지구 전경",
+      "tip": "영화 구도는 남서쪽을 향한다. Brunelleschi Pass와 시간 예약이 필요하며 463계단이다. 위치는 구조물 구역 수준의 근사치이므로 현장에서 구도를 확인한다.",
+      "lens": "24-70mm",
+      "time": "늦은 오후-골든아워",
+      "workId": "calmi-cuori-appassionati",
+      "scene": "쿠폴라 최상단 전망 테라스의 준세이와 아오이 재회 장면",
+      "verified": "reported",
+      "source": "https://www.traveltimes.co.kr/news/articleView.html?idxno=64379",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788139131/spotchu/spots/kume2xshdlru1uowb91k.jpg",
+      "imageCredit": {
+        "author": "Petar Milošević",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Florence_Duomo_from_Michelangelo_hill.jpg"
+      }
+    },
+    {
+      "id": "florence-fontana-del-porcellino-hannibal-c29b",
+      "title": "Mercato Nuovo Porcellino Fountain",
+      "city": "florence",
+      "category": "drama",
+      "lat": 43.76983,
+      "lng": 11.25422,
+      "area": "Centro Storico, Mercato Nuovo",
+      "subject": "Fontana del Porcellino and the Hannibal hand-washing scene",
+      "tip": "Use a public position 2-3m from the fountain facing north. The position is an area-level approximation; confirm framing on site and do not obstruct pedestrian flow.",
+      "lens": "35-50mm",
+      "time": "Evening to night",
+      "workId": "hannibal",
+      "scene": "Pazzi washes blood from his hands at Fontana del Porcellino",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/h/Hannibal.php"
     },
     {
       "id": "florence-giardino-delle-rose-folon-partir-frame-c4b2",
@@ -1214,6 +1458,61 @@
       "time": "이른 아침 또는 주말 보행자 시간",
       "verified": "reported",
       "source": "https://hanoimoi.vn/toa-soan-bao-hanoimoi-diem-check-in-quen-thuoc-tai-ho-guom.html"
+    },
+    {
+      "id": "hanoi-khue-van-cac-courtyard-tourist-guide-to-love-a71e",
+      "title": "하노이 문묘 규문각 안뜰 - 사랑을 위한 여행 안내서 촬영지",
+      "city": "hanoi",
+      "category": "drama",
+      "lat": 21.02875,
+      "lng": 105.83582,
+      "area": "Temple of Literature, second courtyard / central brick walkway",
+      "subject": "문묘 제2안뜰 중앙 보행로에서 규문각을 북쪽으로 담는 구도",
+      "tip": "위치는 구역 수준 근사치입니다. 현장에서 중앙 벽돌길의 정확한 촬영 지점을 확인하고 잔디에 들어가지 마세요. 문화유산 규정과 복장·정숙 안내를 따르세요.",
+      "lens": "35-50mm",
+      "time": "08:30-10:30",
+      "workId": "a-tourists-guide-to-love",
+      "scene": "하노이 문묘와 규문각이 등장하는 장면으로 제보됨; 정확한 프레임 대조는 관리자 검토 필요",
+      "verified": "reported",
+      "source": "https://vietnamtourism.gov.vn/post/48906"
+    },
+    {
+      "id": "hanoi-opera-house-indochine-viewpoint-01",
+      "title": "하노이 오페라 하우스 정면 촬영 포인트",
+      "city": "hanoi",
+      "category": "photo",
+      "lat": 21.02456,
+      "lng": 105.85645,
+      "area": "Tràng Tiền Street / August Revolution Square sidewalk, Hoàn Kiếm",
+      "subject": "트랑띠엔 거리 끝 보도에서 하노이 오페라 하우스 정면을 담는 구도",
+      "tip": "위치는 보도 구역 수준의 근사치입니다. 현장에서 안전한 보도 가장자리를 확인하고 차량 회전교차로에는 들어가지 마세요.",
+      "lens": "35-50mm",
+      "time": "이른 아침 또는 야간 조명 시간",
+      "verified": "reported",
+      "source": "https://vinpearl.com/vi/nha-hat-lon-ha-noi-toa-do-check-in-trieu-like-giua-long-thu-do",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788139133/spotchu/spots/uqnizvvkbd9dskq943c5.jpg",
+      "imageCredit": {
+        "author": "xiquinhosilva",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hanoi_Opera_House,_24_December_2016.jpg"
+      }
+    },
+    {
+      "id": "hanoi-pho-thin-lo-duc-forever-young-e89c",
+      "title": "포틴 13 로둑 본점 - 청춘 촬영지",
+      "city": "hanoi",
+      "category": "drama",
+      "lat": 21.01949,
+      "lng": 105.85528,
+      "area": "13 Lò Đúc, opposite western pavement",
+      "subject": "맞은편 보도에서 포틴의 김 나는 조리대와 하노이 거리 식사 풍경을 담는 구도",
+      "tip": "위치는 구역 수준 근사치입니다. 반드시 서쪽 보도에 머물고 차도에 서지 마세요. 아침 혼잡 시간에는 손님과 직원의 동선을 방해하지 마세요.",
+      "lens": "35mm or 50mm",
+      "time": "07:00-09:00",
+      "workId": "tuoi-thanh-xuan",
+      "scene": "제출 근거상 23화 포틴 13 로둑 장면; 현재 지점과 정확한 프레임은 관리자 검토 필요",
+      "verified": "reported",
+      "source": "https://kenh14.vn/phim-viet/nhung-dia-diem-quay-phim-quen-thuoc-cua-tuoi-thanh-xuan-20150319114216832.chn"
     },
     {
       "id": "hanoi-serein-cafe-long-bien-bridge-c34d",
@@ -1660,6 +1959,40 @@
       "source": "https://www.visitjeju.net"
     },
     {
+      "id": "kobe-guggenheim-house-wife-of-a-spy-e18a",
+      "title": "구 구겐하임 저택 (스파이의 아내 후쿠하라 저택)",
+      "city": "kobe",
+      "category": "drama",
+      "lat": 34.63428,
+      "lng": 135.08472,
+      "area": "고베 시오야, 구 구겐하임 저택 주변",
+      "subject": "영화 스파이의 아내에서 후쿠하라 저택으로 등장한 구 구겐하임 저택 외관",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도를 확인하세요. 공공 보행 구역에서만 촬영하고 사유지·철도 선로에 들어가지 마세요. 내부 관람·촬영은 공식 공개일과 시설 안내를 따르세요.",
+      "lens": "24-35mm",
+      "time": "10:00-15:00",
+      "workId": "the-spy-wife",
+      "scene": "고베 시오야의 구 구겐하임 저택이 후쿠하라 저택으로 등장",
+      "verified": "reported",
+      "source": "https://kobefilm.jp/works/data/001761.html"
+    },
+    {
+      "id": "kobe-hyogo-guest-house-hero-7b4c",
+      "title": "효고현 공관 (영화 히어로 네우스트리아 공국 대사관)",
+      "city": "kobe",
+      "category": "drama",
+      "lat": 34.69055,
+      "lng": 135.18442,
+      "area": "고베 중앙구, 효고현 공관 남문 주변",
+      "subject": "영화 HERO에서 네우스트리아 공국 대사관으로 등장한 효고현 공관 외관",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 외관 구도를 확인하세요. 공공 보행 구역에서 촬영하고 차도·출입 통제 구역을 막지 마세요. 내부 관람·촬영은 공식 공개일과 허가 범위를 따르세요.",
+      "lens": "28-50mm",
+      "time": "11:00-16:00",
+      "workId": "hero-2015",
+      "scene": "효고현 공관이 네우스트리아 공국 대사관으로 등장",
+      "verified": "reported",
+      "source": "https://web.pref.hyogo.lg.jp/kk02/r7koukan.html"
+    },
+    {
       "id": "kobe-kitano-tenman-kazamidori-viewpoint-8a3f",
       "title": "기타노 텐만신사 경내 전망대 (풍향계의 집 조망)",
       "city": "kobe",
@@ -1694,6 +2027,40 @@
       "time": "일몰 직후 매직아워 및 맑은 동절기 저녁",
       "verified": "reported",
       "source": "https://www.feel-kobe.jp/facilities/detail.php?code=0000000140"
+    },
+    {
+      "id": "kobe-ninomiya-market-suzume-b82e",
+      "title": "니노미야 상점가 & 니노미야 시장 (스즈메의 문단속 하버 스낵 골목)",
+      "city": "kobe",
+      "category": "anime",
+      "lat": 34.69892,
+      "lng": 135.19815,
+      "area": "Ninomiya Shopping Arcade and Ninomiya Market, Kobe",
+      "subject": "스즈메의 문단속 속 하버 스낵 거리의 배경 모델로 알려진 레트로 상점가와 시장 골목",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 구도와 통행을 확인. 점포 영업과 현지인의 프라이버시를 존중한다.",
+      "lens": "35–50mm 또는 24–70mm",
+      "time": "16:30–18:30",
+      "workId": "suzume-no-tojimari",
+      "scene": "니노미야 상점가/시장이 장면의 배경 모델로 보고된 장소. 정확한 프레임 일치는 추가 확인 필요.",
+      "verified": "reported",
+      "source": "https://kobe-journal.com/"
+    },
+    {
+      "id": "kobe-port-island-fate-bridge-a17f",
+      "title": "고베대교 & 포트아일랜드 북공원 (페이트 시리즈 후유키 대교 모티브)",
+      "city": "kobe",
+      "category": "anime",
+      "lat": 34.67735,
+      "lng": 135.20452,
+      "area": "Port Island North Park waterfront, Kobe",
+      "subject": "포트아일랜드 북공원 수변에서 고베대교의 붉은 아치와 항만 풍경을 바라보는 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 수변 데크와 구도를 확인. 보행 동선을 막지 말고 난간을 넘지 않는다.",
+      "lens": "16–35mm 또는 24–70mm",
+      "time": "18:00–21:00",
+      "workId": "fate-zero",
+      "scene": "고베대교가 후유키대교의 시각적 모티브로 거론되는 장소. 특정 애니메이션 프레임의 일대일 일치는 추가 확인 필요.",
+      "verified": "reported",
+      "source": "https://www.feel-kobe.jp/"
     },
     {
       "id": "kobe-port-island-kita-park-skyline-f21e",
@@ -2140,6 +2507,23 @@
       "source": "https://www.esmadrid.com/informacion-turistica/parque-cerro-tio-pio"
     },
     {
+      "id": "madrid-csic-royal-mint-facade-f7b2",
+      "title": "'종이의 집' 스페인 조폐국 촬영지 (CSIC 본관)",
+      "city": "madrid",
+      "category": "drama",
+      "lat": 40.44116,
+      "lng": -3.68671,
+      "area": "CSIC 본관, Calle de Serrano 117",
+      "subject": "CSIC 본관 파사드와 정문 계단 — 극 중 스페인 왕립 조폐국(FNMT)",
+      "tip": "위치는 구역 수준의 근사치 — Calle de Serrano 117 정문 앞 보도에서 현장에서 구도 확인. 내부·제한구역에 들어가지 말고 보행자 통행을 방해하지 않는다.",
+      "lens": "24–35mm",
+      "time": "09:00–13:00",
+      "workId": "la-casa-de-papel",
+      "scene": "시즌 1–2의 허구 스페인 왕립 조폐국 외관 촬영지",
+      "verified": "reported",
+      "source": "https://www.esmadrid.com/casa-papel-madrid"
+    },
+    {
       "id": "madrid-huerta-de-la-partida-viewpoint-e41a",
       "title": "마드리드 리오에서 바라본 왕궁과 알무데나 대성당",
       "city": "madrid",
@@ -2159,6 +2543,23 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Palacio_Real_de_Madrid_Julio_2016_(cropped).jpg"
       }
+    },
+    {
+      "id": "madrid-nuevos-ministerios-bank-of-spain-e4c1",
+      "title": "'종이의 집' 가상 스페인 은행 촬영지 (누에보스 미니스테리오스)",
+      "city": "madrid",
+      "category": "drama",
+      "lat": 40.4437,
+      "lng": -3.6923,
+      "area": "Nuevos Ministerios, Paseo de la Castellana 67",
+      "subject": "Nuevos Ministerios의 Fomento facade — 극 중 Banco de España 외관",
+      "tip": "위치는 구역 수준의 근사치 — 공개 외부 광장·보행 구역에서 현장에서 파사드 구도 확인. 청사 내부·제한구역에 들어가지 말고 보행 동선을 막지 않는다.",
+      "lens": "24–50mm",
+      "time": "주말 또는 16:00–19:00",
+      "workId": "la-casa-de-papel",
+      "scene": "시즌 3–5의 허구 Banco de España 외관 촬영지",
+      "verified": "reported",
+      "source": "https://www.esmadrid.com/casa-papel-madrid"
     },
     {
       "id": "madrid-retiro-palacio-de-cristal-pond-c93d",
@@ -2197,6 +2598,23 @@
       "scene": "호지어 레인 그래피티 골목과 연결된 장면으로 알려진 2004년 KBS2 드라마 촬영지 주장; 정확한 구간은 현장 대조 필요",
       "verified": "reported",
       "source": "https://www.melbourne.vic.gov.au/arts-and-culture/art-outdoors/Pages/street-art.aspx"
+    },
+    {
+      "id": "melbourne-pin-oak-court-ramsay-street-8f4a",
+      "title": "핀 오크 코트 (네이버스 램지 스트리트)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.8589,
+      "lng": 145.17145,
+      "area": "Pin Oak Court entrance, Vermont South",
+      "subject": "램지 스트리트로 사용된 핀 오크 코트의 곡선형 막다른 골목과 주택군",
+      "tip": "Weeden Drive에서 Pin Oak Court로 꺾이는 공공 보도 부근에서 동남동쪽을 바라보세요. 위치는 구역 수준의 근사치이므로 현장에서 구도를 확인하고, 잔디·진입로·주택 부지에 들어가거나 주민 차량 통행을 막지 마세요.",
+      "lens": "28-70mm",
+      "time": "정오~늦은 오후 (11:00-16:00)",
+      "workId": "neighbours",
+      "scene": "Pin Oak Court는 Neighbours의 극 중 Ramsay Street로 사용된 실제 막다른 골목이며 반복적인 외부 장면의 배경입니다.",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Ramsay_Street"
     },
     {
       "id": "melbourne-princes-bridge-flinders-station-b202",
@@ -2241,6 +2659,23 @@
       }
     },
     {
+      "id": "melbourne-wardlow-miss-fisher-house-41b2",
+      "title": "워들로우 (미스 피셔의 미스터리 살인 사건 저택)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.79445,
+      "lng": 144.95555,
+      "area": "Wardlow, 114-118 Park Drive, Parkville",
+      "subject": "워들로우 저택의 이탈리아풍 외관과 철제 레이스 베란다; 미스 피셔의 거주지 외관 촬영지",
+      "tip": "Park Drive 서쪽 공공 보도에서 촬영하세요. 위치는 구역 수준의 근사치이므로 현장에서 구도를 확인하고, 사유지·대문 안으로 들어가지 말며 보행자와 자전거를 방해하지 마세요.",
+      "lens": "24-50mm",
+      "time": "오전~이른 오후 (09:00-13:00)",
+      "workId": "miss-fishers-murder-mysteries",
+      "scene": "Wardlow 외관은 극 중 Phryne Fisher의 221B The Esplanade 저택으로 반복 등장하는 외부 촬영지입니다.",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Wardlow,_Parkville"
+    },
+    {
       "id": "munich-alter-peter-tower-view-c81a",
       "title": "성 베드로 성당 '알터 페터' 전망대 전경",
       "city": "munich",
@@ -2260,6 +2695,40 @@
         "license": "CC BY-SA 3.0 de",
         "source": "https://commons.wikimedia.org/wiki/File:Stadtbild_M%C3%BCnchen.jpg"
       }
+    },
+    {
+      "id": "munich-konigsplatz-propylaeen-suspiria-4c1e",
+      "title": "뮌헨 쾨니히스플라츠 프로필라이엔 (영화 '서스페리아' 1977 야간 장면)",
+      "city": "munich",
+      "category": "drama",
+      "lat": 48.14592,
+      "lng": 11.56517,
+      "area": "Königsplatz public square, Maxvorstadt",
+      "subject": "쾨니히스플라츠에서 프로필라이엔과 글립토테크를 배경으로 걷는 다니엘의 야간 장면",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 안전한 광장 가장자리와 실제 장면 축을 확인. 보고 방위 282.8°는 target-pin 계산 255.98°와 불일치하므로 프레임을 반드시 대조한다.",
+      "lens": "24-70mm",
+      "time": "블루아워–야간",
+      "workId": "suspiria",
+      "scene": "다니엘이 밤의 쾨니히스플라츠를 걷고 안내견에게 공격받는 장면",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/s/Suspiria-1977.php"
+    },
+    {
+      "id": "munich-lmu-lichthof-sophie-scholl-8f2a",
+      "title": "LMU 뮌헨 본관 리히트호프 (영화 '소피 숄 - 마지막 날들' 전단 장면)",
+      "city": "munich",
+      "category": "drama",
+      "lat": 48.15068,
+      "lng": 11.57994,
+      "area": "LMU Hauptgebäude Lichthof, Geschwister-Scholl-Platz 1",
+      "subject": "상부 발코니에서 리히트호프와 백장미 기념공간을 내려다보는 영화 촬영 구도",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 허가된 발코니·갤러리 standing point와 구도를 확인. 16–35mm를 사용하고 교육시설의 촬영 규칙·통행을 준수한다.",
+      "lens": "16-35mm",
+      "time": "11:00–14:00",
+      "workId": "sophie-scholl-die-letzten-tage",
+      "scene": "LMU 리히트호프에서 전단을 배포하고 상부에서 전단을 떨어뜨리는 장면",
+      "verified": "reported",
+      "source": "https://www.deutschlandfunk.de/sophie-scholl-film-100.html"
     },
     {
       "id": "munich-umschreibung-endless-staircase-e49c",
@@ -2327,6 +2796,40 @@
       }
     },
     {
+      "id": "nagoya-city-hall-central-hall-staircase-4d1e",
+      "title": "나고야시청 본청사 중앙 계단",
+      "city": "nagoya",
+      "category": "drama",
+      "lat": 35.18135,
+      "lng": 136.90664,
+      "area": "Nagoya City Hall main building, Naka-ku",
+      "subject": "중앙 대리석 계단과 중앙 복도 — 드라마 VIVANT 로케이션 관련 구도",
+      "tip": "평일 공개 관람 범위에서만 촬영하세요. 위치는 구역 수준의 근사치이므로 현장에서 중앙 계단/복도 구도를 확인하고, 직원·방문객 통행을 막거나 삼각대를 설치하지 마세요.",
+      "lens": "24-35mm",
+      "time": "평일 12:00-15:00",
+      "workId": "vivant",
+      "scene": "나고야시청 중앙 계단/복도 로케이션으로 소개된 장면; 정확한 프레임은 현장 대조 필요",
+      "verified": "reported",
+      "source": "https://www.nagoya-info.jp/location/search/detail/4/"
+    },
+    {
+      "id": "nagoya-congress-center-sforza-statue-c71d",
+      "title": "나고야 국제회의장 센추리홀 안뜰 & 스포르차 기마상",
+      "city": "nagoya",
+      "category": "anime",
+      "lat": 35.12795,
+      "lng": 136.90048,
+      "area": "Nagoya International Congress Center, central courtyard / Century Hall",
+      "subject": "스포르차 기마상과 센추리홀 외관을 함께 담는 『울려라! 유포니엄』 무대 구도",
+      "tip": "위치는 중정 남쪽 보행 구역의 근사치입니다. 현장에서 통행을 막지 않는 공개 지점에서 24–35mm로 촬영하세요. 현재 개보수·휴장 여부와 촬영 규칙을 먼저 확인하세요.",
+      "lens": "24–35mm",
+      "time": "11:00–15:00 (운영 일정 확인)",
+      "workId": "sound-euphonium",
+      "scene": "나고야 국제회의장 스포르차 기마상·센추리홀 중정이 전국대회 무대로 등장하는 장면",
+      "verified": "reported",
+      "source": "https://nagoya-congress-center.jp/about_us/"
+    },
+    {
       "id": "nagoya-oasis21-mirai-tower-6b3a",
       "title": "오아시스 21 '물의 우주선' 옥상 전망대 (미라이 타워 리플렉션 뷰)",
       "city": "nagoya",
@@ -2346,6 +2849,23 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Nagoya_TV_Tower2.jpg"
       }
+    },
+    {
+      "id": "nagoya-osu-akamon-ufo-traffic-light-a83e",
+      "title": "오스 아카몬도리 UFO형 현수식 교통신호기 사거리",
+      "city": "nagoya",
+      "category": "anime",
+      "lat": 35.15988,
+      "lng": 136.90158,
+      "area": "Akamon-dori / Uramonzencho-dori intersection, Osu",
+      "subject": "오스의 희귀 현수식 UFO형 신호기를 올려다보는 도심 애니메이션 배경 구도",
+      "tip": "위치는 보도 모퉁이의 근사치입니다. 차도에 서지 말고 보행 동선을 비워 두며, 혼잡 시 삼각대와 장시간 정지를 피하세요.",
+      "lens": "24–28mm",
+      "time": "16:00–18:00 또는 야간 LED 점등 후",
+      "workId": "kabukimonogatari",
+      "scene": "오스 아카몬도리 UFO형 신호기가 등장하는 『傾物語』 배경 장면",
+      "verified": "reported",
+      "source": "https://osu.nagoya/ja/meisyo-kyuseki.php"
     },
     {
       "id": "nagoya-tsutaya-noritake-bookshelf-8f2c",
@@ -3394,6 +3914,40 @@
       "source": "https://www.phuket101.net/plane-spotting-in-phuket/"
     },
     {
+      "id": "phuket-on-on-hotel-the-beach-itsy-4b2c",
+      "title": "더 메모리 앳 온온 호텔 - '더 비치' 촬영지",
+      "city": "phuket",
+      "category": "drama",
+      "lat": 7.88378,
+      "lng": 98.38858,
+      "area": "19 Phang Nga Road, public sidewalk opposite The Memory at On On Hotel",
+      "subject": "1927 Sino-Portuguese facade and heritage entrance associated with The Beach",
+      "tip": "위치는 근사치(구역 수준) — 반드시 보도에 서서 촬영하고 차도에 들어가지 마세요. 내부 촬영은 호텔 허가와 투숙객 프라이버시를 지키세요.",
+      "lens": "24-35mm wide angle",
+      "time": "08:00-10:00 또는 18:00-19:30",
+      "workId": "the-beach",
+      "scene": "On On Hotel interior/guesthouse location; room 204 and exact frame remain for admin review",
+      "verified": "reported",
+      "source": "https://almostginger.com/the-beach-filming-locations-in-thailand/"
+    },
+    {
+      "id": "phuket-shrine-serene-light-itsy-8a1e",
+      "title": "상탐 신사 - '아이 톨드 선셋 어바웃 유' 촬영지",
+      "city": "phuket",
+      "category": "drama",
+      "lat": 7.88372,
+      "lng": 98.38791,
+      "area": "Sang Tham Shrine entrance alley and front courtyard, Phuket Old Town",
+      "subject": "상탐 신사(Serene Light Shrine)의 Hokkien 정문·지붕과 입구 골목 구도",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 안전한 보행 위치와 구도를 확인하세요. 예배 장소이므로 조용히 촬영하고 내부에서는 신발·복장·촬영 예절을 지키세요.",
+      "lens": "35-50mm prime 또는 24mm wide angle",
+      "time": "09:00-11:00 또는 15:30-17:00",
+      "workId": "i-told-sunset-about-you",
+      "scene": "푸껫 올드타운 상탐 신사 관련 촬영지; 정확한 프레임·촬영 지점은 관리자 검토 필요",
+      "verified": "reported",
+      "source": "https://blscene.com/where-was-i-told-sunset-about-you-filmed/"
+    },
+    {
       "id": "prague-cihelna-swan-charles-bridge-9b4f",
       "title": "치헬나 강변 카를교 백조 포토스팟",
       "city": "prague",
@@ -3436,6 +3990,40 @@
       }
     },
     {
+      "id": "prague-lovers-in-prague-jan-hus-wishing-wall-a4b1",
+      "title": "프라하의 연인 구시가 광장 얀 후스 동상 '소원의 벽' 포인트",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.08785,
+      "lng": 14.4208,
+      "area": "Jan Hus Memorial, Old Town Square, Prague 1",
+      "subject": "얀 후스 기념비와 틴 성모 마리아 교회 쌍탑을 함께 담는 프라하의 연인 임시 소원의 벽 촬영 구역",
+      "tip": "위치는 근사치(구역 수준) — 얀 후스 동상 기단 주변에서 현장 구도를 확인하세요. 35–50mm로 인물·기단·틴 성당 쌍탑을 맞추고, 드라마의 목재 소원의 벽은 현재 철거된 세트임을 안내하세요.",
+      "lens": "35–50mm",
+      "time": "이른 아침 또는 골든아워",
+      "workId": "lovers-in-prague-2005",
+      "scene": "얀 후스 기념비 하단에 임시 설치된 소원의 벽 장면",
+      "verified": "reported",
+      "source": "https://www.travie.com/news/articleView.html?idxno=7671"
+    },
+    {
+      "id": "prague-mission-impossible-kampa-stairs-m7f2",
+      "title": "미션 임파서블 1편 캄파섬 카를교 계단 (크란네르 계단)",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.0863,
+      "lng": 14.40985,
+      "area": "Krannerovo schodiště na Kampu, Malá Strana, Prague 1",
+      "subject": "미션 임파서블(1996)에서 에단 헌트가 카를교로 달려가는 캄파섬 계단과 카를교 방향 구도",
+      "tip": "위치는 근사치(구역 수준) — 캄파섬 계단의 안전한 보행면에서 현장 구도를 확인하세요. 24–70mm로 계단 아치와 카를교 석조 요소를 맞추고 통행을 막지 마세요.",
+      "lens": "24–70mm",
+      "time": "새벽 또는 블루아워",
+      "workId": "mission-impossible-1996",
+      "scene": "Na Kampě 북쪽 이중 계단에서 에단 헌트가 카를교 방향으로 달려가는 장면",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/m/Mission-Impossible.php"
+    },
+    {
       "id": "prague-vrtba-garden-st-nicholas-3c8d",
       "title": "브르트바 정원 상부 테라스 성 니콜라스 성당 조망점",
       "city": "prague",
@@ -3472,6 +4060,29 @@
       "source": "https://www.orderofmalta.int/it/governo/basilica-san-pietro-dal-buco-della-serratura/"
     },
     {
+      "id": "rome-bocca-verita-roman-holiday-9c3e",
+      "title": "'로마의 휴일' 진실의 입 손 넣기 명장면 촬영 스팟",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.88823,
+      "lng": 12.48151,
+      "area": "Santa Maria in Cosmedin portico, Ripa",
+      "subject": "진실의 입(Bocca della Verità)과 영화 속 손 넣기 장면 구도",
+      "tip": "위치는 포르티코 구역 수준 근사치 — 현장에서 구도를 확인하세요. 35–50mm로 인물과 가면을 담고, 대기 줄을 막지 않으며 성당의 정숙·복장 규칙을 지키세요.",
+      "lens": "35mm 또는 50mm",
+      "time": "개장 직후 오전 09:30–10:30",
+      "workId": "roman-holiday",
+      "scene": "Joe Bradley가 진실의 입에서 손이 잘린 것처럼 연기해 Ann을 놀라게 하는 장면",
+      "verified": "reported",
+      "source": "https://www.walksinrome.com/blog/mouth-of-truth-santa-maria-in-cosmedin-rome",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788139136/spotchu/spots/vgxhjl4crewwufolcoom.jpg",
+      "imageCredit": {
+        "author": "Sailko",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Et%C3%A0_imperiale,_chiusino_a_forma_di_mascherone_di_divinit%C3%A0_fluviale,_detta_bocca_della_verit%C3%A0,_collocata_qui_nel_1632.jpg"
+      }
+    },
+    {
       "id": "rome-ponte-umberto-sunset-9a2c",
       "title": "폰테 움베르토 1세에서 성 베드로 대성당과 테베레강",
       "city": "rome",
@@ -3485,6 +4096,40 @@
       "time": "Sunset and blue hour",
       "verified": "official",
       "source": "https://www.explorest.com/places/italy/rome/ponte-umberto-bridge-view-of-vatican-city-river-tiber"
+    },
+    {
+      "id": "rome-spanish-steps-roman-holiday-gelato-e91a",
+      "title": "스페인 계단 - 로마의 휴일 젤라토 장면",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.90588,
+      "lng": 12.48248,
+      "area": "Piazza di Spagna / lower-to-middle Spanish Steps",
+      "subject": "스페인 계단에서 확인하는 로마의 휴일 장면 구도",
+      "tip": "위치는 구역 수준의 근사치입니다. 현장에서 구도를 확인하고 계단에 앉거나 음식을 먹지 말며 통행을 막지 않는 곳에서 촬영하세요.",
+      "lens": "24-70mm",
+      "time": "06:30-08:30",
+      "workId": "roman-holiday",
+      "scene": "스페인 계단에서 앤 공주와 조 브래들리가 만나는 장면",
+      "verified": "reported",
+      "source": "https://www.turismoroma.it/it/luoghi/piazza-di-spagna"
+    },
+    {
+      "id": "rome-trevi-fountain-la-dolce-vita-midnight-b47c",
+      "title": "트레비 분수 - 달콤한 인생 야간 장면",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.90075,
+      "lng": 12.48325,
+      "area": "Piazza di Trevi, public perimeter outside the fountain basin",
+      "subject": "트레비 분수를 배경으로 한 달콤한 인생 대표 장면 구도",
+      "tip": "위치는 구역 수준의 근사치입니다. 분수 외곽의 합법적인 보행 공간에서 촬영하고 수조 안에 들어가거나 물에 발을 담그지 마세요.",
+      "lens": "24-70mm or 35mm f/1.4",
+      "time": "23:00-01:00 또는 06:00-07:30",
+      "workId": "la-dolce-vita",
+      "scene": "안ita 에크베르그의 트레비 분수 장면",
+      "verified": "reported",
+      "source": "https://www.turismoroma.it/it/luoghi/fontana-di-trevi"
     },
     {
       "id": "rome-via-nicola-salvi-colosseum-7d4f",
@@ -4192,6 +4837,23 @@
       "source": "https://www.weekendnotes.com/dr-mary-booth-lookout/"
     },
     {
+      "id": "sydney-mission-impossible-bare-island-bridge-b200",
+      "title": "미션 임파서블 2 베어 아일랜드 요새와 목조 다리",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.9899,
+      "lng": 151.2312,
+      "area": "La Perouse, Bare Island footbridge approach",
+      "subject": "Bare Island Fort and connecting footbridge used in Mission: Impossible 2",
+      "tip": "위치는 라 페루즈 쪽 다리 접근부의 근사치 — 남쪽 요새 방향 구도를 현장에서 확인하세요. 요새 내부는 가이드 투어 없이 출입하지 말고, 도로·바위·물가를 피하세요.",
+      "lens": "24–70mm",
+      "time": "이른 아침 또는 늦은 오후",
+      "workId": "mission-impossible-2",
+      "scene": "베어 아일랜드 요새가 션 앰브로스의 기지로 등장",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/m/Mission-Impossible-2.php"
+    },
+    {
       "id": "sydney-mrs-macquaries-point-c92a",
       "title": "미세스 맥쿼리 포인트 오페라 하우스 & 하버 브리지 전망대",
       "city": "sydney",
@@ -4205,6 +4867,23 @@
       "time": "Sunset to Blue Hour",
       "verified": "reported",
       "source": "https://www.locationscout.net/australia/62603-mrs-macquaries"
+    },
+    {
+      "id": "sydney-the-matrix-martin-place-fountain-a199",
+      "title": "매트릭스 '빨간 드레스의 여자' 마틴 플레이스 분수",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.8677,
+      "lng": 151.2085,
+      "area": "Martin Place, Sydney CBD",
+      "subject": "The Matrix training-programme / Woman in Red scene at Lloyd Rees Fountain",
+      "tip": "위치는 마틴 플레이스 광장 구역의 근사치 — 현장에서 구도와 보행 흐름을 확인하세요. 평일 통행을 방해하지 마세요.",
+      "lens": "35–50mm",
+      "time": "늦은 오후 또는 한산한 주말",
+      "workId": "the-matrix",
+      "scene": "마틴 플레이스 분수 주변의 빨간 드레스 장면",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/m/Matrix.php"
     },
     {
       "id": "taipei-eatdrink-grandhotel-lobby-03",
@@ -4662,6 +5341,23 @@
       }
     },
     {
+      "id": "venice-campo-san-barnaba-indiana-jones-9e4a",
+      "title": "산 바르나바 광장과 산 바르나바 성당 — 인디아나 존스: 최후의 성전",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.43328,
+      "lng": 12.32455,
+      "area": "Campo San Barnaba, Dorsoduro",
+      "subject": "산 바르나바 성당 파사드와 광장",
+      "tip": "위치는 광장 구역 수준의 근사치 — 현장에서 구도를 확인하세요. 28–35mm 광각으로 성당과 광장을 담고 보행자·카페 공간을 막지 마세요.",
+      "lens": "24–50mm",
+      "time": "오전 08:00–10:00 또는 17:00–19:00",
+      "workId": "indiana-jones-last-crusade",
+      "scene": "산 바르나바 성당 외관이 영화 속 베네치아 도서관 외관으로 사용된 장면과 광장 촬영지",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/San_Barnaba,_Venice"
+    },
+    {
       "id": "venice-molo-san-marco-gondolas-san-giorgio-6d1b",
       "title": "몰로 선착장의 곤돌라와 산 조르조 마조레 섬 전경",
       "city": "venice",
@@ -4717,6 +5413,23 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Santa_Maria_della_Salute_from_Hotel_Monaco.jpg"
       }
+    },
+    {
+      "id": "venice-scala-contarini-del-bovolo-othello-7b3f",
+      "title": "스칼라 콘타리니 델 보볼로 — 오셀로 촬영지",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.43482,
+      "lng": 12.33458,
+      "area": "Corte Contarini del Bovolo, San Marco",
+      "subject": "스칼라 콘타리니 델 보볼로의 나선형 외부 계단탑",
+      "tip": "위치는 코르테 구역 수준의 근사치 — 현장에서 구도를 확인하세요. 방위각은 재확인하고 좁은 골목의 통행을 막지 마세요.",
+      "lens": "14–24mm",
+      "time": "11:00–14:00 또는 일몰 직후",
+      "workId": "othello",
+      "scene": "오손 웰스의 오셀로에서 브라반시오 저택으로 등장하며 나선형 계단탑이 두드러지는 장면",
+      "verified": "reported",
+      "source": "https://www.italyformovies.it/itinerari/detail/7036/cinegastronomia-il-veneto-degli-artisti"
     },
     {
       "id": "yokohama-bankoku-bridge-skyline-f4a1",
@@ -4939,6 +5652,34 @@
   ],
   "works": [
     {
+      "id": "diamonds-are-forever",
+      "title": "007 다이아몬드는 영원히",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-fault-in-our-stars",
+      "title": "안녕, 헤이즐",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "eat-pray-love",
+      "title": "먹고 기도하고 사랑하라",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "memories-of-bali",
+      "title": "발리에서 생긴 일",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "king-the-land",
       "title": "킹더랜드",
       "type": "드라마",
@@ -5002,6 +5743,20 @@
       "progress": 0
     },
     {
+      "id": "the-queens-gambit",
+      "title": "The Queen's Gambit",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-hunger-games-mockingjay-part-2",
+      "title": "The Hunger Games: Mockingjay - Part 2",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "the-king-eternal-monarch",
       "title": "더 킹: 영원의 군주",
       "type": "드라마",
@@ -5058,6 +5813,62 @@
       "progress": 0
     },
     {
+      "id": "camp-sawi",
+      "title": "罹좏봽 ?ъ쐞",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "cant-help-falling-in-love",
+      "title": "?щ옉??鍮좎?吏 ?딆쓣 ???놁뼱",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "rak-jang-the-memory",
+      "title": "락짱",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "klin-kasalong",
+      "title": "Klin Kasalong",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-protege",
+      "title": "프로티제",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "mission-impossible-ghost-protocol",
+      "title": "미션 임파서블: 고스트 프로토콜",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "calmi-cuori-appassionati",
+      "title": "냉정과 열정 사이",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "hannibal",
+      "title": "Hannibal",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "kimi-no-suizou-wo-tabetai",
       "title": "너의 췌장을 먹고 싶어",
       "type": "영화",
@@ -5082,6 +5893,20 @@
       "id": "fukuoka-2019",
       "title": "후쿠오카",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "a-tourists-guide-to-love",
+      "title": "사랑을 위한 여행 안내서",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "tuoi-thanh-xuan",
+      "title": "청춘 / Forever Young",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
@@ -5170,6 +5995,34 @@
       "progress": 0
     },
     {
+      "id": "the-spy-wife",
+      "title": "스파이의 아내",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "hero-2015",
+      "title": "히어로",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "suzume-no-tojimari",
+      "title": "스즈메의 문단속",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "fate-zero",
+      "title": "페이트/제로",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "the-last-samurai",
       "title": "라스트 사무라이",
       "type": "영화",
@@ -5254,6 +6107,13 @@
       "progress": 0
     },
     {
+      "id": "la-casa-de-papel",
+      "title": "종이의 집",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "im-sorry-i-love-you",
       "title": "미안하다, 사랑한다",
       "type": "드라마",
@@ -5261,9 +6121,58 @@
       "progress": 0
     },
     {
+      "id": "neighbours",
+      "title": "네이버스",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "miss-fishers-murder-mysteries",
+      "title": "미스 피셔의 미스터리 살인 사건",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "suspiria",
+      "title": "서스페리아",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "sophie-scholl-die-letzten-tage",
+      "title": "소피 숄 - 마지막 날들",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "tora-ni-tsubasa",
       "title": "연속 TV 소설 '호랑이에게 날개'",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "vivant",
+      "title": "VIVANT",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "sound-euphonium",
+      "title": "울려라! 유포니엄",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "kabukimonogatari",
+      "title": "카부키모노가타리 (이야기 시리즈 세컨드 시즌)",
+      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
@@ -5492,6 +6401,48 @@
       "progress": 0
     },
     {
+      "id": "the-beach",
+      "title": "더 비치",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "i-told-sunset-about-you",
+      "title": "아이 톨드 선셋 어바웃 유",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "lovers-in-prague-2005",
+      "title": "프라하의 연인",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "mission-impossible-1996",
+      "title": "미션 임파서블",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "roman-holiday",
+      "title": "로마의 휴일",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "la-dolce-vita",
+      "title": "달콤한 인생 (라 돌체 비타)",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "kon-na-yofuke-ni-banana-ka-yo",
       "title": "이런 야밤에 바나나라니 사랑스러운 실화",
       "type": "영화",
@@ -5618,6 +6569,20 @@
       "progress": 0
     },
     {
+      "id": "mission-impossible-2",
+      "title": "미션 임파서블 2",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-matrix",
+      "title": "매트릭스",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "eat-drink-man-woman-yi-yi",
       "title": "음식남녀 (Eat Drink Man Woman) / 하나 그리고 둘 (Yi Yi)",
       "type": "영화",
@@ -5674,13 +6639,6 @@
       "progress": 0
     },
     {
-      "id": "suzume-no-tojimari",
-      "title": "스즈메의 문단속",
-      "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
       "id": "lost-in-translation",
       "title": "사랑도 통역이 되나요? (로스트 인 트랜스레이션)",
       "type": "영화",
@@ -5718,6 +6676,20 @@
     {
       "id": "the-wolverine",
       "title": "더 울버린",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "indiana-jones-last-crusade",
+      "title": "인디아나 존스: 최후의 성전",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "othello",
+      "title": "오셀로",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
