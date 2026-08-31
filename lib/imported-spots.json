@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T13:55:30.303Z",
+  "generatedAt": "2026-08-31T15:00:21.678Z",
   "spots": [
     {
       "id": "amsterdam-damrak-waterfront-dancing-houses-9f12",
@@ -1298,6 +1298,22 @@
       }
     },
     {
+      "id": "fukuoka-acros-tenjin-park-tonkotsu-ramens-b4e1",
+      "title": "텐진 중앙공원 잔디광장 - 아크로스 후쿠오카 스텝가든 뷰 (하카타 돈코츠 라멘즈)",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.58985,
+      "lng": 130.40248,
+      "area": "福岡市中央区天神",
+      "subject": "アクロス福岡 ステップガーデン (ACROS Fukuoka Step Garden)",
+      "tip": "텐진 중앙공원 남측 잔디밭 산책로에서 북쪽을 향해 서서 아크로스 후쿠오카의 60m 거대 계단식 녹화 외벽('스텝 가든')을 정면으로 프레이밍합니다. 24mm 광각 렌즈로 공원의 푸른 잔디와 거대한 인공 녹색 피라미드 건물을 대비시키면 작중의 독특한 도시 풍경이 그대로 재현됩니다.",
+      "lens": "24mm - 35mm 광각 (계단식 녹화 건물 전체와 전경 잔디밭 수용)",
+      "time": "10:00 - 14:00 (남향 벽면에 햇빛이 정면으로 닿는 시간대)",
+      "workId": "hakata-tonkotsu-ramens",
+      "scene": "1화 도입부 및 주요 산책 장면. 주인공 반바 젠지가 텐진 중앙공원을 지나며 거대한 계단식 녹색 빌딩 아크로스 후쿠오카를 배경으로 걷는 장면.",
+      "source": "https://astral-tanbou.com/entry/2018/01/14/233000"
+    },
+    {
       "id": "fukuoka-atago-shrine-viewpoint-8a1c",
       "title": "후쿠오카 아타고 신사 전망대 — 후쿠오카 타워 야경",
       "city": "fukuoka",
@@ -1424,6 +1440,38 @@
       }
     },
     {
+      "id": "fukuoka-najima-bridge-natsume-yuujinchou-e5d2",
+      "title": "나지마 강변공원 산책로 - 니시테츠 가이즈카선 나지마강 16연 아치교 (나츠메 우인장 4기)",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.6375,
+      "lng": 130.428,
+      "area": "福岡市東区名島",
+      "subject": "西鉄貝塚線 名島川橋梁 (Nishitetsu Kaizuka Line Najima River Multi-Arch Bridge)",
+      "tip": "나지마 강변공원의 수변 보행로 난간에 서서 북서쪽을 향해 카메라를 조준합니다. 다타라강 하구를 가로지르는 1923년 건립 등록토목유산 '16연 철근콘크리트 아치교'를 레트로 니시테츠 600형 2량 열차가 건너가는 순간을 50-85mm 중망원 렌즈로 포착합니다. 만조 시간대에는 강물에 아치형 교각이 반영되어 서정적인 애니메이션 원작의 감성이 살아납니다.",
+      "lens": "50mm - 85mm 중망원 (하천 건너편의 아치교와 2량 열차 피사체 압축)",
+      "time": "11:00 - 15:00 (순광 및 측면광으로 콘크리트 아치 교각과 열차가 선명하게 부각되는 시간대, 10-15분 간격 운행)",
+      "workId": "natsume-yuujincho",
+      "scene": "4기 12화('기억의 문' / 記憶の扉). 주인공 나츠메 타카시가 옛 유년 시절의 집을 찾아가기 위해 탑승한 열차의 이동 경로와 함께 등장하는 후쿠오카의 대표적 노스탤지어 철도 풍경.",
+      "source": "http://blog.livedoor.jp/animeseichi/archives/natsume-fukuoka.html"
+    },
+    {
+      "id": "fukuoka-ohori-park-kangetsukyo-fuufu-ijou-9c2f",
+      "title": "오호리 공원 관월교 & 나카노시마 산책로 (부부 이상, 연인 미만.)",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.5879,
+      "lng": 130.3768,
+      "area": "福岡市中央区大濠公園",
+      "subject": "大濠公園 浮見堂・中の島 (Ukimidou Pavilion & Central Pine Islands)",
+      "tip": "관월교 동측 진입부에서 남서쪽을 바라보며 촬영합니다. 우아하게 곡선을 그리는 석교 난간과 버드나무, 중앙 섬의 소나무 숲 및 주홍빛 우키미도 정자를 한 프레임에 담아냅니다. 35mm~50mm 표준 렌즈로 호수 수면의 반영과 함께 담으면 애니메이션의 서정적인 데이트 장면 분위기가 완성됩니다.",
+      "lens": "35mm - 50mm 표준 렌즈 (석교 곡선과 섬 수변로의 자연스러운 원근감)",
+      "time": "15:00 - 17:30 (오후 사광 및 호수 수면 반영 골든아워)",
+      "workId": "fuufu-ijou-koibito-miman",
+      "scene": "오프닝 영상 및 2화/7화 데이트 및 산책 장면. 지로와 아카리, 시오리가 오호리 공원 호수 위의 석교와 버드나무 산책로를 걸으며 대화하는 배경.",
+      "source": "https://astral-tanbou.com/entry/2023/01/14/000000"
+    },
+    {
       "id": "fukuoka-ohori-park-kujira-playground-buddy-daddies-4d8a",
       "title": "오호리 공원 고래 놀이터 - Buddy Daddies",
       "city": "fukuoka",
@@ -1467,6 +1515,28 @@
         "author": "Pontafon",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Mizukagamitenmanguu01.jpg"
+      }
+    },
+    {
+      "id": "fukuoka-washio-atago-shrine-fuufu-ijou-8a3d",
+      "title": "와시오 아타고 신사 남판 돌계단 (부부 이상, 연인 미만.)",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.5847,
+      "lng": 130.3346,
+      "area": "福岡市西区愛宕",
+      "subject": "鷲尾愛宕神社 拝殿・大鳥居",
+      "tip": "아타고산 남판(男坂) 직선 돌계단 하단에서 정상의 도리이와 배전 방향을 올려다보는 로우앵글 구도로 촬영합니다. 24-35mm 광각 렌즈를 사용하면 약 300계단의 가파른 경사감과 숲 터널의 깊이감이 극대화됩니다. 황혼 무렵에는 정상 전망대에서 후쿠오카 타워와 하카타만을 내려다보는 야경 컷도 함께 담을 수 있습니다.",
+      "lens": "24-35mm 광각 (가파른 계단 상승 구도) / 50-85mm 준망원 (정상 도리이 및 시가지 압축)",
+      "time": "16:30 - 18:30 (황혼 및 일몰 골든아워)",
+      "workId": "fuufu-ijou-koibito-miman",
+      "scene": "1화 오프닝 및 12화 피날레에서 지로와 아카리가 방문하는 주요 무대. 아타고산 정상으로 이어지는 가파른 돌계단(남판)과 하카타만이 내려다보이는 신사 풍경이 충실하게 묘사됨.",
+      "source": "https://astral-tanbou.com/entry/2023/01/14/000000",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788188418/spotchu/spots/xl6bt0zoogyoulvzn3t2.jpg",
+      "imageCredit": {
+        "author": "Heartoftheworld",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=11963226"
       }
     },
     {
@@ -4448,6 +4518,50 @@
       "source": "https://www.screensapporo.jp/works/9921"
     },
     {
+      "id": "sapporo-golden-kamuy-beer-museum-factory-8c2f",
+      "title": "골든 카무이 — 삿포로 맥주 박물관 (삿포로 맥주 공장 결전 씬)",
+      "city": "sapporo",
+      "category": "anime",
+      "lat": 43.07142,
+      "lng": 141.36905,
+      "area": "Higashi-ku",
+      "subject": "サッポロビール博物館 赤レンガ館・大煙突 / Sapporo Beer Museum & Kaitakushi Star Chimney",
+      "tip": "박물관 앞 정원 광장 보도에서 북북서 방향(약 345도)을 향해 붉은 벽돌 건물과 개척사 붉은 별(赤星) 마크가 새겨진 거대한 검은 굴뚝을 하나의 프레임에 앙각(Low angle)으로 담습니다. 24mm 광각 렌즈를 활용하면 원작 코믹스 25~26권(249~253화) 및 애니메이션 4기 48화에 등장하는 거대한 맥주 공장의 웅장함을 그대로 재현할 수 있습니다.",
+      "lens": "24-35mm 광각 렌즈",
+      "time": "15:00 - 17:00 (석양 무렵 붉은 벽돌 질감이 극대화되는 시간) 또는 일몰 후 야간 라이트업",
+      "workId": "golden-kamuy",
+      "scene": "원작 코믹스 25~26권(제249~253화) 및 애니메이션 제4기 48화 '삿포로 맥주 공장 결전' 편에서 스기모토, 우시야마, 히지카타 일행과 제7사단 츠루미 중위가 맥주 탱크와 맥주 거품 속에서 격돌하는 삿포로 맥주 공장의 상징적인 붉은 벽돌 공장 및 붉은 별 굴뚝 외관 씬.",
+      "source": "https://www.sapporobeer.jp/brewery/s_museum/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788188383/spotchu/spots/araskpeaovzonaztw94x.jpg",
+      "imageCredit": {
+        "author": "The original uploader was K. Takeda at Japanese Wikipedia.",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=2879653"
+      }
+    },
+    {
+      "id": "sapporo-golden-kamuy-urakawa-branch-hotel-7e9b",
+      "title": "골든 카무이 — 구 우라카와 지청 청사 (삿포로 세계 호텔 외관 씬)",
+      "city": "sapporo",
+      "category": "anime",
+      "lat": 43.04868,
+      "lng": 141.49725,
+      "area": "Atsubetsu-ku",
+      "subject": "旧浦河支庁庁舎（北海道開拓の村 市街地群 No.8） / Former Urakawa Branch Government Building",
+      "tip": "광장 보도에서 북북동 방향(약 25도)을 바라보며 건물 정면 현관 포치와 좌우 대칭 창문, 특유의 분홍빛 목조 판벽을 정면 눈높이에서 35mm 내외의 표준 화각으로 촬영하면 애니메이션 1기 9화 및 2기 13화에서 연쇄살인마 이에나가 카노가 운영하는 '삿포로 세계 호텔'의 기괴하고 웅장한 서양식 외관 설정 컷과 1:1로 일치합니다.",
+      "lens": "35-50mm 표준 렌즈",
+      "time": "10:00 - 16:00 (오전~이른 오후 정면 사광 시간대)",
+      "workId": "golden-kamuy",
+      "scene": "제1기 9화 '빛나다' 및 제2기 13화에서 우시야마 타츠마와 시라이시 요시타케가 투숙한 밀실 살인 호텔 '삿포로 세계 호텔(札幌世界ホテル)'의 외관 전경 씬.",
+      "source": "https://www.kaitaku.or.jp/about/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788188420/spotchu/spots/dyfi2dsmumg3qtzosj3x.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=123718954"
+      }
+    },
+    {
       "id": "sapporo-golden-kamuy-yamamoto-barbershop-d82a",
       "title": "골든 카무이 야마모토 이발관",
       "city": "sapporo",
@@ -4648,6 +4762,28 @@
         "author": "663highland",
         "license": "CC BY 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:Chuo_Sapporo_S4W4S4W3_01s4s3200.jpg"
+      }
+    },
+    {
+      "id": "sapporo-wave-listen-to-me-norbesa-ferris-wheel-41f0",
+      "title": "파도여 들어다오 — 노르베사 옥상 대관람차 노리아 (미나레와 미츠오의 재회 데이트 씬)",
+      "city": "sapporo",
+      "category": "anime",
+      "lat": 43.05582,
+      "lng": 141.35128,
+      "area": "Chuo-ku",
+      "subject": "ノルベサ 屋上観覧車ノリア / NORBESA Rooftop Ferris Wheel nORIA",
+      "tip": "미나미 3조 니시 5초메 교차로 남동측 보도에서 북서쪽 대각선 위(약 325도)를 올려다보는 앙각(Upward Angle) 구도로, 노르베사 건물 파사드와 옥상에서 노랗게 빛나는 대관람차 '노리아(nORIA)'를 24-28mm 광각 렌즈로 프레임에 담습니다. 제9화에서 코다 미나레와 스가 미츠오의 재회 데이트 장면 및 스스키노 특유의 네온 도시 감성이 생생하게 표현됩니다.",
+      "lens": "24-28mm 광각 렌즈 (야간 F1.8-F2.8 권장)",
+      "time": "18:30 - 22:00 (관람차 조명이 점등된 매직아워 및 야간 시간대)",
+      "workId": "nami-yo-kiitekure",
+      "scene": "TV 애니메이션 제9화 '라스트 판타지'에서 주인공 코다 미나레(鼓田ミナレ)가 전 남친 스가 미츠오(須賀光雄)와 재회 데이트를 하며 볼링을 치고 옥상 대관람차 노리아(nORIA)에 탑승하는 핵심 무대이자, 스스키노 밤거리의 랜드마크로 등장하는 78m 대관람차 야경 씬.",
+      "source": "https://www.norbesa.jp/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788188394/spotchu/spots/hfmruxq6ddjsoomwmmye.jpg",
+      "imageCredit": {
+        "author": "MIKI Yoshihito. (#mikiyoshihito)",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/7940758@N07/3713283378"
       }
     },
     {
@@ -6154,6 +6290,13 @@
       "progress": 0
     },
     {
+      "id": "hakata-tonkotsu-ramens",
+      "title": "하카타 돈코츠 라멘즈",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "kimi-no-suizou-wo-tabetai",
       "title": "너의 췌장을 먹고 싶어",
       "type": "영화",
@@ -6164,6 +6307,20 @@
       "id": "kodoku-no-gourmet-season-4-hakata-special",
       "title": "고독한 미식가 시즌 4 하카타 출장편",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "natsume-yuujincho",
+      "title": "나츠메 우인장 4기",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "fuufu-ijou-koibito-miman",
+      "title": "부부 이상, 연인 미만.",
+      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
