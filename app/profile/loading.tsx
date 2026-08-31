@@ -1,13 +1,20 @@
-// /profile 이동 시 즉시 표시되는 스켈레톤(force-dynamic + DB 조회 대기 체감 개선, #55).
+// /profile 이동 시 즉시 표시되는 스켈레톤. 상단 배너 + 프로필/통계 카드 + 진행률 골격.
+// 배너는 홈·컬렉션과 동일한 pt-14 세이프에어리어 아래에서 시작(#54, edge-to-edge 통일).
 export default function ProfileLoading() {
   return (
     <div className="min-h-dvh bg-[color:var(--cream-2)] lg:pl-[76px]">
-      <div className="mx-auto w-full max-w-[500px] pb-28 pt-14 lg:max-w-[860px] lg:pb-12 lg:pt-6">
-        <div className="h-[200px] animate-pulse bg-[color:var(--line)] lg:rounded-b-[28px]" />
-        <div className="relative z-10 -mt-14 mx-4 h-[100px] animate-pulse rounded-[22px] bg-white shadow-[shadow:var(--sh-elevated)] lg:mx-6" />
-        <div className="mt-6 flex flex-col gap-6 px-5 lg:mt-8 lg:grid lg:grid-cols-2 lg:gap-8 lg:px-6">
-          <div className="h-32 animate-pulse rounded-2xl bg-[color:var(--line)]" />
-          <div className="h-32 animate-pulse rounded-2xl bg-[color:var(--line)]" />
+      <div className="pt-14 lg:pt-0">
+        <div className="h-[200px] w-full animate-pulse bg-[color:var(--line)]" />
+      </div>
+      <div className="mx-auto w-full max-w-[500px] px-4 lg:max-w-[900px]">
+        <div className="-mt-16 h-[120px] animate-pulse rounded-3xl bg-[color:var(--line-strong)]" />
+        <div className="mt-6 flex flex-col gap-3">
+          {[0, 1].map((i) => (
+            <div
+              key={i}
+              className="h-20 animate-pulse rounded-2xl bg-[color:var(--line)]"
+            />
+          ))}
         </div>
       </div>
     </div>

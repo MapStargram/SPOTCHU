@@ -49,6 +49,13 @@ const VERIFIED_LABEL: Record<Verified, string> = {
   reported: "제보",
 };
 
+// 작품 유형(한글) → 라틴 대문자 eyebrow 라벨. 기존 "Anime · Scene" 하드코딩 대체.
+const WORK_TYPE_EN: Record<string, string> = {
+  영화: "Movie",
+  드라마: "Drama",
+  애니: "Anime",
+};
+
 export default async function SpotDetailScreen({
   params,
 }: {
@@ -198,7 +205,7 @@ export default async function SpotDetailScreen({
               </span>
               <span className="min-w-0 flex-1">
                 <span className="block font-latin text-[9px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
-                  Anime · Scene
+                  {(WORK_TYPE_EN[work.type] ?? "Work") + " · Scene"}
                 </span>
                 <span className="mt-0.5 block text-[12px] font-bold tracking-[-0.01em] text-navy">
                   {work.title}

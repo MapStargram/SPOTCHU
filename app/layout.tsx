@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { RegisterSW } from "@/components/pwa/RegisterSW";
+import { InstallBanner } from "@/components/pwa/InstallBanner";
+import { getCurrentUser } from "@/lib/session";
 
 export const metadata: Metadata = {
   // OG/트위터의 상대 이미지 URL(/spots/*)을 절대주소로 resolve. APP_URL은 메일 링크와 공유.
@@ -35,11 +37,12 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const user = await getCurrentUser();
   return (
     <html lang="ko">
       <head>
@@ -56,6 +59,7 @@ export default function RootLayout({
       <body>
         {children}
         <RegisterSW />
+        {!user && <InstallBanner />}
       </body>
     </html>
   );
