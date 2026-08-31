@@ -28,15 +28,17 @@
 | 카메라 시작점 | **`shooterLat`/`shooterLng`(촬영자 위치)** 로 `flyTo`. 촬영 대상과 혼동 금지(좌표 불변식) |
 | 카메라 방향 | `bearing` 있으면 heading에 반영(촬영 대상 방향을 바라보게). 없으면 기본각 |
 | 지형/위성 | Cesium **World Terrain**(3D 지형) + **Bing Aerial**(위성) — Cesium ion 무료 |
+| 건물 입체 | **Cesium OSM Buildings**(회색 입체 매스, ion 무료). Google Photorealistic 3D Tiles(실사 텍스처)는 과금이라 미사용. 스트리밍 실패 시 지형/위성만(비치명적) |
+| God's Eye HUD | 원형 비네트(포트홀) + 코너 리드아웃(좌표·고도 ALT·방위 HDG·REC 시계) + 절제된 스캔라인. 전부 `pointer-events-none`(드래그 방해 X), 하단 저작자표시 미가림. **가짜 텔레메트리 금지**(실시간 항공편/지진/위성 등 날조 데이터 X) |
 | 스팟 마커 | 촬영자 위치에 빌보드/핀 + 라벨. (선택) 방위각 방향 표시 |
 | 상호작용 | 드래그 회전·틸트·줌, "리셋"(스팟으로 복귀), "닫기"(2D 복귀) |
-| 진입 애니메이션 | flyTo 트랜지션(세기 §미결정) |
-| 저작자표시 | Cesium/Bing credit **크롭 금지**(하단 유지) |
+| 진입 애니메이션 | flyTo 트랜지션(고도 ~900m, pitch -42° 오블리크 — 건물 입체감) |
+| 저작자표시 | Cesium/Bing credit **크롭 금지**(하단 유지, HUD가 가리지 않게) |
 
 ## 성능 / 비용 (모바일 우선 — prd §3)
 - **Lazy-load 필수**: "3D로 보기" 클릭 시 `next/dynamic`(`ssr:false`)로 CesiumJS 청크 로드. 초기 페이지 번들에 포함 금지(Cesium ~수 MB).
 - Cesium 정적 에셋(Workers/Assets/Widgets)은 `public/cesium/`로 복사 후 `CESIUM_BASE_URL` 지정(또는 CDN 금지 정책상 자가 서빙).
-- **비용 0원 경로**: Cesium ion 무료 티어(Bing Aerial + World Terrain, 카드 불필요). Google Photorealistic 3D Tiles(과금)는 **사용 안 함**.
+- **비용 0원 경로**: Cesium ion 무료 티어(Bing Aerial + World Terrain + **OSM Buildings**, 카드 불필요). Google Photorealistic 3D Tiles(과금)는 **사용 안 함**. ⚠️ OSM Buildings 스트리밍은 ion 월 무료 쿼터를 소비 — 트래픽 급증 시 재검토.
 - 한 상세 화면에 3D 인스턴스 1개. 이탈 시 `viewer.destroy()`로 메모리 정리.
 
 ## 기술 (tech-stack 추가 결정 대상)
