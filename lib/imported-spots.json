@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T13:18:31.224Z",
+  "generatedAt": "2026-08-31T13:55:30.303Z",
   "spots": [
     {
       "id": "amsterdam-damrak-waterfront-dancing-houses-9f12",
@@ -2155,6 +2155,23 @@
       }
     },
     {
+      "id": "kyoto-demachi-masugata-arcade-8b3c",
+      "title": "데마치 마스가타 상점가 동쪽 입구",
+      "city": "kyoto",
+      "category": "anime",
+      "lat": 35.02985,
+      "lng": 135.77005,
+      "area": "데마치 마스가타 상점가 동쪽 입구, 가미교",
+      "subject": "우사기야마 상점가 모델인 아케이드와 거대 사바 오브제",
+      "tip": "동쪽 입구에서 서쪽 아케이드 안을 촬영한다. 위치는 근사치(구역 수준) — 현장에서 구도 확인. 상점과 보행을 방해하지 않는다.",
+      "lens": "24-35mm",
+      "time": "영업 방해가 적은 오전 또는 늦은 오후",
+      "workId": "tamako-market",
+      "scene": "우사기야마 상점가의 실제 모델인 데마치 마스가타 상점가 아케이드",
+      "verified": "reported",
+      "source": "https://kyotolove.kyoto/article/20210217-masugata/"
+    },
+    {
       "id": "kyoto-fushimi-inari-senbon-torii-e41c",
       "title": "후시미 이나리 센본토리이",
       "city": "kyoto",
@@ -2175,6 +2192,29 @@
         "author": "Saigen Jiro",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Fushimiinari-taisha,_naihaiden-1.jpg"
+      }
+    },
+    {
+      "id": "kyoto-fushimi-inari-yotsutsuji-viewpoint-9c4d",
+      "title": "후시미 이나리 요츠츠지 전망대",
+      "city": "kyoto",
+      "category": "anime",
+      "lat": 34.96896,
+      "lng": 135.78157,
+      "area": "후시미 이나리 대사 요츠츠지, 니시무라테이 앞",
+      "subject": "요츠츠지 전망대와 교토 시가지 파노라마",
+      "tip": "전망대 공공 보행 공간에서 촬영한다. 위치는 근사치(구역 수준) — 현장에서 구도 확인. 산길과 계단은 밝을 때 이용하고 안전한 하산 시간을 확보한다.",
+      "lens": "24-50mm",
+      "time": "해질 무렵 전후",
+      "workId": "oregairu-zoku",
+      "scene": "요츠츠지 니시무라테이 앞의 수학여행 관련 장면으로 제시된 전망 구도",
+      "verified": "reported",
+      "source": "https://mapfan.com/spots/SCM9,J,566",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788184527/spotchu/spots/xalrpbn29mgf5so7r7uw.jpg",
+      "imageCredit": {
+        "author": "Zairon",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=65767324"
       }
     },
     {
@@ -2309,6 +2349,29 @@
         "author": "663highland",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:251213_Nanzen-ji_Suirokaku_Kyoto_Japan01s3.jpg"
+      }
+    },
+    {
+      "id": "kyoto-station-grand-staircase-viewpoint-2d5e",
+      "title": "교토역 빌딩 대계단 및 무로마치코지 광장",
+      "city": "kyoto",
+      "category": "anime",
+      "lat": 34.98565,
+      "lng": 135.75775,
+      "area": "교토역 빌딩 4층 무로마치코지 광장",
+      "subject": "171단 대계단과 교토역 빌딩 트러스",
+      "tip": "4층 광장에서 대계단을 올려다본다. 위치는 근사치(구역 수준) — 현장에서 구도 확인. 이용객 동선을 막지 말고 시설 촬영 규정을 따른다.",
+      "lens": "16-24mm",
+      "time": "혼잡이 적은 오전 또는 야간 조명 시간대",
+      "workId": "hibike-euphonium-2-hello-world",
+      "scene": "교토역 빌딩 대계단 콘서트 및 작품 배경 장면",
+      "verified": "reported",
+      "source": "https://www.kyoto-station-building.co.jp/guide/grand_staircase.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788184529/spotchu/spots/xlvwhqpieesuwazshykr.jpg",
+      "imageCredit": {
+        "author": "William Cho",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=24296349"
       }
     },
     {
@@ -3596,6 +3659,23 @@
       }
     },
     {
+      "id": "osaka-aizenzaka-slope-josee-7a2d",
+      "title": "조제, 호랑이 그리고 물고기들 - 아이젠자카 비탈길 첫 만남 구도",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.6575,
+      "lng": 135.5114,
+      "area": "Aizenzaka lower slope / Shoman-in-Aizendo approach",
+      "subject": "영화 속 아이젠자카 파형 석재 비탈길과 사찰 담장 구도",
+      "tip": "위치는 근사치(구역 수준)입니다. 현장에서 파형 석재·담장 정렬을 확인하고 동쪽 방향의 안전한 보행 지점에서 촬영하세요. 급경사와 보행 흐름에 주의하세요.",
+      "lens": "28-35mm",
+      "time": "이른 아침",
+      "workId": "josee-the-tiger-and-the-fish",
+      "scene": "아이젠자카에서 두 사람이 처음 만나는 영화 장면",
+      "verified": "reported",
+      "source": "https://metronine.osaka/article_tour/20210312-joseetora-seichi/"
+    },
+    {
       "id": "osaka-awaza-junction-cyberpunk-viewpoint-e47a",
       "title": "아와자 교차로 사이버펑크 야경 포토뷰",
       "city": "osaka",
@@ -3678,6 +3758,23 @@
         "license": "CC BY 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:Osaka_Castle_01bs3200.jpg"
       }
+    },
+    {
+      "id": "osaka-hankyu-sunplaza-umeda-josee-3c7b",
+      "title": "조제, 호랑이 그리고 물고기들 - 헵파이브와 한큐 선광장 UMEDA 구도",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.7024,
+      "lng": 135.4988,
+      "area": "Hankyu Sun Plaza pedestrian plaza between Hankyu Umeda Main Store and HEP FIVE",
+      "subject": "UMEDA 조형물과 HEP FIVE 대관람차가 함께 보이는 영화 관련 구도",
+      "tip": "위치는 근사치(구역 수준)입니다. 현장에서 실제 UMEDA 조형물·관람차 정렬을 확인하고 혼잡한 보행 동선을 막지 마세요.",
+      "lens": "24-35mm",
+      "time": "블루아워·야간",
+      "workId": "josee-the-tiger-and-the-fish",
+      "scene": "HEP FIVE 관람차 후 한큐 선광장에서 쉬는 데이트 장면",
+      "verified": "reported",
+      "source": "https://metronine.osaka/article_tour/20210312-joseetora-seichi/"
     },
     {
       "id": "osaka-josee-aizenzaka-slope-8f12",
@@ -3792,6 +3889,23 @@
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Shinsekai_(49251920793).jpg"
       }
+    },
+    {
+      "id": "osaka-ytv-plaza-conan-statues-e1b9",
+      "title": "명탐정 코난 - 요미우리TV 10plaza 소년탐정단 동상",
+      "city": "osaka",
+      "category": "anime",
+      "lat": 34.6923,
+      "lng": 135.5303,
+      "area": "Yomiuri TV 10plaza entrance plaza, Osaka Business Park",
+      "subject": "요미우리TV 앞 소년탐정단 브론즈 동상과 방송국 외관",
+      "tip": "위치는 광장 구역 수준의 근사치입니다. 공개 보행 광장에서 동상을 전경에 담고, 행사·업무 구역 통제와 보행 흐름을 지키세요.",
+      "lens": "24-50mm",
+      "time": "10:00-16:00",
+      "workId": "detective-conan",
+      "scene": "YTV/니치우리 TV 사옥 모티브와 공식 코난 기념 조형물(애니메이션 레퍼런스)",
+      "verified": "reported",
+      "source": "https://www.ytv.co.jp/10plaza/"
     },
     {
       "id": "paris-amelie-maison-collignon-01",
@@ -6201,9 +6315,23 @@
       "progress": 0
     },
     {
+      "id": "tamako-market",
+      "title": "타마코 마켓",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "memoirs-of-a-geisha",
       "title": "게이샤의 추억",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "oregairu-zoku",
+      "title": "역시 내 청춘 러브코메디는 잘못됐다. 속",
+      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
@@ -6224,6 +6352,13 @@
     {
       "id": "k-on",
       "title": "케이온!",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "hibike-euphonium-2-hello-world",
+      "title": "울려라! 유포니엄 2기 / 헬로 월드",
       "type": "애니",
       "spotCount": 1,
       "progress": 0
@@ -6488,6 +6623,13 @@
       "progress": 0
     },
     {
+      "id": "josee-the-tiger-and-the-fish",
+      "title": "조제, 호랑이 그리고 물고기들",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "black-rain",
       "title": "블랙 레인",
       "type": "영화",
@@ -6505,13 +6647,6 @@
       "id": "detective-conan",
       "title": "명탐정 코난",
       "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "josee-the-tiger-and-the-fish",
-      "title": "조제, 호랑이 그리고 물고기들",
-      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
