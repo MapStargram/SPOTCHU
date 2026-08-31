@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { RegisterSW } from "@/components/pwa/RegisterSW";
+import { InstallBanner } from "@/components/pwa/InstallBanner";
+import { getCurrentUser } from "@/lib/session";
 
 export const metadata: Metadata = {
   applicationName: "SPOTCHU",
@@ -21,11 +23,12 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const user = await getCurrentUser();
   return (
     <html lang="ko">
       <head>
@@ -42,6 +45,7 @@ export default function RootLayout({
       <body>
         {children}
         <RegisterSW />
+        {!user && <InstallBanner />}
       </body>
     </html>
   );
