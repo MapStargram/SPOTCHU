@@ -377,7 +377,7 @@ export function MapView({
 
       {/* 스팟 미리보기 카드 */}
       {preview && (
-        <div className="absolute inset-x-3.5 bottom-[100px] z-[9] flex gap-3 rounded-[22px] bg-white p-3.5 shadow-[shadow:var(--sh-elevated)]">
+        <div className="absolute inset-x-3.5 bottom-[calc(100px+env(safe-area-inset-bottom))] z-[9] flex gap-3 rounded-[22px] bg-white p-3.5 shadow-[shadow:var(--sh-elevated)]">
           <div
             className="relative h-[78px] w-[78px] shrink-0 overflow-hidden rounded-2xl"
             style={{ background: preview.thumbGrad }}
