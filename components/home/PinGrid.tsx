@@ -8,7 +8,7 @@ import { Select } from "@/components/ui/Select";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { useSaved } from "@/lib/useSaved";
 import { SpotImage } from "@/components/ui/SpotImage";
-import type { Spot } from "@/lib/mock";
+import type { PinCard } from "@/lib/mock";
 
 // 홈 핀터레스트식 메이슨리 그리드. 모든 핀 = 지도에 찍히는 스팟 → 탭하면 상세(지도+앵글).
 // 카테고리 칩 필터 + "지도로 보기"(탐색 연결) + 핀별 빠른 저장(북마크, localStorage).
@@ -27,7 +27,7 @@ export function PinGrid({
   loggedIn = false,
   initialSaved = [],
 }: {
-  spots: Spot[];
+  spots: PinCard[];
   city: string;
   loggedIn?: boolean;
   initialSaved?: string[];

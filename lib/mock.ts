@@ -95,6 +95,21 @@ export interface Spot {
   blocked?: boolean; // 고위험 차단(isBlockedHighRisk) — 이용 제한 경고
 }
 
+// 홈 핀 카드가 실제로 쓰는 필드만. Spot 전체(~25필드, 좌표·팁·크레딧 등)를 클라이언트로
+// 직렬화하지 않도록 서버에서 이 형태로 추려 PinGrid에 넘긴다(payload 절감).
+export type PinCard = Pick<
+  Spot,
+  | "id"
+  | "title"
+  | "subtitle"
+  | "categoryLabel"
+  | "verified"
+  | "thumbGrad"
+  | "rating"
+  | "visits"
+  | "imageUrl"
+>;
+
 // 현장 안전 태그(prisma SafetyTag enum과 동일 값). 색만으로 전달 금지 → 배너에 아이콘+라벨 병기.
 export type SafetyTag = "PRIVATE_PROPERTY" | "RAILWAY" | "ROADWAY" | "BUSINESS";
 
