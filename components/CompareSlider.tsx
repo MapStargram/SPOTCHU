@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TagPill } from "./ui/TagPill";
+import { cldThumb } from "@/lib/cloudinary-url";
 
 // D2 · 원본(대표 사진) ↔ 내 사진 비교 슬라이더 (드래그 인터랙션).
 // 저작권(PRD §24): 위=스팟 '대표 사진'(실촬영), 아래=사용자 사진. 작품 원본 스틸 사용 금지.
@@ -62,7 +63,7 @@ export function CompareSlider({
         {userImg && (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={userImg}
+            src={cldThumb(userImg)}
             alt={userTitle}
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -99,7 +100,7 @@ export function CompareSlider({
             {repImg && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={repImg}
+                src={cldThumb(repImg)}
                 alt={repTitle}
                 className="absolute inset-0 h-full w-full object-cover"
               />
