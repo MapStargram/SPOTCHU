@@ -284,7 +284,8 @@ function markerContent(
     const ring = document.createElement("span");
     ring.style.cssText = `display:block;height:44px;width:44px;overflow:hidden;border-radius:9999px;border:2.5px solid ${c.color};background:#fff;box-shadow:0 4px 10px rgba(23,35,60,.35)`;
     const img = document.createElement("img");
-    img.src = s.imageUrl;
+    // 44px 마커 썸네일이 뷰포트당 다수 렌더 → 원본(수 MB) 대신 경량(160px). ?? "": img.src는 string 필요.
+    img.src = cldThumb(s.imageUrl, 160) ?? "";
     img.alt = "";
     img.loading = "lazy";
     img.style.cssText = "height:100%;width:100%;object-fit:cover";
