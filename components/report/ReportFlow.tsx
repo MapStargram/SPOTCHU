@@ -14,6 +14,7 @@ import { CoralButton, GhostButton } from "../ui/CoralButton";
 import { Select } from "../ui/Select";
 import { Mascot } from "../ui/Mascot";
 import { LocationPicker, cityCenter, type LatLng } from "./LocationPicker";
+import { nearestCity } from "@/lib/nearest-city";
 import { createSpotReportAction } from "@/lib/actions/mutations";
 import { uploadImageFile } from "@/lib/client-upload";
 import {
@@ -153,10 +154,15 @@ export function ReportFlow({
             </p>
           </div>
 
-          {/* 도시 선택 — 40+ 도시를 칩 그리드로 다 펼치면 지저분 → 컴팩트 드롭다운(탐색 도시 선택과 동일 UX). */}
+          {/* 도시 — 아래 지도의 핀 위치에서 자동 판정. 드롭다운은 멀리 있는 도시로 빠르게 이동하는 용도(선택). */}
           <div className="mt-5">
-            <div className="mb-1.5 font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
-              도시
+            <div className="mb-1.5 flex items-baseline gap-1.5">
+              <span className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+                도시
+              </span>
+              <span className="text-[10px] text-[color:var(--muted-soft)]">
+                핀 위치에 따라 자동 · 탭해서 이동
+              </span>
             </div>
             <Select
               value={city}
@@ -168,7 +174,21 @@ export function ReportFlow({
           </div>
 
           <div className="mt-4">
-            <LocationPicker city={city} value={coord} onChange={setCoord} />
+            <LocationPicker
+              city={city}
+              value={coord}
+              onChange={(pos) => {
+                setCoord(pos);
+                // 핀(사용자가 직접 놓은 좌표)에서 가장 가까운 서비스 도시로 자동 판정 — GPS 아님(정책 안전).
+                setCity(
+                  nearestCity(
+                    pos.lat,
+                    pos.lng,
+                    cities.map((c) => c.id),
+                  ),
+                );
+              }}
+            />
           </div>
 
           <div className="sticky bottom-0 z-10 -mx-5 mt-auto bg-gradient-to-t from-cream via-cream px-5 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6">
