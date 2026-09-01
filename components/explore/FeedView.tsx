@@ -20,7 +20,8 @@ export function FeedView({ spots }: { spots: Spot[] }) {
             className="relative aspect-[4/5]"
             style={{ background: s.thumbGrad }}
           >
-            <SpotImage src={s.imageUrl} alt={s.title} />
+            {/* 2열 피드 카드(~190px) — 640px면 레티나까지 충분 */}
+            <SpotImage src={s.imageUrl} alt={s.title} width={640} />
             <div className="absolute left-2 top-2">
               <TagPill
                 variant="glass"

@@ -24,6 +24,19 @@ export default async function HomeDiscoverScreen() {
     await Promise.all(cities.map((c) => getSpotsByCity(c.id)))
   ).flat();
   const spots = shuffle(all);
+  // 전체 도시 스팟(~300)을 그대로 클라이언트로 직렬화하면 payload가 크다. PinGrid가 쓰는
+  // 9개 필드만 추려 넘긴다(개수·무한스크롤 동작 불변, Spot의 좌표·팁·크레딧 등은 미전송).
+  const pins = spots.map((s) => ({
+    id: s.id,
+    title: s.title,
+    subtitle: s.subtitle,
+    categoryLabel: s.categoryLabel,
+    verified: s.verified,
+    thumbGrad: s.thumbGrad,
+    rating: s.rating,
+    visits: s.visits,
+    imageUrl: s.imageUrl,
+  }));
   const user = await getCurrentUser();
   const savedIds = await getSavedSpotIds();
 
@@ -56,7 +69,7 @@ export default async function HomeDiscoverScreen() {
           </span>
         </div>
         <PinGrid
-          spots={spots}
+          spots={pins}
           city={cities[0]?.id ?? "tokyo"}
           loggedIn={!!user}
           initialSaved={savedIds}

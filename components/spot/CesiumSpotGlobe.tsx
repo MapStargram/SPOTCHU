@@ -153,16 +153,24 @@ export default function CesiumSpotGlobe({
         const reduceMotion = window.matchMedia(
           "(prefers-reduced-motion: reduce)",
         ).matches;
-        viewer.camera.flyTo({
-          destination: Cesium.Cartesian3.fromDegrees(lng, lat, 600),
-          orientation: {
-            heading: Cesium.Math.toRadians(heading),
-            pitch: Cesium.Math.toRadians(-52),
-            roll: 0,
+        // flyTo(destination)는 카메라 '위치'만 스팟에 두므로 pitch -52°에선 시선이 ~470m 앞을
+        // 향해 스팟이 화면 밖 아래로 밀린다. flyToBoundingSphere로 스팟을 '바라보게' 해 중앙 고정.
+        // range=고도/sin(52°)≈760m → ALT≈600m·heading·pitch는 기존과 동일.
+        viewer.camera.flyToBoundingSphere(
+          new Cesium.BoundingSphere(
+            Cesium.Cartesian3.fromDegrees(lng, lat),
+            180,
+          ),
+          {
+            offset: new Cesium.HeadingPitchRange(
+              Cesium.Math.toRadians(heading),
+              Cesium.Math.toRadians(-52),
+              760,
+            ),
+            duration: reduceMotion ? 0 : 2.5,
+            complete: onCam,
           },
-          duration: reduceMotion ? 0 : 2.5,
-          complete: onCam,
-        });
+        );
       } catch (e) {
         if (!cancelled) setError((e as Error).message || "3D 로드 실패");
       }
