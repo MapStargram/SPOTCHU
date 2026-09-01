@@ -76,9 +76,11 @@ export const VERIFY_FILTERS = ["공식 인증", "사용자 검증", "제보"];
 export const TIME_FILTERS = ["일출", "낮", "일몰", "야경"];
 export const SORT_OPTIONS = ["인기순", "거리순", "최신순"];
 
-// 지도 핀 폴백 좌표 — 목업 전용. §5 불변식: posOf는 항상 shooterLat/Lng를 우선하며, DB 스팟은
-// 항상 좌표를 보유하므로 프로덕션에선 이 폴백이 쓰이지 않는다. 하드코딩 베이스 스팟 8개만 담는다
-// (연구·수집 스팟은 각 Spot 객체가 shooterLat/Lng를 직접 보유 → 폴백 불필요).
+// 지도 핀 폴백 좌표 — 목업 전용. §5 불변식: posOf는 항상 shooterLat/Lng를 우선한다.
+// 프로덕션(DB, 로컬 기본 포함)은 스팟이 좌표를 보유하므로 이 폴백이 쓰이지 않는다.
+// 하드코딩 베이스 스팟 8개만 담는다. ⚠️ 알려진 dev 한정 공백: 명시적 목업 모드(DATA_SOURCE="")
+// 에선 리서치 스팟(shooterLat/Lng 없이 RESEARCH_COORDS에 의존)이 이 폴백에 없어 핀이 빠진다.
+// 수집(IMPORTED) 스팟은 각 Spot이 좌표를 인라인 보유 → 폴백 불필요.
 export const SPOT_COORDS: Record<string, { lat: number; lng: number }> = {
   mojik: { lat: 35.6297, lng: 139.7756 },
   "suga-shrine": { lat: 35.6863, lng: 139.7197 },

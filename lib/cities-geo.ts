@@ -1,4 +1,5 @@
-import { CITIES, CITY_CENTER } from "@/lib/mock";
+import { CITIES } from "@/lib/cities-catalog";
+import { CITY_CENTER } from "@/lib/mock-constants";
 
 // /city 도시 선택 공통 지오 데이터. 평면 지도(CityMap)·지구본(CityGlobe)이 함께 쓴다.
 // 좌표계는 equirectangular(등장방형): 지구본 텍스처(earth-day.jpg 1600x800, 2:1)를 평면 배경으로

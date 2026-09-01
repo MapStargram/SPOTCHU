@@ -1,4 +1,4 @@
-import { CITY_CENTER, type CityId } from "./mock";
+import { CITY_CENTER, type CityId } from "./mock-constants";
 
 // 위경도 → 최근접 도시. 도시들이 수백 km씩 떨어져 있어
 // ponytail: 위경도 제곱거리(평면근사)로 충분 — 위도 왜곡이 순위를 바꾸지 않음.
