@@ -3,7 +3,8 @@
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { APIProvider } from "@vis.gl/react-google-maps";
-import { CITY_CENTER, type Spot } from "@/lib/mock";
+import { CITY_CENTER } from "@/lib/mock-constants";
+import type { Spot } from "@/lib/mock";
 import { VERIF_CFG } from "../ui/VerifBadge";
 import { posOf } from "../explore/pin";
 

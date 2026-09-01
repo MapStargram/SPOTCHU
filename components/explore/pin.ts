@@ -1,4 +1,5 @@
-import { SPOT_COORDS, type Spot } from "@/lib/mock";
+import { SPOT_COORDS } from "@/lib/mock-constants";
+import type { Spot } from "@/lib/mock";
 
 // 지도 핀 순수 헬퍼(테스트 대상). 렌더 로직과 분리해 불변식을 단위 테스트한다.
 
