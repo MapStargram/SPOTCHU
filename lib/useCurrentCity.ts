@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { matchCityInPath } from "./city-path";
-import { CITY_IDS, type CityId } from "./mock";
+import { CITY_IDS, type CityId } from "./mock-constants";
 
 const KEY = "spotchu_city";
 

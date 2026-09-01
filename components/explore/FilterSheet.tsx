@@ -6,7 +6,11 @@ import { Sunrise, Sun, Sunset, Moon } from "lucide-react";
 import { CoralButton } from "../ui/CoralButton";
 import { useFocusTrap } from "@/lib/useFocusTrap";
 import { CATEGORY_ICONS } from "@/lib/categories";
-import { CATEGORY_FILTERS, VERIFY_FILTERS, TIME_FILTERS } from "@/lib/mock";
+import {
+  CATEGORY_FILTERS,
+  VERIFY_FILTERS,
+  TIME_FILTERS,
+} from "@/lib/mock-constants";
 
 // C4 · 필터 바텀시트. 카테고리·검증상태·시간대 다중 선택 + '내 주변' 토글.
 // 라벨 → 라인 아이콘 매핑(이모지 대체). 카테고리는 공용 소스 재사용, 검증 상태는 아이콘 없음.

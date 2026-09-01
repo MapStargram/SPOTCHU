@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
 import { Crosshair } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
-import { CITY_CENTER, type CityId } from "@/lib/mock";
+import { CITY_CENTER } from "@/lib/mock-constants";
+import type { CityId } from "@/lib/mock";
 
 // I1 · 촬영자 위치 지정. 좌표 불변식(PRD §12): 지도 중심 = 촬영자가 서는 위치(촬영 대상 아님).
 // 키가 있으면 실제 Google Maps(중심 이동으로 핀 이동), 없으면 정적 배경 + 현재 위치 폴백.

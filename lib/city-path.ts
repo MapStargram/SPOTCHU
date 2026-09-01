@@ -1,4 +1,4 @@
-import { CITY_IDS, type CityId } from "./mock";
+import { CITY_IDS, type CityId } from "./mock-constants";
 
 // 현재 경로가 도시 페이지(/home|explore|feed/<city>)면 그 도시, 아니면 null.
 export function matchCityInPath(pathname: string): CityId | null {
