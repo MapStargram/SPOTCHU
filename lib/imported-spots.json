@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T07:10:07.541Z",
+  "generatedAt": "2026-09-01T08:16:10.748Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -490,6 +490,21 @@
       "time": "늦은 오후 골든아워 (폐장 1시간 전, 하절기 18:00~19:00 / 동절기 16:30~17:30)",
       "verified": "reported",
       "source": "https://melia.com/es/experience/espana/barcelona/bunkers-del-carmel-mirador"
+    },
+    {
+      "id": "barcelona-kiss-wall-placa-isidre-nonell-e7d9",
+      "title": "키스 월 플라사 이시드레 노넬 포토 스팟",
+      "city": "barcelona",
+      "category": "photo",
+      "lat": 41.38514,
+      "lng": 2.17474,
+      "area": "Plaça d'Isidre Nonell, Ciutat Vella / Barri Gòtic",
+      "subject": "El món neix en cada besada (The World Begins With Every Kiss) permanent photomosaic mural",
+      "tip": "벽에서 약 5–8m 앞 공공 광장에 서서 정면 구도를 확인하세요. 위치는 구역 수준의 근사치이며, 현장에서 정확한 촬영 지점과 벽 전체 프레이밍을 확인하세요. 통행을 막지 말고 혼잡 시간대에는 대기 줄을 고려하세요.",
+      "lens": "28-50mm; 타일 디테일은 50mm 이상",
+      "time": "오전",
+      "verified": "reported",
+      "source": "https://ca.wikipedia.org/wiki/El_m%C3%B3n_neix_en_cada_besada"
     },
     {
       "id": "barcelona-laberint-dhorta-perfume-richis-maze-3b9e",
@@ -1325,6 +1340,48 @@
       "source": "https://hoiandaytrip.com/huyen-khong-cave-marble-mountain/"
     },
     {
+      "id": "dubai-al-seef-heritage-creek-windtower-03",
+      "title": "Al Seef Heritage Creek and Barjeel Windtower View",
+      "city": "dubai",
+      "category": "photo",
+      "lat": 25.26464,
+      "lng": 55.303865,
+      "area": "Bur Dubai, Al Seef heritage waterfront",
+      "subject": "Coral-stone walls, Barjeel wind tower, and traditional abras",
+      "tip": "Approximate area-level position; confirm a safe promenade edge. Obtain consent for close portraits and keep the walkway clear.",
+      "lens": "35-50mm or 24-70mm",
+      "time": "Golden hour or evening lantern light",
+      "verified": "reported",
+      "source": "https://www.visitdubai.com/en/places-to-visit/al-seef",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250508/spotchu/spots/ia7zyzlhikqp4rkvidw8.jpg",
+      "imageCredit": {
+        "author": "KpokeJlJla",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=99469440"
+      }
+    },
+    {
+      "id": "dubai-frame-zabeel-park-framing-viewpoint-04",
+      "title": "Dubai Frame Framing Viewpoint from Zabeel Park North Lawn",
+      "city": "dubai",
+      "category": "landmark",
+      "lat": 25.2352,
+      "lng": 55.3016,
+      "area": "Zabeel Park, north lawn / Gate 4",
+      "subject": "Full Dubai Frame and lower skyline from the north park area",
+      "tip": "Approximate area-level position; confirm the designated path/lawn and full-frame alignment. Do not enter flower beds.",
+      "lens": "24-35mm",
+      "time": "Late afternoon golden hour",
+      "verified": "reported",
+      "source": "https://www.thedubaiframe.com",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250511/spotchu/spots/qfpp2zpfoo58polqvdsp.jpg",
+      "imageCredit": {
+        "author": "Rennboot",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=78156447"
+      }
+    },
+    {
       "id": "dubai-jumeirah-zabeel-saray-mi4-7d2a",
       "title": "주메이라 자빌 사라이 그랜드 로비 (미션 임파서블: 고스트 프로토콜)",
       "city": "dubai",
@@ -1340,6 +1397,48 @@
       "scene": "주메이라 자빌 사라이 그랜드 로비로 알려진 두바이 로비 장면",
       "verified": "reported",
       "source": "https://www.movie-locations.com/movies/m/Mission-Impossible-Ghost-Protocol.php"
+    },
+    {
+      "id": "dubai-museum-of-the-future-plaza-viewpoint-02",
+      "title": "Museum of the Future Plaza Viewpoint",
+      "city": "dubai",
+      "category": "landmark",
+      "lat": 25.21985,
+      "lng": 55.2824,
+      "area": "Trade Centre, Museum of the Future northeast plaza",
+      "subject": "Low-angle torus and Arabic-calligraphy facade composition",
+      "tip": "Approximate area-level position; confirm a legal plaza edge on site and do not obstruct metro-link passenger flow.",
+      "lens": "14-20mm",
+      "time": "Blue hour",
+      "verified": "reported",
+      "source": "https://museumofthefuture.ae",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250571/spotchu/spots/gvxrob6rfqehjjh4julz.jpg",
+      "imageCredit": {
+        "author": "Simon_sees",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/39551170@N02/52070688089"
+      }
+    },
+    {
+      "id": "dubai-palace-downtown-burj-khalifa-pool-01",
+      "title": "Palace Downtown Pool Bridge - Burj Khalifa Reflection View",
+      "city": "dubai",
+      "category": "landmark",
+      "lat": 25.1942,
+      "lng": 55.27625,
+      "area": "Downtown Dubai, Palace Downtown pool bridge",
+      "subject": "Palm lines and pool reflection framing Burj Khalifa",
+      "tip": "Approximate area-level position; confirm the lawful bridge segment and reflection alignment on site. Keep the walkway clear.",
+      "lens": "14-24mm",
+      "time": "Sunrise or blue hour",
+      "verified": "reported",
+      "source": "https://zestphotographs.com/downtown-dubai-photoshoot-burj-khalifa-spots/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250513/spotchu/spots/rd7f6n7kcidahqxm8htx.jpg",
+      "imageCredit": {
+        "author": "Francisco Anzola",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/10345599@N03/8718465860"
+      }
     },
     {
       "id": "dubai-sunset-beach-burj-al-arab-e81f",
@@ -3121,6 +3220,48 @@
       }
     },
     {
+      "id": "melbourne-carlton-gardens-hochgurtel-fountain-reb-a35b",
+      "title": "Carlton Gardens Hochgurtel Fountain axis view",
+      "city": "melbourne",
+      "category": "landmark",
+      "lat": -37.8062,
+      "lng": 144.9714,
+      "area": "Carlton Gardens Grand Allee, Carlton",
+      "subject": "Hochgurtel Fountain and Royal Exhibition Building dome on the north axis",
+      "tip": "Approximate area-level position; confirm the axis and safe standing point on site. Keep the shared path clear of pedestrians, cyclists, and dogs.",
+      "lens": "50-85mm or 24-70mm",
+      "time": "Morning golden hour or late afternoon in April-May",
+      "verified": "reported",
+      "source": "https://citycollection.melbourne.vic.gov.au/exhibition-fountain/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250519/spotchu/spots/sgjylu2bcdqpffizpbdi.jpg",
+      "imageCredit": {
+        "author": "ElMarkoCinco",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=81990979"
+      }
+    },
+    {
+      "id": "melbourne-centre-place-laneway-c17e",
+      "title": "센터 플레이스 북쪽 계단 골목 뷰포인트",
+      "city": "melbourne",
+      "category": "photo",
+      "lat": -37.81595,
+      "lng": 144.96542,
+      "area": "Centre Place, Melbourne CBD",
+      "subject": "센터 플레이스의 카페 차양·매달린 조명·블루스톤 골목",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 계단과 구도를 확인하세요. 좁은 통행로와 카페 출입구를 막지 마세요.",
+      "lens": "35mm 또는 50mm, 또는 24-70mm",
+      "time": "이른 아침 또는 늦은 오후",
+      "verified": "reported",
+      "source": "https://www.visitvictoria.com/regions/Melbourne/Destinations/Streets/VV-Centre-Place.aspx",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250520/spotchu/spots/x5zxb9cqjqhbmjupeycc.jpg",
+      "imageCredit": {
+        "author": "Brian Giesen",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/13658024@N00/4919905868"
+      }
+    },
+    {
       "id": "melbourne-hosier-lane-misa-street-art-c303",
       "title": "호지어 레인·루틀리지 레인 교차점 — ‘미안하다, 사랑한다’ 그래피티 스팟",
       "city": "melbourne",
@@ -3179,6 +3320,27 @@
         "author": "Medelam",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Flinders_Street_Station_Main_Building,_May_2019.jpg"
+      }
+    },
+    {
+      "id": "melbourne-princes-pier-pylons-f82a",
+      "title": "Princes Pier timber pylons sunset viewpoint",
+      "city": "melbourne",
+      "category": "photo",
+      "lat": -37.84152,
+      "lng": 144.92685,
+      "area": "Princes Pier, Port Melbourne",
+      "subject": "Restored pier timber pylons and Port Phillip Bay",
+      "tip": "Approximate area-level position; confirm the exact safe standing point on site. Use a tripod at sunset or blue hour and watch for coastal wind and dim railing areas.",
+      "lens": "24-70mm or 16-35mm",
+      "time": "Sunset to blue hour",
+      "verified": "reported",
+      "source": "https://visitportmelbourne.com/listing/princes-pier/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250525/spotchu/spots/vy98toqnhfdqfmiipknn.jpg",
+      "imageCredit": {
+        "author": "Diggers2004",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=110698598"
       }
     },
     {
@@ -5768,6 +5930,27 @@
       }
     },
     {
+      "id": "sydney-bradleys-head-amphitheatre-viewpoint-b42c",
+      "title": "釉뚮옒?ㅻ━???ㅻ뱶 ?먰삎洹뱀옣 ?섎쾭 ?ㅽ럹?쇳븯?곗뒪 酉고룷?명듃",
+      "city": "sydney",
+      "category": "photo",
+      "lat": -33.8527,
+      "lng": 151.2457,
+      "area": "Bradleys Head, Mosman",
+      "subject": "West-facing Sydney Opera House and Harbour Bridge skyline from the stone amphitheatre",
+      "tip": "위치는 브래들리스 헤드 원형극장 구역의 근사치 — 현장에서 공개 석단의 구도를 확인. NPWS 운영시간·행사 폐쇄를 확인하고 수변 가장자리를 피한다.",
+      "lens": "70-200mm; 24-70mm",
+      "time": "Sunset and blue hour",
+      "verified": "reported",
+      "source": "https://www.nationalparks.nsw.gov.au/things-to-do/lookouts/bradleys-head-booraghee-amphitheatre",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250529/spotchu/spots/d8pdtjxk18qe92dx1q0t.jpg",
+      "imageCredit": {
+        "author": "Quincepaste",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=191782545"
+      }
+    },
+    {
       "id": "sydney-mary-booth-lookout-kirribilli-e41d",
       "title": "메리 부스 룩아웃 리저브 키리빌리 오페라 하우스 전망 포인트",
       "city": "sydney",
@@ -5781,6 +5964,27 @@
       "time": "Dusk / Blue Hour / Night",
       "verified": "reported",
       "source": "https://www.weekendnotes.com/dr-mary-booth-lookout/"
+    },
+    {
+      "id": "sydney-milk-beach-harbour-viewpoint-7a1e",
+      "title": "諛??鍮꾩튂 ?덈??곗? ?몃옓 ?좎뀑 酉고룷?명듃",
+      "city": "sydney",
+      "category": "photo",
+      "lat": -33.8565,
+      "lng": 151.2625,
+      "area": "Milk Beach, Vaucluse",
+      "subject": "Harbour Bridge and CBD skyline framed over Milk Beach",
+      "tip": "위치는 Milk Beach 해변 구역의 근사치 — 조수와 안전을 확인하며 현장에서 구도를 잡는다. 해질 뒤 어두운 산책로를 돌아갈 조명을 준비한다.",
+      "lens": "50-135mm; 24-35mm",
+      "time": "Sunset and evening golden hour",
+      "verified": "reported",
+      "source": "https://www.sydney.com/uk/destinations/sydney/sydney-east/watsons-bay/attractions/milk-beach-vaucluse",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250531/spotchu/spots/v18fyxdksaiufx32m8cl.jpg",
+      "imageCredit": {
+        "author": "Tarun Bhushan",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=82651473"
+      }
     },
     {
       "id": "sydney-mission-impossible-bare-island-bridge-b200",
@@ -5815,6 +6019,27 @@
       "source": "https://www.locationscout.net/australia/62603-mrs-macquaries"
     },
     {
+      "id": "sydney-observatory-hill-rotunda-viewpoint-f53d",
+      "title": "?듭?踰꾪넗由??? 濡쒗댆???섎쾭釉뚮━吏 ?쒖륫 酉고룷?명듃",
+      "city": "sydney",
+      "category": "photo",
+      "lat": -33.8587,
+      "lng": 151.2036,
+      "area": "Observatory Hill Park, Millers Point",
+      "subject": "Harbour Bridge framed by the Observatory Hill rotunda and Moreton Bay figs",
+      "tip": "위치는 전망대 정상·로툰다 인근의 근사치 — 현장에서 합법적인 잔디 가장자리 구도를 확인. 보고 방위 22°는 좌표 계산 43.06°와 차이가 있어 현장에서 방향을 재확인한다.",
+      "lens": "16-35mm; 50mm",
+      "time": "Sunset, twilight, or blue hour",
+      "verified": "reported",
+      "source": "https://www.cityofsydney.nsw.gov.au/parks/observatory-park",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250532/spotchu/spots/joylh6puzdeq3mwgpo7x.jpg",
+      "imageCredit": {
+        "author": "D-Stanley",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/79721788@N00/32398964005"
+      }
+    },
+    {
       "id": "sydney-the-matrix-martin-place-fountain-a199",
       "title": "매트릭스 '빨간 드레스의 여자' 마틴 플레이스 분수",
       "city": "sydney",
@@ -5835,6 +6060,27 @@
         "author": "avlxyz",
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/10559879@N00/3814472582"
+      }
+    },
+    {
+      "id": "sydney-wendy-whiteley-secret-garden-viewpoint-e89a",
+      "title": "?щ뵒 ?붿씠?由??쒗겕由?媛???섎쾭釉뚮━吏 酉고룷?명듃",
+      "city": "sydney",
+      "category": "photo",
+      "lat": -33.8447,
+      "lng": 151.2093,
+      "area": "Lavender Bay / North Sydney",
+      "subject": "Upper-terrace foliage framing of Sydney Harbour Bridge",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 안전한 상부 테라스와 구도를 확인. 급경사·계단에 주의하고 정원을 조용히 이용한다.",
+      "lens": "24-70mm",
+      "time": "Early morning or late afternoon",
+      "verified": "reported",
+      "source": "https://www.wendyssecretgarden.org.au/location/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788250536/spotchu/spots/lt82vjiiohbcsnhrpacv.jpg",
+      "imageCredit": {
+        "author": "Dicklyon",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=145153844"
       }
     },
     {
