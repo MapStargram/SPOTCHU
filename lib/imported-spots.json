@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T05:37:48.485Z",
+  "generatedAt": "2026-09-01T07:10:07.541Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -658,6 +658,27 @@
       "source": "https://www.photohound.co/spot/elsenbrucke-2117"
     },
     {
+      "id": "berlin-flakturm-humboldthain-viewpoint-f72a",
+      "title": "훔볼트하인 대공포탑 정상 전망대 (플라크투름 훔볼트하인)",
+      "city": "berlin",
+      "category": "photo",
+      "lat": 52.54738,
+      "lng": 13.38505,
+      "area": "Gesundbrunnen, Volkspark Humboldthain",
+      "subject": "훔볼트하인 플라크투름 전망대에서 바라보는 Berlin Mitte 스카이라인",
+      "tip": "위치는 전망대 구역의 근사치 — 현장에서 안전한 플랫폼 보행 위치와 실제 구도를 확인. 일몰 30분 전부터 24–70mm로 촬영.",
+      "lens": "24-70mm",
+      "time": "일몰 전부터 블루아워",
+      "verified": "reported",
+      "source": "https://www.berlin.de/sehenswuerdigkeiten/4383416-3558930-aussichtsplattform-flakturm-humboldtha.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246572/spotchu/spots/lxcqduqwd8zpugnyivir.jpg",
+      "imageCredit": {
+        "author": "kmardahl",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/29050965@N08/16746323975"
+      }
+    },
+    {
       "id": "berlin-karl-marx-allee-rosengarten-queens-gambit-7c9b",
       "title": "Berlin Karl-Marx-Allee Rosengarten (The Queen's Gambit)",
       "city": "berlin",
@@ -732,6 +753,69 @@
       "time": "이른 아침 또는 블루아워",
       "verified": "reported",
       "source": "https://www.photohound.co/spot/bode-museum-2126"
+    },
+    {
+      "id": "berlin-museumsinsel-kolonnadenhof-c91b",
+      "title": "박물관 섬 콜로네이드 회랑 & 구 국립미술관 뷰포인트",
+      "city": "berlin",
+      "category": "landmark",
+      "lat": 52.52048,
+      "lng": 13.39835,
+      "area": "Mitte, Museumsinsel Kolonnadenhof",
+      "subject": "콜로네이드 회랑을 프레임으로 담는 구 국립미술관과 박물관 섬",
+      "tip": "위치는 콜로네이드 회랑 구역의 근사치 — 보행을 방해하지 않는 지점을 현장에서 확인. 이른 아침 16–35mm 권장.",
+      "lens": "16-35mm",
+      "time": "이른 아침 또는 블루아워",
+      "verified": "reported",
+      "source": "https://www.smb.museum/museen-einrichtungen/museumsinsel-berlin/ueber-uns/kolonnadenhof/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246574/spotchu/spots/tyjue9uocmwrvazszt3r.jpg",
+      "imageCredit": {
+        "author": "abbilder",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/21617436@N00/51839422525"
+      }
+    },
+    {
+      "id": "berlin-oberbaumbruecke-may-ayim-ufer-e43a",
+      "title": "마이아임 우퍼에서 바라보는 오버바움 다리와 노란 지하철 (U1/U3)",
+      "city": "berlin",
+      "category": "photo",
+      "lat": 52.50085,
+      "lng": 13.4418,
+      "area": "Friedrichshain-Kreuzberg, May-Ayim-Ufer",
+      "subject": "마이아임 우퍼에서 오버바움 다리와 U1/U3 열차를 바라보는 강변 구도",
+      "tip": "위치는 강변의 근사치 — 보행·자전거 통행을 막지 않는 안전한 지점을 현장에서 확인. 일몰 무렵 50–85mm 또는 70–200mm 권장.",
+      "lens": "50-85mm 또는 70-200mm",
+      "time": "일몰 전부터 블루아워",
+      "verified": "reported",
+      "source": "https://www.visitberlin.de/de/oberbaumbruecke",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246579/spotchu/spots/trluxmh0diutlixhsdc7.jpg",
+      "imageCredit": {
+        "author": "Times",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=4874222"
+      }
+    },
+    {
+      "id": "berlin-viktoriapark-wasserfall-cascade-b88c",
+      "title": "빅토리아 파크 인공폭포 & 국립해방전쟁기념비 뷰포인트",
+      "city": "berlin",
+      "category": "photo",
+      "lat": 52.48895,
+      "lng": 13.3817,
+      "area": "Friedrichshain-Kreuzberg, Viktoriapark",
+      "subject": "빅토리아 파크 인공폭포와 국립해방전쟁기념비 축선을 함께 담는 구도",
+      "tip": "위치는 폭포 축선 구역의 근사치 — 미끄럽지 않은 공공 보행 지점을 현장에서 확인하고 폭포 운영 여부를 방문 전에 확인. 24–70mm 권장.",
+      "lens": "24-70mm",
+      "time": "오전 또는 운영 기간 늦은 오후",
+      "verified": "reported",
+      "source": "https://www.berlin.de/sehenswuerdigkeiten/3561625-3558930-viktoriapark.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246582/spotchu/spots/diigtor6q4ymr8j84vq9.jpg",
+      "imageCredit": {
+        "author": "User:Angr",
+        "license": "CC BY-SA 2.5",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=858722"
+      }
     },
     {
       "id": "busan-ahopsan-bamboo-portal-a71c",
@@ -1321,6 +1405,27 @@
       }
     },
     {
+      "id": "florence-bardini-wisteria-duomo-7a91",
+      "title": "바르디니 정원 등나무 터널 두오모 뷰포인트",
+      "city": "florence",
+      "category": "landmark",
+      "lat": 43.7644,
+      "lng": 11.2568,
+      "area": "Giardino Bardini, upper wisteria pergola / Costa San Giorgio",
+      "subject": "등나무 터널 너머 피렌체 두오모와 브루넬레스키 돔",
+      "tip": "위치는 근사치(구역 수준) — 등나무 터널 상부에서 현장 구도를 확인하세요. 유료 정원·계절 운영시간과 경사진 자갈길을 확인하고 식재·난간에 올라가지 마세요.",
+      "lens": "50–85mm 또는 24–70mm",
+      "time": "4월 중순~5월 초 개화기; 오전~이른 오후",
+      "verified": "reported",
+      "source": "https://www.villabardini.it/giardino-bardini/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246584/spotchu/spots/zvhadiiqtjt9drbur0qg.jpg",
+      "imageCredit": {
+        "author": "Putneypics",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/38983646@N06/3725845770"
+      }
+    },
+    {
       "id": "florence-biblioteca-delle-oblate-caffetteria-terrace-f3d9",
       "title": "오블라테 도서관 카페 테라스에서 본 두오모",
       "city": "florence",
@@ -1403,6 +1508,27 @@
       }
     },
     {
+      "id": "florence-ponte-grazie-ponte-vecchio-8d14",
+      "title": "폰테 알레 그라치에 서측 난간 폰테 베키오 & 바사리 회랑 뷰포인트",
+      "city": "florence",
+      "category": "photo",
+      "lat": 43.76635,
+      "lng": 11.25885,
+      "area": "Ponte alle Grazie, western pedestrian sidewalk / mid-span",
+      "subject": "아르노강 선을 따라 바라본 폰테 베키오와 바사리 회랑",
+      "tip": "위치는 근사치(구역 수준) — 서측 보행 난간의 안전한 구간에서 현장 구도를 확인하세요. 보행자·자전거 통행을 막지 말고 장비를 난간 밖으로 내밀지 마세요.",
+      "lens": "70–135mm 또는 35–50mm",
+      "time": "일몰~블루아워",
+      "verified": "reported",
+      "source": "https://pixeoapp.com/photography-guides/europe/italy/ponte-alle-grazie-cityscape",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246585/spotchu/spots/bhpqrfjr4k81er8gyjlg.jpg",
+      "imageCredit": {
+        "author": "Jim Linwood",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/54238124@N00/668529177"
+      }
+    },
+    {
       "id": "florence-ponte-santa-trinita-ponte-vecchio-view-e8a1",
       "title": "Ponte Santa Trinita에서 바라본 베키오 다리",
       "city": "florence",
@@ -1421,6 +1547,48 @@
         "author": "Diego Delso",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Ponte_Vecchio_sobre_el_r%C3%ADo_Arno,_Florencia,_Italia,_2022-09-19,_DD_02.jpg"
+      }
+    },
+    {
+      "id": "florence-repubblica-giostra-arcone-4b82",
+      "title": "리퍼블리카 광장 회전목마 & 아르코네 개선문 야경 포토스팟",
+      "city": "florence",
+      "category": "photo",
+      "lat": 43.77153,
+      "lng": 11.2546,
+      "area": "Piazza della Repubblica, east side of carousel",
+      "subject": "회전목마와 서쪽 아르코네 개선문을 함께 담는 야경 구도",
+      "tip": "위치는 근사치(구역 수준) — 회전목마 동쪽 보행 공간에서 현장 구도를 확인하세요. 대기열과 보행 흐름을 막지 말고 군중 속 소지품에 주의하세요.",
+      "lens": "24–35mm",
+      "time": "해질녘~늦은 저녁",
+      "verified": "reported",
+      "source": "https://www.visittuscany.com/it/attrazioni/piazza-della-repubblica-a-firenze/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246589/spotchu/spots/xyszcjoqm1a6l0viivzh.jpg",
+      "imageCredit": {
+        "author": "No machine-readable author provided. Yair-haklai assumed (based on copyright claims).",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=3979108"
+      }
+    },
+    {
+      "id": "florence-san-miniato-sagrato-view-5f23",
+      "title": "산 미니아토 알 몬테 대성당 파르비스 & 계단 파노라마 뷰포인트",
+      "city": "florence",
+      "category": "photo",
+      "lat": 43.75985,
+      "lng": 11.26495,
+      "area": "San Miniato al Monte parvis and monumental staircase",
+      "subject": "성당 앞 계단에서 바라본 두오모·지오토 종탑·팔라초 베키오 스카이라인",
+      "tip": "위치는 근사치(구역 수준) — 성당 전면 계단과 파르비스에서 현장 구도를 확인하세요. 활동 중인 성당이므로 정숙하고 운영시간·미사 일정을 확인하세요.",
+      "lens": "70–200mm 또는 24–35mm",
+      "time": "골든아워 전후 및 블루아워",
+      "verified": "reported",
+      "source": "https://www.visitflorence.com/florence-churches/san-miniato.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246593/spotchu/spots/sz2vlj4zrtpewau5fzi7.jpg",
+      "imageCredit": {
+        "author": "Ввласенко",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=71046802"
       }
     },
     {
@@ -2814,6 +2982,48 @@
       "source": "https://www.esmadrid.com/informacion-turistica/parque-cerro-tio-pio"
     },
     {
+      "id": "madrid-circulo-bellas-artes-azotea-a1f8",
+      "title": "시르쿨로 데 베야스 아르테스 옥상 전망대",
+      "city": "madrid",
+      "category": "photo",
+      "lat": 40.41838,
+      "lng": -3.69665,
+      "area": "Círculo de Bellas Artes, Alcalá 42 rooftop",
+      "subject": "미네르바 조각상과 메트로폴리스 빌딩, 그란비아 스카이라인",
+      "tip": "위치는 구역 수준의 근사치 — 옥상 북서쪽 난간에서 현장에서 구도 확인. 난간 밖으로 몸을 내밀지 말고 통행을 막지 않는다.",
+      "lens": "24-70mm 또는 16-35mm",
+      "time": "일몰 45분 전부터 블루아워",
+      "verified": "reported",
+      "source": "https://www.circulobellasartes.com/azotea/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246598/spotchu/spots/xjlogvfeliohl2nr1wh8.jpg",
+      "imageCredit": {
+        "author": "Zinneke",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=74935927"
+      }
+    },
+    {
+      "id": "madrid-corte-ingles-callao-gourmet-d4f7",
+      "title": "엘 코르테 잉글레스 카야오점 9층 미식관 전망",
+      "city": "madrid",
+      "category": "photo",
+      "lat": 40.41952,
+      "lng": -3.70493,
+      "area": "Gourmet Experience, El Corte Inglés Callao, Plaza del Callao 2",
+      "subject": "카야오 광장과 카리온 빌딩 슈웹스 네온사인, 그란비아 야경",
+      "tip": "위치는 구역 수준의 근사치 — 9층 유리창의 서북서 방향에서 현장에서 구도 확인. 렌즈 후드로 반사를 줄이고 식사 고객과 통행을 배려한다.",
+      "lens": "24-70mm",
+      "time": "일몰 후 블루아워부터 야간",
+      "verified": "reported",
+      "source": "https://www.esmadrid.com/informacion-turistica/gourmet-experience-gran-via",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246602/spotchu/spots/ik9vva1bnok2tx93lu5g.jpg",
+      "imageCredit": {
+        "author": "Alfredo Sánchez Romero from Madrid, España",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=35395670"
+      }
+    },
+    {
       "id": "madrid-csic-royal-mint-facade-f7b2",
       "title": "'종이의 집' 스페인 조폐국 촬영지 (CSIC 본관)",
       "city": "madrid",
@@ -2849,6 +3059,27 @@
         "author": "Tim Adams",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Palacio_Real_de_Madrid_Julio_2016_(cropped).jpg"
+      }
+    },
+    {
+      "id": "madrid-jardines-sabatini-estanque-c3e9",
+      "title": "사바티니 정원 중앙 연못 (마드리드 왕궁 북측 파사드 반영)",
+      "city": "madrid",
+      "category": "photo",
+      "lat": 40.42028,
+      "lng": -3.71403,
+      "area": "Central pond, Jardines de Sabatini",
+      "subject": "중앙 연못과 조각상 축을 이용한 마드리드 왕궁 북측 파사드 반영",
+      "tip": "위치는 구역 수준의 근사치 — 중앙 연못 북단의 안전한 지점에서 남쪽을 향해 현장에서 구도 확인. 정원 폐장시간과 통행을 준수한다.",
+      "lens": "16-35mm",
+      "time": "일몰 직전부터 블루아워",
+      "verified": "reported",
+      "source": "https://www.patrimonionacional.es/visita/palacio-real-de-madrid/espacios/jardines-de-sabatini",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246605/spotchu/spots/wzvdnlr7s5dldfk5pykk.jpg",
+      "imageCredit": {
+        "author": "Konstantinos - Boadilla Del Monte",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=2367969"
       }
     },
     {
@@ -3007,6 +3238,27 @@
         "author": "Thomas Wolf, www.foto-tw.de",
         "license": "CC BY-SA 3.0 de",
         "source": "https://commons.wikimedia.org/wiki/File:Stadtbild_M%C3%BCnchen.jpg"
+      }
+    },
+    {
+      "id": "munich-hackerbruecke-sunset-railway-viewpoint-f72b",
+      "title": "하커브뤼케 철교 선셋 포토 스팟",
+      "city": "munich",
+      "category": "photo",
+      "lat": 48.14185,
+      "lng": 11.54865,
+      "area": "Hackerbrücke pedestrian walkway, Munich",
+      "subject": "하커브뤼케 강철 아치와 도너스베르거브뤼케 방향 철로의 일몰 구도",
+      "tip": "위치는 다리 보행 구간의 근사치 — 현장에서 난간 안쪽의 안전한 서는 지점과 서쪽 구도를 확인하세요. 철로·전차선 구역에 들어가거나 장비를 난간 밖으로 내밀지 마세요.",
+      "lens": "16-35mm 또는 24-70mm",
+      "time": "일몰~블루아워",
+      "verified": "reported",
+      "source": "https://www.muenchen.de/sehenswuerdigkeiten/bruecken/hackerbruecke",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788246609/spotchu/spots/rrx7xqllkfym77ew8tbz.jpg",
+      "imageCredit": {
+        "author": "MartinThoma",
+        "license": "CC0 1.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=59470803"
       }
     },
     {
