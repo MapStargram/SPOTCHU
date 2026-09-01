@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T08:16:10.748Z",
+  "generatedAt": "2026-09-01T13:26:40.658Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -179,6 +179,27 @@
       }
     },
     {
+      "id": "bali-diamond-beach-staircase-a93e",
+      "title": "다이아몬드 비치 절벽 계단 포토 스팟",
+      "city": "bali",
+      "category": "photo",
+      "lat": -8.75432,
+      "lng": 115.54471,
+      "area": "Diamond Beach cliff staircase, Nusa Penida",
+      "subject": "Cliff staircase, beach, and Batu Melawang rock",
+      "tip": "위치는 계단 구역 수준의 근사치입니다. 안전한 넓은 지점에서만 촬영하고 절벽 가장자리·젖은 구간을 피하며 기상과 파도를 확인하세요.",
+      "lens": "16-35mm",
+      "time": "07:30-09:30",
+      "verified": "reported",
+      "source": "https://tropictripper.com/diamond-beach-nusa-penida-bali/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269161/spotchu/spots/elgggj8jbhncrgd116nv.jpg",
+      "imageCredit": {
+        "author": "Stryn",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=89600855"
+      }
+    },
+    {
       "id": "bali-kelingking-beach-trex-cliff-viewpoint-e41b",
       "title": "켈링킹 비치 T-Rex 절벽 전망 포토스팟",
       "city": "bali",
@@ -256,6 +277,48 @@
         "author": "Flickr user: yeowatzup https://www.flickr.com/photos/yeowatzup/",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Bali_Pura_Lempuyang_Luhur.jpg"
+      }
+    },
+    {
+      "id": "bali-tirtagangga-stepping-stones-e31b",
+      "title": "띠르따 강가 물의 궁전 잉어 연못 포토 스팟",
+      "city": "bali",
+      "category": "photo",
+      "lat": -8.41166,
+      "lng": 115.58734,
+      "area": "Tirta Gangga water palace stepping-stone pond",
+      "subject": "Fish pond and stepping stones",
+      "tip": "위치는 구역 수준 근사치입니다. 지정 동선에서 촬영하고 젖은 디딤돌과 다른 방문객을 주의하세요.",
+      "lens": "24-35mm",
+      "time": "06:00-08:30",
+      "verified": "reported",
+      "source": "https://adventurousambles.com/tirta-gangga-water-palace-bali/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269165/spotchu/spots/bjbgchok0gbolcosaciq.jpg",
+      "imageCredit": {
+        "author": "S A B R I N A B A L I",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=59641516"
+      }
+    },
+    {
+      "id": "bali-ulun-danu-bratan-meru-f72d",
+      "title": "울룬 다누 브라딴 사원 호수의 메루 포토 스팟",
+      "city": "bali",
+      "category": "photo",
+      "lat": -8.27538,
+      "lng": 115.16645,
+      "area": "Pura Ulun Danu Bratan lakeside south shore",
+      "subject": "11-tiered pelinggih meru and Lake Bratan",
+      "tip": "위치는 호숫가 구역 수준의 근사치입니다. 공용 동선에서 촬영하고 사원·보트·제한구역 규정을 준수하세요.",
+      "lens": "24-70mm",
+      "time": "06:30-08:30",
+      "verified": "reported",
+      "source": "https://www.locationscout.net/indonesia/pura-ulun-danu-bratan",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269167/spotchu/spots/bkhcihgafykl3sdjtbpu.jpg",
+      "imageCredit": {
+        "author": "_paVan_",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/39483844@N03/28973225968"
       }
     },
     {
@@ -1084,6 +1147,21 @@
       "source": "https://www.yeongdo.go.kr/tour/01475/01476.web"
     },
     {
+      "id": "cebu-10000-roses-cordova-viewpoint-c81b",
+      "title": "코르도바 10,000 로즈 카페 LED 장미밭 뷰포인트",
+      "city": "cebu",
+      "category": "photo",
+      "lat": 10.25658,
+      "lng": 123.93252,
+      "area": "10,000 Roses Cafe & More, Day-as Barangay Road, Cordova",
+      "subject": "LED 장미밭과 세부 해협·막탄 채널 노을 구도",
+      "tip": "위치는 카페 데크·장미밭 구역의 근사치(구역 수준)입니다. 현장에서 허용된 보행 위치를 확인하고 전선·화단에 들어가지 마세요.",
+      "lens": "24-70mm 또는 35mm",
+      "time": "일몰~블루아워(약 17:30-18:30)",
+      "verified": "reported",
+      "source": "https://10000rosescebu.com/"
+    },
+    {
       "id": "cebu-camp-sawi-obo-ob-boardwalk-b2a1",
       "title": "罹좏봽 ?ъ쐞 ?ㅻ낫??留밴렇濡쒕툕 蹂대뱶?뚰겕 (諛섑?? ??",
       "city": "cebu",
@@ -1121,6 +1199,69 @@
         "author": "Adamdaley",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=56641667"
+      }
+    },
+    {
+      "id": "cebu-kawasan-falls-tier1-pool-viewpoint-e47d",
+      "title": "가와산 폭포 1단계 에메랄드 풀 뷰포인트",
+      "city": "cebu",
+      "category": "photo",
+      "lat": 9.80215,
+      "lng": 123.3741,
+      "area": "Kawasan Falls Level 1 pool shoreline, Matutinao, Badian",
+      "subject": "1단계 폭포 커튼과 청록색 플런지 풀 구도",
+      "tip": "위치는 1단계 풀 가장자리의 근사치(구역 수준)입니다. 허용된 자연 둑·보행 구역에서 촬영하고 미끄러운 물가와 로프·안전 통제를 주의하세요.",
+      "lens": "24-50mm + CPL",
+      "time": "이른 아침(약 06:30-08:30)",
+      "verified": "reported",
+      "source": "https://www.walkmyworld.com/posts/kawasan-falls",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269170/spotchu/spots/elwx0ou5ydijnangxdig.jpg",
+      "imageCredit": {
+        "author": "Shemlongakit",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=91420594"
+      }
+    },
+    {
+      "id": "cebu-oslob-cuartel-coral-ruins-viewpoint-7b5c",
+      "title": "오슬롭 쿠아르텔 산호석 유적 아치 뷰포인트",
+      "city": "cebu",
+      "category": "photo",
+      "lat": 9.52028,
+      "lng": 123.4343,
+      "area": "Cuartel Ruins, Oslob Heritage Park, Poblacion, Oslob",
+      "subject": "산호석 아치와 발루아르테·보홀해 수평선 자연 프레임",
+      "tip": "위치는 유적 회랑의 근사치(구역 수준)입니다. 허용된 보행 구역에서 촬영하고 취약한 산호석 벽에 올라가거나 기대지 마세요.",
+      "lens": "16-35mm",
+      "time": "늦은 오후(약 16:00-17:30)",
+      "verified": "reported",
+      "source": "https://thebiyahero.ph/cuartel-ruins-oslob-cebu/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269176/spotchu/spots/pxmtvcu5veykye0zbsq6.jpg",
+      "imageCredit": {
+        "author": "Jessartcam",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=154263560"
+      }
+    },
+    {
+      "id": "cebu-osmena-peak-summit-ridge-viewpoint-9a2f",
+      "title": "오스메냐 픽 정상 릿지 피나클 뷰포인트",
+      "city": "cebu",
+      "category": "photo",
+      "lat": 9.8226,
+      "lng": 123.44845,
+      "area": "Osmeña Peak summit ridge, Mantalongon, Dalaguete",
+      "subject": "정상 피나클과 만탈롱곤의 톱니형 능선·해안 구도",
+      "tip": "위치는 정상 릿지의 근사치(구역 수준)입니다. 지정 트레일과 안전한 전망 구역에서 촬영하고 젖은 석회암·강풍·절벽 가장자리를 피하세요.",
+      "lens": "16-35mm 또는 70-200mm",
+      "time": "일출(약 05:30-07:00)",
+      "verified": "reported",
+      "source": "https://www.journeyera.com/osmena-peak-hike/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269181/spotchu/spots/f2w6zsv1fxs4qscljylt.jpg",
+      "imageCredit": {
+        "author": "Doyyyyyj",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=144495598"
       }
     },
     {
@@ -1182,6 +1323,36 @@
       "time": "17:00-18:30",
       "verified": "reported",
       "source": "https://en.wikipedia.org/wiki/Chiang_Mai_University"
+    },
+    {
+      "id": "chiangmai-chom-cafe-mist-moss-garden-7c1e",
+      "title": "촘 카페 힘마판 열대 안개 숲 & 비단잉어 폭포 징검다리",
+      "city": "chiangmai",
+      "category": "photo",
+      "lat": 18.74845,
+      "lng": 98.94548,
+      "area": "Chom Cafe and Restaurant, Mae Hia",
+      "subject": "안개 정원, 이끼 바위, 인공 폭포, 비단잉어 연못과 징검다리",
+      "tip": "위치는 근사치(구역 수준) — 정원 통로에서 촬영하고 방문객 동선을 막지 마세요. 젖은 바위와 징검다리는 미끄러울 수 있습니다.",
+      "lens": "24-70mm 또는 35mm",
+      "time": "11:00-13:00 또는 16:30-18:00",
+      "verified": "reported",
+      "source": "https://chomcafeandrestaurant.com/"
+    },
+    {
+      "id": "chiangmai-cypress-lanes-pine-avenue-8b3d",
+      "title": "사이프러스 레인즈 이탈리아 토스카나풍 편백나무 가로수길",
+      "city": "chiangmai",
+      "category": "photo",
+      "lat": 18.7498,
+      "lng": 98.8892,
+      "area": "Cypress Lanes, 77 Moo 10, Ban Pong",
+      "subject": "대칭 편백나무 길과 도이쑤텝-푸이 산자락 숲 배경",
+      "tip": "위치는 근사치(구역 수준) — 허용된 보행 구간에서 중앙 대칭을 맞추세요. 사유지 규정과 입장료·휴무일을 확인하세요.",
+      "lens": "70-200mm 또는 85mm",
+      "time": "10:00-11:30 또는 15:30-17:00",
+      "verified": "reported",
+      "source": "https://wanderlog.com/"
     },
     {
       "id": "chiangmai-pha-dok-siew-ruk-jung-b84e",
@@ -1258,6 +1429,27 @@
       "scene": "란나 전통 사원에서 주인공들이 만나 기도하고 대화하는 장면",
       "verified": "reported",
       "source": "https://mgronline.com/travel/detail/9620000062402"
+    },
+    {
+      "id": "chiangmai-wat-umong-brick-tunnel-arches-5e9a",
+      "title": "왓 우몽 13세기 고대 란나 벽돌 명상 터널 아치",
+      "city": "chiangmai",
+      "category": "photo",
+      "lat": 18.78315,
+      "lng": 98.95118,
+      "area": "Wat Umong Suan Phutthatham, Suthep",
+      "subject": "란나 벽돌 명상 터널의 아치 반복과 불상 감실",
+      "tip": "위치는 근사치(구역 수준) — 중앙 보행로를 막지 않고 조용히 촬영하세요. 플래시를 피하고 사원 규정을 따르세요.",
+      "lens": "24mm 또는 35mm",
+      "time": "08:00-11:00 또는 15:00-16:30",
+      "verified": "reported",
+      "source": "https://readthecloud.co/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269186/spotchu/spots/enqvzhtmtfiqtfpinfmj.jpg",
+      "imageCredit": {
+        "author": "Chainwit.",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=196293137"
+      }
     },
     {
       "id": "danang-dragon-bridge-love-pier-03",
@@ -1338,6 +1530,48 @@
       "time": "11:00-13:30, 맑은 날",
       "verified": "reported",
       "source": "https://hoiandaytrip.com/huyen-khong-cave-marble-mountain/"
+    },
+    {
+      "id": "danang-love-bridge-dragon-carp-viewpoint-8b7d",
+      "title": "다낭 사랑의 부두와 용-잉어 동상 전망 포인트",
+      "city": "danang",
+      "category": "landmark",
+      "lat": 16.06297,
+      "lng": 108.22978,
+      "area": "Tran Hung Dao east-bank boardwalk, Son Tra",
+      "subject": "용-잉어 동상 전경과 한강의 용다리를 함께 담는 야간 구도",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 구도를 확인하세요. 사랑의 다리 북쪽 보드워크에서 남서쪽을 향해 촬영하고, 주말 21시 공연 때 난간 뒤에서 스트랩을 고정하세요.",
+      "lens": "24-70mm 또는 35mm f/1.8",
+      "time": "17:30-21:30",
+      "verified": "reported",
+      "source": "https://commons.wikimedia.org/wiki/File:Dragon_Carp_Da_Nang_1.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269189/spotchu/spots/dk494qgdihxxclbfr1fg.jpg",
+      "imageCredit": {
+        "author": "Christophe95",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=87683013"
+      }
+    },
+    {
+      "id": "danang-pink-cathedral-courtyard-3c82",
+      "title": "다낭 핑크 성당 안뜰 첨탑 전망 포인트",
+      "city": "danang",
+      "category": "landmark",
+      "lat": 16.0664,
+      "lng": 108.2238,
+      "area": "Da Nang Cathedral southeast courtyard, Hai Chau",
+      "subject": "분홍색 고딕 성당과 닭 모양 풍향계를 안뜰에서 올려 담는 구도",
+      "tip": "위치는 구역 수준의 근사치 — 현장에서 구도를 확인하세요. 미사 중에는 촬영하지 말고 단정한 복장과 정숙을 지키세요. 310° 방향은 좌표 기하와 충돌하므로 현장에서 방향을 반드시 재확인하세요.",
+      "lens": "16-35mm 또는 18-24mm",
+      "time": "08:00-10:00",
+      "verified": "reported",
+      "source": "https://commons.wikimedia.org/wiki/File:Da_Nang_Cathedral_20190919.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269192/spotchu/spots/ssbsvw4pqmgxg7ru3blj.jpg",
+      "imageCredit": {
+        "author": "Dragfyre",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=13154575"
+      }
     },
     {
       "id": "dubai-al-seef-heritage-creek-windtower-03",
@@ -1948,6 +2182,27 @@
       "scene": "다이묘 이리에 서점과 콘야마치 골목에서 인물들이 만나고 대화하는 장면",
       "verified": "reported",
       "source": "https://gofukuoka.jp/articles/detail/89"
+    },
+    {
+      "id": "hanoi-cong-caphe-st-joseph-cathedral-d57e",
+      "title": "콩카페 27 냐터 테라스 - 성 요셉 성당 고딕 파사드 뷰포인트",
+      "city": "hanoi",
+      "category": "photo",
+      "lat": 21.02878,
+      "lng": 105.84915,
+      "area": "Cộng Cà Phê 27 Nhà Thờ, Hoàn Kiếm",
+      "subject": "콩카페 창가·발코니에서 보이는 하노이 성 요셉 성당의 고딕 파사드와 쌍둥이 종탑",
+      "tip": "28–50mm. 위치는 근사치(구역 수준) — 현장에서 창가/발코니 구도와 촬영 가능 여부를 확인하세요. 카페 규정을 따르고 고객·예배객의 통행을 방해하지 마세요.",
+      "lens": "28–50mm",
+      "time": "07:30–09:30 또는 16:30–18:30",
+      "verified": "reported",
+      "source": "https://mycongcaphe.com/cua-hang/cong-27-nha-tho",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269197/spotchu/spots/p3c8l6jbxsdmhcxyi5dy.jpg",
+      "imageCredit": {
+        "author": "St_Joseph_Cathedral_Hanoi_0386.JPG: Gryffindor St_Joseph_Cathedral_Hanoi_0385.JPG: Gryffindor derivative work: Gothika (talk)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=11516008"
+      }
     },
     {
       "id": "hanoi-hanoimoi-editorial-wall-b72c",
@@ -4757,6 +5012,21 @@
       }
     },
     {
+      "id": "phuket-black-rock-viewpoint-01",
+      "title": "블랙 록 전망대(파힌담)",
+      "city": "phuket",
+      "category": "photo",
+      "lat": 7.784707,
+      "lng": 98.296382,
+      "area": "Black Rock Viewpoint trail summit near Nui Beach",
+      "subject": "나이한 베이·윈드 터빈 전망대·프롬텝 곶을 담는 남쪽 해안 파노라마",
+      "tip": "위치는 정상 바위 구역의 근사치(구역 수준) — 현장에서 안전한 촬영 지점을 확인하고 절벽 가장자리에 접근하지 마세요. 16–35mm로 촬영하고 해 지기 전 하산하세요.",
+      "lens": "16–35mm",
+      "time": "16:30–18:00",
+      "verified": "reported",
+      "source": "https://www.sayhithailand.com/view-attractions/?category=8&pro_id=853&province=91"
+    },
+    {
       "id": "phuket-mai-khao-beach-plane-landing-f81a",
       "title": "마이카오 비치 비행기 착륙 포토 스팟",
       "city": "phuket",
@@ -4804,6 +5074,48 @@
       "scene": "푸껫 올드타운 상탐 신사 관련 촬영지; 정확한 프레임·촬영 지점은 관리자 검토 필요",
       "verified": "reported",
       "source": "https://blscene.com/where-was-i-told-sunset-about-you-filmed/"
+    },
+    {
+      "id": "phuket-soi-rommanee-sino-portuguese-02",
+      "title": "푸껫 올드타운 소이 롬마니",
+      "city": "phuket",
+      "category": "landmark",
+      "lat": 7.88506,
+      "lng": 98.38918,
+      "area": "Soi Rommanee between Thalang Road and Dibuk Road",
+      "subject": "파스텔색 시노포르투기즈 상점가와 골목 원근감",
+      "tip": "위치는 남쪽 입구의 근사치(구역 수준) — 현장에서 보행 가능한 위치를 확인하세요. 이른 아침 35–50mm로 촬영하고 주민·배달 차량의 통행을 막지 마세요.",
+      "lens": "35mm or 50mm prime",
+      "time": "07:00–08:30",
+      "verified": "reported",
+      "source": "https://www.wongnai.com/travel/trips/a0209f4db081477eb13a48cec7572113",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269201/spotchu/spots/bhedfs8vquaty37g7ne0.jpg",
+      "imageCredit": {
+        "author": "Slleong",
+        "license": "CC0 1.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=141972062"
+      }
+    },
+    {
+      "id": "phuket-windmill-viewpoint-yanui-03",
+      "title": "야누이 윈드 터빈 전망대",
+      "city": "phuket",
+      "category": "photo",
+      "lat": 7.76972,
+      "lng": 98.30665,
+      "area": "Wind-turbine viewpoint ridge between Nai Harn and Ya Nui beaches",
+      "subject": "야누이 해변 만과 바위 곶, 코만 섬을 내려다보는 해안 전망",
+      "tip": "위치는 전망대 능선의 근사치(구역 수준) — 현장에서 난간 안쪽의 안전한 촬영 지점을 확인하세요. CPL과 24–70mm를 사용하고 급경사면에 접근하지 마세요.",
+      "lens": "24–70mm, CPL",
+      "time": "14:30–16:30 또는 17:30–18:30",
+      "verified": "reported",
+      "source": "https://www.jamiesphuketblog.com/2011/08/naiharn-yanui-viewpoint.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788269202/spotchu/spots/z9yysxt8td68rruz3fp6.jpg",
+      "imageCredit": {
+        "author": "shankar s.",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/77742560@N06/49835492633"
+      }
     },
     {
       "id": "prague-cihelna-swan-charles-bridge-9b4f",
