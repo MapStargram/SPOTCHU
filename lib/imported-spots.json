@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T13:26:40.658Z",
+  "generatedAt": "2026-09-01T20:49:58.000Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -221,6 +221,20 @@
       }
     },
     {
+      "id": "bali-ketut-liyer-house-eatpraylove-b56a",
+      "title": "케툿 리에르 하우스 (영화 '먹고 기도하고 사랑하라' 촬영지)",
+      "city": "bali",
+      "category": "drama",
+      "lat": -8.5272,
+      "lng": 115.265,
+      "area": "Jl. Raya Pengosekan, Br. Pengosekan Kaja, Ubud, Gianyar, Bali",
+      "subject": "케툿 리에르(영화 속 발리인 치유사)의 자택 마당 — 손금 리딩·축복 의식 장면 배경",
+      "tip": "현재 '리이어 스피릿 하우스(Liyer Spirit House)'라는 이름의 게스트하우스 겸 스파로 운영 중이며, 실제 케툿 리에르의 아들(뇨만)이 손금 리딩을 이어가고 있다. 마당·베란다 등 공용 공간 위주로 촬영하고, 사유지이므로 방문·촬영 전 현장에 양해를 구할 것.",
+      "workId": "eat-pray-love",
+      "scene": "리즈가 케툿 리에르에게 손금을 보고 조언을 구하는 장면(도입부 예언 및 결말부 재회)",
+      "source": "https://www.balifilm.com/eat-pray-love/"
+    },
+    {
       "id": "bali-lahangan-sweet-mount-agung-treehouse-8f3a",
       "title": "라항안 스위트 아궁산 트리하우스 전망 포토스팟",
       "city": "bali",
@@ -280,6 +294,26 @@
       }
     },
     {
+      "id": "bali-tegalalang-rice-terrace-eatpraylove-c19d",
+      "title": "테갈랄랑 계단식 논 (영화 '먹고 기도하고 사랑하라' 촬영지)",
+      "city": "bali",
+      "category": "drama",
+      "lat": -8.4315,
+      "lng": 115.2775,
+      "area": "Tegalalang, Gianyar, Bali (우붓 북쪽 약 10km)",
+      "subject": "테갈랄랑 계단식 논 전경 — 리즈(줄리아 로버츠)가 자전거를 타고 지나가는 발리 시골길 배경",
+      "tip": "도로변 무료 전망대에서 광각으로 계단식 논 전체를 담거나, 유료 산책로를 따라 논 사이로 내려가면 다른 구도가 가능하다. 오전 8~9시경 이른 시간에 방문하면 인파와 더위를 피할 수 있고, 실제 경작 중인 농로이므로 오토바이·차량 통행에 주의할 것.",
+      "workId": "eat-pray-love",
+      "scene": "리즈가 자전거를 타고 발리의 시골길과 계단식 논 사이를 지나가는 장면",
+      "source": "https://thecinemaholic.com/where-was-eat-pray-love-filmed/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295796/spotchu/spots/xpeq5fcbasoygrjcmw3c.jpg",
+      "imageCredit": {
+        "author": "Jo@net",
+        "license": "CC BY",
+        "source": "https://live.staticflickr.com/3032/5797060215_d2be1e5f8d_b.jpg"
+      }
+    },
+    {
       "id": "bali-tirtagangga-stepping-stones-e31b",
       "title": "띠르따 강가 물의 궁전 잉어 연못 포토 스팟",
       "city": "bali",
@@ -298,6 +332,26 @@
         "author": "S A B R I N A B A L I",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=59641516"
+      }
+    },
+    {
+      "id": "bali-ubud-art-market-eatpraylove-f83e",
+      "title": "우붓 아트 마켓 (영화 '먹고 기도하고 사랑하라' 촬영지)",
+      "city": "bali",
+      "category": "drama",
+      "lat": -8.5066,
+      "lng": 115.2628,
+      "area": "Jalan Raya Ubud, Ubud, Gianyar, Bali (우붓 왕궁 맞은편)",
+      "subject": "우붓 아트 마켓(파사르 세니) 통로 — 리즈와 펠리페가 시장을 함께 거니는 장면 배경",
+      "tip": "우붓 왕궁(푸리 사렌 아궁) 정문 맞은편 시장 입구 부근이 대표 구도. 좌표는 시장 블록 단위 근사치이며 현장에서 정확한 위치를 확인할 것. 개장 직후(오전 8시경) 방문하면 상인들이 좌판을 여는 활기찬 풍경과 비교적 한산한 통로를 함께 담을 수 있다.",
+      "workId": "eat-pray-love",
+      "scene": "리즈와 펠리페가 우붓 아트 마켓을 함께 거닐며 대화하는 장면",
+      "source": "https://jayatravel.com/eat-pray-love-film-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295655/spotchu/spots/aig3u7x2rxzyzrsj5dc0.jpg",
+      "imageCredit": {
+        "author": "Jorge Lascar",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/8721758@N06/17058342285"
       }
     },
     {
@@ -473,6 +527,20 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:%E0%B8%AD%E0%B8%B2%E0%B8%84%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B8%E0%B8%A5%E0%B8%81%E0%B8%AA%E0%B8%96%E0%B8%B2%E0%B8%99_01.jpg"
       }
+    },
+    {
+      "id": "bangkok-surawong-charoen-krung-junction",
+      "title": "수라웡-짜런끄룽 교차로",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.725417,
+      "lng": 100.516244,
+      "area": "방락(Bang Rak), 방콕",
+      "subject": "수라웡 로드(Surawong Road)가 짜런끄룽 로드(Charoen Krung Road)와 만나는 교차로 일대 — 야간 가로등 불빛이 늘어선 옛 상업지구 거리",
+      "tip": "해질녘~초저녁 가로등이 켜진 시간대에 인도에서 도로를 따라가는 구도로 촬영하면 영화 속 야간 귀갓길 장면 분위기를 살릴 수 있다. 차량 통행이 있는 교차로이므로 반드시 인도 위에서만 촬영.",
+      "workId": "in-the-mood-for-love",
+      "scene": "차우 무완과 첸 부인이 함께 숙소로 돌아가며 이야기를 나누는 야간 거리 장면 — 수라웡 로드 끝자락 가로등 불빛 아래",
+      "source": "https://mgronline.com/travel/detail/9660000060802"
     },
     {
       "id": "bangkok-wat-arun-nagaraphirom-park-7c4a",
@@ -974,6 +1042,57 @@
       }
     },
     {
+      "id": "busan-cheonmasan-sky-observatory-d4a7",
+      "title": "천마산 하늘전망대",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.093669,
+      "lng": 129.017354,
+      "area": "부산 서구 초장동 산복도로(해돋이로183번길 17-4)",
+      "subject": "3층 옥상 전망대에서 내려다보는 부산 원도심·부산항 파노라마와 노부부 조형물",
+      "tip": "일몰 후 30분 전후 야경 시간대에 원도심과 부산항대교 불빛이 가장 살아난다. 전망대 옆 '소리 놀이 벤치' 포토존과 노부부 조형물도 함께 담기 좋다. 3층 옥상은 난간이 있어 안전하지만 야간엔 바닥 단차를 주의.",
+      "workId": "ode-to-my-father",
+      "scene": "노년의 덕수 부부가 산복도로 옥상에서 부산 시내를 내려다보며 아버지를 회상하는 엔딩 장면. 현재 전망대에 이를 기념하는 노부부 조형물이 설치돼 있다.",
+      "source": "https://www.busan.go.kr/news/storyreport/view?dataNo=65120&gugun=Next"
+    },
+    {
+      "id": "busan-dadaepo-beach-hungnam-b6e2",
+      "title": "다대포해수욕장",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.046933,
+      "lng": 128.965965,
+      "area": "부산 사하구 다대동 다대포해수욕장",
+      "subject": "다대포 백사장과 낙동강 하구·바다 전경",
+      "tip": "백사장 중앙 산책로에서 바다를 향해 촬영. 다대포는 일몰 명소이기도 해 해질녘 실루엣 컷이 좋다. 도시철도 다대포해수욕장역에서 도보 약 5분, 여름 성수기 주말은 혼잡하니 이른 아침 권장.",
+      "workId": "ode-to-my-father",
+      "scene": "영화 오프닝의 흥남철수 장면 중 피란민들이 배에 오르기 위해 백사장을 필사적으로 뛰어다니는 장면을 촬영",
+      "source": "https://www.busan.go.kr/news/totalnews01/view?dataNo=59282&gugun=Next",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295658/spotchu/spots/qggw1zcwrmtll3kbb2kk.jpg",
+      "imageCredit": {
+        "author": "Ken Eckert",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=40531919"
+      }
+    },
+    {
+      "id": "busan-daebyeon-port-breakwater-friend-a94d",
+      "title": "대변항 방파제",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.22372,
+      "lng": 129.22668,
+      "area": "부산 기장군 기장읍 대변리, 대변항",
+      "subject": "옛 어항 풍경이 남아있는 대변항 방파제와 정박한 어선들 — 영화 속 배경으로 촬영된 어항",
+      "tip": "이른 아침 위판이 열릴 때 방파제와 정박한 어선·등대를 함께 담기 좋다. 파도 높은 날이나 우천 시에는 방파제 진입을 자제할 것(안전).",
+      "lens": "24-70mm",
+      "time": "07:00-09:00",
+      "workId": "friend-2001",
+      "scene": "동수가 조직 간 갈등을 피해 옛 어항을 찾는 장면의 배경으로 촬영",
+      "verified": "reported",
+      "source": "https://ko.wikipedia.org/wiki/%EB%8C%80%EB%B3%80%ED%95%AD"
+    },
+    {
       "id": "busan-gamcheon-little-prince-viewpoint-9c3d",
       "title": "감천문화마을 어린 왕자와 사막여우 전망",
       "city": "busan",
@@ -1071,6 +1190,29 @@
       "source": "https://www.busan.go.kr/news/totalnews01/view?dataNo=57228"
     },
     {
+      "id": "busan-jagalchi-dongbang-alley-friend-c7e1",
+      "title": "자갈치시장 건어물골목 (동방상회 골목)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.09667,
+      "lng": 129.03,
+      "area": "부산 중구 남포동5가, 자갈치시장 건어물 판매구역 일대",
+      "subject": "건어물 골목 모퉁이 '동방상회' 간판 — 교복 입은 준석·동수·중호·상택이 영화표 내기로 국제시장까지 달리기 시합을 벌이는 영화 하이라이트 장면의 배경",
+      "tip": "이른 아침 상인들이 건어물을 좌판에 진열하는 시간대에 방문하면 영화 속 골목 분위기가 가장 잘 살아난다. 좁은 통행로라 상인·손님 동선을 방해하지 않도록 짧게 촬영.",
+      "lens": "35mm",
+      "time": "09:00-11:00",
+      "workId": "friend-2001",
+      "scene": "교복 차림 4인방이 건어물 골목을 달리며 국제시장으로 향하는 달리기 시합 장면",
+      "verified": "reported",
+      "source": "https://cine21.com/news/view/?mag_id=34836",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295660/spotchu/spots/ahraivddu72by0sbyfda.jpg",
+      "imageCredit": {
+        "author": "InSapphoWeTrust",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/56619626@N05/5452260063"
+      }
+    },
+    {
       "id": "busan-jungangdong-40steps-nowheretohide-4f1e",
       "title": "영화 <인정사정 볼 것 없다> 중앙동 40계단 오프닝 명장면 스팟",
       "city": "busan",
@@ -1115,6 +1257,29 @@
       }
     },
     {
+      "id": "busan-yeongdo-bridge-friend-8f2a",
+      "title": "영도대교",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.09556,
+      "lng": 129.03667,
+      "area": "부산 중구 남포동~영도구 대교동1가, 영도대교",
+      "subject": "영도대교(도개교) 보행로 — 유년 시절 준석·상택·중호·동수 네 친구가 다리를 건너며 옥신각신 다투는 회상 장면의 배경",
+      "tip": "매주 토요일 14:00~14:15 도개(다리 들어올리기) 행사 전후로 다리 인도에서 촬영하면 다리 구조와 구경 인파를 함께 담기 좋다. 왕복 6차로 차도이니 반드시 보도 위에서만 촬영할 것.",
+      "lens": "24-35mm",
+      "time": "13:30-14:30 (도개 행사 전후)",
+      "workId": "friend-2001",
+      "scene": "유년시절 네 친구가 영도대교를 건너며 옥신각신 이야기 나누는 회상 장면",
+      "verified": "reported",
+      "source": "https://ko.wikipedia.org/wiki/%EC%B9%9C%EA%B5%AC_(2001%EB%85%84_%EC%98%81%ED%99%94)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295665/spotchu/spots/az8kc2i4pwcfsknyasvd.jpg",
+      "imageCredit": {
+        "author": "Mobius6",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=91005597"
+      }
+    },
+    {
       "id": "busan-yeongdo-cheonghak-reservoir-deck-e49f",
       "title": "영도 청학배수지 전망대 부산항대교 뷰",
       "city": "busan",
@@ -1147,6 +1312,26 @@
       "source": "https://www.yeongdo.go.kr/tour/01475/01476.web"
     },
     {
+      "id": "busan-yongdusan-park-bench-f19c",
+      "title": "용두산공원",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.098571,
+      "lng": 129.033511,
+      "area": "부산 중구 광복동 용두산공원",
+      "subject": "공원 산책로의 벤치·태극기 게양대와 부산타워 배경",
+      "tip": "정상부 산책로의 벤치·게양대 구역에서 촬영. 국기 하강식이 있는 일몰 무렵 방문하면 영화 속 장면과 비슷한 빛을 볼 수 있다. 지하철 1호선 남포역에서 도보 약 10분, 평일 오전이 한적하다.",
+      "workId": "ode-to-my-father",
+      "scene": "덕수와 아내 영자가 월남 파병 문제로 다투다가 국기 하강식 애국가가 흘러나오자 멈추고 마지못해 국기에 경례하는 장면",
+      "source": "http://www.busan.go.kr/news/totalnews01/view?dataNo=57228",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295667/spotchu/spots/dnuudrmoklrsvqa4ymn0.jpg",
+      "imageCredit": {
+        "author": "Mobius6",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=91003808"
+      }
+    },
+    {
       "id": "cebu-10000-roses-cordova-viewpoint-c81b",
       "title": "코르도바 10,000 로즈 카페 LED 장미밭 뷰포인트",
       "city": "cebu",
@@ -1163,7 +1348,7 @@
     },
     {
       "id": "cebu-camp-sawi-obo-ob-boardwalk-b2a1",
-      "title": "캠프 사위 오보옵 맹그로브 보드워크 (반타얀 섬)",
+      "title": "罹좏봽 ?ъ쐞 ?ㅻ낫??留밴렇濡쒕툕 蹂대뱶?뚰겕 (諛섑?? ??",
       "city": "cebu",
       "category": "drama",
       "lat": 11.15008,
@@ -1180,7 +1365,7 @@
     },
     {
       "id": "cebu-cant-help-falling-in-love-boljoon-church-c8f4",
-      "title": "볼혼 성당 광장 (영화 '사랑에 빠지지 않을 수 없어' 촬영지)",
+      "title": "蹂쇳썕 ?깅떦 愿묒옣 (?곹솕 '?щ옉??鍮좎?吏 ?딆쓣 ???놁뼱' 珥ъ쁺吏)",
       "city": "cebu",
       "category": "drama",
       "lat": 9.62992,
@@ -1841,6 +2026,46 @@
       }
     },
     {
+      "id": "florence-palazzo-capponi-via-bardi-hannibal-a4c9",
+      "title": "팔라초 카포니 알레 로비나테 (렉터 박사의 피렌체 거처)",
+      "city": "florence",
+      "category": "drama",
+      "lat": 43.7662,
+      "lng": 11.2559,
+      "area": "Via de' Bardi, Oltrarno, Florence",
+      "subject": "비아 데 바르디 36번지, 15세기 저택 팔라초 카포니 알레 로비나테 외관 — 극중 렉터 박사(닥터 펠)가 거주·집무하는 것으로 설정된 저택",
+      "tip": "개인 소유 저택으로 내부는 비공개다. 좁은 도로 맞은편 인도에서 외관만 촬영하고 사유지 진입은 금물. 차량 통행에 주의할 것.",
+      "workId": "hannibal",
+      "scene": "렉터 박사가 아로마 향수 등을 구입해 클라리스에게 보내는 등, 그의 피렌체 자택·서재로 설정된 팔라초 카포니 외관",
+      "source": "https://www.recenzent.org.ua/hannibal-movie-locations-in-florence/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295671/spotchu/spots/f8uaeytk8u0mmriatxcc.jpg",
+      "imageCredit": {
+        "author": "Francesco Bini",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=142531951"
+      }
+    },
+    {
+      "id": "florence-palazzo-vecchio-piazza-signoria-hannibal-b7e2",
+      "title": "팔라초 베키오 · 시뇨리아 광장 (파치 형사 처형 장면)",
+      "city": "florence",
+      "category": "drama",
+      "lat": 43.7696,
+      "lng": 11.2557,
+      "area": "Piazza della Signoria, Centro Storico, Florence",
+      "subject": "팔라초 베키오 정면 외벽과 발코니·종탑 — 렉터 박사가 파치 형사를 발코니에서 광장으로 떨어뜨리는 결말부 장면의 실제 외관",
+      "tip": "광장 중앙 넵튠 분수·다비드상 복제품 인근에서 팔라초 베키오 정면과 탑을 함께 담을 수 있다. 실내 장면은 세트였고 외관 낙하 장면만 실제 이곳에서 촬영했다. 관광객이 많아 이른 아침이 낫다.",
+      "workId": "hannibal",
+      "scene": "파치 형사가 렉터 박사에게 살해당해 팔라초 베키오 발코니에서 광장 아래로 떨어지는 결말부 장면(외관만 실제 촬영, 실내는 세트)",
+      "source": "https://movie-locations.com/movies/h/Hannibal.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295674/spotchu/spots/ukjpeqejlykrqsokdoak.jpg",
+      "imageCredit": {
+        "author": "pom'.",
+        "license": "Public domain 1.0",
+        "source": "https://www.flickr.com/photos/146832554@N06/25737120188"
+      }
+    },
+    {
       "id": "florence-ponte-grazie-ponte-vecchio-8d14",
       "title": "폰테 알레 그라치에 서측 난간 폰테 베키오 & 바사리 회랑 뷰포인트",
       "city": "florence",
@@ -1883,6 +2108,26 @@
       }
     },
     {
+      "id": "florence-ponte-vecchio-hannibal-f38d",
+      "title": "폰테 베키오 (파치 형사의 은팔찌 매입 장면)",
+      "city": "florence",
+      "category": "drama",
+      "lat": 43.768,
+      "lng": 11.2532,
+      "area": "Ponte Vecchio, Florence",
+      "subject": "폰테 베키오 다리 위 금은세공점 거리 — 파치 형사가 렉터의 지문을 채취하기 위해 은팔찌를 구입하는 장면 촬영지",
+      "tip": "다리 위는 항상 인파가 많다. 상점가와 인파를 함께 담으면 영화 속 구도에 가깝다. 일몰 무렵 골든아워를 추천하며 난간에 장비를 기대지 말 것.",
+      "workId": "hannibal",
+      "scene": "파치 형사가 렉터 박사의 지문 채취를 위해 폰테 베키오의 보석상에서 은팔찌를 구입하는 장면",
+      "source": "https://movie-locations.com/movies/h/Hannibal.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295675/spotchu/spots/wtvwcawmjmlbqe1cjeu8.jpg",
+      "imageCredit": {
+        "author": "patdebaz",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/28781447@N04/27534689041"
+      }
+    },
+    {
       "id": "florence-repubblica-giostra-arcone-4b82",
       "title": "리퍼블리카 광장 회전목마 & 아르코네 개선문 야경 포토스팟",
       "city": "florence",
@@ -1922,6 +2167,26 @@
         "author": "Ввласенко",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=71046802"
+      }
+    },
+    {
+      "id": "florence-santa-croce-pazzi-chapel-hannibal-c91e",
+      "title": "산타 크로체 파치 예배당 회랑 (오페라 장면)",
+      "city": "florence",
+      "category": "drama",
+      "lat": 43.7679,
+      "lng": 11.2628,
+      "area": "Chiostro di Santa Croce (Pazzi Chapel cloister), Florence",
+      "subject": "브루넬레스키가 설계한 파치 예배당 로지아(현관) 정면 — 영화 전용 삽입곡 'Vide Cor Meum' 오페라 공연 장면 촬영지",
+      "tip": "산타 크로체 성당 부속 박물관(유료) 입장 후 첫 회랑에서 촬영 가능. 개관시간을 미리 확인하고, 성당 부속 시설이므로 정숙을 지킬 것.",
+      "workId": "hannibal",
+      "scene": "파치 형사가 참석하는, 영화를 위해 작곡된 오페라 'Vide Cor Meum' 공연 장면 — 파치 가문이 봉헌한 파치 예배당 앞 회랑에서 촬영",
+      "source": "https://santacroceinflorence.wordpress.com/2013/06/12/vide-cor-meum-hannibal-and-santa-croce/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295677/spotchu/spots/xsnoy86ofyu5fefl34q8.jpg",
+      "imageCredit": {
+        "author": "M McBey",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/158652122@N02/49678288033"
       }
     },
     {
@@ -2296,6 +2561,26 @@
       }
     },
     {
+      "id": "hongkong-california-restaurant-daguilar-8f4b",
+      "title": "중경삼림 캘리포니아 레스토랑 옛터",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.28111,
+      "lng": 114.15556,
+      "area": "Central, 30-32 D'Aguilar Street",
+      "subject": "경찰 663이 들르던 레스토랑&바 '캘리포니아'가 있던 자리 — 원건물은 2010년 철거, 현재 새 캘리포니아 타워가 들어서 있음",
+      "tip": "당시 인테리어는 남아있지 않으니 기대는 낮게. 란콰이퐁 초입 코너 건물 외관만 가볍게 담고 이동하세요.",
+      "workId": "chungking-express",
+      "scene": "2부: 경찰 663이 들르는 곳으로 등장하는 레스토랑 '캘리포니아' 장면의 실제 촬영 장소",
+      "source": "https://www.museyon.com/checking-out-chungking-express/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295686/spotchu/spots/waus356d593qctwcg5vc.jpg",
+      "imageCredit": {
+        "author": "Simon Leung gg",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=45928568"
+      }
+    },
+    {
       "id": "hongkong-central-mid-levels-escalator-cochrane-4a91",
       "title": "중경삼림 센트럴 미드레벨 에스컬레이터 코크란 스트리트 구간",
       "city": "hongkong",
@@ -2342,6 +2627,26 @@
       }
     },
     {
+      "id": "hongkong-chungking-mansions-nathan-road-7b3e",
+      "title": "중경삼림 충칭맨션 (침사추이)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.29637,
+      "lng": 114.17247,
+      "area": "Tsim Sha Tsui, 36-44 Nathan Road",
+      "subject": "충칭맨션 정문·간판 외관과 나단 로드 쪽 입구",
+      "tip": "나단 로드 맞은편 보도에서 건물 전체 간판을 프레임에 담으세요. 내부 상가·게스트하우스 통로는 실제 거주·영업 공간이니 조용히 통행하고 상인·투숙객을 촬영하지 마세요.",
+      "workId": "chungking-express",
+      "scene": "1부: 브리지트 린이 금발 가발을 쓰고 마약 밀매에 얽혀 충칭맨션 안팎을 오가는 장면",
+      "source": "https://en.wikipedia.org/wiki/Chungking_Mansions",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295687/spotchu/spots/lti7pjnksj4uysb6jaom.jpg",
+      "imageCredit": {
+        "author": "timquijano",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/7527824@N04/5122984921"
+      }
+    },
+    {
       "id": "hongkong-duddell-street-steps-gas-lamps-8f12",
       "title": "두델 스트리트 석계와 가스등",
       "city": "hongkong",
@@ -2359,6 +2664,26 @@
       "source": "https://www.amo.gov.hk/en/historic-buildings/monuments/hong-kong-island/monuments_08/index.html"
     },
     {
+      "id": "hongkong-graham-street-market-6e1c",
+      "title": "중경삼림 그레이엄 스트리트 시장",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.28278,
+      "lng": 114.15333,
+      "area": "Central, Graham Street",
+      "subject": "노점 차양이 늘어선 홍콩 최고(最古)의 재래시장 골목",
+      "tip": "오전 영업 시간대가 가장 생생한 구도. 좁은 통로에서는 손수레·상인 통행을 막지 말고, 좌판·얼굴 근접 촬영은 삼가세요.",
+      "workId": "chungking-express",
+      "scene": "2부: 페이가 그레이엄 스트리트 시장에서 경찰 663과 우연히 마주쳐 게이지 스트리트 교차로까지 함께 걷는 장면",
+      "source": "http://hongkongonfilm.blogspot.com/2011/03/chungking-express-graham-street-market.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295692/spotchu/spots/sungqrogjhqi6t7u7chc.jpg",
+      "imageCredit": {
+        "author": "Mranieromn",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=20791468"
+      }
+    },
+    {
       "id": "hongkong-lugard-road-lookout-p01",
       "title": "빅토리아 피크 루가드 로드 전망대 (루가드 로드 룩아웃)",
       "city": "hongkong",
@@ -2374,6 +2699,26 @@
       "scene": "홍콩을 배경으로 한 수많은 영화, 다큐멘터리, 광고에서 등장하는 대표적인 빅토리아 하버 파노라마 뷰포인트.",
       "verified": "reported",
       "source": "https://en.wikipedia.org/wiki/Lugard_Road"
+    },
+    {
+      "id": "hongkong-midnight-express-lan-kwai-fong-4d9a",
+      "title": "중경삼림 미드나잇 익스프레스 옛터",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.28083,
+      "lng": 114.15556,
+      "area": "Central, 3 Lan Kwai Fong",
+      "subject": "페이(왕정문)가 일하던 스낵바 '미드나잇 익스프레스'가 있던 란콰이퐁 코너 자리 — 현재는 편의점",
+      "tip": "골목 맞은편에서 코너 매장을 프레임에 담으세요. 저녁엔 유동인구가 많은 유흥가라 짧게 촬영하고 통행을 막지 마세요.",
+      "workId": "chungking-express",
+      "scene": "2부: 경찰 663(양조위)이 매일 들르는 스낵바에서 페이가 일하며 짝사랑을 키우는 장면",
+      "source": "https://www.museyon.com/checking-out-chungking-express/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295693/spotchu/spots/qno7bsconxpizrweyebg.jpg",
+      "imageCredit": {
+        "author": "Michael O'Connell-Davidson",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/98920765@N08/9684842524"
+      }
     },
     {
       "id": "hongkong-mido-cafe-temple-street-4b8a",
@@ -3114,6 +3459,26 @@
       }
     },
     {
+      "id": "london-australia-house-gringotts-bank",
+      "title": "오스트레일리아 하우스 그린고츠 은행",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.512889,
+      "lng": -0.115722,
+      "area": "Strand, London",
+      "subject": "오스트레일리아 하이 커미션(오스트레일리아 하우스) 정문 — 그린고츠 마법사 은행 대리석 홀 촬영지",
+      "tip": "내부는 평소 일반에 공개되지 않는 호주 대사관 건물. 평일 업무시간엔 정문 너머로 샹들리에와 대리석 로비가 살짝 보이지만 주말엔 문이 닫혀 안 보인다. 스트랜드 인도에서 정문을 정면으로 촬영하고 입구는 막지 말 것.",
+      "workId": "harry-potter-philosophers-stone",
+      "scene": "해리와 해그리드가 그린고츠 은행에서 해리의 금고를 찾아가는 장면 — 대리석 로비 실내 촬영",
+      "source": "https://en.wikipedia.org/wiki/High_Commission_of_Australia,_London",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295695/spotchu/spots/tiospm8lyk30pjt0e0hg.jpg",
+      "imageCredit": {
+        "author": "shirokazan",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/11302107@N05/7051744107"
+      }
+    },
+    {
       "id": "london-big-ben-phonebox-great-george-7f1a",
       "title": "빅벤 & 빨간 공중전화박스 프레이밍 포토스팟 (그레이트 조지 스트리트)",
       "city": "london",
@@ -3134,6 +3499,26 @@
         "author": "Christian David",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster,_London.jpg"
+      }
+    },
+    {
+      "id": "london-harrow-school-fourth-form-room",
+      "title": "해로 스쿨 포스 폼 룸 (윙가르디움 레비오사 교실)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5725,
+      "lng": -0.335,
+      "area": "Old Schools, Harrow-on-the-Hill",
+      "subject": "1615년에 지어진 올드 스쿨스 건물의 포스 폼 룸(전통 교실)",
+      "tip": "일반 도보 방문 불가 — 학교가 운영하는 유료 공개 투어(연 3~4회, 오후 2~3시반 진행, 성인 약 £8.50)로만 입장 가능하니 harrowschoolenterprises.com에서 사전 예약 필수. 평일 소규모 프라이빗 투어도 별도 예약으로 가능.",
+      "workId": "harry-potter-philosophers-stone",
+      "scene": "플리트윅 교수의 마법 수업에서 헤르미온느가 깃털을 띄우는 '윙가르디움 레비오사' 장면",
+      "source": "https://www.harrowschoolenterprises.com/tours",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295697/spotchu/spots/ixjqvpj5lr2zofr6nkxd.jpg",
+      "imageCredit": {
+        "author": "foundin_a_attic",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/146272131@N07/48213557591"
       }
     },
     {
@@ -3160,6 +3545,26 @@
       }
     },
     {
+      "id": "london-kings-cross-platform-nine-three-quarters",
+      "title": "킹스크로스역 9와 4분의 3 승강장",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5322,
+      "lng": -0.124,
+      "area": "King's Cross, London",
+      "subject": "'플랫폼 9¾' 표지판과 벽 속으로 사라지는 카트(트롤리) 포토존",
+      "tip": "역 서쪽 중앙홀 해리포터 숍 앞 포토존은 무료·상시 개방(월~토 8~20시, 일 9~20시)이지만 대기줄이 길다. 개장 직후 이른 시간 방문 추천. 실제 영화 촬영에 쓰인 아치는 4·5번 승강장 사이라 플랫폼 티켓이 있어야 가까이서 볼 수 있다.",
+      "workId": "harry-potter-philosophers-stone",
+      "scene": "해리가 벽을 통과해 9와 4분의 3 승강장으로 들어가 호그와트 급행열차에 탑승하는 장면(실제 촬영은 4·5번 승강장 사이 아치에서 진행)",
+      "source": "https://thirdeyetraveller.com/platform-9-3-4-london/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295698/spotchu/spots/domktudpopzyomnudber.jpg",
+      "imageCredit": {
+        "author": "Peter G Trimming",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/55426027@N03/7011903123"
+      }
+    },
+    {
       "id": "london-kingsman-savile-row-huntsman",
       "title": "킹스맨 시크릿 서비스 헌츠맨 테일러숍",
       "city": "london",
@@ -3180,6 +3585,26 @@
         "author": "Jhsteel",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:11_Savile_Row.jpg"
+      }
+    },
+    {
+      "id": "london-leadenhall-market-diagon-alley",
+      "title": "리든홀 마켓 다이애건 앨리 거리",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5128,
+      "lng": -0.0835,
+      "area": "Leadenhall Market, City of London",
+      "subject": "빅토리아풍 유리 지붕 아케이드가 교차하는 리든홀 마켓 중심 거리",
+      "tip": "기존 등록된 42 Bull's Head Passage(리키 콜드런 입구)와는 다른 지점 — 시장 중앙 교차로에서 지붕을 올려다보는 구도가 대표적. 평일 이른 아침엔 상점이 열리기 전이라 한산하다. 영업 중인 상점 앞은 막지 말 것.",
+      "workId": "harry-potter-philosophers-stone",
+      "scene": "해그리드와 해리가 (영화 속 설정상 '채링 크로스 로드'인) 리든홀 마켓 거리를 걸어 리키 콜드런으로 향하는 장면",
+      "source": "https://en.wikipedia.org/wiki/Leadenhall_Market",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295699/spotchu/spots/ais3itarzx2qyrvn1g6s.jpg",
+      "imageCredit": {
+        "author": "Pierre Blaché",
+        "license": "CC0 1.0",
+        "source": "https://www.flickr.com/photos/141783395@N02/48682630352"
       }
     },
     {
@@ -5837,6 +6262,20 @@
       "source": "https://korean.visitseoul.net/hallyu/Baekbin-Crossing"
     },
     {
+      "id": "seoul-d-lifestyle-kitchen-gwanghwamun-startup-c6a1",
+      "title": "디라이프스타일키친 광화문점 (스타트업 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5684,
+      "lng": 126.9782,
+      "area": "중구 태평로1가, 서울파이낸스센터(SFC) 지하1층",
+      "subject": "서울파이낸스센터 지하 레스토랑 — 극중 인재와 인재 어머니의 식사 장면 배경",
+      "tip": "매장은 SFC 빌딩 지하1층에 위치, 실제 영업 중인 레스토랑이라 방문·식사 시 매너를 지킬 것(예약 권장). 건물 외경은 광화문광장 남단 세종대로 인도에서도 촬영 가능.",
+      "workId": "startup",
+      "scene": "8화 — 인재와 인재 어머니가 식사하며 대화를 나누는 레스토랑 장면",
+      "source": "https://english.visitseoul.net/hallyu/Seoul-as-Seen-in-the-Romantic-TV-Series-Start-Up/ENN036494"
+    },
+    {
       "id": "seoul-eungbongsan-pavilion-seongsu-bridge-e89c",
       "title": "응봉산 팔각정 성수대교 야경 촬영 포인트",
       "city": "seoul",
@@ -5982,6 +6421,28 @@
       }
     },
     {
+      "id": "seoul-oiltank-culture-park-startup-sandbox-7f2a",
+      "title": "문화비축기지 (스타트업 '샌드박스' 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.57083,
+      "lng": 126.89417,
+      "area": "마포구 성산동, 문화비축기지(T6 문화마당 앞 광장)",
+      "subject": "옛 석유비축탱크를 개조한 문화공원 — 극중 스타트업 단지 '샌드박스'의 외경",
+      "tip": "T6(탱크6, 문화마당) 앞 광장이 대표 촬영 포인트. 원형 콘크리트 탱크와 옥상 산책로가 만드는 기하학적 구도. 무료입장, 평지라 이동 편함.",
+      "lens": "24-35mm",
+      "time": "오후 늦게 (역광 피하기)",
+      "workId": "startup",
+      "scene": "극중 '샌드박스'(한국의 실리콘밸리) 스타트업 단지 외경 촬영지 — 달미와 인재가 재회하는 장면 등에 등장",
+      "source": "https://english.visitseoul.net/hallyu/Seoul-as-Seen-in-the-Romantic-TV-Series-Start-Up/ENN036494",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295704/spotchu/spots/j2mcx4ozjweuhktibtah.jpg",
+      "imageCredit": {
+        "author": "Mvcervi",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=112574519"
+      }
+    },
+    {
       "id": "seoul-seoul-station-culture-station-284-c92f",
       "title": "연상호 애니메이션 서울역의 무대 구 서울역사 뷰포인트",
       "city": "seoul",
@@ -6042,6 +6503,27 @@
         "author": "MaRail",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=121452672"
+      }
+    },
+    {
+      "id": "seoul-yeouido-hangang-park-startup-corndog-4b9e",
+      "title": "여의도한강공원 물빛무대 일대 (스타트업 포장마차 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5295,
+      "lng": 126.9295,
+      "area": "영등포구 여의도동, 여의도한강공원(여의나루역 인근, 마포대교 남단 하류 물빛광장·물빛무대 일대)",
+      "subject": "한강을 배경으로 한 여의도한강공원 산책로 — 할머니의 옛날통닭(콘도그) 포장마차가 옮겨온 자리",
+      "tip": "정확한 포장마차 세트 위치는 공개되지 않았으며, 여의나루역(5호선) 인근 물빛광장·물빛무대 일대가 촬영지로 알려져 있음. 좌표는 공원 구역 수준의 근사치. 한강 조망과 함께 담기 좋은 저녁 산책로.",
+      "time": "일몰 무렵",
+      "workId": "startup",
+      "scene": "할머니(최원덕)의 옛날통닭 포장마차가 여의도한강공원으로 자리를 옮겨 다시 장사하며 인물들이 재회하는 장면의 배경",
+      "source": "https://creatrip.com/en/blog/9029",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295705/spotchu/spots/xncbilqsqxkefx8b5wei.jpg",
+      "imageCredit": {
+        "author": "travel oriented",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/99958070@N02/10402956675"
       }
     },
     {
@@ -6614,6 +7096,60 @@
       }
     },
     {
+      "id": "tokyo-azabujuban-ichinohashi-park-chibiusa",
+      "title": "이치노하시 공원 (세일러문 치비우사 등장 신)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6558,
+      "lng": 139.73763,
+      "area": "이치노하시 공원, 히가시아자부(미나토구)",
+      "subject": "후루카와강을 가로지르는 다리와 분수 광장 — 치비우사가 도망쳐 들어온 공원 장면의 실제 모델",
+      "tip": "아자부주반역에서 도보 3분. 다리와 분수 광장을 함께 프레임에 담으면 원작 배경 분위기가 산다. 여름 물놀이 가동 시간(8~19시)엔 아이들로 붐빈다.",
+      "workId": "sailor-moon",
+      "scene": "원작 만화 제2부에서 치비우사가 처음 등장해 도망쳐 들어간 공원 장면의 모델이 된 곳",
+      "source": "https://seichimap.jp/spots/580",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295706/spotchu/spots/kqhqrywfqv9izypukjaw.jpg",
+      "imageCredit": {
+        "author": "Joe Gatling",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/85711459@N00/302649829"
+      }
+    },
+    {
+      "id": "tokyo-azabujuban-patio-kimichan-statue",
+      "title": "파티오주반 기미짱 동상 (세일러문 미즈노 아미 신)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6554,
+      "lng": 139.73456,
+      "area": "파티오주반, 아자부주반(미나토구)",
+      "subject": "아자부주반 상점가의 만남의 광장 '파티오주반'과 기미짱(빨간 구두) 동상",
+      "tip": "아자부주반역 4번 출구에서 도보 2분. 동상과 상점가 아케이드 입구를 함께 프레임에 넣으면 좋다. 평일 오전이 한산하다.",
+      "workId": "sailor-moon",
+      "scene": "'세일러문 크리스탈' 2화 등에서 미즈노 아미(세일러 머큐리)가 낙담해 있다가 우사기·루나와 만나는 장면의 배경",
+      "source": "https://seichimap.jp/spots/577"
+    },
+    {
+      "id": "tokyo-azabujuban-shopping-street-manhole",
+      "title": "아자부주반 상점가 입구 세일러문 맨홀",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.65535,
+      "lng": 139.73638,
+      "area": "아자부주반 2초메, 미나토구",
+      "subject": "미나토구가 공식 설치한 세일러문&턱시도 가면 도안 맨홀, 아자부주반역 4번 출구 옆 상점가 입구 노면",
+      "tip": "지면 로우앵글로 맨홀 도안을 담고 상점가 아케이드를 배경에 살짝 걸치면 좋다. 역 출구 바로 옆이라 통행인이 많으니 촬영은 짧게.",
+      "workId": "sailor-moon",
+      "scene": "미나토구·도에이 애니메이션 공식 콜라보 디자인 맨홀(세일러문&턱시도 가면 도안, 2024년 3월 설치). 원작에서 츠키노 우사기와 치바 마모루가 재회한 장소로 설정된 상점가 입구",
+      "source": "https://www.city.minato.tokyo.jp/citypromotion/manhole.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295708/spotchu/spots/rtnqg2asv4dbx7xckrxk.jpg",
+      "imageCredit": {
+        "author": "saragoldsmith",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/40098061@N00/2895139729"
+      }
+    },
+    {
       "id": "tokyo-hana-yori-dango-ebisu-clock-plaza-c4e1",
       "title": "에비스 가든 플레이스 시계광장 (꽃보다 남자)",
       "city": "tokyo",
@@ -6745,6 +7281,40 @@
         "author": "kawanet",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/50902562@N00/5387643026"
+      }
+    },
+    {
+      "id": "tokyo-sendaizaka-slope-sailormars",
+      "title": "센다이자카 고갯길 (세일러문 세일러마스 등장 신)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6525,
+      "lng": 139.73235,
+      "area": "센다이자카, 모토아자부·미나미아자부 경계(미나토구)",
+      "subject": "니노하시 교차로에서 서쪽으로 오르는 언덕길 센다이자카",
+      "tip": "아자부주반역에서 도보 약 7분. 언덕 위쪽에서 아래를 내려다보는 구도가 원작과 비슷하다. 차량이 다니는 언덕길이므로 반드시 인도에서 촬영.",
+      "workId": "sailor-moon",
+      "scene": "TV판 1기 10화 '저주받은 버스! 불꽃의 전사 마스 등장'에서 매일 오후 6시 버스가 사라진다는 괴담('악마의 6시 버스')의 무대가 된 고개. 세일러마스(히노 레이) 데뷔 에피소드",
+      "source": "https://seichimap.jp/spots/578"
+    },
+    {
+      "id": "tokyo-shiba-suido-manhole-tokyotower",
+      "title": "시바 급수소 앞 세일러문 맨홀 (도쿄타워 조망)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.66132,
+      "lng": 139.7452,
+      "area": "시바코엔 3초메, 미나토구",
+      "subject": "세일러 5전사(신록색) 디자인 맨홀과 그 너머로 보이는 도쿄타워",
+      "tip": "히비야선 카미야초역 3번 출구에서 시바공원 방향, 기리도시자카 오르막을 오르면 급수소 정문 앞. 맨홀을 전경 낮은 각도로 두고 도쿄타워를 배경에 담는 구도.",
+      "workId": "sailor-moon",
+      "scene": "미나토구 공식 콜라보 디자인 맨홀(세일러 5전사 신록색 도안, 2024년 3월 설치) — 작중 배경으로 반복 등장하는 도쿄타워 조망 지점",
+      "source": "https://www.city.minato.tokyo.jp/citypromotion/manhole.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788295709/spotchu/spots/znfsyybrjoid7xlhqu03.jpg",
+      "imageCredit": {
+        "author": "kevinpoh",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/7679455@N03/4580441509"
       }
     },
     {
@@ -7468,16 +8038,16 @@
       "progress": 0
     },
     {
-      "id": "the-little-prince",
-      "title": "어린 왕자",
-      "type": "기타",
+      "id": "ode-to-my-father",
+      "title": "국제시장",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "ode-to-my-father",
-      "title": "국제시장",
-      "type": "영화",
+      "id": "the-little-prince",
+      "title": "어린 왕자",
+      "type": "기타",
       "spotCount": 1,
       "progress": 0
     },
@@ -7804,15 +8374,15 @@
       "progress": 0
     },
     {
-      "id": "-london",
-      "title": "런던 대표 미디어/영화 랜드마크 씬",
+      "id": "harry-potter-philosophers-stone",
+      "title": "해리 포터와 마법사의 돌",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "harry-potter-philosophers-stone",
-      "title": "해리 포터와 마법사의 돌",
+      "id": "-london",
+      "title": "런던 대표 미디어/영화 랜드마크 씬",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -8252,6 +8822,13 @@
       "progress": 0
     },
     {
+      "id": "startup",
+      "title": "스타트업",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "goblin",
       "title": "도깨비",
       "type": "드라마",
@@ -8381,6 +8958,13 @@
       "id": "vive-l-amour",
       "title": "사랑만세 (Vive L'Amour)",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "sailor-moon",
+      "title": "미소녀 전사 세일러문",
+      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
