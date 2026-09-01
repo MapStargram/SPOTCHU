@@ -14,7 +14,6 @@ import {
   GoogleIcon,
   KakaoIcon,
   NaverIcon,
-  AppleIcon,
 } from "@/components/brand/BrandIcons";
 
 // A5 · Login — 소셜 로그인(카카오·네이버·구글·애플) + 이메일/비밀번호.
@@ -43,13 +42,8 @@ const PROVIDERS = [
     border: "1px solid var(--line)",
     icon: <GoogleIcon size={18} />,
   },
-  {
-    id: "apple",
-    label: "Apple로 계속하기",
-    bg: "var(--navy)",
-    color: "var(--cream)",
-    icon: <AppleIcon size={17} color="var(--cream)" />,
-  },
+  // Apple 제외 — AUTH_APPLE_ID(JWT clientSecret) 미설정(auth.ts 참조). 미설정 provider를 낙관 렌더하면
+  // getProviders() 확정 후 목록에서 빠져 '떴다 사라지는' 깜빡임이 된다. 시크릿 준비되면 여기에 재추가.
 ];
 
 export default function LoginScreen() {
