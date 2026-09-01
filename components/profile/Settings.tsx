@@ -211,7 +211,7 @@ export function Settings({
             className="relative z-10 w-full max-w-[430px] rounded-t-[28px] bg-cream px-6 pb-8 pt-5 text-navy outline-none"
           >
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line-strong)]" />
-            <div className="text-[18px] font-extrabold tracking-[-0.02em]">
+            <div className="text-[20px] font-extrabold tracking-[-0.02em]">
               프로필 편집
             </div>
 

@@ -5,7 +5,7 @@ import { CheckCircle2, AlertCircle, Info } from "lucide-react";
 // 접근성: label 연결, aria-invalid/aria-describedby, 상태는 색+아이콘+텍스트로 전달(색만 사용 금지).
 
 export const authInputClass =
-  "w-full rounded-2xl border border-[color:var(--line-strong)] bg-white px-4 py-3.5 text-[14px] text-navy placeholder:text-[color:var(--muted-soft)] outline-none transition focus-visible:border-coral focus-visible:ring-2 focus-visible:ring-[color:var(--coral-light)] disabled:opacity-60";
+  "w-full rounded-2xl border border-[color:var(--line-strong)] bg-white px-4 py-3.5 text-[14px] text-navy placeholder:text-[color:var(--muted-soft)] outline-none transition focus-visible:border-coral disabled:opacity-60";
 
 export function Field({
   id,

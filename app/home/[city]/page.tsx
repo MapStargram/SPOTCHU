@@ -111,7 +111,7 @@ export default async function HomeScreen({
         {/* Hero — 오늘의 스팟 */}
         <Link
           href={`/spot/${heroSpot.id}`}
-          className="relative mt-6 block h-[196px] overflow-hidden rounded-[22px] shadow-[shadow:var(--sh-elevated)] lg:h-[300px]"
+          className="relative mt-6 block h-[196px] overflow-hidden rounded-[20px] shadow-[shadow:var(--sh-elevated)] lg:h-[300px]"
           style={{ background: heroSpot.heroGrad }}
         >
           {heroSpot.imageUrl && (

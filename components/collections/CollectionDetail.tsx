@@ -447,7 +447,7 @@ export function CollectionDetail({
             className="relative z-10 w-full max-w-[500px] rounded-t-[28px] bg-cream px-6 pb-8 pt-5 outline-none lg:max-w-[720px]"
           >
             <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line-strong)]" />
-            <h2 className="px-1 text-[15px] font-extrabold tracking-[-0.01em] text-navy">
+            <h2 className="px-1 text-[20px] font-extrabold tracking-[-0.02em] text-navy">
               컬렉션 관리
             </h2>
 
@@ -508,7 +508,7 @@ export function CollectionDetail({
                   }`}
                 >
                   <span
-                    className={`absolute top-[3px] h-5 w-5 rounded-full bg-white shadow-[shadow:var(--sh-card)] transition-all ${
+                    className={`absolute top-[3px] h-5 w-5 rounded-full bg-white shadow transition-all ${
                       vis === "LINK" ? "left-[23px]" : "left-[3px]"
                     }`}
                   />

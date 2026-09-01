@@ -119,7 +119,7 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
         <div className="w-full max-w-[360px]">
           <button
             onClick={() => setOpen(null)}
-            className="mb-2.5 inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-1.5 text-[12px] font-semibold text-navy shadow-[shadow:var(--sh-card)] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--coral-light)]"
+            className="mb-2.5 inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-1.5 text-[12px] font-semibold text-navy shadow-[shadow:var(--sh-card)] transition"
           >
             <Globe2 size={14} /> 전체 나라
           </button>
@@ -137,7 +137,7 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
                 <li key={city.id}>
                   <button
                     onClick={() => router.push(`/home/${city.id}`)}
-                    className="flex w-full items-center gap-2 rounded-xl border border-[color:var(--line)] bg-white px-3 py-2.5 text-left shadow-[shadow:var(--sh-card)] transition hover:bg-[color:var(--cream-2)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--coral-light)]"
+                    className="flex w-full items-center gap-2 rounded-xl border border-[color:var(--line)] bg-white px-3 py-2.5 text-left shadow-[shadow:var(--sh-card)] transition hover:bg-[color:var(--cream-2)]"
                   >
                     <span className="min-w-0 flex-1">
                       <span className="block truncate text-[14px] font-bold text-navy">
@@ -175,7 +175,7 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
               <button
                 onClick={() => setOpen(country.id)}
                 aria-label={`${country.name} ${country.cities.length}개 도시`}
-                className="flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white py-2 pl-3 pr-3.5 shadow-[shadow:var(--sh-card)] transition active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--coral-light)]"
+                className="flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white py-2 pl-3 pr-3.5 shadow-[shadow:var(--sh-card)] transition active:scale-[0.97]"
               >
                 <span aria-hidden className="text-[15px] leading-none">
                   {country.flag}
