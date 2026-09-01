@@ -129,7 +129,7 @@ export function ExploreView({
             <div className="flex flex-1 items-center gap-2.5 rounded-[20px] bg-white px-4 py-3.5 shadow-[shadow:var(--sh-search)]">
               <Search size={18} className="text-navy" />
               <Link
-                href="/search"
+                href={`/search?cityId=${city}`}
                 className="flex-1 font-ko text-[13px] text-[color:var(--muted)]"
               >
                 어디에서 찍고 싶어요?

@@ -7,6 +7,7 @@ import { TagPill } from "../ui/TagPill";
 import { CoralButton } from "../ui/CoralButton";
 import { createPostAction, findSpotsAction } from "@/lib/actions/mutations";
 import { uploadImageFile } from "@/lib/client-upload";
+import { loginHref } from "@/lib/login-url";
 
 type PickedSpot = { id: string; title: string };
 type Picked = { id: string; file: File; previewUrl: string };
@@ -25,6 +26,9 @@ export function UploadForm({
   verifiedFromCheckin: boolean;
 }) {
   const router = useRouter();
+  // 로그인 후 이 업로드 화면(스팟·인증 컨텍스트 쿼리 포함)으로 복귀.
+  const gotoLogin = () =>
+    router.push(loginHref(window.location.pathname + window.location.search));
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [photos, setPhotos] = useState<Picked[]>([]);
   const [caption, setCaption] = useState("");
@@ -79,7 +83,7 @@ export function UploadForm({
 
   const submit = async () => {
     if (!loggedIn) {
-      router.push("/login");
+      gotoLogin();
       return;
     }
     if (submitting) return;
@@ -104,7 +108,7 @@ export function UploadForm({
       });
       if (!res.ok) {
         if (res.reason === "unauthenticated") {
-          router.push("/login");
+          gotoLogin();
           return;
         }
         setError("게시에 실패했어요. 잠시 후 다시 시도해 주세요.");
@@ -152,7 +156,7 @@ export function UploadForm({
             <p className="text-[13px] leading-[1.6] text-navy">
               사진을 올리려면 로그인이 필요해요.
             </p>
-            <CoralButton className="mt-1" onClick={() => router.push("/login")}>
+            <CoralButton className="mt-1" onClick={gotoLogin}>
               로그인하고 사진 올리기
             </CoralButton>
           </div>

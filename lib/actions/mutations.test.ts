@@ -112,34 +112,29 @@ describe("checkInAction", () => {
     expect(res).toMatchObject({ ok: false, reason: "cooldown" });
   });
 
-  // #79: 재방문 update가 createdAt을 갱신하지 않아 첫 주기 이후 쿨다운이 영구 해제된다.
-  // 스펙(spec.md:61)이 요구하는 "경과 후 재방문 → 그 다음엔 다시 쿨다운" 을 assert하므로,
-  // #79가 고쳐지기 전까진 실패하는 게 정상이다. it.fails로 "알려진 실패"로 표시 —
-  // #79가 고쳐지면 이 테스트가 예상외로 통과해 vitest가 알려준다(수정 후 it()로 되돌릴 것).
-  it.fails(
-    "쿨다운 경과 후 재방문 성공 직후 또 시도하면 다시 cooldown이어야 한다",
-    async () => {
-      asUser(userId);
-      await checkInAction(spotId, { lat: LAT, lng: LNG, accuracy: 10 });
-      await db.checkIn.update({
-        where: { userId_spotId: { userId, spotId } },
-        data: { createdAt: new Date(Date.now() - 25 * 3_600_000) },
-      });
-      const revisit = await checkInAction(spotId, {
-        lat: LAT,
-        lng: LNG,
-        accuracy: 10,
-      });
-      expect(revisit).toMatchObject({ ok: true, first: false }); // 여기까진 스펙과 일치
+  // #79 회귀: 재방문 성공 시 createdAt(쿨다운 기준)을 현재로 리셋하므로, 직후 재시도는 다시 cooldown이다.
+  // (수정 전에는 createdAt 미갱신으로 첫 주기 이후 쿨다운이 영구 해제됐다 — spec.md:61 위반.)
+  it("쿨다운 경과 후 재방문 성공 직후 또 시도하면 다시 cooldown이어야 한다", async () => {
+    asUser(userId);
+    await checkInAction(spotId, { lat: LAT, lng: LNG, accuracy: 10 });
+    await db.checkIn.update({
+      where: { userId_spotId: { userId, spotId } },
+      data: { createdAt: new Date(Date.now() - 25 * 3_600_000) },
+    });
+    const revisit = await checkInAction(spotId, {
+      lat: LAT,
+      lng: LNG,
+      accuracy: 10,
+    });
+    expect(revisit).toMatchObject({ ok: true, first: false }); // 경과 후 재방문 성공
 
-      const again = await checkInAction(spotId, {
-        lat: LAT,
-        lng: LNG,
-        accuracy: 10,
-      });
-      expect(again).toMatchObject({ ok: false, reason: "cooldown" }); // 현재는 또 성공함(버그)
-    },
-  );
+    const again = await checkInAction(spotId, {
+      lat: LAT,
+      lng: LNG,
+      accuracy: 10,
+    });
+    expect(again).toMatchObject({ ok: false, reason: "cooldown" }); // 새 주기 시작 → 쿨다운
+  });
 
   it("서로 다른 사용자 3명이 인증하면 USER_REPORTED → USER_VERIFIED로 자동 승격된다", async () => {
     const reporterId = `test-reporter-${randomUUID()}`;
