@@ -12,7 +12,6 @@ import {
   GoogleIcon,
   KakaoIcon,
   NaverIcon,
-  AppleIcon,
 } from "@/components/brand/BrandIcons";
 import { disconnectProvider, setPassword } from "@/lib/actions/auth";
 
@@ -29,11 +28,8 @@ const SOCIAL = [
     icon: <NaverIcon size={15} color="#03C75A" />,
   },
   { id: "google", label: "Google", icon: <GoogleIcon size={18} /> },
-  {
-    id: "apple",
-    label: "Apple",
-    icon: <AppleIcon size={16} color="var(--navy)" />,
-  },
+  // Apple 제외 — AUTH_APPLE_ID(JWT clientSecret) 미설정(auth.ts 참조). 연결 버튼을 노출하면
+  // signIn("apple") 시도가 미설정 provider라 실패한다. 로그인 화면과 동일 — 시크릿 준비되면 재추가.
 ] as const;
 
 export function AccountManager({
