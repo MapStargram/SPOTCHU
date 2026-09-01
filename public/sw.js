@@ -2,7 +2,9 @@
 // 전략: 네비게이션=네트워크 우선(항상 최신), 정적 자산=캐시 우선. 외부 오리진(구글맵 등)은 건드리지 않음.
 // 버전 올리면 activate에서 옛 캐시 전부 삭제 → 재방문 사용자도 새 자산을 받는다.
 // (v1은 404 응답까지 캐시하던 버그가 있어, 배포 전 잠깐 깨진 이미지를 영구 캐시하던 문제 방지)
-const CACHE = "spotchu-v2";
+// (v3: /api/* 는 SW가 완전히 우회 — OAuth 콜백(/api/auth/callback/*)을 가로채 PWA 카카오 로그인이
+//  깨지던 문제 수정. 인증·API는 항상 네트워크 직결, 캐시·오프라인 폴백 대상 아님.)
+const CACHE = "spotchu-v3";
 
 self.addEventListener("install", () => {
   self.skipWaiting();
@@ -31,6 +33,9 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return; // 외부 리소스는 패스
+  // 인증/API는 SW 우회(가로채기·캐시 금지). OAuth 콜백은 서버가 Set-Cookie+리다이렉트로
+  // 처리해야 하는데, SW가 navigate로 가로채면 PWA(카카오톡 앱 복귀) 로그인이 깨진다.
+  if (url.pathname.startsWith("/api/")) return;
 
   // 페이지 이동: 네트워크 우선, 실패 시 캐시 → 오프라인 폴백
   if (request.mode === "navigate") {
