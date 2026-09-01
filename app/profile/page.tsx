@@ -5,6 +5,7 @@ import { AppIcon } from "@/components/ui/AppIcon";
 import { getCurrentUser } from "@/lib/session";
 import { getProfileStats, getCityProgress, getBadgeCards } from "@/lib/data";
 import { db } from "@/lib/db";
+import { cldThumb } from "@/lib/cloudinary-url";
 
 // 개인 통계·배지를 매 요청 반영해야 하므로 동적 렌더.
 export const dynamic = "force-dynamic";
@@ -66,7 +67,7 @@ export default async function ProfilePage() {
               {avatarUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={avatarUrl}
+                  src={cldThumb(avatarUrl, 160)}
                   alt={name}
                   className="h-full w-full object-cover"
                 />

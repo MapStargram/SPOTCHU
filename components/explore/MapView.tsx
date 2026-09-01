@@ -12,6 +12,7 @@ import { Sparkle } from "../ui/Sparkle";
 import { VerifBadge, VERIF_CFG } from "../ui/VerifBadge";
 import { CITY_CENTER, type Spot, type CityId } from "@/lib/mock";
 import { categoryIcon } from "@/lib/categories";
+import { cldThumb } from "@/lib/cloudinary-url";
 import { posOf } from "./pin";
 
 // C1 · 지도 뷰. 키(NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)가 있으면 실제 Google Maps,
@@ -283,7 +284,8 @@ function markerContent(
     const ring = document.createElement("span");
     ring.style.cssText = `display:block;height:44px;width:44px;overflow:hidden;border-radius:9999px;border:2.5px solid ${c.color};background:#fff;box-shadow:0 4px 10px rgba(23,35,60,.35)`;
     const img = document.createElement("img");
-    img.src = s.imageUrl;
+    // 44px 마커 썸네일이 뷰포트당 다수 렌더 → 원본(수 MB) 대신 경량(160px). ?? "": img.src는 string 필요.
+    img.src = cldThumb(s.imageUrl, 160) ?? "";
     img.alt = "";
     img.loading = "lazy";
     img.style.cssText = "height:100%;width:100%;object-fit:cover";
@@ -385,7 +387,7 @@ export function MapView({
             {preview.imageUrl && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={preview.imageUrl}
+                src={cldThumb(preview.imageUrl, 640)}
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover"
               />

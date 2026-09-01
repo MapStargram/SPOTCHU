@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { useFocusTrap } from "@/lib/useFocusTrap";
+import { cldThumb } from "@/lib/cloudinary-url";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -265,7 +266,7 @@ export function CollectionDetail({
                     {s.imageUrl && (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={s.imageUrl}
+                        src={cldThumb(s.imageUrl, 640)}
                         alt=""
                         loading="lazy"
                         className="absolute inset-0 h-full w-full object-cover"
@@ -403,7 +404,7 @@ export function CollectionDetail({
                   {s.imageUrl && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={s.imageUrl}
+                      src={cldThumb(s.imageUrl, 640)}
                       alt=""
                       loading="lazy"
                       className="absolute inset-0 h-full w-full object-cover"

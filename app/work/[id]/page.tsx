@@ -7,6 +7,7 @@ import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { getWork, getWorkSpots, getWorkProgress } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
+import { cldThumb } from "@/lib/cloudinary-url";
 
 // DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
 export const dynamic = "force-dynamic";
@@ -147,7 +148,7 @@ export default async function WorkDetailScreen({
                       {sc.imageUrl && (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
-                          src={sc.imageUrl}
+                          src={cldThumb(sc.imageUrl, 640)}
                           alt=""
                           loading="lazy"
                           className="absolute inset-0 h-full w-full object-cover"
