@@ -437,16 +437,16 @@ export function CollectionDetail({
           aria-label="컬렉션 관리"
         >
           <button
-            className="absolute inset-0 bg-navy/40 backdrop-blur-[1px]"
+            className="absolute inset-0 bg-[rgba(23,35,60,0.5)]"
             aria-label="닫기"
             onClick={() => setMenuOpen(false)}
           />
           <div
             ref={menuRef}
             tabIndex={-1}
-            className="relative z-10 w-full max-w-[500px] rounded-t-[26px] bg-cream px-5 pb-9 pt-3 shadow-[shadow:var(--sh-elevated)] outline-none lg:max-w-[720px]"
+            className="relative z-10 w-full max-w-[500px] rounded-t-[28px] bg-cream px-6 pb-8 pt-5 outline-none lg:max-w-[720px]"
           >
-            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line)]" />
+            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line-strong)]" />
             <h2 className="px-1 text-[15px] font-extrabold tracking-[-0.01em] text-navy">
               컬렉션 관리
             </h2>

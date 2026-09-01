@@ -198,6 +198,7 @@ export function Settings({
           className="fixed inset-0 z-40 flex items-end justify-center"
           role="dialog"
           aria-modal
+          aria-label="프로필 편집"
         >
           <button
             aria-label="닫기"
