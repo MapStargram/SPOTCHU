@@ -63,7 +63,8 @@ export function Select<T extends string>({
         <ul
           role="listbox"
           aria-label={ariaLabel}
-          className={`absolute z-30 mt-1.5 min-w-[132px] overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white p-1 shadow-[shadow:var(--sh-search)] ${align === "left" ? "left-0" : "right-0"}`}
+          // 옵션이 많아도(도시 40+) 드롭다운이 화면 밖으로 늘어나 페이지 스크롤을 만들지 않게 높이 상한 + 내부 스크롤.
+          className={`absolute z-30 mt-1.5 max-h-[min(60vh,360px)] min-w-[132px] overflow-y-auto overscroll-contain rounded-2xl border border-[color:var(--line)] bg-white p-1 shadow-[shadow:var(--sh-search)] ${align === "left" ? "left-0" : "right-0"}`}
         >
           {options.map((o) => {
             const sel = o.value === value;
