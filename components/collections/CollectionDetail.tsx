@@ -431,7 +431,7 @@ export function CollectionDetail({
       {/* 관리 시트 — 이름 변경·공유 링크·삭제 (소유자 전용) */}
       {menuOpen && owned && (
         <div
-          className="fixed inset-0 z-[60] flex items-end justify-center"
+          className="fixed inset-0 z-40 flex items-end justify-center"
           role="dialog"
           aria-modal="true"
           aria-label="컬렉션 관리"

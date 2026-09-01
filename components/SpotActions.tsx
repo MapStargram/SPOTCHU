@@ -132,7 +132,7 @@ export function SpotActions({
       {/* Save sheet */}
       {open && (
         <div
-          className="fixed inset-0 z-30 flex items-end justify-center lg:pl-[76px]"
+          className="fixed inset-0 z-40 flex items-end justify-center lg:pl-[76px]"
           role="dialog"
           aria-modal
           aria-label="컬렉션에 저장"
