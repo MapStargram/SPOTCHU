@@ -63,10 +63,12 @@ export function InstallBanner() {
   };
 
   return (
+    // z-20: 배너는 가장 낮은 플로팅 레이어 → 사이드바(z-30)·바텀시트(z-30)가 위를 덮는다(겹침 방지).
+    // lg:left-[76px]: 데스크톱 사이드바 레일 폭만큼 밀어 본문 컬럼(AppShell main의 lg:pl-[76px])에 맞춤.
     <div
       role="note"
       aria-label="앱 설치 안내"
-      className="fixed inset-x-0 bottom-[calc(72px+env(safe-area-inset-bottom))] z-30 mx-auto flex max-w-[430px] items-center gap-2.5 rounded-2xl border px-3.5 py-3 shadow-lg lg:bottom-4"
+      className="fixed inset-x-0 bottom-[calc(72px+env(safe-area-inset-bottom))] z-20 mx-auto flex max-w-[430px] items-center gap-2.5 rounded-2xl border px-3.5 py-3 shadow-lg lg:bottom-4 lg:left-[76px]"
       style={{ background: "var(--mint)", borderColor: "var(--mint-deep)" }}
     >
       <span
