@@ -61,10 +61,13 @@ export async function checkInAction(
   if (existing) {
     const hours = (Date.now() - existing.createdAt.getTime()) / 3_600_000;
     if (hours < 24) return { ok: false, reason: "cooldown" };
-    // 재방문: 통계 unique 카운트는 유지, 결과만 갱신
+    // 재방문: 통계 unique 카운트는 유지, 결과만 갱신.
+    // createdAt(쿨다운 기준 시점)을 현재로 리셋해 '마지막 인증' 기준으로 새 24h 주기를 시작한다.
+    // 미갱신 시 첫 주기 이후 쿨다운이 영구 해제됨(MapStargram/SPOTCHU#79). 스키마상 (user,spot) 1행이라
+    // createdAt은 "최초"가 아니라 "마지막 인증" 시각으로 재정의된다(재인증 쿨다운=앱 규칙, schema 주석).
     await db.checkIn.update({
       where: { id: existing.id },
-      data: { deviceAccuracyM: coord.accuracy },
+      data: { deviceAccuracyM: coord.accuracy, createdAt: new Date() },
     });
     return { ok: true, first: false };
   }

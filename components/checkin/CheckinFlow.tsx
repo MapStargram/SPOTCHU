@@ -11,6 +11,7 @@ import { CategoryLabel } from "../ui/CategoryLabel";
 import { AppIcon } from "../ui/AppIcon";
 import { Mascot } from "../ui/Mascot";
 import { checkInAction } from "@/lib/actions/mutations";
+import { loginHref } from "@/lib/login-url";
 import { type Spot } from "@/lib/mock";
 
 // F1~F6 · GPS 방문 인증 플로우. 실제 브라우저 Geolocation 사용.
@@ -46,6 +47,8 @@ export function CheckinFlow({
     { key: string; label: string; icon: string; contextLabel: string }[]
   >([]);
   const back = () => router.push(`/spot/${spot.id}`);
+  // 소프트 게이트: 로그인 후 이 체크인 화면으로 복귀(rules §01-auth: 원래 액션 재개).
+  const gotoLogin = () => router.push(loginHref(`/spot/${spot.id}/checkin`));
 
   // 판정·영속화는 서버(checkInAction)가 담당한다. 원시 좌표는 전송만 하고 저장하지 않는다(rules §불변식).
   const acquire = () => {
@@ -77,7 +80,7 @@ export function CheckinFlow({
           } else if (res.reason === "blocked") {
             setPhase("blocked");
           } else if (res.reason === "unauthenticated") {
-            router.push("/login");
+            gotoLogin();
           } else if (res.reason === "not_found") {
             back(); // 스팟이 사라짐 → 상세로(그 페이지가 브랜드 404 처리)
           } else {
@@ -165,9 +168,7 @@ export function CheckinFlow({
             </CoralButton>
           ) : (
             // 소프트 게이트: 비로그인은 인증 불가 → 로그인 유도(rules §데이터·권한)
-            <CoralButton onClick={() => router.push("/login")}>
-              로그인하고 인증하기
-            </CoralButton>
+            <CoralButton onClick={gotoLogin}>로그인하고 인증하기</CoralButton>
           )}
         </div>
       </Shell>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Settings, Pencil, ChevronRight, LogIn, Sparkles } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { AppIcon } from "@/components/ui/AppIcon";
+import { LoginGate } from "@/components/auth/LoginGate";
 import { getCurrentUser } from "@/lib/session";
 import { getProfileStats, getCityProgress, getBadgeCards } from "@/lib/data";
 import { db } from "@/lib/db";
@@ -12,8 +13,21 @@ export const dynamic = "force-dynamic";
 
 // G1 · 프로필(AppShell 내부).
 export default async function ProfilePage() {
-  const [user, stats, cityProgress, badges] = await Promise.all([
-    getCurrentUser(),
+  // 개인 통계·배지는 로그인 사용자 전용(spec 08-gamification, PRD §8·§36):
+  // GUEST는 개인 기록 "대신" 로그인 유도만 표시(배타). guest면 개인 데이터 조회도 건너뜀.
+  const user = await getCurrentUser();
+  if (!user) {
+    return (
+      <AppShell active="profile">
+        <LoginGate
+          title="로그인하고 내 여행 기록을 시작하세요"
+          description="저장·방문 인증·배지가 로그인하면 내 프로필에 쌓여요."
+          callbackUrl="/profile"
+        />
+      </AppShell>
+    );
+  }
+  const [stats, cityProgress, badges] = await Promise.all([
     getProfileStats(),
     getCityProgress(),
     getBadgeCards(),

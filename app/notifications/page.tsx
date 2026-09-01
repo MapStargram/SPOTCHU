@@ -3,7 +3,9 @@ import { ChevronLeft } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { AppIcon } from "@/components/ui/AppIcon";
 import { EmptyState } from "@/components/ui/EmptyState";
+import { LoginGate } from "@/components/auth/LoginGate";
 import { getNotifications } from "@/lib/data";
+import { getCurrentUser } from "@/lib/session";
 import {
   readAndOpenNotification,
   markAllNotificationsRead,
@@ -20,6 +22,19 @@ const ICON_BG: Record<string, { bg: string; fg: string }> = {
 };
 
 export default async function NotificationsPage() {
+  // 개인 알림은 로그인 사용자 전용(spec 13-notifications: GUEST는 로그인 유도).
+  const user = await getCurrentUser();
+  if (!user) {
+    return (
+      <AppShell active="notifications">
+        <LoginGate
+          title="알림은 로그인 후 받을 수 있어요"
+          description="검수 결과와 배지 획득, 컬렉션 소식이 로그인하면 여기에 도착해요."
+          callbackUrl="/notifications"
+        />
+      </AppShell>
+    );
+  }
   const notifications = await getNotifications();
   const unread = notifications.filter((n) => n.unread).length;
 

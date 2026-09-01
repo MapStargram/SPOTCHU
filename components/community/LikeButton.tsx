@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Heart } from "lucide-react";
 import { toggleLikeAction } from "@/lib/actions/mutations";
+import { loginHref } from "@/lib/login-url";
 
 // 게시물 좋아요 토글(낙관적 업데이트). 비로그인은 소프트 게이트(→ /login). 서버가 멱등 처리.
 export function LikeButton({
@@ -20,13 +21,14 @@ export function LikeButton({
   size?: number;
 }) {
   const router = useRouter();
+  const pathname = usePathname();
   const [liked, setLiked] = useState(initialLiked);
   const [count, setCount] = useState(initialCount);
   const [pending, setPending] = useState(false);
 
   const onClick = async () => {
     if (!loggedIn) {
-      router.push("/login");
+      router.push(loginHref(pathname));
       return;
     }
     if (pending) return;
@@ -41,7 +43,7 @@ export function LikeButton({
     if (!res.ok) {
       setLiked(prevLiked);
       setCount(prevCount);
-      if (res.reason === "unauthenticated") router.push("/login");
+      if (res.reason === "unauthenticated") router.push(loginHref(pathname));
       return;
     }
     setLiked(res.liked);

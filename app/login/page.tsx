@@ -15,6 +15,7 @@ import {
   KakaoIcon,
   NaverIcon,
 } from "@/components/brand/BrandIcons";
+import { safeCallback } from "@/lib/login-url";
 
 // A5 · Login — 소셜 로그인(카카오·네이버·구글·애플) + 이메일/비밀번호.
 // NEXT_PUBLIC_AUTH_ENABLED="true" 면 실제 Auth.js signIn, 아니면 데모 플로우(권한/도시 화면으로).
@@ -71,8 +72,16 @@ export default function LoginScreen() {
   const [loading, setLoading] = useState(false);
   const [showEmail, setShowEmail] = useState(false); // 소셜 우선 — 이메일 폼은 접어 화면 길이 축소
 
+  // 소프트 게이트에서 넘어온 복귀 경로(?callbackUrl=). 없거나 외부면 /city로 폴백(오픈 리다이렉트 방지).
+  const dest = () =>
+    safeCallback(
+      typeof window === "undefined"
+        ? null
+        : new URLSearchParams(window.location.search).get("callbackUrl"),
+    );
+
   const onProvider = (id: string) => {
-    if (AUTH_ENABLED) void signIn(id, { callbackUrl: "/city" });
+    if (AUTH_ENABLED) void signIn(id, { callbackUrl: dest() });
     else router.push("/permission"); // 데모: 시크릿 미설정 시 화면 플로우만
   };
 
@@ -80,7 +89,7 @@ export default function LoginScreen() {
     e.preventDefault();
     setError(null);
     if (!AUTH_ENABLED) {
-      router.push("/city"); // 데모 모드: 실제 인증 없이 진입
+      router.push(dest()); // 데모 모드: 실제 인증 없이 원래 화면(또는 /city)으로
       return;
     }
     setLoading(true);
@@ -95,7 +104,7 @@ export default function LoginScreen() {
       setError("이메일 또는 비밀번호가 올바르지 않습니다");
       return;
     }
-    router.push("/city");
+    router.push(dest());
   };
 
   return (
