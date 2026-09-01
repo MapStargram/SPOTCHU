@@ -11,6 +11,7 @@ import {
   Loader2,
 } from "lucide-react";
 import { CoralButton, GhostButton } from "../ui/CoralButton";
+import { Select } from "../ui/Select";
 import { Mascot } from "../ui/Mascot";
 import { LocationPicker, cityCenter, type LatLng } from "./LocationPicker";
 import { createSpotReportAction } from "@/lib/actions/mutations";
@@ -152,29 +153,18 @@ export function ReportFlow({
             </p>
           </div>
 
-          {/* 도시 선택 */}
-          <div className="mt-5 flex flex-wrap gap-2">
-            {cities.map((c) => {
-              const on = city === c.id;
-              return (
-                <button
-                  key={c.id}
-                  onClick={() => pickCity(c.id)}
-                  aria-pressed={on}
-                  className="min-w-[72px] flex-1 rounded-[12px] py-2.5 text-[13px] font-bold"
-                  style={
-                    on
-                      ? {
-                          border: "1.5px solid var(--coral)",
-                          background: "var(--cream-2)",
-                        }
-                      : { border: "1px solid var(--line)", background: "#fff" }
-                  }
-                >
-                  {c.label}
-                </button>
-              );
-            })}
+          {/* 도시 선택 — 40+ 도시를 칩 그리드로 다 펼치면 지저분 → 컴팩트 드롭다운(탐색 도시 선택과 동일 UX). */}
+          <div className="mt-5">
+            <div className="mb-1.5 font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+              도시
+            </div>
+            <Select
+              value={city}
+              options={cities.map((c) => ({ value: c.id, label: c.label }))}
+              onChange={pickCity}
+              ariaLabel="도시 선택"
+              align="left"
+            />
           </div>
 
           <div className="mt-4">

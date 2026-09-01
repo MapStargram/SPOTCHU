@@ -4,7 +4,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Globe2 } from "lucide-react";
 import type { GlobeInstance } from "globe.gl";
-import { buildCountries, type Datum } from "@/lib/cities-geo";
+import {
+  buildCountries,
+  REGIONS,
+  type Country,
+  type Datum,
+} from "@/lib/cities-geo";
 
 // 도시 선택 지구본(globe.gl) — 평면 지도(CityMap)의 대안 뷰. 나라 마커 → 나라 클릭 시 그 나라로
 // 줌인 + 도시 마커를 정확한 좌표에 표시. 도시 마커/버튼 클릭 → /home/[city]. "전체 지구본"으로 줌아웃.
@@ -167,29 +172,43 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
           </ul>
         </div>
       ) : (
-        // 나라를 칩으로 감싸(flex-wrap) 세로 스크롤을 최소화 — 폭에 맞춰 줄바꿈되어 반응형.
-        // (예전엔 19개 × 2열 카드 = 10줄로 길게 스크롤됐다.)
-        <ul className="mt-4 flex w-full max-w-[380px] flex-wrap justify-center gap-2">
-          {countries.map((country) => (
-            <li key={country.id}>
-              <button
-                onClick={() => setOpen(country.id)}
-                aria-label={`${country.name} ${country.cities.length}개 도시`}
-                className="flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white py-2 pl-3 pr-3.5 shadow-[shadow:var(--sh-card)] transition active:scale-[0.97]"
-              >
-                <span aria-hidden className="text-[15px] leading-none">
-                  {country.flag}
-                </span>
-                <span className="text-[13px] font-bold tracking-[-0.01em] text-navy">
-                  {country.name}
-                </span>
-                <span className="font-latin text-[11px] font-bold text-[color:var(--muted)]">
-                  {country.cities.length}
-                </span>
-              </button>
-            </li>
-          ))}
-        </ul>
+        // 나라를 대륙(REGIONS)별 섹션으로 묶어 정리 — 19개 플랫 칩 그리드가 산만하던 것 개선.
+        <div className="mt-4 w-full max-w-[380px] space-y-3">
+          {REGIONS.map((region) => {
+            const group = region.countryIds
+              .map((id) => countries.find((c) => c.id === id))
+              .filter((c): c is Country => !!c);
+            if (group.length === 0) return null;
+            return (
+              <div key={region.id}>
+                <div className="mb-1.5 px-1 text-[11px] font-bold text-[color:var(--muted)]">
+                  {region.name}
+                </div>
+                <ul className="flex flex-wrap gap-2">
+                  {group.map((country) => (
+                    <li key={country.id}>
+                      <button
+                        onClick={() => setOpen(country.id)}
+                        aria-label={`${country.name} ${country.cities.length}개 도시`}
+                        className="flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white py-2 pl-3 pr-3.5 shadow-[shadow:var(--sh-card)] transition active:scale-[0.97]"
+                      >
+                        <span aria-hidden className="text-[15px] leading-none">
+                          {country.flag}
+                        </span>
+                        <span className="text-[13px] font-bold tracking-[-0.01em] text-navy">
+                          {country.name}
+                        </span>
+                        <span className="font-latin text-[11px] font-bold text-[color:var(--muted)]">
+                          {country.cities.length}
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
       )}
     </div>
   );
