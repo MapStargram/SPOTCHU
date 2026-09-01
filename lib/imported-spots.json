@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T21:12:17.837Z",
+  "generatedAt": "2026-09-01T22:52:04.118Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -789,6 +789,69 @@
       }
     },
     {
+      "id": "barcelona-uncharted-bar-pisamorena-e63f",
+      "title": "영화 언차티드 바 피사모레나 격투 장면",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.38254,
+      "lng": 2.18224,
+      "area": "Consolat de Mar 37-41, Born-La Ribera",
+      "subject": "실제 영업 중인 바 피사모레나 외관 — 영화 속 패스트푸드점으로 분장한 설리·브래독 격투 장면 촬영지",
+      "tip": "위치는 근사치(구역 수준) — 실제 영업 중인 바이므로 테라스 손님을 방해하지 않는 선에서 외관 위주로 촬영하세요. 저녁 시간엔 테라스 좌석이 붐빕니다.",
+      "lens": "35-50mm",
+      "time": "오전 (영업 전, 한산한 시간대)",
+      "workId": "uncharted",
+      "scene": "Consolat de Mar 37-41, 패스트푸드점으로 분장한 바에서 설리와 브래독이 벌이는 격투 장면",
+      "verified": "reported",
+      "source": "https://www.bcncatfilmcommission.com/en/news/we-visit-locations-%E2%80%98uncharted%E2%80%99"
+    },
+    {
+      "id": "barcelona-uncharted-born-centre-a24c",
+      "title": "영화 언차티드 엘 보른 문화기억센터 몬카다 저택",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.38577,
+      "lng": 2.18376,
+      "area": "Plaça Comercial 12, El Born",
+      "subject": "19세기 철골·유리 시장 건물 외관과 지하 고고학 유적 — 극중 몬카다 가문 저택으로 등장",
+      "tip": "위치는 근사치(구역 수준) — 정면 광장(Plaça Comercial)에서 철골 파사드 전체가 보이는 구도로 촬영합니다. 지하 발굴 유적 전시 관람은 별도 입장권이 필요할 수 있습니다.",
+      "lens": "16-24mm",
+      "time": "오후 (흐린 날 역광 회피)",
+      "workId": "uncharted",
+      "scene": "엘 보른 문화기억센터 — 산티아고 몬카다(안토니오 반데라스)가 부친과 대립하는 장면 및 지하 발굴 시퀀스",
+      "verified": "reported",
+      "source": "https://www.bcncatfilmcommission.com/en/news/we-visit-locations-%E2%80%98uncharted%E2%80%99",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303075/spotchu/spots/po1irfjpjjjwxvqml1lg.jpg",
+      "imageCredit": {
+        "author": "tgrauros",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/27439865@N05/9854156744"
+      }
+    },
+    {
+      "id": "barcelona-uncharted-placa-reial-b91d",
+      "title": "영화 언차티드 플라사 레이알 추격 시퀀스",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.38019,
+      "lng": 2.17552,
+      "area": "Plaça Reial, Ciutat Vella",
+      "subject": "야자수와 가스등 가로등, 트레스 그라시아스 분수가 있는 광장 — 언차티드 도심 추격 시퀀스 촬영지",
+      "tip": "위치는 근사치(구역 수준) — 광장 중앙 분수 주변에서 가우디가 디자인한 가로등과 야자수가 함께 보이는 구도로 촬영합니다. 야간엔 인파가 많고 소매치기가 잦으니 소지품에 주의하세요.",
+      "lens": "24-50mm",
+      "time": "늦은 오후 또는 야간(가로등 점등 후)",
+      "workId": "uncharted",
+      "scene": "플라사 레이알 — 네이선 일행이 바르셀로나 구시가를 가로지르는 도심 추격 시퀀스 한 장면",
+      "verified": "reported",
+      "source": "https://www.cett.es/en/news/barcelona-y-uncharted-localizaciones-de-la-pelicula-de-tom-holland",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303077/spotchu/spots/p6drkjedu5sybf75xlvr.jpg",
+      "imageCredit": {
+        "author": "paularps",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/21160385@N02/25609494185"
+      }
+    },
+    {
       "id": "barcelona-uncharted-santa-maria-del-pi-9a1b",
       "title": "영화 언차티드 산타 마리아 델 피 성당",
       "city": "barcelona",
@@ -809,6 +872,29 @@
         "author": "Chabe01",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Basilique_Ste_Marie_Pin_Barcelone_6.jpg"
+      }
+    },
+    {
+      "id": "berlin-altes-stadthaus-baerensaal-a83c",
+      "title": "알테스 슈타트하우스 베어렌잘 (퀸스 갬빗)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.51639,
+      "lng": 13.41083,
+      "area": "Molkenmarkt, Mitte",
+      "subject": "알테스 슈타트하우스 정문 돔과 계단(극중 1968 모스크바 세계선수권 대회장)",
+      "tip": "몰켄마르크트 광장 쪽에서 중앙 돔과 정문 계단이 한 프레임에 들어오게 촬영한다. 내부 베어렌잘은 상시 개방이 아니라 행사 대관 시에만 볼 수 있다.",
+      "lens": "24-70mm",
+      "time": "오전~늦은 오후",
+      "workId": "the-queens-gambit",
+      "scene": "1968 모스크바 세계선수권 대회장 장면(시즌 피날레) — 베어렌잘이 경기장으로 등장",
+      "verified": "reported",
+      "source": "https://www.deutschland.de/en/topic/culture/the-queens-gambit-filmed-in-berlin",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303087/spotchu/spots/ztr0q7h0coje05wvqayo.jpg",
+      "imageCredit": {
+        "author": "Ajepbah",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=43771329"
       }
     },
     {
@@ -846,6 +932,46 @@
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/29050965@N08/16746323975"
       }
+    },
+    {
+      "id": "berlin-friedrichstadt-palast-aztec-hotel-b6e1",
+      "title": "프리드리히슈타트 팔라스트 (퀸스 갬빗)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.523907,
+      "lng": 13.388797,
+      "area": "Friedrichstraße, Mitte",
+      "subject": "프리드리히슈타트 팔라스트 외관과 로비(극중 멕시코시티 아즈텍 팰리스 호텔)",
+      "tip": "프리드리히슈트라세 인도에서 곡선형 파사드와 대형 간판을 함께 프레이밍한다. 로비는 실제 공연장 운영 공간이라 티켓 소지자·공연 시간대에만 접근 가능하다.",
+      "lens": "16-35mm",
+      "time": "야간(외관 조명 점등 후)",
+      "workId": "the-queens-gambit",
+      "scene": "멕시코시티 아즈텍 팰리스 호텔 장면(4화) — 베스가 조지·러시아 선수단과 재회",
+      "verified": "reported",
+      "source": "https://www.atlasofwonders.com/2020/10/where-was-the-queens-gambit-filmed.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303090/spotchu/spots/w45wtiquxazbnrq2csv1.jpg",
+      "imageCredit": {
+        "author": "UzeyirMikayil",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=185204134"
+      }
+    },
+    {
+      "id": "berlin-haus-cumberland-cafe-grosz-9f2d",
+      "title": "하우스 컴벌랜드 카페 그로스 (퀸스 갬빗)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.50083,
+      "lng": 13.31694,
+      "area": "Kurfürstendamm, Charlottenburg-Wilmersdorf",
+      "subject": "하우스 컴벌랜드 정문·카페 그로스 외관(극중 파리 호텔 로비·바·볼룸)",
+      "tip": "쿠퓌르스텐담 대로 건너편 인도에서 1910년대 아르누보 파사드 전체가 보이게 담는다. 현재 상업·주거 건물이라 내부 촬영은 어려우니 외관 위주로 구성한다.",
+      "lens": "24-35mm",
+      "time": "오후(역광 회피)",
+      "workId": "the-queens-gambit",
+      "scene": "파리 토너먼트 장면(6화) — 카페 그로스와 호텔 로비·볼룸으로 등장",
+      "verified": "reported",
+      "source": "https://ftrc.blog/queens-gambit-locations-in-berlin/"
     },
     {
       "id": "berlin-karl-marx-allee-rosengarten-queens-gambit-7c9b",
@@ -963,6 +1089,29 @@
         "author": "Times",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=4874222"
+      }
+    },
+    {
+      "id": "berlin-rathaus-spandau-gibson-hotel-e17b",
+      "title": "슈판다우 시청 (퀸스 갬빗)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.535,
+      "lng": 13.20028,
+      "area": "Carl-Schurz-Straße, Spandau",
+      "subject": "슈판다우 시청 로비 대리석 계단(극중 신시내티 깁슨 호텔)",
+      "tip": "칼-슈르츠-슈트라세 인도에서 정면 외관을 담고, 관공서 운영시간엔 로비 대리석 계단도 촬영 가능하다(민원 업무 방해 금지, 삼각대 자제).",
+      "lens": "24-70mm",
+      "time": "평일 관공서 운영시간(오전~오후)",
+      "workId": "the-queens-gambit",
+      "scene": "신시내티 미국 오픈 체스대회 깁슨 호텔 장면(3화) — 로비·복층·카페로 등장",
+      "verified": "reported",
+      "source": "https://geektrippers.com/queens-gambit-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303095/spotchu/spots/anituntxvh6501i1azrm.jpg",
+      "imageCredit": {
+        "author": "Leonhard Lenz",
+        "license": "CC0 1.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=186065690"
       }
     },
     {
@@ -1114,6 +1263,60 @@
       "scene": "동수가 조직 간 갈등을 피해 옛 어항을 찾는 장면의 배경으로 촬영",
       "verified": "reported",
       "source": "https://ko.wikipedia.org/wiki/%EB%8C%80%EB%B3%80%ED%95%AD"
+    },
+    {
+      "id": "busan-gamcheon-148-stairs-a2e9",
+      "title": "감천문화마을 148계단(별 보러 가는 계단)",
+      "city": "busan",
+      "category": "photo",
+      "lat": 35.09648,
+      "lng": 129.00872,
+      "area": "감천문화마을 옥녀봉 자락",
+      "subject": "148개의 가파른 계단과 계단 양옆의 파스텔 지붕들",
+      "tip": "계단 아래에서 위쪽을 올려다보는 구도가 대표적. 실제 통행 계단이므로 가장자리에 서서 촬영하고 오르내리는 주민·관광객 동선을 막지 말 것.",
+      "workId": "the-little-prince",
+      "scene": "무거운 짐을 지고 오르다 뒤돌아보면 별이 보인다는 이름 유래를 가진 감천문화마을 대표 계단 포토존",
+      "source": "https://saik.kr/895",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303099/spotchu/spots/rgbkufwe5ednay3f1ch2.jpg",
+      "imageCredit": {
+        "author": "Christophe95",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=97994674"
+      }
+    },
+    {
+      "id": "busan-gamcheon-fish-mural-entrance-6d4f",
+      "title": "감천문화마을 물고기 벽화 골목",
+      "city": "busan",
+      "category": "photo",
+      "lat": 35.09749,
+      "lng": 129.01061,
+      "area": "감천문화마을 입구(안내센터 앞)",
+      "subject": "알록달록 물고기 벽화가 이어지는 골목 초입",
+      "tip": "마을안내센터 바로 앞, 골목길 스탬프 투어가 시작되는 지점. 벽을 따라 헤엄치는 물고기 그림을 낮은 각도로 담으면 골목 원근감이 살아난다. 좌표는 입구 구역 근사치이므로 현장에서 정확한 벽화 위치를 확인할 것.",
+      "workId": "the-little-prince",
+      "scene": "마을 입구부터 골목 곳곳을 안내하는 물고기 벽화 포토존(골목길 투어 시작점)",
+      "source": "https://www.nickkembel.com/gamcheon-culture-village-busan/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303100/spotchu/spots/zqobnu9nscgoj618fycx.jpg",
+      "imageCredit": {
+        "author": "bryan...",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/91049143@N00/45024208824"
+      }
+    },
+    {
+      "id": "busan-gamcheon-haneulmaru-observatory-f83c",
+      "title": "감천문화마을 하늘마루 전망대",
+      "city": "busan",
+      "category": "photo",
+      "lat": 35.09868,
+      "lng": 129.01026,
+      "area": "감천문화마을 하늘마루",
+      "subject": "계단식으로 펼쳐진 마을 전경과 부산항·감천항 방향 파노라마",
+      "tip": "옛 주민 가옥을 원형 보존해 개조한 전시관 겸 전망대 데크에서 마을 지붕과 바다를 한 프레임에 담을 수 있다. 오전에는 역광이 덜해 촬영이 수월하다. 좌표는 하늘마루 구역 근사치이므로 현장에서 데크 위치를 확인할 것.",
+      "workId": "the-little-prince",
+      "scene": "마을 전체를 내려다보는 감천문화마을 대표 전망 포토존",
+      "source": "https://kr.trip.com/travel-guide/attraction/busan/gamcheon-munhwamaeul-haneul-maru-jeonmangdae-55837506/"
     },
     {
       "id": "busan-gamcheon-little-prince-viewpoint-9c3d",
@@ -3051,6 +3254,23 @@
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Seongsan_Ilchulbong_from_the_air.jpg"
       }
+    },
+    {
+      "id": "jeju-pyoseon-elementary-architecture101-7f4c",
+      "title": "표선초등학교 정문 (건축학개론 재회 장면)",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.329478,
+      "lng": 126.835186,
+      "area": "서귀포시 표선면 표선리",
+      "subject": "표선초등학교 정문·외벽 — 제주로 내려온 서연과 승민이 재회해 대화를 나누는 장면의 배경",
+      "tip": "실제 운영 중인 공립 초등학교라 정문 밖 공공 도로에서만 촬영하고 교내로 들어가지 않습니다. 등하교 시간대는 학생 통행이 많으니 피하고 주말이나 방과 후 한산한 때 방문하세요. 위치는 학교 부지 기준 근사치이며, 이 장면 촬영 사실은 2차 자료(나무위키 등) 인용으로 공식 확인은 아닙니다.",
+      "lens": "35mm~50mm",
+      "time": "주말 또는 방과 후 한산한 시간대",
+      "workId": "architecture-101",
+      "scene": "제주로 내려온 서연(한가인)이 승민(엄태웅)과 재회해 질문을 던지는 장면의 촬영지로 소개됨(원문 표기: 'X년이 자기냐고 묻던 곳').",
+      "verified": "reported",
+      "source": "https://namu.wiki/w/%EA%B1%B4%EC%B6%95%ED%95%99%EA%B0%9C%EB%A1%A0(%EC%98%81%ED%99%94)"
     },
     {
       "id": "jeju-seoyeon-house-window-7b4a",
@@ -7236,6 +7456,23 @@
       }
     },
     {
+      "id": "tokyo-asahi-inari-jinja-ginza-tenkinoko-d2",
+      "title": "아사히이나리 신사 옥상 (날씨의 아이)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.671303,
+      "lng": 139.767101,
+      "area": "다이코아사히 빌딩 옥상, 긴자 3초메, 주오구",
+      "subject": "빌딩 옥상에 자리한 붉은 도리이와 본전, 협소한 옥상 참배 공간",
+      "tip": "히가시긴자역에서 도보 2분. 건물 엘리베이터로 8층까지 올라간 뒤 계단으로 옥상 도리이에 접근하며, 참배 가능 시간이 제한적이니 방문 전 반드시 최신 개방 시간을 확인할 것. 옥상이 좁아 혼잡 시간대는 피한다.",
+      "lens": "16-24mm",
+      "time": "개방 시간 내 오전~오후",
+      "workId": "weathering-with-you",
+      "scene": "히나가 도리이를 지나 '맑음 소녀'의 힘을 얻는 옥상 신사 장면의 모델",
+      "verified": "reported",
+      "source": "https://chikuhobby.com/jinja/asahiinari/"
+    },
+    {
       "id": "tokyo-asakusa-culture-center-terrace-b391",
       "title": "아사쿠사 문화관광센터 8층 전망테라스 센소지 축선 뷰",
       "city": "tokyo",
@@ -7325,6 +7562,28 @@
         "author": "saragoldsmith",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/40098061@N00/2895139729"
+      }
+    },
+    {
+      "id": "tokyo-cafe-la-boheme-shinjuku-gyoen-your-name-9a2c",
+      "title": "카페 라 보엠 신주쿠교엔점 (너의 이름은.)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.687553,
+      "lng": 139.712914,
+      "area": "신주쿠교엔 앞, 신주쿠",
+      "subject": "신주쿠교엔 담장을 마주한 통유리 외관의 이탈리안 레스토랑",
+      "tip": "도로 건너편에서 통유리 외관 전체가 들어오는 구도로 촬영. 실제 영업 중인 레스토랑이라 식사 방문 시 2층에서 1층으로 내려오는 내부 계단도 함께 담을 수 있다.",
+      "lens": "24-35mm",
+      "workId": "your-name",
+      "scene": "타키가 아르바이트하는 이탈리안 레스토랑의 실제 모델 매장",
+      "verified": "reported",
+      "source": "https://akieiga.com/kiminonawa-cafe2/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303106/spotchu/spots/rjvqzkbq5tiwompwdm5d.jpg",
+      "imageCredit": {
+        "author": "MaedaAkihiko",
+        "license": "CC0 1.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=140649218"
       }
     },
     {
@@ -7458,6 +7717,29 @@
       }
     },
     {
+      "id": "tokyo-kabukicho-ichibangai-arch-tenkinoko-d5",
+      "title": "가부키초 이치반가이 아치 (날씨의 아이)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.693846,
+      "lng": 139.701027,
+      "area": "가부키초 1초메 야스쿠니도리 입구, 신주쿠구",
+      "subject": "야스쿠니도리에서 바라본 '가부키초 이치반가이' 네온 아치 게이트",
+      "tip": "세이부신주쿠역에서 도보 1분. 야스쿠니도리 쪽에서 아치를 정면으로 담는 구도가 대표적이며 해가 진 뒤 네온이 켜지면 분위기가 산다. 번화가이므로 인도 가장자리에서 통행을 방해하지 않게 촬영할 것.",
+      "lens": "24-35mm",
+      "time": "일몰 후 네온 점등 시간대",
+      "workId": "weathering-with-you",
+      "scene": "도쿄에 갓 도착한 호다카가 갈 곳 없이 헤매다 다다르는 가부키초 초입 장면의 배경",
+      "verified": "reported",
+      "source": "https://www.tenkinokoseichi.link/shinjuku/kabukichoichibangai.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303107/spotchu/spots/qvixaifgeqwmh3xjvjez.jpg",
+      "imageCredit": {
+        "author": "Japanexperterna.se",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/68532869@N08/13506207994"
+      }
+    },
+    {
       "id": "tokyo-kabukicho-yasukunidori-lost-in-translation-7f4c",
       "title": "가부키초 이치방가이 게이트·야스쿠니도리 (사랑도 통역이 되나요? 오프닝 택시 네온 장면)",
       "city": "tokyo",
@@ -7490,6 +7772,29 @@
       "workId": "lost-translation",
       "scene": "밥과 샬럿이 601·602호에서 친구들과 밤새 노래하며 노는 가라오케 장면",
       "source": "https://tokyofox.net/2011/11/29/tokyo-filming-locations-pt-ii-lost-in-translation-updated/"
+    },
+    {
+      "id": "tokyo-koenji-kisho-jinja-tenkinoko-d1",
+      "title": "고엔지 기상신사 (날씨의 아이)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.704743,
+      "lng": 139.651137,
+      "area": "고엔지 히카와 신사 경내, 스기나미구",
+      "subject": "게타 모양 에마와 붉은 도리이가 늘어선 일본 유일의 날씨신사 참배로",
+      "tip": "JR 고엔지역 남쪽 출구에서 도보 2분. 참배객이 적은 오전 시간에 도리이 정면 세로 구도로 촬영하기 좋다.",
+      "lens": "24-35mm",
+      "time": "오전",
+      "workId": "weathering-with-you",
+      "scene": "스가(케이스케)와 나츠미가 '100% 맑음 소녀' 전설을 취재하러 방문하는 신사의 실제 모델",
+      "verified": "reported",
+      "source": "https://www.tsunagujapan.com/tennkinoko-seitijunnrei/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303110/spotchu/spots/egsseaw8asuu0httssx1.jpg",
+      "imageCredit": {
+        "author": "User:Kentin",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=6934701"
+      }
     },
     {
       "id": "tokyo-konpira-shrine-whisper-b47e",
@@ -7531,6 +7836,52 @@
       }
     },
     {
+      "id": "tokyo-meiji-jingu-gaien-icho-namiki-your-name-e58b",
+      "title": "메이지진구 가이엔 이초나미키 (너의 이름은.)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.678778,
+      "lng": 139.717639,
+      "area": "메이지진구 가이엔, 신주쿠(가스미가오카초)",
+      "subject": "성덕기념회화관을 정면으로 바라보는 은행나무 가로수길",
+      "tip": "가로수길 중앙 보도에서 회화관 정면을 향해 촬영하면 작중 배경 컷과 같은 구도가 된다. 11월 중순 은행잎 절정기가 가장 인상적이나 주말엔 인파가 많다.",
+      "lens": "24-70mm",
+      "time": "가을(11월 중순), 오전",
+      "workId": "your-name",
+      "scene": "미츠하(타키의 몸)가 친구들과 등교하는 배경 컷에 등장하는 은행나무길과 회화관",
+      "verified": "reported",
+      "source": "https://akieiga.com/kiminonawa-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303111/spotchu/spots/ax9tfqdywxv7ucbm7jqn.jpg",
+      "imageCredit": {
+        "author": "nakashi",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/81497476@N00/52507880986"
+      }
+    },
+    {
+      "id": "tokyo-national-art-center-salon-de-the-your-name-c4e2",
+      "title": "국립신미술관 살롱 드 테 롱드 (너의 이름은.)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6652,
+      "lng": 139.7268,
+      "area": "국립신미술관, 롯폰기(미나토구)",
+      "subject": "역원뿔형 유리 지붕 아래 2층 원형 카페 살롱 드 테 롱드 실내",
+      "tip": "2층 원형 카페 좌석에서 역원뿔 구조 유리 천장이 함께 보이는 구도로 촬영. 매주 화요일 휴관이니 방문 전 확인하고, 평일 오전이 비교적 한산하다.",
+      "lens": "16-35mm",
+      "time": "오전",
+      "workId": "your-name",
+      "scene": "타키가 오쿠데라 선배와 데이트로 방문하는 티살롱의 실제 모델 매장",
+      "verified": "reported",
+      "source": "https://www.anitabi.jp/spots/2292",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303113/spotchu/spots/g75admsrpmdatskdgyjh.jpg",
+      "imageCredit": {
+        "author": "IQRemix",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/46021126@N00/18112602511"
+      }
+    },
+    {
       "id": "tokyo-roppongi-keyakizaka-tower-framing-9c34",
       "title": "롯폰기 케야키자카도리 보도교 도쿄타워 가로수길 프레이밍",
       "city": "tokyo",
@@ -7549,6 +7900,29 @@
         "author": "kawanet",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/50902562@N00/5387643026"
+      }
+    },
+    {
+      "id": "tokyo-roppongi-tokyo-city-view-tenkinoko-d3",
+      "title": "롯폰기힐즈 도쿄시티뷰 전망대 (날씨의 아이)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.660397,
+      "lng": 139.729236,
+      "area": "롯폰기힐즈 모리타워 52층, 미나토구",
+      "subject": "실내 전망대 통유리창 너머로 보이는 도쿄 시가지와 노을",
+      "tip": "유료 전망대(입장권 필요). 트와일라잇 블루아워(17:30~18:30)에 방문하면 노을과 야경 조명이 겹치는 극중 분위기를 재현할 수 있다. 옥상 야외 스카이데크는 2023년 9월부터 무기한 폐쇄되어 현재는 52층 실내 전망대만 이용 가능.",
+      "lens": "24-70mm",
+      "time": "트와일라잇 블루아워(17:30-18:30)",
+      "workId": "weathering-with-you",
+      "scene": "히나가 진구가이엔 불꽃놀이가 계속되도록 노을 진 하늘을 향해 기도하는 장면의 무대",
+      "verified": "reported",
+      "source": "https://www.tsunagujapan.com/tennkinoko-seitijunnrei/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303114/spotchu/spots/i5rlbskjdolqls935whs.jpg",
+      "imageCredit": {
+        "author": "Dick Thomas Johnson",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/31029865@N06/48452415816"
       }
     },
     {
@@ -7636,6 +8010,52 @@
         "author": "Wpcpey",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=54979556"
+      }
+    },
+    {
+      "id": "tokyo-shinanomachi-station-bridge-your-name-8f3a",
+      "title": "시나노마치역 앞 육교 (너의 이름은.)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6802,
+      "lng": 139.7195,
+      "area": "시나노마치역 앞, 신주쿠",
+      "subject": "JR 시나노마치역 개찰구 앞 보행자 육교 위에서 바라본 역 앞 거리",
+      "tip": "개찰구를 나와 신호를 건너면 바로 나오는 육교 계단 위가 포인트. 해 질 무렵 하늘빛이 영화 속 장면 분위기와 가장 가깝다. 통행량이 있어 난간 쪽에 붙어 촬영할 것.",
+      "lens": "35mm",
+      "time": "해 질 무렵",
+      "workId": "your-name",
+      "scene": "데이트 후 헤어진 타키가 미츠하에게 전화를 거는 장면의 실제 배경",
+      "verified": "reported",
+      "source": "https://anitabi.jp/spots/2290",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303120/spotchu/spots/ogzjfpaalesev2nfij9v.jpg",
+      "imageCredit": {
+        "author": "John Gillespie",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=129029870"
+      }
+    },
+    {
+      "id": "tokyo-shinjuku-central-park-water-plaza-tenkinoko-d4",
+      "title": "신주쿠추오공원 미즈노히로바 (날씨의 아이)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.689914,
+      "lng": 139.690251,
+      "area": "신주쿠추오공원, 니시신주쿠, 신주쿠구",
+      "subject": "도쿄도청사를 배경으로 한 물의 광장과 분수",
+      "tip": "도쿄도청 제2청사에서 도보 5분, 무료 입장 공원. 비 갠 직후 맑게 갠 하늘과 도청사가 함께 보이는 구도가 극중 장면과 유사하다.",
+      "lens": "16-35mm",
+      "time": "낮, 비 갠 직후",
+      "workId": "weathering-with-you",
+      "scene": "호다카와 히나의 '맑음 의뢰' 일로 도쿄 각지 하늘이 차례로 개는 몽타주 장면의 배경",
+      "verified": "reported",
+      "source": "https://alan-d-haller.info/travel_jp/pilgrimage_weatheringwithyou_tokyo/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303121/spotchu/spots/hayvhcigxdo775aciqrs.jpg",
+      "imageCredit": {
+        "author": "mrhayata",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/36516818@N00/119337550"
       }
     },
     {
@@ -7786,6 +8206,28 @@
         "author": "Akonnchiroll",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_2023.jpg"
+      }
+    },
+    {
+      "id": "tokyo-yotsuya-station-crossing-your-name-b71d",
+      "title": "요츠야역 앞 교차로 (너의 이름은.)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6863,
+      "lng": 139.7312,
+      "area": "요츠야역 앞, 신주쿠",
+      "subject": "요츠야역 앞 횡단보도와 신호등이 있는 교차로 전경",
+      "tip": "역 앞 횡단보도 대각선 코너 인도에서 신호등과 인파를 함께 담으면 두 주인공이 스쳐 지나가는 장면과 비슷한 구도가 된다. 차량 통행이 많으니 도로로 나가지 말 것.",
+      "lens": "50mm",
+      "workId": "your-name",
+      "scene": "타키와 미츠하가 서로를 알아보지 못한 채 스쳐 지나가는 장면의 실제 배경 교차로",
+      "verified": "reported",
+      "source": "https://www.anitabi.jp/spots/1558",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788303123/spotchu/spots/ufftzia2xkdcejeuvvza.jpg",
+      "imageCredit": {
+        "author": "Nyao148",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=4567535"
       }
     },
     {
@@ -8341,7 +8783,7 @@
     },
     {
       "id": "the-queens-gambit",
-      "title": "The Queen's Gambit",
+      "title": "퀸스 갬빗",
       "type": "드라마",
       "spotCount": 1,
       "progress": 0
@@ -8383,7 +8825,7 @@
     },
     {
       "id": "the-little-prince",
-      "title": "어린 왕자",
+      "title": "감천문화마을 어린 왕자",
       "type": "기타",
       "spotCount": 1,
       "progress": 0
@@ -9313,6 +9755,13 @@
       "progress": 0
     },
     {
+      "id": "weathering-with-you",
+      "title": "날씨의 아이",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "whisper",
       "title": "귀를 기울이면",
       "type": "애니",
@@ -9322,6 +9771,13 @@
     {
       "id": "sailor-moon",
       "title": "미소녀 전사 세일러문",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "your-name",
+      "title": "너의 이름은.",
       "type": "애니",
       "spotCount": 1,
       "progress": 0
@@ -9351,20 +9807,6 @@
       "id": "silent",
       "title": "silent",
       "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "your-name",
-      "title": "너의 이름은.",
-      "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "weathering-with-you",
-      "title": "날씨의 아이",
-      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
