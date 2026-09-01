@@ -1,6 +1,27 @@
 {
-  "generatedAt": "2026-09-01T03:13:53.895Z",
+  "generatedAt": "2026-09-01T05:37:48.485Z",
   "spots": [
+    {
+      "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
+      "title": "암브뤼헤에서 바라본 오우데자이즈 콜크와 성 니콜라스 대성당",
+      "city": "amsterdam",
+      "category": "landmark",
+      "lat": 52.37583,
+      "lng": 4.9006,
+      "area": "Armbrug (Brug 208) 보행 구간, Oudezijds Kolk 일대",
+      "subject": "Oudezijds Kolk와 성 니콜라스 대성당 돔을 함께 담는 운하 구도",
+      "tip": "위치는 Armbrug 보행 구간의 근사치 — 현장에서 실제 시야와 안전한 위치를 확인. 블루아워에 촬영하고 보행·자전거 통행을 막지 마세요.",
+      "lens": "35-50mm",
+      "time": "블루아워 또는 이른 아침",
+      "verified": "reported",
+      "source": "https://commons.wikimedia.org/wiki/Category:Brug_208,_Armbrug",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241031/spotchu/spots/jeymjjdiurxc3mhv8cq0.jpg",
+      "imageCredit": {
+        "author": "Pierre Blaché",
+        "license": "CC0 1.0",
+        "source": "https://www.flickr.com/photos/141783395@N02/50383493366"
+      }
+    },
     {
       "id": "amsterdam-damrak-waterfront-dancing-houses-9f12",
       "title": "담락 운하 댄싱 하우스 뷰포인트 (담락 수변 보도)",
@@ -57,6 +78,27 @@
       "source": "https://www.movie-locations.com/movies/f/Fault-In-Our-Stars.php"
     },
     {
+      "id": "amsterdam-museumplein-reflecting-pool-rijksmuseum",
+      "title": "Museumplein 반사 연못에서 바라본 국립미술관",
+      "city": "amsterdam",
+      "category": "landmark",
+      "lat": 52.35727,
+      "lng": 4.88154,
+      "area": "Museumplein 반사 연못 남쪽 끝 보행 구간",
+      "subject": "Rijksmuseum 정면과 수면 반사를 함께 담는 대칭 구도",
+      "tip": "위치는 연못 남쪽 끝의 근사치 — 현장에서 중앙축과 안전한 보행 위치를 확인. 이른 아침이나 블루아워에 촬영하세요.",
+      "lens": "20-28mm",
+      "time": "이른 아침 또는 블루아워",
+      "verified": "reported",
+      "source": "https://www.photohound.co/spot/rijksmuseum-reflecting-pool-1001070",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241035/spotchu/spots/cvw8lfid1ozq9qsiivco.jpg",
+      "imageCredit": {
+        "author": "Trougnouf (Benoit Brummer)",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=97400085"
+      }
+    },
+    {
       "id": "amsterdam-reguliersgracht-seven-bridges-8d4e",
       "title": "레귤리어스흐라흐트 7개 다리 뷰포인트 (헤렌흐라흐트 교차점)",
       "city": "amsterdam",
@@ -70,6 +112,50 @@
       "time": "블루아워 이후 조명 점등 시간",
       "verified": "reported",
       "source": "https://www.iamsterdam.com/en/see-and-do/attractions-and-sights/canals-and-bridges/seven-bridges-amsterdam"
+    },
+    {
+      "id": "amsterdam-roemer-visscherstraat-zevenlandenhuizen",
+      "title": "Roemer Visscherstraat의 7개 나라의 집",
+      "city": "amsterdam",
+      "category": "photo",
+      "lat": 52.36155,
+      "lng": 4.8769,
+      "area": "Roemer Visscherstraat 북쪽 보도, Zevenlandenhuizen 맞은편",
+      "subject": "서로 다른 유럽 건축 양식을 표현한 7개 나라의 집 파사드",
+      "tip": "위치는 북쪽 보도 수준의 근사치 — 현장에서 일곱 파사드 전체가 들어오는 지점을 확인. 사유지에 들어가지 말고 주민의 사생활과 통행을 존중하세요.",
+      "lens": "16-24mm 또는 35mm",
+      "time": "오전 10시-오후 2시",
+      "verified": "reported",
+      "source": "https://www.atlasobscura.com/places/zevenlandenhuizen-seven-country-houses",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241038/spotchu/spots/egfojofkxlgjswlhtbzl.jpg",
+      "imageCredit": {
+        "author": "Photo: Andreas Praefcke",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=4263283"
+      }
+    },
+    {
+      "id": "amsterdam-sint-antoniesluis-montelbaanstoren",
+      "title": "Sint Antoniesluis에서 바라본 Montelbaanstoren",
+      "city": "amsterdam",
+      "category": "photo",
+      "lat": 52.36985,
+      "lng": 4.90168,
+      "area": "Sint Antoniesluis (Brug 287) 보행 구간과 Oudeschans 수로변",
+      "subject": "Oudeschans 수로와 Montelbaanstoren을 함께 담는 역사적 수변 구도",
+      "tip": "위치는 Sint Antoniesluis 주변의 근사치 — 현장에서 Montelbaanstoren과 수로가 겹치는 시선축을 확인. 수문·다리 운영 구역과 보행 동선을 침범하지 마세요.",
+      "lens": "50-85mm",
+      "time": "해질녘 또는 블루아워",
+      "workId": "montelbaanstoren-rembrandt-etching",
+      "scene": "정확한 작품 촬영·제작 장면이 아닌 역사적 영감 관계",
+      "verified": "reported",
+      "source": "https://www.amsterdamoudestad.nl/bezienswaardigheden/oude-schans",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241046/spotchu/spots/krnvfesss0hq1afib5fy.jpg",
+      "imageCredit": {
+        "author": "Gerard Dukker",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=23344812"
+      }
     },
     {
       "id": "amsterdam-staalmeestersbrug-zuiderkerk-c38a",
@@ -4388,6 +4474,90 @@
       "source": "https://www.movie-locations.com/movies/m/Mission-Impossible.php"
     },
     {
+      "id": "prague-novotneho-lavka-viewpoint-9c1b",
+      "title": "노보트네호 라브카 카를교·프라하성 전망",
+      "city": "prague",
+      "category": "photo",
+      "lat": 50.0853,
+      "lng": 14.4132,
+      "area": "Novotného lávka, Staré Město, Prague 1",
+      "subject": "블타바 동쪽 강변에서 카를교와 프라하성을 함께 담는 전망",
+      "tip": "위치는 근사치(구역 수준) — 노보트네호 라브카·스메타나 박물관 앞 강변에서 현장 구도를 확인하세요. 강변과 보행 동선을 막지 마세요.",
+      "lens": "24–70mm",
+      "time": "블루아워 또는 늦은 오후",
+      "verified": "reported",
+      "source": "https://www.prazskevyhledy.cz/novotneho-lavka/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241047/spotchu/spots/igsmsdh4rynwntoisx3c.jpg",
+      "imageCredit": {
+        "author": "*rboed*",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/92082510@N04/19627141426"
+      }
+    },
+    {
+      "id": "prague-old-town-bridge-tower-gallery-3e7f",
+      "title": "구시가교탑 전망 갤러리 카를교 조망",
+      "city": "prague",
+      "category": "photo",
+      "lat": 50.0862,
+      "lng": 14.4136,
+      "area": "Old Town Bridge Tower, Staré Město, Prague 1",
+      "subject": "구시가교탑 갤러리에서 카를교와 말라스트라나 교탑을 내려다보는 파노라마",
+      "tip": "위치는 근사치(구역 수준) — 허용된 전망 갤러리 위치에서 현장 구도를 확인하세요. 138계단과 현재 입장·촬영 규정을 확인하고 다른 방문객의 동선을 막지 마세요.",
+      "lens": "24–70mm",
+      "time": "늦은 오후 또는 일몰",
+      "verified": "reported",
+      "source": "https://prague.eu/en/objevujte/old-town-bridge-tower-staromestska-mostecka-vez/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241054/spotchu/spots/zr65bt7zrgk3o91vwxxo.jpg",
+      "imageCredit": {
+        "author": "Richard Mortel from Riyadh, Saudi Arabia",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=69805764"
+      }
+    },
+    {
+      "id": "prague-riegrovy-sady-sunset-4f8a",
+      "title": "리그로비 사디 일몰 프라하성 전망",
+      "city": "prague",
+      "category": "photo",
+      "lat": 50.08,
+      "lng": 14.4386,
+      "area": "Riegrovy Sady, Vinohrady, Prague 2",
+      "subject": "프라하성·말라스트라나 스카이라인을 향한 서쪽 공원 경사면 일몰 구도",
+      "tip": "위치는 근사치(구역 수준) — 리그로비 사디 서쪽 경사면에서 현장 구도를 확인하세요. 일몰 시간대 혼잡과 어두워진 뒤 발밑을 주의하고 통행을 막지 마세요.",
+      "lens": "70–200mm; 35–50mm",
+      "time": "일몰~블루아워",
+      "verified": "reported",
+      "source": "https://www.prazskevyhledy.cz/vyhlidka-riegrovy-sady/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241057/spotchu/spots/qvzc9nathinjpprgeyas.jpg",
+      "imageCredit": {
+        "author": "I would appreciate being notified if you use my work outside Wikimedia. More of my work can be found in my personal gallery.",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=69384234"
+      }
+    },
+    {
+      "id": "prague-strahov-monastery-vineyard-view-7b2a",
+      "title": "스트라호프 수도원 포도밭 전망점",
+      "city": "prague",
+      "category": "photo",
+      "lat": 50.0864,
+      "lng": 14.3897,
+      "area": "Strahov Monastery vineyard viewpoint, Hradčany, Prague 1",
+      "subject": "말라스트라나 붉은 지붕과 성 니콜라스 성당을 내려다보는 수도원 포도밭 전망",
+      "tip": "위치는 근사치(구역 수준) — 스트라호프 수도원 포도밭 전망대 또는 지정된 공공 경로에서 현장 구도를 확인하세요. 일부 정원은 비공개·임시 폐쇄일 수 있으므로 경사면과 출입 표지를 주의하세요.",
+      "lens": "35–85mm",
+      "time": "일출 또는 늦은 오후",
+      "verified": "reported",
+      "source": "https://www.strahovskyklaster.cz/en/for-visitors/what-you-can-visit/strahov-gardens",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241062/spotchu/spots/fvhp8ubxgf83stgfthar.jpg",
+      "imageCredit": {
+        "author": "ŠJů (cs:ŠJů)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=22233767"
+      }
+    },
+    {
       "id": "prague-vrtba-garden-st-nicholas-3c8d",
       "title": "브르트바 정원 상부 테라스 성 니콜라스 성당 조망점",
       "city": "prague",
@@ -4533,6 +4703,42 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg"
       }
+    },
+    {
+      "id": "rome-via-nicola-salvi-colosseum-ledge-6c3d",
+      "title": "비아 니콜라 살비 콜로세움 상단 테라스 난간 뷰포인트",
+      "city": "rome",
+      "category": "photo",
+      "lat": 41.89115,
+      "lng": 12.49205,
+      "area": "Via Nicola Salvi / Largo Gaetana Agnesi elevated walkway",
+      "subject": "콜로세움 북서쪽 상단 보행로에서 남쪽으로 바라보는 전경",
+      "tip": "안전한 공공 보행 구역에서만 촬영하세요. 난간·muretto에 올라가거나 차도에 서지 말고, 위치는 보행로 구역 수준의 근사치이므로 현장에서 구도를 확인하세요.",
+      "lens": "24-35mm or 50mm",
+      "time": "일출 또는 블루아워",
+      "verified": "reported",
+      "source": "https://www.locationscout.net/locations/1356-colosseum-from-via-nicola-salvi",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241065/spotchu/spots/hwtg4gmn3ofevzs02j1i.jpg",
+      "imageCredit": {
+        "author": "Paul Zangaro",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=2573391"
+      }
+    },
+    {
+      "id": "rome-via-piccolomini-dome-illusion-b91c",
+      "title": "비아 피콜로미니 성 베드로 대성당 역원근 착시 뷰포인트",
+      "city": "rome",
+      "category": "photo",
+      "lat": 41.8928,
+      "lng": 12.4431,
+      "area": "Via Niccolò Piccolomini belvedere",
+      "subject": "비아 피콜로미니 거리 축을 따라 성 베드로 대성당 돔이 가까워 보이는 역원근 착시",
+      "tip": "안전한 보행 가장자리에서 촬영하세요. 위치는 거리 구역 수준의 근사치 — 현장에서 구도를 확인하고 차도에 서지 않으며 주민과 차량 통행을 배려하세요.",
+      "lens": "70-200mm",
+      "time": "늦은 오후 또는 블루아워",
+      "verified": "reported",
+      "source": "https://www.turismoroma.it"
     },
     {
       "id": "sapporo-asahiyama-park-banana-movie-5c8e",
@@ -5912,6 +6118,26 @@
       }
     },
     {
+      "id": "venice-campiello-del-remer-grand-canal-9d1e",
+      "title": "캄피엘로 델 레메르 대운하 & 리알토 다리 뷰포인트",
+      "city": "venice",
+      "category": "photo",
+      "lat": 45.43888,
+      "lng": 12.33547,
+      "area": "Cannaregio",
+      "subject": "Ponte di Rialto & Canal Grande",
+      "tip": "Stand at the edge of the open brick waterfront dock facing south-southeast (bearing 161.7°). Frame the curve of the Grand Canal in the foreground with passing gondolas/vaporetti and the arch of the Rialto Bridge centered 160m downstream. Early morning offers mirror-smooth water reflections and no crowds; blue hour provides dramatic illumination from historic canal lanterns and Taverna al Remer.",
+      "lens": "24-70mm standard zoom (24-35mm for broad canal and dock context, 50-70mm for Rialto Bridge compression)",
+      "time": "Sunrise / Early Morning (06:00-08:00) or Blue Hour (18:00-20:30)",
+      "source": "https://relaisalberti.com",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241068/spotchu/spots/pdlh9um8majnpmvujsuv.jpg",
+      "imageCredit": {
+        "author": "Elan Fleisher",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=78767076"
+      }
+    },
+    {
       "id": "venice-campo-san-barnaba-indiana-jones-9e4a",
       "title": "산 바르나바 광장과 산 바르나바 성당 — 인디아나 존스: 최후의 성전",
       "city": "venice",
@@ -5989,6 +6215,26 @@
         "author": "This Photo was taken by Wolfgang Moroder. Feel free to use my photos, but please mention me as the author and send me a message. This image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate. Please do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Santa_Maria_della_Salute_from_Hotel_Monaco.jpg"
+      }
+    },
+    {
+      "id": "venice-ponte-della-paglia-bridge-of-sighs-4c6e",
+      "title": "폰테 델라 팔리아 탄식의 다리 뷰포인트",
+      "city": "venice",
+      "category": "photo",
+      "lat": 45.43365,
+      "lng": 12.34095,
+      "area": "San Marco / Castello",
+      "subject": "Ponte dei Sospiri (Bridge of Sighs) & Rio di Palazzo",
+      "tip": "Stand on the northern balustrade of the Ponte della Paglia bridge looking north into the Rio di Palazzo canal. Frame the arched white Istrian stone bridge between the Doge's Palace on the left and the Prigioni Nuove on the right. Gondolas passing underneath create excellent foreground timing. Early morning sunrise provides clear light without heavy tourist crowds.",
+      "lens": "35-70mm standard lens (avoids wide distortion of canal walls)",
+      "time": "Early morning (sunrise) to avoid crowds and get soft morning backlight, or Blue Hour",
+      "source": "https://www.bridgeofsighs.it/viewing-points/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788241069/spotchu/spots/iu0zoyabbsbwnpm9qyy9.jpg",
+      "imageCredit": {
+        "author": "timsackton",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/43581314@N08/8356500740"
       }
     },
     {
@@ -6289,6 +6535,13 @@
       "id": "the-fault-in-our-stars",
       "title": "안녕, 헤이즐",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "montelbaanstoren-rembrandt-etching",
+      "title": "Montelbaanstoren 관련 렘브란트 에칭",
+      "type": "기타",
       "spotCount": 1,
       "progress": 0
     },
