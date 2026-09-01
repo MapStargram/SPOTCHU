@@ -123,6 +123,7 @@ export function FilterSheet({
       className="fixed inset-0 z-40 flex items-end justify-center"
       role="dialog"
       aria-modal
+      aria-label="필터"
     >
       <button
         aria-label="닫기"
