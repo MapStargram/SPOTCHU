@@ -116,7 +116,7 @@ export function FilterSheet({
   if (!open) return null;
   return (
     <div
-      className="fixed inset-0 z-30 flex items-end justify-center"
+      className="fixed inset-0 z-40 flex items-end justify-center"
       role="dialog"
       aria-modal
     >

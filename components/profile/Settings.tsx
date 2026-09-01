@@ -195,7 +195,7 @@ export function Settings({
       {/* 닉네임 편집 시트 */}
       {editing && (
         <div
-          className="fixed inset-0 z-30 flex items-end justify-center lg:pl-[76px]"
+          className="fixed inset-0 z-40 flex items-end justify-center lg:pl-[76px]"
           role="dialog"
           aria-modal
         >
