@@ -54,7 +54,7 @@ export function NewCollection() {
 
         {/* Cover picker */}
         <div
-          className="mt-6 flex h-[140px] items-end justify-end rounded-[22px] p-3.5"
+          className="mt-6 flex h-[140px] items-end justify-end rounded-[20px] p-3.5"
           style={{ background: "var(--grad-thumb)" }}
         >
           <button
