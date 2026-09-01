@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T23:48:27.447Z",
+  "generatedAt": "2026-09-01T03:13:53.895Z",
   "spots": [
     {
       "id": "amsterdam-damrak-waterfront-dancing-houses-9f12",
@@ -5732,6 +5732,28 @@
       }
     },
     {
+      "id": "tokyo-shinagawa-season-terrace-lawn-f18c",
+      "title": "시나가와 시즌 테라스 이벤트 광장 잔디밭 (도망치는 건 부끄럽지만 도움이 된다 & 도쿄 타라레바 아가씨)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.63272,
+      "lng": 139.74321,
+      "area": "Minato-ku",
+      "subject": "Tokyo Tower viewed across the water promenade and lawn (品川シーズンテラスから望む東京タワー)",
+      "tip": "Stand at the north edge of the 2F outdoor event lawn plaza next to the water feature. Look directly north where Tokyo Tower aligns perfectly between surrounding high-rise office towers. At dusk/night, capture the reflection of Tokyo Tower and illuminated trees in the shallow water basin.",
+      "lens": "50mm standard to 85mm–135mm medium telephoto to emphasize Tokyo Tower behind the lawn",
+      "time": "Blue hour / Twilight to Night (17:30–21:00) when Tokyo Tower and plaza illumination are glowing.",
+      "workId": "nigehaji",
+      "scene": "Famous setting in NigeHaji (Ep 5 'Pre-borrowed Hug' / picnic) with Mikuri and Hiramasa, and Tokyo Tarareba Girls night reflection scene where KEY and Rinko converse with Tokyo Tower illuminated in the distance.",
+      "source": "https://sst-sr.jp/filming-locations-guide/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788232434/spotchu/spots/tv3mfmbznquplhtqwuzr.jpg",
+      "imageCredit": {
+        "author": "Wpcpey",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=54979556"
+      }
+    },
+    {
       "id": "tokyo-silent-setagaya-daita-bench-7f2a",
       "title": "세타가야다이타역 서쪽 출구 광장 벤치 (silent)",
       "city": "tokyo",
@@ -5798,6 +5820,28 @@
         "author": "MaedaAkihiko",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:JRE_Tabata-STA_Platform3-4.jpg"
+      }
+    },
+    {
+      "id": "tokyo-tatsumi-park-hero-avenue-c73a",
+      "title": "다쓰미노모리 녹도공원 벚꽃나무길 (HERO 오프닝)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.64643,
+      "lng": 139.81545,
+      "area": "Koto-ku",
+      "subject": "Tatsumi-no-Mori Ryokudo Park cherry tree promenade (辰巳の森緑道公園 桜並木)",
+      "tip": "Shoot westward down the linear paved cherry tree promenade. Use a telephoto lens (85mm–200mm) at eye or waist height to compress the straight tree-lined perspective matching the iconic title sequence where the Josai Branch prosecutor team walks shoulder-to-shoulder toward the camera.",
+      "lens": "85mm–200mm telephoto lens for perspective compression",
+      "time": "Morning (08:00–11:00) with soft dappled sunlight filtering through the canopy, or Spring cherry blossom season (late March to early April).",
+      "workId": "hero-2015",
+      "scene": "Iconic opening title sequence featured across Season 1 (2001), Special (2006), Season 2 (2014), and movie adaptations, where Kohei Kuryu and the Tokyo District Public Prosecutors Office Josai Branch prosecutors walk shoulder-to-shoulder down the tree-lined path.",
+      "source": "https://www.locationbox.metro.tokyo.lg.jp/location/list/342/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788232397/spotchu/spots/tqywbjmfg8aqcmju1wnf.jpg",
+      "imageCredit": {
+        "author": "江戸村のとくぞう",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=85164309"
       }
     },
     {
@@ -7292,6 +7336,13 @@
       "progress": 0
     },
     {
+      "id": "nigehaji",
+      "title": "도망치는 건 부끄럽지만 도움이 된다",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "silent",
       "title": "silent",
       "type": "드라마",
@@ -7357,13 +7408,6 @@
     {
       "id": "richman-poor-woman",
       "title": "리치맨, 푸어우먼",
-      "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "nigehaji",
-      "title": "도망치는 건 부끄럽지만 도움이 된다",
       "type": "드라마",
       "spotCount": 1,
       "progress": 0
