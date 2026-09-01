@@ -1,8 +1,8 @@
 import { Resend } from "resend";
+import { APP_URL } from "@/lib/app-url";
 
 // 이메일 발송(인증·비밀번호 재설정). Resend 무료 티어. RESEND_API_KEY 미설정 시 발송 스킵.
 const FROM = process.env.EMAIL_FROM ?? "SPOTCHU <onboarding@resend.dev>";
-const APP_URL = process.env.APP_URL ?? "http://localhost:3000";
 
 function client(): Resend | null {
   const key = process.env.RESEND_API_KEY;
