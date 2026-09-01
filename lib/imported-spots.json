@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T20:49:58.000Z",
+  "generatedAt": "2026-09-01T21:12:17.837Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -605,6 +605,29 @@
         "author": "Pablotorrado",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:La_nueva_estupa_de_Wat_Paknam_Bhasicharoen.jpg"
+      }
+    },
+    {
+      "id": "barcelona-arc-de-triomf-blue-sea-b6e1",
+      "title": "바르셀로나 개선문(아르크 데 트리옴프) 아이스크림 장면",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.3911,
+      "lng": 2.1806,
+      "area": "Passeig de Lluís Companys, Barcelona",
+      "subject": "붉은 벽돌 개선문(아르크 데 트리옴프)과 산책로",
+      "tip": "개선문 남쪽 산책로(Passeig de Lluís Companys) 중앙에서 정면으로 담으면 드라마 속 구도와 비슷하다. 늦은 오후 역광을 피해 방문하면 붉은 벽돌색 아치가 선명하게 담긴다.",
+      "lens": "24-35mm 광각",
+      "time": "늦은 오후~일몰 전",
+      "workId": "legend-of-the-blue-sea",
+      "scene": "심청(전지현)이 5유로짜리 아이스크림을 먹는 장면",
+      "verified": "reported",
+      "source": "https://www.flyhoneystars.com/2016/11/25/filming-location-legend-of-the-blue-sea/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788297115/spotchu/spots/r14mvayngnbmg2axiigm.jpg",
+      "imageCredit": {
+        "author": "Felix König",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=26320749"
       }
     },
     {
@@ -6354,6 +6377,40 @@
       }
     },
     {
+      "id": "seoul-hyehwa-station-dalgona-alley-c81a",
+      "title": "혜화역 2번 출구 달고나 골목 (오징어 게임 연관 명소)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.58222,
+      "lng": 127.00194,
+      "area": "종로구 동숭동, 혜화역 2번 출구 뒷골목",
+      "subject": "혜화역 2번 출구 뒷골목 — 달고나 노점들이 늘어선 거리 풍경",
+      "tip": "정확한 극중 촬영지라기보다 오징어게임 흥행 이후 달고나 노점이 모여 '달고나 성지'로 불리는 연관 명소입니다. 출구 바로 앞은 유동인구가 많으니 골목 안쪽에서 촬영하세요.",
+      "workId": "squid-game",
+      "scene": "극 중 달고나(설탕뽑기) 게임의 인기로 실제 달고나 노점이 모여든 연관 장소로 소개됨(정확한 촬영 신은 아님).",
+      "source": "https://love.seoul.go.kr/articles/8478",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788297118/spotchu/spots/jeyxyaeksxlhyweoyocy.jpg",
+      "imageCredit": {
+        "author": "Gipe0001",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=6593269"
+      }
+    },
+    {
+      "id": "seoul-jungang-highschool-goblin-8b4e",
+      "title": "중앙고등학교 본관 (도깨비 지은탁 모교)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.58414,
+      "lng": 126.98635,
+      "area": "계동, 종로구",
+      "subject": "1937년 준공·사적 지정 서양식 본관 건물과 교정 — 극중 지은탁이 다니는 고등학교로 등장",
+      "tip": "실제 운영 중인 사립고교라 등하교·수업 시간대 방문은 자제. 정문 밖 도로에서 본관 외관 위주로 짧게 촬영하는 매너를 지키세요.",
+      "workId": "goblin",
+      "scene": "지은탁의 등하교·교실·졸업식 장면 등에 등장한 고등학교 교정과 본관",
+      "source": "https://www.ivisitkorea.com/ko/goblin-filming-locations/"
+    },
+    {
       "id": "seoul-lost-in-the-moonlight-changdeokgung-injeongjeon-e47b",
       "title": "애니메이션 달빛궁궐의 무대 창덕궁 인정전 마당 뷰포인트",
       "city": "seoul",
@@ -6374,6 +6431,26 @@
         "author": "kallerna",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Changdeokgung_Seoul_3.jpg"
+      }
+    },
+    {
+      "id": "seoul-namsan-park-trail-squid-game-b47e",
+      "title": "남산공원 산책로 (오징어 게임 작별 장면)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.549681,
+      "lng": 126.991911,
+      "area": "용산구·중구 남산공원 순환 산책로",
+      "subject": "소나무 우거진 남산 숲길 — 이른 아침 안개 낀 산책로 구도",
+      "tip": "위치는 근사치(남산공원 산책로 일대) — 서울시가 공식 소개한 촬영 구간이나 정확한 지점은 현장에서 확인하세요. 이른 아침 안개가 낄 때 극 중 분위기와 비슷합니다.",
+      "workId": "squid-game",
+      "scene": "시즌1 — 참가자 과반수 투표로 게임이 중단된 후, 기훈과 새벽이 맨몸으로 남산에 버려져 작별하는 장면.",
+      "source": "https://mediahub.seoul.go.kr/archives/2003156",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788297119/spotchu/spots/l1ibdoumihbrzibwgs7w.jpg",
+      "imageCredit": {
+        "author": "Jess & Peter Gardner",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/69047098@N00/4615670756"
       }
     },
     {
@@ -6443,6 +6520,20 @@
       }
     },
     {
+      "id": "seoul-sangbong-terminal-squid-game-d92f",
+      "title": "상봉터미널 (오징어 게임 경마 도박 장면)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.596726,
+      "lng": 127.085759,
+      "area": "중랑구 상봉동, 상봉터미널 일대(상봉역 2번 출구 연결)",
+      "subject": "상봉터미널 외관 및 주변 거리 — 기훈이 경마로 돈을 딴 뒤 사채업자에게 쫓기는 장면의 배경",
+      "tip": "실제 운영 중인 시외버스터미널입니다. 이용객 통행에 방해되지 않도록 외관 위주로 촬영하세요.",
+      "workId": "squid-game",
+      "scene": "시즌1 1화 — 기훈이 경마 도박으로 돈을 딴 '운수 좋은 날' 장면 및 이후 사채업자에게 쫓기는 장면의 배경.",
+      "source": "https://mediahub.seoul.go.kr/archives/2003156"
+    },
+    {
       "id": "seoul-seoul-station-culture-station-284-c92f",
       "title": "연상호 애니메이션 서울역의 무대 구 서울역사 뷰포인트",
       "city": "seoul",
@@ -6466,6 +6557,20 @@
       }
     },
     {
+      "id": "seoul-sinchon-graffiti-tunnel-goblin-2a6d",
+      "title": "신촌 그래피티 벽화터널 (신촌 토끼굴)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5595,
+      "lng": 126.9429,
+      "area": "대현동, 서대문구 (신촌역 1번 출구 인근)",
+      "subject": "그래피티와 LED 조명으로 채워진 길이 65m 보행 터널 — 김신·저승사자가 나란히 걷는 장면 배경",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 터널 진입부 소실점 구도 확인. 폭 4.5m의 좁은 보행 터널이므로 통행인 배려하며 촬영, 벽화는 주기적으로 바뀌니 방문 전 최신 상태 참고.",
+      "workId": "goblin",
+      "scene": "김신과 저승사자가 나란히 걷는 슬로모션 장면 등으로 알려진 그래피티 터널",
+      "source": "https://tongblog.sdm.go.kr/4814"
+    },
+    {
       "id": "seoul-the-classic-yonsei-yeonhuigwan-c3d4",
       "title": "클래식 연세대학교 연희관 촬영지",
       "city": "seoul",
@@ -6481,6 +6586,26 @@
       "scene": "연세대학교 연희관과 계단을 배경으로 한 회상·등교 장면 후보",
       "verified": "reported",
       "source": "https://www.yonsei.ac.kr"
+    },
+    {
+      "id": "seoul-unhyeongung-yanggwan-goblin-9f2c",
+      "title": "운현궁 양관 (도깨비집)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5748,
+      "lng": 126.9884,
+      "area": "운니동, 종로구 (안국역 4번 출구 인근)",
+      "subject": "근대 서양식 2층 양관 건물 외관 — 김신·저승사자가 함께 사는 '도깨비집'으로 매 회 등장",
+      "tip": "위치는 근사치(구역 수준) — 현장에서 양관 정면 각도 확인. 현재 덕성여대 평생교육원 부지 내 건물이라 외부 관람 위주로, 통행·수업을 방해하지 않는 매너를 지키세요.",
+      "workId": "goblin",
+      "scene": "김신과 저승사자가 함께 사는 저택 '도깨비집' 외관으로 매 회 등장한 운현궁 양관",
+      "source": "https://www.dspress.org/news/articleView.html?idxno=6494",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788297120/spotchu/spots/xph4gy6xgymhikgxim1v.jpg",
+      "imageCredit": {
+        "author": "KOREA.NET - Official page of the Republic of Korea",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/42438955@N05/7975193353"
+      }
     },
     {
       "id": "seoul-vincenzo-seewon-plaza-geumga-5c8f",
@@ -6504,6 +6629,20 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=121452672"
       }
+    },
+    {
+      "id": "seoul-yangjae-forest-station-ddakji-9f2c",
+      "title": "양재시민의숲역 (오징어 게임 딱지치기 승강장)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.470016,
+      "lng": 127.038509,
+      "area": "서초구 양재동, 신분당선 양재시민의숲(매헌)역",
+      "subject": "신사 방면 승강장 5-1 출입문 앞 벤치 — 정장 차림 남자와 기훈이 딱지치기를 하는 구도",
+      "tip": "실제 운행 중인 지하철 승강장입니다. 혼잡하지 않은 시간대에 짧게 촬영하고 승객 통행과 스크린도어 앞 대기선을 방해하지 마세요.",
+      "workId": "squid-game",
+      "scene": "시즌1 1화 — 정장 차림의 남자(공유 분)가 지하철역에서 기훈에게 딱지치기 내기를 제안하는 장면. 기훈이 열차를 놓친 곳은 4-4 출입문, 딱지치기 장면은 5-1 출입문 앞 벤치.",
+      "source": "https://mediahub.seoul.go.kr/archives/2003156"
     },
     {
       "id": "seoul-yeouido-hangang-park-startup-corndog-4b9e",
@@ -7075,6 +7214,28 @@
       }
     },
     {
+      "id": "tokyo-akihabara-udx-utx-academy-e7a2",
+      "title": "아키하바라 UDX (러브라이브! UTX 학원 모델)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.700617,
+      "lng": 139.772622,
+      "area": "소토칸다, 아키하바라, 지요다구, 도쿄",
+      "subject": "라이벌 명문고 'UTX 학원'의 실제 모델 건물 외관과 정면 대형 스트리트 비전",
+      "tip": "건물 앞 광장에서 대형 모니터(스트리트 비전)가 함께 보이는 방향으로 구도를 잡는다. 아키하바라역 전기가이구치에서 도보 2분.",
+      "lens": "24-35mm",
+      "time": "해 진 뒤 스트리트 비전 점등 시간대",
+      "workId": "love-live",
+      "scene": "1화에서 호노카가 UDX 거리 비전으로 A-RISE의 라이브 영상을 보고 스쿨 아이돌을 결심하는 장면의 실제 배경 건물(UTX 학원)",
+      "source": "https://onesamurai.jp/pilgrimage/main_cat/seichi/lovelive2/?lang=ja",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788297124/spotchu/spots/wwqwejckpszhpf0xvvm4.jpg",
+      "imageCredit": {
+        "author": "OiMax from Tokyo, Japan",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=60549191"
+      }
+    },
+    {
       "id": "tokyo-asakusa-culture-center-terrace-b391",
       "title": "아사쿠사 문화관광센터 8층 전망테라스 센소지 축선 뷰",
       "city": "tokyo",
@@ -7094,6 +7255,23 @@
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Day2-2_(40909714314).jpg"
       }
+    },
+    {
+      "id": "tokyo-atago-suikitou-whisper-e63d",
+      "title": "아타고 급수탑",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.63438,
+      "lng": 139.43855,
+      "area": "아타고 단지, 다마시 아타고",
+      "subject": "1972년 준공 레트로 급수탑과 그 앞 쉼터 벤치",
+      "tip": "'아타고 히토이키자카' 언덕길을 오르면 나오는 쉼터 벤치에서 급수탑을 정면으로 담는다. 인적 드문 저녁 시간이 한적하다.",
+      "lens": "35-50mm",
+      "time": "늦은 오후~해질녘",
+      "workId": "whisper",
+      "scene": "시즈쿠 가족이 사는 다마 뉴타운 단지의 실제 모델로 알려진 급수탑",
+      "verified": "reported",
+      "source": "https://seichimap.jp/works/mimisuma/"
     },
     {
       "id": "tokyo-azabujuban-ichinohashi-park-chibiusa",
@@ -7219,6 +7397,23 @@
       }
     },
     {
+      "id": "tokyo-irohazaka-sakura-park-whisper-9d2a",
+      "title": "이로하자카 벚꽃공원 전망대",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.64575,
+      "lng": 139.44478,
+      "area": "이로하자카 언덕, 다마시 사쿠라가오카",
+      "subject": "이로하자카 계단 위 언덕 공원에서 내려다보는 다마 시가지 전망",
+      "tip": "공원 입구 계단 위 전망 데크에서 시가지 방향으로. 벚꽃철(3월 말~4월 초)과 해질녘 노을이 극중 분위기와 가장 비슷하다.",
+      "lens": "24-35mm",
+      "time": "해질녘 또는 벚꽃철 오전",
+      "workId": "whisper",
+      "scene": "극중 도서관이 있던 언덕으로 설정된 공원 — 세이지의 고백 장면 배경 언덕으로도 소개됨",
+      "verified": "reported",
+      "source": "https://seichimap.jp/works/mimisuma/"
+    },
+    {
       "id": "tokyo-joganji-temple-lost-in-translation-9b2c",
       "title": "조간지 경내 참배길 & 종루당 (로스트 인 번역 샬럿의 사찰 산책로)",
       "city": "tokyo",
@@ -7230,7 +7425,7 @@
       "tip": "위치는 근사치(구역 수준) — 산문 뒤 공개 참배길에서 서북서 방향으로 현장 구도를 확인하세요. 묘역과 법요를 존중하고 방문객·승려를 근접 촬영하지 마세요.",
       "lens": "35mm 또는 50mm",
       "time": "08:30~10:30 또는 비/흐린 날",
-      "workId": "lost-in-translation",
+      "workId": "lost-translation",
       "scene": "샬럿이 사찰에서 불교 의식을 바라보는 장면 연관 장소",
       "verified": "reported",
       "source": "https://www.movie-locations.com/movies/l/Lost-In-Translation.php",
@@ -7263,6 +7458,79 @@
       }
     },
     {
+      "id": "tokyo-kabukicho-yasukunidori-lost-in-translation-7f4c",
+      "title": "가부키초 이치방가이 게이트·야스쿠니도리 (사랑도 통역이 되나요? 오프닝 택시 네온 장면)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.6936,
+      "lng": 139.7015,
+      "area": "Kabukicho, Shinjuku, Tokyo (신주쿠구 가부키초, 야스쿠니도리 입구)",
+      "subject": "가부키초 이치방가이 게이트와 야스쿠니도리를 뒤덮은 대형 네온 간판 — 오프닝에서 잠에서 깬 밥이 택시 차창 밖으로 바라보는 네온 거리",
+      "tip": "야스쿠니도리 인도에서 가부키초 이치방가이 게이트 방향을 올려다보는 구도로 네온 간판을 담으면 오프닝 장면 분위기를 재현할 수 있다. 해 진 직후부터 밤까지 네온이 가장 화려하며, 인도 통행에 방해되지 않게 벽 쪽에 붙어 촬영할 것.",
+      "workId": "lost-translation",
+      "scene": "오프닝, 시차로 잠에서 깬 밥이 탄 택시가 신주쿠 가부키초 야스쿠니도리의 네온 간판 거리를 지나는 장면",
+      "source": "https://movie-locations.com/movies/l/Lost-In-Translation.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788297128/spotchu/spots/dtsmexnz1svtnwvufk2n.jpg",
+      "imageCredit": {
+        "author": "Kakidai",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=18531592"
+      }
+    },
+    {
+      "id": "tokyo-karaokekan-shibuya-lost-in-translation-e42a",
+      "title": "가라오케칸 시부야점 (사랑도 통역이 되나요? 밤샘 노래방 장면)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.6608,
+      "lng": 139.6982,
+      "area": "Udagawacho, Shibuya, Tokyo (시부야구 우다가와초 30-8)",
+      "subject": "가라오케칸 시부야점(30-8번지) 건물 외관 — 밥과 샬럿이 친구들과 밤새 노래방에서 노는 장면을 촬영한 매장",
+      "tip": "실제 촬영에 쓰인 601·602호가 있던 별관(핑크 벽·둥근 창)은 폐쇄되어 다른 매장으로 바뀌었고, 현재는 30-8번지 본관 건물만 운영 중이다. 간판이 보이는 건물 외관 위주로 담고, 내부 이용 시 원래 촬영 방이 아님을 감안할 것.",
+      "workId": "lost-translation",
+      "scene": "밥과 샬럿이 601·602호에서 친구들과 밤새 노래하며 노는 가라오케 장면",
+      "source": "https://tokyofox.net/2011/11/29/tokyo-filming-locations-pt-ii-lost-in-translation-updated/"
+    },
+    {
+      "id": "tokyo-konpira-shrine-whisper-b47e",
+      "title": "곤피라구(금비라궁) 신사",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6448,
+      "lng": 139.44532,
+      "area": "이로하자카 위 주택가, 다마시 사쿠라가오카",
+      "subject": "언덕 위 작은 신사의 계단과 사당 구도",
+      "tip": "계단 아래에서 사당을 올려다보는 구도로. 조용한 주택가 속 신사이니 참배객 동선을 막지 말고 짧게 촬영할 것.",
+      "lens": "35mm",
+      "time": "오전 또는 늦은 오후",
+      "workId": "whisper",
+      "scene": "스기무라가 시즈쿠에게 고백하는 장면의 무대가 된 신사",
+      "verified": "reported",
+      "source": "https://seichimap.jp/works/mimisuma/"
+    },
+    {
+      "id": "tokyo-maach-ecute-manseibashi-love-live-a6c8",
+      "title": "마치 에큐트 간다만세이바시 (러브라이브!)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.69724,
+      "lng": 139.770019,
+      "area": "간다 스다초, 지요다구, 도쿄",
+      "subject": "1912년 만세이바시역 유구를 재생한 붉은 벽돌 고가 테라스, 간다가와 조망",
+      "tip": "강변 테라스 난간에서 간다가와 방향으로 구도를 잡는다. 상업시설 영업시간(오전 11시~) 내 방문 권장이며 테라스는 통행 동선을 막지 않는 위치에서 촬영.",
+      "lens": "24-70mm",
+      "time": "오후~해질녘",
+      "workId": "love-live",
+      "scene": "PV 'Wonderful Rush' 및 13화 배경, 3학년 멤버들이 노래를 시작하는 장소",
+      "source": "https://seichimap.jp/spots/109",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788297129/spotchu/spots/vvcg4o7zxll6pg6jkxzz.jpg",
+      "imageCredit": {
+        "author": "*_*",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/22539273@N00/11773551823"
+      }
+    },
+    {
       "id": "tokyo-roppongi-keyakizaka-tower-framing-9c34",
       "title": "롯폰기 케야키자카도리 보도교 도쿄타워 가로수길 프레이밍",
       "city": "tokyo",
@@ -7284,6 +7552,23 @@
       }
     },
     {
+      "id": "tokyo-sekido-castle-tenshudai-whisper-c81f",
+      "title": "세키도성터 천수대",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.64426,
+      "lng": 139.4455,
+      "area": "세키도성터, 다마시 사쿠라가오카",
+      "subject": "표고 약 115m 언덕 정상의 성터 전망대",
+      "tip": "정상 전망대에서 다마 시가지 방향으로. 성곽 유구는 남아있지 않고 표지판만 있으니 안내를 따라 안전하게 이동할 것.",
+      "lens": "24-35mm",
+      "time": "맑은 날 오전",
+      "workId": "whisper",
+      "scene": "시즈쿠가 뛰어 내려가는 '천수의 언덕' 장면의 실제 모델로 알려진 세키도성 터",
+      "verified": "reported",
+      "source": "https://seichimap.jp/works/mimisuma/"
+    },
+    {
       "id": "tokyo-sendaizaka-slope-sailormars",
       "title": "센다이자카 고갯길 (세일러문 세일러마스 등장 신)",
       "city": "tokyo",
@@ -7296,6 +7581,20 @@
       "workId": "sailor-moon",
       "scene": "TV판 1기 10화 '저주받은 버스! 불꽃의 전사 마스 등장'에서 매일 오후 6시 버스가 사라진다는 괴담('악마의 6시 버스')의 무대가 된 고개. 세일러마스(히노 레이) 데뷔 에피소드",
       "source": "https://seichimap.jp/spots/578"
+    },
+    {
+      "id": "tokyo-shabuzen-shibuya-lost-in-translation-b93d",
+      "title": "샤부젠 시부야점 (사랑도 통역이 되나요? 샤부샤부 회식 장면)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.6633,
+      "lng": 139.6946,
+      "area": "Kamiyama-cho, Shibuya, Tokyo (시부야구 카미야마초, 시부야 크레스톤 호텔 지하1층)",
+      "subject": "시부야 크레스톤 호텔 지하 샤부샤부 전문점 샤부젠 입구 — 밥과 샬럿 일행의 회식 장면 촬영지",
+      "tip": "호텔 옆 지하 계단 입구 간판을 담을 수 있다. 지금도 영업 중인 실제 레스토랑이므로 손님 얼굴이 나오지 않도록 개점 전이나 한산한 시간대에 외부 간판 위주로 촬영할 것.",
+      "workId": "lost-translation",
+      "scene": "밥과 샬럿 일행이 샤부샤부 식당에서 함께 식사하는 장면",
+      "source": "https://movie-locations.com/movies/l/Lost-In-Translation.php"
     },
     {
       "id": "tokyo-shiba-suido-manhole-tokyotower",
@@ -7338,6 +7637,22 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=54979556"
       }
+    },
+    {
+      "id": "tokyo-shoheibashi-bridge-love-live-b3f9",
+      "title": "쇼헤이바시 다리 (러브라이브!)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.698377,
+      "lng": 139.76888,
+      "area": "소토칸다 1초메, 지요다구, 도쿄",
+      "subject": "간다가와 위에 놓인 쇼헤이바시 다리 난간, μ's 멤버들이 모이고 흩어지는 장면의 배경",
+      "tip": "다리 위 보도에서 강 쪽 난간 너머로 촬영. 차량 통행이 있는 다리이므로 차도로 나가지 말고 보행자·자전거 통행을 막지 않도록 주의.",
+      "lens": "35-50mm",
+      "time": "낮~해질녘",
+      "workId": "love-live",
+      "scene": "2기 4화·11화 등 멤버들이 다리 위에 모이는 장면, 1기 9화 이별 장면의 실제 배경",
+      "source": "https://seichimap.jp/spots/99"
     },
     {
       "id": "tokyo-silent-setagaya-daita-bench-7f2a",
@@ -7406,6 +7721,28 @@
         "author": "MaedaAkihiko",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:JRE_Tabata-STA_Platform3-4.jpg"
+      }
+    },
+    {
+      "id": "tokyo-takemura-wagashi-love-live-c4d1",
+      "title": "다케무라 화과자점 (러브라이브! 호무라 모델)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.696855,
+      "lng": 139.768823,
+      "area": "간다 스다초, 지요다구, 도쿄",
+      "subject": "주인공 고사카 호노카의 본가 화과자점 '호무라(穂むら)' 외관의 실제 모델, 1930년 창업 간미도코로",
+      "tip": "외관 촬영은 자유이나 실내는 방문 시 직원에게 양해를 구할 것. 간판 정면 구도가 애니 배경과 가장 흡사하며, 명물 아게만주(튀김만주)와 함께 촬영하면 좋다.",
+      "lens": "35mm",
+      "time": "오후 영업시간대(개점~20시)",
+      "workId": "love-live",
+      "scene": "주인공 본가 화과자점 '호무라' 외관의 실사 모델(1기부터 극 전반에 반복 등장)",
+      "source": "https://numazulife.com/2023/04/09/seichi-takemura/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788297136/spotchu/spots/qmrvtu4wv4wsdovvy4wg.jpg",
+      "imageCredit": {
+        "author": "Blue Lotus from Kanda, Tokyo",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=1306036"
       }
     },
     {
@@ -7975,16 +8312,16 @@
       "progress": 0
     },
     {
-      "id": "perfume-the-story-of-a-murderer",
-      "title": "향수: 어느 살인자의 이야기",
-      "type": "영화",
+      "id": "legend-of-the-blue-sea",
+      "title": "푸른 바다의 전설",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "legend-of-the-blue-sea",
-      "title": "푸른 바다의 전설",
-      "type": "드라마",
+      "id": "perfume-the-story-of-a-murderer",
+      "title": "향수: 어느 살인자의 이야기",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -8843,6 +9180,13 @@
       "progress": 0
     },
     {
+      "id": "squid-game",
+      "title": "오징어 게임",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "lost-in-the-moonlight",
       "title": "달빛궁궐",
       "type": "애니",
@@ -8962,6 +9306,20 @@
       "progress": 0
     },
     {
+      "id": "love-live",
+      "title": "러브라이브!",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "whisper",
+      "title": "귀를 기울이면",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "sailor-moon",
       "title": "미소녀 전사 세일러문",
       "type": "애니",
@@ -8976,7 +9334,7 @@
       "progress": 0
     },
     {
-      "id": "lost-in-translation",
+      "id": "lost-translation",
       "title": "사랑도 통역이 되나요? (로스트 인 트랜스레이션)",
       "type": "영화",
       "spotCount": 1,
