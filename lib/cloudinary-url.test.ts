@@ -27,4 +27,10 @@ describe("cldThumb", () => {
     const ext = "https://example.com/a.jpg";
     expect(cldThumb(ext)).toBe(ext);
   });
+
+  it("src 없음(null/undefined/빈문자열)은 undefined", () => {
+    expect(cldThumb(null)).toBeUndefined();
+    expect(cldThumb(undefined)).toBeUndefined();
+    expect(cldThumb("")).toBeUndefined();
+  });
 });

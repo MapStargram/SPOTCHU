@@ -6,6 +6,7 @@ import { AppShell } from "@/components/shell/AppShell";
 import { LikeButton } from "@/components/community/LikeButton";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { getPostDetail, getSpot } from "@/lib/data";
+import { cldThumb } from "@/lib/cloudinary-url";
 import { getCurrentUser } from "@/lib/session";
 
 // H3 · 게시물 상세(실 DB). 사진 캐러셀(1~5) + 좋아요 + 연결 스팟.
@@ -33,7 +34,7 @@ export default async function PostDetailPage({
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   key={i}
-                  src={url}
+                  src={cldThumb(url)}
                   alt={
                     p.caption
                       ? `${p.caption} (${i + 1}/${p.images.length})`

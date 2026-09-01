@@ -10,6 +10,7 @@ import {
 import { Chip } from "@/components/ui/Chip";
 import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
+import { cldThumb } from "@/lib/cloudinary-url";
 import { LikeButton } from "@/components/community/LikeButton";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { getCity, getCities, getFeedPosts, type FeedTab } from "@/lib/data";
@@ -162,7 +163,7 @@ export default async function FeedPage({
                   {p.images[0] && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={p.images[0]}
+                      src={cldThumb(p.images[0], 640)}
                       alt={p.caption || `${p.spotTitle} 사진`}
                       className="absolute inset-0 h-full w-full object-cover"
                     />

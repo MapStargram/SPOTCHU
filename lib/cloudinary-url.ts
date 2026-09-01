@@ -4,7 +4,11 @@
 // Cloudinary 이외 URL·이미 변환 세그먼트가 있는 URL은 그대로 통과(기존/시딩 정책 존중).
 const UPLOAD = "/image/upload/";
 
-export function cldThumb(src: string, width = 1080): string {
+export function cldThumb(
+  src: string | null | undefined,
+  width = 1080,
+): string | undefined {
+  if (!src) return undefined; // src 없음(null/undefined/빈문자열) → src 미지정
   const at = src.indexOf(UPLOAD);
   if (at === -1) return src; // Cloudinary 전송 URL 아님
   const insertAt = at + UPLOAD.length;

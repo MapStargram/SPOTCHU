@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { signOut } from "next-auth/react";
+import { cldThumb } from "@/lib/cloudinary-url";
 import {
   ChevronLeft,
   ChevronRight,
@@ -225,7 +226,7 @@ export function Settings({
                 {avatar ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={avatar}
+                    src={cldThumb(avatar, 160)}
                     alt=""
                     className="h-full w-full object-cover"
                   />

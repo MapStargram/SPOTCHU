@@ -12,6 +12,7 @@ import { Sparkle } from "../ui/Sparkle";
 import { VerifBadge, VERIF_CFG } from "../ui/VerifBadge";
 import { CITY_CENTER, type Spot, type CityId } from "@/lib/mock";
 import { categoryIcon } from "@/lib/categories";
+import { cldThumb } from "@/lib/cloudinary-url";
 import { posOf } from "./pin";
 
 // C1 · 지도 뷰. 키(NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)가 있으면 실제 Google Maps,
@@ -385,7 +386,7 @@ export function MapView({
             {preview.imageUrl && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={preview.imageUrl}
+                src={cldThumb(preview.imageUrl, 640)}
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover"
               />
