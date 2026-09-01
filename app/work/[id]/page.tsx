@@ -83,15 +83,21 @@ export default async function WorkDetailScreen({
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur active:scale-90"
             />
           </div>
-          <div className="absolute inset-x-5 bottom-5 text-cream">
+          {/* bottom-10: 진행률 카드의 -mt-7(28px) 겹침 위로 텍스트가 올라오도록(카드가 부제를 덮던 버그). */}
+          <div className="absolute inset-x-5 bottom-10 text-cream">
+            {/* 유형별 태그(하드코딩 "애니 성지"는 드라마·영화 작품에 오표기였다). 애니만 '성지', 그 외는 유형. */}
             <TagPill variant="glass" className="mb-2.5">
-              <CategoryLabel label="애니 성지" size={12} />
+              <CategoryLabel
+                label={w.type === "애니" ? "애니 성지" : w.type}
+                size={12}
+              />
             </TagPill>
             <h1 className="text-[24px] font-extrabold leading-[1.15] tracking-[-0.03em]">
               {w.title}
             </h1>
+            {/* Work 모델에 감독·연도 필드가 없어 기존 "신카이 마코토 · 2016" 하드코딩은 전 작품 오표기였다 → 유형만 표기. */}
             <div className="mt-1 font-latin text-[11px] opacity-85">
-              {w.type} · 신카이 마코토 · 2016
+              {w.type}
             </div>
           </div>
         </div>
