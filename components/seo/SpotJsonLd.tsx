@@ -1,8 +1,8 @@
 import { type Spot } from "@/lib/mock";
+import { APP_URL } from "@/lib/app-url";
 
 // 스팟 상세용 schema.org 구조화 데이터(JSON-LD). 검색엔진이 스팟을 '관광명소' 엔티티로 인식해
 // 위치·이미지·평점을 리치 결과/이미지 검색/지식그래프에 활용. per-page 메타데이터·사이트맵의 짝.
-const APP_URL = process.env.APP_URL ?? "http://localhost:3000";
 
 export function SpotJsonLd({ spot: s }: { spot: Spot }) {
   const image = s.imageUrl

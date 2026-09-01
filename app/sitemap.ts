@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { searchSpots, getCities, getWorks } from "@/lib/data";
-
-const APP_URL = process.env.APP_URL ?? "http://localhost:3000";
+import { APP_URL } from "@/lib/app-url";
 
 // 하루 주기 재생성(ISR). 프로덕션은 seed로 스팟이 늘어도 재배포 없이 사이트맵이 갱신되게.
 export const revalidate = 86400;

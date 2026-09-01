@@ -3,10 +3,11 @@ import "./globals.css";
 import { RegisterSW } from "@/components/pwa/RegisterSW";
 import { InstallBanner } from "@/components/pwa/InstallBanner";
 import { getCurrentUser } from "@/lib/session";
+import { APP_URL } from "@/lib/app-url";
 
 export const metadata: Metadata = {
   // OG/트위터의 상대 이미지 URL(/spots/*)을 절대주소로 resolve. APP_URL은 메일 링크와 공유.
-  metadataBase: new URL(process.env.APP_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(APP_URL),
   applicationName: "SPOTCHU",
   // 하위 페이지가 title만 주면 "제목 · SPOTCHU"로 완성(스팟/작품/도시 상세가 각자 제목을 갖게).
   title: {
