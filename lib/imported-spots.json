@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T10:16:40.710Z",
+  "generatedAt": "2026-09-02T11:50:50.577Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -194,7 +194,13 @@
       "lens": "70-135mm",
       "time": "블루아워 이후 조명 점등 시간",
       "verified": "reported",
-      "source": "https://www.iamsterdam.com/en/see-and-do/attractions-and-sights/canals-and-bridges/seven-bridges-amsterdam"
+      "source": "https://www.iamsterdam.com/en/see-and-do/attractions-and-sights/canals-and-bridges/seven-bridges-amsterdam",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349797/spotchu/spots/fx3vekivsfncf8hm3dga.jpg",
+      "imageCredit": {
+        "author": "Marco Ober",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Reguliersgracht,_Amsterdam.jpg"
+      }
     },
     {
       "id": "amsterdam-roemer-visscherstraat-zevenlandenhuizen",
@@ -565,7 +571,13 @@
       "workId": "bangkok-traffic-love-story",
       "scene": "로이 라 롱에 해당하는 롱의 강변 숙소와 목조 테라스 장면",
       "verified": "reported",
-      "source": "https://www.loylalong.com/en"
+      "source": "https://www.loylalong.com/en",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349798/spotchu/spots/plihvbxk0pfil33zwfph.jpg",
+      "imageCredit": {
+        "author": "McKay Savage from London, UK",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Well-tended_srine_at_Wat_Pathumkongka_(6491915013).jpg"
+      }
     },
     {
       "id": "bangkok-mahanakhon-chong-nonsi-skywalk-e31d",
@@ -623,7 +635,13 @@
       "tip": "해질녘~초저녁 가로등이 켜진 시간대에 인도에서 도로를 따라가는 구도로 촬영하면 영화 속 야간 귀갓길 장면 분위기를 살릴 수 있다. 차량 통행이 있는 교차로이므로 반드시 인도 위에서만 촬영.",
       "workId": "in-the-mood-for-love",
       "scene": "차우 무완과 첸 부인이 함께 숙소로 돌아가며 이야기를 나누는 야간 거리 장면 — 수라웡 로드 끝자락 가로등 불빛 아래",
-      "source": "https://mgronline.com/travel/detail/9660000060802"
+      "source": "https://mgronline.com/travel/detail/9660000060802",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349801/spotchu/spots/tx8aee2iisxbphggjkmp.jpg",
+      "imageCredit": {
+        "author": "Bjoertvedt",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bangkok_charoen_krung_road_Sam_yot_road_IMG_6828.JPG"
+      }
     },
     {
       "id": "bangkok-wat-arun-nagaraphirom-park-7c4a",
@@ -1364,7 +1382,13 @@
       "lens": "24-50mm",
       "time": "이른 아침 또는 블루아워",
       "verified": "reported",
-      "source": "https://www.photohound.co/spot/bode-museum-2126"
+      "source": "https://www.photohound.co/spot/bode-museum-2126",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349805/spotchu/spots/lvwfjohxpoff7yztnnxj.jpg",
+      "imageCredit": {
+        "author": "Angela Monika Arnold, Berlin",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Berlin-Mitte_noerdliche_Monbijoubruecke_2.JPG"
+      }
     },
     {
       "id": "berlin-museumsinsel-kolonnadenhof-c91b",
@@ -1613,11 +1637,11 @@
       "scene": "해변열차와 바다 구도가 작품의 해안 장면을 연상시킨다는 영감 관계(특정 장면 미검증)",
       "verified": "reported",
       "source": "https://www.busan.com/view/busan/view.php?code=2023030218274944983",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088335/spotchu/spots/busan-cheongsapo-slamdunk-crossing-7a1b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348947/spotchu/spots/iz0hszyejoipfrcuine3.jpg",
       "imageCredit": {
-        "author": "Andrewssi2",
-        "license": "CC BY-SA 3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Cheongsapo.jpg"
+        "author": "VN.NguyenDucDuy",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sky_Capsule_train_at_Haeundae_Blueline_Park,_Busan.jpg"
       }
     },
     {
@@ -2176,7 +2200,13 @@
       "lens": "35-70mm",
       "time": "17:30~18:45",
       "verified": "reported",
-      "source": "https://www.topscebu.ph/activities"
+      "source": "https://www.topscebu.ph/activities",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349809/spotchu/spots/rkvmgayltl0ylzxbsz3x.jpg",
+      "imageCredit": {
+        "author": "Bjeweld",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Wikinights_Cebu_-_Tops_Lookout_(019).jpg"
+      }
     },
     {
       "id": "chiangmai-ang-kaew-reservoir-sunset-slope-02",
@@ -2191,7 +2221,13 @@
       "lens": "24-35mm 또는 50-85mm",
       "time": "17:00-18:30",
       "verified": "reported",
-      "source": "https://en.wikipedia.org/wiki/Chiang_Mai_University"
+      "source": "https://en.wikipedia.org/wiki/Chiang_Mai_University",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349810/spotchu/spots/nkjpmrnznj7ypoavqef7.jpg",
+      "imageCredit": {
+        "author": "Christophe95",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ang_Kaew_reservoir.jpg"
+      }
     },
     {
       "id": "chiangmai-chom-cafe-mist-moss-garden-7c1e",
@@ -2499,7 +2535,13 @@
       "workId": "mission-impossible-ghost-protocol",
       "scene": "주메이라 자빌 사라이 그랜드 로비로 알려진 두바이 로비 장면",
       "verified": "reported",
-      "source": "https://www.movie-locations.com/movies/m/Mission-Impossible-Ghost-Protocol.php"
+      "source": "https://www.movie-locations.com/movies/m/Mission-Impossible-Ghost-Protocol.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349813/spotchu/spots/hjcysehm8qp0s9qhvlpt.jpg",
+      "imageCredit": {
+        "author": "Сергей Секачёв",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Jumeirah_Zabeel_Saray_-_panoramio.jpg"
+      }
     },
     {
       "id": "dubai-museum-of-the-future-plaza-viewpoint-02",
@@ -2578,11 +2620,11 @@
       "time": "일몰~블루아워",
       "verified": "reported",
       "source": "https://www.visitdubai.com/en/places-to-visit/the-viewing-point",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788112991/spotchu/spots/kxcohg56rht4adwkgysk.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348950/spotchu/spots/m7yzwmjllarbpl4lk4zj.jpg",
       "imageCredit": {
-        "author": "Tim.Reckmann",
-        "license": "CC BY-SA 3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Dubai_skyline_2015_(crop).jpg"
+        "author": "Sajitkk",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dubai_creek_harbour_skyline.jpg"
       }
     },
     {
@@ -2640,7 +2682,13 @@
       "lens": "24-50mm",
       "time": "late afternoon / sunset",
       "verified": "reported",
-      "source": "https://cultura.comune.fi.it/delle-oblate"
+      "source": "https://cultura.comune.fi.it/delle-oblate",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349815/spotchu/spots/ivuxewt928mcee5iknzw.jpg",
+      "imageCredit": {
+        "author": "GiovanniPen",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cupola_del_Brunelleschi_viewed_from_Oblate.jpg"
+      }
     },
     {
       "id": "florence-duomo-cupola-calmi-cuori-d48e",
@@ -3008,11 +3056,11 @@
       "time": "일몰 전후 또는 야간 조명",
       "verified": "reported",
       "source": "https://www.fukuokatower.co.jp/sightseeing/area_s.php",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088345/spotchu/spots/fukuoka-momochihama-marizon-tower-c42e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348953/spotchu/spots/r4g5pmnbwkwzcmphm7xi.jpg",
       "imageCredit": {
-        "author": "STA3816",
-        "license": "CC BY-SA 3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Fukuoka_Tower_October_2011_01.jpg"
+        "author": "Hirho",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seaside_Momochi_Seaside_Park_Fukuoka_Tower_and_Marizon_at_sunset_Sawara-ku_Fukuoka_20240116.jpg"
       }
     },
     {
@@ -3754,11 +3802,11 @@
       "time": "간조(썰물) 시간대와 겹치는 일출 전후 30분 (골든아워 및 매직아워)",
       "verified": "reported",
       "source": "https://www.visitjeju.net/kr/detail/view?menuId=DOM_000001718001000000&contId=CONT_000000000500021",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088363/spotchu/spots/jeju-gwangchigi-seongsan-sunrise-b14e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348956/spotchu/spots/lalwp6hviwpajvj5fakn.jpg",
       "imageCredit": {
-        "author": "Korea.net / Korean Culture and Information Service",
+        "author": "Republic of Korea from Seoul, Republic of Korea",
         "license": "CC BY-SA 2.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Seongsan_Ilchulbong_from_the_air.jpg"
+        "source": "https://commons.wikimedia.org/wiki/File:Jeju_Island_20141127_25_(15892738751).jpg"
       }
     },
     {
@@ -3960,7 +4008,13 @@
       "workId": "suzume-no-tojimari",
       "scene": "니노미야 상점가/시장이 장면의 배경 모델로 보고된 장소. 정확한 프레임 일치는 추가 확인 필요.",
       "verified": "reported",
-      "source": "https://kobe-journal.com/"
+      "source": "https://kobe-journal.com/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349818/spotchu/spots/pu6naltsf7wswaxlbvdv.jpg",
+      "imageCredit": {
+        "author": "DVMG",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ninomiya_Market_-_panoramio.jpg"
+      }
     },
     {
       "id": "kobe-port-island-fate-bridge-a17f",
@@ -4147,11 +4201,11 @@
       "scene": "카모가와 델타의 영화 장면 연관 장소",
       "verified": "reported",
       "source": "https://kyoto.travel/ja/see-and-do/kamogawa-delta",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088368/spotchu/spots/kyoto-kamogawa-delta-stepping-stones-b49e.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348958/spotchu/spots/lpkjlsxilj9ymccxsosl.jpg",
       "imageCredit": {
-        "author": "sayo ts",
-        "license": "CC0",
-        "source": "https://commons.wikimedia.org/wiki/File:%E9%B4%A8%E5%B7%9D%E3%83%87%E3%83%AB%E3%82%BF3.jpg"
+        "author": "Jakub Hałun",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kamo_River_in_Kyoto,_20240820_1748_5192.jpg"
       }
     },
     {
@@ -5327,7 +5381,13 @@
       "lens": "70-200mm 또는 100-400mm",
       "time": "일몰에서 블루아워",
       "verified": "reported",
-      "source": "https://www.esmadrid.com/informacion-turistica/parque-cerro-tio-pio"
+      "source": "https://www.esmadrid.com/informacion-turistica/parque-cerro-tio-pio",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349820/spotchu/spots/jv60iefuixpcshmu27m6.jpg",
+      "imageCredit": {
+        "author": "Nicolas Vigier",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Parque_de_las_Siete_Tetas_(Cerro_del_T%C3%ADo_P%C3%ADo,_Madrid)_2021-01-12_-_50829860997.jpg"
+      }
     },
     {
       "id": "madrid-circulo-bellas-artes-azotea-a1f8",
@@ -5445,7 +5505,13 @@
       "workId": "la-casa-de-papel",
       "scene": "시즌 3–5의 허구 Banco de España 외관 촬영지",
       "verified": "reported",
-      "source": "https://www.esmadrid.com/casa-papel-madrid"
+      "source": "https://www.esmadrid.com/casa-papel-madrid",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349822/spotchu/spots/vlzmjqiwhlavkbazjikc.jpg",
+      "imageCredit": {
+        "author": "Xauxa Håkan Svensson",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nuevos_Ministerios-Arcada01.jpg"
+      }
     },
     {
       "id": "madrid-retiro-palacio-de-cristal-pond-c93d",
@@ -5809,7 +5875,13 @@
       "workId": "sound-euphonium",
       "scene": "나고야 국제회의장 스포르차 기마상·센추리홀 중정이 전국대회 무대로 등장하는 장면",
       "verified": "reported",
-      "source": "https://nagoya-congress-center.jp/about_us/"
+      "source": "https://nagoya-congress-center.jp/about_us/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349827/spotchu/spots/csya7eugp03mxasudotl.jpg",
+      "imageCredit": {
+        "author": "KKPCW（Kyu3）",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nagoya_Congress_Center_in_Shiratori_Park.jpg"
+      }
     },
     {
       "id": "nagoya-oasis21-mirai-tower-6b3a",
@@ -5989,11 +6061,11 @@
       "scene": "우키미도에서 젊은 연인이 데이트하는 장면",
       "verified": "reported",
       "source": "https://www.city.nara.lg.jp/site/kanko/224213.html",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088390/spotchu/spots/nara-sagiike-ukimido-pavilion-view-b32a.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348960/spotchu/spots/a21ytcjff3ym5gz8y4h3.jpg",
       "imageCredit": {
-        "author": "Humanoid one",
-        "license": "CC BY-SA 3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Nara_Japan_2.jpg"
+        "author": "Ian G Shingler",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ukimido_Pavilion_Nara_park.jpg"
       }
     },
     {
@@ -6853,11 +6925,11 @@
       "time": "09:00 - 13:00 (에메랄드 바다 순광 촬영) 또는 17:30 - 일몰 (석양 실루엣)",
       "verified": "reported",
       "source": "https://www.vill.onna.okinawa.jp/tourism/tourism_facilities/manzamou/",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088404/spotchu/spots/okinawa-cape-manzamo-elephant-rock-c91d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348837/spotchu/spots/cncgvu2vrwi0flmn9wiq.jpg",
       "imageCredit": {
-        "author": "CEphoto, Uwe Aranas",
-        "license": "CC BY-SA 3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Onna_Okinawa_Japan_Cape-Manzamo-01.jpg"
+        "author": "Nelo Hotsuma",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cape_Manzamo,_Onna,_Okinawa_-_Feb_17,_2019.jpg"
       }
     },
     {
@@ -7434,11 +7506,11 @@
       "time": "Sunrise to early morning for soft morning light and zero crowds; or blue hour for the sparkling Eiffel Tower light show.",
       "verified": "reported",
       "source": "https://www.solosophie.com/avenue-de-camoens-paris/",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088420/spotchu/spots/paris-avenue-de-camoens-eiffel-view-a8f1.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348963/spotchu/spots/rpwxzzdqjqelof9goxr2.jpg",
       "imageCredit": {
-        "author": "Benh LIEU SONG",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+        "author": "Gianmarco Fusari",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Avenue_de_Camoens_-_Tour_Eiffel_-_panoramio.jpg"
       }
     },
     {
@@ -8185,11 +8257,11 @@
       "time": "Sunrise",
       "verified": "reported",
       "source": "https://www.viewfromprague.com/charles-bridge-photos/",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788113224/spotchu/spots/iflvuxl2ekgwyiigbvlm.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348841/spotchu/spots/c5xngcbu1xcqfmmkxse8.jpg",
       "imageCredit": {
-        "author": "VitVit",
+        "author": "Scotch Mist",
         "license": "CC BY-SA 4.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Karl%C5%AFv_most_sv._Cyril_a_Metod%C4%9Bj.jpg"
+        "source": "https://commons.wikimedia.org/wiki/File:Prague_Charles_Bridge_2021_11.jpg"
       }
     },
     {
@@ -8463,7 +8535,13 @@
       "lens": "70-200mm or smartphone optical zoom",
       "time": "Early morning or dusk",
       "verified": "official",
-      "source": "https://www.orderofmalta.int/it/governo/basilica-san-pietro-dal-buco-della-serratura/"
+      "source": "https://www.orderofmalta.int/it/governo/basilica-san-pietro-dal-buco-della-serratura/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349830/spotchu/spots/qdflihfy04snsgegw7jo.jpg",
+      "imageCredit": {
+        "author": "Stefano Costantini (RomeCabs)",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Piazza_dei_Cavalieri_di_Malta,_Rome.jpg"
+      }
     },
     {
       "id": "rome-biblioteca-angelica-cortile-angels-demons-9a06",
@@ -8999,11 +9077,11 @@
       "scene": "제7화 호로히라바시 새벽 아이스크림 대화 장면",
       "verified": "reported",
       "source": "https://www.showa-vod.com/hokkaido-location-guide/drama-locations/sapporo-otaru-first-love-drama-tour/",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088433/spotchu/spots/sapporo-horohira-bridge-arch-firstlove-8b2c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348969/spotchu/spots/y91rmwluljrch6cjqy4m.jpg",
       "imageCredit": {
-        "author": "Kinori",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:HorohiraBashi2004-2-25.jpg"
+        "author": "MIKI Yoshihito",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Horohira_Bridge_over_the_Toyohira_RIver,_Sapporo_-_Aug_18,_2024.jpg"
       }
     },
     {
@@ -9089,11 +9167,11 @@
       "scene": "오도리 공원·TV탑 배경과 연결된 부분 매치 후보",
       "verified": "reported",
       "source": "https://www.visit-hokkaido.jp/en/spot/detail_10004.html",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088437/spotchu/spots/sapporo-odori-park-fountain-tvtower-anime-e19b.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348844/spotchu/spots/qmyp2ao2zfmpha5f8gq9.jpg",
       "imageCredit": {
-        "author": "欅 (Keyaki)",
-        "license": "CC BY-SA 3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Sapporo_television_tower_01.jpg"
+        "author": "LR0725",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Odori_park_at_Sapporo_TV_tower.jpg"
       }
     },
     {
@@ -9501,11 +9579,11 @@
       "time": "17:30-19:30",
       "verified": "reported",
       "source": "https://www.museum.go.kr/ENG/contents/E0605010000.do",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088445/spotchu/spots/seoul-nmk-open-plaza-namsan-view-a1f8.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348971/spotchu/spots/wocrdnfgnd0mkw28qwhg.jpg",
       "imageCredit": {
-        "author": "Anthony Jackson",
-        "license": "Public domain",
-        "source": "https://commons.wikimedia.org/wiki/File:S7300388.JPG"
+        "author": "Jinah78",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Front_view_of_national_museum_of_korea.jpg"
       }
     },
     {
@@ -10228,7 +10306,13 @@
       "lens": "70-200mm; 24-70mm",
       "time": "Sunset to Blue Hour",
       "verified": "reported",
-      "source": "https://www.locationscout.net/australia/62603-mrs-macquaries"
+      "source": "https://www.locationscout.net/australia/62603-mrs-macquaries",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349833/spotchu/spots/os0kr6lucco5sqtrhchi.jpg",
+      "imageCredit": {
+        "author": "Robert Linsdell from St. Andrews, Canada",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mrs_Macquarie%27s_Chair,_Mrs_Macquaries_Point,_Sydney_(483345)_(9442941632).jpg"
+      }
     },
     {
       "id": "sydney-observatory-hill-rotunda-viewpoint-f53d",
@@ -10395,11 +10479,11 @@
       "time": "오전 09:00~10:00 (부드러운 사광) 또는 오후 16:00~17:30 (골든아워)",
       "verified": "reported",
       "source": "https://www.travel.taipei/zh-tw/attraction/details/264",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088458/spotchu/spots/taipei-sisinancun-lawn-101-c3d4.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348847/spotchu/spots/doqlptqfqawidq2gddj2.jpg",
       "imageCredit": {
-        "author": "User:Sinsyuan",
-        "license": "CC BY-SA 4.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Taipei_101_from_Xiangshan_20250731.jpg"
+        "author": "Lord Koxinga",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:2010_07_22170_6924_Xinyi_District,_Taipei,_Buildings,_Xinyi_Road,_Taipei_101,_Observation_towers,_Memorial_Halls,_Railways,_Yangmingshan,_Arenas,_Airports,_Taiwan.JPG"
       }
     },
     {
@@ -10947,7 +11031,13 @@
       "tip": "실제 촬영에 쓰인 601·602호가 있던 별관(핑크 벽·둥근 창)은 폐쇄되어 다른 매장으로 바뀌었고, 현재는 30-8번지 본관 건물만 운영 중이다. 간판이 보이는 건물 외관 위주로 담고, 내부 이용 시 원래 촬영 방이 아님을 감안할 것.",
       "workId": "lost-translation",
       "scene": "밥과 샬럿이 601·602호에서 친구들과 밤새 노래하며 노는 가라오케 장면",
-      "source": "https://tokyofox.net/2011/11/29/tokyo-filming-locations-pt-ii-lost-in-translation-updated/"
+      "source": "https://tokyofox.net/2011/11/29/tokyo-filming-locations-pt-ii-lost-in-translation-updated/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349836/spotchu/spots/xwxb3afgefb6wqfi03bi.jpg",
+      "imageCredit": {
+        "author": "Steve Allison steveallison",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Udagawacho,_Shibuya,_Japan_(Unsplash).jpg"
+      }
     },
     {
       "id": "tokyo-koenji-kisho-jinja-tenkinoko-d1",
@@ -11238,7 +11328,13 @@
       "tip": "호텔 옆 지하 계단 입구 간판을 담을 수 있다. 지금도 영업 중인 실제 레스토랑이므로 손님 얼굴이 나오지 않도록 개점 전이나 한산한 시간대에 외부 간판 위주로 촬영할 것.",
       "workId": "lost-translation",
       "scene": "밥과 샬럿 일행이 샤부샤부 식당에서 함께 식사하는 장면",
-      "source": "https://movie-locations.com/movies/l/Lost-In-Translation.php"
+      "source": "https://movie-locations.com/movies/l/Lost-In-Translation.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349841/spotchu/spots/vjv68kr9hhgcpvtxfvz1.jpg",
+      "imageCredit": {
+        "author": "Asanagi",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kamiyama-cho_2022-07-07.jpg"
+      }
     },
     {
       "id": "tokyo-shiba-suido-manhole-tokyotower",
@@ -11648,11 +11744,11 @@
       "scene": "증상사 대전과 도쿄 타워가 보이는 장례식·액션 시퀀스 연관 장소",
       "verified": "reported",
       "source": "https://www.locationbox.metro.tokyo.lg.jp/",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088475/spotchu/spots/tokyo-zojoji-daiden-tokyo-tower-wolverine-4a8f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348849/spotchu/spots/smzdkpxsoyjfcb3awfvu.jpg",
       "imageCredit": {
-        "author": "Akonnchiroll",
-        "license": "CC BY-SA 4.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_2023.jpg"
+        "author": "KimonBerlin",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_and_Zojoji_temple_(7475558188).jpg"
       }
     },
     {
@@ -11820,7 +11916,13 @@
       "lens": "24-35mm",
       "time": "이른 아침 또는 오전",
       "verified": "reported",
-      "source": "https://www.visitvenezia.eu/venezianita/scopri-venezia/10-scorci-segreti-di-venezia"
+      "source": "https://www.visitvenezia.eu/venezianita/scopri-venezia/10-scorci-segreti-di-venezia",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788349849/spotchu/spots/ar9ogt76hek6ubjfh980.jpg",
+      "imageCredit": {
+        "author": "Dimitris Kamaras from Athens, Greece",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ponte_dei_Conzafelzi,_Venice_(31376591896).jpg"
+      }
     },
     {
       "id": "venice-ponte-dell-accademia-grand-canal-salute-8c2f",
@@ -12079,11 +12181,11 @@
       "scene": "닛폰마루 메모리얼 파크 광장에 ER카와 임시 구호소가 전개되는 장면",
       "verified": "reported",
       "source": "https://www.cinematoday.jp/news/N0136531",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088482/spotchu/spots/yokohama-nippon-maru-memorial-park-tokyo-mer-b91c.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348974/spotchu/spots/jlseiarilyt50twcdjql.jpg",
       "imageCredit": {
-        "author": "Yokohama_Landmark_Tower_02.JPG: Σ64 derivative work: 0607crp (talk)",
+        "author": "Volfgang",
         "license": "CC BY-SA 3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Landmark_Tower_02_cropped.jpg"
+        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Nipponmaru_4.jpg"
       }
     },
     {
@@ -12100,11 +12202,11 @@
       "time": "マジックアワー（日没直後）〜夜間",
       "verified": "reported",
       "source": "https://yakei.jp/spot/spot.php?id=38",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088482/spotchu/spots/yokohama-osanbashi-kujira-skyline-8c2d.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348977/spotchu/spots/ou0bwu9kqtxrv7rclbsd.jpg",
       "imageCredit": {
-        "author": "Yokohama_Landmark_Tower_02.JPG: Σ64 derivative work: 0607crp (talk)",
-        "license": "CC BY-SA 3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Landmark_Tower_02_cropped.jpg"
+        "author": "Uploader; Vantey",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Osanbashi_Yokohama_rooftop_20081117.jpg"
       }
     },
     {
@@ -12123,11 +12225,11 @@
       "scene": "붉은 벽돌 창고 앞 액션 장면 및 촬영지 연계",
       "verified": "reported",
       "source": "https://hamarepo.com/story.php?page_id=3144",
-      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788088483/spotchu/spots/yokohama-red-brick-warehouse-abunai-deka-a82f.jpg",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788348852/spotchu/spots/azvvehrxiuldod7k3mww.jpg",
       "imageCredit": {
-        "author": "Kakidai",
-        "license": "CC BY-SA 3.0",
-        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Red_Brick_Warehouse_2012.JPG"
+        "author": "Kanchi1979",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:JP-Yokohama-Red-Brick-Warehouse-No.2-With-AkaRenga-Park.JPG"
       }
     },
     {
