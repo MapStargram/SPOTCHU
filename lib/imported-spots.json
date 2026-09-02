@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T03:22:32.297Z",
+  "generatedAt": "2026-09-02T04:06:24.733Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -3030,6 +3030,27 @@
       }
     },
     {
+      "id": "hongkong-chai-wan-lei-yue-mun-park-infernal-affairs-c084",
+      "title": "레이유문 공원 및 홀리데이빌리지 (무간도 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.2772,
+      "lng": 114.2336,
+      "area": "차이완(柴灣)/사우케이완 레이유문",
+      "subject": "경찰학교에서 퇴교 처리되는 위장경찰 진영인의 회상 장면 — 실제 공공 캠핑장 겸 공원 레이유문 공원 및 홀리데이빌리지",
+      "tip": "차이완 지하철역에서 버스로 약 10분 또는 도보로 접근 가능한 언덕 위 공원. 유동만 해협과 빅토리아 하버 동쪽 입구가 내려다보이는 전망 지점에서 바다를 배경으로 촬영하기 좋다. 캠핑장 부지라 상시 개방.",
+      "workId": "infernal-affairs",
+      "scene": "경찰학교에서 퇴교 처리되는 진영인의 과거 회상 장면",
+      "verified": "reported",
+      "source": "https://tokyofox.net/2012/05/14/hong-kong-2012-pt-iii-infernal-affairs-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321906/spotchu/spots/u48mupiykzjrcscx21pn.jpg",
+      "imageCredit": {
+        "author": "Felamu",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Lee_Yue_Mun_Park_And_Holiday_Village.jpg"
+      }
+    },
+    {
       "id": "hongkong-choi-hung-estate-court-p03",
       "title": "초이홍 에스테이트 주차장 옥상 무지개 농구장",
       "city": "hongkong",
@@ -3193,6 +3214,27 @@
       }
     },
     {
+      "id": "hongkong-north-point-government-offices-infernal-affairs-a9f4",
+      "title": "노스포인트 정부청사 (무간도 결말 옥상 대치 장면 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.2923,
+      "lng": 114.2084,
+      "area": "노스포인트(北角) 자화도",
+      "subject": "영화의 클라이맥스, 유건명이 엘리베이터·옥상에서 진영인에게 총을 겨누는 결말 대치 장면 — 실제 정부 행정 건물 노스포인트 정부청사",
+      "tip": "노스포인트역에서 도보 약 5분, 자화도(渣華道) 333번지. 옥상은 정부 청사 내부라 출입 불가하니 자화도 인도나 맞은편 도로에서 건물 상단이 보이도록 올려다보는 구도로 촬영한다.",
+      "workId": "infernal-affairs",
+      "scene": "결말부, 유건명이 진영인에게 총을 겨누고 옥상에서 대치하는 장면",
+      "verified": "reported",
+      "source": "https://film-pilgrimage.com/2017/05/18/%E7%84%A1%E9%96%93%E9%81%93/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321907/spotchu/spots/edspafaz3p6x8uqypwfz.jpg",
+      "imageCredit": {
+        "author": "Ken OHYAMA",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/20013727@N02/33977254492"
+      }
+    },
+    {
       "id": "hongkong-old-yau-ma-tei-police-station-6c34",
       "title": "구 유마테이 경찰서 에드워드 양식 코너 뷰",
       "city": "hongkong",
@@ -3213,6 +3255,69 @@
         "author": "Exploringlife",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Old_Yau_Ma_Tei_Police_Station_(full_blue_sky).jpg"
+      }
+    },
+    {
+      "id": "hongkong-sham-shui-po-apliu-street-audio-shop-infernal-affairs-3d91",
+      "title": "압료가 오디오스페이스 (무간도 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.3294,
+      "lng": 114.1627,
+      "area": "삼수이포(深水埗) 압료가",
+      "subject": "잠입경찰 진영인(양조위)과 삼합회 프락치 유건명(유덕화)이 서로의 정체를 모른 채 처음 스쳐 지나가는 오디오 매장 장면 — 지금도 영업 중인 오디오 전문점 '오디오스페이스'",
+      "tip": "삼수이포역 A2 출구, 전자상가 거리 압료가(鴨寮街) 151호 1층. 실제 앰프·스피커 매장으로 영업 중이라 쇼윈도 앞에서 촬영 가능. 영업시간에 방문하고 매장 안에서 촬영 시 가볍게 양해를 구할 것.",
+      "workId": "infernal-affairs",
+      "scene": "8분경, 두 잠입요원이 정체를 모른 채 오디오 매장에서 처음 마주치는 장면",
+      "verified": "reported",
+      "source": "https://www.timeout.com/hong-kong/shopping/audio-space",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321908/spotchu/spots/imxh9zim1ahhjaeohqd0.jpg",
+      "imageCredit": {
+        "author": "Bernard Spragg",
+        "license": "CC0 1.0",
+        "source": "https://www.flickr.com/photos/88123769@N02/15888325029"
+      }
+    },
+    {
+      "id": "hongkong-shatin-10000-buddhas-monastery-infernal-affairs-7f2a",
+      "title": "사틴 만불사 (무간도 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.3875,
+      "lng": 114.1847,
+      "area": "사틴(沙田) 파이터우촌",
+      "subject": "삼합회 보스 한삼(증지위)이 소년 조직원들에게 경찰학교 잠입을 지시하는 오프닝 사찰 장면 — 실제 만불사 대웅전 앞마당",
+      "tip": "사틴역에서 도보 약 10분. 언덕 계단을 오르며 실물 크기 금박 나한상 수백 개가 늘어선 참배로를 지나면 극중 사찰 마당과 같은 구도가 나온다. 평일 오전에는 인적이 적어 인물 없는 사진을 찍기 좋다.",
+      "workId": "infernal-affairs",
+      "scene": "오프닝, 한삼이 소년 조직원들을 경찰 잠입요원으로 보내는 사찰 장면",
+      "verified": "reported",
+      "source": "https://tokyofox.net/2012/05/14/hong-kong-2012-pt-iii-infernal-affairs-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321909/spotchu/spots/pjwvlmsy3crn2gzugyyv.jpg",
+      "imageCredit": {
+        "author": "Bernard Spragg",
+        "license": "CC0 1.0",
+        "source": "https://www.flickr.com/photos/88123769@N02/16743079384"
+      }
+    },
+    {
+      "id": "hongkong-sheung-wan-guangdong-investment-tower-infernal-affairs-e21b",
+      "title": "광둥인베스트먼트타워 (무간도 옥상 낙하 장면 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.2872,
+      "lng": 114.1512,
+      "area": "성완(上環) 커노트로드센트럴",
+      "subject": "황 반장(황추생)이 옥상에서 떨어져 순직하는 영화 최대 반전 장면, 극 후반 두 위장요원이 옥상에서 재회하는 장면 — 실제 오피스 빌딩 광둥인베스트먼트타워(粵海投資大廈)",
+      "tip": "성완역 C출구에서 도보 2분, 커노트로드센트럴과 데보로드센트럴 교차로. 옥상은 사무용 건물 내부라 출입 불가하니 건너편 인도에서 건물 전체가 프레임에 들어오도록 올려다보는 구도로 촬영한다.",
+      "workId": "infernal-affairs",
+      "scene": "56분경 황 반장이 옥상에서 떨어지는 장면, 99분경 두 위장요원이 옥상에서 재회하는 장면",
+      "verified": "reported",
+      "source": "https://www.cathaypacific.com/cx/en_HK/inspiration/hong-kong/infernal-affairs-filmed-hong-kong.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321914/spotchu/spots/rpxdl4zbgzsqcqwckfmh.jpg",
+      "imageCredit": {
+        "author": "SYPHKU M0105",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=37773611"
       }
     },
     {
@@ -3991,6 +4096,26 @@
       }
     },
     {
+      "id": "london-bedale-street-fight-bridget-jones-2c7d",
+      "title": "마크·다니엘 몸싸움 장면 촬영지 (구 그리스 레스토랑, 현 베데일스)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.50537,
+      "lng": -0.09008,
+      "area": "버로우 마켓, 서더크 (Borough Market, Southwark)",
+      "subject": "극 중 그리스 레스토랑으로 분장했던 건물 — 현재는 와인바 '베데일스 오브 버로우'(5 Bedale Street)",
+      "tip": "브리짓의 아파트(8번지) 바로 맞은편, 베데일 스트리트를 사이에 두고 마주보는 위치다. 골목이 좁아 두 건물을 한 프레임에 담아 촬영지 두 장면을 동시에 기록할 수 있다.",
+      "workId": "bridget-joness-diary",
+      "scene": "다니엘이 브리짓의 생일 저녁식사에 불쑥 나타나며 마크와 벌이는 거리·유리창 난투극 장면",
+      "source": "https://thecinemaholic.com/where-was-bridget-joness-diary-filmed/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321923/spotchu/spots/onqhmjmxbfxjt10lsp7k.jpg",
+      "imageCredit": {
+        "author": "Txllxt TxllxT",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=61820438"
+      }
+    },
+    {
       "id": "london-big-ben-phonebox-great-george-7f1a",
       "title": "빅벤 & 빨간 공중전화박스 프레이밍 포토스팟 (그레이트 조지 스트리트)",
       "city": "london",
@@ -4031,6 +4156,46 @@
         "author": "Matt Brown",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=132320047"
+      }
+    },
+    {
+      "id": "london-borough-market-bridget-flat-bridget-jones-9f3a",
+      "title": "브리짓 존스의 아파트 (더 글로브 태번)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.50553,
+      "lng": -0.0904,
+      "area": "버로우 마켓, 서더크 (Borough Market, Southwark)",
+      "subject": "브리짓 존스의 아파트 외관으로 쓰인 펍 '더 글로브 태번'(8 Bedale Street) 건물 2층",
+      "tip": "런던브리지역에서 도보 5분, 버로우 마켓 안쪽 베데일 스트리트(Bedale Street)와 캐서드럴 스트리트가 만나는 모퉁이에서 펍 간판과 2층 창문을 함께 담을 수 있다. 시리즈 3편 모두에 반복 등장하는 상징적 건물이라 시장이 한산한 이른 아침 촬영을 추천한다.",
+      "workId": "bridget-joness-diary",
+      "scene": "브리짓이 실제로 사는 아파트로 극 중 반복 등장하는 곳(2층 창문이 브리짓의 방)",
+      "source": "https://www.visitbritain.com/en/things-to-do/visit-bridget-jones-filming-locations",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321924/spotchu/spots/relssbndfur2ttlm2x5v.jpg",
+      "imageCredit": {
+        "author": "garryknight",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/8176740@N05/8552416578"
+      }
+    },
+    {
+      "id": "london-clink-street-daniel-flat-bridget-jones-5e91",
+      "title": "다니엘 클리버의 아파트 (클링크 스트리트)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.50693,
+      "lng": -0.09186,
+      "area": "클링크 스트리트, 서더크 (Clink Street, Southwark)",
+      "subject": "다니엘 클리버의 세련된 아파트 외관으로 쓰인 픽포즈 워프(클링크 워프 아파트) 건물",
+      "tip": "런던브리지역에서 도보 7분. 클링크 프리즌 박물관, 골든 하인드 복제선과 같은 거리에 있어 함께 둘러보기 좋다. 골목이 좁으니 광각으로 건물 파사드를 담는 것을 추천.",
+      "workId": "bridget-joness-diary",
+      "scene": "다니엘 클리버의 집으로 등장하며 브리짓과의 관계가 진전되는 장면들의 배경",
+      "source": "https://www.looper.com/836310/the-real-life-building-where-all-the-apartment-scenes-were-filmed-in-bridget-joness-diary/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321929/spotchu/spots/kq6mxuy8uhcimqcqapaw.jpg",
+      "imageCredit": {
+        "author": "The Car Spy",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=26515946"
       }
     },
     {
@@ -4482,6 +4647,66 @@
       "workId": "notting-hill",
       "scene": "\"난 그저 한 소년 앞에 선 한 소녀일 뿐이에요\" 대사 직전, 두 사람이 담을 넘어 정원에 들어가는 장면",
       "source": "https://travellerspen.blog/rosmead-garden-london-notting-hill-movie/"
+    },
+    {
+      "id": "london-royal-courts-of-justice-bridget-jones-b40c",
+      "title": "로열 코트 오브 저스티스 (브리짓의 특종 취재 장소)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5137,
+      "lng": -0.1133,
+      "area": "스트랜드, 웨스트민스터 (The Strand, Westminster)",
+      "subject": "브리짓이 TV 프로그램 'Sit Up Britain' 리포터로 취재하던 법원 정문",
+      "tip": "스트랜드 대로변 보도에서 고딕 양식 정문 아치를 정면으로 담을 수 있다. 법원 운영 시간에는 방문객 동선이 통제될 수 있어 외관 촬영 위주로 계획하자.",
+      "workId": "bridget-joness-diary",
+      "scene": "담배를 사러 간 사이 판결 취재를 놓친 브리짓에게 마크 다시가 단독 인터뷰를 제안해 특종을 구해주는 장면",
+      "source": "https://claireandthecity.com/bridget-joness-diary-filming-locations-in-london-with-pictures/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321930/spotchu/spots/eb4wtvkc7bqwobyitbff.jpg",
+      "imageCredit": {
+        "author": "*SHERWOOD*",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/30273175@N06/2847063221"
+      }
+    },
+    {
+      "id": "london-royal-exchange-buildings-bridget-jones-8a2e",
+      "title": "결말부 재회 키스 장소 (로열 익스체인지 빌딩스)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51345,
+      "lng": -0.08865,
+      "area": "콘힐, 뱅크, 시티 오브 런던 (Cornhill, Bank, City of London)",
+      "subject": "브리짓이 눈 내리는 거리에서 마크를 뒤쫓아가 재회·키스하는 결말 장면이 촬영된 골목",
+      "tip": "뱅크 지하철역 출구 바로 앞, 로열 익스체인지 건물 뒤편의 좁은 통로다. 평일 낮에는 금융가 인파가 많으니 이른 아침이나 주말에 방문하는 것이 좋다.",
+      "workId": "bridget-joness-diary",
+      "scene": "마크가 사준 새 다이어리를 들고 브리짓과 재회해 눈 속에서 키스하는 영화의 마지막 장면",
+      "source": "https://www.movie-locations.com/movies/b/Bridget-Jones-Diary.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321932/spotchu/spots/roer1vgpem0lqstsy4b9.jpg",
+      "imageCredit": {
+        "author": "aurélien.",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/28536568@N00/5700690592"
+      }
+    },
+    {
+      "id": "london-shad-thames-first-kiss-bridget-jones-d16f",
+      "title": "다니엘과의 첫 키스 장소 (셰드 템즈)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.50365,
+      "lng": -0.07425,
+      "area": "셰드 템즈, 버틀러스 워프, 서더크 (Shad Thames, Butler's Wharf, Southwark)",
+      "subject": "다니엘과 브리짓의 첫 데이트 후 첫 키스가 촬영된 셰드 템즈 부두 골목",
+      "tip": "타워브리지 남단에서 도보 3분. 빅토리아풍 창고 건물 사이 구름다리(캣워크)가 배경에 들어오도록 골목 안쪽에서 찍으면 영화 속 구도와 비슷해진다.",
+      "workId": "bridget-joness-diary",
+      "scene": "칸티나 델 폰테에서의 저녁 식사 후 다니엘이 브리짓에게 처음 입맞추는 장면",
+      "source": "https://almostginger.com/bridget-jones-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321935/spotchu/spots/b8sxmvrhfp1wklh33obv.jpg",
+      "imageCredit": {
+        "author": "Spixey",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/12414404@N03/4568331053"
+      }
     },
     {
       "id": "london-sherlock-221b-north-gower-6a8b",
@@ -5548,6 +5773,26 @@
       "source": "https://nycinfilm.com/2024/10/14/joker-2019/"
     },
     {
+      "id": "newyork-bethesda-terrace-harry-sally-c17d",
+      "title": "베데스다 테라스 (해리가 샐리를 만났을 때 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7741,
+      "lng": -73.9711,
+      "area": "센트럴파크, 72번가 인근 (Central Park)",
+      "subject": "베데스다 테라스 상단 산책로 — 해리가 친구 제스와 파워워킹하며 대화하는 장면의 배경",
+      "tip": "센트럴파크 72번가 입구에서 도보 5분, 베데스다 분수 위쪽 상단 테라스 산책로. 이른 아침이나 늦은 오후가 인파가 적어 촬영하기 좋다.",
+      "workId": "when-harry-met-sally",
+      "scene": "해리가 친구 제스와 센트럴파크를 파워워킹하며 샐리와의 하룻밤에 대해 털어놓는 장면",
+      "source": "https://www.sceen-it.com/sceen/672/When-Harry-Met-Sally/Central-Park-Bethesda-Terrace",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321936/spotchu/spots/xkemqd6xv4jfc3owh1yr.jpg",
+      "imageCredit": {
+        "author": "Charley Lhasa",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/58745253@N00/7396749780"
+      }
+    },
+    {
       "id": "newyork-brooklyn-army-terminal-joker-b6e3",
       "title": "브루클린 육군 터미널 - 아캄 주립병원 (조커 촬영지)",
       "city": "newyork",
@@ -5566,6 +5811,34 @@
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=4444255"
       }
+    },
+    {
+      "id": "newyork-bubbys-tribeca-devil-prada-2f9c",
+      "title": "버비스 트라이베카 (악마는 프라다를 입는다 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.71982,
+      "lng": -74.00842,
+      "area": "Tribeca, Hudson St & N Moore St",
+      "subject": "네이트가 일하는 레스토랑이자 앤디의 승진을 축하하는 장면의 실제 배경 — 허드슨가·노스무어가 코너의 영업 중인 레스토랑",
+      "tip": "노스무어가 쪽 코너에서 간판과 야외 테이블이 보이는 구도로 촬영. 지금도 영업 중이라 주말 브런치 시간대엔 대기줄이 있다.",
+      "workId": "the-devil-wears-prada",
+      "scene": "네이트가 근무하는 레스토랑에서 앤디의 승진을 친구들과 축하하는 장면",
+      "source": "https://onlocationtours.com/locations/the-devil-wears-prada-locations/"
+    },
+    {
+      "id": "newyork-cafe-luxembourg-harry-sally-2d6c",
+      "title": "카페 룩셈부르크 (해리가 샐리를 만났을 때 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.77742,
+      "lng": -73.98314,
+      "area": "어퍼 웨스트 사이드 (Upper West Side)",
+      "subject": "카페 룩셈부르크 실내 — 해리와 샐리의 더블데이트(소개팅) 장면의 배경, 1983년 개업 이래 지금도 영업 중",
+      "tip": "지하철 1·2·3선 72번가역에서 도보 8분. 지금도 영업 중인 레스토랑으로, 예약 후 창가 자리에 앉으면 영화 속 더블데이트 분위기를 느낄 수 있다.",
+      "workId": "when-harry-met-sally",
+      "scene": "해리와 샐리가 각자의 친구 제스·마리를 서로에게 소개해주려던 더블데이트가 오히려 제스와 마리를 이어주는 장면",
+      "source": "https://movie-locations.com/movies/w/When-Harry-Met-Sally.php"
     },
     {
       "id": "newyork-dumbo-manhattan-bridge-a81e",
@@ -5588,6 +5861,26 @@
         "author": "Original uploader was Dav5nyc at en.wikipedia",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Manhattan_Bridge_2007.jpg"
+      }
+    },
+    {
+      "id": "newyork-elias-clarke-hq-devil-prada-e91a",
+      "title": "맥그로힐 빌딩 – 런웨이 매거진 본사 외경 (악마는 프라다를 입는다 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.75944,
+      "lng": -73.98222,
+      "area": "Midtown Manhattan, Avenue of the Americas (6th Ave) & W 49th St",
+      "subject": "극중 런웨이(엘리아스-클라크) 매거진 본사 외경과 로비 — 실제로는 맥그로힐 빌딩(1221 Avenue of the Americas) 정문",
+      "tip": "6번가(Avenue of the Americas) 48~49번가 사이 인도에서 건물 정문·로비 쪽을 향해 촬영. 평일 출퇴근 시간대는 인파가 많으니 이른 아침이 한산하다.",
+      "workId": "the-devil-wears-prada",
+      "scene": "앤디가 첫 출근길에 회전문을 지나 런웨이 로비로 들어서는 오프닝 시퀀스",
+      "source": "https://en.wikipedia.org/wiki/1221_Avenue_of_the_Americas",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321937/spotchu/spots/uokdio0zro0h9weikymr.jpg",
+      "imageCredit": {
+        "author": "Ken Lund",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/75683070@N00/32584609737"
       }
     },
     {
@@ -5660,6 +5953,26 @@
       }
     },
     {
+      "id": "newyork-katzs-deli-harry-sally-7c2e",
+      "title": "카츠 델리카트슨 (해리가 샐리를 만났을 때 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.72225,
+      "lng": -73.98748,
+      "area": "로어 이스트 사이드 (Lower East Side)",
+      "subject": "카츠 델리카트슨 내부, 샐리가 '가짜 오르가슴'을 연기해 보인 테이블 — 현재 사진과 안내 표지판으로 표시되어 있다",
+      "tip": "지하철 F선 델랜시 스트리트역에서 도보 5분. 실제 촬영 테이블 위에 표지판이 붙어 있어 쉽게 찾을 수 있으며, 식사 손님이 붐비는 편이라 평일 오후 이른 시간을 추천한다.",
+      "workId": "when-harry-met-sally",
+      "scene": "샐리가 카츠 델리카트슨에서 '가짜 오르가슴'을 연기해 옆자리 손님이 '저 여자가 먹는 걸로 주세요'라고 말하는 명장면",
+      "source": "https://en.wikipedia.org/wiki/Katz's_Delicatessen",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321938/spotchu/spots/h5wnwy6jcycueztt34jj.jpg",
+      "imageCredit": {
+        "author": "Ken Lund",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/75683070@N00/7237383570"
+      }
+    },
+    {
       "id": "newyork-kings-theatre-joker-d19c",
       "title": "킹스 씨어터 - 웨인홀 (조커 촬영지)",
       "city": "newyork",
@@ -5677,6 +5990,120 @@
         "author": "theatretalks",
         "license": "Public domain 1.0",
         "source": "https://www.flickr.com/photos/153295164@N05/51467144404"
+      }
+    },
+    {
+      "id": "newyork-loeb-boathouse-harry-sally-e83a",
+      "title": "센트럴파크 로브 보트하우스 (해리가 샐리를 만났을 때 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7747,
+      "lng": -73.9694,
+      "area": "센트럴파크, 이스트 72번가 인근 (Central Park)",
+      "subject": "로브 보트하우스 레스토랑 호숫가 테라스 — 샐리가 친구들에게 이별을 알리는 점심 장면의 배경",
+      "tip": "센트럴파크 5번가·72번가 입구로 들어가 파크 드라이브 노스를 따라 북쪽으로 약 400m. 호수 전망 야외 테라스 좌석에서 촬영하면 영화 속 점심 장면 분위기를 재현할 수 있다.",
+      "workId": "when-harry-met-sally",
+      "scene": "샐리가 친구 마리·앨리스와 로브 보트하우스에서 점심을 먹으며 남자친구 조와 헤어졌다고 알리는 장면",
+      "source": "https://www.sceen-it.com/sceen/1484/When-Harry-Met-Sally/The-Loeb-Boathouse",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321939/spotchu/spots/qzo4vvu2ag2s5yu4kak6.jpg",
+      "imageCredit": {
+        "author": "Lori L. Stalteri",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/69655432@N00/5650900478"
+      }
+    },
+    {
+      "id": "newyork-miranda-townhouse-devil-prada-d05b",
+      "title": "미란다의 타운하우스 (악마는 프라다를 입는다 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.77144,
+      "lng": -73.96189,
+      "area": "Upper East Side, E 73rd St (Park Ave~Lexington Ave 사이)",
+      "subject": "앤디가 매일 새벽 '더 북'을 배달하는 미란다의 자택 — 어퍼이스트사이드의 실제 개인 타운하우스 외경",
+      "tip": "현재 개인 소유 주택이므로 대문 앞이 아닌 맞은편 인도에서 파사드만 조용히 촬영하고 오래 머무르지 않는다.",
+      "workId": "the-devil-wears-prada",
+      "scene": "앤디가 매일 새벽 '더 북'을 미란다의 자택 현관에 배달하는 장면",
+      "source": "https://giggster.com/guide/movie-location/where-was-the-devil-wears-prada-filmed"
+    },
+    {
+      "id": "newyork-natural-history-museum-devil-prada-7c4f",
+      "title": "아메리칸 자연사박물관 (악마는 프라다를 입는다 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.78083,
+      "lng": -73.97444,
+      "area": "Upper West Side, Central Park West & W 79th St",
+      "subject": "극중 자선 갈라(연회) 장면 — 실제 아메리칸 자연사박물관 센트럴파크 웨스트 정문 계단",
+      "tip": "센트럴파크 웨스트 도로 건너편(공원 쪽) 인도에서 정면 계단과 파사드를 함께 담을 수 있다. 해질녘 조명이 켜지면 갈라 장면 분위기를 살리기 좋다.",
+      "workId": "the-devil-wears-prada",
+      "scene": "미란다가 참석한 자선 갈라에서 앤디가 잊혀진 참석자의 이름을 귀띔해 실수를 막아주는 장면",
+      "source": "https://giggster.com/guide/movie-location/where-was-the-devil-wears-prada-filmed",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321943/spotchu/spots/wznso87eb6feejokukqg.jpg",
+      "imageCredit": {
+        "author": "Ferfive",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=177424868"
+      }
+    },
+    {
+      "id": "newyork-puck-building-harry-sally-9f4b",
+      "title": "퍼크 빌딩 (해리가 샐리를 만났을 때 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.72464,
+      "lng": -73.99537,
+      "area": "노호 / 소호, 라파예트 스트리트 (NoHo/SoHo)",
+      "subject": "퍼크 빌딩 외관(라파예트 스트리트 정면) — 7층 스카이라이트 볼룸(결혼식)과 그랜드 볼룸(새해 전야 파티) 장면이 촬영된 랜드마크 건물, 현재도 이벤트 공간으로 운영",
+      "tip": "지하철 6선 Bleecker St역 또는 B·D·F·M선 Broadway-Lafayette St역에서 도보 3분. 볼룸 내부는 행사 대관 시에만 출입 가능하므로, 라파예트 스트리트에서 붉은 벽돌 파사드와 'PUCK' 동상을 함께 담는 외관 촬영을 권장한다.",
+      "workId": "when-harry-met-sally",
+      "scene": "영화 후반, 새해 전야 파티에서 해리가 샐리를 찾아가 사랑을 고백하는 클라이맥스 장면(그랜드 볼룸)",
+      "source": "https://www.sceen-it.com/sceen/2793/When-Harry-Met-Sally/The-Puck-Building",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321945/spotchu/spots/s8azovlbyamd6g3hqgom.jpg",
+      "imageCredit": {
+        "author": "e_chaya",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/10165467@N04/5335808916"
+      }
+    },
+    {
+      "id": "newyork-smith-wollensky-devil-prada-b3d8",
+      "title": "스미스 앤 월렌스키 스테이크하우스 (악마는 프라다를 입는다 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.75525,
+      "lng": -73.97095,
+      "area": "Midtown East, 3rd Ave & E 49th St",
+      "subject": "미란다의 점심 스테이크를 받으러 앤디가 달려가는 장면의 실제 스테이크하우스 — 3번가·49번가 코너 외경",
+      "tip": "3번가 쪽 인도에서 빨간 차양이 있는 코너 파사드를 담기 좋다. 여전히 영업 중인 레스토랑이라 점심시간은 붐빈다.",
+      "workId": "the-devil-wears-prada",
+      "scene": "앤디가 미란다의 점심 스테이크를 가지러 스미스 앤 월렌스키로 달려가는 장면",
+      "source": "https://onlocationtours.com/locations/the-devil-wears-prada-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321948/spotchu/spots/y65kwiii8bpswbhqruvh.jpg",
+      "imageCredit": {
+        "author": "Leonard J. DeFrancisci",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=32516213"
+      }
+    },
+    {
+      "id": "newyork-st-regis-king-cole-bar-devil-prada-4e6a",
+      "title": "세인트레지스 호텔 킹콜 바 (악마는 프라다를 입는다 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.76124,
+      "lng": -73.97433,
+      "area": "Midtown Manhattan, 2 East 55th St & 5th Ave",
+      "subject": "크리스천에게서 미출간 해리포터 원고를 받는 장면의 실제 배경 — 세인트레지스 호텔 내 킹콜 바",
+      "tip": "호텔 정문은 55번가 쪽. 킹콜 바는 투숙객이 아니어도 이용 가능한 공개 바이지만, 실내 촬영 전 매장의 촬영 정책을 확인하는 것이 안전하다.",
+      "workId": "the-devil-wears-prada",
+      "scene": "앤디가 크리스천에게서 미출간 해리포터 원고를 건네받는 장면",
+      "source": "https://movie-locations.com/movies/d/Devil-Wears-Prada.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321951/spotchu/spots/sbqvvxbgcutdudsutz3l.jpg",
+      "imageCredit": {
+        "author": "User: (WT-shared) Onyo at wts wikivoyage",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=22846122"
       }
     },
     {
@@ -5738,6 +6165,26 @@
       "workId": "joker",
       "scene": "실패한 스탠드업 공연 후 아서가 이웃 소피 뒤몽과 도넛가게에서 커피를 마시며 가까워지는 장면",
       "source": "https://movie-locations.com/movies/j/Joker-2019.php"
+    },
+    {
+      "id": "newyork-washington-square-arch-harry-sally-4b9f",
+      "title": "워싱턴 스퀘어 아치 (해리가 샐리를 만났을 때 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.73124,
+      "lng": -73.9971,
+      "area": "그리니치 빌리지 (Greenwich Village)",
+      "subject": "워싱턴 스퀘어 파크 개선문(아치) — 해리와 샐리가 뉴욕 도착 후 헤어지는 오프닝 장면의 배경",
+      "tip": "지하철 A·B·C·D·E·F·M선 W 4th St역에서 도보 3분. 아치 남쪽에서 5번가 방향을 바라보는 구도가 영화 속 장면과 비슷하며, 이른 아침이 관광객이 적어 한산하다.",
+      "workId": "when-harry-met-sally",
+      "scene": "시카고에서 함께 차를 타고 온 해리와 샐리가 뉴욕에 도착해 워싱턴 스퀘어 아치 앞에서 어색하게 작별 인사를 나누는 오프닝 장면",
+      "source": "https://www.sceen-it.com/sceen/898/When-Harry-Met-Sally/Washington-Square-Park",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321952/spotchu/spots/sdzkm9c3jryicjhpx3ha.jpg",
+      "imageCredit": {
+        "author": "Ken Lund",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/75683070@N00/7237385348"
+      }
     },
     {
       "id": "okinawa-azama-sunsun-checkitout-d87e",
@@ -7211,6 +7658,66 @@
       }
     },
     {
+      "id": "rome-castel-santangelo-river-roman-holiday-f7b2",
+      "title": "산탄젤로 성 테베레 강변 (바지선 댄스 장면)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.90192,
+      "lng": 12.46645,
+      "area": "Ponte Sant'Angelo, Rome",
+      "subject": "산탄젤로 성과 테베레강 — 폰테 비토리오 에마누엘레 2세교와 산탄젤로 다리 사이에 떠 있던 댄스 바지선 장면의 실제 배경",
+      "tip": "바지선은 현존하지 않지만 산탄젤로 다리 위나 강변 산책로에서 영화와 같은 구도(성+강)로 촬영 가능. 해질녘 성벽이 노을에 물들 때가 가장 좋다.",
+      "workId": "roman-holiday",
+      "scene": "안 공주가 이발사 마리오의 초대로 테베레강 바지선에서 춤추다 비밀요원들에게 쫓겨 강으로 뛰어드는 장면",
+      "source": "https://www.gpsmycity.com/attractions/castel-santangelo-(sant-angelo-castle)-night-of-dancing-on-the-river-43067.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321953/spotchu/spots/xccdtleaacvknjpwktgi.jpg",
+      "imageCredit": {
+        "author": "archer10 (Dennis)",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/22490717@N02/5121699018"
+      }
+    },
+    {
+      "id": "rome-palazzo-colonna-pilotta-roman-holiday-d4a9",
+      "title": "팔라초 콜론나 (기자회견 장면)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.89723,
+      "lng": 12.48503,
+      "area": "Via della Pilotta 17, Rome",
+      "subject": "콜론나 갤러리 살라 그란데(대회랑) — 영화 마지막 안 공주의 기자회견 장면 실제 촬영지",
+      "tip": "콜론나 갤러리는 토요일 오전 9시~13시15분만 일반 공개(입구 비아 델라 필로타 17), 그 외 요일은 예약 단체 관람만 가능하니 방문 전 공식 사이트에서 휴관일 확인 필수.",
+      "workId": "roman-holiday",
+      "scene": "엔딩 — 각국 기자단 앞 기자회견에서 안 공주와 조가 마지막 눈빛을 나누는 장면",
+      "source": "https://almostginger.com/roman-holiday-filming-locations-rome/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321959/spotchu/spots/i5dq92nxx8gmddvl3oaz.jpg",
+      "imageCredit": {
+        "author": "Orlando Paride",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=88456726"
+      }
+    },
+    {
+      "id": "rome-pantheon-rocca-cafe-roman-holiday-c81f",
+      "title": "판테온 앞 로카 카페 자리",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.8996,
+      "lng": 12.4763,
+      "area": "Via della Rotonda, near Pantheon, Rome",
+      "subject": "판테온 북서쪽 모퉁이, 옛 '로카 카페(Rocca's Café)' 자리 — 안 공주가 처음 샴페인·담배를 즐기며 사진기자 어빙을 만나는 배경",
+      "tip": "판테온 광장 북서쪽 모서리 건물(20번지). 지금은 카페가 아닌 상점이지만 파사드는 남아있어 판테온을 배경에 걸고 찍으면 극중 구도와 비슷하다.",
+      "workId": "roman-holiday",
+      "scene": "로카 카페 테라스에서 안 공주가 첫 샴페인과 담배를 즐기다 사진기자 어빙을 만나는 장면",
+      "source": "https://giggster.com/guide/movie-location/where-was-roman-holiday-filmed",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321961/spotchu/spots/qmujz4dsaszsrjmzejlw.jpg",
+      "imageCredit": {
+        "author": "Hervé S, France",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/125601701@N03/51591276373"
+      }
+    },
+    {
       "id": "rome-ponte-umberto-sunset-9a2c",
       "title": "폰테 움베르토 1세에서 성 베드로 대성당과 테베레강",
       "city": "rome",
@@ -7229,6 +7736,26 @@
         "author": "Dave Hamster",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/14265068@N00/2974933466"
+      }
+    },
+    {
+      "id": "rome-roman-forum-septimius-severus-roman-holiday-9d2a",
+      "title": "포로 로마노 셉티미우스 세베루스 개선문",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.89283,
+      "lng": 12.48474,
+      "area": "Roman Forum, Rome",
+      "subject": "셉티미우스 세베루스 개선문과 사투르누스 신전 열주 — 안 공주가 유적 벤치에서 잠든 채 발견되는 배경",
+      "tip": "포로 로마노·콜로세움 통합권으로 개선문 코앞까지 접근 가능(이른 개장 직후 인파 적음). 무료로는 비아 데이 포리 임페리알리 대로 울타리 밖이나 캄피돌리오 언덕 전망대에서 원경 촬영.",
+      "workId": "roman-holiday",
+      "scene": "진정제 기운에 포로 로마노 유적 벤치에서 잠든 안 공주를 조가 처음 발견하는 오프닝 장면",
+      "source": "https://www.bfi.org.uk/features/roman-holiday-rome-locations-audrey-hepburn-gregory-peck",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321962/spotchu/spots/okwmxpvsbwjx9c2ao6du.jpg",
+      "imageCredit": {
+        "author": "Andy Montgomery",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/50141284@N04/36480204645"
       }
     },
     {
@@ -7275,6 +7802,46 @@
         "author": "Grace.Donaghue",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/30774016@N00/6809920326"
+      }
+    },
+    {
+      "id": "rome-via-della-stamperia-barbershop-roman-holiday-b3e7",
+      "title": "비아 델라 스탐페리아 이발소 자리 (안 공주 단발 장면)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.90109,
+      "lng": 12.48363,
+      "area": "Via della Stamperia, near Trevi Fountain, Rome",
+      "subject": "트레비 분수에서 도보 30초 거리, 안 공주가 긴 머리를 짧게 자른 이발소 실제 외경",
+      "tip": "트레비 분수를 등지고 비아 델라 스탐페리아로 30m만 걸으면 85번지. 지금은 다른 상점이지만 건물 파사드는 그대로 남아있어 트레비 분수 방문 동선에 묶어 촬영하기 좋다.",
+      "workId": "roman-holiday",
+      "scene": "트레비 분수를 지나던 안 공주가 이발소에 들러 긴 머리를 짧게 자르는 명장면",
+      "source": "https://www.spotern.com/en/spot/movie/roman-holiday/75664/the-barber-via-della-stamperia-85-in-roman-holiday",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321970/spotchu/spots/x9va95v3o8fe9q9ox9wp.jpg",
+      "imageCredit": {
+        "author": "FredSeiller",
+        "license": "CC0 1.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=176296816"
+      }
+    },
+    {
+      "id": "rome-via-margutta-roman-holiday-6f1c",
+      "title": "비아 마르구타 51 조의 아파트",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.90838,
+      "lng": 12.47977,
+      "area": "Via Margutta, Rome",
+      "subject": "조 브래들리(그레고리 펙)의 아파트로 등장한 51번지 대형 목재 대문",
+      "tip": "스페인 계단에서 도보 5분 거리의 예술가 골목. 촬영 당시와 같은 51번지 목재 대문 앞에서 인물 사진을 찍기 좋다. 대문 안쪽 중정·계단은 실제 주거지라 출입 불가.",
+      "workId": "roman-holiday",
+      "scene": "안 공주가 조의 아파트에서 밤을 보내고 다음날 아침 이 대문을 나서는 장면",
+      "source": "https://www.untappedcities.com/film-locations-where-audrey-hepburn-gregory-peck-lived-in-roman-holiday/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321971/spotchu/spots/u1xgueqcwsimw8gq5wnj.jpg",
+      "imageCredit": {
+        "author": "StefanoRomeTours",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/73111976@N04/7169946446"
       }
     },
     {
@@ -9028,6 +9595,50 @@
       }
     },
     {
+      "id": "tokyo-cerulean-tower-jujutsu-kaisen-2a9f",
+      "title": "세루리안타워 도큐호텔 (주술회전 성지, 渋谷Cタワー의 모델)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6567,
+      "lng": 139.6988,
+      "area": "시부야구 사쿠라가오카초, セルリアンタワー東急ホテル",
+      "subject": "작중 '渋谷Cタワー' 옥상 전투 장면의 실제 모델로 지목되는 세루리안타워 외관(지상 41층 언급·외형 일치)",
+      "tip": "시부야역 남쪽, 국도246호·수도고속 3호 시부야선 인근 도로 건너편에서 타워 전체를 담을 수 있다. 옥상은 투숙객 전용이라 외부 촬영만 가능.",
+      "lens": "24-70mm",
+      "time": "야간(호텔 야경 명소)",
+      "workId": "jujutsu-kaisen",
+      "scene": "원작 98화, 후시구로 메구미와 이타도리 유지가 협력해 저주사 아와사카 지로를 옥상에서 떨어뜨리고 이누마키와 합류하려는 장면의 배경(渋谷Cタワー)",
+      "source": "https://www.mapple.net/original/235810/?pg=4",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321973/spotchu/spots/hifdupiexmuamvdl8lug.jpg",
+      "imageCredit": {
+        "author": "江戸村のとくぞう",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cerulean_Tower-2.jpg"
+      }
+    },
+    {
+      "id": "tokyo-dogenzaka-2chome-crossing-jujutsu-kaisen-7f1b",
+      "title": "도겐자카 2초메 히가시 교차로 (주술회전 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.65794,
+      "lng": 139.69833,
+      "area": "시부야구 도겐자카 2초메",
+      "subject": "오조 사토루가 시부야 사변 현장에 도착(現着)하는 장면의 배경이 된 도겐자카 2초메 교차로",
+      "tip": "시부야역 A2 출구에서 분카무라도리 방면으로 도보 2~3분. 차량 통행이 많은 교차로이므로 반드시 인도·횡단보도 신호를 지키며 촬영.",
+      "lens": "24-50mm",
+      "time": "낮 시간대",
+      "workId": "jujutsu-kaisen",
+      "scene": "TV애니메이션 2기 31화, 오조 사토루가 시부야 사변 현장에 도착하는 장면의 배경 교차로",
+      "source": "https://furaba-animeseichi.blog.jp/archives/34701794.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321976/spotchu/spots/vzubzbhw27swbyqoqzjq.jpg",
+      "imageCredit": {
+        "author": "Dick Thomas Johnson",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/31029865@N06/22256919172"
+      }
+    },
+    {
       "id": "tokyo-ebisu-higashi-park-toilet-perfect-days-8d2a",
       "title": "에비스히가시공원(문어공원) 마키 후미히코 오징어 화장실 (퍼펙트 데이즈)",
       "city": "tokyo",
@@ -9060,6 +9671,28 @@
       "scene": "히라야마가 동료 타카시와 함께 청소하는 장면의 배경 중 하나 (극중 약 31분경)",
       "verified": "reported",
       "source": "https://tokyotoilet.jp/ebisu_park/"
+    },
+    {
+      "id": "tokyo-fukutoshin-shibuya-platform-jujutsu-kaisen-b62c",
+      "title": "도쿄메트로 부도심선 시부야역 승강장 (주술회전 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6586,
+      "lng": 139.7028,
+      "area": "시부야구 시부야, 도쿄메트로 부도심선 시부야역 지하 5층",
+      "subject": "오조 사토루가 특급 저주령들과 대치하다 결국 '獄門疆(옥문강)'에 봉인당하는 시부야 사변 최대 전환점 장면의 배경이 된 지하 승강장",
+      "tip": "부도심선·한조몬선 개찰구 안쪽(유료 구역)이라 승차권·IC카드 필요. 노란 점자블록 뒤에서 다른 승객 통행을 막지 않는 선에서만 촬영하고, 열차 진입 시 선로 쪽으로 접근하지 말 것.",
+      "lens": "24-35mm",
+      "time": "평일 낮 한산한 시간대",
+      "workId": "jujutsu-kaisen",
+      "scene": "TV애니메이션 2기 8~9화, 오조 사토루가 특급 저주령들과 싸우다 '獄門疆'에 봉인되는 시부야 사변의 핵심 전환점 장면의 배경 승강장",
+      "source": "https://tabimaniajapan.com/culture/jujutsu-kaisen-real-life-guide-how-to-visit-shibuya-incident",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321977/spotchu/spots/domdscthbxic5oqfo02a.jpg",
+      "imageCredit": {
+        "author": "Tadashi Okoshi",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Shibuya_Station_Fukutoshin_Line_platforms_20080614.jpg"
+      }
     },
     {
       "id": "tokyo-hana-yori-dango-ebisu-clock-plaza-c4e1",
@@ -9514,6 +10147,72 @@
         "author": "kevinpoh",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/7679455@N03/4580441509"
+      }
+    },
+    {
+      "id": "tokyo-shibuya-hikarie-jujutsu-kaisen-9c3a",
+      "title": "시부야 히카리에 ShinQs 지하 입구 (주술회전 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.65918,
+      "lng": 139.70369,
+      "area": "시부야구 시부야 2초메, 渋谷ヒカリエ",
+      "subject": "오조 사토루가 시부야 사변 현장에서 결계 '장(帳)'에 갇힌 군중을 목격하는 배경이 된 히카리에 지하 입구·통로",
+      "tip": "시부야역 15번 출구(도큐 덴엔토시선·도쿄메트로 한조몬선·부도심선)로 나오면 바로 연결된다. ShinQs 매장 개찰구 인근 천장·조명 구도가 작중과 유사하니 인파가 적은 평일 오전에 방문.",
+      "lens": "16-35mm",
+      "time": "평일 오전(개점 직후)",
+      "workId": "jujutsu-kaisen",
+      "scene": "시부야 사변 편 도입부, 오조 사토루가 시부야 히카리에 지하 입구에서 결계에 갇힌 할로윈 인파를 목격하는 장면의 배경(작중 표기는 B1F이나 실제 대응 위치는 B3F)",
+      "source": "https://www.pakutaso.com/blog/jujutsukaisen-shibuyajihen.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321978/spotchu/spots/kwetaggcew8ojh1f4gnt.jpg",
+      "imageCredit": {
+        "author": "kurotango Clip",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/54724404@N08/49560961037"
+      }
+    },
+    {
+      "id": "tokyo-shibuya-markcity-jujutsu-kaisen-4e8d",
+      "title": "시부야 마크시티 레스토랑 애비뉴 입구 (주술회전 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.65828,
+      "lng": 139.69881,
+      "area": "시부야구 도겐자카 1초메, 渋谷マークシティ",
+      "subject": "젠인 나오비토가 이끄는 젠인 가문 반이 작전 집결·잠입 지점으로 삼는 장면의 배경이 된 마크시티 레스토랑 애비뉴 입구",
+      "tip": "JR·게이오 이노카시라선 시부야역과 직결. 도겐자카 쪽 자유통로 입구부 계단·통로 구도가 작중과 유사. 출퇴근 시간대는 인파가 많아 피하는 게 좋음.",
+      "lens": "24-35mm",
+      "time": "평일 오전",
+      "workId": "jujutsu-kaisen",
+      "scene": "젠인 나오비토가 이끄는 젠인 가문 반이 작전 집결·잠입 지점으로 삼는 장면의 배경(원작 83화·106화 등장)",
+      "source": "https://www.mapple.net/original/235810/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321981/spotchu/spots/loxlfmmcu757coba8zcd.jpg",
+      "imageCredit": {
+        "author": "Ons",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Shibuya_Mark_City_East.jpg"
+      }
+    },
+    {
+      "id": "tokyo-shibuya109-jujutsu-kaisen-d417",
+      "title": "시부야109 앞 (주술회전 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6596,
+      "lng": 139.69868,
+      "area": "시부야구 도겐자카 2초메, SHIBUYA109 앞",
+      "subject": "료멘 스쿠나의 영역전개 '伏魔御廚子(복마어주자)'로 반경 200m가 초토화되는 장면의 배경이 된 109 앞 거리",
+      "tip": "스크램블 교차로 남서쪽 코너, 109 정면 광장에서 촬영. 시부야에서 가장 붐비는 구역 중 하나이므로 통행에 방해되지 않게 짧게 촬영.",
+      "lens": "16-24mm 광각",
+      "time": "낮 시간대",
+      "workId": "jujutsu-kaisen",
+      "scene": "료멘 스쿠나의 영역전개 '伏魔御廚子'로 109 앞 반경 200m가 초토화되고, 폐허가 된 거리에서 전투가 이어지는 장면의 배경(원작 117화 전후)",
+      "source": "https://www.pakutaso.com/blog/jujutsukaisen-shibuyajihen2.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788321984/spotchu/spots/fsqthu1agvwtxqfvfxi8.jpg",
+      "imageCredit": {
+        "author": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Shibuya_109_Building_20150915.jpg"
       }
     },
     {
@@ -10541,6 +11240,13 @@
       "progress": 0
     },
     {
+      "id": "infernal-affairs",
+      "title": "무간도",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "13---love-live-mv-hongkong",
       "title": "이달의 소녀 1/3 - 지금, 좋아해 (Love & Live) MV",
       "type": "기타",
@@ -10716,6 +11422,13 @@
       "progress": 0
     },
     {
+      "id": "bridget-joness-diary",
+      "title": "브리짓 존스의 일기",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "-london",
       "title": "런던 대표 미디어/영화 랜드마크 씬",
       "type": "영화",
@@ -10886,6 +11599,20 @@
     {
       "id": "joker",
       "title": "조커",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "when-harry-met-sally",
+      "title": "해리가 샐리를 만났을 때",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-devil-wears-prada",
+      "title": "악마는 프라다를 입는다",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -11348,6 +12075,13 @@
     {
       "id": "your-name",
       "title": "너의 이름은.",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "jujutsu-kaisen",
+      "title": "주술회전",
       "type": "애니",
       "spotCount": 1,
       "progress": 0
