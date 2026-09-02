@@ -50,6 +50,10 @@ export default async function RootLayout({
   return (
     <html lang="ko">
       <head>
+        {/* iOS Safari "홈 화면에 추가"가 standalone PWA로 열리려면 이 메타가 반드시 필요.
+            Next 15는 appleWebApp.capable=true에서 이 태그를 더 이상 렌더하지 않고
+            mobile-web-app-capable만 내보내는데, iOS는 그 태그를 인식하지 않는다 → 직접 주입. */}
+        <meta name="apple-mobile-web-app-capable" content="yes" />
         {/* 브랜드 폰트 (design_handoff colors_and_type.css 기준). CDN 로드는 의도된 선택 —
             Phase 1 디자인 단계에서 next/font self-host 전환 검토(성능/프리로드). */}
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
