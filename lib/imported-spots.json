@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T01:57:30.807Z",
+  "generatedAt": "2026-09-02T03:22:32.297Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -4014,6 +4014,46 @@
       }
     },
     {
+      "id": "london-blue-door-notting-hill-7f2a",
+      "title": "노팅힐 파란 대문 (윌리엄의 집)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51691,
+      "lng": -0.20632,
+      "area": "노팅힐, 웨스트본 파크 로드(Westbourne Park Road)",
+      "subject": "극중 윌리엄 태커(휴 그랜트)의 집 현관으로 쓰인 실제 개인 주택의 파란 대문(280 Westbourne Park Road)",
+      "tip": "실제 사람이 거주하는 개인 주택입니다. 인도에 서서 대문만 짧게 촬영하고 초인종을 누르거나 사유지에 들어가지 마세요. 인파가 적은 이른 아침이 좋습니다.",
+      "workId": "notting-hill",
+      "scene": "오렌지주스를 쏟은 안나를 윌리엄이 집으로 데려와 옷을 갈아입히는 장면 등에서 반복적으로 등장하는 그의 집 외관",
+      "source": "https://www.countryandtownhouse.com/travel/where-was-notting-hill-filmed/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319242/spotchu/spots/tlvarjasuw6boyxzlhx2.jpg",
+      "imageCredit": {
+        "author": "Matt Brown",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=132320047"
+      }
+    },
+    {
+      "id": "london-coronet-cinema-notting-hill-9c3f",
+      "title": "코로넷 시네마 (現 코로넷 시어터)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.50854,
+      "lng": -0.19813,
+      "area": "노팅힐 게이트(103 Notting Hill Gate)",
+      "subject": "윌리엄이 안나가 주연한 영화를 보러 가는 동네 극장 — 촬영 당시 실제 영화관, 현재는 공연장(코로넷 시어터)으로 운영",
+      "tip": "노팅힐 게이트역 바로 앞입니다. 차도 건너편 인도에서 극장 정면 파사드와 간판을 함께 촬영하세요.",
+      "workId": "notting-hill",
+      "scene": "윌리엄이 스노클 마스크를 쓰고 안나 옆자리에 앉아 SF 영화를 보는 장면",
+      "source": "https://www.countryandtownhouse.com/travel/where-was-notting-hill-filmed/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319244/spotchu/spots/syzdkgs9tfbydtn3caip.jpg",
+      "imageCredit": {
+        "author": "Edwardx",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Coronet_Cinema,_Notting_Hill_Gate_01.JPG"
+      }
+    },
+    {
       "id": "london-harrow-school-fourth-form-room",
       "title": "해로 스쿨 포스 폼 룸 (윙가르디움 레비오사 교실)",
       "city": "london",
@@ -4373,6 +4413,20 @@
       }
     },
     {
+      "id": "london-orange-juice-corner-notting-hill-e28b",
+      "title": "오렌지주스 스필 코너 (첫 만남 장면)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51675,
+      "lng": -0.20536,
+      "area": "노팅힐, 웨스트본 파크 로드 & 포토벨로 로드 코너",
+      "subject": "윌리엄이 음료를 사서 나오다 안나와 부딪혀 오렌지주스를 쏟는 두 사람의 첫 만남 장면 — 실제 음료를 구입한 코너(303 Westbourne Park Road 인근)",
+      "tip": "웨스트본 파크 로드와 포토벨로 로드가 만나는 모퉁이입니다. 파란 대문 집과 도보 3분 거리라 함께 묶어 촬영하기 좋습니다.",
+      "workId": "notting-hill",
+      "scene": "안나 스콧과의 첫 만남 — 오렌지주스를 쏟고 그의 집에서 옷을 갈아입히는 장면의 시작점",
+      "source": "https://movie-locations.com/movies/n/Notting-Hill.php"
+    },
+    {
       "id": "london-paddington-windsor-gardens-chalcot-crescent",
       "title": "패딩턴 윈저 가든스 촬영지 (찰콧 크레센트)",
       "city": "london",
@@ -4394,6 +4448,40 @@
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Chalcot_Crescent_2024-11-22.jpg"
       }
+    },
+    {
+      "id": "london-portobello-road-market-notting-hill-b6e1",
+      "title": "포토벨로 로드 마켓 오프닝 내레이션 거리",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5152,
+      "lng": -0.20479,
+      "area": "노팅힐, 포토벨로 로드(179 Portobello Road 인근, 듀크 오브 웰링턴 펍 앞)",
+      "subject": "오프닝 시퀀스에서 윌리엄이 꽃다발을 들고 걸어가는 마켓 거리 — 장면 속 첫 랜드마크로 등장하는 듀크 오브 웰링턴 펍 앞",
+      "tip": "토요일이 마켓이 가장 활기찬 날입니다. 펍 간판과 알록달록한 마켓 스톨을 함께 담으면 오프닝 몽타주와 비슷한 구도가 나옵니다.",
+      "workId": "notting-hill",
+      "scene": "오프닝 내레이션 — 윌리엄이 포토벨로 로드를 걸으며 계절이 바뀌는 몽타주",
+      "source": "https://almostginger.com/notting-hill-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319246/spotchu/spots/prtlyh3xpasidesrpwsu.jpg",
+      "imageCredit": {
+        "author": "bryan...",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/91049143@N00/40324961895"
+      }
+    },
+    {
+      "id": "london-rosmead-garden-notting-hill-4a7d",
+      "title": "로즈미드 가든 (담장 넘기 장면)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51254,
+      "lng": -0.20932,
+      "area": "노팅힐, 로즈미드 로드(Rosmead Road)",
+      "subject": "윌리엄과 안나가 밤에 담을 넘어 들어가는 사설 정원 광장 — 입주민 전용 정원의 외부 울타리·게이트",
+      "tip": "입주민 전용 사설 정원이라 내부 출입이 불가합니다. 로즈미드 로드 인도에서 울타리·게이트 너머로만 촬영하세요.",
+      "workId": "notting-hill",
+      "scene": "\"난 그저 한 소년 앞에 선 한 소녀일 뿐이에요\" 대사 직전, 두 사람이 담을 넘어 정원에 들어가는 장면",
+      "source": "https://travellerspen.blog/rosmead-garden-london-notting-hill-movie/"
     },
     {
       "id": "london-sherlock-221b-north-gower-6a8b",
@@ -4577,6 +4665,26 @@
         "author": "No Swan So Fine",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:25_Richmond_Green,_Richmond,_June_2022.jpg"
+      }
+    },
+    {
+      "id": "london-travel-bookshop-notting-hill-3d9c",
+      "title": "노팅힐 '트래블 북 컴퍼니' 서점 촬영지",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51467,
+      "lng": -0.20418,
+      "area": "노팅힐, 포토벨로 로드(142 Portobello Road)",
+      "subject": "윌리엄이 운영하는 여행 전문 서점 외관 촬영에 실제로 쓰인 상점 정면(당시 골동품점, 현재는 노팅힐 기념품점)",
+      "tip": "포토벨로 로드 건너편 인도에서 상점 정면이 프레임에 들어오게 촬영하세요. 주말 마켓 시간대는 인파가 매우 많습니다.",
+      "workId": "notting-hill",
+      "scene": "안나 스콧이 서점에 들어와 윌리엄과 처음 마주치는 장면의 서점 외관",
+      "source": "https://movie-locations.com/movies/n/Notting-Hill.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319250/spotchu/spots/pmfxblozxggfkptgpwln.jpg",
+      "imageCredit": {
+        "author": "Ewan-M",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=137268392"
       }
     },
     {
@@ -5426,6 +5534,40 @@
       }
     },
     {
+      "id": "newyork-20-exchange-place-joker-f2a7",
+      "title": "20 익스체인지 플레이스 - 고담은행 (조커 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.70547,
+      "lng": -74.00951,
+      "area": "맨해튼 파이낸셜 디스트릭트",
+      "subject": "극중 이웃 소피가 근무하는 '고담은행(Gotham Bank)' 외관으로 쓰인 1931년 준공 아르데코 마천루 20 익스체인지 플레이스(옛 시티은행 농민신탁 빌딩)",
+      "tip": "지하철 2·3호선 Wall St역에서 도보 3분, 월스트리트와 익스체인지 플레이스 교차 지점. 건물 하단부 청동 장식과 회전문이 볼거리이며, 좁은 도로라 올려다보는 구도로 촬영하기 좋다. 평일 업무시간대는 유동인구가 많으니 이른 아침 추천.",
+      "workId": "joker",
+      "scene": "이웃 소피 뒤몽이 근무하는 은행 건물 외관 — 아서가 소피를 지켜보거나 뒤따르는 장면의 배경",
+      "source": "https://nycinfilm.com/2024/10/14/joker-2019/"
+    },
+    {
+      "id": "newyork-brooklyn-army-terminal-joker-b6e3",
+      "title": "브루클린 육군 터미널 - 아캄 주립병원 (조커 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.64506,
+      "lng": -74.02549,
+      "area": "브루클린 선셋파크(Sunset Park)",
+      "subject": "극중 '아캄 주립병원(Arkham State Hospital)' 외관으로 쓰인 1919년 준공 실존 건물 브루클린 육군 터미널(Brooklyn Army Terminal) 정문 아치",
+      "tip": "지하철역은 없어 B35·B37 버스나 도보로 접근. 58번가 정문 앞 광장에서 아치형 입구와 웅장한 파사드를 촬영할 수 있다. 부지 내 화물철도가 실제 운행 중이므로 선로 근처에는 접근하지 말고 공공 보도·광장에서만 촬영할 것.",
+      "workId": "joker",
+      "scene": "아서가 어머니 페니의 정신병원 진료 기록을 확인하러 방문하는 아캄 주립병원 외경, 영화 후반 아서가 이송되는 장면",
+      "source": "https://www.untappedcities.com/see-the-nyc-filming-locations-in-joker-starring-joaquin-phoenix/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319253/spotchu/spots/cglefdacxh3sg6iw1f6y.jpg",
+      "imageCredit": {
+        "author": "Timothy Vogel from Queens, NY",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=4444255"
+      }
+    },
+    {
       "id": "newyork-dumbo-manhattan-bridge-a81e",
       "title": "덤보 워싱턴 스트리트 맨해튼 브리지 뷰포인트",
       "city": "newyork",
@@ -5518,6 +5660,26 @@
       }
     },
     {
+      "id": "newyork-kings-theatre-joker-d19c",
+      "title": "킹스 씨어터 - 웨인홀 (조커 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.64601,
+      "lng": -73.95736,
+      "area": "브루클린 플랫부시(Flatbush)",
+      "subject": "극중 자선행사장 '웨인홀(Wayne Hall)' 실내(로비·발코니 객석)로 쓰인 1929년 개관·2015년 복원된 역사적 극장 킹스 씨어터(Kings Theatre)",
+      "tip": "지하철 2·5호선 Beverley Rd역에서 도보 2분. 로비·객석은 실제 공연 관람 시 볼 수 있고(영화 속 외부 장면은 뉴저지에서 별도 촬영), 평소에는 매표소 앞 인도에서 화려한 마퀴(marquee)와 파사드를 촬영할 수 있다.",
+      "workId": "joker",
+      "scene": "찰리 채플린 <모던 타임즈> 상영 자선행사에서 아서가 종업원으로 위장해 발코니 객석에 잠입하는 장면",
+      "source": "https://cinematreasures.org/theaters/1360",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319254/spotchu/spots/galcf0qhjx4ylalj56uz.jpg",
+      "imageCredit": {
+        "author": "theatretalks",
+        "license": "Public domain 1.0",
+        "source": "https://www.flickr.com/photos/153295164@N05/51467144404"
+      }
+    },
+    {
       "id": "newyork-staple-street-skybridge-tribeca-b74d",
       "title": "트라이베카 스테이플 스트리트 공중회랑 포토스팟",
       "city": "newyork",
@@ -5562,6 +5724,20 @@
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Chrysler_Building_by_David_Shankbone_Retouched.jpg"
       }
+    },
+    {
+      "id": "newyork-twin-donut-joker-c4d1",
+      "title": "트윈 도넛 코너 (조커 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.88063,
+      "lng": -73.88349,
+      "area": "브롱크스 노우드(Norwood)",
+      "subject": "아서와 소피가 커피를 마시던 도넛가게 '트윈 도넛(Twin Donut)' 자리의 코너 건물 (현재 스타벅스 영업 중)",
+      "tip": "지하철 4호선 Mosholu Pkwy역 또는 208 St역에서 도보 이동. 제롬가(Jerome Ave)와 이스트208번가 교차로 코너 매장으로, 현재 스타벅스가 들어섰지만 코너창·차양 구조는 영화 속 모습과 동일하다. 맞은편 인도에서 코너 파사드를 정면으로 담으면 영화 장면과 비슷한 구도가 나온다.",
+      "workId": "joker",
+      "scene": "실패한 스탠드업 공연 후 아서가 이웃 소피 뒤몽과 도넛가게에서 커피를 마시며 가까워지는 장면",
+      "source": "https://movie-locations.com/movies/j/Joker-2019.php"
     },
     {
       "id": "okinawa-azama-sunsun-checkitout-d87e",
@@ -6269,6 +6445,52 @@
       }
     },
     {
+      "id": "paris-chevalier-de-la-barre-steps-midnight-in-paris-a075",
+      "title": "몽마르트르 슈발리에 드 라 바르 거리 계단 (미드나잇 인 파리)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8874,
+      "lng": 2.3448,
+      "area": "18구 몽마르트르, rue du Chevalier-de-La-Barre",
+      "subject": "사크레쾨르 대성당 옆에서 뤼 라마르크 방향으로 내려가는 계단길",
+      "tip": "계단 위쪽에서 사크레쾨르 돔을 배경 삼아 내려가는 구도가 극중 장면과 동일. 관광객이 많으니 이른 아침이나 노을 무렵 추천. 계단은 보행 전용이라 안전하게 촬영 가능.",
+      "lens": "24-35mm",
+      "time": "노을 무렵",
+      "workId": "midnight-in-paris",
+      "scene": "길과 아드리아나가 사크레쾨르 대성당 옆 계단을 걸어 내려오며 대화하는 장면",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/m/Midnight-In-Paris.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319260/spotchu/spots/jmmfbeirxoisg92px1x5.jpg",
+      "imageCredit": {
+        "author": "Renée Kools",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=197704279"
+      }
+    },
+    {
+      "id": "paris-deyrolle-rue-du-bac-midnight-in-paris-4e8d",
+      "title": "메종 드루아욜 (미드나잇 인 파리)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.85646,
+      "lng": 2.32638,
+      "area": "7구 rue du Bac",
+      "subject": "1831년부터 이어진 박제 전문점 드루아욜의 간판·진열창 외관",
+      "tip": "간판과 쇼윈도가 포토포인트. 실제 영업 중인 상점이므로 내부 촬영은 매장 방침을 따르고, 외관은 rue du Bac 인도에서 촬영.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "midnight-in-paris",
+      "scene": "길이 초현실주의 예술가들(달리·만 레이·부뉴엘)과의 저녁 파티에서 영화 아이디어를 이야기하는 장면",
+      "verified": "reported",
+      "source": "https://almostginger.com/midnight-in-paris-film-locations-paris/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319264/spotchu/spots/yfytbwdcyfvnbqyfaeeu.jpg",
+      "imageCredit": {
+        "author": "flightlog",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=28795686"
+      }
+    },
+    {
       "id": "paris-emily-in-paris-estrapade-c419",
       "title": "에스트라파드 광장 (에밀리 인 파리 아파트·레스토랑)",
       "city": "paris",
@@ -6416,6 +6638,52 @@
       }
     },
     {
+      "id": "paris-musee-orangerie-midnight-in-paris-d19e",
+      "title": "오랑주리 미술관 (미드나잇 인 파리)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.86378,
+      "lng": 2.32253,
+      "area": "1구 콩코르드 광장, 튈르리 정원",
+      "subject": "모네 수련 연작이 전시된 오랑주리 미술관의 팔각형 건물 외관",
+      "tip": "튈르리 정원 남서쪽 끝, 센강변에 접한 팔각형 건물 외관이 포토포인트. 내부 수련 전시실 촬영은 미술관 규정을 사전 확인할 것.",
+      "lens": "24-35mm",
+      "time": "오후",
+      "workId": "midnight-in-paris",
+      "scene": "길 일행이 모네 수련 전시를 보다가, 길이 폴의 잘못된 설명을 바로잡으며 앞지르는 장면",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/m/Midnight-In-Paris.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319265/spotchu/spots/zrt13kealwkd24wfshir.jpg",
+      "imageCredit": {
+        "author": "Andy Hay",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/29172291@N00/20335130783"
+      }
+    },
+    {
+      "id": "paris-musee-rodin-garden-midnight-in-paris-b3c7",
+      "title": "로댕 미술관 정원 (미드나잇 인 파리)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.85528,
+      "lng": 2.31583,
+      "area": "7구 바렌, Musée Rodin",
+      "subject": "로댕 미술관 정원 산책로와 오텔 비롱 건물 — 극중 폴 일행이 정원을 거니는 장면의 배경",
+      "tip": "정원은 별도 입장권 필요(미술관 티켓과 별도로 정원 전용권도 있음). '생각하는 사람' 등 조각상과 오텔 비롱 건물을 함께 담으면 극중 구도와 비슷하다. 평일 오전이 한산하다.",
+      "lens": "24-70mm",
+      "time": "오전",
+      "workId": "midnight-in-paris",
+      "scene": "길·이네즈·폴·캐롤 일행이 로댕 미술관 정원을 거닐다, 폴이 로댕에 대해 잘못 설명하고 가이드(카를라 브루니 분)에게 정정당하는 장면",
+      "verified": "reported",
+      "source": "https://www.solosophie.com/midnight-in-paris-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319268/spotchu/spots/iw0nw8wmw9xd32usf3fc.jpg",
+      "imageCredit": {
+        "author": "Douglas O'Brien from Canada",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Jardin_du_Mus%C3%A9e_Rodin,_Paris_14_June_2015.jpg"
+      }
+    },
+    {
       "id": "paris-palais-garnier-escalier-9c2f",
       "title": "팔레 가르니에(파리 오페라) 그랑 에스칼리에",
       "city": "paris",
@@ -6433,6 +6701,29 @@
         "author": "Diego Delso",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:%C3%93pera,_Par%C3%ADs,_Francia,_2022-10-31,_DD_54-56_HDR.jpg"
+      }
+    },
+    {
+      "id": "paris-palais-royal-grand-vefour-midnight-in-paris-c942",
+      "title": "팔레 루아얄 르 그랑 베푸르 (미드나잇 인 파리)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8662,
+      "lng": 2.33798,
+      "area": "1구 팔레 루아얄, Galerie de Beaujolais",
+      "subject": "18세기부터 이어진 레스토랑 르 그랑 베푸르의 채색 유리·금박 외관",
+      "tip": "팔레 루아얄 정원의 회랑(무료 개방)을 걸으며 레스토랑의 고전적인 채색 유리창과 금박 장식을 촬영할 수 있다. 실제 영업 중인 미쉐린 레스토랑이므로 회랑 통로에서 외관만 촬영.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "midnight-in-paris",
+      "scene": "길과 이네즈가 이네즈의 부모와 점심을 먹던 중 폴이 처음 등장해 미술사 지식을 뽐내는 장면",
+      "verified": "reported",
+      "source": "https://www.solosophie.com/midnight-in-paris-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319272/spotchu/spots/eaigmzsgcbrbelysenib.jpg",
+      "imageCredit": {
+        "author": "Mbzt",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:P1120933_Paris_Ier_Palais-Royal_galerie_de_Beaujolais_rwk.JPG"
       }
     },
     {
@@ -6456,6 +6747,29 @@
         "author": "Lexe-I",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/35243930@N08/4102119861"
+      }
+    },
+    {
+      "id": "paris-polidor-restaurant-midnight-in-paris-6f2a",
+      "title": "폴리도르 레스토랑 (미드나잇 인 파리)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.84972,
+      "lng": 2.34,
+      "area": "6구 라탱 지구, rue Monsieur-le-Prince",
+      "subject": "1845년부터 이어진 비스트로 폴리도르의 외관",
+      "tip": "저녁에 조명이 켜지면 붉은 차양과 간판이 살아난다. 실제 영업 중인 레스토랑이므로 손님 통행을 방해하지 않는 선에서 외관만 촬영.",
+      "lens": "35-50mm",
+      "time": "초저녁",
+      "workId": "midnight-in-paris",
+      "scene": "자정에 도착한 푸조에서 내린 길이 파티장에 들어가 어니스트 헤밍웨이를 처음 만나 자신의 소설을 이야기하는 장면",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Polidor",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319277/spotchu/spots/jorsu1zhwnmgyal0sxkd.jpg",
+      "imageCredit": {
+        "author": "Philippe Alès",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=33425373"
       }
     },
     {
@@ -7392,8 +7706,8 @@
       "title": "용산 백빈건널목 땡땡거리 (나의 아저씨)",
       "city": "seoul",
       "category": "drama",
-      "lat": 37.5255,
-      "lng": 126.9657,
+      "lat": 37.5251,
+      "lng": 126.9608,
       "area": "용산 백빈건널목, 한강로3가",
       "subject": "백빈건널목과 땡땡거리 철길 풍경",
       "tip": "위치는 근사치(구역 수준) — 현장에서 안전한 공공 보행로 구도를 확인하세요. 선로·건널목 내부에 진입하거나 통행을 방해하지 마세요.",
@@ -7419,6 +7733,20 @@
       "source": "https://english.visitseoul.net/hallyu/Seoul-as-Seen-in-the-Romantic-TV-Series-Start-Up/ENN036494"
     },
     {
+      "id": "seoul-doejissal-super-parasite-2b7c",
+      "title": "돼지쌀슈퍼 (기생충 '우리슈퍼')",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5568,
+      "lng": 126.9616,
+      "area": "마포구 아현동",
+      "subject": "극중 '우리슈퍼'로 등장한 실제 구멍가게 돼지쌀슈퍼의 입구와 파라솔 자리",
+      "tip": "지하철 2·5호선 충정로역 6번 출구에서 도보 약 10분, 아현동 가구거리 인근. 실제 영업 중인 가게이므로 손님·주민 통행을 막지 않게 매장 밖 도로에서 촬영한다.",
+      "workId": "parasite",
+      "scene": "기우가 친구 민혁에게 박사장 딸 과외 자리를 제안받는 영화 초반 술자리 장면",
+      "source": "https://mediahub.seoul.go.kr/archives/1268956"
+    },
+    {
       "id": "seoul-eungbongsan-pavilion-seongsu-bridge-e89c",
       "title": "응봉산 팔각정 성수대교 야경 촬영 포인트",
       "city": "seoul",
@@ -7438,6 +7766,23 @@
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Seongsu_bridge_night.JPG"
       }
+    },
+    {
+      "id": "seoul-excon-venture-tower-yeouido-my-mister-7d5c",
+      "title": "익스콘벤처타워 (나의 아저씨 '노조미' 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5276,
+      "lng": 126.9195,
+      "area": "서울 영등포구 여의도동(은행로 3)",
+      "subject": "박동훈이 상납받은 돈봉투 문제로 갈등하는 장면이 촬영된 이자카야 '노조미'가 있던 익스콘벤처타워 지하 상가 입구",
+      "tip": "국회의사당역(9호선)에서 도보 2~3분, 역과 직선거리 약 165m. 은행로변 오피스 빌딩 지하 입구를 촬영한다. 방영 후 시간이 지나 실제 입점 상가는 바뀌었을 수 있어 건물 외경 위주로 촬영할 것. 좌표는 건물 단위 근사치.",
+      "lens": "24-35mm",
+      "time": "낮~초저녁",
+      "workId": "my-mister",
+      "scene": "2화, 박동훈이 뇌물로 받은 돈봉투 문제로 갈등하다 계획을 접는 장면",
+      "verified": "reported",
+      "source": "https://ififollowme.blogspot.com/2019/08/my-mister-nozomi.html"
     },
     {
       "id": "seoul-g-guesthouse-itaewon-class-7c2e",
@@ -7517,6 +7862,37 @@
       }
     },
     {
+      "id": "seoul-huamdong-dodak-bridge-parasite-e29d",
+      "title": "후암동 도닥다리 계단 (기생충 남매 말다툼 장면)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5484,
+      "lng": 126.9823,
+      "area": "용산구 후암동",
+      "subject": "폭우 속 귀갓길, 기정과 기우가 말다툼을 벌이는 장면이 촬영된 후암동 '도닥다리' 계단",
+      "tip": "서울역 방면에서 후암동 종점행 마을버스를 타고 종점 하차 후 남산 방향 오르막을 도보로 오르면 도착. 가파른 주택가 계단이니 우천 시 미끄럼에 주의한다.",
+      "workId": "parasite",
+      "scene": "폭우 속 귀갓길 도닥다리 계단에서 기정과 기우가 짧게 언쟁하는 장면",
+      "source": "https://www.mt.co.kr/tech/2020/02/13/2020021217182341555"
+    },
+    {
+      "id": "seoul-hy-building-gangnamdaero-my-mister-b04a",
+      "title": "HY(옛 한국야쿠르트) 본사 (나의 아저씨 '삼안이엔씨' 외경)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5145,
+      "lng": 127.0196,
+      "area": "서울 서초구 잠원동(강남대로 577)",
+      "subject": "극중 박동훈·이지안이 근무하는 회사 '삼안이엔씨' 외경으로 쓰인 HY(옛 한국야쿠르트) 본사 건물",
+      "tip": "신사역(3호선/신분당선)에서 도보 약 4분. 실제 운영 중인 기업 사옥이므로 정문 앞 인도에서 외경만 촬영하고 출입하지 않는다. 좌표는 건물 단위 근사치.",
+      "lens": "35-50mm",
+      "time": "낮 시간대",
+      "workId": "my-mister",
+      "scene": "2화, 박동훈이 회사 건물 앞에서 이지안을 기다리는 장면",
+      "verified": "reported",
+      "source": "https://ififollowme.blogspot.com/2019/06/my-mister-korea-yakult.html"
+    },
+    {
       "id": "seoul-hyehwa-station-dalgona-alley-c81a",
       "title": "혜화역 2번 출구 달고나 골목 (오징어 게임 연관 명소)",
       "city": "seoul",
@@ -7534,6 +7910,26 @@
         "author": "Gipe0001",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=6593269"
+      }
+    },
+    {
+      "id": "seoul-jahamun-tunnel-stairs-parasite-8f3a",
+      "title": "자하문터널 계단 (기생충 폭우 하산 장면)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5919,
+      "lng": 126.9655,
+      "area": "종로구 청운동",
+      "subject": "기택 가족이 폭우 속 박사장 집에서 도망치듯 내려오는 장면 속 계단과 자하문터널 입구",
+      "tip": "지하철 3호선 경복궁역 3번 출구에서 버스로 환승해 '자하문터널입구·석파정' 정류장 하차 후 도보 3분. 청운동 방향 계단 초입에 서울시가 설치한 포토존에서 계단과 터널 입구를 함께 담을 수 있다.",
+      "workId": "parasite",
+      "scene": "박사장 집에서 쫓기듯 나온 기택 가족 세 사람이 폭우 속 계단을 뛰어 내려가 자하문터널을 통과하는 장면",
+      "source": "https://mediahub.seoul.go.kr/archives/1268956",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319351/spotchu/spots/aqjqhhjulavw5a3upqrm.jpg",
+      "imageCredit": {
+        "author": "Aatu Dorochenko",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Parasite_filming_location.jpg"
       }
     },
     {
@@ -7694,6 +8090,43 @@
       "source": "https://mediahub.seoul.go.kr/archives/2003156"
     },
     {
+      "id": "seoul-sejong-center-my-mister-e29f",
+      "title": "세종문화회관 (나의 아저씨 통화 장면)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5725,
+      "lng": 126.9756,
+      "area": "서울 종로구 세종로",
+      "subject": "박동훈이 퇴근길 강윤희와 통화하는 장면이 촬영된 세종문화회관 앞",
+      "tip": "광화문역 8번 출구 인근. 세종문화회관 대극장 전면 계단·파사드를 배경으로 삼는다. 저녁 시간대엔 광화문광장 조명과 함께 담을 수 있다.",
+      "lens": "24-70mm",
+      "time": "해질녘~야간",
+      "workId": "my-mister",
+      "scene": "1화, 박동훈이 세종문화회관 앞에서 강윤희와 전화 통화를 하는 장면",
+      "verified": "reported",
+      "source": "https://ififollowme.blogspot.com/2019/05/my-mister-sejong-center-for-performing.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319279/spotchu/spots/pzkwkbw8z0tbqq4dhzip.jpg",
+      "imageCredit": {
+        "author": "YellowTurtle9",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sejong_Center_for_the_Performing_Arts(20240413).jpg"
+      }
+    },
+    {
+      "id": "seoul-seongbukdong-seonjamro-parasite-3c8b",
+      "title": "성북동 선잠로8길 오르막 (박사장 집 가는 길)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.6003,
+      "lng": 126.9973,
+      "area": "성북구 성북동",
+      "subject": "기우가 과외 면접을 보러 박사장 집으로 처음 걸어 올라가던 언덕길 골목",
+      "tip": "지하철 4호선 한성대입구역 6번 출구에서 마을버스(성북03 등)로 성북동 대사관저 밀집 지역까지 이동 후 도보. 조용한 주거·대사관저 지역이라 이른 시간대에 짧게 촬영한다.",
+      "workId": "parasite",
+      "scene": "기우가 민혁 소개로 박사장 집에 과외 면접을 보러 처음 찾아가는 오르막길 장면",
+      "source": "https://www.insight.co.kr/news/267759"
+    },
+    {
       "id": "seoul-seoul-station-culture-station-284-c92f",
       "title": "연상호 애니메이션 서울역의 무대 구 서울역사 뷰포인트",
       "city": "seoul",
@@ -7729,6 +8162,43 @@
       "workId": "goblin",
       "scene": "김신과 저승사자가 나란히 걷는 슬로모션 장면 등으로 알려진 그래피티 터널",
       "source": "https://tongblog.sdm.go.kr/4814"
+    },
+    {
+      "id": "seoul-sinjeongnegeori-station-my-mister-c3d1",
+      "title": "신정네거리역 4번 출구 (나의 아저씨 '후계역')",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5212,
+      "lng": 126.8531,
+      "area": "서울 양천구 신정동",
+      "subject": "극중 가상의 '후계역'으로 등장한 신정네거리역(2호선) 4번 출구 — 박동훈과 이지안이 함께 등장하는 출퇴근길 장면의 배경",
+      "tip": "실제 역명은 신정네거리역이며 촬영 당시 출구 표지판을 극중 '후계역'으로 바꿔 달았다. 4번 출구 계단 정면에서 위쪽을 향해 담으면 극중 구도와 비슷하다. 좌표는 역 단위 근사치이므로 현장에서 출구 번호를 확인할 것.",
+      "lens": "24-35mm",
+      "time": "저녁 퇴근 시간대(18:00-20:00)",
+      "workId": "my-mister",
+      "scene": "1화, 박동훈과 이지안이 같은 열차에서 내려 나란히 '후계역'을 나서는 장면",
+      "verified": "reported",
+      "source": "https://ififollowme.blogspot.com/2019/04/my-mister-sinjeongnegeori-station.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319284/spotchu/spots/up1tabo6nfmbw0hvqa8w.jpg",
+      "imageCredit": {
+        "author": "LERK",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=75549700"
+      }
+    },
+    {
+      "id": "seoul-sky-pizza-noryangjin-parasite-9a1f",
+      "title": "스카이피자 (기생충 '피자시대')",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5096,
+      "lng": 126.9371,
+      "area": "동작구 노량진동",
+      "subject": "극중 피자 상자 접기 아르바이트 장소 '피자시대'로 나온 실제 피자가게 스카이피자 외관",
+      "tip": "지하철 1·9호선 노량진역 6번 출구에서 도보 약 10분, 노량진 고시촌 언덕길에 위치. 실제 영업 매장이므로 영업시간(매일 10:00~22:00) 확인 후 방문한다.",
+      "workId": "parasite",
+      "scene": "기택 가족 네 명이 피자 상자를 접다 매니저에게 항의받는 영화 초반 아르바이트 장면",
+      "source": "https://mediahub.seoul.go.kr/archives/1268956"
     },
     {
       "id": "seoul-the-classic-yonsei-yeonhuigwan-c3d4",
@@ -7780,6 +8250,23 @@
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/42438955@N05/7975193353"
       }
+    },
+    {
+      "id": "seoul-village-brother-mokdong-my-mister-19e6",
+      "title": "빌리지브라더 (나의 아저씨 삼형제 술집)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5254,
+      "lng": 126.8724,
+      "area": "서울 양천구 목1동(오목로 313-5)",
+      "subject": "박동훈·상훈·기훈 삼형제가 함께 술잔을 기울이던 술집 '빌리지브라더'",
+      "tip": "오목교역(5호선)과 현대백화점 목동점 인근 오목로 상가 골목에 위치. 영업 중인 실제 술집이므로 방문 전 영업시간을 확인하고 매장 앞 골목에서 간판을 함께 담는다. 좌표는 근사치이며 상호가 바뀌었을 수 있다.",
+      "lens": "35mm",
+      "time": "저녁~야간",
+      "workId": "my-mister",
+      "scene": "1화, 삼형제가 동네 술집에서 함께 술을 마시는 장면",
+      "verified": "reported",
+      "source": "https://ififollowme.blogspot.com/2019/05/my-mister-village-brother.html"
     },
     {
       "id": "seoul-vincenzo-seewon-plaza-geumga-5c8f",
@@ -8541,6 +9028,40 @@
       }
     },
     {
+      "id": "tokyo-ebisu-higashi-park-toilet-perfect-days-8d2a",
+      "title": "에비스히가시공원(문어공원) 마키 후미히코 오징어 화장실 (퍼펙트 데이즈)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.64816,
+      "lng": 139.71122,
+      "area": "渋谷区 恵比寿 (Shibuya-ku Ebisu)",
+      "subject": "마키 후미히코 설계, 붉은 문어 놀이기구가 있는 '문어공원(タコ公園)' 안의 새하얀 '오징어 화장실(イカのトイレ)' — 극중 초반 히라야마의 첫 청소 루틴 시퀀스에 등장",
+      "tip": "빨간 문어 놀이기구와 흰 화장실을 한 프레임에 담으면 색 대비가 좋다. 오전 순광 추천, 에비스역에서 도보 약 10분. 이용자 얼굴·내부 촬영 금지, 출입 동선 비우기.",
+      "lens": "24-35mm",
+      "time": "오전",
+      "workId": "perfect-days",
+      "scene": "영화 초반 히라야마의 첫 청소 루틴 시퀀스에 등장하는 화장실 (극중 약 7분경)",
+      "verified": "reported",
+      "source": "https://tokyotoilet.jp/ebisu_east_park/"
+    },
+    {
+      "id": "tokyo-ebisu-park-toilet-perfect-days-4b6c",
+      "title": "에비스공원 가타야마 마사미치 콘크리트 화장실 (퍼펙트 데이즈)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.64711,
+      "lng": 139.70685,
+      "area": "渋谷区 恵比寿西 (Shibuya-ku Ebisu-nishi)",
+      "subject": "가타야마 마사미치(Wonderwall®) 설계 '曖昧な領域(애매한 영역)' 공중화장실 — 콘크리트 벽 15장을 어긋나게 배치한 현대판 뒷간. 극중 히라야마가 동료 청소부 타카시와 함께 청소하는 장면 배경 중 하나",
+      "tip": "공원 산책로 입구 쪽에서 오후 비스듬한 햇빛을 받으면 콘크리트 벽들이 만드는 기하학적 그림자가 뚜렷하다. 에비스역에서 도보 약 7분. 실제 이용 중인 화장실이므로 이용자 얼굴·내부는 찍지 말 것.",
+      "lens": "24-35mm",
+      "time": "오후 (경사광)",
+      "workId": "perfect-days",
+      "scene": "히라야마가 동료 타카시와 함께 청소하는 장면의 배경 중 하나 (극중 약 31분경)",
+      "verified": "reported",
+      "source": "https://tokyotoilet.jp/ebisu_park/"
+    },
+    {
       "id": "tokyo-hana-yori-dango-ebisu-clock-plaza-c4e1",
       "title": "에비스 가든 플레이스 시계광장 (꽃보다 남자)",
       "city": "tokyo",
@@ -8625,6 +9146,23 @@
       "scene": "극중 도서관이 있던 언덕으로 설정된 공원 — 세이지의 고백 장면 배경 언덕으로도 소개됨",
       "verified": "reported",
       "source": "https://seichimap.jp/works/mimisuma/"
+    },
+    {
+      "id": "tokyo-jingu-dori-park-toilet-perfect-days-a37e",
+      "title": "진구도리공원 안도 다다오 아마야도리 화장실 (퍼펙트 데이즈)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.66415,
+      "lng": 139.70199,
+      "area": "渋谷区 神宮前 (Shibuya-ku Jingumae)",
+      "subject": "안도 다다오 설계 'あまやどり(비 피하기)' — 큰 처마가 돌출된 원형 평면에 격자 외벽을 두른 화장실. 히라야마의 청소 루틴 몽타주에 등장",
+      "tip": "공원 입구에서 정면으로 서면 원형 건물 전체 실루엣이 담긴다. 격자벽 틈으로 빛이 새어 나오는 저녁 무렵이 '비 피하기'라는 이름의 분위기와 잘 어울린다. 시부야역에서 도보 약 3분.",
+      "lens": "16-24mm",
+      "time": "저녁 무렵",
+      "workId": "perfect-days",
+      "scene": "히라야마의 청소 루틴 몽타주에 등장, '아마야도리' 이름 그대로 원형 처마가 특징인 화장실 (극중 약 45분경)",
+      "verified": "reported",
+      "source": "https://tokyotoilet.jp/jingu-dori_park/"
     },
     {
       "id": "tokyo-joganji-temple-lost-in-translation-9b2c",
@@ -8811,6 +9349,40 @@
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/81497476@N00/52507880986"
       }
+    },
+    {
+      "id": "tokyo-nabeshima-shoto-park-toilet-perfect-days-5f91",
+      "title": "나베시마 쇼토공원 구마 겐고 목조 화장실 (퍼펙트 데이즈)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.65971,
+      "lng": 139.69098,
+      "area": "渋谷区 松濤 (Shibuya-ku Shoto)",
+      "subject": "구마 겐고 설계 '森のコミチ(숲의 오솔길)' — 삼나무 루버로 감싼 5개의 작은 오두막이 숲길처럼 이어진 목조 화장실군. 히라야마의 도쿄 공중화장실 청소 루틴 몽타주에 등장",
+      "tip": "공원 연못 쪽에서 나무숲을 배경으로 담으면 계절감이 산다. 특히 가을 단풍철 오전이 좋고, 평일 오전이 한산해 사람 없는 구도를 잡기 쉽다. 신센역에서 도보 약 8분.",
+      "lens": "24-50mm",
+      "time": "오전 (특히 가을)",
+      "workId": "perfect-days",
+      "scene": "히라야마의 도쿄 공중화장실 청소 루틴 몽타주에 등장 (극중 약 12분경)",
+      "verified": "reported",
+      "source": "https://tokyotoilet.jp/nabesima_park/"
+    },
+    {
+      "id": "tokyo-nanagodori-park-toilet-perfect-days-92be",
+      "title": "나나고도리공원 구형 하이 토일렛 화장실 (퍼펙트 데이즈)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.67902,
+      "lng": 139.67463,
+      "area": "渋谷区 幡ヶ谷 (Shibuya-ku Hatagaya)",
+      "subject": "사토 카즈오(Disruption Lab) 설계, 음성으로 조작하는 비접촉식 '하이 토일렛' — 새하얀 구체가 떠 있는 듯한 형태. 영화 후반부 도쿄 공중화장실 몽타주에 등장하는 구형 화장실",
+      "tip": "새하얀 구형 외관은 정면 로우앵글에서 가장 깔끔하게 나온다. 해 질 무렵 내부 조명이 비칠 때 실루엣이 살아난다. 하타가야역에서 도보 약 5분.",
+      "lens": "24-35mm",
+      "time": "해 질 무렵",
+      "workId": "perfect-days",
+      "scene": "영화 후반부 도쿄 공중화장실 몽타주에 등장 (극중 약 87분경)",
+      "verified": "reported",
+      "source": "https://tokyotoilet.jp/nanago_dori_park/"
     },
     {
       "id": "tokyo-national-art-center-salon-de-the-your-name-c4e2",
@@ -9205,6 +9777,29 @@
         "author": "鋸香具師",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Hukamachi_230524.jpg"
+      }
+    },
+    {
+      "id": "tokyo-yoyogi-hachiman-toilet-perfect-days-c04d",
+      "title": "요요기하치만 이토 도요 버섯 화장실 (퍼펙트 데이즈)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.67147,
+      "lng": 139.688,
+      "area": "渋谷区 代々木 (Shibuya-ku Yoyogi)",
+      "subject": "이토 도요 설계, 요요기하치만궁 숲에서 착안한 버섯 모양 3개 동 화장실. 궁 참배로 계단 인근 점심 장면과 이어지는 청소 루틴 배경",
+      "tip": "야마테도리 대로변 인도에서 버섯 모양 3개 동을 나란히 담을 수 있다. 요요기하치만궁 계단과 숲을 배경에 넣으면 좋다. 요요기하치만역에서 도보 약 3분.",
+      "lens": "24-35mm",
+      "time": "낮",
+      "workId": "perfect-days",
+      "scene": "요요기하치만궁 인근 화장실, 청소 루틴 및 신사 참배로 인근 점심 장면과 이어지는 배경 (극중 약 14분경)",
+      "verified": "reported",
+      "source": "https://tokyotoilet.jp/yoyogi_hachiman/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788319285/spotchu/spots/axdtv1zfjhd8pgvjjnlw.jpg",
+      "imageCredit": {
+        "author": "鋸香具師",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Toilet_yoyogi_hachiman_231015.jpg"
       }
     },
     {
@@ -10128,6 +10723,13 @@
       "progress": 0
     },
     {
+      "id": "notting-hill",
+      "title": "노팅 힐",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "kingsman-the-secret-service",
       "title": "킹스맨: 시크릿 에이전트",
       "type": "영화",
@@ -10282,6 +10884,13 @@
       "progress": 0
     },
     {
+      "id": "joker",
+      "title": "조커",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "-newyork",
       "title": "원스 어폰 어 타임 인 아메리카",
       "type": "영화",
@@ -10298,13 +10907,6 @@
     {
       "id": "home-alone-2-lost-in-new-york",
       "title": "Home Alone 2",
-      "type": "영화",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "joker",
-      "title": "조커",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -10436,6 +11038,13 @@
       "progress": 0
     },
     {
+      "id": "midnight-in-paris",
+      "title": "미드나잇 인 파리",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "inception",
       "title": "인셉션",
       "type": "영화",
@@ -10445,13 +11054,6 @@
     {
       "id": "john-wick-chapter-4",
       "title": "존 윅 4",
-      "type": "영화",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "midnight-in-paris",
-      "title": "미드나잇 인 파리",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -10572,6 +11174,13 @@
       "id": "startup",
       "title": "스타트업",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "parasite",
+      "title": "기생충",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -10744,6 +11353,13 @@
       "progress": 0
     },
     {
+      "id": "perfect-days",
+      "title": "퍼펙트 데이즈",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "hana-yori-dango",
       "title": "꽃보다 남자",
       "type": "드라마",
@@ -10768,13 +11384,6 @@
       "id": "silent",
       "title": "silent",
       "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "perfect-days",
-      "title": "퍼펙트 데이즈",
-      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
