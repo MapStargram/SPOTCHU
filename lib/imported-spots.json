@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T04:06:24.733Z",
+  "generatedAt": "2026-09-02T08:45:15.968Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -729,6 +729,86 @@
       "source": "https://melia.com/es/experience/espana/barcelona/bunkers-del-carmel-mirador"
     },
     {
+      "id": "barcelona-casa-mila-rooftop-vicky-cristina-3d9c",
+      "title": "카사 밀라(라 페드레라) 옥상",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.39528,
+      "lng": 2.16167,
+      "area": "Passeig de Gràcia 92, Eixample, Barcelona",
+      "subject": "라 페드레라 옥상의 병정 투구 모양 굴뚝 조각군과 물결치는 옥상 테라스",
+      "tip": "옥상 투어는 공식 사이트(lapedrera.com) 사전 예약 필수. 늦은 오후~일몰 무렵 방문하면 굴뚝 조각의 그림자가 극적으로 드리운다.",
+      "workId": "vicky-cristina-barcelona",
+      "scene": "비키·크리스티나·후안 안토니오가 라 페드레라 옥상의 기묘한 굴뚝 조각 사이를 함께 거니는 장면",
+      "source": "https://almostginger.com/vicky-cristina-barcelona-film-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338609/spotchu/spots/hypap1i5lav66fnlmfwi.jpg",
+      "imageCredit": {
+        "author": "Ardfern",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Casa_Mil%C3%A0_roof,_Barcelona,_January_2015_(03).jpg"
+      }
+    },
+    {
+      "id": "barcelona-ciutadella-cascada-vicky-cristina-b48f",
+      "title": "시우타데야 공원 카스카다 분수",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.3898,
+      "lng": 2.1864,
+      "area": "Parc de la Ciutadella, Ciutat Vella, Barcelona",
+      "subject": "카스카다 모뉴멘탈 분수 — 청년 가우디가 수경 설계에 참여한 공원 북쪽 대형 분수",
+      "tip": "무료입장 공원. 아르크 데 트리옴프역(L1)에서 도보 약 10분. 오전 시간대에 방문하면 역광을 피하고 분수 조각 디테일을 살릴 수 있다.",
+      "workId": "vicky-cristina-barcelona",
+      "scene": "마리아 엘레나가 크리스티나에게 사진 찍는 법을 가르쳐주는 장면 — 카스카다 분수 앞",
+      "source": "https://www.woodyallenpages.com/2017/12/vicky-cristina-barcelona-filming-locations-barcelona-oviedo-spain-new-york/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338612/spotchu/spots/zceymfbsxeoxh3uuqzzz.jpg",
+      "imageCredit": {
+        "author": "Isiwal",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Barcelona_Parc_Ciutadella_cascada.jpg"
+      }
+    },
+    {
+      "id": "barcelona-guell-pavilions-dragon-gate-vicky-cristina-2c7d",
+      "title": "구엘 별장 드래곤 게이트",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.3894,
+      "lng": 2.1192,
+      "area": "Avinguda de Pedralbes 7, Barcelona",
+      "subject": "가우디가 설계한 구엘 별장(Pavellons Güell)의 철제 드래곤 게이트",
+      "tip": "정문 철제 드래곤 조형물은 아빙구다 데 페드랄베스 보도에서 무료로 볼 수 있다(내부 전시관은 유료). 오전에는 게이트가 순광을 받아 디테일이 잘 보인다.",
+      "workId": "vicky-cristina-barcelona",
+      "scene": "비키가 후안 안토니오와 밀회를 약속한 드래곤 게이트 앞 — 마리아 엘레나가 총을 들고 나타나 소동이 벌어지는 장면",
+      "source": "https://movie-locations.com/movies/v/Vicky-Cristina-Barcelona.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338614/spotchu/spots/dwev7dchz73eop9jx9yc.jpg",
+      "imageCredit": {
+        "author": "Wistula",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dragon_gate_at_Pavellons_G%C3%BCell_IMG_2035.JPG"
+      }
+    },
+    {
+      "id": "barcelona-joan-miro-foundation-vicky-cristina-94ae",
+      "title": "호안 미로 미술관 조각 테라스",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.3686,
+      "lng": 2.1599,
+      "area": "Parc de Montjuïc, Barcelona",
+      "subject": "폰다시오 호안 미로 야외 조각 테라스 — 붉은 다리를 가진 미로의 조각 작품 주변",
+      "tip": "유료 입장(미술관 티켓 필요). 몬주익 언덕에 위치해 옥상·테라스에서 시내 전망도 함께 즐길 수 있다. 늦은 오후 방문 시 흰 외벽에 부드러운 빛이 든다.",
+      "workId": "vicky-cristina-barcelona",
+      "scene": "크리스티나가 호안 미로 재단에서 붉은 다리를 가진 조각 작품을 감상하는 장면",
+      "source": "https://www.woodyallenpages.com/2017/12/vicky-cristina-barcelona-filming-locations-barcelona-oviedo-spain-new-york/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338617/spotchu/spots/yb6n6pyqp3yuce5fm2qt.jpg",
+      "imageCredit": {
+        "author": "Arnaucc",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fundaci%C3%B3_Joan_Mir%C3%B3.JPG"
+      }
+    },
+    {
       "id": "barcelona-kiss-wall-placa-isidre-nonell-e7d9",
       "title": "키스 월 플라사 이시드레 노넬 포토 스팟",
       "city": "barcelona",
@@ -787,6 +867,26 @@
         "author": "Pili Redondo Rodríguez",
         "license": "CC BY-SA 3.0 es",
         "source": "https://commons.wikimedia.org/wiki/File:Grup_escult%C3%B2ric_de_Miquel_Blay..jpg"
+      }
+    },
+    {
+      "id": "barcelona-park-guell-dragon-stairway-vicky-cristina-7f2a",
+      "title": "구엘 공원 드래곤 계단·살라만더 분수",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.4139,
+      "lng": 2.1527,
+      "area": "Park Güell, Carrer d'Olot, Gràcia, Barcelona",
+      "subject": "가우디의 살라만더(도마뱀) 분수와 드래곤 계단 — Park Güell 몬주멘탈 존 정문 안쪽",
+      "tip": "몬주멘탈 존은 공식 사이트(parkguell.barcelona) 사전 시간대 예약 필수. 개장 직후 이른 아침에 방문하면 계단과 도마뱀 조각을 인파 없이 담을 수 있다.",
+      "workId": "vicky-cristina-barcelona",
+      "scene": "아빌레스에서의 하룻밤 후 연락이 끊겼던 후안 안토니오와 비키가 도마뱀 분수 앞 계단에서 다시 마주치는 장면",
+      "source": "https://movie-locations.com/movies/v/Vicky-Cristina-Barcelona.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338620/spotchu/spots/u0h2nhuw8mb2iky8cw8w.jpg",
+      "imageCredit": {
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Park_G%C3%BCell_-_main_steps_and_Drac_02.jpg"
       }
     },
     {
@@ -869,6 +969,26 @@
         "author": "Bill Tyne from Oxford, England",
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:La_Sagadra_-_Flickr_-_wit.jpg"
+      }
+    },
+    {
+      "id": "barcelona-tibidabo-skywalk-vicky-cristina-1e6b",
+      "title": "티비다보 유원지 전망 테라스",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.4222,
+      "lng": 2.1199,
+      "area": "Plaça del Tibidabo 3-4, Barcelona",
+      "subject": "티비다보 유원지 스카이워크(전망 테라스)에서 내려다본 바르셀로나 시내와 지중해",
+      "tip": "트램비아 블라우+티비다보 푸니쿨라로 정상까지 접근. 맑은 날 오후 스카이워크에서는 시내 전경과 지중해를 함께 담을 수 있다.",
+      "workId": "vicky-cristina-barcelona",
+      "scene": "일행이 티비다보 유원지 전망 테라스에서 바르셀로나 시내를 내려다보는 장면",
+      "source": "https://www.bcncatfilmcommission.com/en/location/tibidabo-amusement-park",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338622/spotchu/spots/r8gisnpx5wunaskwujsu.jpg",
+      "imageCredit": {
+        "author": "Lluís Ferrer",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tibidabo,_Barcelona_(51865256587).jpg"
       }
     },
     {
@@ -5793,6 +5913,20 @@
       }
     },
     {
+      "id": "newyork-bloomingdales-serendipity-c8e1",
+      "title": "블루밍데일스 백화점 (영화 세렌디피티 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.76194,
+      "lng": -73.96639,
+      "area": "Midtown East, Manhattan — Third Ave & E 59th St",
+      "subject": "블루밍데일스 플래그십 백화점 외관 — 조나단과 사라가 처음 만나는 오프닝 장면의 실제 촬영 장소",
+      "tip": "지하철 4/5/6/N/R/W선 Lexington Ave-59th St역에서 도보 3분. 3번가(Third Ave)와 59번가 코너의 정문이 대표 촬영 구도이며 갈색 차양과 로고 간판이 잘 보인다. 연말 쇼윈도 장식 시즌엔 영화 속 분위기와 더 가깝다.",
+      "workId": "serendipity",
+      "scene": "조나단과 사라가 마지막 남은 검정 캐시미어 장갑 한 켤레를 두고 실랑이를 벌이며 처음 만나는 오프닝 장면",
+      "source": "https://onthesetofnewyork.com/serendipity.html"
+    },
+    {
       "id": "newyork-brooklyn-army-terminal-joker-b6e3",
       "title": "브루클린 육군 터미널 - 아캄 주립병원 (조커 촬영지)",
       "city": "newyork",
@@ -6067,6 +6201,26 @@
       }
     },
     {
+      "id": "newyork-serendipity3-serendipity-f5b2",
+      "title": "세렌디피티3 (영화 세렌디피티 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7618,
+      "lng": -73.96491,
+      "area": "Midtown East, Manhattan — E 60th St (2nd~3rd Ave 사이)",
+      "subject": "1954년부터 영업 중인 디저트 레스토랑 세렌디피티3 외관과, 극중 조나단·사라가 앉았던 벽난로 옆 테이블('스타 테이블')",
+      "tip": "지하철 4/5/6/N/R/W선 Lexington Ave-59th St역에서 도보 5분. 실제 영업 중인 레스토랑이라 대기줄이 길 수 있어 평일 오전 오픈 직후가 한산하다. 간판 외관 사진은 길 건너편 인도에서.",
+      "workId": "serendipity",
+      "scene": "조나단과 사라가 '프로즌 핫초콜릿'을 나누며 운명에 대해 이야기하고, 영화 후반 다시 만나는 장소",
+      "source": "https://en.wikipedia.org/wiki/Serendipity_3",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338626/spotchu/spots/zsa0xnkv2fqnnpcmk4xt.jpg",
+      "imageCredit": {
+        "author": "Ben W",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Entrance_to_Serendipity_3,_the_New_York_City_dessert_restaurant.jpg"
+      }
+    },
+    {
       "id": "newyork-smith-wollensky-devil-prada-b3d8",
       "title": "스미스 앤 월렌스키 스테이크하우스 (악마는 프라다를 입는다 촬영지)",
       "city": "newyork",
@@ -6167,6 +6321,26 @@
       "source": "https://movie-locations.com/movies/j/Joker-2019.php"
     },
     {
+      "id": "newyork-waldorf-astoria-serendipity-e12f",
+      "title": "월도프 아스토리아 뉴욕 (영화 세렌디피티 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.75652,
+      "lng": -73.97415,
+      "area": "Midtown Manhattan, Park Ave (E 49th~50th St 사이)",
+      "subject": "월도프 아스토리아 호텔 외관 — 조나단의 결혼식(파혼)과 '운명 시험' 엘리베이터 장면의 배경",
+      "tip": "지하철 6선 51st St역 또는 E/M선 Lexington Ave-53rd St역에서 도보 5분. 파크 애비뉴 중앙분리대에서 정면 파사드를 대칭 구도로 담을 수 있다. 2017년부터 이어진 리노베이션을 마치고 2025년 재개장했으니 최신 외관을 확인할 것.",
+      "workId": "serendipity",
+      "scene": "조나단의 결혼식이 열릴 예정이었던 호텔 — 신랑신부가 각자 다른 엘리베이터를 타고 운명을 시험하는 장면과 파혼 장면의 배경",
+      "source": "https://en.wikipedia.org/wiki/Serendipity_(film)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338629/spotchu/spots/xqxnps9oghimg2bd1hls.jpg",
+      "imageCredit": {
+        "author": "Epicgenius",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Waldorf_Astoria_New_York_Nov_2025_03.jpg"
+      }
+    },
+    {
       "id": "newyork-washington-square-arch-harry-sally-4b9f",
       "title": "워싱턴 스퀘어 아치 (해리가 샐리를 만났을 때 촬영지)",
       "city": "newyork",
@@ -6184,6 +6358,46 @@
         "author": "Ken Lund",
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/75683070@N00/7237385348"
+      }
+    },
+    {
+      "id": "newyork-waverly-place-serendipity-b6a9",
+      "title": "조나단의 아파트 (200 웨이벌리 플레이스, 영화 세렌디피티 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.73485,
+      "lng": -74.00171,
+      "area": "그리니치 빌리지(West Village), Waverly Place (Charles St~W 10th St 사이)",
+      "subject": "1903년에 지어진 6층 벽돌 로우하우스 — 극중 조나단 트레이거가 거주하는 것으로 설정된 아파트 건물의 실제 외경 촬영지",
+      "tip": "지하철 1선 Christopher St역에서 도보 5분. 실제 주민이 거주하는 건물이므로 인도에서 외관만 조용히 촬영하고 출입은 삼갈 것. 조용한 주택가 골목이라 이른 아침이 한산하다.",
+      "workId": "serendipity",
+      "scene": "조나단이 거주하는 것으로 설정된 웨스트빌리지 아파트 건물의 외경",
+      "source": "https://onthesetofnewyork.com/serendipity.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338632/spotchu/spots/seala8sxapxsbyqnl9jz.jpg",
+      "imageCredit": {
+        "author": "Spencer Means from New York City, USA",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Rowhouse(s),_152-154_Waverly_Place,_Greenwich_Village,_New_York_(46317445342).jpg"
+      }
+    },
+    {
+      "id": "newyork-wollman-rink-serendipity-a4d7",
+      "title": "울먼 링크 (영화 세렌디피티 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.76778,
+      "lng": -73.97447,
+      "area": "센트럴파크 남쪽, Wollman Rink (5th Ave 인근, E 62nd~63rd St)",
+      "subject": "센트럴파크 남단의 야외 아이스링크 울먼 링크 — 조나단과 사라가 함께 스케이트를 타는 장면의 촬영지",
+      "tip": "센트럴파크 남단 5번가 또는 6번가 입구에서 도보 5분. 겨울철(대략 11~3월)에만 실제 스케이트장이 운영되니 계절을 확인할 것. 링크 북쪽의 Wollman Rink Overlook 산책로에서 촬영하면 스케이터와 미드타운 스카이라인을 함께 담을 수 있다.",
+      "workId": "serendipity",
+      "scene": "조나단과 사라가 울먼 링크에서 함께 스케이트를 타며 서로의 연락처를 운명에 맡기기로 약속하는 장면",
+      "source": "https://thecinemaholic.com/where-was-serendipity-2001-filmed/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338636/spotchu/spots/rqcaa6tr1kziclmjcihb.jpg",
+      "imageCredit": {
+        "author": "Tomás Fano",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Central_Park_Wollman_Rink.jpg"
       }
     },
     {
@@ -7433,6 +7647,29 @@
       }
     },
     {
+      "id": "prague-charles-bridge-mission-impossible-7d4a",
+      "title": "카를교 총격·추락 장면 촬영지 (미션 임파서블 1편)",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.0864,
+      "lng": 14.4119,
+      "area": "Karlův most (Charles Bridge), Staré Město, Prague 1",
+      "subject": "카를교 다리 본체 구간 — 지미 펠프스(존 보이트)가 총에 맞아 블타바강으로 추락하는 장면의 실제 촬영 지점(기존 등록된 캄파섬 계단 스팟과는 별도의 다리 위 지점)",
+      "tip": "다리는 종일 보행자로 붐빈다. 이른 아침 개방 직후가 가장 한산하며, 다리 중앙부에서 말라스트라나 교탑과 블타바강 방향 구도를 잡을 수 있다. 난간에 기대거나 통행을 막지 말 것.",
+      "lens": "24-70mm",
+      "time": "이른 아침",
+      "workId": "mission-impossible-1996",
+      "scene": "지미 펠프스가 카를교 위에서 총에 맞고 블타바강으로 추락하는 장면(다리 본체 촬영분)",
+      "verified": "reported",
+      "source": "https://www.sceen-it.com/sceen/149/Mission-Impossible/Charles-Bridge",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338638/spotchu/spots/b6ygwtyj9gbmeyzlmuc8.jpg",
+      "imageCredit": {
+        "author": "Scotch Mist",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Prague_Charles_Bridge_2021_12.jpg"
+      }
+    },
+    {
       "id": "prague-cihelna-swan-charles-bridge-9b4f",
       "title": "치헬나 강변 카를교 백조 포토스팟",
       "city": "prague",
@@ -7454,6 +7691,29 @@
       }
     },
     {
+      "id": "prague-grand-hotel-evropa-mission-impossible-e2c7",
+      "title": "그랜드 호텔 에브로파 무기상 은신처 촬영지 (미션 임파서블 1편)",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.082,
+      "lng": 14.4269,
+      "area": "Grand Hotel Evropa (現 W Prague), Václavské náměstí 25, Nové Město, Prague 1",
+      "subject": "아르누보 양식의 그랜드 호텔 에브로파 외관 — 극중 무기상 '맥스'(버네사 레드그레이브)의 근거지로 등장한 호텔",
+      "tip": "바츨라프 광장 건너편 인도에서 아르누보 파사드 전체가 프레임에 들어오는 구도로 촬영. 2024년 W 프라하로 리모델링 재개장해 외관 일부가 촬영 당시와 다를 수 있음.",
+      "lens": "24-70mm",
+      "time": "늦은 오후",
+      "workId": "mission-impossible-1996",
+      "scene": "무기상 맥스의 근거지(호텔)로 등장하는 장면",
+      "verified": "reported",
+      "source": "https://thecinemaholic.com/where-was-mission-impossible-1996-filmed/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338641/spotchu/spots/cd07iejzufgosgz8wk0h.jpg",
+      "imageCredit": {
+        "author": "Thomas Ledl",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Prag_Grand_Hotel_Evropa_3.JPG"
+      }
+    },
+    {
       "id": "prague-hanavsky-pavilion-bridges-7a2e",
       "title": "레트나 공원 하나프스키 파빌리온 블타바강 다리 조망점",
       "city": "prague",
@@ -7472,6 +7732,29 @@
         "author": "VitVit",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Karl%C5%AFv_most_sv._Cyril_a_Metod%C4%9Bj.jpg"
+      }
+    },
+    {
+      "id": "prague-liechtenstein-palace-mission-impossible-a56d",
+      "title": "리히텐슈타인 궁전 미 대사관 외관 촬영지 (미션 임파서블 1편)",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.0881,
+      "lng": 14.4019,
+      "area": "Lichtenštejnský palác, Malostranské náměstí 13, Malá Strana, Prague 1",
+      "subject": "리히텐슈타인 궁전(현 HAMU 음악원 건물) 정문 파사드 — 극중 '미국 대사관' 외관으로 등장한 건물(카를교·캄파섬 계단 스팟과는 다른 건물)",
+      "tip": "말라스트라나 광장(성 미쿨라셰 성당 옆)에서 궁전 정문을 정면으로 담을 수 있다. 현재 음악원 건물로 내부는 공개 행사 외 비공개.",
+      "lens": "24-70mm",
+      "time": "오전",
+      "workId": "mission-impossible-1996",
+      "scene": "에단 헌트 팀이 침투하는 '미국 대사관' 외관 및 출입 장면",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/m/Mission-Impossible.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338644/spotchu/spots/duxu6c86xch8mo1n9p6m.jpg",
+      "imageCredit": {
+        "author": "VitVit",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mal%C3%A1_Strana,_Malostransk%C3%A9_n%C3%A1m._Lichten%C5%A1tejnsk%C3%BD_pal%C3%A1c_10.jpg"
       }
     },
     {
@@ -7515,6 +7798,29 @@
       "source": "https://www.movie-locations.com/movies/m/Mission-Impossible.php"
     },
     {
+      "id": "prague-national-museum-mission-impossible-f83b",
+      "title": "국립박물관 미 대사관 촬영지 (미션 임파서블 1편)",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.0788,
+      "lng": 14.4308,
+      "area": "Národní muzeum (National Museum), Václavské náměstí 68, Nové Město, Prague 1",
+      "subject": "바츨라프 광장 상단 국립박물관 — 극중 '미국 대사관' 리셉션 홀 대계단 장면으로 사용된 건물",
+      "tip": "박물관 정면 계단에서 바츨라프 광장을 내려다보는 구도로 외관을 촬영할 수 있다. 내부 대계단은 박물관 개장 시간(입장권 필요)에만 접근 가능.",
+      "lens": "24-70mm",
+      "time": "늦은 오후",
+      "workId": "mission-impossible-1996",
+      "scene": "팀이 '미국 대사관' 리셉션에 잠입하는 오프닝 미션 시퀀스의 대계단 장면",
+      "verified": "reported",
+      "source": "https://tokyofox.net/2011/01/18/prague-pt-iv-mission-impossible-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338653/spotchu/spots/ladgdaop23uyxjbtmz76.jpg",
+      "imageCredit": {
+        "author": "Skot",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:N%C3%A1rodn%C3%AD_muzeum_-_kupole_2.jpg"
+      }
+    },
+    {
       "id": "prague-novotneho-lavka-viewpoint-9c1b",
       "title": "노보트네호 라브카 카를교·프라하성 전망",
       "city": "prague",
@@ -7554,6 +7860,29 @@
         "author": "Richard Mortel from Riyadh, Saudi Arabia",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=69805764"
+      }
+    },
+    {
+      "id": "prague-old-town-square-mission-impossible-c19e",
+      "title": "구시가지 광장 도주 장면 촬영지 (미션 임파서블 1편)",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.0875,
+      "lng": 14.4214,
+      "area": "Staroměstské náměstí (Old Town Square), Staré Město, Prague 1",
+      "subject": "구시가지 광장 — 아쿠아리움 레스토랑 폭발(스튜디오 세트 촬영) 직후 에단 헌트가 광장으로 뛰쳐나와 도주하는 장면의 실사 배경",
+      "tip": "광장 동쪽 얀 후스 동상 부근에서 틴 성모 교회를 배경 삼으면 극중 도주 구도와 비슷한 앵글이 나온다. 관광객이 매우 많으니 이른 아침 방문 권장.",
+      "lens": "24-70mm",
+      "time": "이른 아침 또는 늦은 저녁",
+      "workId": "mission-impossible-1996",
+      "scene": "아쿠아리움 레스토랑 폭발 직후 에단 헌트가 구시가지 광장으로 도주하는 장면",
+      "verified": "reported",
+      "source": "https://www.movie-locations.com/movies/m/Mission-Impossible.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338657/spotchu/spots/prrgi1tit9yprkatxycm.jpg",
+      "imageCredit": {
+        "author": "Diliff",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Prague_Old_Town_Square,_Czech_Republic_-_Oct_2010.jpg"
       }
     },
     {
@@ -7633,6 +7962,26 @@
       "time": "Early morning or dusk",
       "verified": "official",
       "source": "https://www.orderofmalta.int/it/governo/basilica-san-pietro-dal-buco-della-serratura/"
+    },
+    {
+      "id": "rome-biblioteca-angelica-cortile-angels-demons-9a06",
+      "title": "비블리오테카 안젤리카 안뜰 — 천사와 악마 바티칸 주차장 대역",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.9006,
+      "lng": 12.4744,
+      "area": "Piazza di Sant'Agostino 8, Rome",
+      "subject": "1604년 개관한 로마 최초의 공공 도서관 비블리오테카 안젤리카의 안뜰 — 영화 초반 바티칸 주차장 장면의 실사 대역으로 촬영됐다. 이후 보안구역 진입·정전 장면 등은 LA 스튜디오에서 찍었다.",
+      "tip": "월~토 개관 시간에 무료로 안뜰과 열람실 견학 가능. 바로 옆 산타고스티노 성당과 함께 들르기 좋다.",
+      "workId": "angels-and-demons",
+      "scene": "영화 초반 바티칸 주차장에서 출발하는 장면의 실사 대역 배경",
+      "source": "https://www.recenzent.org.ua/angels-and-demons-filming-locations-rome/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338659/spotchu/spots/ot3kv3lmzjzygyy74hhn.jpg",
+      "imageCredit": {
+        "author": "Fausta Samaritani",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bblioteca_Angelica_(Roma),_esterno.jpg"
+      }
     },
     {
       "id": "rome-bocca-verita-roman-holiday-9c3e",
@@ -7718,6 +8067,66 @@
       }
     },
     {
+      "id": "rome-piazza-del-popolo-obelisk-angels-demons-b291",
+      "title": "포폴로 광장 오벨리스크 — 천사와 악마 흙의 제단",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.9104,
+      "lng": 12.476,
+      "area": "Piazza del Popolo, Rome",
+      "subject": "플라미니오 오벨리스크가 서 있는 포폴로 광장 — 랭던과 비토리아가 '흙의 제단'(산타 마리아 델 포폴로 성당 키지 예배당)으로 향하며 광장을 가로지르는 장면의 실제 배경. 성당 정면 클로즈업은 광장 맞은편 경찰서 건물에 비계를 덮어 대역으로 썼고, 예배당 내부는 LA 스튜디오 세트로 재현되어 실제 로케이션은 광장 자체다.",
+      "tip": "오벨리스크를 중심에 두고 광장 남쪽 쌍둥이 성당이나 북쪽 포폴로 문을 배경으로 담을 수 있다. 광장이 넓어 오전엔 역광, 오후엔 순광이 든다.",
+      "workId": "angels-and-demons",
+      "scene": "'흙의 제단'으로 향하며 오벨리스크 주변 광장을 가로지르는 장면",
+      "source": "https://en.wikipedia.org/wiki/Angels_%26_Demons_(film)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338661/spotchu/spots/juyn29yihwhzkw7xp34v.jpg",
+      "imageCredit": {
+        "author": "This Photo was taken by Wolfgang Moroder. Feel free to use",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Piazza_del_Popolo_Obelisco_Flaminio_a_Roma.jpg"
+      }
+    },
+    {
+      "id": "rome-piazza-della-rotonda-pantheon-angels-demons-7f3a",
+      "title": "판테온 광장 — 천사와 악마 첫 단서 장소",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.8985,
+      "lng": 12.4768,
+      "area": "Piazza della Rotonda, Rome",
+      "subject": "판테온 포르티코(주랑현관)와 광장 분수 — 랭던이 라파엘로의 무덤 단서를 '흙의 제단'으로 오인해 가장 먼저 찾아가는 장소. 광장 외경은 이례적으로 촬영 허가를 받아 실제 로케이션에서 찍었고, 판테온 내부 장면은 전부 스튜디오 세트+CG로 별도 제작됐다.",
+      "tip": "광장 남쪽 분수 앞에서 북쪽 포르티코를 정면으로 담는 구도. 개장 직후 이른 아침이 인파가 적어 오벨리스크와 열주를 함께 프레이밍하기 좋다.",
+      "workId": "angels-and-demons",
+      "scene": "라파엘로의 무덤을 좇아 랭던이 (오답으로) 가장 먼저 찾아가는 장소",
+      "source": "https://www.theflashpacker.net/angels-and-demons-locations-in-rome/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338664/spotchu/spots/k0ggbr4rqpj4sulb3usa.jpg",
+      "imageCredit": {
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Rome_(Italy),_Piazza_della_Rotonda,_Hub_of_a_Coach_--_2013_--_10.jpg"
+      }
+    },
+    {
+      "id": "rome-piazza-navona-quattro-fiumi-angels-demons-4c8e",
+      "title": "피아차 나보나 콰트로 피우미 분수 — 천사와 악마 물의 제단",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.8981,
+      "lng": 12.4731,
+      "area": "Piazza Navona, Rome",
+      "subject": "베르니니의 콰트로 피우미(4대강) 분수 — '물의 제단'로 지목되며 마지막 네 번째 추기경(바지아)이 분수에 던져지는 장면의 배경. 광장 전경은 실제 피아차 나보나에서 촬영했고, 차량 진입이 불가능한 분수 근접 컷 일부는 세트장에 재현한 복제 분수로 찍었다.",
+      "tip": "분수 남쪽 끝에서 북쪽을 바라보면 오벨리스크와 4대강 조각상을 한 프레임에 담을 수 있다. 사람이 적은 이른 아침 추천.",
+      "workId": "angels-and-demons",
+      "scene": "'물의 제단' — 바지아 추기경이 분수에 던져지는 장면의 배경",
+      "source": "https://movie-locations.com/movies/a/Angels-And-Demons.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338670/spotchu/spots/sayvcpdfbzbqwcuprd8h.jpg",
+      "imageCredit": {
+        "author": "This Photo was taken by Wolfgang Moroder. Feel free to use",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Piazza_Navona_Gange_fontana_dei_Fiumi_Roma.jpg"
+      }
+    },
+    {
       "id": "rome-ponte-umberto-sunset-9a2c",
       "title": "폰테 움베르토 1세에서 성 베드로 대성당과 테베레강",
       "city": "rome",
@@ -7756,6 +8165,26 @@
         "author": "Andy Montgomery",
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/50141284@N04/36480204645"
+      }
+    },
+    {
+      "id": "rome-santa-maria-della-vittoria-esterno-angels-demons-d15f",
+      "title": "산타 마리아 델라 비토리아 성당 외관 — 천사와 악마 불의 제단",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.9045,
+      "lng": 12.4939,
+      "area": "Via Venti Settembre / Largo Santa Susanna, Rome",
+      "subject": "'불의 제단'으로 지목되는 성당 외관 — 베르니니의 '성녀 테레사의 법열' 조각이 있는 코르나로 예배당에서 세 번째 추기경이 발견되는 설정. 로마 교구가 성당 내부 촬영을 불허해 실제로는 이 외관·진입 장면만 비아 벤티 세템브레에서 촬영했고, 코르나로 예배당 내부는 LA 스튜디오 세트로 재현했다.",
+      "tip": "성당은 좁은 삼각형 광장(라르고 산타 수산나)에 접해 있다. 비아 벤티 세템브레 쪽 보도에서 찍으면 파사드 전체가 들어온다.",
+      "workId": "angels-and-demons",
+      "scene": "'불의 제단' — 세 번째 추기경이 발견되는 성당으로 도착하는 외경 장면",
+      "source": "https://www.recenzent.org.ua/angels-and-demons-filming-locations-rome/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338673/spotchu/spots/c3j1me3gjoniv7sddjjt.jpg",
+      "imageCredit": {
+        "author": "Nicholas Gemini",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Chiesa_di_Santa_Maria_della_Vittoria_(Roma)_11.jpg"
       }
     },
     {
@@ -8978,6 +9407,46 @@
       }
     },
     {
+      "id": "singapore-bukit-pasoh-road-humpback-crazy-rich-asians-c418",
+      "title": "부킷 파소 로드(험프백 레스토랑)",
+      "city": "singapore",
+      "category": "drama",
+      "lat": 1.2791,
+      "lng": 103.8384,
+      "area": "Chinatown, Singapore",
+      "subject": "험프백 레스토랑 야외 좌석 — 레이첼이 페이린에게 엘리너와의 갈등을 털어놓는 야외 식사 장면의 실제 촬영 장소",
+      "tip": "보존지구 숍하우스가 늘어선 골목. 레스토랑 맞은편 인도에서 야외 좌석과 숍하우스 파사드를 함께 담을 수 있다. 영업 중인 매장이니 손님 동선 방해에 주의.",
+      "workId": "crazy-rich-asians",
+      "scene": "레이첼이 절친 페이린에게 엘리너와의 갈등을 털어놓는 야외 식사 대화 장면",
+      "source": "https://theoccasionaltraveller.com/crazy-rich-asians-filming-locations-singapore/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338676/spotchu/spots/ojhqzcubfcsyepy1mrxn.jpg",
+      "imageCredit": {
+        "author": "Terence Ong.",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Terraced_houses_along_Bukit_Pasoh_Road,_Singapore_-_20060820.jpg"
+      }
+    },
+    {
+      "id": "singapore-chijmes-crazy-rich-asians-5e6f",
+      "title": "치임스(CHIJMES)",
+      "city": "singapore",
+      "category": "drama",
+      "lat": 1.29514,
+      "lng": 103.85181,
+      "area": "Bras Basah, Singapore",
+      "subject": "치임스 홀(옛 예배당) 정면 안뜰 — 콜린·아라민타 결혼식 장면의 실제 촬영 장소",
+      "tip": "옛 수녀원 부속 예배당이었던 치임스 홀 앞 안뜰은 자유 출입 가능. 첨탑과 스테인드글라스를 함께 담으려면 안뜰 중앙에서 올려다보는 구도, 야간 조명 시간대가 좋다.",
+      "workId": "crazy-rich-asians",
+      "scene": "콜린과 아라민타의 결혼식이 옛 예배당(치임스 홀)에서 거행되는 장면",
+      "source": "https://theoccasionaltraveller.com/crazy-rich-asians-filming-locations-singapore/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338679/spotchu/spots/ynsmd74jqoyukvccxz2n.jpg",
+      "imageCredit": {
+        "author": "Do Nguyen Binh An",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:A_front_view_of_the_Former_Convent_of_the_Holy_Infant_Jesus_Chapel_and_Caldwell_House_(now_CHIJMES).jpg"
+      }
+    },
+    {
       "id": "singapore-chijmes-hall-crazy-rich-asians-e39a",
       "title": "차임스 홀 (크레이지 리치 아시안 결혼식 촬영지)",
       "city": "singapore",
@@ -8998,6 +9467,26 @@
         "author": "Terence Ong",
         "license": "CC BY 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:CHIJMES_5.JPG"
+      }
+    },
+    {
+      "id": "singapore-esplanade-park-lim-bo-seng-crazy-rich-asians-2a97",
+      "title": "에스플러네이드 파크 림보셍 기념비",
+      "city": "singapore",
+      "category": "drama",
+      "lat": 1.2885,
+      "lng": 103.85308,
+      "area": "Civic District, Singapore",
+      "subject": "림보셍 기념비 앞 산책로(퀸 엘리자베스 워크) — 닉이 레이첼에게 청혼하는 장면의 실제 촬영 장소",
+      "tip": "마리나베이 워터프런트를 따라 걷는 산책로로 24시간 무료 개방. 기념비를 배경 삼아 마리나베이 샌즈 실루엣이 함께 보이는 해 질 녘~야간 시간대 촬영을 추천.",
+      "workId": "crazy-rich-asians",
+      "scene": "닉이 레이첼에게 청혼하는 결말부 장면",
+      "source": "https://theoccasionaltraveller.com/crazy-rich-asians-filming-locations-singapore/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338683/spotchu/spots/e7mxbnuek0lbovhipij4.jpg",
+      "imageCredit": {
+        "author": "Marcin Konsek",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:2016_Singapur,_Downtown_Core,_Memoria%C5%82_Lim_Bo_Senga_(02).jpg"
       }
     },
     {
@@ -9024,6 +9513,26 @@
       }
     },
     {
+      "id": "singapore-gardens-by-the-bay-supertree-crazy-rich-asians-3d8a",
+      "title": "가든스 바이 더 베이 슈퍼트리 그로브",
+      "city": "singapore",
+      "category": "drama",
+      "lat": 1.28238,
+      "lng": 103.86427,
+      "area": "Bayfront, Singapore",
+      "subject": "슈퍼트리 그로브 — 콜린·아라민타 결혼 피로연 장면의 실제 촬영 장소",
+      "tip": "그로브 광장 자체는 무료 개방(공중 다리 OCBC 스카이웨이만 유료). 슈퍼트리를 올려다보는 구도로, 매일 저녁 무료 조명쇼 '가든 랩소디' 시간에 맞추면 영화 속 웨딩 파티 분위기와 비슷하게 담을 수 있다.",
+      "workId": "crazy-rich-asians",
+      "scene": "콜린과 아라민타의 결혼 피로연이 슈퍼트리 아래에서 열리는 장면",
+      "source": "https://giggster.com/guide/movie-location/where-was-crazy-rich-asians-filmed",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338687/spotchu/spots/dfl4akdhmn2h0aj20hga.jpg",
+      "imageCredit": {
+        "author": "Mustang Joe",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Supertree_Grove,_Gardens_by_the_Bay,_Singapore1.jpg"
+      }
+    },
+    {
       "id": "singapore-henderson-waves-equals-c24f",
       "title": "헨더슨 웨이브 다리 (영화 '이퀄스' 촬영지)",
       "city": "singapore",
@@ -9047,6 +9556,26 @@
       }
     },
     {
+      "id": "singapore-marina-bay-sands-skypark-crazy-rich-asians-7f2c",
+      "title": "마리나 베이 샌즈 스카이파크 전망대",
+      "city": "singapore",
+      "category": "drama",
+      "lat": 1.2836,
+      "lng": 103.8606,
+      "area": "Marina Bay, Singapore",
+      "subject": "스카이파크 루프탑 인피니티풀 — 약혼 축하 파티·결말부 불꽃놀이 장면의 실제 촬영 장소(풀 자체는 투숙객 전용)",
+      "tip": "인피니티풀은 호텔 투숙객만 이용 가능하다. 유료 스카이파크 전망대(56층)에서 스카이라인을 먼저 촬영하고, 계단으로 57층 남쪽 전망 플랫폼까지 오르면 풀 일부가 시야에 들어온다. 노을~야경 시간대 추천.",
+      "workId": "crazy-rich-asians",
+      "scene": "닉과 레이첼의 약혼 축하 파티 및 결말부 불꽃놀이 장면(씨라비 레스토랑 인피니티풀에서 촬영)",
+      "source": "https://theoccasionaltraveller.com/crazy-rich-asians-filming-locations-singapore/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338690/spotchu/spots/hwjacj9psglf4c5kunvq.jpg",
+      "imageCredit": {
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Singapore_(SG),_View_from_Marina_Bay_Sands,_ArtScience_Museum_--_2019_--_4714.jpg"
+      }
+    },
+    {
       "id": "singapore-marina-one-green-heart-westworld-7d1a",
       "title": "마리나 원 그린 하트 (웨스트월드 시즌3 인사이트 본사 촬영지)",
       "city": "singapore",
@@ -9067,6 +9596,26 @@
         "author": "LittleT889",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Marina_One.jpg"
+      }
+    },
+    {
+      "id": "singapore-newton-food-centre-crazy-rich-asians-9b41",
+      "title": "뉴턴 푸드 센터",
+      "city": "singapore",
+      "category": "drama",
+      "lat": 1.31192,
+      "lng": 103.83957,
+      "area": "Newton, Singapore",
+      "subject": "뉴턴 푸드 센터 노점 구역 — 레이첼이 싱가포르 호커 음식을 처음 접하는 저녁 식사 장면의 실제 촬영 장소",
+      "tip": "24시간 개방된 호커센터. 저녁에 노점 조명이 켜진 뒤 좌석 통로 사이에서 촬영하면 영화와 비슷한 분위기가 난다. 영업 노점 앞에서는 촬영 매너를 지킬 것.",
+      "workId": "crazy-rich-asians",
+      "scene": "콜린·아라민타가 닉·레이첼에게 싱가포르 호커 음식을 처음 소개하는 밤 장면",
+      "source": "https://giggster.com/guide/movie-location/where-was-crazy-rich-asians-filmed",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338693/spotchu/spots/obkyru9znmsi3wagny84.jpg",
+      "imageCredit": {
+        "author": "Kbseah",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Newton_Food_Centre_food_stalls.jpg"
       }
     },
     {
@@ -10525,6 +11074,50 @@
       }
     },
     {
+      "id": "venice-arsenale-the-tourist-5a1e",
+      "title": "베네치아 아르세날레 정문 (투어리스트 촬영지)",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.43656,
+      "lng": 12.35192,
+      "area": "Castello, Campo della Tana",
+      "subject": "1460년경 세워진 아르세날레 정문(포르타 마냐)과 양옆 사자상 — 극중 인터폴 본부로 등장",
+      "tip": "캄포 델라 타나 광장에서 정문 전체와 양옆 사자상을 함께 담을 수 있다. 관광객이 몰리는 낮보다 평일 오전이 한산하다.",
+      "lens": "24-35mm",
+      "time": "오전",
+      "workId": "the-tourist",
+      "scene": "엘리스가 인터폴 본부를 방문하는 장면의 배경",
+      "source": "https://www.italia.it/de/venetien/venedig/erlebnisse-und-sehenswertes/-the-tourist--route-durch-strassen-und-kanaele-mit-angelina-jolie-und-johnny-depp",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338698/spotchu/spots/jh4q3bipo0nzdxlgfj6q.jpg",
+      "imageCredit": {
+        "author": "Paul Berzinn",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Arsenale_gate_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "venice-biblioteca-marciana-the-tourist-2f6b",
+      "title": "마르치아나 국립도서관 (투어리스트 촬영지)",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.43343,
+      "lng": 12.33921,
+      "area": "Piazzetta San Marco, San Marco",
+      "subject": "산소비노가 설계한 도서관 파사드 — 극중 경찰 심문 장면의 실제 배경",
+      "tip": "피아체타 산 마르코 광장에서 두칼레 궁전을 등지고 서면 마주 보이는 파사드가 이 건물이다. 내부는 유료 박물관 통합권(뮤제이 산 마르코)으로 입장 가능.",
+      "lens": "24-35mm",
+      "time": "이른 아침(광장 혼잡 전)",
+      "workId": "the-tourist",
+      "scene": "프랭크가 이탈리아 경찰에 붙잡혀 심문받고, 창밖으로 두칼레 궁전이 보이는 장면",
+      "source": "https://www.italia.it/de/venetien/venedig/erlebnisse-und-sehenswertes/-the-tourist--route-durch-strassen-und-kanaele-mit-angelina-jolie-und-johnny-depp",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338703/spotchu/spots/c0yc2lx3fhipshmfwllx.jpg",
+      "imageCredit": {
+        "author": "This Photo was taken by Wolfgang Moroder. Feel free to use",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Biblioteca_Marciana_a_Venezia_facciata_sud.jpg"
+      }
+    },
+    {
       "id": "venice-campiello-del-remer-grand-canal-9d1e",
       "title": "캄피엘로 델 레메르 대운하 & 리알토 다리 뷰포인트",
       "city": "venice",
@@ -10568,6 +11161,28 @@
       }
     },
     {
+      "id": "venice-fondaco-dei-turchi-the-tourist-c84a",
+      "title": "폰다코 데이 투르키 (투어리스트 촬영지)",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.4425,
+      "lng": 12.3288,
+      "area": "Cannaregio, San Marcuola 선착장 인근(대운하 건너편)",
+      "subject": "대운하변 13세기 팔라초(현 베네치아 자연사박물관) 파사드 — 극중 야간 무도회 도착 장면의 실제 배경",
+      "tip": "산 마르쿠올라(San Marcuola) 바포레토 선착장에서 대운하 건너편을 보면 열주 파사드가 정면으로 보인다. 야간 조명이 켜지는 해 진 직후가 영화 속 장면과 가장 비슷하다.",
+      "lens": "24-70mm",
+      "time": "해 진 직후 블루아워",
+      "workId": "the-tourist",
+      "scene": "엘리스가 화려한 야간 무도회장에 도착하는 장면의 외경(실내 무도회 장면은 별도 세트)",
+      "source": "https://www.italia.it/de/venetien/venedig/erlebnisse-und-sehenswertes/-the-tourist--route-durch-strassen-und-kanaele-mit-angelina-jolie-und-johnny-depp",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338706/spotchu/spots/iwkbjnfelm4pwwpxsufx.jpg",
+      "imageCredit": {
+        "author": "Didier Descouens",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fondaco_dei_Turchi.jpg"
+      }
+    },
+    {
       "id": "venice-molo-san-marco-gondolas-san-giorgio-6d1b",
       "title": "몰로 선착장의 곤돌라와 산 조르조 마조레 섬 전경",
       "city": "venice",
@@ -10586,6 +11201,28 @@
         "author": "Didier Descouens",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Giorgio_Maggiore_(Venice).jpg"
+      }
+    },
+    {
+      "id": "venice-palazzo-pisani-moretta-the-tourist-9d3f",
+      "title": "팔라초 피사니 모레타 (투어리스트 촬영지 — 호텔 다니엘리 대역)",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.4359,
+      "lng": 12.3283,
+      "area": "San Polo, 대운하변 (San Tomà 선착장 인근)",
+      "subject": "극중 호텔 다니엘리 입구로 등장한 15세기 고딕 팔라초의 대운하 파사드",
+      "tip": "팔라초는 사유 건물이라 내부 관람은 불가하다. 산 토마(San Tomà) 선착장이나 대운하 바포레토(1·2번선)를 타고 지나가며 파사드만 원거리로 촬영한다.",
+      "lens": "70-200mm(맞은편 파사드 압축)",
+      "time": "오후 역광을 피하는 시간대",
+      "workId": "the-tourist",
+      "scene": "프랭크와 엘리스가 극중 호텔 다니엘리에 체크인하는 장면 — 실제로는 팔라초 피사니 모레타의 대운하 파사드가 입구로 쓰였다",
+      "source": "https://www.solosophie.com/the-tourist-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338710/spotchu/spots/llly6hcd03jbigaqqsug.jpg",
+      "imageCredit": {
+        "author": "Didier Descouens",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Palazzo_Pisani_Moretta_(Venice).jpg"
       }
     },
     {
@@ -10642,6 +11279,50 @@
         "author": "timsackton",
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/43581314@N08/8356500740"
+      }
+    },
+    {
+      "id": "venice-rialto-market-the-tourist-b71c",
+      "title": "리알토 시장 (투어리스트 촬영지)",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.43972,
+      "lng": 12.33442,
+      "area": "San Polo, 리알토 다리 인근",
+      "subject": "청과·어시장 좌판이 늘어선 캄포 델라 페스케리아/에르베리아 — 파자마 추격 장면의 실제 배경",
+      "tip": "시장은 월요일 휴장이니 평일 오전 영업시간에 방문해 좌판과 주변 건물 위층을 함께 프레임에 담자. 영업 중에는 상인 동선을 막지 않는다.",
+      "lens": "35mm",
+      "time": "오전 시장 영업시간",
+      "workId": "the-tourist",
+      "scene": "파자마 차림의 프랭크가 건물에서 뛰어내려 리알토 시장 좌판 위로 떨어지며 추격전이 벌어지는 장면",
+      "source": "https://www.italia.it/de/venetien/venedig/erlebnisse-und-sehenswertes/-the-tourist--route-durch-strassen-und-kanaele-mit-angelina-jolie-und-johnny-depp",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338713/spotchu/spots/pen8sj5fu8xsmxxaezeh.jpg",
+      "imageCredit": {
+        "author": "This Photo was taken by Wolfgang Moroder. Feel free to use",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pescaria_Rialto_Venice.jpg"
+      }
+    },
+    {
+      "id": "venice-santa-lucia-station-the-tourist-4e2a",
+      "title": "산타 루치아역 (투어리스트 촬영지)",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.4409,
+      "lng": 12.3208,
+      "area": "Santa Croce/Cannaregio 경계, Fondamenta Santa Lucia",
+      "subject": "대운하와 맞닿은 산타 루치아역 정면 계단 — 영화 도입부 도착 장면의 실제 배경",
+      "tip": "역 정면 계단(폰다멘타)에서 대운하 쪽을 보면 수상택시·바포레토 선착장이 한눈에 들어온다. 이른 아침에는 인파가 적어 계단 전경을 깨끗하게 담을 수 있다.",
+      "lens": "24mm 광각",
+      "time": "이른 아침",
+      "workId": "the-tourist",
+      "scene": "기차에서 만난 엘리스와 프랭크가 산타 루치아역에 도착하고, 엘리스가 수상보트로 마중 나오는 도입부 장면",
+      "source": "https://findthatlocation.com/location/film/ht1956",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788338716/spotchu/spots/iaaag9wdof3omonxtclc.jpg",
+      "imageCredit": {
+        "author": "Jcornelius",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Venezia_Santa_Lucia_train_station_station,_July_2019_02.jpg"
       }
     },
     {
@@ -11005,6 +11686,13 @@
       "id": "legend-of-the-blue-sea",
       "title": "푸른 바다의 전설",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "vicky-cristina-barcelona",
+      "title": "비키 크리스티나 바르셀로나",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -11611,6 +12299,13 @@
       "progress": 0
     },
     {
+      "id": "serendipity",
+      "title": "세렌디피티",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "the-devil-wears-prada",
       "title": "악마는 프라다를 입는다",
       "type": "영화",
@@ -11800,6 +12495,13 @@
       "progress": 0
     },
     {
+      "id": "mission-impossible-1996",
+      "title": "미션 임파서블",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "lovers-in-prague-2005",
       "title": "프라하의 연인",
       "type": "드라마",
@@ -11807,8 +12509,8 @@
       "progress": 0
     },
     {
-      "id": "mission-impossible-1996",
-      "title": "미션 임파서블",
+      "id": "angels-and-demons",
+      "title": "천사와 악마",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -11957,6 +12659,13 @@
       "id": "vincenzo",
       "title": "빈센조",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "crazy-rich-asians",
+      "title": "크레이지 리치 아시안",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -12124,6 +12833,13 @@
     {
       "id": "the-wolverine",
       "title": "더 울버린",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-tourist",
+      "title": "투어리스트",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
