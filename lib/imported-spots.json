@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T00:51:46.498Z",
+  "generatedAt": "2026-09-02T01:57:30.807Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -4077,6 +4077,75 @@
       }
     },
     {
+      "id": "london-kingsman-alexandra-road-estate",
+      "title": "킹스맨 시크릿 에이전트 알렉산드라 로드 에스테이트",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.54041,
+      "lng": -0.18236,
+      "area": "South Hampstead, London",
+      "subject": "알렉산드라 앤 에인즈워스 에스테이트(로울리 웨이) 계단식 브루탈리즘 주택단지 — 에그시의 집",
+      "tip": "사우스 햄스테드역에서 도보 약 5분. 350m 길이 보행로 로울리 웨이를 따라 계단식 테라스 구조가 한눈에 들어온다. 실거주 주민이 있는 곳이니 창문·현관 클로즈업은 피하고 매너를 지킨다.",
+      "lens": "16-35mm",
+      "time": "오전",
+      "workId": "kingsman-the-secret-service",
+      "scene": "에그시가 어머니·의붓아버지와 함께 사는 자택 외관",
+      "verified": "reported",
+      "source": "https://tokyofox.net/2020/10/25/london-filming-locations-kingsman-the-secret-service-2014/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314099/spotchu/spots/tshiustn7vwb4i7tzn2b.jpg",
+      "imageCredit": {
+        "author": "stevecadman",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/98115025@N00/3020395916"
+      }
+    },
+    {
+      "id": "london-kingsman-black-prince-pub",
+      "title": "킹스맨 시크릿 에이전트 블랙 프린스 펍",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.48965,
+      "lng": -0.11203,
+      "area": "Kennington, London",
+      "subject": "블랙 프린스 펍 외관 (해리 하트 '매너가 사람을 만든다' 격투 장면)",
+      "tip": "케닝턴역(노던 라인)에서 도보 약 15분. 인도 건너편에서 펍 정문 간판이 한 프레임에 들어오는 각도가 좋다. 영업 중인 펍이므로 손님과 통행을 방해하지 않는다.",
+      "lens": "24-35mm",
+      "time": "오전",
+      "workId": "kingsman-the-secret-service",
+      "scene": "해리 하트가 동네 불량배들에게 '매너가 사람을 만든다'며 격투를 벌이는 펍 장면",
+      "verified": "reported",
+      "source": "https://findthatlocation.com/film-title/kingsman-the-secret-service/location/704",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314100/spotchu/spots/srnxiyecfbflahm2opxi.jpg",
+      "imageCredit": {
+        "author": "Ewan-M",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/55935853@N00/2950607892"
+      }
+    },
+    {
+      "id": "london-kingsman-lock-and-co-hatters",
+      "title": "킹스맨 시크릿 에이전트 록앤코 모자 전문점",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.50583,
+      "lng": -0.13833,
+      "area": "St James's, London",
+      "subject": "록앤코 해터스(Lock & Co. Hatters) 외관 — 1676년 창업한 세계 최고(最古) 모자 전문점",
+      "tip": "그린파크역에서 도보 5분 내외. 목재 프레임 진열창과 간판이 촬영 포인트. 실제 영업 매장이니 방문 시 손님 응대를 방해하지 않는다.",
+      "lens": "35-50mm",
+      "time": "오전~이른 오후",
+      "workId": "kingsman-the-secret-service",
+      "scene": "리치몬드 발렌타인이 도청장치가 내장된 톱햇을 구매하는 장면",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/k/Kingsman-The-Secret-Service.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314244/spotchu/spots/o2ori0jinfsa9nceme0c.png",
+      "imageCredit": {
+        "author": "Wikimedia",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Lock_%26_Co._Hatters,_6_St_James%27s_St,_London.png"
+      }
+    },
+    {
       "id": "london-kingsman-savile-row-huntsman",
       "title": "킹스맨 시크릿 서비스 헌츠맨 테일러숍",
       "city": "london",
@@ -4097,6 +4166,29 @@
         "author": "Jhsteel",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:11_Savile_Row.jpg"
+      }
+    },
+    {
+      "id": "london-kingsman-stanhope-mews-south",
+      "title": "킹스맨 시크릿 에이전트 스탠호프 뮤즈 사우스",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.49326,
+      "lng": -0.18099,
+      "area": "South Kensington, London",
+      "subject": "스탠호프 뮤즈 사우스 자갈길 — 해리 하트의 자택 외관(11번지)",
+      "tip": "글로스터 로드역에서 도보 몇 분 거리의 조용한 자갈 뮤즈 골목. 실거주지이므로 이른 오전 인적 드문 시간에 골목 입구에서 짧게 촬영하고 자리를 비켜준다.",
+      "lens": "35-50mm",
+      "time": "오전",
+      "workId": "kingsman-the-secret-service",
+      "scene": "해리 하트가 최종 테스트에 실패한 에그시를 질책하는 자택 장면",
+      "verified": "reported",
+      "source": "https://www.sceen-it.com/sceen/1111/Kingsman-The-Secret-Service/11-Stanhope-Mews-South-house",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314114/spotchu/spots/nbq8n2iu6wdykaxubnl7.jpg",
+      "imageCredit": {
+        "author": "Jim Linwood",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/54238124@N00/26132342868"
       }
     },
     {
@@ -4324,6 +4416,121 @@
         "author": "Frombowen",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Numbers_168_And_170_And_Attached_Railings.jpg"
+      }
+    },
+    {
+      "id": "london-sherlock-battersea-power-station-b3f7",
+      "title": "셜록 배터시 파워 스테이션 (아이린 애들러 재회)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.4816,
+      "lng": -0.144,
+      "area": "Nine Elms, Battersea",
+      "subject": "배터시 파워 스테이션 4개 굴뚝과 벽돌 외관",
+      "tip": "템스강 남안 리버사이드 프롬나드(서커스 웨스트 빌리지 방면)에서 4개 굴뚝이 모두 보이는 각도로 촬영. 해 질 무렵 건물 조명이 켜지는 시간대가 가장 극적이다.",
+      "lens": "16-24mm",
+      "time": "해질 무렵 점등 시간대",
+      "workId": "sherlock",
+      "scene": "시즌2 1화 '벨그레이비어 스캔들'에서 왓슨과 아이린 애들러가 발전소 터바인 홀에서 재회하는 장면. 시즌2 3화 '라이헨바흐 폭포'에도 등장.",
+      "verified": "reported",
+      "source": "https://heritagecalling.com/2017/01/14/sherlock-holmes-and-the-case-of-the-listed-building/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314115/spotchu/spots/bd7vcvh7dpmnyf3nxc77.jpg",
+      "imageCredit": {
+        "author": "Loco Steve",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/36989019@N08/8281919096"
+      }
+    },
+    {
+      "id": "london-sherlock-carlton-house-terrace-c8d2",
+      "title": "셜록 다이오게네스 클럽 (칼튼 하우스 테라스)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5049,
+      "lng": -0.1319,
+      "area": "St James's, Westminster",
+      "subject": "칼튼 하우스 테라스(영국 학사원) 조지안 양식 외관과 정문 계단",
+      "tip": "칼튼 하우스 테라스 인도에서 컬럼과 정문 계단이 정면으로 보이는 구도로 촬영. 더 몰(The Mall) 방향에서 접근하면 인적이 적어 한산하게 촬영 가능.",
+      "lens": "35-50mm",
+      "time": "오전 (한산한 시간대)",
+      "workId": "sherlock",
+      "scene": "마이크로프트 홈즈가 회원인 신사클럽 '다이오게네스 클럽' 외경으로 시리즈 전반에 등장(실제로는 영국 학사원 건물).",
+      "verified": "reported",
+      "source": "https://filmlondon.org.uk/resource/10-11-carlton-house-terrace",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314122/spotchu/spots/wgtu76firi5cmdlnhpqy.jpg",
+      "imageCredit": {
+        "author": "APK",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=192535251"
+      }
+    },
+    {
+      "id": "london-sherlock-gerrard-street-chinatown-e2b6",
+      "title": "셜록 차이나타운 제라드 스트리트 (블라인드 뱅커)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5113,
+      "lng": -0.1315,
+      "area": "Chinatown, Soho",
+      "subject": "제라드 스트리트 차이나타운 게이트(패루)와 거리 간판",
+      "tip": "제라드 스트리트 서쪽 끝 차이나타운 게이트 앞 보도에서 거리 전체가 보이는 구도로 촬영. 저녁 네온 간판이 켜지는 시간대를 추천.",
+      "lens": "24-70mm",
+      "time": "저녁 (네온 점등 시간대)",
+      "workId": "sherlock",
+      "scene": "시즌1 2화 '블라인드 뱅커'에서 셜록과 왓슨이 펑수이 인(Feng Shui Inn) 식당을 지나며 수사하는 장면.",
+      "verified": "reported",
+      "source": "https://www.ibtimes.co.uk/sherlocks-london-where-see-some-filming-locations-hit-bbc-show-1598570",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314125/spotchu/spots/tr8ibchs4go8qmpgkmpp.jpg",
+      "imageCredit": {
+        "author": "Mark Ahsmann",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=25467522"
+      }
+    },
+    {
+      "id": "london-sherlock-southbank-undercroft-d4a9",
+      "title": "셜록 사우스뱅크 언더크로프트 스케이트파크 (블라인드 뱅커)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5065,
+      "lng": -0.1163,
+      "area": "South Bank, Lambeth",
+      "subject": "퀸엘리자베스홀 지하 콘크리트 스케이트파크와 그래피티 벽",
+      "tip": "헝거포드 다리와 워털루 다리 사이, 퀸엘리자베스홀 지하 공공 스케이트 공간에서 그래피티 벽을 배경으로 촬영. 실제 스케이터들이 이용 중인 공간이니 동선을 방해하지 말 것.",
+      "lens": "24-35mm",
+      "time": "오후 (스케이터 활동 시간대)",
+      "workId": "sherlock",
+      "scene": "시즌1 2화 '블라인드 뱅커'에서 그래피티 아티스트 '라즈'가 벽에 그려진 암호 낙서를 보여주는 장면.",
+      "verified": "reported",
+      "source": "https://london-beyond-time-and-place.com/sherlock-the-london-filming-locations-of-series-one/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314127/spotchu/spots/xhiubg6kcnkbe8k0pwlg.jpg",
+      "imageCredit": {
+        "author": "ell brown",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/39415781@N06/31455986995"
+      }
+    },
+    {
+      "id": "london-sherlock-st-barts-hospital-a1e5",
+      "title": "셜록 세인트 바트 병원 (라이헨바흐 폭포 옥상)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5177,
+      "lng": -0.1006,
+      "area": "West Smithfield, City of London",
+      "subject": "세인트 바트 병원 헨리 8세 게이트와 옥상 라인",
+      "tip": "웨스트 스미스필드 광장 공공 보도에서 병원 정문(헨리 8세 게이트)과 옥상이 함께 보이는 각도로 촬영. 옥상은 비공개 구역이라 접근할 수 없으니 광장에서 올려다보는 구도로 촬영할 것.",
+      "lens": "24-70mm",
+      "time": "오후 (역광 피하기)",
+      "workId": "sherlock",
+      "scene": "시즌2 3화 '라이헨바흐 폭포'에서 셜록이 옥상에서 투신하는 클라이맥스 장면(실제 옥상에 크레인·와이어를 설치해 현지 촬영). 시즌1 1화 '핑크색 연구'에서 셜록과 왓슨이 처음 만나는 장소이기도 하다.",
+      "verified": "reported",
+      "source": "https://www.ibtimes.co.uk/sherlocks-london-where-see-some-filming-locations-hit-bbc-show-1598570",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314130/spotchu/spots/ynuo8qbn1jcfghjyoc1t.jpg",
+      "imageCredit": {
+        "author": "wikimedia",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=36593833"
       }
     },
     {
@@ -5863,6 +6070,92 @@
       "source": "https://www.ytv.co.jp/10plaza/"
     },
     {
+      "id": "paris-amelie-cafe-deux-moulins-b6f2",
+      "title": "카페 데 되 물랭 (아멜리에 카페)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.88493,
+      "lng": 2.3336,
+      "area": "Rue Lepic / Rue Cauchois, Montmartre",
+      "subject": "아멜리가 웨이트리스로 일하는 카페 외관 (rue Lepic·rue Cauchois 코너)",
+      "tip": "몽마르트 rue Lepic와 rue Cauchois가 만나는 코너 외관이 극중 구도와 가장 비슷하다. 실제 영업 중인 비스트로이니 손님·테라스석 통행을 막지 않고 인도에서 촬영할 것.",
+      "lens": "24-35mm",
+      "time": "이른 오전 또는 늦은 오후",
+      "workId": "amelie",
+      "scene": "아멜리가 웨이트리스로 일하는 카페 (오프닝 크렘 브륄레 장면)",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Caf%C3%A9_des_2_Moulins",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314132/spotchu/spots/nwnpbyu8kqfljnfeqnao.jpg",
+      "imageCredit": {
+        "author": "austinevan",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/19762676@N00/1225173081"
+      }
+    },
+    {
+      "id": "paris-amelie-canal-saint-martin-ricochets-9d4c",
+      "title": "생마르탱 운하 물수제비 다리",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8698,
+      "lng": 2.3664,
+      "area": "Quai de Valmy / Quai de Jemmapes, Canal Saint-Martin, 10e",
+      "subject": "아멜리가 돌로 물수제비를 뜨는 생마르탱 운하와 보행교",
+      "tip": "실제 물수제비는 CG로 합성됐지만 촬영지는 이 부근 운하 보행교. 다리 난간 쪽에서 운하 수면과 강변 가로수를 함께 담으면 영화 분위기와 비슷하다. 다리·인도 통행 방해 금지.",
+      "lens": "35-50mm",
+      "time": "해질녘",
+      "workId": "amelie",
+      "scene": "생마르탱 운하에서 물수제비(리코셰)를 뜨는 장면",
+      "verified": "reported",
+      "source": "https://www.allocine.fr/film/fichefilm-27063/secrets-tournage/"
+    },
+    {
+      "id": "paris-amelie-gare-de-lest-photobooth-7f1d",
+      "title": "파리 동역(가르 드 레스트) 대합실",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8769,
+      "lng": 2.3592,
+      "area": "Place du 11 Novembre 1918, 10e",
+      "subject": "니노가 버려진 즉석사진을 줍던 대합실(살 데 파 페르뒤)과 사진 부스",
+      "tip": "역 내부는 리모델링됐지만 즉석사진 부스는 여전히 운영 중이다. 대합실 아치창과 시계탑 아래에서 촬영하면 영화 속 분위기와 비슷하니, 출퇴근 혼잡 시간대는 피할 것.",
+      "lens": "24-35mm",
+      "time": "평일 오전 10시~오후 3시(한산한 시간대)",
+      "workId": "amelie",
+      "scene": "사진 속 미스터리 남자의 정체를 알게 되는 대합실 장면",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/a/Amelie.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314133/spotchu/spots/rsj4dwdqla862hi7uase.jpg",
+      "imageCredit": {
+        "author": "kitmasterbloke",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/58415659@N00/17457657628"
+      }
+    },
+    {
+      "id": "paris-amelie-lamarck-caulaincourt-e2c9",
+      "title": "라마르크 코랭쿠르 역 (몽마르트 이중 계단)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.88914,
+      "lng": 2.33816,
+      "area": "Rue Lamarck / Rue Caulaincourt, Montmartre, 18e",
+      "subject": "아멜리가 시각장애인에게 거리를 묘사해주고 헤어지는 이중 계단 지하철역 입구",
+      "tip": "역 입구 정면 낮은 위치에서 좌우로 갈라지는 두 계단을 함께 담는 구도가 대표적. 계단 이용객 통행을 막지 않도록 옆으로 비켜서 촬영할 것.",
+      "lens": "24-35mm",
+      "time": "오전",
+      "workId": "amelie",
+      "scene": "시각장애인에게 거리 풍경을 묘사해주는 장면",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Lamarck%E2%80%93Caulaincourt_station",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314245/spotchu/spots/drhpgwpwpftnitsmrajh.jpg",
+      "imageCredit": {
+        "author": "flickr",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/6509622437"
+      }
+    },
+    {
       "id": "paris-amelie-maison-collignon-01",
       "title": "영화 <아멜리에> 메종 콜리뇽 식료품점",
       "city": "paris",
@@ -5883,6 +6176,29 @@
         "author": "Mbzt",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:P1270082_Paris_XVIII_rue_La_Vieuville_rwk.jpg"
+      }
+    },
+    {
+      "id": "paris-amelie-sacre-coeur-steps-3a8e",
+      "title": "사크레쾨르 대성당 계단 (스퀘어 루이즈 미셸)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8849,
+      "lng": 2.3434,
+      "area": "Square Louise-Michel, Montmartre, 18e",
+      "subject": "니노와의 보물찾기 약속이 벌어지는 대성당 앞 222계단",
+      "tip": "계단 하단 스퀘어 루이즈 미셸에서 대성당 돔을 올려다보는 구도가 대표적. 계단이 가파르니 발밑 주의, 관광객이 몰리는 낮보다 이른 아침이 한적하다.",
+      "lens": "16-24mm",
+      "time": "이른 아침",
+      "workId": "amelie",
+      "scene": "니노에게 사진첩을 돌려주려 보물찾기를 준비하는 계단 장면",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/a/Amelie.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314144/spotchu/spots/dfntkqrg1mljsebk45xv.jpg",
+      "imageCredit": {
+        "author": "waitscm",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/78341140@N00/5854353713"
       }
     },
     {
@@ -5927,6 +6243,29 @@
         "author": "Jon Hurd",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Shakespeare_and_Company_store_in_Paris.jpg"
+      }
+    },
+    {
+      "id": "paris-cafe-de-flore-9f4b",
+      "title": "카페 드 플로르",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.854137,
+      "lng": 2.332565,
+      "area": "Saint-Germain-des-Prés, 6e arrondissement, Paris",
+      "subject": "생제르맹대로와 생브누아 거리 모퉁이, 카페 드 플로르 테라스 외관",
+      "tip": "생제르맹대로 건너편 인도에서 붉은 차양과 테라스석이 함께 보이는 정면 구도가 대표적이다. 이른 아침 시간대가 상대적으로 한산하다.",
+      "lens": "35-50mm",
+      "time": "오전",
+      "workId": "emily-in-paris",
+      "scene": "시즌1 에피소드6, 에밀리가 토마를 만나는 장면",
+      "verified": "reported",
+      "source": "https://www.goaheadtours.com/travel-blog/articles/emily-in-paris-filming-locations-guide",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314147/spotchu/spots/uu28rdvuhutqyxk8ujt4.jpg",
+      "imageCredit": {
+        "author": "Britchi Mirela",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=27652532"
       }
     },
     {
@@ -5999,6 +6338,40 @@
       }
     },
     {
+      "id": "paris-louvre-salle-mollien-6b3e",
+      "title": "루브르 박물관 드농관 살 몰리앙",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8604,
+      "lng": 2.3355,
+      "area": "Denon Wing, Louvre Museum, 1st Arrondissement, Paris",
+      "subject": "들라크루아 '민중을 이끄는 자유의 여신' 앞 드농관 전시실(살 몰리앙, 700호)",
+      "tip": "루브르 정식 입장권으로 드농관 1층 살 몰리앙 방문. 상시 혼잡하니 개장 직후 방문이 유리하다.",
+      "workId": "john-wick-chapter-4",
+      "scene": "윈스턴이 마르퀴와 만나는 장면(들라크루아 '민중을 이끄는 자유의 여신' 앞)",
+      "source": "https://screenrant.com/john-wick-4-filming-locations-explained/"
+    },
+    {
+      "id": "paris-luxembourg-gardens-kiosque-7e1c",
+      "title": "뤽상부르 정원 케인 등장 산책로",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8469,
+      "lng": 2.3372,
+      "area": "Jardin du Luxembourg, 6th Arrondissement, Paris",
+      "subject": "뤽상부르 정원 내 음악당(키오스크) 인근 산책로와 벤치",
+      "tip": "무료 개방 정원(개폐장 시간 있음). 음악당 주변 산책로가 극중 분위기와 유사하며 평일 오전이 한산하다.",
+      "workId": "john-wick-chapter-4",
+      "scene": "케인(도니 옌)이 정원 벤치에 앉아 있는 장면",
+      "source": "https://a2zfilminglocation.com/john-wick-chapter-4-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314148/spotchu/spots/eoaarxr2gmiy0uwxai4k.jpg",
+      "imageCredit": {
+        "author": "Mustang Joe",
+        "license": "CC0 1.0",
+        "source": "https://www.flickr.com/photos/63234672@N04/22795847669"
+      }
+    },
+    {
       "id": "paris-midnight-in-paris-steps-f82a",
       "title": "생테티엔 뒤 몽 성당 옆 계단 (미드나잇 인 파리)",
       "city": "paris",
@@ -6043,6 +6416,115 @@
       }
     },
     {
+      "id": "paris-palais-garnier-escalier-9c2f",
+      "title": "팔레 가르니에(파리 오페라) 그랑 에스칼리에",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8719,
+      "lng": 2.3317,
+      "area": "Opéra, 9th Arrondissement, Paris",
+      "subject": "팔레 가르니에 대계단(그랑 에스칼리에)과 오페라 하우스 내부",
+      "tip": "정식 관람권 구매 후 대계단에서 위층 방향으로 촬영. 공연 없는 낮 시간 관람이 한산하다.",
+      "workId": "john-wick-chapter-4",
+      "scene": "존 윅이 오페라 하우스 대계단을 오르는 장면",
+      "source": "https://a2zfilminglocation.com/john-wick-chapter-4-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314250/spotchu/spots/tz87x7j4ce4b4xk51jq2.jpg",
+      "imageCredit": {
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%C3%93pera,_Par%C3%ADs,_Francia,_2022-10-31,_DD_54-56_HDR.jpg"
+      }
+    },
+    {
+      "id": "paris-pantheon-rue-soufflot-a29f",
+      "title": "팡테옹 (플라스 뒤 팡테옹)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8462,
+      "lng": 2.3461,
+      "area": "Panthéon/Sorbonne, 5e arrondissement (라탱 지구), Paris",
+      "subject": "플라스 뒤 팡테옹에서 바라본 팡테옹 정면 돔과 파사드",
+      "tip": "팡테옹 앞 광장에서 돔이 정면으로 보이는 구도. 사람이 적은 이른 아침이나 해질녘 실루엣 촬영을 추천.",
+      "lens": "24-35mm",
+      "time": "해질녘",
+      "workId": "emily-in-paris",
+      "scene": "시즌1 에피소드2, 에밀리가 시카고 남자친구와 이별 통화를 하는 장면",
+      "verified": "reported",
+      "source": "https://www.sceen-it.com/sceen/4523/Emily-in-Paris/Panth-on",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314160/spotchu/spots/bw5iwl9pnktefdj16tjy.jpg",
+      "imageCredit": {
+        "author": "Lexe-I",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/35243930@N08/4102119861"
+      }
+    },
+    {
+      "id": "paris-pont-alexandre-iii-d63a",
+      "title": "퐁 알렉상드르 3세",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8636,
+      "lng": 2.3136,
+      "area": "Invalides–Champs-Élysées 사이, 7e/8e arrondissement, Paris",
+      "subject": "다리 위 보행로에서 바라본 아르누보 조각상·가로등과 에펠탑 방향 전경",
+      "tip": "다리 중앙 인도에서 에펠탑 방향으로 서면 금빛 조각상과 가로등이 함께 프레임에 들어온다. 차량 통행이 있으니 반드시 인도에서만 촬영.",
+      "lens": "16-35mm",
+      "time": "해질녘",
+      "workId": "emily-in-paris",
+      "scene": "시즌1 에피소드3, 메종 라보 향수 광고 촬영 장면",
+      "verified": "reported",
+      "source": "https://www.goaheadtours.com/travel-blog/articles/emily-in-paris-filming-locations-guide",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314161/spotchu/spots/otqaqhe4b3uxjiywkxhm.jpg",
+      "imageCredit": {
+        "author": "Mustang Joe",
+        "license": "CC0 1.0",
+        "source": "https://www.flickr.com/photos/63234672@N04/12334157545"
+      }
+    },
+    {
+      "id": "paris-saint-eustache-eglise-3d9a",
+      "title": "생퇴스타슈 성당 존 윅-케인 재회 장면",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8633,
+      "lng": 2.345,
+      "area": "Les Halles, 1st Arrondissement, Paris",
+      "subject": "생퇴스타슈 성당 중앙 통로(네이브)",
+      "tip": "미사·행사 시간 외 무료로 자유 관람 가능. 중앙 통로 정면 구도가 극중 장면과 유사하다.",
+      "workId": "john-wick-chapter-4",
+      "scene": "존 윅이 성당에서 케인을 만나는 장면",
+      "source": "https://a2zfilminglocation.com/john-wick-chapter-4-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314162/spotchu/spots/pthkasaml8gd5knw48be.jpg",
+      "imageCredit": {
+        "author": "Catedrales e Iglesias",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/12950131@N06/6919411343"
+      }
+    },
+    {
+      "id": "paris-savoir-office-place-de-valois-7c2d",
+      "title": "플라스 드 발루아 (사부아르 사무실)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.86,
+      "lng": 2.34,
+      "area": "Place de Valois, 1er arrondissement, Paris",
+      "subject": "극중 마케팅 대행사 '사부아르(→아장스 그라토)' 사무실 입구가 있는 안뜰",
+      "tip": "루브르 바로 맞은편, 뤼 드 발루아에서 좁은 통로로 들어가면 나오는 조용한 안뜰이다. 갈르리 파트릭 푸르탱(골동품 갤러리) 간판 옆 문이 극중 사무실 입구로 쓰였다. 사적 공간(사무실·상점 내부)에는 들어가지 말고 안뜰 공용 통로에서만 촬영.",
+      "lens": "24-35mm",
+      "time": "오전",
+      "workId": "emily-in-paris",
+      "scene": "시즌1부터 등장하는 사부아르(이후 아장스 그라토) 마케팅 대행사 사무실 외관",
+      "verified": "reported",
+      "source": "https://www.goaheadtours.com/travel-blog/articles/emily-in-paris-filming-locations-guide",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314166/spotchu/spots/nuptx2jhhwcd3pdkbggn.jpg",
+      "imageCredit": {
+        "author": "Wikimedia Commons / Mu",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=10560677"
+      }
+    },
+    {
       "id": "paris-square-rapp-eiffel-framing-b4e2",
       "title": "스퀘어 랍 에펠탑 아르누보 앵글",
       "city": "paris",
@@ -6061,6 +6543,26 @@
         "author": "Benh LIEU SONG",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+      }
+    },
+    {
+      "id": "paris-trocadero-parvis-droits-homme-4a8d",
+      "title": "트로카데로 인권광장 에펠탑 조망",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8623,
+      "lng": 2.2882,
+      "area": "Parvis des Droits de l'Homme, Trocadéro, 16th Arrondissement, Paris",
+      "subject": "팔레 드 샤이오 사이 에스플러네이드에서 정면으로 보이는 에펠탑",
+      "tip": "팔레 드 샤이오 두 건물 사이 인권광장에서 에펠탑 정면 구도를 담을 수 있다. 해질녘·야간 점등 시간대가 인기.",
+      "workId": "john-wick-chapter-4",
+      "scene": "존 윅과 마르퀴가 결투 규칙을 논의하는 장면",
+      "source": "https://a2zfilminglocation.com/john-wick-chapter-4-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314167/spotchu/spots/hh8bybmf048bi3lrhsaw.jpg",
+      "imageCredit": {
+        "author": "Alessandro Traini",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/150633581@N05/34728276834"
       }
     },
     {
@@ -6872,6 +7374,20 @@
       }
     },
     {
+      "id": "seoul-baekbeom-square-itaewon-class-1e6b",
+      "title": "백범광장공원 (이태원 클라쓰 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.55717,
+      "lng": 126.97994,
+      "area": "회현동, 중구",
+      "subject": "남산 자락 광장 계단·조형물을 배경으로 한 인물 구도",
+      "tip": "지하철 4호선 회현역 4번 출구에서 도보 5분. 계단 위쪽에서 광장을 내려다보는 구도로 찍으면 배경이 깔끔하게 정리됨.",
+      "workId": "itaewon-class",
+      "scene": "마지막회 박새로이·조이서 키스신이 촬영된 곳",
+      "source": "https://aluu.co.kr/article/news/2/1099/"
+    },
+    {
       "id": "seoul-baekbin-railroad-crossing-my-mister-a78b",
       "title": "용산 백빈건널목 땡땡거리 (나의 아저씨)",
       "city": "seoul",
@@ -6921,6 +7437,26 @@
         "author": "Kaitak89(talk / Contributions) at the Korean Wikipedia",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Seongsu_bridge_night.JPG"
+      }
+    },
+    {
+      "id": "seoul-g-guesthouse-itaewon-class-7c2e",
+      "title": "G게스트하우스 (이태원 클라쓰 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.53333,
+      "lng": 126.99495,
+      "area": "이태원동, 용산구",
+      "subject": "그래피티로 꾸며진 게스트하우스 외벽 (극중 '보광독서실')",
+      "tip": "이태원역 1번 출구에서 도보 5분. 실제 영업 중인 게스트하우스이므로 투숙객 동선을 방해하지 않고 외관만 촬영하세요.",
+      "workId": "itaewon-class",
+      "scene": "박새로이와 조이서가 처음 만나는 장면(극중 '보광독서실')이 촬영된 곳",
+      "source": "https://aluu.co.kr/article/news/2/1099/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314171/spotchu/spots/dki2vlq0ycjf3tpl5xs5.jpg",
+      "imageCredit": {
+        "author": "Adbar",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=31688900"
       }
     },
     {
@@ -7124,6 +7660,26 @@
       }
     },
     {
+      "id": "seoul-oriole-danbam-huamdong-itaewon-class-9d4a",
+      "title": "오리올 (이태원 클라쓰 새 단밤 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.54683,
+      "lng": 126.98417,
+      "area": "후암동, 용산구 (남산 아랫자락)",
+      "subject": "카페 겸 루프탑 바 건물 외관 (극후반 이전한 새 '단밤')",
+      "tip": "남산 자락 후암동 골목 안쪽. 실제 영업 중인 카페 겸 바이므로 음료를 주문한 손님으로서 촬영하는 것을 권장. 좌표는 도로 단위 근사치.",
+      "workId": "itaewon-class",
+      "scene": "단밤이 이태원에서 이전한 극후반부 새 매장으로 등장",
+      "source": "https://www.wikitree.co.kr/articles/510284",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788314173/spotchu/spots/bca1sfe32gz0yepesvmd.jpg",
+      "imageCredit": {
+        "author": "sunbeams879",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/126817823@N08/15128844806"
+      }
+    },
+    {
       "id": "seoul-sangbong-terminal-squid-game-d92f",
       "title": "상봉터미널 (오징어 게임 경마 도박 장면)",
       "city": "seoul",
@@ -7190,6 +7746,20 @@
       "scene": "연세대학교 연희관과 계단을 배경으로 한 회상·등교 장면 후보",
       "verified": "reported",
       "source": "https://www.yonsei.ac.kr"
+    },
+    {
+      "id": "seoul-the-finest-gyeongnidan-itaewon-class-5f3c",
+      "title": "더 파이니스트 루프탑 (이태원 클라쓰 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.53997,
+      "lng": 126.99376,
+      "area": "경리단길, 이태원동, 용산구",
+      "subject": "루프탑 좌석에서 남산서울타워를 배경으로 한 구도",
+      "tip": "일몰 직후 루프탑에서 남산타워 야경이 잘 담김. 인기 좌석은 경쟁이 있으니 이른 방문 권장. 좌표는 경리단길 도로 구간 근사치.",
+      "workId": "itaewon-class",
+      "scene": "박새로이·조이서의 남산 야경 데이트 장면이 촬영된 루프탑 바",
+      "source": "https://www.keyzard.cc/jsinc2287/nb/222751851729"
     },
     {
       "id": "seoul-unhyeongung-yanggwan-goblin-9f2c",
@@ -9559,7 +10129,7 @@
     },
     {
       "id": "kingsman-the-secret-service",
-      "title": "킹스맨: 시크릿 서비스",
+      "title": "킹스맨: 시크릿 에이전트",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -9985,6 +10555,13 @@
       "progress": 0
     },
     {
+      "id": "itaewon-class",
+      "title": "이태원 클라쓰",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "my-mister",
       "title": "나의 아저씨",
       "type": "드라마",
@@ -10023,13 +10600,6 @@
       "id": "lost-in-the-moonlight",
       "title": "달빛궁궐",
       "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "itaewon-class",
-      "title": "이태원 클라쓰",
-      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
