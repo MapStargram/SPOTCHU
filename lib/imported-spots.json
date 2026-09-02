@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T08:45:15.968Z",
+  "generatedAt": "2026-09-02T10:16:40.710Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -1101,6 +1101,29 @@
       }
     },
     {
+      "id": "berlin-bebelplatz-hotel-de-rome-run-lola-run-9e4d",
+      "title": "베벨플라츠·호텔 드 롬 (롤라 런 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.5159,
+      "lng": 13.39365,
+      "area": "Bebelplatz, Mitte, Berlin",
+      "subject": "극중 가상 은행 '도이체 트랜스퍼 은행' 외관 — 실제로는 구 드레스드너 은행 본점(현 호텔 드 롬, 베렌슈트라세 37)",
+      "tip": "베벨플라츠 남쪽 인도에서 베렌슈트라세 건너 건물 정면을 담는다. 훔볼트대학 법대·베벨플라츠 지하 '텅 빈 도서관' 기념물과 함께 묶어 촬영하기 좋다.",
+      "lens": "35-50mm",
+      "time": "오전(역광 회피)",
+      "workId": "run-lola-run",
+      "scene": "롤라가 은행원인 아버지를 찾아가는 장면과, 결말부 은행 강도 사건 후 경찰이 건물을 포위하는 장면의 외관",
+      "verified": "reported",
+      "source": "https://ftrc.blog/run-lola-run/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344115/spotchu/spots/rl5pwka1tfkee4tufhar.jpg",
+      "imageCredit": {
+        "author": "Steven1991",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bebelplatz,_Berlin,_July_2024.jpg"
+      }
+    },
+    {
       "id": "berlin-elsenbruecke-skyline-viewpoint-01",
       "title": "엘젠브뤼케 서쪽 스카이라인 전망",
       "city": "berlin",
@@ -1137,6 +1160,29 @@
       }
     },
     {
+      "id": "berlin-franzoesische-strasse-run-lola-run-3d7c",
+      "title": "프랑세지셰 슈트라세 모퉁이 (롤라 런 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.51472,
+      "lng": 13.38917,
+      "area": "Mitte, Berlin (구 프랑세지셰 슈트라세역 인근)",
+      "subject": "예거슈트라세에서 나타난 롤라가 도로를 가로질러 프랑세지셰 슈트라세로 꺾어 도는 모퉁이",
+      "tip": "예거슈트라세와 프랑세지셰 슈트라세 교차 모퉁이에서. 겐다르멘마르크트에서 도보 3분 거리라 함께 묶어 촬영하기 좋다.",
+      "lens": "24-50mm",
+      "time": "낮",
+      "workId": "run-lola-run",
+      "scene": "첫 번째 런(run 1)에서 롤라가 예거슈트라세 모퉁이를 돌아 프랑세지셰 슈트라세로 질주하는 장면",
+      "verified": "reported",
+      "source": "http://thecinescapader.blogspot.com/2017/04/visiting-filming-locations-of-lola.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344119/spotchu/spots/ssz7hzjil5zwly6xbwpx.jpg",
+      "imageCredit": {
+        "author": "Chainwit.",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:J%C3%A4gerstra%C3%9Fe_62-64,_Berlin-Mitte_(2023)_01.jpg"
+      }
+    },
+    {
       "id": "berlin-friedrichstadt-palast-aztec-hotel-b6e1",
       "title": "프리드리히슈타트 팔라스트 (퀸스 갬빗)",
       "city": "berlin",
@@ -1157,6 +1203,29 @@
         "author": "UzeyirMikayil",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=185204134"
+      }
+    },
+    {
+      "id": "berlin-gendarmenmarkt-run-lola-run-c831",
+      "title": "겐다르멘마르크트 광장 (롤라 런 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.51361,
+      "lng": 13.39278,
+      "area": "Mitte, Berlin",
+      "subject": "콘체르트하우스와 프랑스돔·독일돔에 둘러싸인 광장 — 세 번의 런(run)마다 롤라가 다르게 가로지르는 바닥 타일",
+      "tip": "콘체르트하우스 정면 계단 앞에서 광장 바닥을 넓게 담는다. 관광객이 적은 이른 아침이 타일 패턴과 대칭 구도를 살리기 좋다.",
+      "lens": "16-35mm",
+      "time": "이른 아침",
+      "workId": "run-lola-run",
+      "scene": "세 번의 런(run)마다 각기 다른 동선으로 겐다르멘마르크트 광장을 가로지르는 장면",
+      "verified": "reported",
+      "source": "https://www.filmtourismus.de/lola-rennt/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344121/spotchu/spots/hhtbgj2spmiqz7wkakeo.jpg",
+      "imageCredit": {
+        "author": "Ввласенко",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:View_of_the_Gendarmenmarkt_and_Deutscher_Dom_(German_Cathedral)_from_the_Top_of_Franz%C3%B6sischer_Dom_(French_Cathedral).JPG"
       }
     },
     {
@@ -1219,6 +1288,29 @@
         "author": "sebastian.rittau",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/123589162@N07/15513069031"
+      }
+    },
+    {
+      "id": "berlin-kronprinzenpalais-run-lola-run-b0f6",
+      "title": "크론프린첸팔레 (롤라 런 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.517,
+      "lng": 13.396,
+      "area": "Unter den Linden, Mitte, Berlin",
+      "subject": "극중 카지노 외관으로 쓰인 왕세자궁 — 운터 덴 린덴 거리, 독일역사박물관(차이크하우스) 맞은편",
+      "tip": "운터 덴 린덴 인도에서 궁전 정면 파사드가 프레임에 들어오게 담는다. 실내 로비 장면은 쇠네베르크 시청에서 별도 촬영됐다.",
+      "lens": "24-35mm",
+      "time": "오후",
+      "workId": "run-lola-run",
+      "scene": "롤라가 카지노에서 도박으로 돈을 마련하는 장면의 외관 숏",
+      "verified": "reported",
+      "source": "https://www.shotinberlin.de/de/katalog/film/2277/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344124/spotchu/spots/vfifac8xe2rvtdijvglx.jpg",
+      "imageCredit": {
+        "author": "Bahnfrend",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kronprinzenpalais_(Berlin),_2006_(01).jpg"
       }
     },
     {
@@ -1317,6 +1409,29 @@
       }
     },
     {
+      "id": "berlin-oberbaumbruecke-run-lola-run-7f2a",
+      "title": "오버바움브뤼케 (롤라 런 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.50194,
+      "lng": 13.44556,
+      "area": "Friedrichshain-Kreuzberg 경계, Berlin",
+      "subject": "롤라가 스프레강을 건너 질주하는 다리 — 냉전기 동·서 베를린 경계였던 붉은 벽돌 첨탑 다리",
+      "tip": "다리 차도·보행로 구간 중앙에서 네오고딕 첨탑 아치를 배경으로 담는다. 자전거·트램 통행이 잦으니 인도 쪽에 서서 촬영할 것.",
+      "lens": "24-35mm",
+      "time": "오후~노을",
+      "workId": "run-lola-run",
+      "scene": "롤라가 오버바움브뤼케를 가로질러 질주하는 영화의 대표 장면",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/l/Lola-Rennt.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344126/spotchu/spots/a0rvmsgdwhsc8wdtvgfd.jpg",
+      "imageCredit": {
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Berlin,_Oberbaumbr%C3%BCcke_--_2019_--_4335.jpg"
+      }
+    },
+    {
       "id": "berlin-rathaus-spandau-gibson-hotel-e17b",
       "title": "슈판다우 시청 (퀸스 갬빗)",
       "city": "berlin",
@@ -1402,6 +1517,29 @@
         "author": "User:Angr",
         "license": "CC BY-SA 2.5",
         "source": "https://commons.wikimedia.org/w/index.php?curid=858722"
+      }
+    },
+    {
+      "id": "berlin-wallstrasse-run-lola-run-a615",
+      "title": "발슈트라세 23-24 (롤라 런 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.51173,
+      "lng": 13.40778,
+      "area": "Wallstraße, Mitte, Berlin",
+      "subject": "아버지의 은행 동료 '마이어 씨'가 차고에서 차를 몰고 나오는 장면 촬영지 — 현재 건물 외관",
+      "tip": "발슈트라세 인도에서 건물 입구를 정면으로 담는다. 슈피텔마르크트역에서 도보 3분.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "run-lola-run",
+      "scene": "마이어 씨의 차량 사고 장면 — 세 번의 런(run)마다 다른 결말로 반복 등장하는 구조적 장치",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/l/Lola-Rennt.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344128/spotchu/spots/lywsdfx4hbm3yo9p8ude.jpg",
+      "imageCredit": {
+        "author": "Jörg Zägel",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Berlin,_Mitte,_Wallstrasse_15-15A,_Geschaeftshaus_Lebram_01.jpg"
       }
     },
     {
@@ -3972,6 +4110,28 @@
       }
     },
     {
+      "id": "kyoto-heianjingu-taiheikaku-memoirs-geisha-9e4b",
+      "title": "헤이안진구 신엔 다이헤이카쿠 (게이샤의 추억 촬영지)",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.0165,
+      "lng": 135.7833,
+      "area": "오카자키, 사쿄구, 교토 (Okazaki, Sakyo-ku, Kyoto)",
+      "subject": "전쟁이 끝난 뒤 슬픔을 안은 사유리가 신엔(神苑) 다이헤이카쿠(泰平閣, 지붕 있는 다리)를 조용히 걸어가는 영화 결말부 장면 — 실제 헤이안진구 신엔 동쪽 정원",
+      "tip": "본전 참배는 무료지만 신엔(정원)은 별도 입장권이 필요하다. 세이호이케(栖鳳池) 연못을 가로지르는 지붕 다리 다이헤이카쿠가 배경 — 맞은편 연못가 산책로에서 다리 전체와 수면 반사를 함께 담는 구도를 추천한다.",
+      "lens": "35-50mm",
+      "time": "오전 이른 시간 또는 단풍철",
+      "workId": "memoirs-of-a-geisha",
+      "scene": "전쟁이 끝난 뒤 사유리가 다이헤이카쿠를 조용히 걸어가는 영화 결말부 장면",
+      "source": "https://ja.kyoto.travel/support/film/tourisms/film_detail/77/film",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344130/spotchu/spots/anvjlffy44jzl81bksxz.jpg",
+      "imageCredit": {
+        "author": "Jakub Hałun",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Taihei-kaku,_Heian-jing%C5%AB,_Kyoto,_20240820_1006_4972.jpg"
+      }
+    },
+    {
       "id": "kyoto-kamogawa-delta-stepping-stones-b49e",
       "title": "교토 카모가와 델타 징검다리 영화 촬영지",
       "city": "kyoto",
@@ -4193,6 +4353,28 @@
         "author": "Estorgik",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=92934582"
+      }
+    },
+    {
+      "id": "kyoto-yoshiminedera-memoirs-geisha-a1f3",
+      "title": "요시미네데라 관음당 (게이샤의 추억 촬영지)",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 34.9382,
+      "lng": 135.6442,
+      "area": "니시야마 요시미네데라, 니시쿄구, 교토 (Nishiyama, Nishikyo-ku, Kyoto)",
+      "subject": "어린 치요(사유리)가 게이샤가 되어 회장을 다시 만날 수 있기를 기도하는 장면 — 실제 요시미네데라(善峯寺) 관음당",
+      "tip": "한큐 무코마치역에서 한큐버스 66번(약 30분) 탑승 후 '요시미네데라' 하차, 도보로 산몬을 지나 돌계단을 오르면 관음당 앞뜰에 닿는다 — 극중 치요가 기도하던 자리. 산 중턱이라 교토 시가지 전망도 함께 담기 좋다.",
+      "lens": "35-50mm",
+      "time": "오전, 평일",
+      "workId": "memoirs-of-a-geisha",
+      "scene": "어린 치요가 요시미네데라 관음당에서 게이샤가 되어 회장을 다시 만나게 해달라고 기도하는 장면",
+      "source": "https://ja.kyoto.travel/support/film/tourisms/film_detail/77/film",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344135/spotchu/spots/cblua8bvqcwvxie44xsv.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Yoshiminedera11n4592.jpg"
       }
     },
     {
@@ -4675,6 +4857,26 @@
       }
     },
     {
+      "id": "london-maida-vale-station-paddington-c58d",
+      "title": "메이다 베일역 (웨스트본 오크역 외관)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.52972,
+      "lng": -0.18556,
+      "area": "메이다 베일, 엘긴 애비뉴 & 랜돌프 애비뉴 코너, W9",
+      "subject": "가상의 지하철역 '웨스트본 오크역' 외관으로 사용된 실제 베이커루선 메이다 베일역 — 갈색 타일의 1915년식 지하철역 건물",
+      "tip": "베이커루선 메이다 베일역 하차 후 역 건물 밖에서 바로 촬영 가능. 엘긴 애비뉴와 랜돌프 애비뉴가 만나는 모퉁이에서 정면 파사드가 잘 담김.",
+      "workId": "paddington",
+      "scene": "브라운 가족이 앤티크 가게로 가는 길에 패딩턴과 함께 지하철 에스컬레이터·개찰구를 통과하는 소동 장면",
+      "source": "https://www.movie-locations.com/movies/p/Paddington.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344141/spotchu/spots/nqypczsvuytk8njmxkph.jpg",
+      "imageCredit": {
+        "author": "Adrian Scottow",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Maida_Vale_tube_station_2014-12-16.jpg"
+      }
+    },
+    {
       "id": "london-millennium-bridge-st-pauls-3c8b",
       "title": "밀레니엄 브릿지 세인트 폴 대성당 리딩라인 뷰포인트",
       "city": "london",
@@ -4695,6 +4897,26 @@
         "author": "Mark Fosh",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:St_Pauls_aerial_(cropped).jpg"
+      }
+    },
+    {
+      "id": "london-natural-history-museum-paddington-a26f",
+      "title": "자연사박물관 (밀리센트의 박제 연구실)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.49611,
+      "lng": -0.17639,
+      "area": "사우스켄싱턴, 크롬웰 로드, SW7",
+      "subject": "빌런 밀리센트 클라이드(니콜 키드먼)가 박제사로 근무하며 패딩턴을 노리는 배경으로 사용된 실제 자연사박물관",
+      "tip": "사우스켄싱턴역에서 도보 3분. 로마네스크 양식의 대형 정문 파사드와 첨탑을 크롬웰 로드 맞은편 보도에서 담기 좋음. 입장 무료.",
+      "workId": "paddington",
+      "scene": "밀리센트 클라이드가 패딩턴을 박제해 박물관에 전시하려는 계획을 꾸미는 사무실·전시 공간 배경",
+      "source": "https://www.nhm.ac.uk/visit/museum-on-screen-movies-tv.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344144/spotchu/spots/idwfaasd8rnhsx6aqvqx.jpg",
+      "imageCredit": {
+        "author": "Julian Herzog (Website)",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Natural_History_Museum_London_South_Facade_2020_01.jpg"
       }
     },
     {
@@ -4735,6 +4957,26 @@
       }
     },
     {
+      "id": "london-portobello-alices-antiques-paddington-f3a9",
+      "title": "앨리스 앤티크스 (그루버 아저씨의 골동품 가게)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51283,
+      "lng": -0.20197,
+      "area": "노팅힐, 포토벨로 로드 86번지, W11",
+      "subject": "패딩턴이 그루버 아저씨(짐 브로드벤트)를 만나 붉은 모자와 탐험가 몽고메리 클라이드의 단서를 찾는 골동품 가게로 등장한 실제 상점 'Alice's Antiques'",
+      "tip": "노팅힐게이트역에서 도보 5분, 포토벨로 로드 마켓 남쪽 구간. 1887년부터 이어온 실제 앤티크숍으로 붉은 파사드와 매대 앞에서 촬영하기 좋음. 영업 중인 상점이니 입구를 막지 말 것.",
+      "workId": "paddington",
+      "scene": "브라운 가족이 그루버 아저씨의 골동품 가게에서 패딩턴의 정체와 탐험가 몽고메리 클라이드에 대한 단서를 얻는 장면",
+      "source": "https://www.movie-locations.com/movies/p/Paddington.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344147/spotchu/spots/q7yxraqsupori5yyei5b.jpg",
+      "imageCredit": {
+        "author": "David",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Alice%27s_Antique_Shop,_Portobello_Road,_Notting_Hill,_London_2022-08-18.jpg"
+      }
+    },
+    {
       "id": "london-portobello-road-market-notting-hill-b6e1",
       "title": "포토벨로 로드 마켓 오프닝 내레이션 거리",
       "city": "london",
@@ -4752,6 +4994,26 @@
         "author": "bryan...",
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/91049143@N00/40324961895"
+      }
+    },
+    {
+      "id": "london-reform-club-pall-mall-paddington-d94b",
+      "title": "리폼 클럽 (지오그래퍼스 길드 외관)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.50661,
+      "lng": -0.13344,
+      "area": "세인트 제임스, 폴 몰 104번지, SW1",
+      "subject": "탐험가 협회 '지오그래퍼스 길드' 건물 외관으로 사용된 실제 신사클럽 리폼 클럽",
+      "tip": "그린파크역에서 도보 7분. 회원제 클럽이라 내부 출입은 불가하니 폴 몰 거리 맞은편 보도에서 고전적인 파사드만 촬영.",
+      "workId": "paddington",
+      "scene": "브라운 씨가 패딩턴과 함께 탐험가 몽고메리 클라이드의 기록을 찾아 지오그래퍼스 길드를 방문하는 장면의 외관",
+      "source": "https://www.movie-locations.com/movies/p/Paddington.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344150/spotchu/spots/uokomnyb4obqkmqfq4u0.jpg",
+      "imageCredit": {
+        "author": "Philafrenzy",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Reform_Club_02.JPG"
       }
     },
     {
@@ -4987,6 +5249,26 @@
         "author": "Elisa.rolle",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Church_of_St_Dunstan_in_the_East,_2001_(2).jpg"
+      }
+    },
+    {
+      "id": "london-station-platform-clock-paddington-b7e2",
+      "title": "패딩턴역 플랫폼1 시계탑 & 패딩턴 곰 동상",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51722,
+      "lng": -0.1775,
+      "area": "패딩턴역, 프래드 스트리트, W2",
+      "subject": "브라운 가족이 이름표를 단 채 여행가방에 앉아있던 곰을 발견해 이름을 지어주는 장면의 실제 배경 — 플랫폼1 시계탑 아래 세워진 청동 패딩턴 곰 동상",
+      "tip": "패딩턴 내셔널레일·지하철역 하차 후 플랫폼1로 이동. 2000년에 세워진 실제 청동 곰 동상이 영화 속 장면과 같은 시계탑 아래 있어 인생샷 포인트로 인기.",
+      "workId": "paddington",
+      "scene": "브라운 가족이 여행가방 위에 앉아있던 페루 출신 곰을 만나 하룻밤 재워주기로 하며 '패딩턴'이라는 이름을 지어주는 첫 만남 장면",
+      "source": "https://www.visitbritain.com/en/things-to-do/visit-paddington-filming-locations",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344153/spotchu/spots/pmvjddlynkuwywhzu53p.jpg",
+      "imageCredit": {
+        "author": "mattbuck (category)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Paddington_station_MMB_54.jpg"
       }
     },
     {
@@ -5893,6 +6175,26 @@
       "source": "https://nycinfilm.com/2024/10/14/joker-2019/"
     },
     {
+      "id": "newyork-55-central-park-west-ghostbusters-d29f",
+      "title": "55 센트럴파크웨스트 (고스트버스터즈 데이나 아파트)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.77222,
+      "lng": -73.97917,
+      "area": "센트럴파크웨스트, 어퍼웨스트사이드 (65번가-66번가 사이)",
+      "subject": "데이나 배럿(시고니 위버) 아파트 '샌도어 빌딩' 외경으로 쓰인 실제 주거용 건물 — 스크린상 옥상 신전과 추가 층은 매트 페인팅(CG) 합성",
+      "tip": "실거주 건물이라 로비 진입은 불가. 길 건너 센트럴파크 쪽 인도(센트럴파크웨스트 도로변)에서 외관을 담는다. 지하철 B/C선 72 St역에서 도보 약 5분.",
+      "workId": "ghostbusters",
+      "scene": "데이나가 아파트에서 초자연 현상을 겪고 이후 악령 줄(Zuul)에 빙의되는 장면들의 건물 외경",
+      "source": "https://en.wikipedia.org/wiki/55_Central_Park_West",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344156/spotchu/spots/el73gvpiemez2tgndzsj.jpg",
+      "imageCredit": {
+        "author": "David Shankbone",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:55_Central_Park_West_(Ghostbusters_Building)_by_David_Shankbone.jpg"
+      }
+    },
+    {
       "id": "newyork-bethesda-terrace-harry-sally-c17d",
       "title": "베데스다 테라스 (해리가 샐리를 만났을 때 촬영지)",
       "city": "newyork",
@@ -6041,6 +6343,26 @@
       }
     },
     {
+      "id": "newyork-havemeyer-hall-columbia-ghostbusters-7b3e",
+      "title": "컬럼비아대 헤이브마이어홀 (고스트버스터즈 '위버홀' 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.8093,
+      "lng": -73.96227,
+      "area": "모닝사이드 하이츠, 컬럼비아대학교 캠퍼스",
+      "subject": "실제 헤이브마이어홀 외경 — 극중 가상의 심령학과 건물 '위버홀'로 등장, 주인공들이 대학에서 해고되는 장면의 배경",
+      "tip": "지하철 1호선 116 St-Columbia University역 하차, 브로드웨이 정문(칼리지 워크)으로 캠퍼스 진입 가능(상시 개방된 공개 캠퍼스). 건물 앞 보행로에서 촬영, 학기 중 수업 시간대는 학생 통행이 많다.",
+      "workId": "ghostbusters",
+      "scene": "오프닝부 — 대학 심령학과에서 해고된 뒤 유령퇴치 사업을 구상하는 장면의 '위버홀' 건물 외경",
+      "source": "https://www.untappedcities.com/ghostbusters-1984-nyc-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344160/spotchu/spots/k1rliggkpr2ixdtvgwe3.jpg",
+      "imageCredit": {
+        "author": "George W. Bromley and Walter S. Bromley",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:%22COLUMBIA_UNIVERSITY%22_%22LIBRARY%22_%22HAVEMEYER_HALL%22_%22SCHERMERHORN_HALL%22_%22FAYERWEATHER_HALL%22_%22ST_PAULS_CHAPEL%22_%22OBSERVATORY%22_%22SCHOOL_OF_MINES%22_%22SCHOOL_OF_ENGINEERING%22_map_in_1916,_from-_Bromley_Manhattan_Plate_132_publ._1916_(cropped).jpg"
+      }
+    },
+    {
       "id": "newyork-home-alone-2-gapstow-bridge-pigeon-lady-f92c",
       "title": "Home Alone 2 Gapstow Bridge",
       "city": "newyork",
@@ -6127,6 +6449,26 @@
       }
     },
     {
+      "id": "newyork-lincoln-center-plaza-ghostbusters-8e5c",
+      "title": "링컨센터 조시 로버트슨 광장 (고스트버스터즈 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.77232,
+      "lng": -73.9834,
+      "area": "링컨센터, 어퍼웨스트사이드",
+      "subject": "레브슨 분수(Revson Fountain)가 있는 조시 로버트슨 광장 — 벤크먼이 오케스트라 리허설을 마치고 나온 데이나와 재회해 분수 주변을 함께 걷는 장면",
+      "tip": "지하철 1호선 66 St-Lincoln Center역 바로 앞. 분수 물쇼는 낮 시간대 정시마다 진행되며, 분수와 메트로폴리탄 오페라하우스 아치를 함께 프레이밍하면 좋다.",
+      "workId": "ghostbusters",
+      "scene": "벤크먼과 데이나가 링컨센터 분수 앞에서 재회해 대화하며 걷는 장면",
+      "source": "https://www.untappedcities.com/ghostbusters-1984-nyc-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344165/spotchu/spots/vr1nbvyhy30d36zrc3xu.jpg",
+      "imageCredit": {
+        "author": "Lydia Liu",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fountains_at_the_Josie_Robertson_Plaza_(20022930973).jpg"
+      }
+    },
+    {
       "id": "newyork-loeb-boathouse-harry-sally-e83a",
       "title": "센트럴파크 로브 보트하우스 (해리가 샐리를 만났을 때 촬영지)",
       "city": "newyork",
@@ -6178,6 +6520,26 @@
         "author": "Ferfive",
         "license": "CC BY 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=177424868"
+      }
+    },
+    {
+      "id": "newyork-nypl-fifth-avenue-lions-ghostbusters-a4c1",
+      "title": "뉴욕공립도서관 사자상 앞 (고스트버스터즈 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.75306,
+      "lng": -73.98194,
+      "area": "5번가, 미드타운 맨해튼 (40번가-42번가 사이)",
+      "subject": "뉴욕공립도서관 5번가 정문 계단과 대리석 사자상 '인내(Patience)'·'불굴(Fortitude)' — 영화 오프닝 도서관 외경",
+      "tip": "지하철 B/D/F/M선 42 St-Bryant Pk역 또는 7호선 5 Av역에서 도보 3분. 5번가 인도에서 계단과 사자상을 정면으로 담을 수 있다. 서고 유령 장면 자체는 실제로 LA 중앙도서관 세트에서 별도 촬영됨.",
+      "workId": "ghostbusters",
+      "scene": "오프닝 — 도서관 서고에 유령이 출몰해 사서가 놀라 도망치는 장면의 도서관 외경",
+      "source": "https://www.untappedcities.com/ghostbusters-1984-nyc-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344167/spotchu/spots/vyp4aqm22vxvvb5cmo75.jpg",
+      "imageCredit": {
+        "author": "(vincent desjardins) from Paris, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:New_York_City,_Midtown_Manhattan,_New_York_Public_Library,_Stephen_A._Schwarzman_Building,_1897-1911._5th_Avenue_(2011).jpg"
       }
     },
     {
@@ -6281,6 +6643,26 @@
         "author": "Kidfly182",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Tribeca_Manhattan_December_2022_021.jpg"
+      }
+    },
+    {
+      "id": "newyork-tavern-on-the-green-ghostbusters-c16a",
+      "title": "타번 온 더 그린 (고스트버스터즈 테러독 추격 장면)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.77222,
+      "lng": -73.97778,
+      "area": "센트럴파크 (센트럴파크웨스트 & 67번가 인근)",
+      "subject": "레스토랑 타번 온 더 그린 외경 — 루이스 털리가 테러독(지옥개)에게 쫓기며 창문 안 손님들에게 도움을 청하는 장면 촬영지",
+      "tip": "센트럴파크 산책로에서 레스토랑 건물 외관과 정원 조경을 함께 담을 수 있다. 지하철 B/C선 72 St역에서 공원을 가로질러 도보 약 10분.",
+      "workId": "ghostbusters",
+      "scene": "루이스 털리가 테러독에게 쫓겨 레스토랑 창문 앞에서 도움을 요청하는 장면",
+      "source": "https://www.iamnotastalker.com/2018/06/15/tavern-on-the-green-from-ghostbusters",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344170/spotchu/spots/or694ibnwxh5swr8hfsy.jpg",
+      "imageCredit": {
+        "author": "Jim.henderson",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Tavern_on_the_Green_cloudy_jeh.JPG"
       }
     },
     {
@@ -7221,6 +7603,26 @@
       }
     },
     {
+      "id": "paris-louvre-pyramide-da-vinci-code-7f2a",
+      "title": "루브르 유리 피라미드 (다빈치 코드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8612,
+      "lng": 2.3348,
+      "area": "1구, 쿠르 나폴레옹(루브르 박물관 안뜰)",
+      "subject": "박물관장 자크 소니에르 피살 사건으로 랑던이 야간에 소환되는 도입부 무대, I.M. 페이의 유리 피라미드",
+      "tip": "피라미드 서쪽 카루젤 개선문 방향에서 좌우 대칭 구도로 담을 수 있다. 야간 조명이 켜지는 해 진 직후가 영화 속 밤 장면과 가장 비슷한 분위기.",
+      "workId": "the-da-vinci-code",
+      "scene": "소니에르 피살 사건으로 랑던이 야간에 루브르로 소환되는 도입부, 유리 피라미드 앞 장면",
+      "source": "https://www.filmfrance.net/en/once-upon-a-time/the-da-vinci-code/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344173/spotchu/spots/mc95gsof41figvc7hmpz.jpg",
+      "imageCredit": {
+        "author": "Shubhagata Sengupta shxb",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Louvre_Pyramid_at_night_from_the_northwest_(Unsplash).jpg"
+      }
+    },
+    {
       "id": "paris-louvre-salle-mollien-6b3e",
       "title": "루브르 박물관 드농관 살 몰리앙",
       "city": "paris",
@@ -7296,6 +7698,26 @@
         "author": "Mbzt",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:P1210452_Paris_XVIII_rue_Maurice-Utrillo_rwk.jpg"
+      }
+    },
+    {
+      "id": "paris-musee-nissim-de-camondo-da-vinci-code-1a6e",
+      "title": "니심 드 카몽도 저택 (다빈치 코드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8792,
+      "lng": 2.3124,
+      "area": "8구, 몽소 공원 옆 뤼 드 몽소 63번지",
+      "subject": "극중 '취리히 예탁은행(Banque Zurichoise de Dépôt)'으로 등장하는 저택 정문 외관",
+      "tip": "몽소 공원 남쪽 뤼 드 몽소를 걸으며 철제 대문과 저택 파사드를 담을 수 있다. 은행 내부 장면은 스튜디오 세트지만 건물 자체는 실제 장식미술관(니심 드 카몽도 박물관)으로 관람 가능.",
+      "workId": "the-da-vinci-code",
+      "scene": "랑던과 소피가 취리히 예탁은행에 들어가는 장면의 건물 외경",
+      "source": "https://findthatlocation.com/film-title/the-da-vinci-code/location/1483",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344176/spotchu/spots/vbvqvbnw4alxfopfizkj.jpg",
+      "imageCredit": {
+        "author": "Moonik",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_Nissim-de-Camondo.jpg"
       }
     },
     {
@@ -7457,6 +7879,66 @@
       }
     },
     {
+      "id": "paris-pont-du-carrousel-da-vinci-code-e02f",
+      "title": "퐁 뒤 캐루젤 (다빈치 코드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8594,
+      "lng": 2.3329,
+      "area": "1/7구 경계, 센 강 퐁 뒤 캐루젤",
+      "subject": "루브르를 탈출한 랑던과 소피가 스마트카로 건너는 추격전 다리",
+      "tip": "다리 중앙 인도에서 루브르와 튈르리 정원을 배경으로 담을 수 있다. 차량 통행이 있으니 인도에서만 촬영할 것.",
+      "workId": "the-da-vinci-code",
+      "scene": "루브르에서 도주한 랑던과 소피가 스마트카를 타고 경찰 추격을 따돌리며 건너는 다리 장면",
+      "source": "https://almostginger.com/the-da-vinci-code-film-locations-paris/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344179/spotchu/spots/grkvnsuf9n9xwmuoi0ea.jpg",
+      "imageCredit": {
+        "author": "Nan Palmero from San Antonio, TX, USA",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pont_du_Carrousel,_Paris_October_2012.jpg"
+      }
+    },
+    {
+      "id": "paris-ritz-paris-da-vinci-code-4d81",
+      "title": "리츠 파리 호텔 (다빈치 코드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8676,
+      "lng": 2.329,
+      "area": "1구, 방돔 광장 15번지",
+      "subject": "결말부 랑던이 투숙하며 마지막 단서를 깨닫는 리츠 호텔 파사드",
+      "tip": "방돔 기둥 쪽에서 호텔 정면 아케이드를 함께 담을 수 있다. 객실은 투숙객 전용이라 외관만 촬영 가능.",
+      "workId": "the-da-vinci-code",
+      "scene": "랑던이 리츠 호텔 객실에서 면도하다 마지막 단서를 깨닫는 결말부 장면",
+      "source": "https://movie-locations.com/movies/d/Da-Vinci-Code.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344181/spotchu/spots/hojpubifmqrusivzm8a6.jpg",
+      "imageCredit": {
+        "author": "Gzen92",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Place_Vend%C3%B4me_-_H%C3%B4tel_Ritz_(Paris).jpg"
+      }
+    },
+    {
+      "id": "paris-rue-becquerel-montmartre-da-vinci-code-c58d",
+      "title": "뤼 베크렐 (다빈치 코드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.889,
+      "lng": 2.344,
+      "area": "18구, 몽마르트 뤼 베크렐·뤼 드 라 본 교차로",
+      "subject": "오푸스 데이 수도사 실라가 은신하며 고행하는 몽마르트 아파트 외관",
+      "tip": "사크레쾨르 대성당에서 도보 5분 거리의 조용한 주택가 계단길이다. 실제 거주민이 있으니 이른 저녁 이후 방문은 자제.",
+      "workId": "the-da-vinci-code",
+      "scene": "오푸스 데이 수도사 실라가 은신하며 고행하는 아파트 장면",
+      "source": "https://thecinemaholic.com/where-was-the-da-vinci-code-filmed/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344184/spotchu/spots/yawbzcuyqrtfc7itnbhj.jpg",
+      "imageCredit": {
+        "author": "Delâtre, Eugène (Paris, 10–12–1864 - Paris, 24–09–1938), gra",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Rue_Becquerel,_G.23242.jpg"
+      }
+    },
+    {
       "id": "paris-saint-eustache-eglise-3d9a",
       "title": "생퇴스타슈 성당 존 윅-케인 재회 장면",
       "city": "paris",
@@ -7474,6 +7956,26 @@
         "author": "Catedrales e Iglesias",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/12950131@N06/6919411343"
+      }
+    },
+    {
+      "id": "paris-saint-sulpice-da-vinci-code-b93c",
+      "title": "생쉴피스 성당 (다빈치 코드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8511,
+      "lng": 2.3335,
+      "area": "6구, 플라스 생쉴피스",
+      "subject": "실라가 '로즈라인' 단서를 쫓아 잠입하는 성당의 비대칭 쌍둥이 종탑 외관",
+      "tip": "성당 앞 분수 광장에서 좌우 높이가 다른 종탑이 함께 나오는 정면 구도로 촬영. 성당 측이 촬영을 불허해 로즈라인 추적 장면 자체는 영국 셰퍼튼 스튜디오 세트로 재현됐고 실제 촬영은 외경뿐이다.",
+      "workId": "the-da-vinci-code",
+      "scene": "실라가 로즈라인 단서를 쫓아 성당에 잠입하는 장면(외경만 실제 촬영, 내부는 스튜디오 세트)",
+      "source": "https://thecinemaholic.com/where-was-the-da-vinci-code-filmed/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344187/spotchu/spots/yfttqx6dqndsmcdiwlt8.jpg",
+      "imageCredit": {
+        "author": "Kapsuglan",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Paris_75006_Saint-Sulpice_exterior_west_facade_detail.jpg"
       }
     },
     {
@@ -10634,6 +11136,66 @@
       }
     },
     {
+      "id": "tokyo-sangubashi-crossing-5cm-per-sec-4a7e",
+      "title": "산구바시 건널목 (초속 5센티미터 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.67731,
+      "lng": 139.69294,
+      "area": "산구바시, 시부야구",
+      "subject": "오다큐 오다와라선 산구바시역 남쪽 철도 건널목(참궁교 1호 건널목)",
+      "tip": "오다큐 오다와라선 산구바시역에서 도보 약 2~3분, 선로 남쪽. 안전선 밖에서만 촬영하고 차단봉이 내려오면 즉시 물러날 것. 벚꽃철(3월 말~4월 초)이 극중 구도와 가장 비슷하다.",
+      "workId": "5-centimeters-per-second",
+      "scene": "1화 '벚꽃초' 도입부, 벚꽃이 흩날리는 건널목에서 아카리가 먼저 건너며 '내년에도 같이 벚꽃 보자'고 말하는 장면",
+      "source": "https://ecotopia.earth/article-9780/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344190/spotchu/spots/yxpiwcz2go7jsfrd6oer.jpg",
+      "imageCredit": {
+        "author": "鋸香具師",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Odakyu_yoyogi_sanya_east.jpg"
+      }
+    },
+    {
+      "id": "tokyo-sangubashi-crossing3-5cm-per-sec-e83a",
+      "title": "산구바시 3호 건널목 (초속 5센티미터 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.67515,
+      "lng": 139.69181,
+      "area": "산구바시~요요기하치만 사이, 시부야구",
+      "subject": "산구바시역과 요요기하치만역 사이, 청소년센터 앞 교차로의 철도 건널목(참궁교 3호 건널목)",
+      "tip": "산구바시역·요요기하치만역 양쪽에서 각 도보 5~10분. 실제 운행 중인 오다큐선 건널목이므로 차단봉 밖 안전선에서만 촬영하고 건널목 위에서 머무르지 말 것. 벚꽃철 저녁 무렵 열차 통과 순간을 노리는 팬이 많다.",
+      "workId": "5-centimeters-per-second",
+      "scene": "3화 라스트 신, 어른이 된 다카키가 건널목에서 아카리로 보이는 여성과 스쳐 지나가는 명장면 — 엔딩곡 'One more time, One more chance'가 흐르는 장면의 실제 배경",
+      "source": "https://shinkaifan.com/map/sangubashi-3-railway-crossing/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344193/spotchu/spots/jtx4v2q5hdvxfultow1w.jpg",
+      "imageCredit": {
+        "author": "鋸香具師",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yoyogi_humikiri_240104.jpg"
+      }
+    },
+    {
+      "id": "tokyo-sangubashi-park-5cm-per-sec-9c2b",
+      "title": "산구바시 공원 (초속 5센티미터 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.67888,
+      "lng": 139.69273,
+      "area": "산구바시, 시부야구",
+      "subject": "산구바시역 옆 소규모 근린공원과 상점가 초입 골목길",
+      "tip": "산구바시역에서 도보 약 3분. 공원 옆 좁은 골목이 극중 하굣길 배경과 닮았다. 벚꽃철 오후 늦은 시간 나무 사이로 비치는 햇살 구도를 노려볼 것. 평일 주민 통행이 있으니 통로를 막지 말 것.",
+      "workId": "5-centimeters-per-second",
+      "scene": "1화, 벚꽃이 날리는 산구바시공원 옆길을 두 사람이 나란히 걸어 하교하는 장면의 배경",
+      "source": "https://anime-pilgrimage.com/five-centimeters-per-second/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344196/spotchu/spots/u7xs7naabmrjbk8xdhzi.jpg",
+      "imageCredit": {
+        "author": "鋸香具師",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sangubashi_yoyogi_east.jpg"
+      }
+    },
+    {
       "id": "tokyo-sekido-castle-tenshudai-whisper-c81f",
       "title": "세키도성터 천수대",
       "city": "tokyo",
@@ -11048,6 +11610,26 @@
         "author": "鋸香具師",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Toilet_yoyogi_hachiman_231015.jpg"
+      }
+    },
+    {
+      "id": "tokyo-yoyogi-hachimangu-5cm-per-sec-6f1d",
+      "title": "요요기하치만구 (초속 5센티미터 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.67192,
+      "lng": 139.68892,
+      "area": "요요기하치만, 시부야구",
+      "subject": "요요기하치만구 참배로와 도리이, 경내 돌계단",
+      "tip": "오다큐 오다와라선 요요기하치만역에서 도보 약 5분. 참배객 예절을 지키고 배전 앞 삼각대 장시간 점유는 피할 것. 나무 사이로 빛이 드는 오전 시간대 추천.",
+      "workId": "5-centimeters-per-second",
+      "scene": "1화, 두 사람이 신사 경내를 함께 걸으며 고양이를 보고 도서관 책 이야기를 나누는 장면의 배경",
+      "source": "https://anime-pilgrimage.com/five-centimeters-per-second/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788344199/spotchu/spots/ln8auv2cdrlxgns8pwrr.jpg",
+      "imageCredit": {
+        "author": "Asanagi",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yoyogi_Hachimangu_2012-10-15.jpg"
       }
     },
     {
@@ -11725,6 +12307,13 @@
       "progress": 0
     },
     {
+      "id": "run-lola-run",
+      "title": "롤라 런",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "the-hunger-games-mockingjay-part-2",
       "title": "헝거게임: 모킹제이",
       "type": "영화",
@@ -12292,6 +12881,13 @@
       "progress": 0
     },
     {
+      "id": "ghostbusters",
+      "title": "고스트버스터즈",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "when-harry-met-sally",
       "title": "해리가 샐리를 만났을 때",
       "type": "영화",
@@ -12315,13 +12911,6 @@
     {
       "id": "-newyork",
       "title": "원스 어폰 어 타임 인 아메리카",
-      "type": "영화",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "ghostbusters",
-      "title": "Ghostbusters",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -12476,6 +13065,13 @@
     {
       "id": "john-wick-chapter-4",
       "title": "존 윅 4",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-da-vinci-code",
+      "title": "다빈치 코드",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -12813,6 +13409,13 @@
       "id": "lost-translation",
       "title": "사랑도 통역이 되나요? (로스트 인 트랜스레이션)",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "5-centimeters-per-second",
+      "title": "초속 5센티미터",
+      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
