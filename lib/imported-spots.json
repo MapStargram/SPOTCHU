@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T22:52:04.118Z",
+  "generatedAt": "2026-09-02T00:51:46.498Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -61,6 +61,52 @@
       "source": "https://huntingbond.com/tiffany-case-house-amsterdam/"
     },
     {
+      "id": "amsterdam-fault-in-our-stars-american-hotel",
+      "title": "아메리칸 호텔 암스테르담 (안녕, 헤이즐 촬영지)",
+      "city": "amsterdam",
+      "category": "drama",
+      "lat": 52.3639,
+      "lng": 4.8814,
+      "area": "Leidsekade, Amsterdam (Leidseplein 인근)",
+      "subject": "아메리칸 호텔(현 클레이튼 호텔 암스테르담 아메리칸)의 아르누보 외관 — 헤이즐 일행이 암스테르담에 도착해 묵는 호텔",
+      "tip": "싱헬흐라흐트 운하 건너편 인도에서 호텔 정면 전체가 한 프레임에 들어온다. 실내는 영화에 쓰이지 않았고 외관만 실제 촬영지.",
+      "lens": "24-35mm",
+      "time": "오후",
+      "workId": "the-fault-in-our-stars",
+      "scene": "헤이즐·거스·어거스터스가 암스테르담에 도착해 묵는 호텔로 등장하는 장면(외관만 실촬영, 내부는 피츠버그 세트)",
+      "verified": "reported",
+      "source": "https://almostginger.com/the-fault-in-our-stars-film-locations-amsterdam/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310196/spotchu/spots/wol26ixxufvbxsbsyv9e.jpg",
+      "imageCredit": {
+        "author": "Steven Lek",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=77663780"
+      }
+    },
+    {
+      "id": "amsterdam-fault-in-our-stars-anne-frank-house",
+      "title": "안네 프랑크의 집 (안녕, 헤이즐 촬영지)",
+      "city": "amsterdam",
+      "category": "drama",
+      "lat": 52.3752,
+      "lng": 4.884,
+      "area": "Westermarkt, Amsterdam (Jordaan 인근)",
+      "subject": "안네 프랑크의 집 운하변 외관 — 헤이즐과 거스가 방문하는 장면의 실제 촬영지",
+      "tip": "프린센흐라흐트 건너편 인도에서 건물 전체와 운하를 함께 담을 수 있다. 박물관 입장 대기줄이 길어 이른 아침이 한산하다.",
+      "lens": "24-35mm",
+      "time": "이른 아침",
+      "workId": "the-fault-in-our-stars",
+      "scene": "헤이즐과 거스가 안네 프랑크의 집을 방문하는 장면 — 외관과 1층 내부는 실제 이곳에서 촬영, 계단·다락방 키스 장면은 피츠버그 스튜디오 세트로 재현",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/f/Fault-In-Our-Stars.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310197/spotchu/spots/vftscadkxi1fupcveyay.jpg",
+      "imageCredit": {
+        "author": "David Berkowitz",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/25897810@N00/5724895182"
+      }
+    },
+    {
       "id": "amsterdam-fault-in-our-stars-bench-b49f",
       "title": "안녕, 헤이즐 운하 벤치 (레이트서흐라흐트)",
       "city": "amsterdam",
@@ -76,6 +122,43 @@
       "scene": "Leidsegracht 4 운하 벤치 장면",
       "verified": "reported",
       "source": "https://www.movie-locations.com/movies/f/Fault-In-Our-Stars.php"
+    },
+    {
+      "id": "amsterdam-fault-in-our-stars-rijksmuseum-passage",
+      "title": "레이크스미술관 파사주 (안녕, 헤이즐 촬영지)",
+      "city": "amsterdam",
+      "category": "drama",
+      "lat": 52.36003,
+      "lng": 4.88528,
+      "area": "Museumstraat, Amsterdam (Museumplein 인근)",
+      "subject": "레이크스미술관 자전거 통과로(파사주) — 저녁 식사 후 커플이 거리 악단의 연주를 들으며 걷는 장면의 실제 촬영지",
+      "tip": "저녁 무렵 통로 조명이 켜지면 아치형 붉은 벽돌 천장과 자전거 행렬을 함께 담기 좋다. 자전거 전용로이니 중앙에 서서 촬영하지 말 것.",
+      "lens": "16-24mm",
+      "time": "해질녘",
+      "workId": "the-fault-in-our-stars",
+      "scene": "오랑예 레스토랑 저녁 식사 후 헤이즐과 거스가 레이크스미술관 통과로를 걸으며 거리 악단의 바이올린 연주를 듣는 장면",
+      "verified": "reported",
+      "source": "https://almostginger.com/the-fault-in-our-stars-film-locations-amsterdam/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310201/spotchu/spots/vzb2vyqwgwh3ao7tqmpq.jpg",
+      "imageCredit": {
+        "author": "Vasyatka1",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=88942775"
+      }
+    },
+    {
+      "id": "amsterdam-magere-brug-007-e91c",
+      "title": "마헤레 다리(스키니 브릿지)",
+      "city": "amsterdam",
+      "category": "drama",
+      "lat": 52.36361,
+      "lng": 4.9025,
+      "area": "Amstel, Amsterdam (Kerkstraat ~ Nieuwe Kerkstraat 사이)",
+      "subject": "다리 위에서 바라본 암스텔강과 목조 도개교 구조",
+      "tip": "다리 중앙 보행로에서 남쪽 암스텔강을 향해 서면 영화 속 관광보트가 지나가던 구도와 비슷하다. 해 질 무렵 목조 도개교 실루엣과 강변 불빛이 함께 담긴다. 자전거·보행 통행량이 많으니 가장자리에서 통행에 방해되지 않게 촬영할 것.",
+      "workId": "diamonds-are-forever",
+      "scene": "오프닝 시퀀스 — Mr. Wint과 Mr. Kidd가 관광객으로 위장해 다리 위에서 지켜보는 가운데, 암스텔강에서 다이아몬드 밀수책 휘슬러 부인의 시신이 인양되는 장면",
+      "source": "https://www.jamesbondlifestyle.com/product/skinny-bridge-and-canals-amsterdam-netherlands"
     },
     {
       "id": "amsterdam-museumplein-reflecting-pool-rijksmuseum",
@@ -997,6 +1080,28 @@
       }
     },
     {
+      "id": "berlin-kraftwerk-mitte-beetee-lab-c81f",
+      "title": "크라프트베르크 베를린 (헝거게임: 모킹제이)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.5108,
+      "lng": 13.4198,
+      "area": "Köpenicker Straße 59-73, Mitte",
+      "subject": "옛 화력발전소 크라프트베르크 베를린의 육중한 산업 건축 외관(극중 13구역 지하 무기연구소)",
+      "tip": "쾨페니커 슈트라세 인도에서 굴뚝과 붉은 벽돌 발전소 외벽이 함께 보이도록 촬영. 내부는 상시 개방이 아니라 전시·이벤트 대관 시에만 관람 가능하니 사전 확인 필요.",
+      "lens": "24-70mm",
+      "time": "오후",
+      "workId": "the-hunger-games-mockingjay-part-2",
+      "scene": "파트1 — 13구역 지하 무기연구소, 비티(Beetee)가 캣니스·게일에게 무기고를 보여주는 장면",
+      "source": "https://www.movie-locations.com/movies/h/Hunger-Games-Mockingjay-Part-1.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310202/spotchu/spots/bpclucxvyxqrstibwfpw.jpg",
+      "imageCredit": {
+        "author": "sebastian.rittau",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/123589162@N07/15513069031"
+      }
+    },
+    {
       "id": "berlin-marie-elisabeth-lueders-haus-oculum-03",
       "title": "마리-엘리자베트-뤼더스 하우스 오큘럼",
       "city": "berlin",
@@ -1112,6 +1217,50 @@
         "author": "Leonhard Lenz",
         "license": "CC0 1.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=186065690"
+      }
+    },
+    {
+      "id": "berlin-tempelhof-luftbruecke-9e2a",
+      "title": "템펠호프 공항 정문 광장 (헝거게임: 모킹제이)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.48417,
+      "lng": 13.3875,
+      "area": "Platz der Luftbrücke, Tempelhof-Schöneberg",
+      "subject": "템펠호프 공항 정문 파사드와 베를린 공수(Luftbrücke) 기념비가 함께 들어오는 구도(극중 2구역 반군 기지 정문)",
+      "tip": "U6 플랏츠 데어 루프트브뤼케(Platz der Luftbrücke)역 출구 바로 앞 광장에서 촬영. 정문 파사드 전체가 들어오도록 광각으로 서고, 공수 기념비를 전경에 두면 좋다. 공항 부지는 현재 가이드 투어로만 내부 진입 가능하나 광장·외관 촬영은 상시 자유롭다.",
+      "lens": "16-24mm 광각",
+      "time": "오전(정문이 동향이라 역광 피하기 좋음)",
+      "workId": "the-hunger-games-mockingjay-part-2",
+      "scene": "파트2 — 캣니스가 도착하는 2구역 반군 기지 정문 및 지휘부 전술회의 장면(공항 메인 터미널 정문 촬영)",
+      "source": "https://www.movie-locations.com/movies/h/Hunger-Games-Mockingjay-Part-2.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310203/spotchu/spots/zkfxi7h9edunxhlow5tc.jpg",
+      "imageCredit": {
+        "author": "Me in ME",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/12357841@N02/43092015872"
+      }
+    },
+    {
+      "id": "berlin-tempelhofer-feld-hangar-4b7c",
+      "title": "템펠호퍼 펠트 격납고 후면부 (헝거게임: 모킹제이)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.4781,
+      "lng": 13.3861,
+      "area": "Tempelhofer Feld, Paradestraße 입구, Tempelhof-Schöneberg",
+      "subject": "무료 공원이 된 옛 활주로 쪽에서 바라본 템펠호프 격납고 건물 후면(극중 페일러 사령관의 캐피톨 진격 연설 장면 배경)",
+      "tip": "무료 개방된 템펠호퍼 펠트 공원의 파라데슈트라세(Tempelhofer Damm 방면) 출입구로 들어가 활주로 쪽에서 건물 측면을 길게 담는다. 정문 광장(플랏츠 데어 루프트브뤼케) 촬영지와는 도보 10분 거리의 별개 구도.",
+      "lens": "24-35mm",
+      "time": "일몰 전후 실루엣",
+      "workId": "the-hunger-games-mockingjay-part-2",
+      "scene": "파트2 — 페일러 사령관이 반군에게 캐피톨 진격을 촉구하는 연설 장면이 촬영된 공항 후면 활주로 측",
+      "source": "https://www.movie-locations.com/movies/h/Hunger-Games-Mockingjay-Part-2.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310204/spotchu/spots/a3wps6vieyhj1x6fivip.jpg",
+      "imageCredit": {
+        "author": "Jana_Ge",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/123077313@N02/15294735547"
       }
     },
     {
@@ -1416,6 +1565,23 @@
       "source": "https://www.busan.go.kr/news/totalnews01/view?dataNo=57228"
     },
     {
+      "id": "busan-ilgwang-beach-firstkiss-8b2e",
+      "title": "일광해수욕장",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.26109,
+      "lng": 129.23374,
+      "area": "부산 기장군 일광읍",
+      "subject": "아담하고 조용한 백사장과 바다 — 극중 애라·동만 커플 장면 배경",
+      "tip": "인적 드문 이른 아침이나 해 질 녘에 방문하면 인물 실루엣과 잔잔한 파도를 함께 담기 좋다.",
+      "lens": "35-50mm",
+      "time": "06:00–07:30 또는 18:00–19:00",
+      "workId": "fight-for-my-way",
+      "scene": "애라가 행사 사회를 보는 장면, 동만과 애라의 첫 데이트·첫 키스 장면",
+      "verified": "reported",
+      "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=76af5dfa-ac7b-4e52-9f02-241e0871a977"
+    },
+    {
       "id": "busan-jagalchi-dongbang-alley-friend-c7e1",
       "title": "자갈치시장 건어물골목 (동방상회 골목)",
       "city": "busan",
@@ -1460,6 +1626,40 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:40_stairs.jpg"
       }
+    },
+    {
+      "id": "busan-jungangdong-notice-gym-4c9a",
+      "title": "노티스(옛 비욘드가라지) — 황장호체육관 촬영지",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.10231,
+      "lng": 129.03768,
+      "area": "부산 중구 중앙동5가(대교로 일대)",
+      "subject": "1950년대 미곡창고를 개조한 복합문화공간 건물 외경 — 극중 '황장호체육관'",
+      "tip": "위치는 근사치(도로 단위) — 현재 카페 '노티스'로 운영 중이라 체육관 세트는 남아있지 않다. 건물 외경·옥상에서 부산항 뷰 위주로 촬영할 것.",
+      "lens": "24-35mm",
+      "time": "14:00–16:00",
+      "workId": "fight-for-my-way",
+      "scene": "고동만(박서준)이 링 위에서 훈련하는 '황장호체육관' 장면",
+      "verified": "reported",
+      "source": "https://mobile.busan.com/view/busan/view.php?code=20170606000230"
+    },
+    {
+      "id": "busan-namilvilla-hansung-stairs-6d3f",
+      "title": "한성주택(남일빌라) 계단 골목",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.13687,
+      "lng": 129.0761,
+      "area": "부산 남구 문현동(지게골역 인근)",
+      "subject": "파스텔톤 저층 주택 사이 가파른 계단 골목 — 극중 '남일빌라' 외경",
+      "tip": "계단 아래쪽에서 위를 올려다보는 구도로 찍으면 알록달록한 벽면이 압축되어 보인다. 실제 주민이 사는 사유 주거지이므로 조용히, 짧게 촬영할 것.",
+      "lens": "24-35mm",
+      "time": "09:00–11:00",
+      "workId": "fight-for-my-way",
+      "scene": "동만·애라·설희·탁수가 함께 사는 '남일빌라' 외경과 계단(극 전반)",
+      "verified": "reported",
+      "source": "https://www.busan.com/view/busan/view.php?code=20170619000418"
     },
     {
       "id": "busan-the-bay-101-marine-city-reflection-b81c",
@@ -3658,6 +3858,52 @@
       }
     },
     {
+      "id": "kyoto-sanjo-ohashi-makanai-2a8f",
+      "title": "산조대교 기보시 난간",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.00905,
+      "lng": 135.77177,
+      "area": "나카교구·히가시야마구 경계, 카모강 산조대교",
+      "subject": "카모강을 가로지르는 산조대교와 난간의 기보시(擬宝珠) 장식",
+      "tip": "키요가 '그게 제 일이에요'라는 대사와 함께 다리를 건너는 장면(4화)의 배경. 차량·자전거 통행이 많으니 차도 쪽이 아닌 보도 안쪽에서 촬영.",
+      "lens": "35-50mm",
+      "time": "이른 아침",
+      "workId": "makanai",
+      "scene": "키요가 산조대교를 건너며 내레이션하는 장면, 기보시 장식이 비치는 구도 (4화)",
+      "verified": "official",
+      "source": "https://ja.kyoto.travel/support/film/tourisms/film_detail/254/film",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310206/spotchu/spots/woacefzvdkhrf2o79dpa.jpg",
+      "imageCredit": {
+        "author": "湖畔老",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/41679630@N05/18137243736"
+      }
+    },
+    {
+      "id": "kyoto-shirakawa-ipponbashi-makanai-4d9a",
+      "title": "시라카와 잇폰바시(고카와초바시)",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.00728,
+      "lng": 135.77814,
+      "area": "히가시야마구 후루카와초, 지온인 몬젠 인근 시라카와 변",
+      "subject": "난간 없는 외돌다리(잇폰바시·교자바시)와 버드나무 늘어선 시라카와 수로",
+      "tip": "센토(목욕탕) 다녀오는 길에 아이스크림을 먹는 장면(4~5화)의 다리. 돌다리 표면이 미끄럽고 난간이 없어 다리 위보다 옆 보도에서 촬영하는 편이 안전.",
+      "lens": "35-50mm",
+      "time": "늦은 오후",
+      "workId": "makanai",
+      "scene": "목욕을 다녀오던 키요가 잇폰바시 근처에서 아이스크림을 먹는 장면 (4~5화)",
+      "verified": "official",
+      "source": "https://ja.kyoto.travel/support/film/tourisms/film_detail/254/film",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310207/spotchu/spots/rpcpztigu4fbernmgy0b.jpg",
+      "imageCredit": {
+        "author": "mrhayata",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/36516818@N00/4457510490"
+      }
+    },
+    {
       "id": "kyoto-station-grand-staircase-viewpoint-2d5e",
       "title": "교토역 빌딩 대계단 및 무로마치코지 광장",
       "city": "kyoto",
@@ -3699,6 +3945,29 @@
         "author": "663highland",
         "license": "CC BY 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:Hokanji_Kyoto01n4272.jpg"
+      }
+    },
+    {
+      "id": "kyoto-yasaka-shrine-makanai-7c1e",
+      "title": "야사카 신사 오케라마이리 참배로",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.00363,
+      "lng": 135.77856,
+      "area": "히가시야마구 기온마치 기타가와, 야사카 신사",
+      "subject": "서쪽 로몬(누문)과 본전 앞 참배 공간",
+      "tip": "섣달그믐 밤 키요와 스미레가 한텐을 입고 오케라마이리(불씨 참배)를 하는 장면(7화)의 배경. 실제 오케라마이리는 12/31 밤~1/1 새벽에 열리며 인파가 매우 많으니 안전에 유의.",
+      "lens": "24-35mm",
+      "time": "해질녘 또는 이른 오전",
+      "workId": "makanai",
+      "scene": "섣달그믐 밤 오케라마이리 참배 장면 (7화)",
+      "verified": "official",
+      "source": "https://ja.kyoto.travel/support/film/tourisms/film_detail/254/film",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310212/spotchu/spots/tqokwfnsojemcez3wncz.png",
+      "imageCredit": {
+        "author": "Estorgik",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=92934582"
       }
     },
     {
@@ -3851,6 +4120,75 @@
       }
     },
     {
+      "id": "london-love-actually-albert-bridge-pm-drive-7d2c",
+      "title": "러브 액츄얼리 알버트 브릿지 (총리의 야간 드라이브)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.4826,
+      "lng": -0.16665,
+      "area": "Chelsea, London",
+      "subject": "알버트 브릿지 야간 조명과 서스펜션 케이블",
+      "tip": "첼시 쪽 다리 초입 보도에서 전구 조명이 켜진 다리 전체를 담는 구도. 해질 직후 점등 시간대가 가장 화려하다. 차도로 나가지 말고 반드시 인도·보도에서만 촬영할 것.",
+      "lens": "16-24mm",
+      "time": "해질 직후 (점등 시간대)",
+      "workId": "love-actually",
+      "scene": "총리 데이비드(휴 그랜트)가 나탈리를 찾아 나서며 차로 알버트 브릿지를 건너는 장면",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/l/Love-Actually.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310214/spotchu/spots/yupmknvd5lr21yfthmvl.jpg",
+      "imageCredit": {
+        "author": "It's No Game",
+        "license": "CC BY 2.0",
+        "source": "https://www.flickr.com/photos/29057345@N04/7705028432"
+      }
+    },
+    {
+      "id": "london-love-actually-grosvenor-chapel-wedding-2a7f",
+      "title": "러브 액츄얼리 그로브너 채플 (피터와 줄리엣의 결혼식)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.50899,
+      "lng": -0.1512,
+      "area": "Mayfair, London",
+      "subject": "24 South Audley Street 그로브너 채플 정문 파사드",
+      "tip": "사우스 오들리 스트리트 건너편 인도에서 정문 계단과 첨탑을 함께 담는 구도가 좋다. 실제 운영 중인 예배당이므로 예배 시간·방문객 통행을 방해하지 말 것.",
+      "lens": "35-50mm",
+      "time": "오전 (역광이 적은 시간대)",
+      "workId": "love-actually",
+      "scene": "피터(취웨텔 에지오포)와 줄리엣(키이라 나이틀리)이 결혼식을 올리는 장면 — 비틀즈 'All You Need Is Love' 깜짝 연주",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/l/Love-Actually.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310223/spotchu/spots/jacbstuezefo2ubnixmq.jpg",
+      "imageCredit": {
+        "author": "GrindtXX",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=90320190"
+      }
+    },
+    {
+      "id": "london-love-actually-oxo-tower-mark-flat-4e8a",
+      "title": "러브 액츄얼리 옥소 타워 워프 (마크의 집)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.50836,
+      "lng": -0.10822,
+      "area": "Southbank, London",
+      "subject": "옥소 타워 워프 건물 외관과 템스강변 산책로(퀸즈 워크)",
+      "tip": "강변 퀸즈 워크 산책로에서 옥소 타워 첨탑의 상징적인 원형 창(OXO 글자)을 올려다보는 구도. 해질 무렵 실루엣 촬영을 추천.",
+      "lens": "24-70mm",
+      "time": "해질녘",
+      "workId": "love-actually",
+      "scene": "마크(앤드류 링컨)의 아파트 외경으로 사용된 장면",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/l/Love-Actually.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310227/spotchu/spots/c2cxzqbz75bbyzsnbfvq.jpg",
+      "imageCredit": {
+        "author": "HereBeBeasties",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=16522260"
+      }
+    },
+    {
       "id": "london-love-actually-pink-house-st-lukes-mews-9c4d",
       "title": "Love Actually Pink House",
       "city": "london",
@@ -3871,6 +4209,52 @@
         "author": "Chris Wood (User:chris_j_wood)",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=77397613"
+      }
+    },
+    {
+      "id": "london-love-actually-selfridges-necklace-5b3e",
+      "title": "러브 액츄얼리 셀프리지스 백화점 (해리의 목걸이 선물 장면)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51458,
+      "lng": -0.15284,
+      "area": "Marylebone, London (Oxford Street)",
+      "subject": "400 Oxford Street 셀프리지스 백화점 정면 파사드",
+      "tip": "옥스퍼드 스트리트 건너편 인도에서 간판과 파사드 전경을 담는 구도. 크리스마스 시즌 조명 점등 후 야간 촬영도 인상적이다.",
+      "lens": "24-35mm",
+      "time": "저녁 (조명 점등 후)",
+      "workId": "love-actually",
+      "scene": "해리(앨런 릭먼)가 점원 루퍼스(로완 앳킨슨)에게 목걸이 포장을 부탁하는 장면",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/l/Love-Actually.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310228/spotchu/spots/j6unmet6saps21qq2il4.jpg",
+      "imageCredit": {
+        "author": "Robert Cutts",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/21678559@N06/5993985334"
+      }
+    },
+    {
+      "id": "london-love-actually-somerset-house-rink-9c1d",
+      "title": "러브 액츄얼리 서머셋 하우스 (겨울 스케이트장 오프닝 몽타주)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.51093,
+      "lng": -0.11838,
+      "area": "Strand, London",
+      "subject": "서머셋 하우스 안뜰(코트야드)과 겨울 스케이트 링크",
+      "tip": "안뜰 진입 아치 아래에서 안쪽 분수·스케이트장을 향한 대칭 구도가 좋다. 실제 스케이트장은 매년 11월 중순~1월 중순에만 운영되므로 그 시기에만 영화 속 장면을 재현할 수 있다.",
+      "lens": "24-35mm",
+      "time": "낮",
+      "workId": "love-actually",
+      "scene": "런던을 소개하는 오프닝 몽타주 중 서머셋 하우스 야외 스케이트장 전경",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/l/Love-Actually.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788310229/spotchu/spots/d2vmwj3we67bt7zfztiy.jpg",
+      "imageCredit": {
+        "author": "Loco Steve",
+        "license": "CC BY-SA 2.0",
+        "source": "https://www.flickr.com/photos/36989019@N08/23528519400"
       }
     },
     {
@@ -8790,7 +9174,7 @@
     },
     {
       "id": "the-hunger-games-mockingjay-part-2",
-      "title": "The Hunger Games: Mockingjay - Part 2",
+      "title": "헝거게임: 모킹제이",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -9146,6 +9530,13 @@
       "progress": 0
     },
     {
+      "id": "makanai",
+      "title": "마이코네 행복한 밥상",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "hibike-euphonium-2-hello-world",
       "title": "울려라! 유포니엄 2기 / 헬로 월드",
       "type": "애니",
@@ -9175,7 +9566,7 @@
     },
     {
       "id": "love-actually",
-      "title": "Love Actually",
+      "title": "러브 액츄얼리",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
