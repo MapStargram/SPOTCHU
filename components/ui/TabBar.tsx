@@ -1,15 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { Home, Compass, Bookmark, User } from "lucide-react";
+import { Home, Compass, PlusSquare, Bookmark, User } from "lucide-react";
 import { useCurrentCity } from "@/lib/useCurrentCity";
 
-type TabId = "home" | "explore" | "collections" | "profile";
-// AppShell은 notifications·report도 넘길 수 있다(하단 탭엔 없음 → 어떤 탭도 활성화 안 됨).
-type ActiveProp = TabId | "notifications" | "report";
+type TabId = "home" | "explore" | "report" | "collections" | "profile";
+// AppShell은 notifications도 넘길 수 있다(하단 탭엔 없음 → 어떤 탭도 활성화 안 됨).
+type ActiveProp = TabId | "notifications";
 
-// 하단 내비 4탭. 아직 미구현 섹션(탐색·컬렉션·프로필)은 비활성(inert)으로 표시 —
-// 404 방지. 해당 섹션 구현 시 href를 채운다.
+// 하단 내비 5탭.
 const TABS: {
   id: TabId;
   label: string;
@@ -18,6 +17,7 @@ const TABS: {
 }[] = [
   { id: "home", label: "홈", Icon: Home, href: "/home" },
   { id: "explore", label: "탐색", Icon: Compass, href: "/explore" }, // 실제 href는 useCurrentCity로 결정(아래)
+  { id: "report", label: "제보", Icon: PlusSquare, href: "/report" },
   { id: "collections", label: "컬렉션", Icon: Bookmark, href: "/collections" },
   { id: "profile", label: "프로필", Icon: User, href: "/profile" },
 ];
