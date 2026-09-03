@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T12:28:49.078Z",
+  "generatedAt": "2026-09-03T13:24:39.086Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -3858,6 +3858,26 @@
       }
     },
     {
+      "id": "hongkong-des-voeux-road-central-ghost-shell-a15c",
+      "title": "센트럴 데부아로·주빌리 스트리트 (공각기동대 실사 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.28436,
+      "lng": 114.15558,
+      "area": "Central, Hong Kong Island",
+      "subject": "데부아로 센트럴(德輔道中)과 주빌리 스트리트(租庇利街) 교차로 — 극중 메이저가 홍콩 도심 거리를 걷는 장면의 실제 촬영지",
+      "tip": "센트럴(Central) MTR역 도보권. 트램(딩딩) 선로가 지나는 교차로라 트램과 함께 프레이밍하면 영화 속 거리 분위기를 살릴 수 있음.",
+      "workId": "ghost-in-the-shell-2017",
+      "scene": "메이저(스칼렛 요한슨)가 홍콩 도심 거리를 걷는 장면 — 실제 데부아로/주빌리 스트리트 교차로에서 촬영",
+      "source": "https://www.atlasofwonders.com/2017/03/ghost-in-shell-filming-locations.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441834/spotchu/spots/tv0isijcgbzjeizhkvyt.jpg",
+      "imageCredit": {
+        "author": "LAUD Freiman Aldopoilslmy",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:202105_Hong_Kong_Tramways_148_at_Des_Voeux_Road_Central,_Sheung_Wan.jpg"
+      }
+    },
+    {
       "id": "hongkong-duddell-street-steps-gas-lamps-8f12",
       "title": "두델 스트리트 석계와 가스등",
       "city": "hongkong",
@@ -3920,6 +3940,26 @@
         "author": "Choinowski",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Two_International_Finance_Centre_in_Hong_Kong_in_2016.jpg"
+      }
+    },
+    {
+      "id": "hongkong-lai-tak-tsuen-atrium-ghost-shell-7b3f",
+      "title": "라이탁춘 원형 아트리움 (공각기동대 실사 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.27816,
+      "lng": 114.19449,
+      "area": "Tai Hang, Hong Kong Island",
+      "subject": "라이탁춘(勵德邨) 공공주택 단지의 원형 중정 아트리움 — 극중 메이저가 생모를 찾아 방문하는 아파트 건물의 실제 촬영지",
+      "tip": "틴하우(Tin Hau) MTR역에서 도보 약 10분. 실제 주민이 거주하는 공공주택이므로 1층 중정 공용구역에서 위를 올려다보는 구도로 짧고 조용히 촬영하고 주민 사생활을 존중할 것.",
+      "workId": "ghost-in-the-shell-2017",
+      "scene": "메이저(스칼렛 요한슨)가 생모를 찾아가는 아파트 방문 장면 — 원형 중정 아트리움이 드러난다",
+      "source": "https://en.wikipedia.org/wiki/Lai_Tak_Tsuen",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441836/spotchu/spots/vclvdoxvt1dfkb01vrjo.jpg",
+      "imageCredit": {
+        "author": "Savooadukraui",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:HK_Tai_Hang_Lai_Tak_Tsuen_Road_Lai_Tak_Chuen_Estate_mall_night_Oct-2014_LG2_Joey_Lee_District_Office_shop.jpg"
       }
     },
     {
@@ -4076,6 +4116,26 @@
       }
     },
     {
+      "id": "hongkong-pak-hoi-street-yaumatei-ghost-shell-2d94",
+      "title": "야우마테이 파크호이 스트리트 (공각기동대 실사 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.30805,
+      "lng": 114.16969,
+      "area": "Yau Ma Tei, Kowloon",
+      "subject": "파크호이 스트리트(北海街)와 상하이 스트리트(上海街) 교차 구간의 재래시장 골목 — 극중 바토가 걷는 홍콩 뒷골목 실제 촬영지",
+      "tip": "조던(Jordan) MTR역에서 도보 5분 내외. 저녁에 상점 간판·노점 조명이 켜지는 시간대가 영화 속 분위기와 가장 비슷함. 좁은 보행로이니 상인·행인 통행을 방해하지 말 것.",
+      "workId": "ghost-in-the-shell-2017",
+      "scene": "바토(필루 아스벡)가 등장하는 홍콩 뒷골목 시장 거리 장면 — 2016년 6월 야우마테이·조던 일대에서 현지 촬영",
+      "source": "https://en.wikipedia.org/wiki/Ghost_in_the_Shell_(2017_film)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441840/spotchu/spots/hgeaixhheyaitojtfmxh.jpg",
+      "imageCredit": {
+        "author": "Jonashtand",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:202303_Yau_Ma_Tei_Fruit_Market_(%E6%B2%B9%E9%BA%BB%E5%9C%B0%E6%9E%9C%E6%AC%84).jpg"
+      }
+    },
+    {
       "id": "hongkong-peninsula-helipad-dark-knight-c73d",
       "title": "페닌슐라 홍콩 — 루시어스 폭스 헬기 도착지",
       "city": "hongkong",
@@ -4179,6 +4239,20 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=37773611"
       }
+    },
+    {
+      "id": "hongkong-tsuen-wan-cemetery-ghost-shell-6e2a",
+      "title": "췬완 화인영원공동묘지 (공각기동대 실사 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.35831,
+      "lng": 114.11551,
+      "area": "Tsuen Wan, New Territories",
+      "subject": "산비탈에 계단식으로 조성된 췬완 화인영원공동묘지(荃灣華人永遠墳場) — 영화 후반부 무덤 장면의 실제 촬영지, 큰 각색 없이 실제 모습 그대로 등장",
+      "tip": "실제 운영 중인 공동묘지이므로 참배객을 배려하고 정숙하게 촬영할 것. 대중교통 접근이 불편해 췬완(Tsuen Wan) 인근에서 택시 이용 권장, 촬영 허가·규정은 관리사무소 안내를 따를 것.",
+      "workId": "ghost-in-the-shell-2017",
+      "scene": "영화 후반부, 등장인물이 무덤을 찾아가는 장면 — 실제 공동묘지에서 거의 그대로 촬영",
+      "source": "https://www.atlasofwonders.com/2017/03/ghost-in-shell-filming-locations.html"
     },
     {
       "id": "incheon-beauty-inside-studio-valor-e81a",
@@ -5062,6 +5136,29 @@
       }
     },
     {
+      "id": "london-55-whitehall-rooftop-skyfall-5c6f",
+      "title": "55 화이트홀 건물 — 스카이폴 결말 옥상 장면 배경",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5058,
+      "lng": -0.1264,
+      "area": "Whitehall, London",
+      "subject": "구 에너지기후변화부(DECC) 청사 옥상 — 머니페니가 M의 유품인 '불도그 잭' 도자기 인형을 본드에게 건네는 결말 장면의 배경 건물",
+      "tip": "옥상은 비공개 구역이라 들어갈 수 없다. 화이트홀 도로 공공 보도에서 건물 외관을 올려다보는 구도로 촬영할 것. 바로 옆 돔 지붕 건물은 구 전쟁성 청사(Old War Office).",
+      "lens": "35-50mm",
+      "time": "오후 (역광 피하기)",
+      "workId": "skyfall",
+      "scene": "머니페니가 본드에게 M의 유품인 불도그 도자기 인형을 전하는 결말 옥상 장면의 배경 건물",
+      "verified": "reported",
+      "source": "https://londonbondmap.co.uk/that-rooftop-in-skyfall-hate-to-waste-a-view-bond-and-moneypenny",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441842/spotchu/spots/wazhyviwcqylnue2gjd2.jpg",
+      "imageCredit": {
+        "author": "Tilman2007",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:1066103_II_Star_New_Government_Offices_(HM_Treasury),_WHITEHALL_SW1_London_20250616_0001.jpg"
+      }
+    },
+    {
       "id": "london-australia-house-gringotts-bank",
       "title": "오스트레일리아 하우스 그린고츠 은행",
       "city": "london",
@@ -5163,6 +5260,23 @@
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/8176740@N05/8552416578"
       }
+    },
+    {
+      "id": "london-charing-cross-station-skyfall-91de",
+      "title": "채링크로스역 — 스카이폴 지하철 추격전 촬영지",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5081,
+      "lng": -0.1247,
+      "area": "Strand, London",
+      "subject": "채링크로스역의 폐쇄된 옛 주빌리 라인 승강장 — 극중 '템플'에서 '엠뱅크먼트'까지 이어지는 지하철 추격·탈선 장면 촬영지",
+      "tip": "폐쇄 승강장은 평소 비공개이며 런던교통박물관 '히든 런던(Hidden London)' 투어로만 사전 예약 후 입장 가능하다. 지상의 스트랜드·트래펄가 스퀘어 방향 출입구는 상시 촬영할 수 있다.",
+      "lens": "24-70mm",
+      "time": "낮",
+      "workId": "skyfall",
+      "scene": "본드가 실바를 쫓아 '템플'에서 '엠뱅크먼트'까지 이어지는 지하철 추격·탈선 장면",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Charing_Cross_tube_station"
     },
     {
       "id": "london-claremont-square-grimmauld-place-harry-potter-8b41",
@@ -5627,6 +5741,29 @@
       }
     },
     {
+      "id": "london-mi6-sis-vauxhall-cross-skyfall-a1f3",
+      "title": "MI6 본부(SIS 빌딩) — 스카이폴 촬영지",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.4875,
+      "lng": -0.1254,
+      "area": "Vauxhall, London",
+      "subject": "복스홀 크로스의 실제 MI6(SIS) 본부 건물 외관 — 극중 M이 차로 복스홀 브리지를 건너는 순간 청사가 폭발하는 장면의 배경",
+      "tip": "복스홀 브리지 남단 인도나 알버트 임뱅크먼트 강변로에서 강 건너 건물 정면이 한눈에 들어온다. 실제 폭발 세트는 파인우드 스튜디오에 지은 복제본이었고, 여기서 보이는 건 실제 청사 외관이다.",
+      "lens": "24-70mm",
+      "time": "해질녘 (건물 조명 켜진 직후)",
+      "workId": "skyfall",
+      "scene": "M이 복스홀 브리지를 건너는 도중 MI6 본부가 폭발하는 장면의 배경 건물",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/s/Skyfall.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441844/spotchu/spots/hjbcahhtvngaqgiylnsf.jpg",
+      "imageCredit": {
+        "author": "Fred Romero from Paris, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:London_-_Secret_Intelligence_Service_Building_(1).jpg"
+      }
+    },
+    {
       "id": "london-millennium-bridge-st-pauls-3c8b",
       "title": "밀레니엄 브릿지 세인트 폴 대성당 리딩라인 뷰포인트",
       "city": "london",
@@ -5650,6 +5787,29 @@
       }
     },
     {
+      "id": "london-national-gallery-room34-skyfall-7c2b",
+      "title": "내셔널 갤러리 34번 전시실 — 스카이폴 Q 첫 만남 장소",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5089,
+      "lng": -0.1283,
+      "area": "Trafalgar Square, London",
+      "subject": "터너의 '전함 테메레르' 앞 벤치 — 본드가 신임 Q(벤 위쇼)를 처음 만나는 장면",
+      "tip": "무료 입장. 34번 전시실(색클러 룸)에서 터너의 '전함 테메레르'를 찾으면 영화 속 벤치와 같은 각도로 촬영할 수 있다. 관람객이 많으니 개관 직후 방문을 추천.",
+      "lens": "35mm",
+      "time": "개관 직후 (평일 오전)",
+      "workId": "skyfall",
+      "scene": "본드가 내셔널 갤러리에서 신임 병기 담당관 Q를 처음 만나는 장면",
+      "verified": "reported",
+      "source": "https://www.007travelers.com/filming-location/007-filming-location-national-gallery/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441847/spotchu/spots/yeshiw7f1n1kmmbrdu1g.jpg",
+      "imageCredit": {
+        "author": ". Ray in Manila",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:The_National_Gallery,_Trafalgar_Square,_London_(53158780828).jpg"
+      }
+    },
+    {
       "id": "london-natural-history-museum-paddington-a26f",
       "title": "자연사박물관 (밀리센트의 박제 연구실)",
       "city": "london",
@@ -5667,6 +5827,29 @@
         "author": "Julian Herzog (Website)",
         "license": "CC BY 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Natural_History_Museum_London_South_Facade_2020_01.jpg"
+      }
+    },
+    {
+      "id": "london-old-royal-naval-college-skyfall-d048",
+      "title": "올드 로열 네이벌 칼리지 킹 윌리엄 언더크로프트 — 스카이폴 장례 장면",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.4833,
+      "lng": -0.0056,
+      "area": "Greenwich, London",
+      "subject": "페인티드 홀 지하 킹 윌리엄 언더크로프트 — M이 MI6 폭발 희생자들의 관 앞에서 조의를 표하는 장면",
+      "tip": "그리니치 올드 로열 네이벌 칼리지의 '디스커버 그리니치' 입장권으로 언더크로프트 관람이 가능하다. 계단만 있고 엘리베이터가 없으니 방문 전 확인할 것.",
+      "lens": "24mm",
+      "time": "낮 (실내 조명 대비)",
+      "workId": "skyfall",
+      "scene": "M이 MI6 공격 희생자들의 관 앞에서 조의를 표하는 장면(최종판에는 짧게만 남음)",
+      "verified": "reported",
+      "source": "https://www.greenwich.co.uk/news/06861-james-bond-skyfall-greenwich-filming-ornc/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441849/spotchu/spots/qdosaowhf6r8cz4imtni.jpg",
+      "imageCredit": {
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:London,_Greenwich,_Blick_vom_H%C3%BCgel_des_Royal_Greenwich_Observatory_--_2016_--_4736-8.jpg"
       }
     },
     {
@@ -6084,6 +6267,29 @@
         "author": "Ewan-M",
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=137268392"
+      }
+    },
+    {
+      "id": "london-westminster-station-skyfall-e29a",
+      "title": "웨스트민스터 지하철역 출구 — 스카이폴 추격 장면",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.501,
+      "lng": -0.1249,
+      "area": "Westminster, London",
+      "subject": "웨스트민스터 지하철역 브리지 스트리트 출구 — 본드가 지하철역을 뛰쳐나와 화이트홀 청문회장으로 질주하는 장면",
+      "tip": "빅벤·국회의사당 바로 옆 실제 운영 중인 역 출구다. 통근 시간대는 혼잡하니 피해서 촬영할 것.",
+      "lens": "24-70mm",
+      "time": "이른 아침 (인파 적을 때)",
+      "workId": "skyfall",
+      "scene": "본드가 웨스트민스터역에서 뛰쳐나와 실바보다 먼저 청문회장에 도착하려 질주하는 장면",
+      "verified": "reported",
+      "source": "https://www.007travelers.com/filming-location/007-filming-location-entrance-of-westminster-underground-station-skyfall-2012/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441851/spotchu/spots/cre4qeicgq4clntpx6a1.jpg",
+      "imageCredit": {
+        "author": "Diliff",
+        "license": "CC BY-SA 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Palace_of_Westminster,_London_-_Feb_2007.jpg"
       }
     },
     {
@@ -8549,6 +8755,26 @@
       }
     },
     {
+      "id": "paris-arc-de-triomphe-mi-fallout-8c1e",
+      "title": "개선문 (미션 임파서블 폴아웃 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8729,
+      "lng": 2.2965,
+      "area": "플라스 샤를 드골(에투알) 인근, 8구/17구 경계, Paris",
+      "subject": "샹젤리제 대로 초입 인도에서 정면으로 보이는 개선문과 12개 도로가 모이는 로터리",
+      "tip": "로터리 차도 안쪽은 매우 위험하니 절대 들어가지 말 것. 샹젤리제 대로 인도나 지하보도 입구 앞 보도에서 개선문을 정면으로 담을 수 있다. 실제 촬영도 일요일 이른 아침 약 90분간 도로를 통제하고 진행됐다.",
+      "workId": "mission-impossible-fallout",
+      "scene": "이단 헌트가 헬멧 없이 오토바이로 개선문 로터리를 역주행하며 경찰 추격을 따돌리는 장면",
+      "source": "https://www.military.com/video/off-duty/movies/mission-impossible-fallout-motorcycle-chase-arc-de-triomphe/5969149986001",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441852/spotchu/spots/tfnpe9dht9vl32aqkoym.jpg",
+      "imageCredit": {
+        "author": "Wilfredor",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_de_l%27%C3%89toile_at_night_vertical_fix.jpg"
+      }
+    },
+    {
       "id": "paris-avenue-de-camoens-eiffel-view-a8f1",
       "title": "아베뉴 드 카모앙스 에펠탑 전망 계단",
       "city": "paris",
@@ -8702,6 +8928,46 @@
         "author": "LPLT",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:21_rue_de_l%27Estrapade.JPG"
+      }
+    },
+    {
+      "id": "paris-grand-palais-mi-fallout-6f3a",
+      "title": "그랑 팔레 (미션 임파서블 폴아웃 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8657,
+      "lng": 2.3129,
+      "area": "8구, Avenue Winston-Churchill, Paris",
+      "subject": "1900년 만국박람회 전시관으로 지어진 아르누보 양식 유리 지붕(네프)과 정면 파사드",
+      "tip": "극중 낙하산(HALO) 착지 지점인 유리 지붕은 비공개 구역이라 오를 수 없다. 정면 아브뉴 윈스턴 처칠 쪽 에스플러네이드에서 청동 조각상과 유리 돔이 함께 보이는 구도로 촬영하고, 맞은편 프티 팔레 계단에서 보면 더 넓게 담긴다.",
+      "workId": "mission-impossible-fallout",
+      "scene": "화이트 위도우의 파티가 열리는 그랑 팔레 유리 지붕 위로 이단 헌트와 워커가 낙하산(HALO) 강하해 착지하는 오프닝 시퀀스",
+      "source": "https://en.wikipedia.org/wiki/List_of_Mission:_Impossible_film_locations",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441854/spotchu/spots/ggghazwi2ydpklkd1dpe.jpg",
+      "imageCredit": {
+        "author": "Eric Pouhier",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Le_Grand_Palais_depuis_le_pont_Alexandre_III_%C3%A0_Paris.jpg"
+      }
+    },
+    {
+      "id": "paris-hotel-de-soubise-mi-fallout-e47b",
+      "title": "수비즈 저택·프랑스 국립문서보관소 (미션 임파서블 폴아웃 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8605,
+      "lng": 2.3583,
+      "area": "3구, 60 Rue des Francs-Bourgeois (마레 지구), Paris",
+      "subject": "18세기 로코코 양식 저택의 안뜰(쿠르 도뇌르)과 곡선형 정문 파사드",
+      "tip": "현재 뮈제 데 자르시브 나시오날(국립문서보관소 박물관)로 운영되어 개관 시간에 정문을 지나 안뜰까지 무료 입장할 수 있다. 정문 철문 안쪽에서 곡선 파사드 전체가 담기는 구도가 대표적.",
+      "workId": "mission-impossible-fallout",
+      "scene": "이단 헌트와 워커가 플루토늄 거래를 협상하러 화이트 위도우의 저택(수비즈 저택)을 찾아가는 장면",
+      "source": "https://en.wikipedia.org/wiki/List_of_Mission:_Impossible_film_locations",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441857/spotchu/spots/n5tlbjxt34vybhfhsovb.jpg",
+      "imageCredit": {
+        "author": "Guilhem Vellut from Paris, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Courtyard,_H%C3%B4tel_de_Soubise,_Paris_9_June_2017.jpg"
       }
     },
     {
@@ -8955,6 +9221,26 @@
       }
     },
     {
+      "id": "paris-palais-royal-garden-mi-fallout-2d9f",
+      "title": "팔레 루아얄 정원 (미션 임파서블 폴아웃 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8632,
+      "lng": 2.3373,
+      "area": "1구, Jardin du Palais-Royal, Paris",
+      "subject": "회랑(콜로네이드)으로 둘러싸인 17세기 사각형 정원과 가로수길",
+      "tip": "이른 아침 인적이 드문 시간대에 회랑 그늘에서 정원 가운데로 걸어 나오는 인물 구도를 담기 좋다. 뷔랑의 줄무늬 기둥이 있는 안뜰(카트르-콜론)도 도보 1분 거리.",
+      "workId": "mission-impossible-fallout",
+      "scene": "이단 헌트가 파리를 떠나기 전 일사 파우스트와 조용히 대화를 나누는 장면",
+      "source": "https://www.sceen-it.com/sceen/2005/Mission-Impossible-Fallout/Palais-Royal-Garden",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441859/spotchu/spots/bcfbh04ydkjt1nhtxgrl.jpg",
+      "imageCredit": {
+        "author": "Guilhem Vellut from Paris, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Garden,_Palais_Royal,_Paris_25_June_2016.jpg"
+      }
+    },
+    {
       "id": "paris-palais-royal-grand-vefour-midnight-in-paris-c942",
       "title": "팔레 루아얄 르 그랑 베푸르 (미드나잇 인 파리)",
       "city": "paris",
@@ -9127,6 +9413,26 @@
       }
     },
     {
+      "id": "paris-quai-saint-michel-mi-fallout-a63c",
+      "title": "케 생미셸 (미션 임파서블 폴아웃 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8528,
+      "lng": 2.3457,
+      "area": "5구, Quai Saint-Michel (Pont Saint-Michel 동쪽), Paris",
+      "subject": "센강 건너 노트르담 대성당이 정면으로 보이는 강변 산책로",
+      "tip": "생미셸 다리에서 프티 퐁 방향으로 조금 걸으면 노트르담이 정면으로 보이는 지점이 나온다. 차량이 다니는 위쪽 차도 말고 강변 인도(부키니스트 헌책방 노점 옆)에서 촬영할 것.",
+      "workId": "mission-impossible-fallout",
+      "scene": "이단 헌트가 화이트 위도우와 마지막으로 만나 임무를 통보받는 장면(노트르담이 배경으로 등장)",
+      "source": "https://www.movie-locations.com/movies/m/Mission-Impossible-Fallout.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441862/spotchu/spots/uyku5fpfikeucwb0yh2m.jpg",
+      "imageCredit": {
+        "author": "Daniel VILLAFRUELA",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Paris_75005_Quai_Saint-Michel_towards_Notre-Dame_Bouquinistes_1967.jpg"
+      }
+    },
+    {
       "id": "paris-ritz-paris-da-vinci-code-4d81",
       "title": "리츠 파리 호텔 (다빈치 코드 촬영지)",
       "city": "paris",
@@ -9165,6 +9471,20 @@
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Rue_Becquerel,_G.23242.jpg"
       }
+    },
+    {
+      "id": "paris-rue-de-nevers-mi-fallout-f18d",
+      "title": "뤼 드 느베르 (미션 임파서블 폴아웃 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8558,
+      "lng": 2.3394,
+      "area": "6구, Rue de Nevers (Quai de Conti·앵스티튀 드 프랑스 인근), Paris",
+      "subject": "파리에서 가장 좁은 골목 중 하나로 꼽히는 17세기 골목길",
+      "tip": "폭이 좁아 차량이 거의 다니지 않는 보행자 골목이다. 케 드 콩티 쪽 입구에서 골목이 좁아지는 안쪽을 향해 담는 구도가 극중 트럭이 끼여 멈추는 장면과 비슷한 느낌을 준다.",
+      "workId": "mission-impossible-fallout",
+      "scene": "경찰에 쫓기던 트럭이 좁은 골목에 끼여 멈추고, 헌트와 워커가 대기 중이던 오토바이로 갈아타 탈출하는 장면",
+      "source": "https://www.sceen-it.com/sceen/3319/Mission-Impossible-Fallout/Rue-de-Nevers"
     },
     {
       "id": "paris-saint-eustache-eglise-3d9a",
@@ -9927,6 +10247,46 @@
       }
     },
     {
+      "id": "rome-fontana-acqua-paola-great-beauty-7b2e",
+      "title": "아쿠아 파올라 분수(일 폰타노네) (그레이트 뷰티 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.88875,
+      "lng": 12.46417,
+      "area": "Gianicolo(자니콜로 언덕), Trastevere, Rome",
+      "subject": "자니콜로 언덕의 아쿠아 파올라 분수(일 폰타노네) — 영화 오프닝, 일본인 관광단 가이드 투어 중 한 관광객이 로마의 아름다움에 압도돼 쓰러지는 장면의 실제 배경",
+      "tip": "분수 앞 광장에서 정면으로 촬영. 자니콜로 언덕은 도보로 올라야 하니 이른 아침이나 늦은 오후 방문이 한산하다.",
+      "workId": "the-great-beauty",
+      "scene": "오프닝 시퀀스 — 일본인 관광단 가이드 투어 중 한 관광객이 아름다움에 압도돼 쓰러지는 장면의 배경",
+      "source": "https://www.visitlazio.com/la-grande-bellezza-e-i-suoi-luoghi-romani/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441864/spotchu/spots/ojdjktibdzdnrrrtij9h.jpg",
+      "imageCredit": {
+        "author": "Francesco Gasparetti",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fontana_Acqua_Paola.jpg"
+      }
+    },
+    {
+      "id": "rome-giardino-degli-aranci-great-beauty-a05c",
+      "title": "오렌지 정원(자르디노 델리 아란치) (그레이트 뷰티 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.88543,
+      "lng": 12.47991,
+      "area": "Via di Santa Sabina / Parco Savello, Aventino, Rome",
+      "subject": "아벤티노 언덕 산타 사비나 성당과 인접한 오렌지 정원 — 수련수녀들이 지나가는 이를 보며 웃고, 흰 수녀복의 수녀가 오렌지를 따는 장면의 배경",
+      "tip": "정원 전망대에서 테베레강과 로마 시내, 성 베드로 대성당 돔이 함께 보이는 구도로 촬영. 약 300m 떨어진 몰타 기사단 열쇠구멍 광장과는 다른 지점이니 혼동 주의.",
+      "workId": "the-great-beauty",
+      "scene": "제프가 아벤티노 언덕에서 수련수녀들을 마주치고, 인접한 오렌지 정원에서 수녀가 오렌지 따는 모습을 지켜보는 장면",
+      "source": "https://www.turismoroma.it/en/itineraries/discovering-%E2%80%9C-great-beauty%E2%80%9D",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441867/spotchu/spots/kkipvipnnu4obgdmkixf.jpg",
+      "imageCredit": {
+        "author": "Bex-Lemon",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Giardino_degli_aranci_(Roma).jpg"
+      }
+    },
+    {
       "id": "rome-museo-civilta-romana-spectre-b73d",
       "title": "로마 문명 박물관 (007 스펙터 촬영지)",
       "city": "rome",
@@ -9944,6 +10304,26 @@
         "author": "Alberti1492",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Museo_della_Civilt%C3%A0_Romana_a_EUR_Roma.jpg"
+      }
+    },
+    {
+      "id": "rome-palazzo-barberini-great-beauty-1e6f",
+      "title": "팔라초 바르베리니 (그레이트 뷰티 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.90361,
+      "lng": 12.49028,
+      "area": "Via delle Quattro Fontane 13, Rome",
+      "subject": "팔라초 바르베리니 국립 고대미술관 — 스테파노가 촛불을 든 채 라파엘로의 '라 포르나리나' 앞으로 제프와 라모나를 안내하는 심야 비밀 관람 장면의 배경",
+      "tip": "국립 고대미술관 정규 개관시간에 입장권을 구매하면 실제 '라 포르나리나' 전시실을 볼 수 있다. 외부 파사드는 비아 델레 콰트로 폰타네 쪽 인도에서 촬영.",
+      "workId": "the-great-beauty",
+      "scene": "스테파노가 촛대를 들고 라파엘로의 '라 포르나리나' 앞으로 제프와 라모나를 안내하는 심야 비밀 관람 장면",
+      "source": "https://www.visitlazio.com/la-grande-bellezza-e-i-suoi-luoghi-romani/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441870/spotchu/spots/cd9tctg86bar5btdmipc.jpg",
+      "imageCredit": {
+        "author": "Jean-Pierre Dalbéra from Paris, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Le_Palais_Barberini_(Rome)_(5969782827).jpg"
       }
     },
     {
@@ -9984,6 +10364,26 @@
         "author": "Hervé S, France",
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/125601701@N03/51591276373"
+      }
+    },
+    {
+      "id": "rome-parco-degli-acquedotti-great-beauty-8d3a",
+      "title": "아쿠에도티 공원(클라우디아 수도교) (그레이트 뷰티 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.847,
+      "lng": 12.562,
+      "area": "Via Lemonia 256, Appio Claudio, Rome",
+      "subject": "아피아 아쿠에도티 공원의 고대 클라우디아 수도교 — 행위예술가 탈리아 콘셉트가 나체로 수도교 벽을 향해 질주하는 전위 퍼포먼스 장면의 배경",
+      "tip": "수도교 아치가 늘어선 산책로를 따라 아치 라인이 이어지는 구도로 촬영. 노을 무렵 아치 실루엣이 아름답고 이른 아침도 한산하다.",
+      "workId": "the-great-beauty",
+      "scene": "행위예술가 탈리아 콘셉트가 클라우디아 수도교를 향해 나체로 질주하는 전위 퍼포먼스 장면",
+      "source": "https://www.ilfattoquotidiano.it/2014/03/05/la-grande-bellezza-ecco-i-luoghi-di-roma-nel-film-di-paolo-sorrentino/902340/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441872/spotchu/spots/qucrzzlqrovbsnt3jle0.jpg",
+      "imageCredit": {
+        "author": "Emmeca",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Parco_degli_Acquedotti_Rome_sunset.jpg"
       }
     },
     {
@@ -10185,6 +10585,26 @@
       }
     },
     {
+      "id": "rome-terme-di-caracalla-great-beauty-4f9a",
+      "title": "카라칼라 욕장 (그레이트 뷰티 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.8784,
+      "lng": 12.49249,
+      "area": "Via delle Terme di Caracalla, Rome",
+      "subject": "고대 로마 카라칼라 욕장 유적 — 마술사 친구 아르투로가 밤에 실제 기린을 등장시켰다 사라지게 하는 마술 트릭 장면의 배경",
+      "tip": "정규 개장 시간에 입장권을 구매해 관람. 거대한 아치와 벽 사이 통로에서 사람을 함께 프레임에 넣으면 유적의 스케일이 잘 드러난다.",
+      "workId": "the-great-beauty",
+      "scene": "마술사 아르투로가 밤에 카라칼라 욕장에서 실제 기린을 등장시켰다 사라지게 하는 마술 트릭 장면",
+      "source": "https://www.visitlazio.com/la-grande-bellezza-e-i-suoi-luoghi-romani/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441875/spotchu/spots/xhfdpubielvbdd0s63f1.jpg",
+      "imageCredit": {
+        "author": "Marcok - it.wikipedia.org",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Terme_Caracalla_Roma_09feb08_03.jpg"
+      }
+    },
+    {
       "id": "rome-trevi-fountain-la-dolce-vita-midnight-b47c",
       "title": "트레비 분수 - 달콤한 인생 야간 장면",
       "city": "rome",
@@ -10323,6 +10743,26 @@
       "time": "늦은 오후 또는 블루아워",
       "verified": "reported",
       "source": "https://www.turismoroma.it"
+    },
+    {
+      "id": "rome-villa-medici-great-beauty-c83d",
+      "title": "빌라 메디치 정원 (그레이트 뷰티 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.90825,
+      "lng": 12.48239,
+      "area": "Viale Trinità dei Monti 1, Pincio, Rome",
+      "subject": "빌라 메디치(프랑스 아카데미) 정원의 니오비데 조각상군 — 제프 일행의 심야 로마 궁전 순례가 새벽에 마무리되는 정원 산책 장면의 배경",
+      "tip": "정원은 프랑스 아카데미 가이드 투어(유료·사전 예약)로만 입장 가능. 니오비데 조각상과 전망 테라스에서 로마 시내를 함께 담을 수 있다.",
+      "workId": "the-great-beauty",
+      "scene": "제프 일행의 심야 로마 궁전 순례 시퀀스 마지막 — 새벽 빌라 메디치 정원에서 니오비데 조각상 사이를 거니는 장면",
+      "source": "https://www.visitlazio.com/la-grande-bellezza-e-i-suoi-luoghi-romani/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788441880/spotchu/spots/i52qzn3ntqsjdgtqdprj.jpg",
+      "imageCredit": {
+        "author": "Rijksmuseum",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:ROMA_-_Villa_Medici_-_ora_palazzo_dell%27_Accademia_di_Fran-_cia_(disegno_di_Michelangelo)._RP-F-F25508-U.jpg"
+      }
     },
     {
       "id": "sapporo-asahiyama-park-banana-movie-5c8e",
@@ -10900,6 +11340,40 @@
       }
     },
     {
+      "id": "seoul-hannamdaegyo-bittersweet-life-4b7e",
+      "title": "한남대교 (달콤한 인생 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5258,
+      "lng": 127.0013,
+      "area": "한남동, 용산구(한남대교 북단 보행로)",
+      "subject": "선우(이병헌)가 시비를 건 폭주족 무리와 도로 위 추격전 끝에 격투를 벌이는 장면의 배경이 된 한남대교",
+      "tip": "이촌한강공원 한남나들목에서 북단 진입로를 따라 다리 위 보행로로 올라설 수 있다. 차도가 아닌 보행로에서만 촬영하고 난간 밖으로 몸을 내밀지 말 것. 야간엔 차량 궤적과 강 건너 야경이 함께 담긴다.",
+      "lens": "24-70mm",
+      "time": "야간(일몰 후)",
+      "workId": "a-bittersweet-life",
+      "scene": "선우가 시비를 건 폭주족과 도로 위 스피드 대결 후 격투를 벌이는 장면",
+      "verified": "reported",
+      "source": "https://namu.wiki/w/%EB%8B%AC%EC%BD%A4%ED%95%9C%20%EC%9D%B8%EC%83%9D(2005%EB%85%84%20%EC%98%81%ED%99%94)"
+    },
+    {
+      "id": "seoul-hongdae-nbclub-bittersweet-life-9d2a",
+      "title": "홍대 NB클럽 옛터 (달콤한 인생 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5533,
+      "lng": 126.9237,
+      "area": "서교동, 마포구(와우산로 클럽거리)",
+      "subject": "한국영상자료원(KMDB) 공식 로케이션 기록에 등재된 홍대 나이트클럽 건물 — 촬영 당시 상호는 'NB클럽', 같은 자리(와우산로 70, 건봉빌딩 B1-B2)는 2024년부터 다른 클럽(버뮤다)이 영업 중",
+      "tip": "홍대 놀이터 인근 와우산로 클럽거리. 건물 외관 파사드 위주로 촬영하고, 실내는 영업 중인 사업장이므로 별도 허락 없이 촬영하지 말 것. 주말 밤엔 유동인구가 많아 통행을 막지 않도록 주의.",
+      "lens": "35mm",
+      "time": "야간",
+      "workId": "a-bittersweet-life",
+      "scene": "한국영상자료원 공식 로케이션 기록에 등재된 촬영 협조 장소(구체적 장면 내용은 공개 자료에 특정되지 않음)",
+      "verified": "reported",
+      "source": "https://www.kmdb.or.kr/db/kor/detail/movie/K/06539"
+    },
+    {
       "id": "seoul-huamdong-dodak-bridge-parasite-e29d",
       "title": "후암동 도닥다리 계단 (기생충 남매 말다툼 장면)",
       "city": "seoul",
@@ -11107,6 +11581,23 @@
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Hangang_Railway_Bridge,_Seoul,_Korea.jpg"
       }
+    },
+    {
+      "id": "seoul-noeulpark-bittersweet-life-6f83",
+      "title": "노을공원 (달콤한 인생 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5705,
+      "lng": 126.8878,
+      "area": "상암동, 마포구(월드컵공원 내 노을공원)",
+      "subject": "한국영상자료원(KMDB)에 이 영화의 실외 촬영 협조 장소로 공식 등재된 마포구 노을공원(옛 난지골프장 부지)",
+      "tip": "이름 그대로 서울의 대표 일몰 명소. 전망데크에서 해질 무렵 하늘·한강 방향으로 촬영. 무료입장이며 하늘공원 방향에서 도보로 진입한다.",
+      "lens": "16-35mm",
+      "time": "일몰 무렵(골든아워)",
+      "workId": "a-bittersweet-life",
+      "scene": "한국영상자료원 공식 로케이션 기록에 등재된 실외 촬영 협조 장소(구체적 장면 내용은 공개 자료에 특정되지 않음)",
+      "verified": "reported",
+      "source": "https://www.kmdb.or.kr/db/kor/detail/movie/K/06539"
     },
     {
       "id": "seoul-noksapyeong-bridge-itaewon-class-241f",
@@ -14744,6 +15235,13 @@
       "progress": 0
     },
     {
+      "id": "ghost-in-the-shell-2017",
+      "title": "공각기동대: 고스트 인 더 쉘",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "hong-kong-film-locations-duddell",
       "title": "홍콩 영화·드라마 촬영지 (작품별 검토 필요)",
       "type": "기타",
@@ -14915,6 +15413,13 @@
       "id": "hibike-euphonium-2-hello-world",
       "title": "울려라! 유포니엄 2기 / 헬로 월드",
       "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "skyfall",
+      "title": "007 스카이폴",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -15276,6 +15781,13 @@
       "progress": 0
     },
     {
+      "id": "mission-impossible-fallout",
+      "title": "미션 임파서블: 폴아웃",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "before-sunset",
       "title": "비포 선셋",
       "type": "영화",
@@ -15362,6 +15874,13 @@
     {
       "id": "roman-holiday",
       "title": "로마의 휴일",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-great-beauty",
+      "title": "그레이트 뷰티",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -15489,6 +16008,13 @@
       "id": "god-of-high-school",
       "title": "갓 오브 하이스쿨",
       "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "a-bittersweet-life",
+      "title": "달콤한 인생",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
