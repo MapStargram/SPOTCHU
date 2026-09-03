@@ -80,6 +80,91 @@ export function PinGrid({
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // 열 개수(반응형, Tailwind lg=1024/xl=1280 브레이크포인트와 일치). SSR/첫 렌더는 2(모바일).
+  const [cols, setCols] = useState(2);
+  useEffect(() => {
+    const calc = () =>
+      setCols(
+        window.matchMedia("(min-width:1280px)").matches
+          ? 4
+          : window.matchMedia("(min-width:1024px)").matches
+            ? 3
+            : 2,
+      );
+    calc();
+    window.addEventListener("resize", calc);
+    return () => window.removeEventListener("resize", calc);
+  }, []);
+
+  // 아이템을 가장 낮은 열에 순서대로 배치(결정적). 배치가 앞선 아이템에만 의존하므로 무한스크롤로
+  // 뒤에 더 붙어도 기존 카드는 열이 안 바뀐다 → CSS columns가 append마다 전체를 재균형해 카드가
+  // 열 사이로 점프하던 "스크롤 시 배치 섞임"을 제거. 높이는 pinHeight로 이미 결정적.
+  const columns: PinCard[][] = Array.from({ length: cols }, () => []);
+  const colH = new Array(cols).fill(0);
+  for (const s of shownSlice) {
+    let m = 0;
+    for (let i = 1; i < cols; i++) if (colH[i] < colH[m]) m = i;
+    columns[m].push(s);
+    colH[m] += pinHeight(s.id);
+  }
+
+  const renderCard = (s: PinCard) => {
+    const saved = isSaved(s.id);
+    return (
+      <div
+        key={s.id}
+        className="relative overflow-hidden rounded-2xl shadow-[shadow:var(--sh-card)]"
+      >
+        <Link
+          href={`/spot/${s.id}`}
+          className="block transition active:scale-[0.98]"
+        >
+          <div
+            className="relative"
+            style={{ height: pinHeight(s.id), background: s.thumbGrad }}
+          >
+            {/* 2열 메이슨리 썸네일(~180px) — 640px면 레티나까지 충분 */}
+            <SpotImage src={s.imageUrl} alt={s.title} width={640} />
+            <span className="absolute left-2 top-2 rounded-full bg-black/30 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
+              <CategoryLabel label={s.categoryLabel} size={11} />
+            </span>
+            {/* 국가 국기(전체 지역 혼합 피드) — 저장 버튼 왼쪽 우상단. 도시별 홈은 flag 미전달 → 미표시. */}
+            {s.flag && (
+              <span className="absolute right-12 top-2 flex h-9 w-9 items-center justify-center rounded-full bg-black/30 text-[15px] leading-none backdrop-blur-sm">
+                {s.flag}
+              </span>
+            )}
+            {s.verified === "official" && (
+              <span className="pointer-events-none absolute bottom-11 right-2">
+                <Sparkle size={18} />
+              </span>
+            )}
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent p-3 pt-9">
+              <div className="line-clamp-2 text-[14px] font-bold leading-tight text-white">
+                {s.title}
+              </div>
+              <div className="mt-0.5 line-clamp-1 text-[11px] text-white/85">
+                {s.subtitle || s.categoryLabel}
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        {/* 빠른 저장(북마크) */}
+        <button
+          onClick={() => toggle(s.id)}
+          aria-label={saved ? "저장 취소" : "저장"}
+          aria-pressed={saved}
+          className={`absolute right-2 top-2 z-10 flex h-9 w-9 items-center justify-center rounded-full backdrop-blur-sm transition active:scale-90 ${
+            saved ? "bg-coral text-white" : "bg-black/35 text-white"
+          }`}
+        >
+          <Bookmark size={16} className={saved ? "fill-current" : ""} />
+        </button>
+      </div>
+    );
+  };
+
   return (
     <div className="mt-3">
       {/* 카테고리 칩 + 지도로 보기 */}
@@ -120,64 +205,13 @@ export function PinGrid({
         />
       </div>
 
-      {/* 메이슨리 그리드 */}
-      <div className="columns-2 gap-3 lg:columns-3 xl:columns-4">
-        {shownSlice.map((s) => {
-          const saved = isSaved(s.id);
-          return (
-            <div
-              key={s.id}
-              className="relative mb-3 break-inside-avoid overflow-hidden rounded-2xl shadow-[shadow:var(--sh-card)]"
-            >
-              <Link
-                href={`/spot/${s.id}`}
-                className="block transition active:scale-[0.98]"
-              >
-                <div
-                  className="relative"
-                  style={{ height: pinHeight(s.id), background: s.thumbGrad }}
-                >
-                  {/* 2열 메이슨리 썸네일(~180px) — 640px면 레티나까지 충분 */}
-                  <SpotImage src={s.imageUrl} alt={s.title} width={640} />
-                  <span className="absolute left-2 top-2 rounded-full bg-black/30 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
-                    <CategoryLabel label={s.categoryLabel} size={11} />
-                  </span>
-                  {/* 국가 국기(전체 지역 혼합 피드) — 저장 버튼 왼쪽 우상단. 도시별 홈은 flag 미전달 → 미표시. */}
-                  {s.flag && (
-                    <span className="absolute right-12 top-2 flex h-9 w-9 items-center justify-center rounded-full bg-black/30 text-[15px] leading-none backdrop-blur-sm">
-                      {s.flag}
-                    </span>
-                  )}
-                  {s.verified === "official" && (
-                    <span className="pointer-events-none absolute bottom-11 right-2">
-                      <Sparkle size={18} />
-                    </span>
-                  )}
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent p-3 pt-9">
-                    <div className="line-clamp-2 text-[14px] font-bold leading-tight text-white">
-                      {s.title}
-                    </div>
-                    <div className="mt-0.5 line-clamp-1 text-[11px] text-white/85">
-                      {s.subtitle || s.categoryLabel}
-                    </div>
-                  </div>
-                </div>
-              </Link>
-
-              {/* 빠른 저장(북마크) */}
-              <button
-                onClick={() => toggle(s.id)}
-                aria-label={saved ? "저장 취소" : "저장"}
-                aria-pressed={saved}
-                className={`absolute right-2 top-2 z-10 flex h-9 w-9 items-center justify-center rounded-full backdrop-blur-sm transition active:scale-90 ${
-                  saved ? "bg-coral text-white" : "bg-black/35 text-white"
-                }`}
-              >
-                <Bookmark size={16} className={saved ? "fill-current" : ""} />
-              </button>
-            </div>
-          );
-        })}
+      {/* 메이슨리 그리드 — JS 고정 열 분배(스크롤 append 시 재균형 없음) */}
+      <div className="flex gap-3">
+        {columns.map((col, i) => (
+          <div key={i} className="flex flex-1 flex-col gap-3">
+            {col.map(renderCard)}
+          </div>
+        ))}
       </div>
 
       {/* 무한스크롤 센티넬 */}
