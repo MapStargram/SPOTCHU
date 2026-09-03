@@ -13,7 +13,7 @@
 - 배지 3종: **도시 배지 · 성지순례 완주 배지 · 최초 제보자 배지**(glossary "배지" 정의)
 
 ## 진입점 / 사용자
-- **진입점**: 하단 내비 4탭 중 **프로필** 탭([`../00-information-architecture/spec.md`](../00-information-architecture/spec.md)). 배지 획득 축하는 **GPS 방문 인증 직후**(스팟 상세)에도 노출.
+- **진입점**: 하단 내비 5탭 중 **프로필** 탭([`../00-information-architecture/spec.md`](../00-information-architecture/spec.md)). 배지 획득 축하는 **GPS 방문 인증 직후**(스팟 상세)에도 노출.
 - **사용자**:
   - `USER`(로그인): 본인 방문 기록·배지·내 사진 조회, 게임화 지표 확인.
   - `GUEST`(비로그인): 프로필의 개인 기록은 **로그인 사용자 전용**(prd §8 "기록" 단계 로그인 필요) → 소프트 게이트로 로그인 유도.
