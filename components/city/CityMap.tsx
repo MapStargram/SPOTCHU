@@ -128,14 +128,9 @@ export function CityMap({ counts }: { counts?: Record<string, number> }) {
 
   const openCountry = openId ? (byId.get(openId) ?? null) : null;
 
-  const onCountry = (c: Country) => {
-    // 단일도시·서비스중이면 바로 진입, 그 외(다도시 또는 준비중)는 팝오버로 도시 선택.
-    if (c.cities.length === 1 && c.cities[0].available) {
-      router.push(`/home/${c.cities[0].id}`);
-    } else {
-      setOpenId(c.id);
-    }
-  };
+  // 나라 클릭 → 항상 도시 리스트 팝오버(지구본 뷰와 동일). 단일도시국(대만 등)도 곧장
+  // 진입하지 않고 리스트를 거쳐 통일성 유지(다도시국과 같은 동선).
+  const onCountry = (c: Country) => setOpenId(c.id);
 
   return (
     <div className="w-full max-w-[360px]">
@@ -163,129 +158,131 @@ export function CityMap({ counts }: { counts?: Record<string, number> }) {
         })}
       </div>
 
-      {/* 지도 */}
-      <div
-        className="relative w-full overflow-hidden rounded-2xl border border-[color:var(--line)] bg-[#0b1424] shadow-[shadow:var(--sh-card)]"
-        style={{ aspectRatio: `${lngSpan} / ${latSpan}`, maxHeight: 430 }}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/textures/earth-day.jpg"
-          alt=""
-          aria-hidden
-          className="pointer-events-none absolute max-w-none select-none opacity-90"
-          style={bgStyle}
-        />
+      {/* 지도 + 도시 오버레이 래퍼 — overflow 없는 정렬 기준(지도 컨테이너의 스크롤 오프셋에 오버레이가 안 밀리게). */}
+      <div className="relative w-full">
         <div
-          className="pointer-events-none absolute inset-0"
-          style={{ background: "rgba(11,20,36,0.28)" }}
-        />
+          className="relative w-full overflow-hidden rounded-2xl border border-[color:var(--line)] bg-[#0b1424] shadow-[shadow:var(--sh-card)]"
+          style={{ aspectRatio: `${lngSpan} / ${latSpan}`, maxHeight: 430 }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/textures/earth-day.jpg"
+            alt=""
+            aria-hidden
+            className="pointer-events-none absolute max-w-none select-none opacity-90"
+            style={bgStyle}
+          />
+          <div
+            className="pointer-events-none absolute inset-0"
+            style={{ background: "rgba(11,20,36,0.28)" }}
+          />
 
-        {/* 클러스터 핀(전체 뷰) */}
-        {clusters.map((cl) => {
-          const p = place(cl.lat, cl.lng);
-          return (
-            <button
-              key={cl.id}
-              onClick={() => setRegion(cl.id as RegionId)}
-              aria-label={`${cl.name} ${cl.spots}개 스팟 · 확대`}
-              className="absolute z-10 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1 whitespace-nowrap rounded-full border border-white/70 bg-coral px-2.5 py-1 text-[11px] font-extrabold text-cream shadow-[0_2px_8px_rgba(0,0,0,0.35)] transition hover:scale-105"
-              style={{ left: `${p.x}%`, top: `${p.y}%` }}
-            >
-              {cl.name}
-              <span className="rounded-full bg-white/25 px-1 text-[10px]">
-                {cl.spots}
-              </span>
-            </button>
-          );
-        })}
-
-        {/* 국가 핀 — 근접 라벨은 디클러터로 세로 분산 */}
-        {declutter(
-          pinCountries.map((c) => ({ c, ...place(c.lat, c.lng) })),
-        ).map(({ c, x, y }) => {
-          const avail = hasAvailable(c);
-          const spots = spotSum(c, counts);
-          return (
-            <button
-              key={c.id}
-              onClick={() => onCountry(c)}
-              aria-label={`${c.name}${avail ? ` ${spots}개 스팟` : " 준비 중"}`}
-              className={`absolute z-10 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1 whitespace-nowrap rounded-full px-2 py-1 text-[11px] font-bold shadow-[0_2px_8px_rgba(0,0,0,0.35)] transition hover:scale-105 ${
-                avail
-                  ? "border border-[color:var(--coral)] bg-white text-navy"
-                  : "border border-white/30 bg-[color:var(--muted)] text-cream"
-              }`}
-              style={{ left: `${x}%`, top: `${y}%` }}
-            >
-              <span aria-hidden>{c.flag}</span>
-              {SHORT_NAME[c.id] ?? c.name}
-              {avail && (
-                <span className="text-[10px] font-extrabold text-coral">
-                  {spots}
+          {/* 클러스터 핀(전체 뷰) */}
+          {clusters.map((cl) => {
+            const p = place(cl.lat, cl.lng);
+            return (
+              <button
+                key={cl.id}
+                onClick={() => setRegion(cl.id as RegionId)}
+                aria-label={`${cl.name} ${cl.spots}개 스팟 · 확대`}
+                className="absolute z-10 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1 whitespace-nowrap rounded-full border border-white/70 bg-coral px-2.5 py-1 text-[11px] font-extrabold text-cream shadow-[0_2px_8px_rgba(0,0,0,0.35)] transition hover:scale-105"
+                style={{ left: `${p.x}%`, top: `${p.y}%` }}
+              >
+                {cl.name}
+                <span className="rounded-full bg-white/25 px-1 text-[10px]">
+                  {cl.spots}
                 </span>
-              )}
-            </button>
-          );
-        })}
-      </div>
+              </button>
+            );
+          })}
 
-      {/* 다도시국 팝오버(도시 선택) */}
-      {openCountry && (
-        <div className="mt-3">
-          <button
-            onClick={() => setOpenId(null)}
-            className="mb-2 inline-flex items-center gap-1 rounded-full border border-[color:var(--line)] bg-white px-3 py-1.5 text-[12px] font-semibold text-navy shadow-[shadow:var(--sh-card)]"
-          >
-            <ChevronLeft size={14} /> 지도로
-          </button>
-          <div className="mb-2 flex items-baseline gap-2 px-0.5">
-            <span aria-hidden className="text-[16px]">
-              {openCountry.flag}
-            </span>
-            <span className="text-[16px] font-extrabold tracking-[-0.02em] text-navy">
-              {openCountry.name}
-            </span>
-            <span className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
-              {openCountry.nameEn} · {openCountry.cities.length}
-            </span>
-          </div>
-          <ul className="grid grid-cols-2 gap-2">
-            {openCountry.cities.map((city) =>
-              city.available ? (
-                <li key={city.id}>
-                  <button
-                    onClick={() => router.push(`/home/${city.id}`)}
-                    className="flex w-full items-center gap-2 rounded-xl border border-[color:var(--line)] bg-white px-3 py-2.5 text-left shadow-[shadow:var(--sh-card)] transition hover:bg-[color:var(--cream-2)]"
-                  >
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate text-[14px] font-bold text-navy">
-                        {city.name}
-                      </span>
-                      <span className="block text-[11px] font-semibold text-[color:var(--muted)]">
-                        {counts?.[city.id] ?? city.spots}개 스팟
-                      </span>
-                    </span>
-                    <span className="shrink-0 text-[14px] text-coral">→</span>
-                  </button>
-                </li>
-              ) : (
-                <li
-                  key={city.id}
-                  className="flex items-center gap-2 rounded-xl border border-dashed border-[color:var(--line)] px-3 py-2.5 text-[color:var(--muted-soft)]"
-                >
-                  <span className="min-w-0 flex-1 truncate text-[14px] font-semibold">
-                    {city.name}
+          {/* 국가 핀 — 근접 라벨은 디클러터로 세로 분산 */}
+          {declutter(
+            pinCountries.map((c) => ({ c, ...place(c.lat, c.lng) })),
+          ).map(({ c, x, y }) => {
+            const avail = hasAvailable(c);
+            const spots = spotSum(c, counts);
+            return (
+              <button
+                key={c.id}
+                onClick={() => onCountry(c)}
+                aria-label={`${c.name}${avail ? ` ${spots}개 스팟` : " 준비 중"}`}
+                className={`absolute z-10 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1 whitespace-nowrap rounded-full px-2 py-1 text-[11px] font-bold shadow-[0_2px_8px_rgba(0,0,0,0.35)] transition hover:scale-105 ${
+                  avail
+                    ? "border border-[color:var(--coral)] bg-white text-navy"
+                    : "border border-white/30 bg-[color:var(--muted)] text-cream"
+                }`}
+                style={{ left: `${x}%`, top: `${y}%` }}
+              >
+                <span aria-hidden>{c.flag}</span>
+                {SHORT_NAME[c.id] ?? c.name}
+                {avail && (
+                  <span className="text-[10px] font-extrabold text-coral">
+                    {spots}
                   </span>
-                  <span className="shrink-0 rounded-full bg-[color:var(--cream-2)] px-2 py-0.5 text-[10px] font-semibold">
-                    준비 중
-                  </span>
-                </li>
-              ),
-            )}
-          </ul>
+                )}
+              </button>
+            );
+          })}
         </div>
-      )}
+
+        {/* 도시 선택 — 지도 '위' 오버레이(래퍼 기준 정렬). 아래로 밀지 않아 리스트가 화면 밖으로 가려지지 않는다(한 화면 유지). */}
+        {openCountry && (
+          <div className="absolute inset-0 z-20 flex flex-col gap-2 overflow-y-auto overflow-x-hidden rounded-2xl bg-[color:var(--cream)] p-3">
+            <button
+              onClick={() => setOpenId(null)}
+              className="inline-flex w-fit items-center gap-1 rounded-full border border-[color:var(--line)] bg-white px-3 py-1.5 text-[12px] font-semibold text-navy shadow-[shadow:var(--sh-card)]"
+            >
+              <ChevronLeft size={14} /> 지도로
+            </button>
+            <div className="mb-2 flex items-baseline gap-2 px-0.5">
+              <span aria-hidden className="text-[16px]">
+                {openCountry.flag}
+              </span>
+              <span className="text-[16px] font-extrabold tracking-[-0.02em] text-navy">
+                {openCountry.name}
+              </span>
+              <span className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+                {openCountry.nameEn} · {openCountry.cities.length}
+              </span>
+            </div>
+            <ul className="grid grid-cols-2 gap-2">
+              {openCountry.cities.map((city) =>
+                city.available ? (
+                  <li key={city.id}>
+                    <button
+                      onClick={() => router.push(`/home/${city.id}`)}
+                      className="flex w-full items-center gap-2 rounded-xl border border-[color:var(--line)] bg-white px-3 py-2.5 text-left shadow-[shadow:var(--sh-card)] transition hover:bg-[color:var(--cream-2)]"
+                    >
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate text-[14px] font-bold text-navy">
+                          {city.name}
+                        </span>
+                        <span className="block text-[11px] font-semibold text-[color:var(--muted)]">
+                          {counts?.[city.id] ?? city.spots}개 스팟
+                        </span>
+                      </span>
+                      <span className="shrink-0 text-[14px] text-coral">→</span>
+                    </button>
+                  </li>
+                ) : (
+                  <li
+                    key={city.id}
+                    className="flex items-center gap-2 rounded-xl border border-dashed border-[color:var(--line)] px-3 py-2.5 text-[color:var(--muted-soft)]"
+                  >
+                    <span className="min-w-0 flex-1 truncate text-[14px] font-semibold">
+                      {city.name}
+                    </span>
+                    <span className="shrink-0 rounded-full bg-[color:var(--cream-2)] px-2 py-0.5 text-[10px] font-semibold">
+                      준비 중
+                    </span>
+                  </li>
+                ),
+              )}
+            </ul>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

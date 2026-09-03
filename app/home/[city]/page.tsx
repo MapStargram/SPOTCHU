@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { Bell, Camera, ChevronDown, ChevronLeft } from "lucide-react";
+import { Camera, ChevronDown, ChevronLeft } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { TagPill } from "@/components/ui/TagPill";
 import { Sparkle } from "@/components/ui/Sparkle";
@@ -91,19 +91,13 @@ export default async function HomeScreen({
             </Link>
           </div>
           <div className="flex items-center gap-2">
+            {/* 알림은 모바일 상단 앱바(MobileTopBar)로 이동 — 도시 피드 바로가기만 유지. */}
             <Link
               href={`/feed/${city}`}
               aria-label="도시 피드"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[shadow:var(--sh-card)]"
             >
               <Camera size={20} />
-            </Link>
-            <Link
-              href="/notifications"
-              aria-label="알림"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-navy shadow-[shadow:var(--sh-card)] lg:hidden"
-            >
-              <Bell size={20} />
             </Link>
           </div>
         </header>

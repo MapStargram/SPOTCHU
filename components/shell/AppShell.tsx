@@ -1,4 +1,5 @@
 import { Sidebar } from "./Sidebar";
+import { MobileTopBar } from "./MobileTopBar";
 import { TabBar } from "../ui/TabBar";
 
 // 앱 서피스 셸: 데스크톱은 좌측 Sidebar + 오프셋, 모바일은 하단 TabBar.
@@ -29,6 +30,8 @@ export function AppShell({
           밀지 않음). 예전 peer-hover 밀어내기는 fixed 하단 CTA(SpotActions 등)가 따라오지 못해
           어긋났다 → 정렬 유지 위해 콘텐츠 오프셋은 좁은 레일(76px)로 고정. */}
       <main id="main" tabIndex={-1} className="min-h-dvh lg:pl-[76px]">
+        {/* 모바일 상단 앱바(생성·알림). 집중 플로우(noTabBar)에선 숨김. 데스크톱은 Sidebar가 대신. */}
+        {!noTabBar && <MobileTopBar active={active} />}
         {children}
       </main>
       {!noTabBar && <TabBar active={active} />}
