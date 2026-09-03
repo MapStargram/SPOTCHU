@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T03:14:31.911Z",
+  "generatedAt": "2026-09-03T04:02:25.192Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -624,6 +624,92 @@
       }
     },
     {
+      "id": "bangkok-plaengnam-chinatown-hangover-2-4b7d",
+      "title": "플랭남길 차이나타운 골목 (더 행오버 2 촬영지)",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.74047,
+      "lng": 100.51037,
+      "area": "Plaeng Nam Road (Soi Phiphaksa 1), Samphanthawong (Chinatown)",
+      "subject": "숙취 3인방이 방콕 호텔을 나서며 코끼리와 마주치는 골목 장면 — 실제 야오와랏로드에서 갈라지는 플랭남길·피파사1길",
+      "tip": "야오와랏로드에서 북쪽으로 꺾어 들어가는 좁은 골목으로, 상어지느러미·제비집 요리 노포가 늘어서 있다. MRT 후아람퐁역에서 도보 약 10분. 오전엔 식자재 오토바이 통행이 많아 보행에 주의.",
+      "lens": "24–35mm",
+      "time": "오전 또는 늦은 오후",
+      "workId": "hangover-part-ii",
+      "scene": "차이나타운 좁은 골목에서 코끼리와 마주치며 호텔을 나서는 약 37분경 장면.",
+      "verified": "reported",
+      "source": "https://hangover2locations.blogspot.com/2012/05/chinatown-elephant-scene.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408077/spotchu/spots/x4h8stogb3c6zddbcblp.jpg",
+      "imageCredit": {
+        "author": "Deepak-nsk",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Chinatown_in_Bangkok_(Yaowarat)_at_night.jpg"
+      }
+    },
+    {
+      "id": "bangkok-soicowboy-siamsams-hangover-2-c815",
+      "title": "소이 카우보이 캑터스 바 (더 행오버 2 촬영지)",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.73681,
+      "lng": 100.5625,
+      "area": "Soi Cowboy, Khlong Toei Nuea, Watthana",
+      "subject": "극중 트랜스젠더 바 '시암 샘스' 외관 장면 — 실제 소이 카우보이 4번지 캑터스 바(Cactus Bar) 외관",
+      "tip": "아속(Asok) BTS·수쿰윗 MRT역에서 도보 5분. 네온사인이 켜지는 초저녁에 골목 초입에서 거리 전경 위주로 짧게 촬영. 성인 유흥가이므로 업소 종사자·손님을 피사체로 직접 촬영하지 말 것.",
+      "lens": "24–35mm",
+      "time": "18:30–20:00(네온 점등 직후)",
+      "workId": "hangover-part-ii",
+      "scene": "'시암 샘스' 바 앞에서 벌어지는 약 50분경 장면.",
+      "verified": "reported",
+      "source": "https://tokyofox.net/2014/02/04/se-asia-201314-pt-xii-the-hangover-part-ii-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408080/spotchu/spots/nsssenjfg2bjw7ypaybx.jpg",
+      "imageCredit": {
+        "author": "JJ Harrison (https://www.jjharrison.com.au/)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Soi_Cowboy_-_Bangkok.jpg"
+      }
+    },
+    {
+      "id": "bangkok-songwat-talatnoi-roundabout-hangover-2-9e2f",
+      "title": "탈랏노이 송왓로드 로터리 (더 행오버 2 촬영지)",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.73648,
+      "lng": 100.51477,
+      "area": "Talat Noi, Song Wat Road x Khao Lam Road junction, Samphanthawong",
+      "subject": "훔친 '마약 딜러' 원숭이를 처음 마주치는 로터리 장면 — 실제 송왓로드와 카오람로드가 만나는 탈랏노이의 작은 로터리(카오람 서클)",
+      "tip": "차오프라야 익스프레스 보트로 랏차웡 선착장에서 내려 송왓로드를 따라 남쪽으로 도보 약 10분. 로터리엔 현재 옵티머스 프라임 조형물이 세워져 있어 찾기 쉽다. 차량이 다니는 실제 교차로이니 인도에서만 촬영.",
+      "lens": "24–35mm",
+      "time": "이른 아침(차량 적을 때)",
+      "workId": "hangover-part-ii",
+      "scene": "차이나타운 로터리에서 담배를 피우는 마약 딜러 원숭이를 마주쳐 훔치고 카체이스가 이어지는 약 69분경 장면(Wat San/Song Wat Road roundabout).",
+      "verified": "reported",
+      "source": "https://tokyofox.net/2014/02/04/se-asia-201314-pt-xii-the-hangover-part-ii-filming-locations/"
+    },
+    {
+      "id": "bangkok-sukhumvit71-nana-hangover-2-a63e",
+      "title": "수쿰윗 소이 7/1 나나 골목 (더 행오버 2 촬영지)",
+      "city": "bangkok",
+      "category": "drama",
+      "lat": 13.7402,
+      "lng": 100.55505,
+      "area": "Sukhumvit Soi 7/1, Khlong Toei Nuea, Watthana (Nana)",
+      "subject": "탈옥시킨 승려와 함께 들른 '화이트 라이언' 바에서 소동이 벌어지는 장면 — 실제 나나(Nana) BTS역 옆 골목의 옛 부사 바(Boo Sa Bar) 외관 자리",
+      "tip": "나나 BTS역 옆으로 갈라지는 좁은 골목. 영화 촬영 당시 외관을 임시로 꾸몄던 부사 바는 이후 폐업했지만 골목과 건물 자체는 남아있다. 좁은 소규모 유흥가이므로 짧게 거리 사진만 찍고 이동할 것.",
+      "lens": "24–35mm",
+      "time": "초저녁",
+      "workId": "hangover-part-ii",
+      "scene": "'화이트 라이언' 바 앞에서 소동(riot)이 벌어지는 약 41분경 장면.",
+      "verified": "reported",
+      "source": "https://hangover2locations.blogspot.com/2012/05/white-lion-go-go-bar-sukhumvit-bangkok.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408082/spotchu/spots/wie5ktdm7mcirlvg4cxj.jpg",
+      "imageCredit": {
+        "author": "Blemished Paradise",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nana_Hotel,_Bangkok_(37571933690).jpg"
+      }
+    },
+    {
       "id": "bangkok-surawong-charoen-krung-junction",
       "title": "수라웡-짜런끄룽 교차로",
       "city": "bangkok",
@@ -1096,6 +1182,26 @@
       }
     },
     {
+      "id": "berlin-alexanderplatz-weltzeituhr-bourne-supremacy-7c2d",
+      "title": "알렉산더플라츠 세계시계 (본 슈프리머시 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.5212,
+      "lng": 13.4133,
+      "area": "Alexanderplatz, Mitte, Berlin",
+      "subject": "본(맷 데이먼)이 닉키 파슨스와 접선 약속을 잡는 세계시계(Weltzeituhr) — 알렉산더플라츠 광장의 실제 랜드마크 시계탑",
+      "tip": "알렉산더플라츠 U/S반역 출구 바로 앞 광장 중앙에 있다. 낮에는 관광객이 많으니 이른 아침이 한산하고, 시계탑 전체를 담으려면 광장 맞은편에서 뒤로 물러나 촬영한다.",
+      "workId": "the-bourne-supremacy",
+      "scene": "본이 세계시계 앞에서 닉키와 접선을 시도하다 대학생 시위 군중 속으로 몸을 숨겨 추적을 따돌리는 장면",
+      "source": "https://www.visitberlin.de/en/alexanderplatz-bourne-supremacy",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408084/spotchu/spots/lhgq744xwulveon21atp.jpg",
+      "imageCredit": {
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Reloj_Mundial,_Berl%C3%ADn,_Alemania,_2016-04-22,_DD_46-48_HDR.jpg"
+      }
+    },
+    {
       "id": "berlin-altes-stadthaus-baerensaal-a83c",
       "title": "알테스 슈타트하우스 베어렌잘 (퀸스 갬빗)",
       "city": "berlin",
@@ -1471,6 +1577,26 @@
       }
     },
     {
+      "id": "berlin-motel-avus-bourne-supremacy-d05e",
+      "title": "모텔 아부스(현 호텔 운트 라스트호프 아부스) (본 슈프리머시 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.50101,
+      "lng": 13.27605,
+      "area": "Halenseestraße 51, Halensee, Charlottenburg-Wilmersdorf, Berlin",
+      "subject": "러시아 정보요원 키릴이 상관 유리에게 상황을 보고하는 장면의 배경이 된, 지금도 영업 중인 실제 모텔",
+      "tip": "옛 아부스 레이싱트랙 부지 끝, ICC 베를린 전시장 맞은편에 있다. 지금도 영업 중인 숙소라 외관 촬영이 자유롭고, 이름은 현재 'Hotel und Rasthof AVUS'로 바뀌었다.",
+      "workId": "the-bourne-supremacy",
+      "scene": "키릴이 모텔 아부스에서 상관 유리에게 상황을 보고하는 장면",
+      "source": "https://movie-locations.com/movies/b/Bourne-Supremacy.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408087/spotchu/spots/bmd75mevmgkhqis4vvvy.jpg",
+      "imageCredit": {
+        "author": "Robert Hösle",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:0_0006_Avus_90_P1190417.jpg"
+      }
+    },
+    {
       "id": "berlin-museumsinsel-kolonnadenhof-c91b",
       "title": "박물관 섬 콜로네이드 회랑 & 구 국립미술관 뷰포인트",
       "city": "berlin",
@@ -1533,6 +1659,26 @@
         "author": "Dietmar Rabich",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Berlin,_Oberbaumbr%C3%BCcke_--_2019_--_4335.jpg"
+      }
+    },
+    {
+      "id": "berlin-ostbahnhof-bourne-supremacy-3e6b",
+      "title": "베를린 오스트반호프역 (본 슈프리머시 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.51,
+      "lng": 13.43472,
+      "area": "Koppenstraße 3, Friedrichshain-Kreuzberg, Berlin",
+      "subject": "본이 베를린에 막 도착해 보관함에서 소지품을 꺼내는 장면의 배경이 된, 지금도 운행 중인 실제 기차역",
+      "tip": "역 남쪽 슈트랄라우어 광장(Stralauer Platz) 쪽 정문 앞 보도에서 외관을 촬영한다. 내부는 이후 리모델링되어 보관함 배치가 영화와 다를 수 있다.",
+      "workId": "the-bourne-supremacy",
+      "scene": "베를린에 도착한 본이 역 보관함에서 새 신분증과 소지품을 꺼내는 장면",
+      "source": "https://movie-locations.com/movies/b/Bourne-Supremacy.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408090/spotchu/spots/dhsq9dvfyece9khfmvni.jpg",
+      "imageCredit": {
+        "author": "Michael.F.H.Barth",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Berlin_S-Bahn_Bhf_Ostbahnhof_(S07_1162).jpg"
       }
     },
     {
@@ -1684,6 +1830,26 @@
         "author": "Jörg Zägel",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Berlin,_Mitte,_Wallstrasse_15-15A,_Geschaeftshaus_Lebram_01.jpg"
+      }
+    },
+    {
+      "id": "berlin-westin-grand-hotel-bourne-supremacy-a91f",
+      "title": "베스틴 그랜드 베를린 호텔 (본 슈프리머시 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.5161,
+      "lng": 13.3886,
+      "area": "Friedrichstraße 158-164, Mitte, Berlin",
+      "subject": "CIA 베를린 지부장 패멀라 랜디가 235호실에 투숙한 실제 호텔의 정문·파사드",
+      "tip": "프리드리히슈트라세와 베렌슈트라세가 만나는 코너에 있다. 길 건너편 인도에서 정문 회전문을 정면으로 담으면 영화 속 로비 진입 장면과 비슷한 구도가 나온다.",
+      "workId": "the-bourne-supremacy",
+      "scene": "본이 랜디를 미행하려고 호텔 로비를 지켜보다 회전문으로 빠져나가 택시로 뒤쫓는 장면",
+      "source": "https://tokyofox.net/2011/02/03/berlin-pt-iii-the-bourne-supremacy-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408094/spotchu/spots/wv92ehteogklmexcsrav.jpg",
+      "imageCredit": {
+        "author": "Bahnfrend",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Westin_Grand_Berlin,_2024_(01).jpg"
       }
     },
     {
@@ -2620,6 +2786,54 @@
       }
     },
     {
+      "id": "dubai-burj-khalifa-park-mi4-9f3a",
+      "title": "부르즈 할리파 버즈 파크 전망지 (미션 임파서블: 고스트 프로토콜)",
+      "city": "dubai",
+      "category": "drama",
+      "lat": 25.19433,
+      "lng": 55.27344,
+      "area": "Burj Park, Downtown Dubai",
+      "subject": "부르즈 할리파 외벽 — 에단 헌트가 흡착 장갑으로 오른 123~130층 구간",
+      "tip": "타워 기단을 둘러싼 버즈 파크 산책로에서 파사드를 올려다보는 구도. 실제 촬영 구간(123~130층, 오피스 층)은 일반인 접근 불가이므로 지상에서 타워 전체 실루엣을 담는다. 매일 저녁 두바이 분수쇼와 함께 촬영하면 좋다.",
+      "workId": "mission-impossible-ghost-protocol",
+      "scene": "에단 헌트가 흡착 장갑을 끼고 부르즈 할리파 외벽을 올라 서버실에 잠입하는 장면",
+      "source": "https://gulfnews.com/entertainment/tom-cruise-films-more-death-defying-stunts-at-burj-khalifa-1.706408",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408097/spotchu/spots/ceuyae55htjghbymeu9z.jpg",
+      "imageCredit": {
+        "author": "trolvag",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Burj_Khalifa_lake,_Burj_Park_-_Dubai_-_United_Arab_Emirates_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "dubai-deira-dhow-wharfage-mi4-5e9c",
+      "title": "두바이 크릭 데이라 다우 와프리지 (미션 임파서블: 고스트 프로토콜)",
+      "city": "dubai",
+      "category": "drama",
+      "lat": 25.2566,
+      "lng": 55.3182,
+      "area": "Baniyas Road, Deira, Dubai",
+      "subject": "두바이 크릭 데이라 쪽 전통 목선(다우) 선착장 — 러시아 무기상 보트 회동 장면 배경",
+      "tip": "바니야스 로드를 따라 정박한 다우 목선들과 강 건너 부르 두바이 스카이라인을 함께 담을 수 있다. 인근 아브라(수상택시) 승강장에서 해질녘 촬영을 추천.",
+      "workId": "mission-impossible-ghost-protocol",
+      "scene": "두바이 파트 마지막, 크릭 위 러시아 무기상의 보트에서 이뤄지는 회동 장면 배경",
+      "source": "https://www.thenationalnews.com/arts/tom-cruise-introduces-mission-impossible-ghost-protocol-to-dubai-1.384678"
+    },
+    {
+      "id": "dubai-difc-gate-village-mi4-6b2e",
+      "title": "DIFC 게이트빌리지 (미션 임파서블: 고스트 프로토콜)",
+      "city": "dubai",
+      "category": "drama",
+      "lat": 25.21342,
+      "lng": 55.28259,
+      "area": "Gate Village, DIFC, Dubai",
+      "subject": "DIFC 게이트빌리지 보행 광장 — 샤말(모래폭풍) 추격전 촬영지",
+      "tip": "두바이 메트로 에미레이츠 타워역에서 도보 7분. 갤러리·카페가 늘어선 야외 보행로라 평일 낮이 한산해 촬영하기 좋다. 영화 속 모래폭풍 추격전은 시작·종료부만 실제 두바이에서 촬영되었고 중간부는 밴쿠버 세트에서 찍었다.",
+      "workId": "mission-impossible-ghost-protocol",
+      "scene": "두바이를 덮친 모래폭풍(샤말) 속에서 에단 헌트가 위스트롬(실은 헨드릭스)을 쫓기 시작하는 배경",
+      "source": "https://www.thenationalnews.com/arts/tom-cruise-introduces-mission-impossible-ghost-protocol-to-dubai-1.384678"
+    },
+    {
       "id": "dubai-frame-zabeel-park-framing-viewpoint-04",
       "title": "Dubai Frame Framing Viewpoint from Zabeel Park North Lawn",
       "city": "dubai",
@@ -2661,6 +2875,26 @@
         "author": "Сергей Секачёв",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Jumeirah_Zabeel_Saray_-_panoramio.jpg"
+      }
+    },
+    {
+      "id": "dubai-meydan-bridge-mi4-c81d",
+      "title": "메이단 브리지 (미션 임파서블: 고스트 프로토콜)",
+      "city": "dubai",
+      "category": "drama",
+      "lat": 25.16031,
+      "lng": 55.29716,
+      "area": "Meydan, Nad Al Sheba, Dubai",
+      "subject": "메이단 브리지 — 메이단 경마장 진입로의 파도 형상 다리, 모래폭풍 추격전이 끝나는 배경",
+      "tip": "차량이나 라이드셰어로 접근. 다리 자체는 VIP 전용 통로라 인접 도로·보행 구역에서 파도 형상 실루엣을 담는다. 조명이 켜지는 블루아워~야간이 가장 사진이 잘 나온다.",
+      "workId": "mission-impossible-ghost-protocol",
+      "scene": "모래폭풍이 걷힌 뒤 에단 헌트가 목표를 놓쳤음을 깨닫는 추격전 종결부 배경",
+      "source": "https://www.thenationalnews.com/arts/tom-cruise-introduces-mission-impossible-ghost-protocol-to-dubai-1.384678",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408112/spotchu/spots/fcibzcnxczo03nonmnj2.jpg",
+      "imageCredit": {
+        "author": "Jhaezeey",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Meydan_Bridge-_Dubai.jpg"
       }
     },
     {
@@ -3520,6 +3754,28 @@
       }
     },
     {
+      "id": "hongkong-cochrane-street-dark-knight-4e9a",
+      "title": "코크레인 스트리트 보행 육교 — 루시어스·브루스 밀담 장소",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.28278,
+      "lng": 114.15417,
+      "area": "Central, Hong Kong — Central–Mid-Levels 에스컬레이터 구간",
+      "subject": "루시어스 폭스와 브루스 웨인이 라우 확보 작전을 논의하는 장면이 촬영된, 센트럴-미드레벨 에스컬레이터가 지나는 코크레인 스트리트 지붕형 보행 육교",
+      "tip": "센트럴역에서 Central–Mid-Levels 에스컬레이터를 타고 오르면 만나는 구간. 이른 아침 인파가 적을 때 에스컬레이터와 골목 간판을 함께 담기 좋다. 에스컬레이터 위에서 멈춰 서지 말고 옆 계단·육교 난간 쪽에서 촬영할 것.",
+      "lens": "35mm 표준",
+      "time": "이른 아침(개점 전, 인파 적음)",
+      "workId": "the-dark-knight",
+      "scene": "루시어스 폭스가 라우를 만난 뒤 브루스 웨인과 만나 확보 작전을 논의하는 장면",
+      "source": "https://blog.moviemaps.org/post/114149020952/the-dark-knight",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408114/spotchu/spots/y4akfkdxucwobejfnvkf.jpg",
+      "imageCredit": {
+        "author": "Wishds",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cochrane_Street,_Central,_Hong_Kong.jpg"
+      }
+    },
+    {
       "id": "hongkong-duddell-street-steps-gas-lamps-8f12",
       "title": "두델 스트리트 석계와 가스등",
       "city": "hongkong",
@@ -3554,6 +3810,28 @@
         "author": "Mranieromn",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=20791468"
+      }
+    },
+    {
+      "id": "hongkong-ifc2-dark-knight-8f2c",
+      "title": "국제금융센터 2기(Two IFC) — 라우 은신처",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.285,
+      "lng": 114.15917,
+      "area": "Central, Hong Kong (中環)",
+      "subject": "극중 범죄조직 회계사 라우(Lau)의 홍콩 은신처 고층 오피스 — 배트맨이 옥상에서 진입해 그를 확보하는 장면이 촬영된 실제 건물, 국제금융센터 2기(Two IFC, 8 Finance Street)",
+      "tip": "타워 자체는 오피스라 옥상 진입은 불가. IFC몰 4층 옥상정원(무료 개방, IFC몰 엘리베이터로 접근)이나 센트럴 하버프런트 산책로에서 타워 전경을 올려다보는 구도로 촬영. 야간 조명 점등 시간대가 영화 속 분위기에 가깝다.",
+      "lens": "16-24mm 광각",
+      "time": "야간(빌딩 조명 점등 후)",
+      "workId": "the-dark-knight",
+      "scene": "배트맨이 이 건물 옥상·고층 오피스에서 범죄조직 회계사 라우를 확보해 홍콩을 탈출하는 시퀀스",
+      "source": "https://www.cbsnews.com/pictures/the-dark-knight-on-location/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408117/spotchu/spots/ud7yfew2uwvlgcxoxgrb.jpg",
+      "imageCredit": {
+        "author": "Choinowski",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Two_International_Finance_Centre_in_Hong_Kong_in_2016.jpg"
       }
     },
     {
@@ -3681,6 +3959,28 @@
         "author": "Exploringlife",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Old_Yau_Ma_Tei_Police_Station_(full_blue_sky).jpg"
+      }
+    },
+    {
+      "id": "hongkong-peninsula-helipad-dark-knight-c73d",
+      "title": "페닌슐라 홍콩 — 루시어스 폭스 헬기 도착지",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.29529,
+      "lng": 114.17153,
+      "area": "Tsim Sha Tsui, Kowloon, Hong Kong (침사추이)",
+      "subject": "루시어스 폭스가 라우와의 비즈니스 미팅을 위해 헬기로 도착하는 장면이 촬영된 페닌슐라 홍콩 — 헬리패드는 타워 옥상(비공개), 콜로니얼 양식 파사드는 지상에서 관람 가능",
+      "tip": "센트럴에서 스타페리를 타고 침사추이로 건너가 페닌슐라 정문 앞 살리스버리로 인도에서 콜로니얼 양식 파사드를 올려다보는 구도로 촬영. 헬리패드는 타워 옥상 뒤편이라 지상에서는 보이지 않는다.",
+      "lens": "24-35mm",
+      "time": "낮 또는 해질녘",
+      "workId": "the-dark-knight",
+      "scene": "루시어스 폭스가 헬기로 페닌슐라 옥상 헬리패드에 도착해 라우와 비즈니스 미팅을 갖는 장면",
+      "source": "https://en.wikipedia.org/wiki/The_Peninsula_Hong_Kong",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408128/spotchu/spots/ecbrgljfkt4vvuae6prh.jpg",
+      "imageCredit": {
+        "author": "Bohao Zhao",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Peninsula_Hotel_Building_%E5%8D%8A%E5%B3%B6%E9%85%92%E5%BA%97_-_panoramio.jpg"
       }
     },
     {
@@ -11870,6 +12170,26 @@
       }
     },
     {
+      "id": "tokyo-higashiikebukuro-central-park-durarara-a91f",
+      "title": "히가시이케부쿠로 중앙공원 (듀라라라 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.73013,
+      "lng": 139.71864,
+      "area": "도시마구 히가시이케부쿠로 3초메",
+      "subject": "선샤인시티 바로 옆 구립 공원 — 극중 류가미네 미카도와 소노히라 안리가 소동을 피해 도망쳐 오는 공원의 실제 모델",
+      "tip": "도쿄메트로 유라쿠초선 히가시이케부쿠로역에서 도보 3분, 선샤인시티에서는 도보 2분. 세쿼이아 등 큰 나무 아래 벤치 구도가 작중 분위기와 비슷하다.",
+      "workId": "durarara",
+      "scene": "미카도와 안리가 소동을 피해 선샤인시티 옆 공원으로 도망쳐 오는 장면",
+      "source": "https://yasutabi.info/archives/32533",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408131/spotchu/spots/jxdfsx0w3zzavl0yk5qy.jpg",
+      "imageCredit": {
+        "author": "あばさー",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Higashi-Ikebukuro_Central_Park_01.JPG"
+      }
+    },
+    {
       "id": "tokyo-hijiribashi-bridge-suzume-b2",
       "title": "히지리바시 다리 (스즈메의 문단속)",
       "city": "tokyo",
@@ -11911,6 +12231,34 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Hikarigaoka_Park.jpg"
       }
+    },
+    {
+      "id": "tokyo-ikebukuro-nishiguchi-park-durarara-7c2e",
+      "title": "이케부쿠로 니시구치 공원 (듀라라라 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.73023,
+      "lng": 139.70896,
+      "area": "도시마구 니시이케부쿠로 1초메",
+      "subject": "이케부쿠로 서쪽 출구의 상징 공원(구 글로벌 링) — 극중 헤이와지마 시즈오가 자주 소동을 일으키는 서쪽 출구 무대의 실제 배경",
+      "tip": "JR·지하철 이케부쿠로역 서쪽 출구(2a 출구)에서 도보 1분. 낮에는 공원 전경을, 밤에는 조명이 들어온 원형 조형물과 함께 담으면 좋다.",
+      "workId": "durarara",
+      "scene": "이케부쿠로 서쪽 출구 메인 무대 — 시즈오가 자주 소동을 벌이는 공원",
+      "source": "https://yasutabi.info/archives/32533"
+    },
+    {
+      "id": "tokyo-ikebukuro-ohashi-bridge-durarara-e4a6",
+      "title": "이케부쿠로 대교 (듀라라라 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.73425,
+      "lng": 139.71387,
+      "area": "도시마구 가미이케부쿠로 2초메",
+      "subject": "JR 선로 위를 가로지르는 인도교 — 극중 시즈오와 셀티(목 없는 라이더)가 자주 둘이서 대화를 나누는 다리",
+      "tip": "무츠마타 교차로에서 도보로 이어지는 보행자용 다리라 안전하게 촬영 가능. 다리 위 보도에서 선로 쪽을 내려다보는 구도를 추천.",
+      "workId": "durarara",
+      "scene": "시즈오와 셀티가 다리 위에 나란히 서서 대화를 나누는 장면",
+      "source": "https://yasutabi.info/archives/32533"
     },
     {
       "id": "tokyo-irohazaka-sakura-park-whisper-9d2a",
@@ -12165,6 +12513,20 @@
       "workId": "suzume-no-tojimari",
       "scene": "소타의 집(할아버지 댁)으로 향하는 길에 미미즈가 나타나는 장면(영화 중반부, 약 58분경)",
       "source": "https://anime-pilgrimage.com/suzume/"
+    },
+    {
+      "id": "tokyo-mutsumata-overpass-durarara-3d8b",
+      "title": "이케부쿠로 무츠마타 육교 (듀라라라 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.73336,
+      "lng": 139.71657,
+      "area": "도시마구 히가시이케부쿠로 1초메",
+      "subject": "시즌1 전반부 오프닝 영상에서 미카도·안리·키다 세 주인공이 석양을 바라보는 실제 육교(무츠마타 육교)",
+      "tip": "대형 교차로 위 보행자 육교이므로 인도에서만 촬영하고 차도·난간 밖으로 나가지 말 것. 해 질 무렵 방문하면 오프닝과 비슷한 하늘색을 담을 수 있다.",
+      "workId": "durarara",
+      "scene": "시즌1 오프닝 — 미카도·안리·키다가 육교에서 석양을 바라보는 장면",
+      "source": "https://yasutabi.info/archives/32533"
     },
     {
       "id": "tokyo-nabeshima-shoto-park-toilet-perfect-days-5f91",
@@ -12655,6 +13017,46 @@
       }
     },
     {
+      "id": "tokyo-sunshine-dori-durarara-8f2d",
+      "title": "선샤인도리 음자리표 조형물 (듀라라라 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.7302,
+      "lng": 139.7145,
+      "area": "도시마구 히가시이케부쿠로 1초메",
+      "subject": "시즌1 1쿨 오프닝 영상 배경 거리이자 극중 미카도가 목 없는 라이더(셀티)를 처음 목격하는 장소. 도로 남측 보행로의 음자리표(ト音記号) 모양 노래비 '미래의 등불(未来の燈)'이 표식이 된다.",
+      "tip": "이케부쿠로역 동쪽 출구에서 도보 3분. 음자리표 조형물을 프레임에 넣어 촬영하면 성지 인증샷이 된다.",
+      "workId": "durarara",
+      "scene": "미카도가 이케부쿠로 첫날 밤 목 없는 라이더(셀티)를 처음 목격하는 거리",
+      "source": "https://yasutabi.info/archives/32533",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408134/spotchu/spots/ms4q1mvoyyadeyhnepbl.jpg",
+      "imageCredit": {
+        "author": "トトト",
+        "license": "CC BY-SA 2.1 jp",
+        "source": "https://commons.wikimedia.org/wiki/File:Doutor_Ikebukuro_60-kai-d%C5%8Dri_in_Higashi-Ikebukuro_1-ch%C5%8Dme,_-23_april_2026_16%EF%BC%9A52.jpg"
+      }
+    },
+    {
+      "id": "tokyo-sunshine60dori-nitori-durarara-15c9",
+      "title": "선샤인60도리 구 도큐핸즈 자리(현 니토리) (듀라라라 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.72984,
+      "lng": 139.71644,
+      "area": "도시마구 히가시이케부쿠로 1초메",
+      "subject": "11화에서 익명 그룹 '달러즈'가 처음 집결하며 뜻밖의 리더가 드러나는 클라이맥스 장면의 배경, 구 도큐핸즈 이케부쿠로점 건물 앞. 2021년 폐점 후 현재는 니토리 이케부쿠로 선샤인60도리점 건물이다.",
+      "tip": "이케부쿠로역 동쪽 출구에서 선샤인60도리를 따라 도보 5분. 건물 외관이 바뀌었으니 도로 건너편에서 거리 전체를 담는 구도를 추천.",
+      "workId": "durarara",
+      "scene": "11화 — 달러즈 첫 집회, 리더의 정체가 드러나는 클라이맥스 장면",
+      "source": "https://futaman.futabanet.jp/articles/-/125215",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408137/spotchu/spots/gfmj2i7cfsdbi9lyzhsz.jpg",
+      "imageCredit": {
+        "author": "Asanagi",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nitori_Ikebukuro_Sunshine_60_Street_branch_2023-08-16.jpg"
+      }
+    },
+    {
       "id": "tokyo-tabata-station-south-slope-tenkinoko-c3",
       "title": "타바타역 남쪽 출구 언덕길 (날씨의 아이)",
       "city": "tokyo",
@@ -12898,6 +13300,26 @@
       }
     },
     {
+      "id": "venice-campiello-del-remer-casino-royale-e6c4",
+      "title": "캄피엘로 델 레메르 건너편 뷰포인트 (카지노 로얄 촬영지)",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.4393,
+      "lng": 12.3347,
+      "area": "San Polo, Venice (리알토 생선시장 대운하변 강둑)",
+      "subject": "대운하 건너 카나레조 캄피엘로 델 레메르에 남은 라이온-모로시니 저택 잔해 — 영화 최후반부 '가라앉는 팔라초' 장면의 실사 배경이 된 실제 건물",
+      "tip": "리알토 생선시장의 대운하변 강둑(리바)에서 물 건너 북쪽을 보면 카민색 파사드에 하얀 창틀의 좁은 저택(라이온-모로시니 궁전 잔해)이 보인다. 실제 붕괴·침몰 촬영은 영국 파인우드 스튜디오 수조 세트에서 별도로 찍어 이 실사 배경과 합성한 것이므로, 현장에서 건물이 무너지는 모습을 볼 수는 없다.",
+      "workId": "casino-royale",
+      "scene": "베스퍼가 몸을 숨긴 팔라초가 대운하 속으로 가라앉는 영화 최후반부 시퀀스의 실사 배경 플레이트",
+      "source": "https://huntingbond.com/sinking-house-venice/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408140/spotchu/spots/ypqazmirdfhzdjymh5tw.jpg",
+      "imageCredit": {
+        "author": "Didier Descouens",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:(Venice)_-_Pozo_Campiello_del_Remer.jpg"
+      }
+    },
+    {
       "id": "venice-campiello-del-remer-grand-canal-9d1e",
       "title": "캄피엘로 델 레메르 대운하 & 리알토 다리 뷰포인트",
       "city": "venice",
@@ -12938,6 +13360,26 @@
         "author": "Nick Bramhall",
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/53725815@N00/2734996070"
+      }
+    },
+    {
+      "id": "venice-conservatorio-benedetto-marcello-casino-royale-4f0d",
+      "title": "콘세르바토리오 베네데토 마르첼로 안뜰 (카지노 로얄 촬영지)",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.4326,
+      "lng": 12.3308,
+      "area": "San Marco, Venice (Campo Santo Stefano 인근 Campiello Pisani)",
+      "subject": "팔라초 피사니(현 콘세르바토리오 베네데토 마르첼로 음악원)의 안뜰 — 베스퍼가 겟러와 마지막으로 만나고 본드가 그녀를 뒤쫓는 결정적 장면의 실제 촬영지",
+      "tip": "캄포 산토 스테파노에서 라모 피사니(Ramo Pisani)를 따라가다 칼레 카 제노바(Calle Ca' Genova)로 좌회전하면 캄피엘로 피사니 안뜰이 나온다. 음악원은 공개 시설로 안뜰 관람이 가능하나, 수업·연습 시간에는 조용히 관람할 것.",
+      "workId": "casino-royale",
+      "scene": "베스퍼가 겟러와 조우한 뒤 팔라초 붕괴 직전 본드가 그녀를 쫓아가는 결정적 추격 장면",
+      "source": "https://huntingbond.com/conservatorio-benedetto-marcello/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408143/spotchu/spots/nslrxwneazodhhse9rm0.jpg",
+      "imageCredit": {
+        "author": "Didier Descouens",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Palazzo_Pisani_a_Santo_Stefano_(Venice).jpg"
       }
     },
     {
@@ -13024,6 +13466,26 @@
         "author": "Dimitris Kamaras from Athens, Greece",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Ponte_dei_Conzafelzi,_Venice_(31376591896).jpg"
+      }
+    },
+    {
+      "id": "venice-piazza-san-marco-casino-royale-7d2a",
+      "title": "산마르코 광장 북서쪽 (카지노 로얄 촬영지)",
+      "city": "venice",
+      "category": "drama",
+      "lat": 45.4341,
+      "lng": 12.3379,
+      "area": "Piazza San Marco, Venice",
+      "subject": "산마르코 광장 북서쪽 아케이드 — 극중 '바젤 은행'(실제로는 Banca Commerciale Italiana 지점) 장면과 본드가 인파 사이로 베스퍼를 쫓는 광장 추격 장면의 실제 촬영지",
+      "tip": "프로쿠라티에 베키에 아케이드가 광장 서쪽 나폴레옹관과 만나는 북서쪽 모퉁이 부근에서 아케이드 기둥 사이로 광장을 가로지르는 구도를 잡는다. 실제로 400여 명의 엑스트라와 함께 광장에서 촬영됐을 만큼 붐비는 곳이라, 관광객 없는 샷을 원하면 개장 직후 이른 아침을 노릴 것.",
+      "workId": "casino-royale",
+      "scene": "베스퍼를 찾아 극중 '바젤 은행' 앞과 산마르코 광장을 가로질러 뛰어가는 본드의 추격 시퀀스",
+      "source": "https://huntingbond.com/piazza-san-marco-james-bond/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788408145/spotchu/spots/nurcoy1srtw6u6k0yr3k.jpg",
+      "imageCredit": {
+        "author": "This Photo was taken by Wolfgang Moroder. Feel fr",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Panorama_Piazza_San_Marco_and_Venice_on_Easter_2013.jpg"
       }
     },
     {
@@ -13504,6 +13966,13 @@
       "progress": 0
     },
     {
+      "id": "the-bourne-supremacy",
+      "title": "본 슈프리머시",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "the-queens-gambit",
       "title": "퀸스 갬빗",
       "type": "드라마",
@@ -13738,6 +14207,13 @@
       "id": "13---love-live-mv-hongkong",
       "title": "이달의 소녀 1/3 - 지금, 좋아해 (Love & Live) MV",
       "type": "기타",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-dark-knight",
+      "title": "다크 나이트",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -14652,6 +15128,13 @@
       "progress": 0
     },
     {
+      "id": "durarara",
+      "title": "듀라라라!!",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "lost-translation",
       "title": "사랑도 통역이 되나요? (로스트 인 트랜스레이션)",
       "type": "영화",
@@ -14689,6 +15172,13 @@
     {
       "id": "the-tourist",
       "title": "투어리스트",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "casino-royale",
+      "title": "카지노 로얄",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
