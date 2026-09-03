@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T12:02:39.042Z",
+  "generatedAt": "2026-09-03T12:28:49.078Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -1054,7 +1054,13 @@
       "workId": "perfume-the-story-of-a-murderer",
       "scene": "산 펠립 네리 광장의 자두 소녀 장면",
       "verified": "reported",
-      "source": "https://www.meet.barcelona/ca/descobreix-barcelona/cultura/barcelona-plato-de-cinema"
+      "source": "https://www.meet.barcelona/ca/descobreix-barcelona/cultura/barcelona-plato-de-cinema",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438481/spotchu/spots/rkibsminbudut50r28iw.jpg",
+      "imageCredit": {
+        "author": "Zarateman",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Barcelona_-_Oratori_de_Sant_Felip_Neri_3.jpg"
+      }
     },
     {
       "id": "barcelona-pont-del-bisbe-gothic-quarter-9b4e",
@@ -2079,7 +2085,13 @@
       "tip": "옛 주민 가옥을 원형 보존해 개조한 전시관 겸 전망대 데크에서 마을 지붕과 바다를 한 프레임에 담을 수 있다. 오전에는 역광이 덜해 촬영이 수월하다. 좌표는 하늘마루 구역 근사치이므로 현장에서 데크 위치를 확인할 것.",
       "workId": "the-little-prince",
       "scene": "마을 전체를 내려다보는 감천문화마을 대표 전망 포토존",
-      "source": "https://kr.trip.com/travel-guide/attraction/busan/gamcheon-munhwamaeul-haneul-maru-jeonmangdae-55837506/"
+      "source": "https://kr.trip.com/travel-guide/attraction/busan/gamcheon-munhwamaeul-haneul-maru-jeonmangdae-55837506/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438484/spotchu/spots/evuuxkfzm0oz7lwmzvq1.jpg",
+      "imageCredit": {
+        "author": "Basile Morin",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Colorful_houses_in_Gamcheon_Culture_Village_at_sunset_in_Busan_South_Korea.jpg"
+      }
     },
     {
       "id": "busan-gamcheon-little-prince-viewpoint-9c3d",
@@ -2159,7 +2171,13 @@
       "workId": "the-attorney",
       "scene": "흰여울문화마을의 진우네 집과 바다를 함께 담는 촬영지 구도",
       "verified": "reported",
-      "source": "https://www.yeongdo.go.kr"
+      "source": "https://www.yeongdo.go.kr",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438485/spotchu/spots/ywm77wgilebv0jg8ubrj.jpg",
+      "imageCredit": {
+        "author": "Choi2451",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Huinnyeoul_culture_village,_Busan_on_October_25th,_2019.jpg"
+      }
     },
     {
       "id": "busan-hwagukbanjeom-noir-interior-b18e",
@@ -2665,7 +2683,13 @@
       "workId": "klin-kasalong",
       "scene": "란나 전통 사원에서 주인공들이 만나 기도하고 대화하는 장면",
       "verified": "reported",
-      "source": "https://mgronline.com/travel/detail/9620000062402"
+      "source": "https://mgronline.com/travel/detail/9620000062402",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438490/spotchu/spots/sh1vizbvrjfvavuh3hf9.jpg",
+      "imageCredit": {
+        "author": "Millevache",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Wat_Ton_Khwen5.JPG"
+      }
     },
     {
       "id": "chiangmai-wat-umong-brick-tunnel-arches-5e9a",
@@ -2863,7 +2887,13 @@
       "tip": "바니야스 로드를 따라 정박한 다우 목선들과 강 건너 부르 두바이 스카이라인을 함께 담을 수 있다. 인근 아브라(수상택시) 승강장에서 해질녘 촬영을 추천.",
       "workId": "mission-impossible-ghost-protocol",
       "scene": "두바이 파트 마지막, 크릭 위 러시아 무기상의 보트에서 이뤄지는 회동 장면 배경",
-      "source": "https://www.thenationalnews.com/arts/tom-cruise-introduces-mission-impossible-ghost-protocol-to-dubai-1.384678"
+      "source": "https://www.thenationalnews.com/arts/tom-cruise-introduces-mission-impossible-ghost-protocol-to-dubai-1.384678",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438492/spotchu/spots/wlyamh8srmsnm7qqvqeh.jpg",
+      "imageCredit": {
+        "author": "Bin Al Stroker",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:DUBAI_CREEK_-_Baniyas_Road_-_Dubai_-_United_Arab_Emirates_-_panoramio_(2).jpg"
+      }
     },
     {
       "id": "dubai-difc-gate-village-mi4-6b2e",
@@ -3493,7 +3523,13 @@
       "time": "15:00 - 17:30 (오후 사광 및 호수 수면 반영 골든아워)",
       "workId": "fuufu-ijou-koibito-miman",
       "scene": "오프닝 영상 및 2화/7화 데이트 및 산책 장면. 지로와 아카리, 시오리가 오호리 공원 호수 위의 석교와 버드나무 산책로를 걸으며 대화하는 배경.",
-      "source": "https://astral-tanbou.com/entry/2023/01/14/000000"
+      "source": "https://astral-tanbou.com/entry/2023/01/14/000000",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438495/spotchu/spots/p9wamhyspqtw3facohqb.jpg",
+      "imageCredit": {
+        "author": "Hirho",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%C5%8Chori_Park_The_N_side_of_Ukimid%C5%8D_%C5%8Chorik%C5%8Den_Ch%C5%AB%C5%8D-ku_Fukuoka_20260605_175211.jpg"
+      }
     },
     {
       "id": "fukuoka-ohori-park-kujira-playground-buddy-daddies-4d8a",
@@ -3836,7 +3872,13 @@
       "workId": "hong-kong-film-locations-duddell",
       "scene": "공식 자료는 다수 홍콩 영화·TV 드라마 촬영지임을 확인하지만 개별 작품의 정확한 프레임은 검토 필요",
       "verified": "reported",
-      "source": "https://www.amo.gov.hk/en/historic-buildings/monuments/hong-kong-island/monuments_08/index.html"
+      "source": "https://www.amo.gov.hk/en/historic-buildings/monuments/hong-kong-island/monuments_08/index.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438499/spotchu/spots/xhqrltsvesz4gsfye4k7.jpg",
+      "imageCredit": {
+        "author": "Wishds",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Duddell_Street,Hong_Kong.jpg"
+      }
     },
     {
       "id": "hongkong-graham-street-market-6e1c",
@@ -3895,7 +3937,13 @@
       "workId": "-hongkong",
       "scene": "홍콩을 배경으로 한 수많은 영화, 다큐멘터리, 광고에서 등장하는 대표적인 빅토리아 하버 파노라마 뷰포인트.",
       "verified": "reported",
-      "source": "https://en.wikipedia.org/wiki/Lugard_Road"
+      "source": "https://en.wikipedia.org/wiki/Lugard_Road",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438501/spotchu/spots/sm2vwpqeoifwkwgkmbm7.jpg",
+      "imageCredit": {
+        "author": "Donatingpictures",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Victoria_Harbour_-_Hong_Kong.jpg"
+      }
     },
     {
       "id": "hongkong-mcdonalds-peking-road-fallen-angels-b3f8",
@@ -4607,7 +4655,13 @@
       "workId": "fate-zero",
       "scene": "고베대교가 후유키대교의 시각적 모티브로 거론되는 장소. 특정 애니메이션 프레임의 일대일 일치는 추가 확인 필요.",
       "verified": "reported",
-      "source": "https://www.feel-kobe.jp/"
+      "source": "https://www.feel-kobe.jp/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438504/spotchu/spots/c0wugxnvdh310hqigr9w.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Kobe_port_island02s3200.jpg"
+      }
     },
     {
       "id": "kobe-port-island-kita-park-skyline-f21e",
@@ -6066,7 +6120,13 @@
       "tip": "알칼라 15번지 외관은 거리에서 자유롭게 촬영 가능. 내부 바·계단은 레스토랑 이용 또는 건물 가이드 투어로 입장해야 한다.",
       "workId": "la-casa-de-papel",
       "scene": "시즌 4, 바 라스 에스탄시아스(Bar Las Estancias)에서 베를린·팔레르모·교수가 대화를 나누는 장면과 모더니즘 계단 신.",
-      "source": "https://www.vidademadrid.com/es/17912/casino-de-madrid-la-casa-de-papel-4/"
+      "source": "https://www.vidademadrid.com/es/17912/casino-de-madrid-la-casa-de-papel-4/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438512/spotchu/spots/necm6puaxvsmoafrjik4.jpg",
+      "imageCredit": {
+        "author": "Javier Perez Montes",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Casino_de_Madrid_-_Madrid_02.jpg"
+      }
     },
     {
       "id": "madrid-cerro-del-tio-pio-skyline-f82b",
@@ -7944,7 +8004,13 @@
       "workId": "its-okay-thats-love",
       "scene": "8화 오키나와 드라이브 장면과 코우리 대교",
       "verified": "reported",
-      "source": "https://www.nakijin.jp/sightseeing_info/sightseeing_spot/577.html"
+      "source": "https://www.nakijin.jp/sightseeing_info/sightseeing_spot/577.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438515/spotchu/spots/u9zc81vo43nxhq3lwxht.jpg",
+      "imageCredit": {
+        "author": "CEphoto, Uwe Aranas",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nago_Okinawa_Kouri-Bridge-01.jpg"
+      }
     },
     {
       "id": "okinawa-manzamo-elephant-rock-viewpoint-e41a",
@@ -9252,7 +9318,13 @@
       "lens": "16-35mm 또는 70-200mm",
       "time": "오전 9-11시 또는 오후 5-6시 30분(풍향에 따라 변동)",
       "verified": "reported",
-      "source": "https://www.phuket101.net/plane-spotting-in-phuket/"
+      "source": "https://www.phuket101.net/plane-spotting-in-phuket/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438517/spotchu/spots/zdm9fgzv0xx9agv39gt1.jpg",
+      "imageCredit": {
+        "author": "CEphoto, Uwe Aranas",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mai-Khao-Beach_Phuket_Warning-flag-01.jpg"
+      }
     },
     {
       "id": "phuket-on-on-hotel-the-beach-itsy-4b2c",
@@ -11841,7 +11913,13 @@
       "workId": "mission-impossible-2",
       "scene": "베어 아일랜드 요새가 션 앰브로스의 기지로 등장",
       "verified": "reported",
-      "source": "https://www.movie-locations.com/movies/m/Mission-Impossible-2.php"
+      "source": "https://www.movie-locations.com/movies/m/Mission-Impossible-2.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438519/spotchu/spots/is0cejfhydmbecqid8al.jpg",
+      "imageCredit": {
+        "author": "Adam.J.W.C.",
+        "license": "CC BY-SA 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Bare_island_fort_La_Perouse.jpg"
+      }
     },
     {
       "id": "sydney-mrs-macquaries-point-c92a",
@@ -12932,7 +13010,13 @@
       "workId": "perfect-days",
       "scene": "영화 후반부 도쿄 공중화장실 몽타주에 등장 (극중 약 87분경)",
       "verified": "reported",
-      "source": "https://tokyotoilet.jp/nanago_dori_park/"
+      "source": "https://tokyotoilet.jp/nanago_dori_park/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438527/spotchu/spots/ndt1f4ux5kxuwankryf6.jpg",
+      "imageCredit": {
+        "author": "鋸香具師",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Toilet_nanago_dori_koen_north.jpg"
+      }
     },
     {
       "id": "tokyo-national-art-center-salon-de-the-your-name-c4e2",
@@ -13340,7 +13424,13 @@
       "time": "낮~해질녘",
       "workId": "love-live",
       "scene": "2기 4화·11화 등 멤버들이 다리 위에 모이는 장면, 1기 9화 이별 장면의 실제 배경",
-      "source": "https://seichimap.jp/spots/99"
+      "source": "https://seichimap.jp/spots/99",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788438530/spotchu/spots/wvrzyfxun1o1l19qvqxf.jpg",
+      "imageCredit": {
+        "author": "Guwashi999 from Tokyo, Japan",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kanda_River_-_Flickr_-_Guwashi999.jpg"
+      }
     },
     {
       "id": "tokyo-silent-setagaya-daita-bench-7f2a",
