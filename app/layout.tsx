@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
+  themeColor: "#fafafa", // 앱 캔버스 --cream-2와 일치(상태바 이음새 제거, #110)
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,

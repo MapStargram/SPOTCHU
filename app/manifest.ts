@@ -11,8 +11,9 @@ export default function manifest(): MetadataRoute.Manifest {
     scope: "/",
     display: "standalone",
     orientation: "portrait",
-    background_color: "#ffffff",
-    theme_color: "#ffffff",
+    // 실제 페이지 캔버스는 --cream-2(#fafafa) — theme/background를 캔버스에 맞춰 상태바 이음새 제거(#110).
+    background_color: "#fafafa",
+    theme_color: "#fafafa",
     lang: "ko",
     categories: ["travel", "lifestyle", "photo"],
     icons: [
