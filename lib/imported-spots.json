@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T22:07:59.937Z",
+  "generatedAt": "2026-09-03T03:14:31.911Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -1119,6 +1119,26 @@
       }
     },
     {
+      "id": "berlin-anhalter-bahnhof-wings-of-desire-c71d",
+      "title": "안할터 반호프 폐허 (베를린 천사의 시 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.5036,
+      "lng": 13.3825,
+      "area": "Askanischer Platz, Kreuzberg, Berlin",
+      "subject": "옛 안할터 기차역의 남은 정문 파사드와 주랑 폐허",
+      "tip": "역사 정문 파사드 일부만 아스카니셔 광장 공원에 보존돼 있다. 인적이 드문 낮 시간대에 폐허와 인물을 함께 담기 좋다.",
+      "workId": "wings-of-desire",
+      "scene": "영화 촬영차 베를린에 온 배우 피터 포크가 안할터 반호프 폐허 앞을 지나며 돌아가신 할머니를 그리워하는 독백 장면",
+      "source": "https://pov.imv.au.dk/Issue_08/section_2/artc8A.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405192/spotchu/spots/uxh7x0km5zzlloodofqs.jpg",
+      "imageCredit": {
+        "author": "Carlos Delgado",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Berlin_Anhalter_Bahnhof_-_01.jpg"
+      }
+    },
+    {
       "id": "berlin-bebelplatz-hotel-de-rome-run-lola-run-9e4d",
       "title": "베벨플라츠·호텔 드 롬 (롤라 런 촬영지)",
       "city": "berlin",
@@ -1264,6 +1284,26 @@
       "source": "https://ftrc.blog/queens-gambit-locations-in-berlin/"
     },
     {
+      "id": "berlin-kaiser-wilhelm-gedaechtniskirche-wings-of-desire-3d8f",
+      "title": "카이저 빌헬름 기념교회 (베를린 천사의 시 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.5041,
+      "lng": 13.3355,
+      "area": "Breitscheidplatz, Charlottenburg, Berlin",
+      "subject": "전쟁으로 반파된 옛 첨탑 위에서 천사가 시내를 내려다보는 카이저 빌헬름 기념교회",
+      "tip": "브라이트샤이트플라츠 광장 중앙에서 파손된 옛 첨탑을 올려다보는 구도로 촬영하면 영화 도입부 장면과 비슷한 앵글이 나온다. 관광객이 많은 낮보다 이른 아침이 한산하다.",
+      "workId": "wings-of-desire",
+      "scene": "도입부, 천사가 폭격으로 반파된 교회 첨탑에 서서 베를린 거리를 내려다보는 장면",
+      "source": "https://www.bfi.org.uk/features/wings-desire-wim-wenders-berlin-locations",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405195/spotchu/spots/vy4r9nvpg5ne9vpdlivx.jpg",
+      "imageCredit": {
+        "author": "Flocci Nivis",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:20220812_Kaiser-Wilhelm-Ged%C3%A4chtniskirche.jpg"
+      }
+    },
+    {
       "id": "berlin-karl-marx-allee-rosengarten-queens-gambit-7c9b",
       "title": "Berlin Karl-Marx-Allee Rosengarten (The Queen's Gambit)",
       "city": "berlin",
@@ -1329,6 +1369,46 @@
         "author": "Bahnfrend",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Kronprinzenpalais_(Berlin),_2006_(01).jpg"
+      }
+    },
+    {
+      "id": "berlin-langenscheidtbruecke-wings-of-desire-5a2c",
+      "title": "랑엔샤이트 다리 (베를린 천사의 시 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.4886,
+      "lng": 13.3633,
+      "area": "Schöneberg, Berlin",
+      "subject": "오토바이 사고로 죽어가는 청년 곁에서 다미엘이 그를 위로하는 철제 트러스 다리",
+      "tip": "S반 율리우스레버브뤼케역 바로 옆 철제 다리로, 다리 위 인도에서 철로와 다리 구조물을 함께 담을 수 있다. 선로 쪽이 아닌 보행로 난간 안쪽에서만 촬영할 것.",
+      "workId": "wings-of-desire",
+      "scene": "다미엘이 다리 위에서 오토바이 사고로 죽어가는 청년 곁에 앉아 그의 마지막 순간을 함께하는 장면",
+      "source": "https://www.bfi.org.uk/features/wings-desire-wim-wenders-berlin-locations",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405199/spotchu/spots/zw6ad969mkuvvsxtcdwd.jpg",
+      "imageCredit": {
+        "author": "Lienhard Schulz",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Langenscheidtbr%C3%BCcke_4_Berlin.JPG"
+      }
+    },
+    {
+      "id": "berlin-lohmuehlenbruecke-wings-of-desire-e6f0",
+      "title": "로뮐렌 다리 (베를린 천사의 시 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.4895,
+      "lng": 13.4395,
+      "area": "Neukölln-Kreuzberg-Treptow 경계, Berlin",
+      "subject": "옛 베를린 장벽과 맞닿아 있던 운하 다리에서 천사 다미엘과 카시엘이 나란히 걸으며 대화하는 장면의 배경",
+      "tip": "노이쾰른 마이바흐우퍼와 트렙토 로뮐렌슈트라세를 잇는 1920년 준공 다리. 다리 위 보행로에서 노이쾰너 운하와 함께 촬영하기 좋다.",
+      "workId": "wings-of-desire",
+      "scene": "다미엘과 카시엘이 옛 장벽과 맞닿은 운하 다리 부근을 거닐며 서로 관찰한 것을 나누는 장면",
+      "source": "https://www.bfi.org.uk/features/wings-desire-wim-wenders-berlin-locations",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405201/spotchu/spots/yd3whoicqydevvr0lh0z.jpg",
+      "imageCredit": {
+        "author": "Roehrensee",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Lohm%C3%BChlenbr%C3%BCcke_Berlin_P1070337.JPG"
       }
     },
     {
@@ -1476,6 +1556,46 @@
         "author": "Leonhard Lenz",
         "license": "CC0 1.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=186065690"
+      }
+    },
+    {
+      "id": "berlin-siegessaeule-wings-of-desire-7c4a",
+      "title": "전승기념탑(지게스조일레) (베를린 천사의 시 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.5145,
+      "lng": 13.3499,
+      "area": "Großer Stern, Tiergarten, Berlin",
+      "subject": "천사 다미엘과 카시엘이 도시를 내려다보는 전승기념탑 꼭대기의 황금빛 '승리의 여신상'",
+      "tip": "전망대까지 나선 계단 285개를 오르면 영화 속 앵글과 비슷하게 티어가르텐과 베를린 전경을 담을 수 있다. 여신상 바로 옆 초근접 장면 일부는 안전상 스튜디오 세트로 촬영됐다는 기록이 있어, 현장 방문은 '영화 속 상징 랜드마크' 확인 목적으로 접근하는 것이 정확하다.",
+      "workId": "wings-of-desire",
+      "scene": "천사들이 전승기념탑 위에서 베를린 시내와 사람들을 관찰하는 도입부 시퀀스",
+      "source": "https://www.bfi.org.uk/features/wings-desire-wim-wenders-berlin-locations",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405204/spotchu/spots/xh6k7bodf3ibwo3ucofh.jpg",
+      "imageCredit": {
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Berliner_Siegess%C3%A4ule_2012-04.jpg"
+      }
+    },
+    {
+      "id": "berlin-staatsbibliothek-wings-of-desire-9b1e",
+      "title": "베를린 국립도서관 포츠다머 슈트라세관 (베를린 천사의 시 촬영지)",
+      "city": "berlin",
+      "category": "drama",
+      "lat": 52.5075,
+      "lng": 13.3707,
+      "area": "Potsdamer Straße 33, Tiergarten, Berlin",
+      "subject": "천사들이 열람실 이용자들 사이를 거닐며 사람들의 속마음을 듣는, 한스 샤로운이 설계한 곡선형 열람실",
+      "tip": "당일 방문자 카드를 발급받으면 실제 열람실에 입장할 수 있다. 열람실 내부는 정숙·촬영 규정이 있으니 사전에 도서관 안내를 확인할 것.",
+      "workId": "wings-of-desire",
+      "scene": "다미엘과 카시엘이 국립도서관 열람실을 거닐며 이용자들의 내면 독백을 듣는 장면",
+      "source": "https://www.visitberlin.de/en/state-library-himmel-uber-berlin-wings-desire",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405207/spotchu/spots/u6nl9q6hbq7wjivr1ivi.jpg",
+      "imageCredit": {
+        "author": "Gunnar Klack",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Staatsbibliothek-zu-Berlin-Potsdamer-Str-Berlin-Tiergarten-03-2017b.jpg"
       }
     },
     {
@@ -5479,6 +5599,20 @@
       }
     },
     {
+      "id": "madrid-casino-madrid-staircase-casa-de-papel-a48d",
+      "title": "마드리드 카지노 모더니즘 계단·바 라스 에스탄시아스",
+      "city": "madrid",
+      "category": "drama",
+      "lat": 40.41778,
+      "lng": -3.70023,
+      "area": "Calle de Alcalá 15, Centro, Madrid",
+      "subject": "극중 베를린·팔레르모·교수가 스페인 은행 습격 계획을 논의하는 영국식 바 장면과 모더니즘 계단이 촬영된 실제 마드리드 카지노(Casino de Madrid)",
+      "tip": "알칼라 15번지 외관은 거리에서 자유롭게 촬영 가능. 내부 바·계단은 레스토랑 이용 또는 건물 가이드 투어로 입장해야 한다.",
+      "workId": "la-casa-de-papel",
+      "scene": "시즌 4, 바 라스 에스탄시아스(Bar Las Estancias)에서 베를린·팔레르모·교수가 대화를 나누는 장면과 모더니즘 계단 신.",
+      "source": "https://www.vidademadrid.com/es/17912/casino-de-madrid-la-casa-de-papel-4/"
+    },
+    {
       "id": "madrid-cerro-del-tio-pio-skyline-f82b",
       "title": "세로 델 티오 피오의 마드리드 스카이라인 일몰",
       "city": "madrid",
@@ -5559,6 +5693,26 @@
       "source": "https://www.esmadrid.com/casa-papel-madrid"
     },
     {
+      "id": "madrid-etsiae-cardenal-cisneros-casa-de-papel-9f2a",
+      "title": "항공우주공학교(ETSIAE) 옥상 총격전 촬영지",
+      "city": "madrid",
+      "category": "drama",
+      "lat": 40.45278,
+      "lng": -3.72584,
+      "area": "Plaza del Cardenal Cisneros 3, Ciudad Universitaria, Moncloa-Aravaca, Madrid",
+      "subject": "극중 조폐국 옥상 총격전 장면으로 등장한 실제 마드리드 공과대학 항공우주공학교(ETSIAE) 건물 옥상·외관",
+      "tip": "카르데날 시스네로스 광장(Plaza del Cardenal Cisneros)에서 건물 외관을 촬영. 대학 교육 시설이라 옥상 자체는 상시 개방되지 않으니 광장에서 파사드 위주로 담을 것.",
+      "workId": "la-casa-de-papel",
+      "scene": "달리 가면을 쓴 강도단이 덴버의 아버지 모스코 등 인질들을 옥상으로 데려가 바람을 쐬게 하고, 무리요 경위가 이들을 향해 총격을 가하는 장면의 실제 옥상.",
+      "source": "https://www.esmadrid.com/en/money-heist",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405211/spotchu/spots/b5c92ao8o6qxxdusyd6v.jpg",
+      "imageCredit": {
+        "author": "Carlos Delgado",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:ETSI_Aeron%C3%A1uticos.jpg"
+      }
+    },
+    {
       "id": "madrid-huerta-de-la-partida-viewpoint-e41a",
       "title": "마드리드 리오에서 바라본 왕궁과 알무데나 대성당",
       "city": "madrid",
@@ -5601,6 +5755,20 @@
       }
     },
     {
+      "id": "madrid-miguel-yuste-warehouse-casa-de-papel-e05f",
+      "title": "미겔 유스테 거리 33번지 (교수의 은신처 창고)",
+      "city": "madrid",
+      "category": "drama",
+      "lat": 40.4371,
+      "lng": -3.6236,
+      "area": "Calle de Miguel Yuste 33, San Blas-Canillejas, Madrid",
+      "subject": "극중 교수가 강도단을 원격 지휘하는 은신처 창고(극중 가상 주소 '알칸타라 30번지')로 등장한 실제 창고 건물 외관",
+      "tip": "산 블라스 지구의 평범한 업무·창고용 건물. 인근은 사업장 밀집 지역이니 도로 건너편 인도에서 외관만 조용히 촬영할 것.",
+      "workId": "la-casa-de-papel",
+      "scene": "교수가 폐쇄된 창고에서 무전으로 강도단을 지휘하는 은신처 외경.",
+      "source": "https://www.elrincondesele.com/escenarios-localizaciones-donde-ser-rodo-la-casa-de-papel/"
+    },
+    {
       "id": "madrid-nuevos-ministerios-bank-of-spain-e4c1",
       "title": "'종이의 집' 가상 스페인 은행 촬영지 (누에보스 미니스테리오스)",
       "city": "madrid",
@@ -5621,6 +5789,26 @@
         "author": "Xauxa Håkan Svensson",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Nuevos_Ministerios-Arcada01.jpg"
+      }
+    },
+    {
+      "id": "madrid-plaza-callao-money-rain-casa-de-papel-3d7c",
+      "title": "카야오 광장 지폐비 촬영지",
+      "city": "madrid",
+      "category": "drama",
+      "lat": 40.41986,
+      "lng": -3.70583,
+      "area": "Plaza del Callao, Centro, Madrid",
+      "subject": "극중 저항군이 마드리드 도심 상공에서 위조 50유로 지폐 수백 장을 살포하는 장면의 실제 배경인 카야오 광장",
+      "tip": "그란비아(Gran Vía)와 만나는 번화가라 상시 인파가 많다. 대형 옥외광고 스크린과 함께 프레임에 담으면 극중 구도와 비슷해진다.",
+      "workId": "la-casa-de-papel",
+      "scene": "시즌 3(2차 강도극) 도입부, 위조 50유로 지폐 수백 장이 카야오 광장 하늘에서 쏟아지는 장면.",
+      "source": "https://www.hola.com/actualidad/20190121135991/casa-papel-rodaje-tercera-temporada-gt/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405214/spotchu/spots/hv5tkj6rbjpubs43ofbv.jpg",
+      "imageCredit": {
+        "author": "Luis García (Zaqarbal)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Plaza_del_Callao_(Madrid)_06.jpg"
       }
     },
     {
@@ -7381,6 +7569,26 @@
       "source": "https://www.city.tomigusuku.lg.jp/kanko_bunka_sports/shizen_koen/3275.html"
     },
     {
+      "id": "osaka-abenosuji-tram-black-rain-5a91",
+      "title": "아베노스지 한카이 노면전차 거리 (영화 '블랙 레인' 위조지폐 장면 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.6419,
+      "lng": 135.5119,
+      "area": "아베노스지, 아베노구, 오사카",
+      "subject": "닉과 찰리가 노상 포장마차 근처에서 위조지폐 증거를 태우며 사건의 실마리를 깨닫는 장면의 배경, 한카이 우에마치선 병용궤도가 지나는 아베노스지 거리",
+      "tip": "한카이 우에마치선 아베노 정류장 인근 인도에서 촬영. 도로 중앙의 노면전차 궤도와 거리 폭은 촬영 당시와 유사하게 남아 있음, 전차가 지나가는 타이밍을 노리면 좋음. 궤도 위로 올라가지 말 것.",
+      "workId": "black-rain",
+      "scene": "닉과 찰리가 위조지폐를 불태우며 진범을 깨닫는 장면",
+      "source": "https://news.yahoo.co.jp/expert/articles/945218496d574500878c80c50527c5dc41901d75",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405216/spotchu/spots/ah7kebysocmttu3mxbom.jpg",
+      "imageCredit": {
+        "author": "Mr.ちゅらさん",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hankai_501_at_Abenobasisuji.jpg"
+      }
+    },
+    {
       "id": "osaka-aiaubashi-hanzawa-naoki-c89b",
       "title": "도톤보리 아이아우바시 (드라마 '한자와 나오키' 뺨 맞은 다리)",
       "city": "osaka",
@@ -7537,6 +7745,40 @@
       "scene": "아이젠자카는 두 사람이 만나는 언덕의 모델",
       "verified": "reported",
       "source": "https://joseetora.jp/special/map.php"
+    },
+    {
+      "id": "osaka-juso-sakaemachi-black-rain-e03d",
+      "title": "주소 사카에마치 상점가 (영화 '블랙 레인' 폭주족 포위 장면 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.7194,
+      "lng": 135.4805,
+      "area": "주소, 요도가와구, 오사카",
+      "subject": "닉과 찰리가 오토바이 폭주족에게 포위되는 장면이 촬영된 주소 사카에마치(栄町) 상점가 골목 — 영화 포스터 배경으로도 쓰인 장소",
+      "tip": "한큐 주소역 서쪽 출구에서 도보 2~3분, 사카에마치 상점가 아케이드 인도에서 촬영. 상점 영업에 방해되지 않게 가장자리에서, 네온사인이 켜지는 저녁 이후가 영화 속 분위기에 가까움. 위치는 상점가 구역 수준 근사치.",
+      "workId": "black-rain",
+      "scene": "닉과 찰리가 오토바이 폭주족에게 둘러싸이는 장면(영화 포스터 배경)",
+      "source": "https://news.yahoo.co.jp/expert/articles/a3f5c206520a11bb2574d7fb296ff3764f097f0d"
+    },
+    {
+      "id": "osaka-kyobashi-grandchateau-black-rain-c84e",
+      "title": "교바시 그랜드샤토 빌딩 (영화 '블랙 레인' 파칭코 아지트 급습 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.6979,
+      "lng": 135.5339,
+      "area": "교바시, 미야코지마구, 오사카",
+      "subject": "사토 조직의 파칭코 아지트 급습 장면 배경이 된 서양 성곽풍 외관의 교바시 그랜드샤토 빌딩과 오사카 순환선 열차",
+      "tip": "JR·게이한·오사카메트로 교바시역에서 도보 1~3분. 건물 맞은편 인도에서 성곽풍 외관과 배경으로 지나가는 오사카 순환선(오렌지색) 열차를 함께 담을 것. 위치는 구역 수준 근사치.",
+      "workId": "black-rain",
+      "scene": "닉 형사 일행이 사토 조직의 파칭코 아지트를 급습하는 장면",
+      "source": "https://news.yahoo.co.jp/articles/2af741c712805f6235865d59354a30ab3fa06023",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405220/spotchu/spots/ccasy0froyzrvb1lu8gi.jpg",
+      "imageCredit": {
+        "author": "Tokumeigakarinoaoshima",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kyobashi_Grand_Ch%C3%A2teau_Building.JPG"
+      }
     },
     {
       "id": "osaka-naniwabashi-lion-public-hall-8b2c",
@@ -9845,6 +10087,20 @@
       "source": "https://korean.visitseoul.net/hallyu/Baekbin-Crossing"
     },
     {
+      "id": "seoul-bondong-stairs-past-lives-c81a",
+      "title": "본동 계단길 (패스트 라이브즈 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.51025,
+      "lng": 126.95592,
+      "area": "본동, 동작구",
+      "subject": "극중 어린 나영과 해성이 나란히 하굣길을 걷는 계단 — 실제 노량진 인근 본동 골목 계단길",
+      "tip": "지하철 1·9호선 노량진역에서 도보 이동 가능한 조용한 주택가 계단입니다. 통행이 적은 생활 골목이니 짧게 촬영하고 주민 생활에 방해되지 않게 주의하세요.",
+      "workId": "past-lives",
+      "scene": "어린 나영과 해성이 나란히 하굣길 계단을 걸어 내려가는 장면(영화 초반부)",
+      "source": "https://filmoblivion.com/2024/01/17/past-lives-2023/"
+    },
+    {
       "id": "seoul-d-lifestyle-kitchen-gwanghwamun-startup-c6a1",
       "title": "디라이프스타일키친 광화문점 (스타트업 촬영지)",
       "city": "seoul",
@@ -9946,6 +10202,20 @@
       "scene": "감고당길 돌담에서의 첫 만남 장면으로 소개됨.",
       "verified": "reported",
       "source": "https://korean.visitseoul.net/attractions/Gamgodang-gil"
+    },
+    {
+      "id": "seoul-geumhosan-stairs-past-lives-7d3e",
+      "title": "금호동 계단길 (패스트 라이브즈 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.54942,
+      "lng": 127.02369,
+      "area": "금호동3가, 성동구",
+      "subject": "극중 어린 나영과 해성이 헤어지는 골목 계단 — 실제 금호동3가 언덕 계단길(금호산2나길)",
+      "tip": "지하철 5호선 신금호역에서 도보 약 10분 거리의 실제 주거지 계단길입니다. 주민이 사는 골목이므로 이른 시간대에 짧게 촬영하고 소음·사생활 침해를 피하세요.",
+      "workId": "past-lives",
+      "scene": "어린 나영과 해성이 하굣길 끝에서 헤어지는 장면(영화 초반부)",
+      "source": "https://filmoblivion.com/2024/01/17/past-lives-2023/"
     },
     {
       "id": "seoul-goblin-yongdap-station-bridge-3d1e",
@@ -10093,6 +10363,26 @@
         "author": "kallerna",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Changdeokgung_Seoul_3.jpg"
+      }
+    },
+    {
+      "id": "seoul-namsan-cablecar-past-lives-4f9b",
+      "title": "남산케이블카 (패스트 라이브즈 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.55694,
+      "lng": 126.98409,
+      "area": "회현동1가, 중구",
+      "subject": "성인이 된 해성이 케이블카를 타고 서울 야경을 보여주며 나영과 영상통화하는 장면 — 실제 남산케이블카",
+      "tip": "명동역 2·3번 출구에서 도보 약 10분, 회현동 승강장에서 탑승. 창가 좌석에 앉으면 극중과 비슷하게 서울 시내가 내려다보이는 구도로 왕복 약 3분간 촬영 가능.",
+      "workId": "past-lives",
+      "scene": "해성이 케이블카 안에서 나영과 영상통화하다 화면이 멈추는 장면",
+      "source": "https://www.extstreet.com/Past_Lives.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405221/spotchu/spots/vneltfduii9cqsntcyvi.jpg",
+      "imageCredit": {
+        "author": "UNC - CFC - USFK from Seoul, Republic of Korea",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Korea-Seoul-Namsan_Cable_Car-02.jpg"
       }
     },
     {
@@ -10791,6 +11081,66 @@
       }
     },
     {
+      "id": "sydney-chifley-square-matrix-f04d",
+      "title": "칠리 스퀘어 (매트릭스 사이퍼의 배신 장면)",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.86594,
+      "lng": 151.21164,
+      "area": "칠리 스퀘어(Chifley Square), 시드니 CBD",
+      "subject": "사이퍼가 스미스 요원과 거래하며 모피어스 일행을 배신하는 레스토랑 장면의 무대 — 옛 'Forty One' 레스토랑이 있던 칠리 타워 저층부 및 광장",
+      "tip": "칠리 스퀘어 광장에서 타워 저층부와 광장을 함께 담는 구도. 평일 점심시간엔 인근 직장인들로 붐빔.",
+      "workId": "the-matrix",
+      "scene": "사이퍼가 스미스 요원에게 모피어스 일행 정보를 넘기고 매트릭스로 복귀시켜 달라 거래하는 배신 장면(약 64분경).",
+      "source": "https://giggster.com/guide/movie-location/where-was-the-matrix-filmed",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405229/spotchu/spots/vcaq7bliimjdkng8djys.jpg",
+      "imageCredit": {
+        "author": "Phil Whitehouse from London, United Kingdom",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Chifley_Square_(2049714941).jpg"
+      }
+    },
+    {
+      "id": "sydney-colonial-state-bank-centre-matrix-3ac9",
+      "title": "구 콜로니얼 스테이트 뱅크 센터 (매트릭스 모피어스 감금 장면)",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.867,
+      "lng": 151.21101,
+      "area": "마틴 플레이스 52번지(엘리자베스~필립 스트리트 사이), 시드니 CBD",
+      "subject": "스미스 요원이 모피어스를 심문·감금하는 '정부 건물'로 쓰인 실제 오피스타워 로비 — 마틴 플레이스 분수 촬영지에서 동쪽으로 도보 약 3분 거리",
+      "tip": "마틴 플레이스를 따라 동쪽(엘리자베스 스트리트 방향)으로 걸으면 로비 외관이 보임. 사무용 빌딩이라 내부 출입은 제한적이니 외관·로비 창 너머 구도 위주로.",
+      "workId": "the-matrix",
+      "scene": "스미스 요원이 모피어스를 정부 건물 심문실에 감금하고 접속 코드를 캐묻는 장면과 그 직전 로비 격투 장면(약 27분·91분경).",
+      "source": "https://dictionaryofsydney.org/building/colonial_state_bank_centre",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405237/spotchu/spots/ipxrnzrqhopcw1d6ewez.jpg",
+      "imageCredit": {
+        "author": "Collywolly",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Martin_Place,_Sydney_in_2019_showing_building_work.jpg"
+      }
+    },
+    {
+      "id": "sydney-hickson-road-towns-place-matrix-d81e",
+      "title": "힉슨 로드 & 타운스 플레이스 (매트릭스 트리니티 공중전화 탈출 장면)",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.85676,
+      "lng": 151.2032,
+      "area": "타운스 플레이스 & 힉슨 로드, 밀러스포인트(월시베이)",
+      "subject": "트리니티가 요원에게 쫓기다 트럭이 부수는 공중전화 박스 앞에서 가까스로 탈출하는 오프닝 장면의 실제 길모퉁이 — 하버브리지 남단 교각 아래",
+      "tip": "하버브리지 남단 교각 아래 실제 차량 통행 도로이므로 인도 안쪽에서만 촬영하고 차도 진입은 금지. 야간엔 다리 조명과 함께 담기 좋음.",
+      "workId": "the-matrix",
+      "scene": "트리니티가 공중전화 박스 앞에서 요원에게 쫓기다 트럭이 부스를 박살내기 직전 가까스로 탈출하는 오프닝 시퀀스(약 5분경).",
+      "source": "https://alexasigno.co.uk/the-matrix-film-locations-sydney/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405242/spotchu/spots/pr53ltdy8pz2tu4ewe4c.jpg",
+      "imageCredit": {
+        "author": "Ymblanter",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sydney_Millers_Point_Hickson_Road_seen_from_13_to_the_northeast.jpg"
+      }
+    },
+    {
       "id": "sydney-mary-booth-lookout-kirribilli-e41d",
       "title": "메리 부스 룩아웃 리저브 키리빌리 오페라 하우스 전망 포인트",
       "city": "sydney",
@@ -10886,6 +11236,26 @@
       }
     },
     {
+      "id": "sydney-pitt-hunter-street-matrix-6f2b",
+      "title": "피트 스트리트 & 헌터 스트리트 교차로 (매트릭스 네오의 마지막 통화 장면)",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.8661,
+      "lng": 151.2083,
+      "area": "피트 스트리트 & 헌터 스트리트 교차로, 시드니 CBD",
+      "subject": "네오가 매트릭스 요원들에게 마지막 경고 메시지를 남기던 가짜 공중전화 부스가 촬영용으로 설치됐던 길모퉁이",
+      "tip": "촬영 당시 소품으로 설치된 공중전화 부스는 현재 없음 — 교차로 분위기를 담는 스트리트 스냅 구도 추천. 차량 통행이 많은 교차로이니 신호 지키며 인도에서 촬영.",
+      "workId": "the-matrix",
+      "scene": "네오가 매트릭스 요원들에게 전화로 마지막 경고를 남기고 하늘로 날아오르는 엔딩 시퀀스(약 128분경).",
+      "source": "https://movie-locations.com/movies/m/Matrix.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405250/spotchu/spots/ydjojevsckczc8r78yai.jpg",
+      "imageCredit": {
+        "author": "Collywolly",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Wales_House,_64-66_Pitt_Street,_Sydney_04.jpg"
+      }
+    },
+    {
       "id": "sydney-the-matrix-martin-place-fountain-a199",
       "title": "매트릭스 '빨간 드레스의 여자' 마틴 플레이스 분수",
       "city": "sydney",
@@ -10928,6 +11298,20 @@
         "license": "CC BY 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=145153844"
       }
+    },
+    {
+      "id": "sydney-westpac-plaza-george-street-matrix-b7e2",
+      "title": "웨스트팩 플라자, 조지 스트리트 (매트릭스 네오 사무실 창턱 장면)",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.8643,
+      "lng": 151.20635,
+      "area": "조지 스트리트(마거릿 스트리트~제이미슨 스트리트 구간), 시드니 CBD",
+      "subject": "네오(토마스 앤더슨)가 근무하던 메타코텍스 사무실로 쓰인 오피스타워 — 요원들에게 쫓겨 창밖 좁은 턱으로 탈출을 시도하는 장면의 실제 건물 외관",
+      "tip": "조지 스트리트를 따라 마거릿 스트리트~제이미슨 스트리트 구간 인도에서 건물을 올려다보는 구도로 촬영. 평일 업무시간엔 유동인구가 많아 보행 동선을 막지 않도록 주의.",
+      "workId": "the-matrix",
+      "scene": "네오가 요원들에게 쫓겨 사무실 창밖 좁은 턱으로 탈출을 시도하다 결국 붙잡히는 초반 장면(약 16분경).",
+      "source": "https://tokyofox.net/2012/04/25/australia-2012-pt-xi-the-matrix-filming-locations/"
     },
     {
       "id": "taipei-eatdrink-grandhotel-lobby-03",
@@ -11322,6 +11706,26 @@
       }
     },
     {
+      "id": "tokyo-daiba-park-digimon-9a2c",
+      "title": "다이바 공원 (디지몬 어드벤처 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.63349,
+      "lng": 139.77188,
+      "area": "다이바, 미나토구",
+      "subject": "에도시대 포대(다이바) 유적 위에 조성된 공원으로, 벤데몬 편 오다이바 배경 중 하나",
+      "tip": "유리카모메 '오다이바카이힌코엔'역에서 도보 약 12분. 옛 포대 성벽 너머로 도쿄만·레인보우 브리지 조망이 함께 담김.",
+      "workId": "digimon-adventure",
+      "scene": "34화 벤데몬 편, 짙은 안개에 갇힌 오다이바를 그린 배경 중 하나로 등장하는 에도시대 포대 유적 공원",
+      "source": "https://www.animepilgrimage.com/ja/maps/anime/ZUDKPLIyHJa5yQs8fBcs/digimon-adventure",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405258/spotchu/spots/bpobnz1jjgrpx0gj2waw.jpg",
+      "imageCredit": {
+        "author": "Guilhem Vellut from Annecy, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Daiba_Park_@_Odaiba_(14042554524).jpg"
+      }
+    },
+    {
       "id": "tokyo-dogenzaka-2chome-crossing-jujutsu-kaisen-7f1b",
       "title": "도겐자카 2초메 히가시 교차로 (주술회전 성지)",
       "city": "tokyo",
@@ -11376,6 +11780,26 @@
       "scene": "히라야마가 동료 타카시와 함께 청소하는 장면의 배경 중 하나 (극중 약 31분경)",
       "verified": "reported",
       "source": "https://tokyotoilet.jp/ebisu_park/"
+    },
+    {
+      "id": "tokyo-fujitv-hachitama-digimon-4c9a",
+      "title": "후지TV 구체전망실 하치타마 (디지몬 어드벤처 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.62694,
+      "lng": 139.77444,
+      "area": "오다이바, 미나토구",
+      "subject": "TV 애니 무인 시리즈 최종 결전의 무대가 된 후지TV 본사 구체 전망대(통칭 '하치타마')",
+      "tip": "유리카모메 '다이바'역에서 도보 3분. 심볼 프롬나드 공원 쪽 광장에서 구체 전체가 보이는 각도로 촬영.",
+      "workId": "digimon-adventure",
+      "scene": "39화 '두 개의 궁극진화! 어둠을 날려버려라!!'에서 워그레이몬·메탈가루몬이 구체 전망실을 무대로 벤옴뱀파이어몬과 벌인 최종 결전",
+      "source": "https://www.b-ch.com/titles/2609/039",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405262/spotchu/spots/qsivbk4j86iww5isowsn.jpg",
+      "imageCredit": {
+        "author": "othree",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fuji_Television_Building,_Odaiba,_Tokyo_-_Mar_31,_2013.jpg"
+      }
     },
     {
       "id": "tokyo-fukutoshin-shibuya-platform-jujutsu-kaisen-b62c",
@@ -11466,6 +11890,26 @@
         "author": "Unknown",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Hijiribashi_Bridge.jpg"
+      }
+    },
+    {
+      "id": "tokyo-hikarigaoka-station-digimon-e63f",
+      "title": "히카리가오카역 주변 (디지몬 어드벤처 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.75855,
+      "lng": 139.62871,
+      "area": "히카리가오카, 네리마구",
+      "subject": "선택받은 아이들이 4년 전 함께 살았던 동네이자 거대 디지몬 맘몬과의 시가전이 벌어진 역·육교 일대",
+      "tip": "도영 오에도선 종점 히카리가오카역 하차. 역 앞 육교와 대형 단지가 배경. 실거주 단지이므로 촬영 시 통행·소음에 주의.",
+      "workId": "digimon-adventure",
+      "scene": "29화 '맘몬 히카리가오카 대격돌!'에서 귀국한 태이치 일행이 도시를 파괴하는 맘몬과 마주치는 장면. 30화에서 4년 전 이곳에 함께 살았던 인연이 밝혀짐",
+      "source": "https://www.b-ch.com/titles/2609/029",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405264/spotchu/spots/rq8ki2zweylzsqpq63yo.jpg",
+      "imageCredit": {
+        "author": "星組背番号10",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hikarigaoka_Park.jpg"
       }
     },
     {
@@ -11777,6 +12221,46 @@
         "author": "IQRemix",
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/46021126@N00/18112602511"
+      }
+    },
+    {
+      "id": "tokyo-odaiba-kaihinkoen-digimon-7d2e",
+      "title": "오다이바 해변공원 (디지몬 어드벤처 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.63072,
+      "lng": 139.77657,
+      "area": "오다이바 해변공원, 미나토구",
+      "subject": "선택받은 아이들이 오다이바에서 다시 모이는 장면의 실제 배경이 된 인공 해변공원",
+      "tip": "유리카모메 '오다이바카이힌코엔'역에서 도보 3분. 백사장 산책로에서 레인보우 브리지를 등지고 시내 쪽을 보는 구도가 애니 장면과 유사.",
+      "workId": "digimon-adventure",
+      "scene": "태이치 일행이 오다이바에서 모이는 무대의 실제 모델이 된 해변공원 (21화 등 현실 복귀 장면 배경)",
+      "source": "https://anitabi.jp/spots/2139",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405267/spotchu/spots/ict3yrlqinojkf5rjcya.jpg",
+      "imageCredit": {
+        "author": "Guilhem Vellut from Annecy, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Odaiba_Seaside_Park_@_Tokyo_Bay_Grand_Fireworks_Festival_2013_(9490385877).jpg"
+      }
+    },
+    {
+      "id": "tokyo-palettetown-ferriswheel-digimon-b81f",
+      "title": "팔레트타운 대관람차 옛터 (디지몬 어드벤처 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.6249,
+      "lng": 139.7786,
+      "area": "팔레트타운, 아오미, 고토구",
+      "subject": "작중 오다이바를 상징하는 랜드마크로 반복 등장한 대관람차가 있던 자리",
+      "tip": "관람차 실물은 2022년 철거되어 현재는 부지만 남음. 유리카모메 '아오미'역에서 도보 5분, 후지TV 건물을 먼 배경에 함께 담기 좋음.",
+      "workId": "digimon-adventure",
+      "scene": "시리즈 전반에서 오다이바의 상징적 배경으로 여러 차례 그려진 대관람차",
+      "source": "https://anitabi.jp/spots/2615",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788405272/spotchu/spots/ekmlxirpskwldlumb193.jpg",
+      "imageCredit": {
+        "author": "KimonBerlin",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Daikanransha_(Odaiba_Ferris_Wheel)_(8732601781).jpg"
       }
     },
     {
@@ -13027,6 +13511,13 @@
       "progress": 0
     },
     {
+      "id": "wings-of-desire",
+      "title": "베를린 천사의 시",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "run-lola-run",
       "title": "롤라 런",
       "type": "영화",
@@ -13713,6 +14204,13 @@
       "progress": 0
     },
     {
+      "id": "black-rain",
+      "title": "블랙 레인",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "hanzawa-naoki",
       "title": "한자와 나오키 (시즌 1 - 오사카 편)",
       "type": "드라마",
@@ -13722,13 +14220,6 @@
     {
       "id": "josee-the-tiger-and-the-fish",
       "title": "조제, 호랑이 그리고 물고기들",
-      "type": "영화",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "black-rain",
-      "title": "블랙 레인",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -13937,6 +14428,13 @@
       "progress": 0
     },
     {
+      "id": "past-lives",
+      "title": "패스트 라이브즈",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "startup",
       "title": "스타트업",
       "type": "드라마",
@@ -14028,15 +14526,15 @@
       "progress": 0
     },
     {
-      "id": "mission-impossible-2",
-      "title": "미션 임파서블 2",
+      "id": "the-matrix",
+      "title": "매트릭스",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "the-matrix",
-      "title": "매트릭스",
+      "id": "mission-impossible-2",
+      "title": "미션 임파서블 2",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -14128,6 +14626,13 @@
     {
       "id": "jujutsu-kaisen",
       "title": "주술회전",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "digimon-adventure",
+      "title": "디지몬 어드벤처",
       "type": "애니",
       "spotCount": 1,
       "progress": 0
