@@ -4,7 +4,7 @@ import { createElement, useCallback, useEffect, useRef, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import Link from "next/link";
 import { APIProvider } from "@vis.gl/react-google-maps";
-import { Plus, Crosshair, MapPin } from "lucide-react";
+import { Crosshair, MapPin } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
 import { ErrorBoundary } from "../ui/ErrorBoundary";
@@ -359,15 +359,8 @@ export function MapView({
         <FallbackLayer />
       )}
 
-      {/* FABs — 제보(+)·내 위치(현재 위치로 이동) */}
+      {/* FAB — 내 위치(현재 위치로 이동). 제보(+)는 상단 헤더로 이동해 제거(내비 통일). */}
       <div className="absolute bottom-[210px] right-4 z-[9] flex flex-col gap-2.5">
-        <Link
-          href="/report"
-          aria-label="스팟 제보"
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-coral text-cream shadow-[shadow:var(--sh-cta-coral)]"
-        >
-          <Plus size={22} />
-        </Link>
         <button
           type="button"
           onClick={onLocate}
