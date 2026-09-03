@@ -142,6 +142,12 @@ export function PinGrid({
                   <span className="absolute left-2 top-2 rounded-full bg-black/30 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
                     <CategoryLabel label={s.categoryLabel} size={11} />
                   </span>
+                  {/* 국가 국기(전체 지역 혼합 피드) — 저장 버튼 왼쪽 우상단. 도시별 홈은 flag 미전달 → 미표시. */}
+                  {s.flag && (
+                    <span className="absolute right-12 top-2 flex h-9 w-9 items-center justify-center rounded-full bg-black/30 text-[15px] leading-none backdrop-blur-sm">
+                      {s.flag}
+                    </span>
+                  )}
                   {s.verified === "official" && (
                     <span className="pointer-events-none absolute bottom-11 right-2">
                       <Sparkle size={18} />

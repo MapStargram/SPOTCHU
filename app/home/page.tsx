@@ -3,6 +3,8 @@ import { Globe2 } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { PinGrid } from "@/components/home/PinGrid";
 import { getCities, getSpotsByCity } from "@/lib/data";
+import { CITIES } from "@/lib/cities-catalog";
+import { COUNTRY_META } from "@/lib/cities-geo";
 import { getCurrentUser } from "@/lib/session";
 import { getSavedSpotIds } from "@/lib/actions/mutations";
 
@@ -24,8 +26,13 @@ export default async function HomeDiscoverScreen() {
     await Promise.all(cities.map((c) => getSpotsByCity(c.id)))
   ).flat();
   const spots = shuffle(all);
+  // 혼합 피드라 카드마다 국가가 다름 → 도시 id로 국기 이모지 조회. 국가 메타는 코드 카탈로그(CITIES)
+  // 기준 — DB Country enum이 10개국만 지원해 나머지가 "일본"으로 폴백되는 것을 우회(정확·완전).
+  const flagOf = new Map(
+    CITIES.map((c) => [c.id, COUNTRY_META[c.country]?.flag]),
+  );
   // 전체 도시 스팟(~300)을 그대로 클라이언트로 직렬화하면 payload가 크다. PinGrid가 쓰는
-  // 9개 필드만 추려 넘긴다(개수·무한스크롤 동작 불변, Spot의 좌표·팁·크레딧 등은 미전송).
+  // 필드만 추려 넘긴다(개수·무한스크롤 동작 불변, Spot의 좌표·팁·크레딧 등은 미전송).
   const pins = spots.map((s) => ({
     id: s.id,
     title: s.title,
@@ -36,6 +43,7 @@ export default async function HomeDiscoverScreen() {
     rating: s.rating,
     visits: s.visits,
     imageUrl: s.imageUrl,
+    flag: flagOf.get(s.city),
   }));
   const user = await getCurrentUser();
   const savedIds = await getSavedSpotIds();

@@ -56,7 +56,9 @@ export type PinCard = Pick<
   | "rating"
   | "visits"
   | "imageUrl"
->;
+> & {
+  flag?: string; // 국가 국기 이모지(전체 지역 혼합 피드에서만 — 도시별 홈은 동일 국가라 생략)
+};
 
 // 현장 안전 태그(prisma SafetyTag enum과 동일 값). 색만으로 전달 금지 → 배너에 아이콘+라벨 병기.
 export type SafetyTag = "PRIVATE_PROPERTY" | "RAILWAY" | "ROADWAY" | "BUSINESS";

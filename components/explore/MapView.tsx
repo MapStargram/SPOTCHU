@@ -14,6 +14,7 @@ import { CITY_CENTER } from "@/lib/mock-constants";
 import type { Spot, CityId } from "@/lib/mock";
 import { categoryIcon } from "@/lib/categories";
 import { cldThumb } from "@/lib/cloudinary-url";
+import { SpotImage } from "@/components/ui/SpotImage";
 import { posOf } from "./pin";
 
 // C1 · 지도 뷰. 키(NEXT_PUBLIC_GOOGLE_MAPS_API_KEY)가 있으면 실제 Google Maps,
@@ -385,14 +386,7 @@ export function MapView({
             className="relative h-[78px] w-[78px] shrink-0 overflow-hidden rounded-2xl"
             style={{ background: preview.thumbGrad }}
           >
-            {preview.imageUrl && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={cldThumb(preview.imageUrl, 640)}
-                alt=""
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            )}
+            <SpotImage src={preview.imageUrl} alt="" width={640} />
             <span className="absolute bottom-1.5 right-1.5 z-10">
               <Sparkle />
             </span>
