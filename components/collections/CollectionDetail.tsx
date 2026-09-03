@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { useFocusTrap } from "@/lib/useFocusTrap";
-import { cldThumb } from "@/lib/cloudinary-url";
+import { SpotImage } from "@/components/ui/SpotImage";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -263,15 +263,7 @@ export function CollectionDetail({
                     className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-[10px]"
                     style={{ background: s.thumbGrad }}
                   >
-                    {s.imageUrl && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={cldThumb(s.imageUrl, 640)}
-                        alt=""
-                        loading="lazy"
-                        className="absolute inset-0 h-full w-full object-cover"
-                      />
-                    )}
+                    <SpotImage src={s.imageUrl} alt="" width={640} />
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-[13px] font-bold tracking-[-0.01em] text-navy">
@@ -401,15 +393,7 @@ export function CollectionDetail({
                   className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl"
                   style={{ background: s.thumbGrad }}
                 >
-                  {s.imageUrl && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={cldThumb(s.imageUrl, 640)}
-                      alt=""
-                      loading="lazy"
-                      className="absolute inset-0 h-full w-full object-cover"
-                    />
-                  )}
+                  <SpotImage src={s.imageUrl} alt="" width={640} />
                   <span className="absolute -left-1.5 -top-1.5 z-10 flex h-[22px] w-[22px] items-center justify-center rounded-full bg-coral font-latin text-[11px] font-extrabold text-cream">
                     {i + 1}
                   </span>
