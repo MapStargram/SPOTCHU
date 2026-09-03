@@ -118,60 +118,66 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
 
   return (
     <div className="flex flex-col items-center">
-      <div ref={containerRef} className="aspect-square w-full max-w-[288px]" />
+      {/* 지구본 + 도시 오버레이 래퍼 — 지도 뷰와 동일 패턴(리스트를 아래 붙이지 않고 지구본 위에 오버레이).
+          rounded+overflow-hidden: 선택 시 지구본 사각 캔버스 모서리가 둥근 오버레이 밖으로 비치는 것 방지. */}
+      <div className="relative w-full max-w-[288px] overflow-hidden rounded-2xl">
+        <div ref={containerRef} className="aspect-square w-full" />
 
-      {selected ? (
-        <div className="w-full max-w-[360px]">
-          <button
-            onClick={() => setOpen(null)}
-            className="mb-2.5 inline-flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-1.5 text-[12px] font-semibold text-navy shadow-[shadow:var(--sh-card)] transition"
-          >
-            <Globe2 size={14} /> 전체 나라
-          </button>
-          <div className="mb-2 flex items-baseline gap-2 px-0.5">
-            <span className="text-[17px] font-extrabold tracking-[-0.02em] text-navy">
-              {selected.name}
-            </span>
-            <span className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
-              {selected.nameEn} · {selected.cities.length}
-            </span>
-          </div>
-          <ul className="grid grid-cols-2 gap-2">
-            {selected.cities.map((city) =>
-              city.available ? (
-                <li key={city.id}>
-                  <button
-                    onClick={() => router.push(`/home/${city.id}`)}
-                    className="flex w-full items-center gap-2 rounded-xl border border-[color:var(--line)] bg-white px-3 py-2.5 text-left shadow-[shadow:var(--sh-card)] transition hover:bg-[color:var(--cream-2)]"
+        {selected && (
+          <div className="absolute inset-0 z-20 flex flex-col gap-2 overflow-y-auto overflow-x-hidden rounded-2xl bg-[color:var(--cream)] p-3">
+            <button
+              onClick={() => setOpen(null)}
+              className="inline-flex w-fit items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white px-3.5 py-1.5 text-[12px] font-semibold text-navy shadow-[shadow:var(--sh-card)] transition"
+            >
+              <Globe2 size={14} /> 전체 나라
+            </button>
+            <div className="flex items-baseline gap-2 px-0.5">
+              <span className="text-[17px] font-extrabold tracking-[-0.02em] text-navy">
+                {selected.name}
+              </span>
+              <span className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+                {selected.nameEn} · {selected.cities.length}
+              </span>
+            </div>
+            <ul className="grid grid-cols-2 gap-2">
+              {selected.cities.map((city) =>
+                city.available ? (
+                  <li key={city.id}>
+                    <button
+                      onClick={() => router.push(`/home/${city.id}`)}
+                      className="flex w-full items-center gap-2 rounded-xl border border-[color:var(--line)] bg-white px-3 py-2.5 text-left shadow-[shadow:var(--sh-card)] transition hover:bg-[color:var(--cream-2)]"
+                    >
+                      <span className="min-w-0 flex-1">
+                        <span className="block truncate text-[14px] font-bold text-navy">
+                          {city.name}
+                        </span>
+                        <span className="block text-[11px] font-semibold text-[color:var(--muted)]">
+                          {counts?.[city.id] ?? city.spots}개 스팟
+                        </span>
+                      </span>
+                      <span className="shrink-0 text-[14px] text-coral">→</span>
+                    </button>
+                  </li>
+                ) : (
+                  <li
+                    key={city.id}
+                    className="flex items-center gap-2 rounded-xl border border-dashed border-[color:var(--line)] px-3 py-2.5 text-[color:var(--muted-soft)]"
                   >
-                    <span className="min-w-0 flex-1">
-                      <span className="block truncate text-[14px] font-bold text-navy">
-                        {city.name}
-                      </span>
-                      <span className="block text-[11px] font-semibold text-[color:var(--muted)]">
-                        {counts?.[city.id] ?? city.spots}개 스팟
-                      </span>
+                    <span className="min-w-0 flex-1 truncate text-[14px] font-semibold">
+                      {city.name}
                     </span>
-                    <span className="shrink-0 text-[14px] text-coral">→</span>
-                  </button>
-                </li>
-              ) : (
-                <li
-                  key={city.id}
-                  className="flex items-center gap-2 rounded-xl border border-dashed border-[color:var(--line)] px-3 py-2.5 text-[color:var(--muted-soft)]"
-                >
-                  <span className="min-w-0 flex-1 truncate text-[14px] font-semibold">
-                    {city.name}
-                  </span>
-                  <span className="shrink-0 rounded-full bg-[color:var(--cream-2)] px-2 py-0.5 text-[10px] font-semibold">
-                    준비 중
-                  </span>
-                </li>
-              ),
-            )}
-          </ul>
-        </div>
-      ) : (
+                    <span className="shrink-0 rounded-full bg-[color:var(--cream-2)] px-2 py-0.5 text-[10px] font-semibold">
+                      준비 중
+                    </span>
+                  </li>
+                ),
+              )}
+            </ul>
+          </div>
+        )}
+      </div>
+
+      {!selected && (
         // 나라를 대륙(REGIONS)별 섹션으로 묶어 정리 — 19개 플랫 칩 그리드가 산만하던 것 개선.
         <div className="mt-4 w-full max-w-[380px] space-y-3">
           {REGIONS.map((region) => {
