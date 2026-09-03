@@ -15,6 +15,7 @@ import { SpotJsonLd } from "@/components/seo/SpotJsonLd";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { Mascot } from "@/components/ui/Mascot";
 import { SpotImage } from "@/components/ui/SpotImage";
+import { cldThumb } from "@/lib/cloudinary-url";
 import { type Verified } from "@/lib/mock";
 import { getSpot, getWork, getCollections, getSpotPosts } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 import { getCurrentUser } from "@/lib/session";
@@ -124,6 +125,7 @@ export default async function SpotDetailScreen({
             <div className="flex gap-2">
               <ShareButton
                 title={s.title}
+                imageUrl={cldThumb(s.imageUrl)}
                 size={18}
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur active:scale-90"
               />

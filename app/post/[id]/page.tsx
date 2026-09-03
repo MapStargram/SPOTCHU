@@ -63,6 +63,7 @@ export default async function PostDetailPage({
             </Link>
             <ShareButton
               title={p.spotTitle}
+              imageUrl={cldThumb(p.images[0])}
               size={20}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur active:scale-90"
             />
@@ -100,7 +101,12 @@ export default async function PostDetailPage({
               loggedIn={!!user}
               size={24}
             />
-            <ShareButton title={p.spotTitle} size={22} className="text-navy" />
+            <ShareButton
+              title={p.spotTitle}
+              imageUrl={cldThumb(p.images[0])}
+              size={22}
+              className="text-navy"
+            />
             <Bookmark size={22} />
           </div>
           {p.caption && (
