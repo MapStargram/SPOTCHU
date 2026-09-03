@@ -128,14 +128,9 @@ export function CityMap({ counts }: { counts?: Record<string, number> }) {
 
   const openCountry = openId ? (byId.get(openId) ?? null) : null;
 
-  const onCountry = (c: Country) => {
-    // 단일도시·서비스중이면 바로 진입, 그 외(다도시 또는 준비중)는 팝오버로 도시 선택.
-    if (c.cities.length === 1 && c.cities[0].available) {
-      router.push(`/home/${c.cities[0].id}`);
-    } else {
-      setOpenId(c.id);
-    }
-  };
+  // 국가 핀 클릭 → 항상 도시목록 팝오버(지구본 뷰와 동일). 단일도시라도 리스트를 건너뛰지 않음
+  // — 도시 확인 없이 바로 이동하면 어느 도시로 가는지 안 보여 혼란(사용자 제보: 대만).
+  const onCountry = (c: Country) => setOpenId(c.id);
 
   return (
     <div className="w-full max-w-[360px]">
