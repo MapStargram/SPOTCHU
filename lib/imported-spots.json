@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T04:02:25.192Z",
+  "generatedAt": "2026-09-03T12:02:39.042Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -182,6 +182,29 @@
       }
     },
     {
+      "id": "amsterdam-oranjee-restaurant-fault-stars-6b2f",
+      "title": "오랑예 레스토랑 외관 (안녕, 헤이즐 촬영지)",
+      "city": "amsterdam",
+      "category": "drama",
+      "lat": 52.36603,
+      "lng": 4.88572,
+      "area": "Keizersgracht 498, Grachtengordel, Amsterdam",
+      "subject": "극중 커플이 촛불 아래 샴페인으로 축하 만찬을 하는 레스토랑 '오랑예'로 나온 실제 건물 외관 — 카이제르스흐라흐트 운하변 타운하우스(실내 장면은 미국 피츠버그 31st Street Studios 세트)",
+      "tip": "운하 건너편 인도에서 건물 정면과 운하 물빛을 함께 담을 수 있다. 저녁 무렵 창문에 불이 켜지면 영화 속 분위기에 가깝다.",
+      "lens": "35mm–50mm",
+      "time": "해질녘~초저녁",
+      "workId": "the-fault-in-our-stars",
+      "scene": "헤이즐과 거스가 레스토랑 '오랑예'에서 샴페인으로 축하하는 저녁 식사 장면(외관만 실제 암스테르담 촬영)",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/f/Fault-In-Our-Stars.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436914/spotchu/spots/o3hyxivmnukerkp2qjap.jpg",
+      "imageCredit": {
+        "author": "Massimo Catarinella",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:KeizersgrachtReguliersgrachtAmsterdam.jpg"
+      }
+    },
+    {
       "id": "amsterdam-reguliersgracht-seven-bridges-8d4e",
       "title": "레귤리어스흐라흐트 7개 다리 뷰포인트 (헤렌흐라흐트 교차점)",
       "city": "amsterdam",
@@ -265,6 +288,29 @@
         "author": "A. Bakker",
         "license": "CC BY 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Amsterdam_-_Zwanenburgwal_84-90.jpg"
+      }
+    },
+    {
+      "id": "amsterdam-van-houten-house-fault-stars-9d4a",
+      "title": "피터 반 하우튼의 집 (안녕, 헤이즐 촬영지)",
+      "city": "amsterdam",
+      "category": "drama",
+      "lat": 52.36073,
+      "lng": 4.87128,
+      "area": "Vondelstraat 162, Amsterdam (Vondelpark 인근)",
+      "subject": "극중 은둔 작가 피터 반 하우튼의 저택으로 나온 실제 벽돌 타운하우스 — 폰델스트라트 162번지(외관만 실촬영, 실내는 피츠버그 세트)",
+      "tip": "폰델파크 남서쪽 입구에서 도보 2~3분 거리의 조용한 주거지 골목. 실거주 건물이므로 사유지 진입·초인종은 삼가고 인도에서 정면 파사드만 촬영할 것.",
+      "lens": "24mm–35mm",
+      "time": "오전, 인적 드문 시간대",
+      "workId": "the-fault-in-our-stars",
+      "scene": "헤이즐과 거스가 트램을 타고 찾아가 은둔 작가 피터 반 하우튼을 만나는 저택 방문 장면",
+      "verified": "reported",
+      "source": "https://almostginger.com/the-fault-in-our-stars-film-locations-amsterdam/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436917/spotchu/spots/ifumhpsakhuhth9nfdnc.jpg",
+      "imageCredit": {
+        "author": "Sneeuwvlakte",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Vondelstraat_-_Amsterdam_(2026).jpg"
       }
     },
     {
@@ -3852,6 +3898,26 @@
       "source": "https://en.wikipedia.org/wiki/Lugard_Road"
     },
     {
+      "id": "hongkong-mcdonalds-peking-road-fallen-angels-b3f8",
+      "title": "맥도날드 베이징로점 (北京道, 타락천사 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.29635,
+      "lng": 114.1719,
+      "area": "Tsim Sha Tsui, Kowloon",
+      "subject": "지하 1층 24시간 맥도날드 입구 — 금발 여인 '베이비'(카렌 목)가 킬러(레옹 라이)를 유혹하는 심야 장면이 촬영된 실제 매장",
+      "tip": "침사추이 베이징로(北京道) 12번지 지하 매장으로 현재도 영업 중. 심야 시간대에 가면 영화 속 분위기와 비슷하며, 실제 영업 매장이므로 다른 손님을 배려해 짧게 촬영할 것.",
+      "workId": "fallen-angels",
+      "scene": "천사 1호(레옹 라이, 킬러)가 신경질적인 금발 여인 '베이비'(카렌 목)를 만나 그녀를 따라가게 되는 심야 맥도날드 장면",
+      "source": "https://vocus.cc/article/61e86328fd89780001a28fc2",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436923/spotchu/spots/ifd31f6rvogxoltj1ujt.jpg",
+      "imageCredit": {
+        "author": "Chausm SL Psamdimu",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:HK_TST_%E5%B0%96%E6%B2%99%E5%92%80_Tsim_Sha_Tsui_%E5%8C%97%E4%BA%AC%E9%81%93_Peking_Road_%E6%BC%A2%E5%8F%A3%E9%81%93_Hankow_Road_green_leaves_tree_October_2024_R12S_02.jpg"
+      }
+    },
+    {
       "id": "hongkong-midnight-express-lan-kwai-fong-4d9a",
       "title": "중경삼림 미드나잇 익스프레스 옛터",
       "city": "hongkong",
@@ -3984,6 +4050,26 @@
       }
     },
     {
+      "id": "hongkong-saiwanho-station-fallen-angels-7d4c",
+      "title": "사이완호역 (西灣河站, 타락천사 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.28167,
+      "lng": 114.2225,
+      "area": "Sai Wan Ho, Hong Kong Island",
+      "subject": "MTR 아일랜드선 사이완호역 콩코스/에스컬레이터 — 노란빛 타일과 3연 에스컬레이터가 특징인 오프닝 시퀀스 촬영지",
+      "tip": "역 특유의 노란-주황 타일과 3연 에스컬레이터가 함께 보이는 콩코스 구도로 촬영. 실제 운영 중인 역이므로 출퇴근 혼잡 시간은 피하고 승객 동선·안전선을 방해하지 말 것.",
+      "workId": "fallen-angels",
+      "scene": "오프닝 시퀀스 — 천사 2호(미셸 리스, 킬러의 에이전트)와 천사 1호(레옹 라이, 킬러)가 텅 빈 역 콩코스를 유유히 스쳐 지나가는 장면",
+      "source": "https://zh.wikipedia.org/zh-tw/%E5%A2%AE%E8%90%BD%E5%A4%A9%E4%BD%BF_(1995%E5%B9%B4%E9%9B%BB%E5%BD%B1)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436930/spotchu/spots/zxuoq0bebtreu6cfnt65.jpg",
+      "imageCredit": {
+        "author": "MOWOEOI Hallumwm",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:HK_SWH_MTR_%E8%A5%BF%E7%81%A3%E6%B2%B3%E7%AB%99_Sai_Wan_Ho_Station_%E6%9C%88%E5%8F%B0_platform_July_2024_R12S.jpg"
+      }
+    },
+    {
       "id": "hongkong-sham-shui-po-apliu-street-audio-shop-infernal-affairs-3d91",
       "title": "압료가 오디오스페이스 (무간도 촬영지)",
       "city": "hongkong",
@@ -4064,6 +4150,20 @@
       "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=efd555a9-eb08-4c0d-8ddd-345522417b5e"
     },
     {
+      "id": "incheon-girls-commercial-high-sunny-e83f",
+      "title": "인천여자상업고등학교 (써니 촬영지)",
+      "city": "incheon",
+      "category": "drama",
+      "lat": 37.468,
+      "lng": 126.62796,
+      "area": "중구 신생동",
+      "subject": "극중 1985년 여고 배경 장면이 촬영된 실제 운영 중인 여자고등학교",
+      "tip": "실제 재학생이 다니는 학교이므로 교내 진입 금지. 정문·외벽 등 외부에서만, 등하교 시간대를 피해 촬영.",
+      "workId": "sunny-2011",
+      "scene": "1985년 여고 시절 배경 장면의 실촬영지로 지역언론에 보도됨",
+      "source": "https://www.kyeonggi.com/article/201105300407821"
+    },
+    {
       "id": "incheon-incheon-bridge-bongjaesan-s-line-a7f1",
       "title": "봉재산 동춘터널 상부 인천대교 S라인 일몰·야경 포인트",
       "city": "incheon",
@@ -4083,6 +4183,62 @@
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Incheon_bridge_(12).jpg"
       }
+    },
+    {
+      "id": "incheon-jayu-park-sunny-6a1d",
+      "title": "인천 자유공원 (써니 촬영지)",
+      "city": "incheon",
+      "category": "drama",
+      "lat": 37.47561,
+      "lng": 126.62197,
+      "area": "중구 중앙동",
+      "subject": "한국 최초의 서구식 공원인 자유공원 — 맥아더 장군 동상 광장 일대",
+      "tip": "동상 앞 광장에서 인천항·시가지 방향 조망까지 함께 담을 수 있다. 노을이 아름다운 늦은 오후~해질 무렵 추천.",
+      "workId": "sunny-2011",
+      "scene": "인천 원도심 배경 장면의 촬영지로 보도된 자유공원 인근",
+      "source": "https://www.kyeonggi.com/article/201105300407821"
+    },
+    {
+      "id": "incheon-jemulpo-cathedral-sunny-9c2f",
+      "title": "제물포성당 일원 주택가 (써니 촬영지)",
+      "city": "incheon",
+      "category": "drama",
+      "lat": 37.46375,
+      "lng": 126.66132,
+      "area": "미추홀구 숭의동",
+      "subject": "1889년 설립된 제물포성당과 주변 원도심 주택가 골목",
+      "tip": "실제 운영 중인 성당·주거지역. 성당 외관과 골목 풍경 위주로 짧게, 조용히 촬영하고 주민 사생활을 침해하지 말 것.",
+      "workId": "sunny-2011",
+      "scene": "1980년대 원도심 동네 풍경의 배경이 된 제물포성당 일원 주택가",
+      "source": "https://www.kyeonggi.com/article/201105300407821"
+    },
+    {
+      "id": "incheon-jemulpo-market-sunny-4b7e",
+      "title": "제물포시장 (써니 촬영지)",
+      "city": "incheon",
+      "category": "drama",
+      "lat": 37.46319,
+      "lng": 126.65678,
+      "area": "미추홀구 숭의동",
+      "subject": "1980년대 원도심 골목이 남아있는 제물포시장 뒷골목",
+      "tip": "인천 지하철 1호선 제물포역에서 도보 이동. 시장은 노후화로 재개발 정비사업이 진행 중이라 상가 구조가 계속 바뀌고 있으니 골목 분위기 위주로, 상인·주민 통행에 방해되지 않게 촬영.",
+      "workId": "sunny-2011",
+      "scene": "1980년대 '써니' 7공주와 라이벌 그룹 '소녀시대'가 골목에서 마주쳐 패싸움을 벌이는 명장면의 실제 촬영지",
+      "source": "https://www.kyeonggi.com/article/201105300407821"
+    },
+    {
+      "id": "incheon-nazareth-hospital-sunny-2d9a",
+      "title": "나사렛국제병원 (써니 촬영지)",
+      "city": "incheon",
+      "category": "drama",
+      "lat": 37.40799,
+      "lng": 126.67049,
+      "area": "연수구 동춘동",
+      "subject": "극중 병원 장면이 촬영된 실제 종합병원",
+      "tip": "실제 운영 중인 병원이므로 로비·진료 동선을 방해하지 않게 건물 외관 위주로 짧게 촬영.",
+      "workId": "sunny-2011",
+      "scene": "나미가 모친 병문안차 병원을 찾는 장면의 실촬영지로 지역언론에 보도됨",
+      "source": "https://www.kyeonggi.com/article/201105300407821"
     },
     {
       "id": "incheon-qing-japan-concession-stairs-c9d3",
@@ -9699,6 +9855,26 @@
       }
     },
     {
+      "id": "rome-museo-civilta-romana-spectre-b73d",
+      "title": "로마 문명 박물관 (007 스펙터 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.8319,
+      "lng": 12.4781,
+      "area": "Piazza Giovanni Agnelli, EUR, Rome",
+      "subject": "마르코 시아라의 장례식 장면이 촬영된 박물관 정면 열주랑(콜로네이드) 파사드",
+      "tip": "박물관 앞 광장(Piazza Giovanni Agnelli)에서 열주 파사드를 정면으로 담는 구도. 개관일·시간 확인 후 방문.",
+      "workId": "spectre",
+      "scene": "루시아 시아라의 남편 마르코 시아라의 장례식이 열리는 장면(2015년 2월 17~24일 현지 촬영).",
+      "source": "https://www.jamesbondlifestyle.com/news/spectre-filming-rome",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436934/spotchu/spots/ibs1fvhgk4idwqur6ld5.jpg",
+      "imageCredit": {
+        "author": "Alberti1492",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Museo_della_Civilt%C3%A0_Romana_a_EUR_Roma.jpg"
+      }
+    },
+    {
       "id": "rome-palazzo-colonna-pilotta-roman-holiday-d4a9",
       "title": "팔라초 콜론나 (기자회견 장면)",
       "city": "rome",
@@ -9799,6 +9975,26 @@
       }
     },
     {
+      "id": "rome-ponte-sisto-spectre-a1f4",
+      "title": "폰테 시스토 (007 스펙터 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.8923,
+      "lng": 12.4708,
+      "area": "Ponte Sisto, Trastevere-Regola 경계, Rome",
+      "subject": "본드가 낙하산으로 착지하고 애스턴마틴 DB10이 테베레강으로 추락하는 카체이싱 결말부의 실제 다리",
+      "tip": "다리 중앙에서 트라스테베레 방향(피아자 트릴루사 쪽)을 바라보고 촬영. 저녁 노을~야간에 다리 조명이 강물에 비쳐 분위기가 좋다.",
+      "workId": "spectre",
+      "scene": "본드가 Q의 시제품 DB10을 몰다 다리 옆 테베레강에 빠뜨리고 낙하산으로 강변에 착지하는 추격 장면 결말부.",
+      "source": "https://huntingbond.com/tiber-chase-james-bond/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436938/spotchu/spots/zonfnbknegk24vs9tifm.jpg",
+      "imageCredit": {
+        "author": "Krzysztof Golik",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ponte_Sisto_in_Rome_(3).jpg"
+      }
+    },
+    {
       "id": "rome-ponte-umberto-sunset-9a2c",
       "title": "폰테 움베르토 1세에서 성 베드로 대성당과 테베레강",
       "city": "rome",
@@ -9817,6 +10013,26 @@
         "author": "Dave Hamster",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/14265068@N00/2974933466"
+      }
+    },
+    {
+      "id": "rome-porta-san-pancrazio-spectre-d581",
+      "title": "포르타 산판크라치오 (007 스펙터 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.8884,
+      "lng": 12.4615,
+      "area": "Largo di Porta San Pancrazio, Gianicolo, Rome",
+      "subject": "본드가 애스턴마틴 DB10을 몰고 역주행으로 통과하는 아우렐리아누스 성벽의 옛 성문",
+      "tip": "성문 앞 광장(Largo di Porta San Pancrazio)에서 아치를 정면으로 담는 구도. 자니콜로 언덕 산책과 겸해 방문하기 좋다.",
+      "workId": "spectre",
+      "scene": "본드가 로마 시내를 가로질러 아우렐리아누스 성벽 성문을 역주행으로 통과해 장례식장으로 향하는 장면.",
+      "source": "https://www.atlasofwonders.com/2015/08/spectre-filming-locations.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436939/spotchu/spots/z3vnqk85szjpvjclueqc.jpg",
+      "imageCredit": {
+        "author": "Gobbler",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Roma_Gianicolo_Porta_San_Pancrazio_cropped.jpg"
       }
     },
     {
@@ -9858,6 +10074,20 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Chiesa_di_Santa_Maria_della_Vittoria_(Roma)_11.jpg"
       }
+    },
+    {
+      "id": "rome-scalo-de-pinedo-spectre-6c2e",
+      "title": "스칼로 데 피네도 계단 (007 스펙터 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.9132,
+      "lng": 12.4711,
+      "area": "Lungotevere Arnaldo da Brescia, Rome (Ponte Pietro Nenni~Ponte Giacomo Matteotti 사이)",
+      "subject": "애스턴마틴 DB10과 재규어 C-X75가 테베레 강변 옛 선착장 계단을 그대로 뛰어내려 강변도로로 진입하는 카체이싱 장면의 실제 계단",
+      "tip": "계단 위쪽 룽고테베레 아르날도 다 브레시아 도로변 인도에서 아래쪽 계단과 강변도로가 함께 보이는 구도로 촬영.",
+      "workId": "spectre",
+      "scene": "재규어에게 쫓기던 본드의 DB10이 테베레 강변 68계단을 그대로 뛰어내려 룽고테베레 강변도로로 빠져나가는 장면.",
+      "source": "https://www.atlasofwonders.com/2015/08/spectre-filming-locations.html"
     },
     {
       "id": "rome-spanish-steps-roman-holiday-gelato-e91a",
@@ -9923,6 +10153,26 @@
         "author": "FredSeiller",
         "license": "CC0 1.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=176296816"
+      }
+    },
+    {
+      "id": "rome-via-di-san-gregorio-spectre-0e9a",
+      "title": "비아 디 산 그레고리오 (007 스펙터 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.8886,
+      "lng": 12.4895,
+      "area": "Via di San Gregorio, Rome (콘스탄티누스 개선문~콜로세움 인근)",
+      "subject": "애스턴마틴 DB10이 콘스탄티누스 개선문과 콜로세움을 지나며 질주하는 장면의 실제 사람피에트리노(전통 돌포장) 도로",
+      "tip": "콘스탄티누스 개선문 옆 인도에서 도로를 따라 콜로세움이 배경에 걸리는 구도로 촬영. 차량 통행 있으니 인도 안쪽에서.",
+      "workId": "spectre",
+      "scene": "본드가 애스턴마틴 DB10을 몰고 콜로세움·로마 포룸 인근 도로를 지나 장례식장으로 향하는 장면.",
+      "source": "https://www.jamesbondlifestyle.com/news/spectre-filming-rome",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436942/spotchu/spots/zi4bycmt0erpgqprphao.jpg",
+      "imageCredit": {
+        "author": "Daderot",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Palatine_Hill_from_the_Via_di_San_Gregorio_-_Rome,_Italy_-_DSC01359.jpg"
       }
     },
     {
@@ -10387,6 +10637,26 @@
       "source": "https://korean.visitseoul.net/hallyu/Baekbin-Crossing"
     },
     {
+      "id": "seoul-banpo-hangang-park-the-host-c9d4",
+      "title": "반포한강공원 동작대교 남단 (괴물 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.509,
+      "lng": 126.981,
+      "area": "서초구 반포동",
+      "subject": "가족이 빗속에서 괴물과 처음 사투를 벌이는 전투 장면의 배경 — 동작대교 남단 한강둔치",
+      "tip": "지하철 4·9호선 동작역에서 반포한강공원 방향 도보, 동작대교 남단 카페 인근 잔디밭. 다리와 강변을 함께 프레임에 넣으면 영화 속 전투 장면 분위기가 난다.",
+      "workId": "the-host",
+      "scene": "장례식장을 나온 가족이 빗속 한강 텐트촌에서 괴물과 처음 맞서 싸우는 장면",
+      "source": "https://www.koreanfilm.or.kr/webzine/commBoard/preview.jsp?wbSeq=31&blbdComCd=601020",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436947/spotchu/spots/p4irknua6jok4gi0lnsn.jpg",
+      "imageCredit": {
+        "author": "Max Bates",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seoul,_Han_River_Water_Show_(55111422738).jpg"
+      }
+    },
+    {
       "id": "seoul-bondong-stairs-past-lives-c81a",
       "title": "본동 계단길 (패스트 라이브즈 촬영지)",
       "city": "seoul",
@@ -10609,6 +10879,26 @@
       }
     },
     {
+      "id": "seoul-ichon-hangang-park-the-host-b6e2",
+      "title": "이촌한강공원 원효대교 북단 (괴물 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5305,
+      "lng": 126.9455,
+      "area": "용산구 이촌동",
+      "subject": "괴물의 은신처이자 가족의 최후 결전이 펼쳐지는 클라이맥스 배경 — 원효대교 교각과 이촌 강변",
+      "tip": "지하철 4호선 이촌역에서 이촌한강공원 방향 도보 15분, 원효대교 북단 강변 산책로. 다리 하부를 낮은 각도로 담으면 영화 속 은신처 분위기가 살아난다.",
+      "workId": "the-host",
+      "scene": "가족이 괴물의 은신처에서 최후의 결전을 벌이는 결말부 장면",
+      "source": "https://www.newspost.kr/news/articleView.html?idxno=99674",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436948/spotchu/spots/b5lxtahquduf5wwibnkn.jpg",
+      "imageCredit": {
+        "author": "hiddenfree",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Wonhyo_Bridge_and_Yeouido_East.jpg"
+      }
+    },
+    {
       "id": "seoul-jahamun-tunnel-stairs-parasite-8f3a",
       "title": "자하문터널 계단 (기생충 폭우 하산 장면)",
       "city": "seoul",
@@ -10724,6 +11014,26 @@
         "author": "Jinah78",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Front_view_of_national_museum_of_korea.jpg"
+      }
+    },
+    {
+      "id": "seoul-nodeul-island-the-host-f2a8",
+      "title": "노들섬 (구 중지도, 괴물 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5175,
+      "lng": 126.96,
+      "area": "용산구 이촌동",
+      "subject": "괴물 출현 후 정부의 방역·격리 장면 배경(옛 지명 중지도) — 한강대교 아래 하중도",
+      "tip": "지하철 9호선 노들역 2번 출구 바로 앞, 노들섬 서측 산책로. 한강대교와 섬 전경을 함께 담기 좋고 해 질 무렵 다리 조명이 켜지면 분위기가 산다.",
+      "workId": "the-host",
+      "scene": "괴물 소동 이후 정부가 한강 둔치(중지도)에서 소독·방역 조치를 벌이는 장면",
+      "source": "https://www.koreanfilm.or.kr/webzine/commBoard/preview.jsp?wbSeq=31&blbdComCd=601020",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436951/spotchu/spots/dijikulrfdjpcfqkahnz.jpg",
+      "imageCredit": {
+        "author": "Dolmang",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hangang_Railway_Bridge,_Seoul,_Korea.jpg"
       }
     },
     {
@@ -10948,6 +11258,26 @@
       "source": "https://www.keyzard.cc/jsinc2287/nb/222751851729"
     },
     {
+      "id": "seoul-ttukseom-hangang-park-the-host-1e5c",
+      "title": "뚝섬한강공원 잠실대교 북단 (괴물 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5265,
+      "lng": 127.0895,
+      "area": "광진구 자양동",
+      "subject": "어부들이 작은 괴생명체를 처음 목격하는 도입부 장면의 배경 — 잠실대교 북단 강변",
+      "tip": "지하철 7호선 뚝섬유원지역에서 한강공원 방향 도보 5분, 잠실대교 북단 강변. 이른 아침 물안개 낀 강 풍경이 영화 도입부 분위기와 닮았다.",
+      "workId": "the-host",
+      "scene": "낚시하던 어부가 한강에서 기형의 새끼 괴물을 처음 목격하는 도입부 장면",
+      "source": "https://www.koreanfilm.or.kr/webzine/commBoard/preview.jsp?wbSeq=31&blbdComCd=601020",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436953/spotchu/spots/xgm2oalubmkda1pywftd.jpg",
+      "imageCredit": {
+        "author": "Motoko C. K.",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_2.jpg"
+      }
+    },
+    {
       "id": "seoul-unhyeongung-yanggwan-goblin-9f2c",
       "title": "운현궁 양관 (도깨비집)",
       "city": "seoul",
@@ -11040,6 +11370,26 @@
         "author": "travel oriented",
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/99958070@N02/10402956675"
+      }
+    },
+    {
+      "id": "seoul-yeouido-hangang-park-the-host-a3f7",
+      "title": "여의도한강공원 서강대교 남단 (괴물 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5285,
+      "lng": 126.9205,
+      "area": "영등포구 여의도동",
+      "subject": "괴물이 한강에서 등장해 강두네 매점 앞 둔치를 습격하는 영화 최고 명장면의 실제 배경 — 서강대교 교각과 강변 산책로",
+      "tip": "지하철 5호선 여의나루역에서 한강공원 방향 도보 10분, 서강대교 남단 강변 산책로. 다리 교각과 강물을 함께 담으면 영화 속 괴물 등장 구도가 나온다.",
+      "workId": "the-host",
+      "scene": "괴물이 한강 둔치에서 처음 모습을 드러내며 사람들을 습격하고 현서를 낚아채 가는 장면",
+      "source": "https://www.koreanfilm.or.kr/webzine/commBoard/preview.jsp?wbSeq=31&blbdComCd=601020",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436955/spotchu/spots/qromhyn5vfd6qoszrqrf.jpg",
+      "imageCredit": {
+        "author": "Patrick Park",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:63_Building_and_Yeouido_Han_River_Park_at_Night.jpg"
       }
     },
     {
@@ -12003,6 +12353,28 @@
         "author": "Daderot",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Sakura_and_boats_in_the_Chidorigafuchi_Moat_-_Tokyo,_Japan_DSC06051.jpg"
+      }
+    },
+    {
+      "id": "tokyo-chuo-ohashi-3gatsu-lion-7f2a",
+      "title": "중앙대교 (3월의 라이온 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.67167,
+      "lng": 139.78444,
+      "area": "주오구 신카와~츠쿠다 (스미다강)",
+      "subject": "중앙대교(中央大橋) — 투구 모티프 주탑의 사장교",
+      "tip": "츠키시마역에서 도보 약 12분(하치초보리역 도보 9분도 가능). 다리 중간쯤에서 남쪽 츠쿠다대교 방향을 보는 구도가 원작 1권 표지 앵글과 비슷하다. 야간 조명은 해 질 녘부터 22시까지.",
+      "lens": "24-35mm",
+      "time": "해질녘~점등 후",
+      "workId": "march-comes-in-like-a-lion",
+      "scene": "만화 1권 표지 배경이자, 레이가 자택에서 카와모토가로 향할 때 가장 먼저 건너는 다리로 반복 등장",
+      "source": "https://www.locationbox.metro.tokyo.lg.jp/location/list/detail.html?pdid=230",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788436959/spotchu/spots/ydnqwyj8jsrdr3zctbtt.jpg",
+      "imageCredit": {
+        "author": "Ian Muttoo",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sumida_River,_Chuo-ohashi_Bridge_in_Tokyo.jpg"
       }
     },
     {
@@ -13017,6 +13389,22 @@
       }
     },
     {
+      "id": "tokyo-sumiyoshi-jinja-3gatsu-lion-a04f",
+      "title": "스미요시 신사 (3월의 라이온 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.66797,
+      "lng": 139.78331,
+      "area": "주오구 츠쿠다 1초메",
+      "subject": "스미요시 신사(住吉神社) 도리이와 참배로",
+      "tip": "츠키시마역에서 도보 약 5분. 정면 도리이에서 참배로를 따라 촬영하면 극 중 배경과 비슷한 구도가 나온다. 참배객 통행을 막지 말 것.",
+      "lens": "24-35mm",
+      "time": "오전",
+      "workId": "march-comes-in-like-a-lion",
+      "scene": "1권 6화, 막내딸 히나가 마음을 다잡으러 찾아가는 동네 신사로 등장",
+      "source": "https://asudoko.tokyo/?p=2987"
+    },
+    {
       "id": "tokyo-sunshine-dori-durarara-8f2d",
       "title": "선샤인도리 음자리표 조형물 (듀라라라 성지)",
       "city": "tokyo",
@@ -13143,6 +13531,54 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_2023.jpg"
       }
+    },
+    {
+      "id": "tokyo-tsukuda-kobashi-3gatsu-lion-1b6e",
+      "title": "츠쿠다코바시 붉은 다리 (3월의 라이온 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.66728,
+      "lng": 139.78335,
+      "area": "주오구 츠쿠다 1초메",
+      "subject": "츠쿠다코바시(佃小橋) — 붉은 난간의 작은 다리",
+      "tip": "츠키시마역 6번 출구에서 도보 약 5분, 스미요시 신사 바로 옆. 붉은 난간과 뒤편 고층 맨션이 대비되는 구도가 포인트.",
+      "lens": "35-50mm",
+      "time": "낮 또는 노을",
+      "workId": "march-comes-in-like-a-lion",
+      "scene": "레이가 중앙대교 다음으로 건너는 두 번째 다리. 단행본 2권 표지, 14권 '붉은 다리 근처에서' 에피소드의 배경",
+      "source": "https://asudoko.tokyo/?p=2987"
+    },
+    {
+      "id": "tokyo-tsukuda-koen-3gatsu-lion-5d8c",
+      "title": "츠쿠다공원 강변 (3월의 라이온 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.66888,
+      "lng": 139.78277,
+      "area": "주오구 츠쿠다 1초메",
+      "subject": "츠쿠다공원(佃公園) 스미다강변 산책로",
+      "tip": "츠쿠다코바시·스미요시 신사에서 도보 1~2분. 강변 테라스에서 츠쿠다대교와 강 건너 스카이라인을 함께 담을 수 있다.",
+      "lens": "16-24mm",
+      "time": "노을~야경",
+      "workId": "march-comes-in-like-a-lion",
+      "scene": "강변 산책·대화 장면의 배경. 주오구 공식 순례 코스가 실사영화 촬영지로 소개하는 공원",
+      "source": "https://www.chuoku-machikadotenjikan.jp/odekakemap/course_special01.html"
+    },
+    {
+      "id": "tokyo-tsukuda-ohashi-3gatsu-lion-c93d",
+      "title": "츠쿠다대교 (3월의 라이온 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.66785,
+      "lng": 139.78107,
+      "area": "주오구 츠쿠다~미나토 (스미다강)",
+      "subject": "츠쿠다대교(佃大橋) — 스미다강을 건너는 도로교",
+      "tip": "츠키시마역에서 도보 약 8분. 다리 옆 츠쿠다공원 강변 테라스에서 다리와 스카이라인을 함께 담기 좋다. 차도 옆 인도이니 통행 주의.",
+      "lens": "24-70mm",
+      "time": "오후~노을",
+      "workId": "march-comes-in-like-a-lion",
+      "scene": "스미다강변 배경 다리로 반복 등장. 단행본 1권 마지막 장면에서 중앙대교 위쪽에서 이 다리 방향을 바라보는 구도로 나온다",
+      "source": "https://pocari.hatenablog.com/entry/20190707/seiti03"
     },
     {
       "id": "tokyo-yotsuya-station-crossing-your-name-b71d",
@@ -14232,6 +14668,13 @@
       "progress": 0
     },
     {
+      "id": "fallen-angels",
+      "title": "타락천사",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "moonlight-express-ptu",
       "title": "Moonlight Express & PTU",
       "type": "영화",
@@ -14248,6 +14691,13 @@
     {
       "id": "the-beauty-inside-2015",
       "title": "뷰티 인사이드",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "sunny-2011",
+      "title": "써니",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -14827,6 +15277,13 @@
       "progress": 0
     },
     {
+      "id": "spectre",
+      "title": "007 스펙터",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "la-dolce-vita",
       "title": "달콤한 인생 (라 돌체 비타)",
       "type": "영화",
@@ -14900,6 +15357,13 @@
       "id": "my-mister",
       "title": "나의 아저씨",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-host",
+      "title": "괴물",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -15102,6 +15566,13 @@
     {
       "id": "jujutsu-kaisen",
       "title": "주술회전",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "march-comes-in-like-a-lion",
+      "title": "3월의 라이온",
       "type": "애니",
       "spotCount": 1,
       "progress": 0
