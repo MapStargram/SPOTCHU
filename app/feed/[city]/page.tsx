@@ -135,6 +135,11 @@ export default async function FeedPage({
                       <span className="text-[12px] font-bold text-navy">
                         {p.authorName}
                       </span>
+                      {p.authorFlag && (
+                        <span className="text-[12px] leading-none">
+                          {p.authorFlag}
+                        </span>
+                      )}
                       {p.isVerifiedShot && (
                         <TagPill
                           variant="mint"

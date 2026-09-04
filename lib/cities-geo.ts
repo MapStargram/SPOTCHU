@@ -77,6 +77,20 @@ export const COUNTRY_META: Record<
   아랍에미리트: { id: "ae", nameEn: "UAE", flag: "🇦🇪", lat: 24.0, lng: 54.0 },
 };
 
+// 사용자 소속 국가 선택/표시용 파생 목록(가입·설정 피커 + 게시물 국기). COUNTRY_META가 단일 원천.
+export const COUNTRIES = Object.entries(COUNTRY_META).map(([name, m]) => ({
+  id: m.id, // 2글자 코드(kr·jp…) — User.country에 저장
+  name, // 한국어 국가명
+  nameEn: m.nameEn,
+  flag: m.flag,
+}));
+export const COUNTRY_IDS = COUNTRIES.map((c) => c.id);
+const COUNTRY_BY_ID = new Map(COUNTRIES.map((c) => [c.id, c]));
+// 저장된 country id → 국가 메타(국기·이름). 미지정/미지원 id면 null.
+export function countryById(id?: string | null) {
+  return id ? (COUNTRY_BY_ID.get(id) ?? null) : null;
+}
+
 // 국가별 도시 그룹 빌드. available = 실제 서비스(스팟 보유) 도시만 — 미시딩 도시는 "준비 중"으로
 // 표시하고 진입을 막는다(코드 카탈로그 20 ⊋ DB 시딩. /home/<미시딩> 404 방지, 시딩되면 자동 활성).
 export function buildCountries(counts?: Record<string, number>): Country[] {

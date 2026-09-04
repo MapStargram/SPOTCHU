@@ -8,8 +8,9 @@ import { signIn } from "next-auth/react";
 import { MobileScreen } from "@/components/ui/MobileScreen";
 import { Mascot } from "@/components/ui/Mascot";
 import { CoralButton } from "@/components/ui/CoralButton";
-import { Field, Notice } from "@/components/auth/AuthUI";
+import { Field, Notice, authInputClass } from "@/components/auth/AuthUI";
 import { signupWithEmail } from "@/lib/actions/auth";
+import { COUNTRIES } from "@/lib/cities-geo";
 
 // A5b · 이메일 가입 — 이메일/비밀번호 + 생년 + 필수 동의 3종. 제출 시 signupWithEmail →
 // 성공하면 인증 메일 안내 + 자동 로그인 후 /city. 필수 동의 미완료 시 제출 불가.
@@ -30,6 +31,7 @@ export default function SignupScreen() {
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [birthYear, setBirthYear] = useState("");
+  const [country, setCountry] = useState("kr"); // 주 사용자층(한국) 기본 선택
   const [agree, setAgree] = useState<Record<ConsentKey, boolean>>({
     terms: false,
     privacy: false,
@@ -74,6 +76,7 @@ export default function SignupScreen() {
       agreePrivacy: true,
       agreeLocation: true,
       birthYear: Number(birthYear),
+      country,
     });
     if (!res.ok) {
       setSubmitting(false);
@@ -170,6 +173,26 @@ export default function SignupScreen() {
           hint="만 14세 이상만 가입할 수 있어요"
           error={errors.birthYear}
         />
+        <div className="flex flex-col gap-1.5">
+          <label
+            htmlFor="signup-country"
+            className="text-[12px] font-semibold text-navy"
+          >
+            소속 국가
+          </label>
+          <select
+            id="signup-country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            className={authInputClass}
+          >
+            {COUNTRIES.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.flag} {c.name}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <fieldset className="mt-1 flex flex-col gap-2.5 rounded-2xl bg-[color:var(--cream-2)] p-3.5">
           <legend className="px-1 text-[12px] font-bold text-navy">

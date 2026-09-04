@@ -7,9 +7,10 @@ import { signOut } from "next-auth/react";
 import { MobileScreen } from "@/components/ui/MobileScreen";
 import { Mascot } from "@/components/ui/Mascot";
 import { CoralButton } from "@/components/ui/CoralButton";
-import { Field, Notice } from "@/components/auth/AuthUI";
+import { Field, Notice, authInputClass } from "@/components/auth/AuthUI";
 import { completeSocialConsent } from "@/lib/actions/auth";
 import { meetsMinAge } from "@/lib/auth/age";
+import { COUNTRIES } from "@/lib/cities-geo";
 
 // A5c · 소셜 가입 동의 게이트(클라이언트). 필수 동의 3종 + 출생연도(만14세). 이메일 가입과 동일 정책.
 const THIS_YEAR = new Date().getFullYear();
@@ -29,6 +30,7 @@ export function ConsentGate({ callbackUrl }: { callbackUrl: string }) {
   });
   const [birthYear, setBirthYear] = useState("");
   const [birthErr, setBirthErr] = useState<string | undefined>();
+  const [country, setCountry] = useState("kr"); // 주 사용자층(한국) 기본 선택
   const [serverError, setServerError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
 
@@ -56,6 +58,7 @@ export function ConsentGate({ callbackUrl }: { callbackUrl: string }) {
       agreePrivacy: true,
       agreeLocation: true,
       birthYear: y,
+      country,
     });
     if (!res.ok) {
       setSubmitting(false);
@@ -102,6 +105,26 @@ export function ConsentGate({ callbackUrl }: { callbackUrl: string }) {
           hint="만 14세 이상만 가입할 수 있어요"
           error={birthErr}
         />
+        <div className="flex flex-col gap-1.5">
+          <label
+            htmlFor="consent-country"
+            className="text-[12px] font-semibold text-navy"
+          >
+            소속 국가
+          </label>
+          <select
+            id="consent-country"
+            value={country}
+            onChange={(e) => setCountry(e.target.value)}
+            className={authInputClass}
+          >
+            {COUNTRIES.map((c) => (
+              <option key={c.id} value={c.id}>
+                {c.flag} {c.name}
+              </option>
+            ))}
+          </select>
+        </div>
 
         <fieldset className="mt-1 flex flex-col gap-2.5 rounded-2xl bg-[color:var(--cream-2)] p-3.5">
           <legend className="px-1 text-[12px] font-bold text-navy">

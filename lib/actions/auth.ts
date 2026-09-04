@@ -8,7 +8,12 @@ import { getCurrentUser } from "@/lib/session";
 import { unstable_update } from "@/auth";
 import { emailSchema, passwordSchema, hashPassword } from "@/lib/auth/password";
 import { meetsMinAge } from "@/lib/auth/age";
+import { COUNTRY_IDS } from "@/lib/cities-geo";
 import { createToken, consumeToken } from "@/lib/auth/tokens";
+
+// 소속 국가 id 정규화: 지원 목록(COUNTRY_META)에 있는 값만 통과, 아니면 undefined(미저장).
+const cleanCountry = (c?: string) =>
+  c && COUNTRY_IDS.includes(c) ? c : undefined;
 import { sendVerifyEmail, sendResetEmail } from "@/lib/email";
 import { canDisconnect } from "@/lib/auth/link";
 
@@ -23,6 +28,7 @@ const signupSchema = z.object({
   agreePrivacy: z.literal(true),
   agreeLocation: z.literal(true),
   birthYear: z.number().int().min(1900).max(new Date().getFullYear()),
+  country: z.string().optional(), // 소속 국가(선택). COUNTRY_META id — 서버에서 정규화.
 });
 
 // 이메일/비밀번호 가입. 신규 이메일만 생성한다. 이미 존재하는 이메일(소셜 포함)은 여기서
@@ -37,6 +43,8 @@ export async function signupWithEmail(
 
   if (!meetsMinAge(birthYear))
     return { ok: false, error: "만 14세 미만은 가입할 수 없습니다" };
+
+  const country = cleanCountry(parsed.data.country);
 
   const existing = await db.user.findUnique({ where: { email } });
   if (existing)
@@ -56,6 +64,7 @@ export async function signupWithEmail(
       agreedPrivacyAt: now,
       agreedLocationAt: now,
       birthYear,
+      country,
     },
   });
 
@@ -68,6 +77,7 @@ const consentSchema = z.object({
   agreePrivacy: z.literal(true),
   agreeLocation: z.literal(true),
   birthYear: z.number().int().min(1900).max(new Date().getFullYear()),
+  country: z.string().optional(), // 소속 국가(선택). COUNTRY_META id — 서버에서 정규화.
 });
 
 // 소셜 로그인 직후 동의 화면(/consent) 완료. 로그인된 컨텍스트에서만 동작.
@@ -103,6 +113,7 @@ export async function completeSocialConsent(
       agreedPrivacyAt: now,
       agreedLocationAt: now,
       birthYear,
+      country: cleanCountry(parsed.data.country),
     },
   });
   // 토큰의 needsConsent 재계산(=false) → 재로그인 없이 미들웨어 통과.

@@ -12,6 +12,7 @@ import {
   getCollectionsFromDb,
 } from "./actions/spots";
 import { inBounds, type Bounds } from "./bounds";
+import { countryById } from "./cities-geo";
 import { canViewCollection } from "./collections";
 import {
   searchSpotsFromDb,
@@ -680,6 +681,7 @@ export interface FeedPost {
   id: string;
   authorName: string;
   authorInitial: string;
+  authorFlag: string | null; // 작성자 소속 국가 국기(미지정/목업이면 null)
   when: string;
   spotId: string;
   spotTitle: string;
@@ -698,6 +700,7 @@ function mapMockPost(p: mock.Post): FeedPost {
     id: p.id,
     authorName: p.author,
     authorInitial: p.author.charAt(0),
+    authorFlag: null, // 목업 게시물은 국가 정보 없음
     when: p.when,
     spotId: p.spotId,
     spotTitle: spot?.title ?? "",
@@ -717,6 +720,7 @@ function mapDbPost(row: DbPost, likedByMe: boolean): FeedPost {
     id: row.id,
     authorName: name,
     authorInitial: name.charAt(0) || "S",
+    authorFlag: countryById(row.author.country)?.flag ?? null,
     when: whenLabel(row.createdAt),
     spotId: row.spot.id,
     spotTitle: row.spot.name,

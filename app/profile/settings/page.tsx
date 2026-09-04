@@ -12,6 +12,7 @@ export default async function SettingsPage() {
     nickname: string;
     providers: string[];
     image: string | null;
+    country: string | null;
   } | null = null;
   if (sessionUser?.id) {
     const u = await db.user.findUnique({
@@ -20,6 +21,7 @@ export default async function SettingsPage() {
         nickname: true,
         name: true,
         image: true,
+        country: true,
         accounts: { select: { provider: true } },
       },
     });
@@ -28,6 +30,7 @@ export default async function SettingsPage() {
         nickname: u.nickname ?? u.name ?? "",
         providers: u.accounts.map((a) => a.provider),
         image: u.image ?? null,
+        country: u.country ?? null,
       };
   }
   return (

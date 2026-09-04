@@ -73,7 +73,14 @@ export default async function PostDetailPage({
               {p.authorInitial}
             </span>
             <div>
-              <div className="text-[12px] font-bold">{p.authorName}</div>
+              <div className="flex items-center gap-1 text-[12px] font-bold">
+                {p.authorName}
+                {p.authorFlag && (
+                  <span className="text-[13px] leading-none">
+                    {p.authorFlag}
+                  </span>
+                )}
+              </div>
               <div className="mt-0.5 font-latin text-[10px] opacity-85">
                 {p.when} · @ {p.spotTitle}
               </div>
