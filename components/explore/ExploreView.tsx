@@ -71,7 +71,7 @@ export function ExploreView({
 }: {
   spots: Spot[];
   city: CityId;
-  cities: { id: string; name: string }[];
+  cities: { id: string; name: string; country?: string }[];
   loggedIn?: boolean;
   initialSaved?: string[];
   works: { id: string; label: string }[]; // 작품 id→제목(작품 하위필터·그룹 라벨용)
@@ -172,7 +172,11 @@ export function ExploreView({
             <Select<string>
               value={city}
               onChange={(id) => router.push(`/explore/${id}`)}
-              options={cities.map((c) => ({ value: c.id, label: c.name }))}
+              options={cities.map((c) => ({
+                value: c.id,
+                label: c.name,
+                group: c.country,
+              }))}
               ariaLabel="도시 변경"
               align="left"
             />

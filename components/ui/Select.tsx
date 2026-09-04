@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { ChevronDown, Check } from "lucide-react";
 
 // 커스텀 셀렉트(짧은 옵션용). 네이티브 select로는 못 내는 열림 메뉴 디자인.
@@ -8,6 +8,7 @@ import { ChevronDown, Check } from "lucide-react";
 export interface SelectOption<T extends string> {
   value: T;
   label: string;
+  group?: string; // 있으면 그룹 헤더(예: 국가)로 묶어 렌더. 옵션이 많을 때 정리용.
 }
 
 export function Select<T extends string>({
@@ -26,6 +27,42 @@ export function Select<T extends string>({
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const current = options.find((o) => o.value === value);
+
+  // group이 하나라도 있으면 첫 등장 순서대로 그룹핑(예: 국가별). 없으면 null → 평면 렌더(기존 동작).
+  let groups: { name: string; opts: SelectOption<T>[] }[] | null = null;
+  if (options.some((o) => o.group)) {
+    const byGroup = new Map<string, SelectOption<T>[]>();
+    for (const o of options) {
+      const g = o.group ?? "";
+      const arr = byGroup.get(g);
+      if (arr) arr.push(o);
+      else byGroup.set(g, [o]);
+    }
+    groups = [...byGroup].map(([name, opts]) => ({ name, opts }));
+  }
+
+  const renderOption = (o: SelectOption<T>) => {
+    const sel = o.value === value;
+    return (
+      <li key={o.value} role="option" aria-selected={sel}>
+        <button
+          type="button"
+          onClick={() => {
+            onChange(o.value);
+            setOpen(false);
+          }}
+          className={`flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-semibold transition ${
+            sel
+              ? "bg-navy text-cream"
+              : "text-navy hover:bg-[color:var(--cream-2)]"
+          }`}
+        >
+          {o.label}
+          {sel && <Check size={15} aria-hidden />}
+        </button>
+      </li>
+    );
+  };
 
   useEffect(() => {
     if (!open) return;
@@ -66,28 +103,19 @@ export function Select<T extends string>({
           // 옵션이 많아도(도시 40+) 드롭다운이 화면 밖으로 늘어나 페이지 스크롤을 만들지 않게 높이 상한 + 내부 스크롤.
           className={`absolute z-30 mt-1.5 max-h-[min(60vh,360px)] min-w-[132px] overflow-y-auto overscroll-contain rounded-2xl border border-[color:var(--line)] bg-white p-1 shadow-[shadow:var(--sh-search)] ${align === "left" ? "left-0" : "right-0"}`}
         >
-          {options.map((o) => {
-            const sel = o.value === value;
-            return (
-              <li key={o.value} role="option" aria-selected={sel}>
-                <button
-                  type="button"
-                  onClick={() => {
-                    onChange(o.value);
-                    setOpen(false);
-                  }}
-                  className={`flex w-full items-center justify-between gap-2 rounded-xl px-3 py-2 text-left text-[13px] font-semibold transition ${
-                    sel
-                      ? "bg-navy text-cream"
-                      : "text-navy hover:bg-[color:var(--cream-2)]"
-                  }`}
+          {(groups ?? [{ name: "", opts: options }]).map((g) => (
+            <Fragment key={g.name || "_"}>
+              {g.name && (
+                <li
+                  role="presentation"
+                  className="px-3 pb-1 pt-2 font-latin text-[10px] font-bold uppercase tracking-[0.14em] text-[color:var(--muted)]"
                 >
-                  {o.label}
-                  {sel && <Check size={15} aria-hidden />}
-                </button>
-              </li>
-            );
-          })}
+                  {g.name}
+                </li>
+              )}
+              {g.opts.map(renderOption)}
+            </Fragment>
+          ))}
         </ul>
       )}
     </div>
