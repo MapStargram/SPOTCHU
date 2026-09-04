@@ -46,7 +46,9 @@ export default async function ProfilePage() {
   const nickname = dbUser?.nickname;
   const avatarUrl = dbUser?.image ?? user?.image ?? null;
   const name = nickname || user?.name || "게스트";
-  const sub = user?.email || "로그인하고 저장·인증을 시작하세요";
+  // 이 지점은 로그인 사용자만 도달(비로그인은 위에서 LoginGate로 반환). 이메일 없는 소셜 로그인은
+  // '로그인하세요'가 아니라 회원 표기로 — 이름은 있는데 "로그인하세요"가 떠 로그아웃처럼 보이던 문제.
+  const sub = user?.email || "SPOTCHU 회원";
   const initial = (name.trim()[0] || "S").toUpperCase();
   return (
     <AppShell active="profile">
@@ -81,17 +83,21 @@ export default async function ProfilePage() {
         {/* Profile card */}
         <div className="relative z-10 -mt-14 mx-4 rounded-[20px] bg-white p-5 shadow-[shadow:var(--sh-elevated)] lg:mx-6">
           <div className="flex items-center gap-3.5">
-            <div className="relative flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-mint font-latin text-[24px] font-extrabold text-navy lg:h-20 lg:w-20 lg:text-[30px]">
-              {avatarUrl ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={cldThumb(avatarUrl, 160)}
-                  alt={name}
-                  className="h-full w-full object-cover"
-                />
-              ) : (
-                initial
-              )}
+            {/* 원형 클리핑(overflow-hidden)은 안쪽 아바타에만 — 스파클 배지는 바깥에 둬 우하단이
+                잘리지 않게(overflow-hidden이 -bottom/-right 배지를 자르던 문제). */}
+            <div className="relative h-16 w-16 shrink-0 lg:h-20 lg:w-20">
+              <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-mint font-latin text-[24px] font-extrabold text-navy lg:text-[30px]">
+                {avatarUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={cldThumb(avatarUrl, 160)}
+                    alt={name}
+                    className="h-full w-full object-cover"
+                  />
+                ) : (
+                  initial
+                )}
+              </div>
               <span className="absolute -bottom-0.5 -right-0.5 flex h-[22px] w-[22px] items-center justify-center rounded-full border-2 border-white bg-yellow text-navy">
                 <Sparkles size={11} strokeWidth={2.5} aria-hidden />
               </span>
