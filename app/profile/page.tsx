@@ -33,6 +33,9 @@ export default async function ProfilePage() {
     getCityProgress(),
     getBadgeCards(),
   ]);
+  // '진행률'은 실제로 시작한 도시(방문>0)만 — 방문 0인 도시 수십 개를 0/N으로 쭉 나열하면 지저분하다.
+  // 진행 중인 도시가 없으면 섹션을 숨기고(신규 유저) 하단 시작 유도 카드가 대신 뜬다.
+  const progressed = cityProgress.filter((c) => c.visited > 0);
   // 닉네임·아바타는 DB에서 읽는다(세션 JWT는 편집 즉시 반영 안 됨 → 업로드 후 revalidate로 최신화).
   const dbUser = user?.id
     ? await db.user.findUnique({
@@ -144,7 +147,7 @@ export default async function ProfilePage() {
         </div>
 
         {/* 게스트/무활동 시 하단이 비지 않도록 시작 유도 카드 */}
-        {cityProgress.length === 0 && badges.length === 0 && (
+        {progressed.length === 0 && badges.length === 0 && (
           <div className="mt-6 px-4 lg:mt-8 lg:px-6">
             <div className="flex flex-col items-center gap-3 rounded-[20px] border border-dashed border-[color:var(--line-strong)] bg-[color:var(--cream-2)] px-6 py-10 text-center">
               <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-coral shadow-[shadow:var(--sh-card)]">
@@ -170,10 +173,8 @@ export default async function ProfilePage() {
         )}
 
         <div className="mt-6 flex flex-col gap-6 px-5 lg:mt-8 lg:grid lg:grid-cols-2 lg:gap-8 lg:px-6">
-          {/* City progress — 다열 그리드 + 접기(스크롤 방지) */}
-          {cityProgress.length > 0 && (
-            <CityProgressList cities={cityProgress} />
-          )}
+          {/* City progress — 실제 진행 중인 도시만(다열 그리드 + 접기) */}
+          {progressed.length > 0 && <CityProgressList cities={progressed} />}
 
           {/* Badge peek */}
           {badges.length > 0 && (

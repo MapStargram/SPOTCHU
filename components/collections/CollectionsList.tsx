@@ -100,11 +100,13 @@ export function CollectionsList({
               className="overflow-hidden rounded-2xl bg-white shadow-[shadow:var(--sh-card)]"
             >
               <div
-                className="relative h-[120px] overflow-hidden lg:h-[150px]"
+                className="relative h-[120px] lg:h-[150px]"
                 style={{ background: col.coverGrad }}
               >
-                {/* 기본 썸네일: 그라데이션 위에 츄 캐릭터를 얹어 브랜디드 플레이스홀더로 */}
-                <div className="pointer-events-none absolute inset-0 flex items-end justify-center">
+                {/* 기본 썸네일: 그라데이션 위에 츄 캐릭터를 얹어 브랜디드 플레이스홀더로.
+                    클리핑은 커버가 아닌 이 래퍼가 담당 — 커버에 overflow-hidden을 주면 경계에 걸친
+                    잠금/링크 배지(-bottom)가 잘려 '이미지에 겹친' 것처럼 보였다(#collections). */}
+                <div className="pointer-events-none absolute inset-0 flex items-end justify-center overflow-hidden">
                   <Mascot
                     name={pickMascot(col.id)}
                     alt=""
