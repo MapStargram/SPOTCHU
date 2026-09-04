@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T12:07:31.132Z",
+  "generatedAt": "2026-09-04T12:41:40.085Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -5226,6 +5226,26 @@
       "source": "https://kobefilm.jp/works/data/001761.html"
     },
     {
+      "id": "kobe-hotel-monterey-fate-zero-e91c",
+      "title": "호텔 몬테레이 고베 - 키레이의 방 & 지하 제단 모델",
+      "city": "kobe",
+      "category": "anime",
+      "lat": 34.693638,
+      "lng": 135.189788,
+      "area": "산노미야, 고베 (下山手通, Kobe)",
+      "subject": "북이탈리아 로마네스크 양식의 채플과 지하 예배당 — 코토미네 키레이의 방 및 지하 제단 구도",
+      "tip": "JR 산노미야역에서 도보 약 6분. 이후 리뉴얼로 극중 그대로의 실내 디테일은 아니지만 채플·지하 공간의 아치 구조는 유지되고 있다. 내부는 숙박객 또는 예식 관련 방문 시에만 촬영 가능하니 사전 확인 필수.",
+      "workId": "fate-zero",
+      "scene": "6화 — 길가메시와 코토미네 키레이가 대화하는 지하 제단·성당 장면의 실제 배경",
+      "source": "https://old.seichimap.jp/spots/3619",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525595/spotchu/spots/g5zutbm7f16srdtjne6e.jpg",
+      "imageCredit": {
+        "author": "J o",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hotel_Monterey_Kobe_courtyard_20111122-001.jpg"
+      }
+    },
+    {
       "id": "kobe-hyogo-guest-house-hero-7b4c",
       "title": "효고현 공관 (영화 히어로 네우스트리아 공국 대사관)",
       "city": "kobe",
@@ -5255,6 +5275,26 @@
       "workId": "the-spy-wife",
       "scene": "남편 후쿠하라 유사쿠(福原優作)가 운영하는 무역회사 '후쿠하라 물산' 사옥으로 등장. 송년회에서 조카뻘 직원 후미오가 퇴사를 선언하는 장면이 이곳에서 촬영됐다.",
       "source": "https://kobe.1yen.jp/west/kato_kaiun.html"
+    },
+    {
+      "id": "kobe-kazamidori-yakata-fate-zero-7f2a",
+      "title": "풍향계의 집(가자미도리노야카타) - 토사카 저택 모델",
+      "city": "kobe",
+      "category": "anime",
+      "lat": 34.701414,
+      "lng": 135.189486,
+      "area": "기타노초, 고베 (北野町, Kobe)",
+      "subject": "붉은 벽돌 외관과 첨탑 위 풍향계 — 토키오미 토사카 저택 외관 구도",
+      "tip": "한신 고베산노미야역에서 도보 약 15분, 기타노 이진칸(異人館) 거리 언덕 위. 내진보강 공사로 내부가 한동안 휴관했던 이력이 있어 방문 전 개관 여부 확인 권장. 정문 앞 도로에서 외관 촬영은 상시 가능.",
+      "workId": "fate-zero",
+      "scene": "토키오미 토사카 저택(외관) 모델 — 극중 토사카가(家) 저택 장면의 실제 배경",
+      "source": "https://kobe-journal.com/archives/6388385388.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525598/spotchu/spots/gauoxmvwzsqyaandkwhy.jpg",
+      "imageCredit": {
+        "author": "Manish Prabhune",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Weathercock_House_Kobe_Kitano_Ijinkan_%E9%A2%A8%E8%A6%8B%E9%B6%8F%E3%81%AE%E9%A4%A8%EF%BC%88%E6%97%A7%E3%83%88%E3%83%BC%E3%83%9E%E3%82%B9%E4%BD%8F%E5%AE%85%EF%BC%89.jpg"
+      }
     },
     {
       "id": "kobe-kitano-tenman-kazamidori-viewpoint-8a3f",
@@ -5364,6 +5404,20 @@
         "license": "CC BY 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:Kobe_port_tower12s3200.jpg"
       }
+    },
+    {
+      "id": "kobe-uroko-no-ie-fate-zero-b3d8",
+      "title": "우로코노이에(비늘의 집) - 마토 저택 모델",
+      "city": "kobe",
+      "category": "anime",
+      "lat": 34.702961,
+      "lng": 135.190667,
+      "area": "기타노초, 고베 (北野町, Kobe)",
+      "subject": "약 4천 장의 천연 점판암 비늘무늬 외벽 — 마토 저택 외관 구도, 3층 전망갤러리에서 내려다보는 고베 시가지·항구 조망",
+      "tip": "기타노 이진칸 거리 도보권, 입장료가 있는 유료 전시관(성인 기준). 3층 전망 갤러리에서 바다 쪽을 향한 조망이 극중 고베(후유키) 시가지 배경과 유사해 함께 촬영하기 좋다.",
+      "workId": "fate-zero",
+      "scene": "마토 저택(외관) 모델 — 극중 마토 가문 관련 장면의 실제 배경",
+      "source": "https://kobe-journal.com/archives/6388385388.html"
     },
     {
       "id": "kyoto-chionin-otokozaka-steps-8d3f",
@@ -9502,6 +9556,29 @@
       "source": "http://movie-tourist.blogspot.com/2016/11/manhattan-1979.html"
     },
     {
+      "id": "okinawa-aeon-mall-rycom-harukana-5f91",
+      "title": "이온몰 오키나와 라이카무 (하루카나 리시브 성지)",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.314479,
+      "lng": 127.795518,
+      "area": "나카가미군 기타나카구스쿠손 / Kitanakagusuku, Nakagami, Okinawa",
+      "subject": "4화에서 하루카 일행이 수영복을 사러 쇼핑하는 몰 그랜드스퀘어·에스컬레이터 부근 구도",
+      "tip": "그랜드 스퀘어 3층 에스컬레이터 주변이 극중 구도와 유사합니다. 평일 오전처럼 한산한 시간대에 방문하면 촬영이 수월합니다.",
+      "lens": "24-50mm",
+      "time": "낮 시간대 (실내)",
+      "workId": "harukana-receive",
+      "scene": "4화 - 하루카 일행이 수영복을 사고 식사하는 쇼핑몰 장면",
+      "verified": "reported",
+      "source": "https://ajin-movie.com/harure/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525601/spotchu/spots/fqydyxcxv9wovojhbxk6.jpg",
+      "imageCredit": {
+        "author": "Kugel~commonswiki",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:AEON_Mall_Okinawa_Rycom_01.JPG"
+      }
+    },
+    {
       "id": "okinawa-azama-sunsan-beach-aquatope-7c2e",
       "title": "아자마 산산 비치 그네·정자 (아쿠아토프 성지)",
       "city": "okinawa",
@@ -9677,6 +9754,23 @@
       }
     },
     {
+      "id": "okinawa-futenmagu-shrine-harukana-d08c",
+      "title": "후텐마구 신사 (普天満宮, 하루카나 리시브 성지)",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.292889,
+      "lng": 127.777194,
+      "area": "기노완시 후텐마 / Futenma, Ginowan, Okinawa",
+      "subject": "8화에서 하루카 일행이 참배하러 가는 극중 '기노완 신사'의 실제 모델, 도리이와 참배로 구도",
+      "tip": "류큐팔사(琉球八社) 중 하나로 기노완시에서 유일한 신사입니다. 참배객 통행을 배려해 도리이 앞쪽에서 촬영하세요.",
+      "lens": "35-50mm",
+      "time": "오전 (참배객이 적은 시간)",
+      "workId": "harukana-receive",
+      "scene": "8화 - 하루카 일행이 참배하러 방문하는 '기노완 신사'(실제: 후텐마구) 장면",
+      "verified": "reported",
+      "source": "https://ajin-movie.com/harure/"
+    },
+    {
       "id": "okinawa-gushikawa-beach-harukana-8f15",
       "title": "具志川ビーチ海岸防波堤",
       "city": "okinawa",
@@ -9775,6 +9869,23 @@
       }
     },
     {
+      "id": "okinawa-naha-airport-arrival-lobby-harukana-c72e",
+      "title": "나하공항 국내선 도착로비 (하루카나 리시브 성지)",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.19333,
+      "lng": 127.63972,
+      "area": "나하시 카가미즈 / Kagamizu, Naha, Okinawa",
+      "subject": "1화에서 하루카가 오키나와에 처음 도착해 걸어 나오는 국내선 여객터미널 1층 도착 로비 구도",
+      "tip": "국내선 터미널 1층 도착 로비의 기둥·안내 표지판 배치를 극중 컷과 비교해보세요. 공항 시설이므로 다른 이용객 통행에 방해되지 않게 짧게 촬영하세요.",
+      "lens": "24-35mm",
+      "time": "낮 시간대 (실내)",
+      "workId": "harukana-receive",
+      "scene": "1화·8화 - 하루카가 오키나와에 도착하는 국내선 도착 로비 장면",
+      "verified": "reported",
+      "source": "https://ajin-movie.com/harure/"
+    },
+    {
       "id": "okinawa-nirai-kanai-tunnel-observatory-a82f",
       "title": "니라이카나이 다리 터널 전망대 S자 해안도로 뷰포인트",
       "city": "okinawa",
@@ -9794,6 +9905,23 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Sugarcane_field_near_Chinen-misaki_South_Beach_and_Nirai-Kanaibashi_Bridges.JPG"
       }
+    },
+    {
+      "id": "okinawa-nishihara-kirakira-beach-harukana-b3a4",
+      "title": "니시하라 키라키라 비치 (西原きらきらビーチ, 하루카나 리시브 성지)",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.211571,
+      "lng": 127.769866,
+      "area": "나카가미군 니시하라초 아가리자키 / Nishihara, Nakagami, Okinawa",
+      "subject": "비치발리볼 전국대회가 열리는 극중 메인 무대, 백사장·비치발리볼 코트와 바다 전경 구도",
+      "tip": "5·6·9~12화에 실명 그대로 반복 등장하는 대회장입니다. 코트와 방파제 각도를 맞춰 촬영해보세요. 일몰 무렵 빛이 좋습니다.",
+      "lens": "24-70mm",
+      "time": "일몰 전후",
+      "workId": "harukana-receive",
+      "scene": "5·6·9~12화 - 비치발리볼 전국대회가 열리는 메인 무대",
+      "verified": "reported",
+      "source": "https://okitabi.miraiprad.jp/2020/11/15/%E3%81%AF%E3%82%8B%E3%81%8B%E3%81%AA%E3%83%AC%E3%82%B7%E3%83%BC%E3%83%96%E3%80%80%E8%81%96%E5%9C%B0%E5%B7%A1%E7%A4%BC1%E3%80%80%E3%80%90%E9%82%A3%E8%A6%87%E7%A9%BA%E6%B8%AF%E3%83%BB%E8%A5%BF%E5%8E%9F/"
     },
     {
       "id": "okinawa-ocean-expo-water-stairs-jujutsu-7a91",
@@ -13160,6 +13288,23 @@
       }
     },
     {
+      "id": "seoul-bok-museum-vincenzo-9f3a",
+      "title": "한국은행 화폐박물관 (빈센조 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5618,
+      "lng": 126.9806,
+      "area": "중구 남대문로, 서울",
+      "subject": "1912년 준공된 르네상스 양식 석조 건물 정면 파사드 — 극중 대형 로펌 '법무법인 우상' 사옥으로 등장",
+      "tip": "정문 앞 광장 중앙에서 좌우 대칭 파사드가 한 프레임에 들어오도록 촬영. 화폐박물관은 월요일 휴관이니 방문 요일을 미리 확인하자.",
+      "lens": "24-35mm 광각",
+      "time": "맑은 날 오전",
+      "workId": "vincenzo",
+      "scene": "극 중 대형 로펌 법무법인 우상의 사옥 외관으로 여러 회차에 등장",
+      "verified": "official",
+      "source": "https://love.seoul.go.kr/asp/articleView.asp?intSeq=8046"
+    },
+    {
       "id": "seoul-bondong-stairs-past-lives-c81a",
       "title": "본동 계단길 (패스트 라이브즈 촬영지)",
       "city": "seoul",
@@ -13194,6 +13339,23 @@
         "license": "CC BY 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Cheongdam_Bridge_20260416_1.jpg"
       }
+    },
+    {
+      "id": "seoul-common-ground-vincenzo-4d7e",
+      "title": "커먼그라운드 (빈센조 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5414,
+      "lng": 127.0699,
+      "area": "광진구 자양동, 서울",
+      "subject": "파란색 컨테이너 200개를 쌓아 만든 커먼그라운드 외관 광장",
+      "tip": "건대입구역 6번 출구에서 도보 5분. 광장 중앙에서 컨테이너 파사드 전체가 담기도록 로우앵글로 촬영하면 좋고, 해 진 뒤 조명이 켜지면 색감이 더 살아난다.",
+      "lens": "16-35mm 광각",
+      "time": "해질 무렵~야간",
+      "workId": "vincenzo",
+      "scene": "5화 — 빈센조와 홍차영이 샌드위치와 커피를 앞에 두고 전략을 논의하는 장면",
+      "verified": "reported",
+      "source": "https://creatrip.com/en/blog/10847"
     },
     {
       "id": "seoul-d-lifestyle-kitchen-gwanghwamun-startup-c6a1",
@@ -13441,6 +13603,23 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Sungnyemun_Gate,_front,_2013.jpg"
       }
+    },
+    {
+      "id": "seoul-grandpa-factory-vincenzo-e58d",
+      "title": "카페 할아버지공장 (빈센조 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5443,
+      "lng": 127.0538,
+      "area": "성동구 성수동2가, 서울",
+      "subject": "폐염색공장을 개조한 갤러리형 카페의 중정(안뜰)과 나무 인테리어",
+      "tip": "중정 나무 테이블 자리가 극중 장면과 구도가 비슷하다. 평일 오픈 직후 방문하면 사람 없는 사진을 찍기 쉽다.",
+      "lens": "35-50mm",
+      "time": "오전 오픈 직후",
+      "workId": "vincenzo",
+      "scene": "4화 — 빈센조는 에스프레소 더블샷을, 홍차영은 아이스 아메리카노(극중 별칭 '아이스구정물')를 주문하며 대화하는 장면",
+      "verified": "reported",
+      "source": "https://creatrip.com/en/blog/10847"
     },
     {
       "id": "seoul-guro-police-station-man-from-nowhere-9f4b",
@@ -13920,6 +14099,29 @@
       }
     },
     {
+      "id": "seoul-saetgang-bridge-vincenzo-71ac",
+      "title": "여의도 샛강생태공원 문화다리 (빈센조 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5238,
+      "lng": 126.928,
+      "area": "영등포구 여의도동, 서울",
+      "subject": "하늘과 교차하며 직선으로 뻗은 보행교 '문화다리'",
+      "tip": "다리 중앙에서 직선 구조가 소실점을 이루도록 세로 구도로 촬영. 노을 질 때 하늘색과 다리 실루엣이 잘 어우러진다. 난간 안쪽에서 촬영하고 다른 보행자 통행을 막지 않도록 주의.",
+      "lens": "24-70mm",
+      "time": "노을 무렵",
+      "workId": "vincenzo",
+      "scene": "빈센조가 복잡한 심경으로 다리 위에 홀로 머무는 장면",
+      "verified": "official",
+      "source": "https://love.seoul.go.kr/asp/articleView.asp?intSeq=8046",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525604/spotchu/spots/r4g0xexyn9y0tmnsreyu.jpg",
+      "imageCredit": {
+        "author": "Sunghyun",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%EC%97%AC%EC%9D%98%EB%8F%84%ED%95%9C%EA%B0%95%EA%B3%B5%EC%9B%90%EC%83%9B%EA%B0%95%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90%EB%AC%B8%ED%99%94%EB%8B%A4%EB%A6%AC_13.jpg"
+      }
+    },
+    {
       "id": "seoul-sangam-dmc-avengers-age-of-ultron-3e6f",
       "title": "상암 DMC 월드컵북로·누리꿈스퀘어 (어벤져스2 촬영지)",
       "city": "seoul",
@@ -14110,6 +14312,23 @@
         "license": "CC BY 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Ttukseom_Hangang_Park_20260416_2.jpg"
       }
+    },
+    {
+      "id": "seoul-understand-avenue-vincenzo-2b6c",
+      "title": "언더스탠드에비뉴 (빈센조 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5443,
+      "lng": 127.0412,
+      "area": "성동구 성수동, 서울 (서울숲역 인근)",
+      "subject": "알록달록한 컨테이너 116개로 이루어진 복합문화공간 '아트스탠드' 외관",
+      "tip": "서울숲역 3번 출구에서 바로 연결된다. 컨테이너 사잇길에서 색색의 컨테이너가 겹쳐 보이도록 대각선 구도로 촬영하면 좋다.",
+      "lens": "24-70mm",
+      "time": "맑은 날 오후",
+      "workId": "vincenzo",
+      "scene": "3화 — 홍차영과 장준우가 아이스크림을 먹는 장면의 배경 '아트스탠드'",
+      "verified": "official",
+      "source": "https://love.seoul.go.kr/asp/articleView.asp?intSeq=8046"
     },
     {
       "id": "seoul-unhyeongung-yanggwan-goblin-9f2c",
@@ -14917,6 +15136,29 @@
       "source": "https://tokyofox.net/2012/04/25/australia-2012-pt-xi-the-matrix-filming-locations/"
     },
     {
+      "id": "taipei-228-peace-park-light-the-night-9c3d",
+      "title": "드라마 '화등초상' 얼얼바 평화기념공원",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.04273,
+      "lng": 121.51624,
+      "area": "중정구 카이다거란대로 3호 (二二八和平紀念公園)",
+      "subject": "황바이허와 헨리가 만나는 장면이 촬영된 공원 정문 산책로",
+      "tip": "카이다거란대로 쪽 정문에서 공원 안쪽 산책로를 배경으로 촬영하기 좋다. 관광객이 많은 낮 시간을 피해 이른 아침 방문을 추천합니다.",
+      "lens": "35–50mm",
+      "time": "이른 아침",
+      "workId": "light-the-night",
+      "scene": "황바이허(黃百合)와 헨리(Henry)의 만남 장면",
+      "verified": "reported",
+      "source": "https://travel.line.me/article/A1fuvs5i2a",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525628/spotchu/spots/mrngwmfywpfhx17njoe1.jpg",
+      "imageCredit": {
+        "author": "CEphoto, Uwe Aranas",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_228-Peace-Memorial-Park-02.jpg"
+      }
+    },
+    {
       "id": "taipei-beitou-station-turn-left-turn-right-7f2a",
       "title": "베이터우역 승강장 (턴 레프트 턴 라이트 촬영지)",
       "city": "taipei",
@@ -14980,6 +15222,29 @@
       }
     },
     {
+      "id": "taipei-howard-plaza-hotel-light-the-night-4f1a",
+      "title": "드라마 '화등초상' 포화대반점(하워드 플라자 호텔)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.03758,
+      "lng": 121.54312,
+      "area": "다안구 런아이로3단 160호 (포화대반점)",
+      "subject": "쑤 마마와 장한의 밀회 장면이 촬영된 호텔 로비·커피숍 외관",
+      "tip": "인애로(仁愛路) 대로변 정문에서 호텔 파사드를 촬영하기 좋다. 실제 영업 중인 특급호텔이므로 투숙객 동선을 방해하지 말고 촬영하세요.",
+      "lens": "24–35mm",
+      "time": "낮 시간대",
+      "workId": "light-the-night",
+      "scene": "쑤 마마(蘇媽媽)와 장한(江瀚)의 밀회·커피숍 장면",
+      "verified": "reported",
+      "source": "https://travel.line.me/article/A1fuvs5i2a",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525632/spotchu/spots/hduzrbkyzecbaukx6h7z.jpg",
+      "imageCredit": {
+        "author": "Tianmu peter",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Howard_Plaza_Hotel_Taipei_20120408c.jpg"
+      }
+    },
+    {
       "id": "taipei-huaxi-night-market-monga-e93f",
       "title": "화서가 관광야시장 (몽가 촬영지)",
       "city": "taipei",
@@ -15040,6 +15305,23 @@
       "scene": "중산구 条通의 히카리 주점 외관 촬영지",
       "verified": "reported",
       "source": "https://www.dramaqueen.com.tw/news/20211206/004.html"
+    },
+    {
+      "id": "taipei-litingxiang-bakery-light-the-night-2d6f",
+      "title": "드라마 '화등초상' 리팅샹 병포",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.06236,
+      "lng": 121.50885,
+      "area": "다퉁구 디화제1단 309호 (다차오터우역 인근)",
+      "subject": "쑤칭이가 우쯔웨이와 방문하는 시즌2 장면이 촬영된 100년 전통 병포의 붉은 벽돌 외관",
+      "tip": "디화제 대표 노포 병과점 외관이 포토스팟입니다. 다차오터우역(大橋頭站)에서 도보 5분, 영업시간(10:00–19:00) 내 방문하세요.",
+      "lens": "24–35mm",
+      "time": "오후",
+      "workId": "light-the-night",
+      "scene": "시즌2 쑤칭이(蘇慶儀)와 우쯔웨이(吳子維)의 방문 및 경찰 조우 장면",
+      "verified": "reported",
+      "source": "https://playing.ltn.com.tw/article/25761/1"
     },
     {
       "id": "taipei-monga-bopiliao-lane173-01",
@@ -15119,6 +15401,23 @@
       "source": "https://zh.wikipedia.org/zh-tw/%E8%89%8B%E8%88%BA_(%E9%9B%BB%E5%BD%B1)"
     },
     {
+      "id": "taipei-shidong-my-place-light-the-night-e58a",
+      "title": "드라마 '화등초상' 스둥 마이플레이스",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.06623,
+      "lng": 121.52363,
+      "area": "중산구 솽청제32항 (石洞 My Place)",
+      "subject": "판원청과 뤄 마마(로즈)의 당구·다트 장면이 촬영된 스포츠바 외관",
+      "tip": "솽청제 먹자골목 안쪽 노포 건물로, 야간 영업 중 네온 간판이 켜진 모습이 포토스팟입니다. 저녁 8시 이후 방문을 추천합니다.",
+      "lens": "24–35mm",
+      "time": "20:00 이후",
+      "workId": "light-the-night",
+      "scene": "판원청(潘文成)과 뤄 마마(羅媽媽/로즈)의 당구·다트 장면",
+      "verified": "reported",
+      "source": "https://travel.line.me/article/A1fuvs5i2a"
+    },
+    {
       "id": "taipei-sisinancun-lawn-101-c3d4",
       "title": "쓰쓰난춘(사사남촌) 잔디언덕 타이베이 101 뷰포인트",
       "city": "taipei",
@@ -15161,6 +15460,23 @@
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/83468718@N06/48091507701"
       }
+    },
+    {
+      "id": "taipei-tienchin-hotel-light-the-night-7b2e",
+      "title": "드라마 '화등초상' 톈진대반점",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.05102,
+      "lng": 121.52341,
+      "area": "중산구 톈진제 57호 (条通 지역)",
+      "subject": "쇼와시대 분위기가 남은 노포 여관 톈진대반점 외관 — 극중 호텔·화재 사고 장면 배경",
+      "tip": "톈진제 특유의 옛 간판이 남은 골목 외관을 촬영하기 좋다. 실제 영업 중인 숙소이므로 입구 촬영은 짧게 마치고 통행을 방해하지 마세요.",
+      "lens": "35mm",
+      "time": "저녁",
+      "workId": "light-the-night",
+      "scene": "쑤칭이(蘇慶儀)가 만취한 허위언(何予恩)을 데려오고 화재가 발생하는 시즌2 장면",
+      "verified": "reported",
+      "source": "https://playing.ltn.com.tw/article/25761/1"
     },
     {
       "id": "taipei-turn-left-turn-right-beitou-park-fountain-7d31",
@@ -15764,6 +16080,51 @@
         "author": "Wiiii",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Mitsui_Main_Building_2009.jpg"
+      }
+    },
+    {
+      "id": "tokyo-harumi-bridge-richman-poor-woman-4f7c",
+      "title": "하루미대교 (리치맨, 푸어우먼 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.6518,
+      "lng": 139.785,
+      "area": "주오구 하루미~고토구 도요스 사이, 도쿄 (Harumi–Toyosu, Tokyo)",
+      "subject": "하루미대교 보도에서 바라본 도요스·도쿄만 스카이라인 — 극중 차량·오토바이로 다리를 건너는 장면의 배경",
+      "tip": "다리 양쪽에 넓은 보도가 있어 도보 촬영이 안전하다. 차량 통행이 많으니 반드시 난간 안쪽 보도에서만 촬영하고 차도로 나가지 말 것. 해질 무렵 도요스 방면 스카이라인이 특히 아름답다.",
+      "lens": "24-35mm 광각",
+      "time": "노을~블루아워",
+      "workId": "richman-poor-woman",
+      "scene": "1화: 히나타 도루가 차로 다리를 건너는 장면 / 8화: 히나타와 나츠이 마코토가 오토바이로 다리를 함께 건너는 장면",
+      "source": "https://renote.net/articles/122085/page/6",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525698/spotchu/spots/u2mk0bu5fbvsjqbxkk9m.jpg",
+      "imageCredit": {
+        "author": "Hadge at Japanese Wikipedia",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Harumi-Ohashi.JPG"
+      }
+    },
+    {
+      "id": "tokyo-hatoyama-kaikan-hana-yori-dango-3d9c",
+      "title": "하토야마 회관 (꽃보다 남자 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.71389,
+      "lng": 139.73111,
+      "area": "Hatoyama Kaikan, Bunkyo",
+      "subject": "1924년 지어진 영국식 서양관과 장미정원 — 극중 산조 사쿠라코(리사)의 저택 외관으로 쓰인 실제 옛 총리 관저",
+      "tip": "일반에 공개된 기념관으로 실제 방문 가능. 5월·10월 장미 만개기에 서양관과 정원을 함께 담기 좋고, 실내는 촬영 제한 구역이 있으니 안내를 따를 것.",
+      "lens": "24-70mm",
+      "time": "장미 개화기 오전",
+      "workId": "hana-yori-dango",
+      "scene": "산조 사쿠라코(리사)가 사는 저택으로 등장하는 서양관·정원 장면",
+      "verified": "reported",
+      "source": "https://journey.oyoyo-m.com/hatoyama-kaika-rose/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525635/spotchu/spots/zpsvqwi63igz5qyzztwn.jpg",
+      "imageCredit": {
+        "author": "Lombroso",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Hatoyama_Hall_(entrance).jpg"
       }
     },
     {
@@ -16568,6 +16929,23 @@
       }
     },
     {
+      "id": "tokyo-seikei-university-hana-yori-dango-7f2a",
+      "title": "성계대학 케야키 가로수길 (꽃보다 남자 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.7115,
+      "lng": 139.5733,
+      "area": "Seikei University, Musashino",
+      "subject": "정문에서 본관으로 이어지는 케야키(느티나무) 가로수길 — 극중 명문 사립고 '에이토쿠 학원(英徳学園)' 외관으로 쓰인 실제 캠퍼스",
+      "tip": "수령 100년 넘은 느티나무가 늘어선 정문~본관 가로수길이 포인트. 신록이 우거지는 늦봄~초여름이나 단풍 드는 늦가을이 극중 등굣길 장면과 가장 비슷하다. 캠퍼스는 재학생 우선 시설이므로 정문·가로수길 주변에서 촬영할 것.",
+      "lens": "35mm",
+      "time": "오전",
+      "workId": "hana-yori-dango",
+      "scene": "F4가 리무진·고급차를 타고 등교하는 에이토쿠 학원 통학로 장면",
+      "verified": "official",
+      "source": "https://www.seikei.ac.jp/university/realife/other/18832.html"
+    },
+    {
       "id": "tokyo-sekido-castle-tenshudai-whisper-c81f",
       "title": "세키도성터 천수대",
       "city": "tokyo",
@@ -16877,6 +17255,29 @@
       }
     },
     {
+      "id": "tokyo-shiodome-italy-street-hana-yori-dango-4c8f",
+      "title": "시오도메 이탈리아 거리 (꽃보다 남자 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.661065,
+      "lng": 139.757777,
+      "area": "Shiodome Italia-gai, Minato",
+      "subject": "이탈리아 건축가가 감수한 파스텔톤 건물과 돌바닥 광장 — 극중 F4 멤버들이 몸싸움을 벌이는 장면의 배경",
+      "tip": "신바시역에서 도보 7분. 이국적인 돌바닥 광장과 골목이 특징이며 평일 점심시간엔 인근 직장인들로 붐비니 이른 오전이 한산하다.",
+      "lens": "35-50mm",
+      "time": "평일 오전",
+      "workId": "hana-yori-dango",
+      "scene": "F4 멤버들이 몸싸움(패싸움)을 벌이는 장면 촬영지",
+      "verified": "reported",
+      "source": "https://yasutabi.info/archives/2829",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525639/spotchu/spots/qsmrsgiihsbulf7qymgf.jpg",
+      "imageCredit": {
+        "author": "Abasaa",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Mitsui_Garden_Hotel_Shiodome_Italia-gai.JPG"
+      }
+    },
+    {
       "id": "tokyo-shoheibashi-bridge-love-live-b3f9",
       "title": "쇼헤이바시 다리 (러브라이브!)",
       "city": "tokyo",
@@ -16919,6 +17320,29 @@
         "author": "LERK",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Odakyu-electric-railway-OH08-Setagaya-daita-station-platform-20190420-101300.jpg"
+      }
+    },
+    {
+      "id": "tokyo-st-lukes-garden-hana-yori-dango-b6e1",
+      "title": "세인트루크스 가든 스카이레스토랑 (꽃보다 남자 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.66742,
+      "lng": 139.77867,
+      "area": "St. Luke's Garden, Chuo",
+      "subject": "스미다강변 트윈타워 47층 스카이 레스토랑 부근 — 도쿄도 공식 촬영지 데이터베이스에 등재된 실제 로케이션",
+      "tip": "도쿄도 로케이션박스(공식 촬영지 DB)에 등재된 검증 장소. 47층 레스토랑(현 RESTAURANT LUKE with SKY LOUNGE)에서 스미다강과 도심 전망을 함께 담을 수 있으며, 영업시간 내 이용객만 입장 가능하다.",
+      "lens": "24mm 이상 광각",
+      "time": "일몰~야경",
+      "workId": "hana-yori-dango",
+      "scene": "제8화 — 마키노 츠쿠시와 도묘지 츠카사가 옥상 레스토랑에서 대화하는 장면",
+      "verified": "official",
+      "source": "http://www.locationbox.metro.tokyo.lg.jp/location/list/235/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525642/spotchu/spots/gldzsfqlje0vzg08sod7.jpg",
+      "imageCredit": {
+        "author": "Kakidai",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:St_Luke%27s_Garden_2.JPG"
       }
     },
     {
@@ -17176,6 +17600,28 @@
       }
     },
     {
+      "id": "tokyo-toyaku-university-richman-poor-woman-c81a",
+      "title": "도쿄약과대학 하치오지 캠퍼스 (리치맨, 푸어우먼 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.6385,
+      "lng": 139.384,
+      "area": "하치오지시, 도쿄 (Hachioji, Tokyo)",
+      "subject": "캠퍼스 정문·교정 외관 — 극중 여주인공이 재학 중인 '도쿄대학 이학부'로 설정된 캠퍼스 촬영지",
+      "tip": "실제 재학생이 있는 대학이므로 정문 밖 공공도로에서만 촬영하고 교내 무단 진입은 삼갈 것. 평일 통학 시간대는 학생 통행이 많으니 배려가 필요하다.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "richman-poor-woman",
+      "scene": "여주인공 나츠이 마코토(이시하라 사토미)가 재학 중인 '도쿄대학 이학부'로 설정된 캠퍼스 장면 촬영지",
+      "source": "https://ja.wikipedia.org/wiki/%E3%83%AA%E3%83%83%E3%83%81%E3%83%9E%E3%83%B3%E3%80%81%E3%83%97%E3%82%A2%E3%82%A6%E3%83%BC%E3%83%9E%E3%83%B3",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525699/spotchu/spots/b52qdlfv8gyamtnnnyuw.jpg",
+      "imageCredit": {
+        "author": "Original uploader was Hykw-a4 at ja.wikipedia",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tokyoyakka.jpg"
+      }
+    },
+    {
       "id": "tokyo-tsukuda-kobashi-3gatsu-lion-1b6e",
       "title": "츠쿠다코바시 붉은 다리 (3월의 라이온 성지)",
       "city": "tokyo",
@@ -17241,6 +17687,29 @@
         "author": "Cabeza2000",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Ueno_Station_(Panda_Bridge_Entrance)_-_Dec_2019.jpg"
+      }
+    },
+    {
+      "id": "tokyo-ueno-zoo-hana-yori-dango-9a5d",
+      "title": "우에노 동물원 정문 (꽃보다 남자 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.7161,
+      "lng": 139.7712,
+      "area": "Ueno Zoo, Taito",
+      "subject": "1882년 개원한 일본 최초의 동물원 정문 일대 — 극중 더블데이트 장면 촬영지",
+      "tip": "우에노역 공원 출구에서 도보 5분. 아치형 정문 게이트와 매표소가 상징적인 포토 포인트이며 개원시간(9:30~17:00, 입장은 16:00까지) 내에만 촬영 가능.",
+      "lens": "35mm",
+      "time": "개장 직후 오전",
+      "workId": "hana-yori-dango",
+      "scene": "주인공들의 더블데이트 장면 촬영지",
+      "verified": "reported",
+      "source": "https://yasutabi.info/archives/2829",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788525645/spotchu/spots/nu6ytlksnsmkcofkptsq.jpg",
+      "imageCredit": {
+        "author": "Sahaib",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Entrance_of_Ueno_Zoo.jpg"
       }
     },
     {
@@ -18634,6 +19103,13 @@
       "progress": 0
     },
     {
+      "id": "fate-zero",
+      "title": "페이트/제로",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "hero-2015",
       "title": "히어로",
       "type": "영화",
@@ -18643,13 +19119,6 @@
     {
       "id": "suzume-no-tojimari",
       "title": "스즈메의 문단속",
-      "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "fate-zero",
-      "title": "페이트/제로",
       "type": "애니",
       "spotCount": 1,
       "progress": 0
@@ -19005,6 +19474,13 @@
       "progress": 0
     },
     {
+      "id": "harukana-receive",
+      "title": "하루카나 리시브",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "the-aquatope-on-white-sand",
       "title": "하얀 모래의 아쿠아토프",
       "type": "애니",
@@ -19029,13 +19505,6 @@
       "id": "okinawa-rendezvous",
       "title": "오키나와 랑데부",
       "type": "영화",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "harukana-receive",
-      "title": "はるかなレシーブ",
-      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
@@ -19327,6 +19796,13 @@
       "progress": 0
     },
     {
+      "id": "vincenzo",
+      "title": "빈센조",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "past-lives",
       "title": "패스트 라이브즈",
       "type": "영화",
@@ -19418,13 +19894,6 @@
       "progress": 0
     },
     {
-      "id": "vincenzo",
-      "title": "빈센조",
-      "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
       "id": "crazy-rich-asians",
       "title": "크레이지 리치 아시안",
       "type": "영화",
@@ -19467,6 +19936,13 @@
       "progress": 0
     },
     {
+      "id": "light-the-night",
+      "title": "화등초상",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "turn-left-turn-right",
       "title": "턴 레프트, 턴 라이트",
       "type": "영화",
@@ -19490,13 +19966,6 @@
     {
       "id": "in-time-with-you",
       "title": "아가능불회애니 (연애의 조건)",
-      "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "light-the-night",
-      "title": "화등초상",
       "type": "드라마",
       "spotCount": 1,
       "progress": 0
@@ -19614,6 +20083,13 @@
       "progress": 0
     },
     {
+      "id": "richman-poor-woman",
+      "title": "리치맨, 푸어우먼",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "the-girl-who-leapt-through-time",
       "title": "시간을 달리는 소녀",
       "type": "애니",
@@ -19694,13 +20170,6 @@
       "id": "bocchi-the-rock",
       "title": "봇치 더 록!",
       "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "richman-poor-woman",
-      "title": "리치맨, 푸어우먼",
-      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
