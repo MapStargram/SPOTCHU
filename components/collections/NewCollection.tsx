@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { loginHref } from "@/lib/login-url";
-import { Camera, Lock, Share2 } from "lucide-react";
+import { Lock, Share2 } from "lucide-react";
 import { createCollectionAction } from "@/lib/actions/mutations";
 
 // E4 · 새 컬렉션 생성. 저장 시 서버 액션으로 소유자 컬렉션 생성(기본 PRIVATE) — PRD §15.
@@ -54,18 +54,12 @@ export function NewCollection() {
           </button>
         </header>
 
-        {/* Cover picker */}
+        {/* 커버 미리보기(자동 그라디언트). 커버 사진 업로드는 미지원 — Collection엔 coverGrad만 있다.
+            예전엔 동작 안 하는 "커버 사진 선택" 버튼이 있어 눌러도 아무 일도 안 났다. */}
         <div
-          className="mt-6 flex h-[140px] items-end justify-end rounded-[20px] p-3.5"
+          className="mt-6 h-[140px] rounded-[20px]"
           style={{ background: "var(--grad-thumb)" }}
-        >
-          <button
-            aria-label="커버 사진 선택"
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy"
-          >
-            <Camera size={20} />
-          </button>
-        </div>
+        />
 
         {/* Fields */}
         <div className="mt-6 flex flex-col gap-5">
