@@ -4,6 +4,8 @@ import { AppShell } from "@/components/shell/AppShell";
 import { FeedView } from "@/components/explore/FeedView";
 import { SearchControls } from "@/components/explore/SearchControls";
 import { getCategories, getCities, getWorks, searchSpots } from "@/lib/data";
+import { getCurrentUser } from "@/lib/session";
+import { getSavedSpotIds } from "@/lib/actions/mutations";
 import { TRENDING } from "@/lib/mock";
 
 // C3 · 검색. 검색은 서버에서 수행(DB/목업은 lib/data façade가 전환).
@@ -77,14 +79,18 @@ async function SearchResults({
 }: {
   params: ReturnType<typeof toParams>;
 }) {
-  const spots = await searchSpots(params);
+  const [spots, user, savedIds] = await Promise.all([
+    searchSpots(params),
+    getCurrentUser(),
+    getSavedSpotIds(),
+  ]);
   if (spots.length === 0) return <EmptyState params={params} />;
   return (
     <section aria-label="검색 결과">
       <div className="mb-3 font-latin text-[11px] text-[color:var(--muted)]">
         {spots.length}개 결과
       </div>
-      <FeedView spots={spots} />
+      <FeedView spots={spots} loggedIn={!!user} initialSaved={savedIds} />
     </section>
   );
 }
