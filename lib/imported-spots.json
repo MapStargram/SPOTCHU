@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T11:22:15.097Z",
+  "generatedAt": "2026-09-04T12:07:31.132Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -430,6 +430,20 @@
       }
     },
     {
+      "id": "bali-blue-point-bay-resort-memories-of-bali-4b1e",
+      "title": "블루포인트 베이 리조트 (발리에서 생긴 일 촬영지)",
+      "city": "bali",
+      "category": "drama",
+      "lat": -8.8145,
+      "lng": 115.1125,
+      "area": "Pecatu, Uluwatu, Bali (페차투, 울루와투)",
+      "subject": "절벽 위 인피니티풀 너머로 인도양 하늘과 수평선이 맞닿아 보이는 구도",
+      "tip": "울루와뚜 사원에서 남쪽으로 약 3km, 차로 10분 거리. 외부 방문객은 레스토랑·라운지 이용을 통해 들어가는 편이 현실적이며, 해질녘 인피니티풀 너머 수평선이 가장 극적으로 보인다.",
+      "workId": "memories-of-bali",
+      "scene": "절벽 위 리조트 수영장에서 인도양을 바라보는 장면",
+      "source": "https://www.travie.com/news/articleView.html?idxno=488"
+    },
+    {
       "id": "bali-diamond-beach-staircase-a93e",
       "title": "다이아몬드 비치 절벽 계단 포토 스팟",
       "city": "bali",
@@ -448,6 +462,26 @@
         "author": "Stryn",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=89600855"
+      }
+    },
+    {
+      "id": "bali-hilton-nusa-dua-memories-of-bali-e60c",
+      "title": "힐튼 발리 리조트 (발리에서 생긴 일 촬영지)",
+      "city": "bali",
+      "category": "drama",
+      "lat": -8.8257,
+      "lng": 115.218,
+      "area": "Nusa Dua/Sawangan, Bali (누사두아·사왕안)",
+      "subject": "발리 전통 양식 정원과 야외 수영장, 돌 조각 장식이 어우러진 야경 구도",
+      "tip": "사왕안 해변을 마주한 절벽 위 리조트로, 투숙객 전용 구역이 많아 외부인은 레스토랑 예약 등으로 접근하는 편이 현실적이다. 조명이 켜지는 저녁 시간대 수영장 주변이 드라마 속 분위기와 가장 비슷하다.",
+      "workId": "memories-of-bali",
+      "scene": "정재민이 최영주에게 다가가는 야외 수영장 키스신 — 달빛 아래 조명이 켜진 수영장 시퀀스",
+      "source": "https://www.travie.com/news/articleView.html?idxno=488",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523585/spotchu/spots/nyimuuj10kjeh2tat2lv.jpg",
+      "imageCredit": {
+        "author": "GdML",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nusa_Dua_Bali.jpg"
       }
     },
     {
@@ -484,6 +518,26 @@
       "workId": "eat-pray-love",
       "scene": "리즈가 케툿 리에르에게 손금을 보고 조언을 구하는 장면(도입부 예언 및 결말부 재회)",
       "source": "https://www.balifilm.com/eat-pray-love/"
+    },
+    {
+      "id": "bali-kuta-beach-memories-of-bali-7f2a",
+      "title": "꾸따 해변 (발리에서 생긴 일 촬영지)",
+      "city": "bali",
+      "category": "drama",
+      "lat": -8.7193,
+      "lng": 115.1686,
+      "area": "Kuta, Bali (꾸따, 발리)",
+      "subject": "밤바다를 등지고 백사장에 앉아 있는 인물들의 구도 — 서쪽으로 트인 수평선과 파도가 프레임 배경",
+      "tip": "일몰 직후 꾸따 비치 워크 산책로에서 서쪽 바다를 향해 서면 노을과 서퍼들의 실루엣을 함께 담을 수 있다. 서핑 명소라 야간 조명이 적어 드라마 속 밤바다 분위기가 잘 살아난다.",
+      "workId": "memories-of-bali",
+      "scene": "극 초반부·결말부의 밤바다 장면 — 등장인물들이 꾸따 해변에서 술을 마시며 대화하는 오프닝·엔딩 시퀀스",
+      "source": "https://www.travie.com/news/articleView.html?idxno=488",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523587/spotchu/spots/arool3ypvieygjwvmsr6.jpg",
+      "imageCredit": {
+        "author": "Jakub Hałun",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kuta_Beach,_Bali,_20220825_1706_0864.jpg"
+      }
     },
     {
       "id": "bali-lahangan-sweet-mount-agung-treehouse-8f3a",
@@ -542,6 +596,26 @@
         "author": "Flickr user: yeowatzup https://www.flickr.com/photos/yeowatzup/",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Bali_Pura_Lempuyang_Luhur.jpg"
+      }
+    },
+    {
+      "id": "bali-sangeh-monkey-forest-memories-of-bali-c93d",
+      "title": "상게 원숭이 숲 (발리에서 생긴 일 촬영지)",
+      "city": "bali",
+      "category": "drama",
+      "lat": -8.4818,
+      "lng": 115.2068,
+      "area": "Sangeh, Abiansemal, Badung, Bali (상게, 바둥)",
+      "subject": "17세기 힌두 사원(푸라 부킷 사리) 유적을 감싼 야자수 숲길과 자유롭게 다니는 원숭이 무리",
+      "tip": "우붓에서 북서쪽으로 차로 약 30분. 이른 아침 방문 시 관광객이 적고 원숭이 활동이 활발해 자연스러운 숲길 구도를 담기 좋다. 소지품(안경·모자·음식)은 원숭이가 채갈 수 있으니 주의.",
+      "workId": "memories-of-bali",
+      "scene": "발리 여행 중 원숭이 숲을 둘러보는 장면",
+      "source": "https://www.indonesia.travel/us/en/travel-ideas/adventure/7-locations-from-your-favorite-korean-tv-series-to-visit-in-indonesia/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523591/spotchu/spots/viunfggjo8dndxh8rtud.jpg",
+      "imageCredit": {
+        "author": "Ciousmagz",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sangeh-cious.jpg"
       }
     },
     {
@@ -3988,6 +4062,29 @@
       }
     },
     {
+      "id": "hanoi-dong-xuan-market-tourist-guide-to-love-f203",
+      "title": "하노이 동쑤언 시장 - 사랑을 위한 여행 안내서 촬영지",
+      "city": "hanoi",
+      "category": "drama",
+      "lat": 21.0382,
+      "lng": 105.85,
+      "area": "Đồng Xuân Market 정문, 호안끼엠 구시가지",
+      "subject": "시장 정면의 프랑스 식민지풍 아치 건물 파사드를 담는 구도",
+      "tip": "위치는 근사치(구역 수준)입니다. 정문 앞 광장에서 촬영하고 상인·통행객 동선을 막지 마세요. 오전 시간대가 활기찬 시장 분위기를 담기 좋습니다.",
+      "lens": "24-35mm",
+      "time": "오전 시간대",
+      "workId": "a-tourists-guide-to-love",
+      "scene": "하노이 구시가지의 활기찬 시장 풍경을 보여주는 장면의 배경으로 등장",
+      "verified": "reported",
+      "source": "https://makeyourasia.com/news.html?catid=8&id=245&view=article",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523596/spotchu/spots/gnnnnicripqkzorij042.jpg",
+      "imageCredit": {
+        "author": "Juliana Ng from Singapore",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dong_Xuan_market.jpg"
+      }
+    },
+    {
       "id": "hanoi-hanoimoi-editorial-wall-b72c",
       "title": "하노이 하노이모이 신문사 벽 포토스팟",
       "city": "hanoi",
@@ -4001,6 +4098,29 @@
       "time": "이른 아침 또는 주말 보행자 시간",
       "verified": "reported",
       "source": "https://hanoimoi.vn/toa-soan-bao-hanoimoi-diem-check-in-quen-thuoc-tai-ho-guom.html"
+    },
+    {
+      "id": "hanoi-hoa-lo-prison-tourist-guide-to-love-c58d",
+      "title": "하노이 호아로 수용소 박물관 - 사랑을 위한 여행 안내서 촬영지",
+      "city": "hanoi",
+      "category": "drama",
+      "lat": 21.0254,
+      "lng": 105.8464,
+      "area": "Hỏa Lò Prison Museum 정문, 호안끼엠 (1 Hỏa Lò)",
+      "subject": "'MAISON CENTRALE' 문구가 새겨진 정문 아치 게이트를 담는 구도",
+      "tip": "위치는 근사치(구역 수준)입니다. 정문 앞 보도에서 아치 게이트 전체가 들어오게 촬영하세요. 이른 오전이 방문객이 적어 한산합니다.",
+      "lens": "24-35mm",
+      "time": "오전 이른 시간",
+      "workId": "a-tourists-guide-to-love",
+      "scene": "아만다가 하노이 시내 역사 유적지를 둘러보는 여정 중 방문하는 장소로 등장",
+      "verified": "reported",
+      "source": "https://makeyourasia.com/news.html?catid=8&id=245&view=article",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523600/spotchu/spots/r23qsjfzu7uyy5kulxlf.jpg",
+      "imageCredit": {
+        "author": "David McKelvey from Brisbane, Australia",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hoa_Lo_Prison_(Maison_Centrale),_Hanoi_(6923115824).jpg"
+      }
     },
     {
       "id": "hanoi-khue-van-cac-courtyard-tourist-guide-to-love-a71e",
@@ -4018,6 +4138,29 @@
       "scene": "하노이 문묘와 규문각이 등장하는 장면으로 제보됨; 정확한 프레임 대조는 관리자 검토 필요",
       "verified": "reported",
       "source": "https://vietnamtourism.gov.vn/post/48906"
+    },
+    {
+      "id": "hanoi-long-bien-bridge-tourist-guide-to-love-e17a",
+      "title": "하노이 롱비엔 다리 - 사랑을 위한 여행 안내서 촬영지",
+      "city": "hanoi",
+      "category": "drama",
+      "lat": 21.0406,
+      "lng": 105.8566,
+      "area": "Long Biên Bridge 서쪽 보행로, 호안끼엠-롱비엔 경계 (홍강)",
+      "subject": "다리의 철골 트러스 구조와 홍강을 배경으로 보행로에서 담는 구도",
+      "tip": "위치는 근사치(구역 수준)입니다. 다리 양옆 보행·오토바이 통행로에서만 촬영하고 가운데 기찻길에는 절대 들어가지 마세요. 일몰 전후 철골 실루엣이 아름답습니다.",
+      "lens": "24-70mm",
+      "time": "일몰 전후",
+      "workId": "a-tourists-guide-to-love",
+      "scene": "여행 막바지, 두 사람이 롱비엔 다리 위를 함께 걸으며 감정을 나누는 로맨틱한 장면",
+      "verified": "reported",
+      "source": "https://absoluteasiatravel.com/travel-guide/vietnam-film-locations-a-tourists-guide-to-love/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523602/spotchu/spots/h221lcbu2v31klxc9jde.jpg",
+      "imageCredit": {
+        "author": "Quangpraha",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Long-bien-bridge-3371617.jpg"
+      }
     },
     {
       "id": "hanoi-opera-house-indochine-viewpoint-01",
@@ -4077,6 +4220,23 @@
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Centre_gate_of_Long_Bien_Railway_Station.jpg"
       }
+    },
+    {
+      "id": "hanoi-thang-long-water-puppet-theatre-tourist-guide-to-love-b6f2",
+      "title": "하노이 탕롱 수상인형극장 - 사랑을 위한 여행 안내서 촬영지",
+      "city": "hanoi",
+      "category": "drama",
+      "lat": 21.03168,
+      "lng": 105.85335,
+      "area": "Thang Long Water Puppet Theatre, 57B Đinh Tiên Hoàng, Hoàn Kiếm (호안끼엠 호수 동편)",
+      "subject": "극장 정문 앞 광장에서 건물 파사드와 매표소 간판을 담는 구도",
+      "tip": "위치는 근사치(구역 수준)입니다. 공연 시작 직전 매표소 앞이 붐비니 그 전후 한산한 시간에 촬영하세요. 극장 내부·공연 중 촬영은 매표소 안내를 따르세요.",
+      "lens": "24-35mm",
+      "time": "공연 시작 전후, 저녁 조명 시간대",
+      "workId": "a-tourists-guide-to-love",
+      "scene": "전 남자친구 존이 깜짝 등장해 아만다를 되찾으려 하면서, 아만다·신·존 세 사람이 어색하게 나란히 앉아 수상인형극 공연을 관람하는 장면",
+      "verified": "reported",
+      "source": "https://www.netflix.com/tudum/articles/a-tourist-guide-to-love-filming-locations-vietnam"
     },
     {
       "id": "hongkong-california-restaurant-daguilar-8f4b",
@@ -5035,6 +5195,20 @@
       "source": "https://www.visitjeju.net"
     },
     {
+      "id": "kobe-customs-house-wife-of-a-spy-7d2a",
+      "title": "고베 세관 (스파이의 아내 촬영지)",
+      "city": "kobe",
+      "category": "drama",
+      "lat": 34.6832365,
+      "lng": 135.197554,
+      "area": "주오구 신코초, 고베항 (Chuo-ku, Shinko-cho, Kobe Port)",
+      "subject": "1927년 준공된 옛 청사 부분을 보존한 고베 세관 건물 외관. 항만 부두 도로에서 보이는 정면 파사드",
+      "tip": "신코 부두 공용 도로에서 자유롭게 외관 촬영이 가능한 실제 관공서 건물이다. 평일 오전 역광을 피해 도로 맞은편에서 찍으면 청사 전체가 잘 담긴다.",
+      "workId": "the-spy-wife",
+      "scene": "주인공 사토코(聡子)가 결심을 품고 찾아가는 '고베 헌병분대' 외관으로 등장. 헌병 대원 츠모리 타이지(津森泰治)가 사토코를 심문하는 시퀀스의 도입부가 이 건물 외관으로 촬영됐다(내부 장면은 다른 지역에서 별도 촬영).",
+      "source": "https://jl-db.nfaj.go.jp/location/280100015/"
+    },
+    {
       "id": "kobe-guggenheim-house-wife-of-a-spy-e18a",
       "title": "구 구겐하임 저택 (스파이의 아내 후쿠하라 저택)",
       "city": "kobe",
@@ -5067,6 +5241,20 @@
       "scene": "효고현 공관이 네우스트리아 공국 대사관으로 등장",
       "verified": "reported",
       "source": "https://web.pref.hyogo.lg.jp/kk02/r7koukan.html"
+    },
+    {
+      "id": "kobe-kato-kaiun-building-wife-of-a-spy-b3f1",
+      "title": "구 가토카이운 본사빌딩 (스파이의 아내 촬영지)",
+      "city": "kobe",
+      "category": "drama",
+      "lat": 34.669322,
+      "lng": 135.1774,
+      "area": "효고구 시마가미초, 고베 (Hyogo-ku, Shimagami-cho, Kobe)",
+      "subject": "쇼와 초기(1930년대)에 지어진 옛 해운회사 사옥 외관. 타일 장식이 남은 레트로모던 건물 정면",
+      "tip": "지금도 실제 건물이 그대로 남아 있어 앞 도로에서 외관 촬영이 가능하다. 사무실로 쓰이지 않는 빈 건물이므로 사유지 경계(출입구) 안쪽으로 들어가지 말고 인도에서 촬영할 것.",
+      "workId": "the-spy-wife",
+      "scene": "남편 후쿠하라 유사쿠(福原優作)가 운영하는 무역회사 '후쿠하라 물산' 사옥으로 등장. 송년회에서 조카뻘 직원 후미오가 퇴사를 선언하는 장면이 이곳에서 촬영됐다.",
+      "source": "https://kobe.1yen.jp/west/kato_kaiun.html"
     },
     {
       "id": "kobe-kitano-tenman-kazamidori-viewpoint-8a3f",
@@ -9314,6 +9502,26 @@
       "source": "http://movie-tourist.blogspot.com/2016/11/manhattan-1979.html"
     },
     {
+      "id": "okinawa-azama-sunsan-beach-aquatope-7c2e",
+      "title": "아자마 산산 비치 그네·정자 (아쿠아토프 성지)",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.176675,
+      "lng": 127.8290565,
+      "area": "난조시 지넨 아자마, 오키나와 (南城市知念安座真)",
+      "subject": "가마가마 수족관의 실제 모델이 된 해변 부지 — 그네와 붉은 기와 지붕 정자",
+      "tip": "구다카섬행 페리가 뜨는 아자마 항 바로 남쪽 해변. 주차장 인근 그네와 정자가 오프닝 영상 배경과 같은 구도다. 같은 해변 안에서도 '태양의 종' 무대 쪽은 다른 영화의 촬영지이니 혼동하지 말 것.",
+      "workId": "the-aquatope-on-white-sand",
+      "scene": "1화 오프닝 — 그네가 있는 해변, 가마가마 수족관 부지의 실제 배경으로 알려짐",
+      "source": "https://www.anitabi.jp/works/132",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523612/spotchu/spots/ighg9otrepg5ryu6ppgs.jpg",
+      "imageCredit": {
+        "author": "Kugel~commonswiki",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Azama_Port_202401.jpg"
+      }
+    },
+    {
       "id": "okinawa-azama-sunsun-checkitout-d87e",
       "title": "아자마 산산 비치 해변 무대 & '태양의 종' (영화 <체케랏초!!> 클라이맥스 촬영지)",
       "city": "okinawa",
@@ -9415,6 +9623,60 @@
       }
     },
     {
+      "id": "okinawa-chinen-marine-leisure-aquatope-9d5b",
+      "title": "지넨 카이요 레저센터 (아쿠아토프 성지)",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.174668,
+      "lng": 127.829704,
+      "area": "난조시 지넨 구테켄, 오키나와 (南城市知念久手堅)",
+      "subject": "무인도행 배편 선착장과 버스 정류장",
+      "tip": "지넨곶공원에서 북쪽으로 약 800m 거리의 무인도 해수욕 선착장 겸 레저센터다. 버스 정류장 표지판을 함께 프레임에 넣으면 극 중 장면과 비슷한 구도가 나온다.",
+      "workId": "the-aquatope-on-white-sand",
+      "scene": "5화(어머니의 방문) — 후카가 버스 정류장에서 기다리다 가마가마 수족관으로 급히 돌아가는 장면",
+      "source": "https://www.wayfarerdaves.com/white-sand-and-blue-sea-chinen-village-in-aquatope-on-white-sand/"
+    },
+    {
+      "id": "okinawa-churaumi-aquarium-aquatope-a03c",
+      "title": "오키나와 츄라우미 수족관 (아쿠아토프 성지)",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.694482,
+      "lng": 127.878134,
+      "area": "구니가미군 모토부초, 오키나와 (国頭郡本部町)",
+      "subject": "초대형 수조와 고래상어",
+      "tip": "난조 시내에서 60km 이상 떨어진 오키나와 북부 모토부 반도라 별도 일정으로 묶어 방문한다. 2쿨 후반 무대인 대형 수족관 '팅가라'의 초대형 수조·고래상어 설계에 영감을 준 것으로 알려진 실존 수족관이다.",
+      "workId": "the-aquatope-on-white-sand",
+      "scene": "2쿨 후반 무대 대형 수족관 '팅가라'의 초대형 수조·고래상어 디자인에 영감을 준 실존 수족관으로 소개됨 (단정적 '모델'이 아닌 참고·영감 관계)",
+      "source": "https://rica0867.livedoor.blog/archives/30998495.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523613/spotchu/spots/wdftnebusxbxkcu2rsth.jpg",
+      "imageCredit": {
+        "author": "Daryan Shamkhali daryan",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Okinawa_Churaumi_Aquarium,_Motobu-ch%C5%8D,_Japan_(Unsplash).jpg"
+      }
+    },
+    {
+      "id": "okinawa-dmm-kariyushi-aquarium-aquatope-e91d",
+      "title": "DMM 카리유시 수족관 (아쿠아토프 성지)",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.156425,
+      "lng": 127.650461,
+      "area": "도미구스쿠시 도요사키, 오키나와 (豊見城市豊崎)",
+      "subject": "가마가마 수족관 실내 전시 디자인에 영향을 준 실제 수족관 수조",
+      "tip": "나하공항에서 차로 약 30분, 이아스 오키나와 도요사키 쇼핑몰 안에 있다. 제작진 취재 협력 수족관 중 하나로, 실내 수조·전시 연출을 보면 극 중 가마가마 수족관과 닮은 구도를 찾을 수 있다.",
+      "workId": "the-aquatope-on-white-sand",
+      "scene": "가마가마 수족관 실내 전시 디자인의 모티프 — 제작진 취재 협력 수족관 중 하나로 소개됨",
+      "source": "https://ja.wikipedia.org/wiki/%E7%99%BD%E3%81%84%E7%A0%82%E3%81%AE%E3%82%A2%E3%82%AF%E3%82%A2%E3%83%88%E3%83%BC%E3%83%97",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523616/spotchu/spots/rswmgftz4b4wqzffxunr.jpg",
+      "imageCredit": {
+        "author": "Kugel~commonswiki",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:DMM_Kariyushi_Aquarium_202006.jpg"
+      }
+    },
+    {
       "id": "okinawa-gushikawa-beach-harukana-8f15",
       "title": "具志川ビーチ海岸防波堤",
       "city": "okinawa",
@@ -9430,6 +9692,20 @@
       "scene": "Gushikawa Beach coastal scene association",
       "verified": "reported",
       "source": "https://ani-tabi.com/03042019-8625.html"
+    },
+    {
+      "id": "okinawa-hyakuna-beach-aquatope-4f6b",
+      "title": "햐쿠나 비치 (아쿠아토프 성지)",
+      "city": "okinawa",
+      "category": "anime",
+      "lat": 26.133483,
+      "lng": 127.788708,
+      "area": "난조시 다마구스쿠 햐쿠나, 오키나와 (南城市玉城百名)",
+      "subject": "조개껍질이 흩어진 하얀 모래 해변",
+      "tip": "류큐 개벽 신화 속 상륙지로 알려진 신성한 해변이니 예의를 지켜 촬영한다. 썰물 때 물가 쪽에서 낮게 찍으면 극 중 장면과 비슷한 구도가 나온다.",
+      "workId": "the-aquatope-on-white-sand",
+      "scene": "1화 — 후카가 조개껍질에 둘러싸인 채 해변에서 눈을 뜨는 장면",
+      "source": "https://tboffice.hateblo.jp/entry/aquatope-hyakuna-beach"
     },
     {
       "id": "okinawa-kouri-bridge-south-approach-b43e",
@@ -14261,6 +14537,27 @@
       }
     },
     {
+      "id": "sydney-argyle-place-mission-impossible-2-b81e",
+      "title": "아가일 플레이스 조지안 테라스 거리 (미션 임파서블 2 촬영지)",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.8583,
+      "lng": 151.204,
+      "area": "밀러스 포인트/더 록스, 시드니 (Millers Point / The Rocks, Sydney)",
+      "subject": "헤리티지 조지안 양식 테라스 하우스가 늘어선 아가일 플레이스 거리와 소공원",
+      "tip": "공공 거리·공원 구역이라 자유롭게 촬영 가능. 테라스하우스 파사드를 배경으로 인물을 두면 영화 속 '세비야 축제' 장면과 비슷한 구도가 나온다.",
+      "workId": "mission-impossible-2",
+      "scene": "에단 헌트가 니아를 처음 만나는 '세비야' 거리 축제 장면 — 실제 촬영은 시드니 더 록스에서 먼지·행렬 세트로 연출",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/m/Mission-Impossible-2.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523623/spotchu/spots/pz7lkhhkbkmetpqprhug.jpg",
+      "imageCredit": {
+        "author": "Rangasyd",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Argyle_Place,_Millers_Point_08.jpg"
+      }
+    },
+    {
       "id": "sydney-bondi-icebergs-overlook-7b3f",
       "title": "본다이 아이스버그 오션 풀 노츠 애비뉴 전망대",
       "city": "sydney",
@@ -14280,6 +14577,42 @@
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Bondi_Icebergs_pools.jpg"
       }
+    },
+    {
+      "id": "sydney-boomerang-mansion-mission-impossible-2-7c4a",
+      "title": "부메랑 저택(Boomerang) 외관 (미션 임파서블 2 촬영지)",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.8702,
+      "lng": 151.2282,
+      "area": "엘리자베스 베이, 시드니 (Elizabeth Bay, Sydney)",
+      "subject": "빌야드 애비뉴 42번지, 스페인 미션 양식 헤리티지 저택 '부메랑'의 진입로·외벽 구도",
+      "tip": "사유지이므로 정문 안쪽으로 들어가지 말고 빌야드 애비뉴 공공 도로변에서만 촬영. 오후 햇살에 스페인풍 아치와 붉은 기와지붕이 도드라진다.",
+      "workId": "mission-impossible-2",
+      "scene": "극중 '세비야(스페인)'로 설정된 저택 진입로 장면 — 실제 촬영지는 시드니 엘리자베스 베이",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Boomerang,_Elizabeth_Bay",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523626/spotchu/spots/x5al8psv6a0nwgdzbk43.jpg",
+      "imageCredit": {
+        "author": "Clytemnestra (talk) 08:54, 18 January 2010 (UTC)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Boomerang113.JPG"
+      }
+    },
+    {
+      "id": "sydney-boora-point-mission-impossible-2-3f9d",
+      "title": "보라 포인트 해안 절벽 (미션 임파서블 2 오토바이 추격전 촬영지)",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.9634,
+      "lng": 151.2646,
+      "area": "말라바, 시드니 (Malabar Headland National Park, Sydney)",
+      "subject": "영화 클라이맥스 오토바이 정면충돌 추격전이 펼쳐진 해안 절벽 도로·지형",
+      "tip": "말라바 헤드랜드 국립공원 내 보라 포인트 워킹트랙으로 접근. 절벽 가장자리 안전펜스 밖으로 나가지 말 것 — 해질녘 역광 실루엣 촬영 추천.",
+      "workId": "mission-impossible-2",
+      "scene": "에단 헌트와 숀 앰브로스의 오토바이 정면충돌 클라이맥스 추격전",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/m/Mission-Impossible-2.php"
     },
     {
       "id": "sydney-bradleys-head-amphitheatre-viewpoint-b42c",
@@ -14340,6 +14673,27 @@
         "author": "Collywolly",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Martin_Place,_Sydney_in_2019_showing_building_work.jpg"
+      }
+    },
+    {
+      "id": "sydney-governor-phillip-tower-mission-impossible-2-e62f",
+      "title": "가버너 필립 타워 (미션 임파서블 2 바이오사이트 본사 촬영지)",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.863859,
+      "lng": 151.211202,
+      "area": "시드니 CBD 패러 플레이스 (1 Farrer Place, Sydney CBD)",
+      "subject": "극중 가상 제약회사 '바이오사이트(Biocyte)' 본사로 등장한 62층 오피스 타워 외관",
+      "tip": "타워 앞 패러 플레이스 공공 광장에서 로우앵글로 첨탑까지 담을 수 있다. 평일 업무시간대는 유동인구가 많아 이른 아침 방문 추천.",
+      "workId": "mission-impossible-2",
+      "scene": "바이오사이트 제약 본사 건물 외관 장면(작중 전반에 반복 등장)",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Governor_Phillip_Tower",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523631/spotchu/spots/wbpeiah5awgjikjjggjk.jpg",
+      "imageCredit": {
+        "author": "Kgbo",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Quay_Quarter_Tower,_Governor_Phillip_Tower,_Sydney,_2023,_05.jpg"
       }
     },
     {
@@ -14481,6 +14835,27 @@
         "author": "Collywolly",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Wales_House,_64-66_Pitt_Street,_Sydney_04.jpg"
+      }
+    },
+    {
+      "id": "sydney-randwick-racecourse-mission-impossible-2-9a4c",
+      "title": "로열 랜드윅 경마장 (미션 임파서블 2 촬영지)",
+      "city": "sydney",
+      "category": "drama",
+      "lat": -33.91083,
+      "lng": 151.23028,
+      "area": "랜드윅, 시드니 동부 (Alison Road, Randwick, Sydney)",
+      "subject": "니아 노르도프홀이 경마장에서 정보가 담긴 디지털 카메라를 훔치는 장면이 촬영된 경마장 관람석·트랙 일대",
+      "tip": "경마 개최일에는 입장권 구매 후 관람석에서 촬영 가능. 비경기일에는 앨리슨 로드 쪽 정문 외관만 촬영 가능.",
+      "workId": "mission-impossible-2",
+      "scene": "니아가 경마장에서 디지털 카메라 속 정보를 빼내는 장면",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/m/Mission-Impossible-2.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523633/spotchu/spots/mdg1cetttfeq9ufwx125.jpg",
+      "imageCredit": {
+        "author": "Sardaka",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Randwick_Racecourse_001.jpg"
       }
     },
     {
@@ -14934,6 +15309,26 @@
         "author": "MaedaAkihiko",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Akabanebashi-STA_Platform1-2.jpg"
+      }
+    },
+    {
+      "id": "tokyo-akihabara-bigapple-wolverine-b4e6",
+      "title": "빅애플 파친코 투모로우빌딩 (더 울버린 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.697335,
+      "lng": 139.771475,
+      "area": "지요다구 소토칸다(아키하바라), 도쿄",
+      "subject": "로건과 마리코가 몸을 피하는 파친코점 '투모로우빌딩' 외관",
+      "tip": "지금도 영업 중인 파친코·슬롯 매장 건물 외관을 아키하바라 전자상가 거리에서 촬영할 수 있다. 매장 내부는 촬영이 금지되어 있으니 외관 위주로 담자.",
+      "workId": "the-wolverine",
+      "scene": "영화 37분경, 로건과 마리코가 야쿠자를 피해 파친코점으로 숨어드는 장면",
+      "source": "https://tokyofox.net/2017/02/22/the-wolverine-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523637/spotchu/spots/ydre8wnpt3nss6kwtsjp.jpg",
+      "imageCredit": {
+        "author": "Vantey",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Akihabara_Chuo-dori_Crossing_SW_20110925.jpg"
       }
     },
     {
@@ -15683,6 +16078,27 @@
       }
     },
     {
+      "id": "tokyo-kabukicho-yasukunidori-wolverine-7f2a",
+      "title": "가부키초 이치반가이 아치 (더 울버린 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.6957,
+      "lng": 139.7005,
+      "area": "신주쿠구 가부키초, 도쿄",
+      "subject": "야스쿠니도리와 가부키초 이치반가이 아치가 만드는 네온 야경 거리",
+      "tip": "영화 초반 도쿄를 소개하는 야경 장면이 촬영된 야스쿠니도리 거리로, 시부야 스크램블 교차로와 함께 도쿄 네온을 상징하는 클래식 구도다. 밤에 아치 앞 인도에서 찍으면 네온사인이 가장 선명하게 담긴다.",
+      "time": "야간",
+      "workId": "the-wolverine",
+      "scene": "영화 17분경, 도쿄를 소개하는 야스쿠니도리 네온 거리 장면",
+      "source": "https://tokyofox.net/2017/02/22/the-wolverine-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523641/spotchu/spots/rhrygd8x265ekgbweksw.jpg",
+      "imageCredit": {
+        "author": "Asanagi",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kabukicho_Ichibangai_entrance_2021-05-19.jpg"
+      }
+    },
+    {
       "id": "tokyo-kachidoki-bridge-tokyo-godfathers-e29c",
       "title": "가치도키바시 다리 (도쿄 갓파더스 성지)",
       "city": "tokyo",
@@ -15784,6 +16200,26 @@
         "author": "*_*",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/22539273@N00/11773551823"
+      }
+    },
+    {
+      "id": "tokyo-manseibashi-wolverine-3d8f",
+      "title": "만세이바시 간다강 다리 (더 울버린 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.697139,
+      "lng": 139.770972,
+      "area": "지요다구 간다스다초, 도쿄",
+      "subject": "간다강을 가로지르는 만세이바시와 아키하바라 방향 풍경",
+      "tip": "로건과 마리코가 파친코점을 나와 식당으로 향하며 건너는 다리 장면이다. 다리 위 인도에서 간다강과 아키하바라 방향을 함께 담을 수 있다.",
+      "workId": "the-wolverine",
+      "scene": "영화 38분경, 간다강 다리를 건너 식당으로 향하는 장면",
+      "source": "https://tokyofox.net/2017/02/22/the-wolverine-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523643/spotchu/spots/bmh3zb4fixxan8nwzotq.jpg",
+      "imageCredit": {
+        "author": "superidoljp from Tokyo, Japan",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Manseibashi_Viaduct_%26_JR_Kanda_Manseibashi_Building_at_night_(2014-09-28_18.17.09_by_superidoljp).jpg"
       }
     },
     {
@@ -16588,6 +17024,26 @@
       }
     },
     {
+      "id": "tokyo-takadanobaba-wolverine-c91d",
+      "title": "다카다노바바역 (더 울버린 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.713586,
+      "lng": 139.704343,
+      "area": "신주쿠구 다카다노바바, 도쿄",
+      "subject": "다카다노바바역 앞 거리와 인접 건물군",
+      "tip": "로건이 화살 공격을 받는 옥상 추격 장면이 역 인근 건물 옥상에서 촬영됐다. 옥상은 출입할 수 없으니 역 앞 광장(와세다 출구)에서 주변 건물을 배경으로 촬영하자.",
+      "workId": "the-wolverine",
+      "scene": "영화 37분경, 다카다노바바 인근 건물 옥상에서 벌어지는 활 공격·추격 장면",
+      "source": "https://tokyofox.net/2017/02/22/the-wolverine-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523647/spotchu/spots/icbpl1eaa6pdtoum9ur5.jpg",
+      "imageCredit": {
+        "author": "Asanagi",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Takadanobaba_Station_Waseda_entrance_2024-09-05.jpg"
+      }
+    },
+    {
       "id": "tokyo-takemura-wagashi-love-live-c4d1",
       "title": "다케무라 화과자점 (러브라이브! 호무라 모델)",
       "city": "tokyo",
@@ -16766,6 +17222,26 @@
       "workId": "march-comes-in-like-a-lion",
       "scene": "스미다강변 배경 다리로 반복 등장. 단행본 1권 마지막 장면에서 중앙대교 위쪽에서 이 다리 방향을 바라보는 구도로 나온다",
       "source": "https://pocari.hatenablog.com/entry/20190707/seiti03"
+    },
+    {
+      "id": "tokyo-ueno-jewelrybridge-wolverine-a02c",
+      "title": "주얼리 브리지 우에노역 (더 울버린 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.712918,
+      "lng": 139.77674,
+      "area": "다이토구 우에노, 도쿄",
+      "subject": "우에노역 중앙 개찰구와 연결된 보행 데크 '주얼리 브리지'",
+      "tip": "마리코가 로건에게 작별 인사를 전하는 장면이 촬영된 보행 데크다. 해와 달을 상징하는 대형 조형물을 함께 프레임에 넣으면 영화 속 구도와 비슷하게 담긴다.",
+      "workId": "the-wolverine",
+      "scene": "영화 38분경, 신칸센 탑승 전 마리코가 로건에게 작별을 고하는 장면",
+      "source": "https://blog.japanwondertravel.com/hollywood-movie-locations-in-japan-18819",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788523649/spotchu/spots/simp9usckclltxjcapej.jpg",
+      "imageCredit": {
+        "author": "Cabeza2000",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ueno_Station_(Panda_Bridge_Entrance)_-_Dec_2019.jpg"
+      }
     },
     {
       "id": "tokyo-yotsuya-station-crossing-your-name-b71d",
@@ -17710,16 +18186,16 @@
       "progress": 0
     },
     {
-      "id": "eat-pray-love",
-      "title": "먹고 기도하고 사랑하라",
-      "type": "영화",
+      "id": "memories-of-bali",
+      "title": "발리에서 생긴 일",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "memories-of-bali",
-      "title": "발리에서 생긴 일",
-      "type": "드라마",
+      "id": "eat-pray-love",
+      "title": "먹고 기도하고 사랑하라",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -18529,6 +19005,13 @@
       "progress": 0
     },
     {
+      "id": "the-aquatope-on-white-sand",
+      "title": "하얀 모래의 아쿠아토프",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "chekeraccho",
       "title": "체케랏초!!",
       "type": "영화",
@@ -18539,13 +19022,6 @@
       "id": "chimudondon",
       "title": "치무돈돈",
       "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "the-aquatope-on-white-sand",
-      "title": "白い砂のアクアトープ",
-      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
@@ -18977,15 +19453,15 @@
       "progress": 0
     },
     {
-      "id": "the-matrix",
-      "title": "매트릭스",
+      "id": "mission-impossible-2",
+      "title": "미션 임파서블 2",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "mission-impossible-2",
-      "title": "미션 임파서블 2",
+      "id": "the-matrix",
+      "title": "매트릭스",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -19043,6 +19519,13 @@
       "id": "tokyo-godfathers",
       "title": "도쿄 갓파더스",
       "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-wolverine",
+      "title": "더 울버린",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -19162,13 +19645,6 @@
       "id": "nigehaji",
       "title": "도망치는 건 부끄럽지만 도움이 된다",
       "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "the-wolverine",
-      "title": "더 울버린",
-      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
