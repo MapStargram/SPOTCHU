@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { loginHref } from "@/lib/login-url";
 import {
@@ -15,7 +15,7 @@ import { CoralButton, GhostButton } from "../ui/CoralButton";
 import { Select } from "../ui/Select";
 import { Mascot } from "../ui/Mascot";
 import { LocationPicker, cityCenter, type LatLng } from "./LocationPicker";
-import { nearestCity } from "@/lib/nearest-city";
+import { nearestCity, nearbyCities } from "@/lib/nearest-city";
 import { createSpotReportAction } from "@/lib/actions/mutations";
 import { uploadImageFile } from "@/lib/client-upload";
 import {
@@ -50,6 +50,41 @@ export function ReportFlow({
   const [ack, setAck] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // 진입 시 현재 위치(1회)로 핀·도시를 맞춘다 → 근처 도시만 목록에 뜨게. 거부/실패는 조용히 기본값 유지.
+  useEffect(() => {
+    if (!navigator.geolocation) return;
+    navigator.geolocation.getCurrentPosition(
+      (p) => {
+        const pos = { lat: p.coords.latitude, lng: p.coords.longitude };
+        setCoord(pos);
+        setCity(
+          nearestCity(
+            pos.lat,
+            pos.lng,
+            cities.map((c) => c.id),
+          ),
+        );
+      },
+      () => {},
+      { timeout: 8000 },
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // 도시 드롭다운은 현재 핀(=GPS/지도) 기준 가까운 5개만 노출 — 전체 도시 나열 방지.
+  const cityOptions = useMemo(
+    () =>
+      nearbyCities(
+        coord.lat,
+        coord.lng,
+        cities.map((c) => c.id),
+        5,
+      )
+        .map((id) => cities.find((c) => c.id === id))
+        .filter((c): c is { id: CityId; label: string } => !!c),
+    [coord, cities],
+  );
 
   // 대표 사진(필수) — 서버 /api/upload가 EXIF 위치 제거 후 Cloudinary 저장(rules §23).
   const [photo, setPhoto] = useState<{ file: File; previewUrl: string } | null>(
@@ -163,12 +198,15 @@ export function ReportFlow({
                 도시
               </span>
               <span className="text-[10px] text-[color:var(--muted-soft)]">
-                핀 위치에 따라 자동 · 탭해서 이동
+                내 위치 기준 가까운 도시 · 탭해서 변경
               </span>
             </div>
             <Select
               value={city}
-              options={cities.map((c) => ({ value: c.id, label: c.label }))}
+              options={cityOptions.map((c) => ({
+                value: c.id,
+                label: c.label,
+              }))}
               onChange={pickCity}
               ariaLabel="도시 선택"
               align="left"
@@ -181,7 +219,7 @@ export function ReportFlow({
               value={coord}
               onChange={(pos) => {
                 setCoord(pos);
-                // 핀(사용자가 직접 놓은 좌표)에서 가장 가까운 서비스 도시로 자동 판정 — GPS 아님(정책 안전).
+                // 핀(GPS 또는 지도) 좌표에서 가장 가까운 서비스 도시로 자동 판정.
                 setCity(
                   nearestCity(
                     pos.lat,
