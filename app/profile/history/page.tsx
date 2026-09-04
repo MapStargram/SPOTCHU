@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ChevronLeft, Check } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
+import { SpotImage } from "@/components/ui/SpotImage";
 import { getVisitHistory } from "@/lib/data";
 
 // 개인 방문 이력을 매 요청 반영.
@@ -43,10 +44,15 @@ export default async function HistoryPage() {
                   href={`/spot/${r.spot.id}`}
                   className="flex items-center gap-3 rounded-[14px] bg-white px-3.5 py-3 shadow-[shadow:var(--sh-card)]"
                 >
-                  <div
-                    className="relative h-[52px] w-[52px] shrink-0 rounded-xl"
-                    style={{ background: r.spot.thumbGrad }}
-                  >
+                  <div className="relative h-[52px] w-[52px] shrink-0">
+                    {/* 스팟 사진 — 다른 목록과 동일하게 표기. 이미지는 안쪽 래퍼에서 rounded 클리핑하고,
+                        체크 배지(-bottom/-right)는 바깥에 둬 잘리지 않게(#collections 회귀 방지). */}
+                    <div
+                      className="absolute inset-0 overflow-hidden rounded-xl"
+                      style={{ background: r.spot.thumbGrad }}
+                    >
+                      <SpotImage src={r.spot.imageUrl} alt="" width={640} />
+                    </div>
                     <span className="absolute -bottom-1 -right-1 flex h-[22px] w-[22px] items-center justify-center rounded-full border-2 border-white bg-mint">
                       <Check
                         size={12}
