@@ -25,3 +25,25 @@ export function nearestCity(
   }
   return best;
 }
+
+// 위경도에서 가까운 순으로 도시 count개. 제보 화면에서 전체 도시 대신 근처 도시만 보여줄 때 사용.
+export function nearbyCities(
+  lat: number,
+  lng: number,
+  allowed?: readonly CityId[],
+  count = 5,
+): CityId[] {
+  const ids = (
+    allowed?.length
+      ? allowed.filter((id) => id in CITY_CENTER)
+      : (Object.keys(CITY_CENTER) as CityId[])
+  ) as CityId[];
+  return ids
+    .map((id) => ({
+      id,
+      d: (CITY_CENTER[id].lat - lat) ** 2 + (CITY_CENTER[id].lng - lng) ** 2,
+    }))
+    .sort((a, b) => a.d - b.d)
+    .slice(0, count)
+    .map((x) => x.id);
+}

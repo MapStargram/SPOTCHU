@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { nearestCity } from "./nearest-city";
+import { nearestCity, nearbyCities } from "./nearest-city";
 
 describe("nearestCity", () => {
   it("서울 도심 → seoul", () => {
@@ -33,5 +33,29 @@ describe("nearestCity", () => {
   });
   it("빈 allow-list는 전체 카탈로그로 폴백(하위호환)", () => {
     expect(nearestCity(37.5665, 126.978, [])).toBe("seoul");
+  });
+});
+
+describe("nearbyCities (제보 근처 도시 목록)", () => {
+  const LIVE = [
+    "tokyo",
+    "seoul",
+    "osaka",
+    "kyoto",
+    "fukuoka",
+    "busan",
+  ] as const;
+  it("가까운 순으로 count개 반환하고 첫 번째는 최근접", () => {
+    const near = nearbyCities(37.5665, 126.978, LIVE, 3); // 서울 도심
+    expect(near).toHaveLength(3);
+    expect(near[0]).toBe("seoul");
+    expect(near).toContain("busan"); // 국내 도시가 도쿄권보다 가깝다
+  });
+  it("count가 도시 수보다 크면 있는 만큼만", () => {
+    expect(nearbyCities(37.5665, 126.978, LIVE, 100).length).toBe(LIVE.length);
+  });
+  it("nearestCity와 첫 원소가 일치", () => {
+    const [first] = nearbyCities(34.7, 135.5, LIVE, 5);
+    expect(first).toBe(nearestCity(34.7, 135.5, LIVE));
   });
 });
