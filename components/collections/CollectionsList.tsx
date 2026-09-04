@@ -5,7 +5,21 @@ import Link from "next/link";
 import { Plus, Lock, Link2 } from "lucide-react";
 import { TagPill } from "../ui/TagPill";
 import { EmptyState } from "../ui/EmptyState";
+import { Mascot, type MascotName } from "../ui/Mascot";
 import type { Collection } from "@/lib/mock";
+
+// 기본(이미지 없는) 컬렉션 썸네일에 얹을 마스코트 — id 기반으로 결정적 선택해 카드마다 다르게.
+const THUMB_MASCOTS: MascotName[] = [
+  "chu-mascot-map",
+  "chu-mascot-camera",
+  "chu-mascot-front",
+  "chu-expression-joy",
+];
+function pickMascot(id: string): MascotName {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) | 0;
+  return THUMB_MASCOTS[Math.abs(h) % THUMB_MASCOTS.length];
+}
 
 // E1 · 컬렉션 목록(AppShell 내부). 모바일 2열 / 데스크톱 4열. 데이터는 서버(page)에서 주입.
 export function CollectionsList({
@@ -86,9 +100,17 @@ export function CollectionsList({
               className="overflow-hidden rounded-2xl bg-white shadow-[shadow:var(--sh-card)]"
             >
               <div
-                className="relative h-[120px] lg:h-[150px]"
+                className="relative h-[120px] overflow-hidden lg:h-[150px]"
                 style={{ background: col.coverGrad }}
               >
+                {/* 기본 썸네일: 그라데이션 위에 츄 캐릭터를 얹어 브랜디드 플레이스홀더로 */}
+                <div className="pointer-events-none absolute inset-0 flex items-end justify-center">
+                  <Mascot
+                    name={pickMascot(col.id)}
+                    alt=""
+                    className="h-[78px] translate-y-1 opacity-95 drop-shadow-[0_4px_10px_rgba(23,35,60,0.18)] lg:h-[98px]"
+                  />
+                </div>
                 {tab === "own" ? (
                   <span
                     className="absolute -bottom-3.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-white shadow-[shadow:var(--sh-card)]"
