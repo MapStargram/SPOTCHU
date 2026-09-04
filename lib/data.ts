@@ -421,6 +421,7 @@ export async function searchSpots(raw: SearchParams): Promise<Spot[]> {
 export interface FilterOption {
   id: string;
   label: string;
+  group?: string; // 있으면 필터 UI에서 그룹(예: 국가)으로 묶어 표시
 }
 const cachedCategories = unstable_cache(
   async () =>

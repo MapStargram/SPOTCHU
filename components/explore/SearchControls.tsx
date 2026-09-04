@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { ChevronLeft, Search } from "lucide-react";
 import { CategoryLabel } from "../ui/CategoryLabel";
@@ -97,6 +97,18 @@ export function SearchControls({
 
   const cur = (k: string) => sp.get(k) ?? "";
 
+  // 지역 칩을 국가별로 묶는다(첫 등장 순서 — 페이지에서 CITIES 카탈로그 순으로 정렬해 전달).
+  const cityGroups = useMemo(() => {
+    const byGroup = new Map<string, FilterOption[]>();
+    for (const c of cities) {
+      const g = c.group ?? "기타";
+      const arr = byGroup.get(g);
+      if (arr) arr.push(c);
+      else byGroup.set(g, [c]);
+    }
+    return [...byGroup].map(([name, cs]) => ({ name, cities: cs }));
+  }, [cities]);
+
   return (
     <div className="flex flex-col gap-3">
       {/* 검색 입력 */}
@@ -137,18 +149,29 @@ export function SearchControls({
       {/* 필터 패널 — 그룹별 경계를 둬서 정렬감을 준다 */}
       <div className="flex flex-col gap-4 rounded-[20px] border border-[color:var(--line)] bg-white p-4 shadow-[shadow:var(--sh-card)]">
         <Field label="지역">
-          <div className="flex flex-wrap gap-1.5">
-            <Chip active={!cur("cityId")} onClick={() => setParam("cityId")}>
-              전체
-            </Chip>
-            {cities.map((c) => (
-              <Chip
-                key={c.id}
-                active={cur("cityId") === c.id}
-                onClick={() => setParam("cityId", c.id)}
-              >
-                {c.label}
+          <div className="flex flex-col gap-2.5">
+            <div className="flex flex-wrap gap-1.5">
+              <Chip active={!cur("cityId")} onClick={() => setParam("cityId")}>
+                전체
               </Chip>
+            </div>
+            {cityGroups.map((g) => (
+              <div key={g.name} className="flex flex-col gap-1.5">
+                <span className="font-latin text-[10px] font-bold uppercase tracking-[0.14em] text-[color:var(--muted)]">
+                  {g.name}
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {g.cities.map((c) => (
+                    <Chip
+                      key={c.id}
+                      active={cur("cityId") === c.id}
+                      onClick={() => setParam("cityId", c.id)}
+                    >
+                      {c.label}
+                    </Chip>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </Field>

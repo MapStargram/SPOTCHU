@@ -6,6 +6,7 @@ import { SearchControls } from "@/components/explore/SearchControls";
 import { getCategories, getCities, getWorks, searchSpots } from "@/lib/data";
 import { getCurrentUser } from "@/lib/session";
 import { getSavedSpotIds } from "@/lib/actions/mutations";
+import { CITIES } from "@/lib/cities-catalog";
 import { TRENDING } from "@/lib/mock";
 
 // C3 · 검색. 검색은 서버에서 수행(DB/목업은 lib/data façade가 전환).
@@ -46,7 +47,13 @@ export default async function SearchScreen({
     getWorks(),
     getCities(),
   ]);
-  const cityOpts = cities.map((c) => ({ id: c.id, label: c.name }));
+  // 지역 필터를 국가별로 묶어 정리(도시가 늘어도 칩이 한 덩어리로 길어지지 않게). 국가·정렬은
+  // CITIES 카탈로그 기준(DB Country enum 폴백 우회) — 탐색 도시 드롭다운과 동일 규칙.
+  const catIdx = new Map(CITIES.map((c, i) => [c.id, i] as const));
+  const catCountry = new Map(CITIES.map((c) => [c.id, c.country] as const));
+  const cityOpts = [...cities]
+    .sort((a, b) => (catIdx.get(a.id) ?? 999) - (catIdx.get(b.id) ?? 999))
+    .map((c) => ({ id: c.id, label: c.name, group: catCountry.get(c.id) }));
 
   return (
     <AppShell active="explore">
