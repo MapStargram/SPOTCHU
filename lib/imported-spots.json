@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T13:24:39.086Z",
+  "generatedAt": "2026-09-03T23:19:07.813Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -899,6 +899,20 @@
       }
     },
     {
+      "id": "barcelona-casa-ramos-all-about-mother-a819",
+      "title": "내 어머니의 모든 것 카사 라모스 (로사의 친정집)",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.40607,
+      "lng": 2.14955,
+      "area": "Plaça de Lesseps, 그라시아·사리아산제르바시 경계",
+      "subject": "1906년 하우메 토레스 이 그라우가 설계한 모더니즘 건물 카사 라모스 — 극중 페넬로페 크루스가 연기한 수녀 로사의 부모님 댁으로 등장, 마누엘라가 일자리를 구하러 이 집을 찾아가는 장면",
+      "tip": "레셉스 광장 교차로 건너편 인도에서 노란빛 꽃·벌 장식이 있는 파사드를 담을 수 있다. 개인 주거 건물이므로 외관만 촬영할 것. 레셉스역(L3) 바로 앞이라 접근이 쉽다.",
+      "workId": "all-about-my-mother",
+      "scene": "마누엘라가 로사의 부모님 집(카사 라모스)을 찾아가 일자리를 구하는 장면",
+      "source": "https://www.barcelona-metropolitan.com/living/community/a-place-of-my-own-good-enough-for-almodovar/"
+    },
+    {
       "id": "barcelona-ciutadella-cascada-vicky-cristina-b48f",
       "title": "시우타데야 공원 카스카다 분수",
       "city": "barcelona",
@@ -919,6 +933,26 @@
       }
     },
     {
+      "id": "barcelona-duc-medinaceli-all-about-mother-6f2d",
+      "title": "내 어머니의 모든 것 두크 데 메디나셀리 광장",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.37831,
+      "lng": 2.17901,
+      "area": "Plaça del Duc de Medinaceli, Ciutat Vella (엘 고틱)",
+      "subject": "야자수와 분수가 있는 작은 광장 — 극중 임신한 로사 수녀가 병원으로 향하는 택시 안에서 어린 시절 뛰놀던 이 광장을 마지막으로 바라보고, 치매에 걸려 자신을 못 알아보는 아버지가 개를 산책시키는 모습을 목격하는 장면",
+      "tip": "카레르 암플레(Carrer Ample)와 접한 고딕지구의 작은 광장. 야자수와 분수 옆 벤치 부근에서 주변 건물을 담으면 극중 로사의 시점과 비슷한 구도가 나온다. 업무지구라 낮에는 한산해 촬영하기 좋다.",
+      "workId": "all-about-my-mother",
+      "scene": "로사가 택시를 타고 지나가며 어린 시절 광장과, 자신을 못 알아보는 아버지를 마지막으로 바라보는 장면",
+      "source": "https://www.equinoxmagazine.fr/2022/08/28/sur-les-traces-de-tout-sur-ma-mere-a-barcelone/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477472/spotchu/spots/w4vmppmpiap7xyodpc3d.jpg",
+      "imageCredit": {
+        "author": "Mummelgrummel",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Barcelona_-_Urlaub_2014_-_Brunnen_%26_Park_am_Platz_Duc_de_Medinaceli_007.jpg"
+      }
+    },
+    {
       "id": "barcelona-guell-pavilions-dragon-gate-vicky-cristina-2c7d",
       "title": "구엘 별장 드래곤 게이트",
       "city": "barcelona",
@@ -936,6 +970,26 @@
         "author": "Wistula",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Dragon_gate_at_Pavellons_G%C3%BCell_IMG_2035.JPG"
+      }
+    },
+    {
+      "id": "barcelona-hospital-del-mar-all-about-mother-d174",
+      "title": "내 어머니의 모든 것 델 마르 병원",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.38369,
+      "lng": 2.19426,
+      "area": "Passeig Marítim 25-29, 바르셀로네타",
+      "subject": "델 마르 병원 — 임신하고 HIV 양성인 로사 수녀가 이송되어 출산하는 병원. 알모도바르 감독은 바다를 향해 열린 큰 창을 '영화관 스크린 같다'고 표현하며 이 병원을 촬영지로 골랐다",
+      "tip": "해변 산책로(Passeig Marítim)에서 바다를 등지고 병원 건물 전경을 담을 수 있다. 실제 운영 중인 종합병원이므로 외관만 촬영하고 응급차 동선·환자 출입은 방해하지 말 것.",
+      "workId": "all-about-my-mother",
+      "scene": "로사 수녀가 델 마르 병원으로 이송되어 아이를 출산하는 장면",
+      "source": "https://www.hospitaldelmar.cat/es/noticies/view.php?ID=448",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477475/spotchu/spots/vcwoc6pvuvusupc8pla1.jpg",
+      "imageCredit": {
+        "author": "Jordiferrer",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hospital_del_Mar_-_entrada_01.JPG"
       }
     },
     {
@@ -994,6 +1048,26 @@
         "author": "pepe.cornet",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Eroslaberinthorta.JPG"
+      }
+    },
+    {
+      "id": "barcelona-montjuic-cemetery-all-about-mother-92bc",
+      "title": "내 어머니의 모든 것 몬주익 묘지 입구 계단",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.3531,
+      "lng": 2.15127,
+      "area": "Carrer de la Mare de Déu de Port 56-58, 몬주익",
+      "subject": "몬주익 공동묘지 입구의 지그재그 계단과 납골당 벽 — 로사 수녀의 장례식, 그리고 마누엘라가 상복 차림의 롤라(토니 칸토)와 재회하는 장면이 이 계단에서 촬영됐다",
+      "tip": "매표소 앞 입구 계단에서 위로 오르며 바다를 배경으로 담으면 극중 구도와 비슷하다. 실제 운영 중인 묘지이니 조문객을 방해하지 않게 조용히 촬영하고 개장 시간을 미리 확인할 것.",
+      "workId": "all-about-my-mother",
+      "scene": "로사 수녀의 장례식과 마누엘라·롤라의 재회 장면",
+      "source": "https://www.totbarcelona.cat/es/cultura-ocio/rincones-barcelona-premio-oscar-pellicula-pedro-almodovar-518794/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477478/spotchu/spots/gvgfksp90vbqrmsdob3r.jpg",
+      "imageCredit": {
+        "author": "Nikodem Nijaki",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Montjuic_Cemetery_Barcelona_IMGP9467.jpg"
       }
     },
     {
@@ -1125,6 +1199,26 @@
         "author": "Bill Tyne from Oxford, England",
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:La_Sagadra_-_Flickr_-_wit.jpg"
+      }
+    },
+    {
+      "id": "barcelona-teatre-tivoli-all-about-mother-c53e",
+      "title": "내 어머니의 모든 것 티볼리 극장",
+      "city": "barcelona",
+      "category": "drama",
+      "lat": 41.39306,
+      "lng": 2.16722,
+      "area": "Carrer de Casp 8, 에이샴플레 우측지구",
+      "subject": "티볼리 극장 — 무대와 분장실이 영화에 등장. 마누엘라와 아들 에스테반이 '욕망이라는 이름의 전차' 공연을 보고 나온 직후, 배우 우마 로하의 사인을 받으려던 에스테반이 차에 치여 숨지는 영화 도입부의 결정적 장면이 이 극장 앞 거리에서 벌어진다",
+      "tip": "카스프 거리 인도에서 신고전주의 파사드를 정면으로 담을 수 있다. 공연 시작 전 저녁 시간대에는 극장 조명이 켜져 분위기가 좋다. 차량 통행이 많은 도로라 인도에서만 촬영할 것.",
+      "workId": "all-about-my-mother",
+      "scene": "연극 관람 후 극장 앞에서 에스테반이 교통사고로 사망하는 영화 도입부 장면",
+      "source": "https://es.wikipedia.org/wiki/Teatro_T%C3%ADvoli_(Barcelona)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477484/spotchu/spots/n7fgnuvauy0mg17k5hms.jpg",
+      "imageCredit": {
+        "author": "Enric",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:041_Teatre_T%C3%ADvoli,_c._Casp_6-20_(Barcelona).jpg"
       }
     },
     {
@@ -5341,6 +5435,26 @@
       }
     },
     {
+      "id": "london-duke-of-york-steps-mall-28-days-later-7a1f",
+      "title": "더 몰 · 듀크 오브 요크 계단 (28일 후 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5063,
+      "lng": -0.1318,
+      "area": "The Mall / St James's, London",
+      "subject": "짐이 더 몰을 걸어 올라가 듀크 오브 요크 계단에서 쓸모없어진 지폐 뭉치가 바람에 흩날리는 것을 발견하는 장면 — 실제 더 몰과 듀크 오브 요크 기념비 계단",
+      "tip": "계단 위 칼튼 하우스 테라스 쪽에서 더 몰 방향으로 내려다보는 구도, 또는 계단 아래에서 기둥을 올려다보는 구도 모두 가능. 평소에도 인파가 적은 이른 아침을 노릴 것.",
+      "workId": "28-days-later",
+      "scene": "짐이 듀크 오브 요크 계단에서 흩날리는 지폐를 발견하는 장면",
+      "source": "https://movie-locations.com/movies/0/28-Days-Later.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477487/spotchu/spots/loyurjmrtgzvs0so6ege.jpg",
+      "imageCredit": {
+        "author": "besopha",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Duke_of_York_Column_from_The_Mall,_London.jpg"
+      }
+    },
+    {
       "id": "london-great-scotland-yard-ministry-of-magic-harry-potter-5f9c",
       "title": "그레이트 스코틀랜드 야드 마법 정부 입구 (해리 포터 촬영지)",
       "city": "london",
@@ -5403,6 +5517,26 @@
         "author": "Robert Lamb",
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:View_down_Bulls_Head_Passage_from_Gracechurch_Street_-_geograph.org.uk_-_4022314.jpg"
+      }
+    },
+    {
+      "id": "london-horse-guards-parade-28-days-later-4d8c",
+      "title": "호스 가즈 퍼레이드 (28일 후 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5051,
+      "lng": -0.1291,
+      "area": "Horse Guards Parade, London",
+      "subject": "짐이 가디스 기념비(Guards Memorial) 앞을 지나 넓은 광장을 가로질러 걷는 장면 — 실제 호스 가즈 퍼레이드 광장",
+      "tip": "상시 개방된 공공 광장이라 접근이 쉽다. 관광객이 몰리기 전 이른 아침에 가디스 기념비를 배경으로 광장을 가로지르는 구도를 잡으면 영화 장면과 유사한 느낌을 낼 수 있다.",
+      "workId": "28-days-later",
+      "scene": "짐이 호스 가즈 퍼레이드를 가로질러 더 몰 쪽으로 걸어가는 장면",
+      "source": "https://almostginger.com/28-days-later-film-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477491/spotchu/spots/x5amk035u5j8krucjrqy.jpg",
+      "imageCredit": {
+        "author": "Tristan Surtel",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Horse_Guards_Parade_and_building_in_London.jpg"
       }
     },
     {
@@ -5867,6 +6001,26 @@
       "source": "https://movie-locations.com/movies/n/Notting-Hill.php"
     },
     {
+      "id": "london-oxford-street-wardour-corner-28-days-later-e02b",
+      "title": "옥스퍼드 스트리트 · 워더 스트리트 모퉁이 (28일 후 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5142,
+      "lng": -0.1346,
+      "area": "Oxford Street / Soho, London",
+      "subject": "짐이 파손된 모퉁이 상점에서 신문을 주워 런던 소개(疏開) 소식을 알게 되는 장면 — 옥스퍼드 스트리트와 워더 스트리트가 만나는 모퉁이(워더 스트리트 205번지 옛 상점 자리)",
+      "tip": "워더 스트리트 북쪽 끝, 옥스퍼드 스트리트와 만나는 모퉁이를 찾아 상점 정면 구도로 촬영. 현재는 다른 매장이 들어서 있어 외관이 달라졌을 수 있으니 정확한 상점보다는 모퉁이 자체의 각도를 재현하는 데 집중할 것.",
+      "workId": "28-days-later",
+      "scene": "짐이 모퉁이 상점에서 신문을 주워 런던 소개 소식을 알게 되는 장면",
+      "source": "https://almostginger.com/28-days-later-film-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477496/spotchu/spots/m5kwaaiafnyinkf6i6lc.jpg",
+      "imageCredit": {
+        "author": "No Swan So Fine",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:105-109_Oxford_Street,_June_2023.jpg"
+      }
+    },
+    {
       "id": "london-paddington-windsor-gardens-chalcot-crescent",
       "title": "패딩턴 윈저 가든스 촬영지 (찰콧 크레센트)",
       "city": "london",
@@ -5887,6 +6041,26 @@
         "author": "Matt Brown",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Chalcot_Crescent_2024-11-22.jpg"
+      }
+    },
+    {
+      "id": "london-piccadilly-circus-28-days-later-c5e9",
+      "title": "피카딜리 서커스 샤프츠베리 기념 분수 (28일 후 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5098,
+      "lng": -0.1345,
+      "area": "Piccadilly Circus, London",
+      "subject": "짐이 피카딜리 서커스를 걸어가며 판자로 막힌 샤프츠베리 기념 분수(흔히 '에로스 동상'으로 불림)에 실종자 전단이 붙어 있는 것을 보는 장면 — 실제 샤프츠베리 기념 분수",
+      "tip": "분수 주변은 평소 관광객이 매우 많은 곳이라 이른 아침에 방문해야 영화 속 텅 빈 느낌을 살릴 수 있다. 분수를 중심에 두고 사방 도로가 비어 보이는 구도로 촬영.",
+      "workId": "28-days-later",
+      "scene": "판자로 막힌 샤프츠베리 기념 분수에 붙은 실종자 전단을 짐이 지나치는 장면",
+      "source": "https://almostginger.com/28-days-later-film-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477499/spotchu/spots/lsr5eqnurnoh8yf8rtlj.jpg",
+      "imageCredit": {
+        "author": "Ad Meskens You are free to use this picture for an",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:London_Shaftesbury_Memorial_Fountain_(%22Eros%22),_Piccadilly_Circus_01.jpg"
       }
     },
     {
@@ -6270,6 +6444,26 @@
       }
     },
     {
+      "id": "london-westminster-bridge-28-days-later-9f2a",
+      "title": "웨스트민스터 브리지 (28일 후 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5001,
+      "lng": -0.1196,
+      "area": "Westminster Bridge, London",
+      "subject": "짐(킬리언 머피)이 혼수상태에서 깨어나 남쪽 세인트 토마스 병원 쪽에서 다리를 홀로 건너는 영화의 대표 장면 — 실제 웨스트민스터 브리지, 다리 너머로 국회의사당·빅벤이 보인다",
+      "tip": "짐이 걸었던 방향대로 다리 남단(세인트 토마스 병원 쪽) 보도에서 북쪽 국회의사당을 바라보는 구도로 촬영. 실제 촬영은 2001년 7월 일주일간 새벽 4시반~6시반 사이 도로를 부분 통제해 진행됐다 — 지금은 통제가 없으니 차량·자전거를 피해 인도에서 촬영할 것, 이른 아침이 가장 한산하다.",
+      "workId": "28-days-later",
+      "scene": "짐이 텅 빈 런던에서 처음으로 홀로 웨스트민스터 브리지를 건너는 오프닝 시퀀스",
+      "source": "https://timeout.com/london/news/london-on-screen-how-the-bridge-scene-in-28-days-later-was-filmed-070219",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477500/spotchu/spots/grqr3je2xjbu9ycz1po5.jpg",
+      "imageCredit": {
+        "author": "Colin",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Big_Ben_at_sunset_-_2014-10-27_17-30.jpg"
+      }
+    },
+    {
       "id": "london-westminster-station-skyfall-e29a",
       "title": "웨스트민스터 지하철역 출구 — 스카이폴 추격 장면",
       "city": "london",
@@ -6290,6 +6484,26 @@
         "author": "Diliff",
         "license": "CC BY-SA 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:Palace_of_Westminster,_London_-_Feb_2007.jpg"
+      }
+    },
+    {
+      "id": "london-whitehall-duke-of-cambridge-28-days-later-b6e3",
+      "title": "화이트홀 듀크 오브 케임브리지 동상 (28일 후 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5048,
+      "lng": -0.1262,
+      "area": "Whitehall, London",
+      "subject": "짐이 화이트홀을 따라 걸어 올라가다 전복된 빨간 이층버스를 지나치는 장면 — 실제 화이트홀, 듀크 오브 케임브리지 기마상이 있는 호스 가즈 애비뉴 어귀 교차로 일대",
+      "tip": "동상은 도로 중앙 교통섬 위에 있어 무리하게 건너지 말 것. 화이트홀 보도(인도)에서 신호를 지켜 동상과 관공서 건물을 배경으로 촬영하면 충분하다. 버스는 세트가 아닌 실차로, 촬영을 위해 15분 안에 배치·철수했다고 알려져 있다.",
+      "workId": "28-days-later",
+      "scene": "짐이 화이트홀을 걸어 올라가며 전복된 이층버스를 지나치는 장면",
+      "source": "https://movie-locations.com/movies/0/28-Days-Later.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477503/spotchu/spots/pfo30iqajpmkujwhnjtf.jpg",
+      "imageCredit": {
+        "author": "Prioryman",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Duke_of_Cambridge_statue_Whitehall.jpg"
       }
     },
     {
@@ -7287,6 +7501,34 @@
       }
     },
     {
+      "id": "newyork-91st-street-garden-youve-got-mail-5e8d",
+      "title": "리버사이드 파크 91번가 가든 (유브 갓 메일 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.79359,
+      "lng": -73.97846,
+      "area": "Upper West Side, Manhattan (Riverside Park, W 91st St & Riverside Dr)",
+      "subject": "자원봉사 단체 '가든 피플'이 1984년부터 가꿔온 리버사이드 파크 내 '91번가 가든'의 산책로와 화단",
+      "tip": "지하철 1선 86 St역 또는 96 St역에서 도보 약 10분. 리버사이드 드라이브 91번가 입구 계단으로 내려가 진입하며, 늦봄~가을 개화기에 화단이 가장 풍성하다.",
+      "workId": "youve-got-mail",
+      "scene": "극의 마지막 장면 — 조가 반려견 브링클리와 함께 나타나 온라인 펜팔 'NY152'가 자신임을 밝히고 캐슬린과 포옹하는 결말부",
+      "source": "https://riversideparknyc.org/parks/91st-street-garden-garden-peoples-garden/"
+    },
+    {
+      "id": "newyork-barney-greengrass-youve-got-mail-93af",
+      "title": "바니 그린그래스 델리 (유브 갓 메일 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.78798,
+      "lng": -73.97459,
+      "area": "Upper West Side, Manhattan (541 Amsterdam Ave & W 86th St)",
+      "subject": "1908년 개업한 훈제 생선 전문 델리 '바니 그린그래스'의 암스테르담 애비뉴 매장 외관",
+      "tip": "지하철 1선 86 St역에서 도보 약 7분. 평일 아침 브런치 시간대에 매장 간판과 외관을 함께 담을 수 있으며, 대기줄이 길 수 있어 여유 있게 방문한다.",
+      "workId": "youve-got-mail",
+      "scene": "캐슬린이 이모 버디와 함께 점심을 먹으며 폭스북스 개점으로 위태로워진 서점의 앞날을 의논하는 장면",
+      "source": "https://www.untappedcities.com/film-locations-youve-got-mail-nyc/"
+    },
+    {
       "id": "newyork-bethesda-terrace-harry-sally-c17d",
       "title": "베데스다 테라스 (해리가 샐리를 만났을 때 촬영지)",
       "city": "newyork",
@@ -7373,6 +7615,20 @@
       "workId": "the-devil-wears-prada",
       "scene": "네이트가 근무하는 레스토랑에서 앤디의 승진을 친구들과 축하하는 장면",
       "source": "https://onlocationtours.com/locations/the-devil-wears-prada-locations/"
+    },
+    {
+      "id": "newyork-cafe-lalo-youve-got-mail-6d3f",
+      "title": "카페 랄로 (유브 갓 메일 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.78598,
+      "lng": -73.97673,
+      "area": "Upper West Side, Manhattan (201 W 83rd St & Amsterdam Ave)",
+      "subject": "요정 조명으로 장식된 유럽풍 카페 '카페 랄로'의 외관 및 창가 좌석",
+      "tip": "지하철 1선 86 St역에서 도보 약 5분. 저녁에 창가 조명이 켜지면 영화 속 분위기가 가장 잘 살아나며, 캐슬린이 앉았던 창가 왼쪽 테이블이 팬들 사이 포토스팟. 매장 내부는 영업 방해되지 않게 짧게만.",
+      "workId": "youve-got-mail",
+      "scene": "조 폭스가 온라인 펜팔 상대를 만나러 왔다가 그녀가 실은 자신의 서점업계 라이벌 캐슬린 켈리임을 알게 되는 장면, 극 중 두 사람이 반복해서 만나는 장소",
+      "source": "https://www.untappedcities.com/film-locations-youve-got-mail-nyc/"
     },
     {
       "id": "newyork-cafe-luxembourg-harry-sally-2d6c",
@@ -7803,6 +8059,26 @@
       }
     },
     {
+      "id": "newyork-shop-around-corner-youve-got-mail-2a97",
+      "title": "모퉁이 서점 외경 (유브 갓 메일 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.77543,
+      "lng": -73.98066,
+      "area": "Upper West Side, Manhattan (106 W 69th St, Columbus Ave~Broadway 사이)",
+      "subject": "영화 속 어린이 전문 서점 '모퉁이 서점(The Shop Around the Corner)' 외관으로 쓰인 갈색 사암 건물 1층 상가 — 실제로는 골동품·치즈 가게였던 자리를 촬영 기간 동안 서점처럼 꾸몄다",
+      "tip": "지하철 1/2/3선 72 St역에서 도보 약 4분. 현재는 서점이 아닌 다른 업종 상점이 들어서 있어 실내 촬영은 어려우며, 맞은편 인도에서 건물 파사드 위주로 촬영한다.",
+      "workId": "youve-got-mail",
+      "scene": "캐슬린 켈리가 대를 이어 운영하는 어린이 서점의 외경 — 조 폭스의 대형서점 '폭스북스' 진출로 폐업 위기에 놓이는 극의 중심 무대",
+      "source": "https://movie-locations.com/movies/y/Youve-Got-Mail.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477510/spotchu/spots/gqx0gfchvnaypfym4mwo.jpg",
+      "imageCredit": {
+        "author": "Tony Hisgett from Birmingham, UK",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Brownstones_West_69th_St_(6213604919).jpg"
+      }
+    },
+    {
       "id": "newyork-smith-wollensky-devil-prada-b3d8",
       "title": "스미스 앤 월렌스키 스테이크하우스 (악마는 프라다를 입는다 촬영지)",
       "city": "newyork",
@@ -7961,6 +8237,26 @@
       "workId": "joker",
       "scene": "실패한 스탠드업 공연 후 아서가 이웃 소피 뒤몽과 도넛가게에서 커피를 마시며 가까워지는 장면",
       "source": "https://movie-locations.com/movies/j/Joker-2019.php"
+    },
+    {
+      "id": "newyork-verdi-square-youve-got-mail-c072",
+      "title": "베르디 스퀘어 (유브 갓 메일 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.77917,
+      "lng": -73.98167,
+      "area": "Upper West Side, Manhattan (Broadway & W 72nd St)",
+      "subject": "브로드웨이와 암스테르담 애비뉴 사이, 72번가 지하철역 위에 자리한 삼각형 소공원 '베르디 스퀘어'",
+      "tip": "지하철 1/2/3선 72 St역 출구 바로 위. 작은 삼각 공원이라 벤치와 지하철 입구 철제 조형물을 함께 프레임에 담으면 영화 속 구도와 비슷해진다.",
+      "workId": "youve-got-mail",
+      "scene": "동네에서 우연히 자꾸 마주치는 두 사람이 벤치에 앉아 대화를 나누는 장면 및 오프닝 몽타주에 반복 등장하는 동네 배경",
+      "source": "https://www.sceen-it.com/sceen/2862/You-ve-Got-Mail/Verdi-Square",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477516/spotchu/spots/ezkqv8tx2ogkcl9ltkll.jpg",
+      "imageCredit": {
+        "author": "Paul Klenk",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Giuseppe_Verdi_Monument.jpg"
+      }
     },
     {
       "id": "newyork-waldorf-astoria-serendipity-e12f",
@@ -8796,6 +9092,26 @@
       }
     },
     {
+      "id": "paris-avenue-velasquez-cernuschi-charade-e61f",
+      "title": "아브뉴 벨라스케즈·세르누스키 미술관 (샤레이드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8798,
+      "lng": 2.3121,
+      "area": "8구, Avenue Vélasquez (파르크 몽소 옆), Paris",
+      "subject": "레지의 파리 아파트로 등장한 저택 외관 — 현재는 아시아 미술 전문 세르누스키 미술관",
+      "tip": "몽소 공원 남동쪽 모퉁이 벨라스케즈가에서 미술관 정문 철제 대문과 파사드를 담을 수 있다. 몽소역에서 도보 3분.",
+      "workId": "charade",
+      "scene": "레지가 스키 여행에서 돌아와 텅 빈 파리 집을 발견하는 장면",
+      "source": "https://movie-locations.com/movies/c/Charade.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477520/spotchu/spots/d1etumw353pydrfpptfs.jpg",
+      "imageCredit": {
+        "author": "Guilhem Vellut from Paris, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_Cernuschi,_Paris_2_July_2016.jpg"
+      }
+    },
+    {
       "id": "paris-before-sunset-shakespeare-and-company-03",
       "title": "영화 <비포 선셋> 셰익스피어 앤 컴퍼니 서점 전망",
       "city": "paris",
@@ -8839,6 +9155,26 @@
         "author": "Britchi Mirela",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=27652532"
+      }
+    },
+    {
+      "id": "paris-champs-elysees-guignol-charade-a094",
+      "title": "샹젤리제 정원 기뇰 인형극장 (샤레이드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8697,
+      "lng": 2.3107,
+      "area": "8구, Carré Marigny, Jardins des Champs-Élysées, Paris",
+      "subject": "1818년부터 이어진 야외 기뇰(프랑스식 손인형극) 극장 — 롱푸앵 데 샹젤리제 인근 정원 안쪽",
+      "tip": "아브뉴 마티뇽과 가브리엘가 사이 정원 소로에 위치. 프랭클랭 D. 루스벨트역에서 도보 5분. 공연 일정이 비정기적이니 외관·정원 풍경 위주로 촬영.",
+      "workId": "charade",
+      "scene": "레지와 피터가 기뇰 인형극을 보는 아이들 곁에서 만나 우표 시장 이야기를 나누는 장면",
+      "source": "https://en.wikipedia.org/wiki/Charade_(1963_film)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477522/spotchu/spots/foqy7d4vygdjzkbukvrv.jpg",
+      "imageCredit": {
+        "author": "Charlik",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Marionnettes_des_Champs-%C3%89lys%C3%A9es.jpg"
       }
     },
     {
@@ -9221,6 +9557,26 @@
       }
     },
     {
+      "id": "paris-palais-royal-colonnade-charade-7f3a",
+      "title": "팔레 루아얄 정원 회랑 (샤레이드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8643,
+      "lng": 2.3378,
+      "area": "1구, Jardin du Palais-Royal 회랑(콜로네이드), Paris",
+      "subject": "정원을 둘러싼 아케이드형 회랑 — 극중 레지나가 진범과 대치하는 야간 장면의 배경",
+      "tip": "정원을 감싼 발루아·몽팡시에·보졸레 회랑 어디서든 아치가 반복되는 구도로 촬영 가능. 뷔랑의 줄무늬 기둥 안뜰(카트르 콜론)도 도보 1분 거리.",
+      "workId": "charade",
+      "scene": "레지나가 한밤중 팔레 루아얄 정원 회랑으로 유인되어 진짜 살인범 칼슨 다일과 대치하는 장면",
+      "source": "https://movie-locations.com/movies/c/Charade.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477525/spotchu/spots/x4rfcee79uueosk9qwq1.jpg",
+      "imageCredit": {
+        "author": "Zairon",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Paris_Palais_Royal_Colonnes_de_Buren_3.jpg"
+      }
+    },
+    {
       "id": "paris-palais-royal-garden-mi-fallout-2d9f",
       "title": "팔레 루아얄 정원 (미션 임파서블 폴아웃 촬영지)",
       "city": "paris",
@@ -9413,6 +9769,26 @@
       }
     },
     {
+      "id": "paris-quai-montebello-pont-au-double-charade-9c2e",
+      "title": "케 드 몽테벨로·퐁 오 두블 (샤레이드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8521,
+      "lng": 2.3484,
+      "area": "5구, Quai de Montebello · Pont au Double 앞, Paris",
+      "subject": "노트르담 대성당을 마주보는 센강 좌안 산책로 — 두 사람이 살인범의 정체를 추리하며 걷는 구간",
+      "tip": "퐁 오 두블 다리 남단, 노트르담 대성당 후진부(chevet)가 정면으로 보이는 강변 난간에서 촬영. 생미셸 노트르담역에서 도보 3분.",
+      "workId": "charade",
+      "scene": "레지와 피터가 노트르담 앞 센강변을 걸으며 살인범의 정체를 추리하는 장면",
+      "source": "https://movie-locations.com/movies/c/Charade.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477530/spotchu/spots/qduylflsg0j5jrqg52jn.jpg",
+      "imageCredit": {
+        "author": "Guilhem Vellut from Paris, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Notre-Dame_and_Pont_au_Double,_Paris_23_January_2016.jpg"
+      }
+    },
+    {
       "id": "paris-quai-saint-michel-mi-fallout-a63c",
       "title": "케 생미셸 (미션 임파서블 폴아웃 촬영지)",
       "city": "paris",
@@ -9485,6 +9861,20 @@
       "workId": "mission-impossible-fallout",
       "scene": "경찰에 쫓기던 트럭이 좁은 골목에 끼여 멈추고, 헌트와 워커가 대기 중이던 오토바이로 갈아타 탈출하는 장면",
       "source": "https://www.sceen-it.com/sceen/3319/Mission-Impossible-Fallout/Rue-de-Nevers"
+    },
+    {
+      "id": "paris-rue-scribe-american-express-charade-b48d",
+      "title": "뤼 스크리브 구 아메리칸 익스프레스 건물 (샤레이드 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8712,
+      "lng": 2.3299,
+      "area": "9구, 11 Rue Scribe (오페라 가르니에 인근), Paris",
+      "subject": "삼각형 코너 건물 — 극중 CIA 접선지 '아메리칸 익스프레스' 파리 지점으로 등장한 실제 옛 사옥(2009년 폐점, 현재는 타 업체 입점)",
+      "tip": "옥상은 출입 불가하니 길 건너편 인도에서 삼각 코너 파사드를 올려다보는 구도로. 오페라 가르니에에서 도보 3분.",
+      "workId": "charade",
+      "scene": "피터가 아메리칸 익스프레스 사무실을 찾아가고 건물 옥상에서 격투가 벌어지는 장면",
+      "source": "https://en.wikipedia.org/wiki/Charade_(1963_film)"
     },
     {
       "id": "paris-saint-eustache-eglise-3d9a",
@@ -11197,6 +11587,26 @@
       "source": "https://english.visitseoul.net/hallyu/Seoul-as-Seen-in-the-Romantic-TV-Series-Start-Up/ENN036494"
     },
     {
+      "id": "seoul-ddp-station-exit8-man-from-nowhere-5e91",
+      "title": "동대문역사문화공원역 8번 출구 (아저씨 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.56514,
+      "lng": 127.00783,
+      "area": "동대문역사문화공원역 인근, 중구",
+      "subject": "동대문역사문화공원역 8번 출구 인근 골목 — 마약 수령 장면의 배경",
+      "tip": "지하철 2·4·5호선 동대문역사문화공원역 8번 출구로 나오면 바로 인근 골목. 극중 등장한 옛 상가 건물은 확인이 어려우니 출구 주변 상가 골목 전반의 분위기를 담는 걸 추천. 야간엔 인적이 드문 골목이니 동행 이동 권장.",
+      "workId": "the-man-from-nowhere",
+      "scene": "차태식이 마약을 수령한 뒤 휴대폰을 버리는 장면의 배경 골목으로 알려짐(8번 출구 인근 건물 앞).",
+      "source": "https://namu.wiki/w/아저씨(영화)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477532/spotchu/spots/xfkmjw2ekwvdnagaxpfy.jpg",
+      "imageCredit": {
+        "author": "Eugene Lim",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dongdaemun_Design_Plaza_at_night,_Seoul,_Korea.jpg"
+      }
+    },
+    {
       "id": "seoul-doejissal-super-parasite-2b7c",
       "title": "돼지쌀슈퍼 (기생충 '우리슈퍼')",
       "city": "seoul",
@@ -11338,6 +11748,34 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Sungnyemun_Gate,_front,_2013.jpg"
       }
+    },
+    {
+      "id": "seoul-guro-police-station-man-from-nowhere-9f4b",
+      "title": "구로경찰서 (아저씨 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.49489,
+      "lng": 126.88673,
+      "area": "구로동, 구로구",
+      "subject": "구로경찰서 정문 외경 — 극중 등장하는 경찰서의 실제 건물",
+      "tip": "지하철 2호선 구로디지털단지역에서 도보 약 10분. 가마산로 대로변 인도에서 정문 파사드를 담을 수 있다. 실제 운영 중인 경찰서이므로 정문 스냅은 짧게 찍고 내부 진입·업무 방해는 금물.",
+      "workId": "the-man-from-nowhere",
+      "scene": "영화 초반부에 등장하는 경찰서 외경 장면의 실제 촬영 건물로 알려짐.",
+      "source": "https://namu.wiki/w/아저씨(영화)"
+    },
+    {
+      "id": "seoul-gyedong-alley-man-from-nowhere-c2a7",
+      "title": "계동길 (아저씨 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5793,
+      "lng": 126.9857,
+      "area": "계동, 북촌, 종로구",
+      "subject": "계동길 좁은 골목 — '기둥서방'이 납치당하는 장면의 배경",
+      "tip": "지하철 3호선 안국역 3번 출구에서 도보 5~10분, 북촌 계동길로 진입. 극중 배경이 된 옛 병원 자리는 이후 다른 상점으로 바뀌었으니 정확한 간판보다는 계동길 특유의 좁은 골목·한옥 담장 풍경 위주로 촬영. 인적 드문 이른 오전이 한산.",
+      "workId": "the-man-from-nowhere",
+      "scene": "기둥서방이 '개미굴' 노파 조직에게 납치당하는 장면의 배경 골목으로 알려짐(정확한 지점은 옛 최소아과의원 인근, 종로구 계동).",
+      "source": "https://namu.wiki/w/아저씨(영화)"
     },
     {
       "id": "seoul-hannamdaegyo-bittersweet-life-4b7e",
@@ -13023,6 +13461,20 @@
       "source": "https://tokyotoilet.jp/ebisu_park/"
     },
     {
+      "id": "tokyo-ekoda-sengen-shrine-your-lie-april-f04d",
+      "title": "에코다 센겐신사 (너의 거짓말 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.73844,
+      "lng": 139.67253,
+      "area": "에코다역 인근, 네리마구 고타케초",
+      "subject": "여름 축제(나츠마츠리) 장면의 실제 배경 신사",
+      "tip": "세이부이케부쿠로선 에코다역(江古田駅) 북쪽 출구 도보 1분. 국가지정문화재 후지즈카(富士塚)가 있는 작은 신사이니 참배객을 배려해 조용히 촬영.",
+      "workId": "your-lie-in-april",
+      "scene": "12화, 여름 마츠리(축제) 에피소드의 배경이 된 신사",
+      "source": "https://www.animepilgrimage.com/Locations/your-lie-in-april"
+    },
+    {
       "id": "tokyo-fujitv-hachitama-digimon-4c9a",
       "title": "후지TV 구체전망실 하치타마 (디지몬 어드벤처 성지)",
       "city": "tokyo",
@@ -13108,6 +13560,26 @@
         "author": "Wiiii",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Mitsui_Main_Building_2009.jpg"
+      }
+    },
+    {
+      "id": "tokyo-heisei-tsutsuji-park-your-lie-april-3a1f",
+      "title": "헤이세이 철쭉공원 (너의 거짓말 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.7389,
+      "lng": 139.65358,
+      "area": "네리마역 북쪽, 네리마구",
+      "subject": "코세이와 카오리가 처음 만나는 벤치·오솔길이 있는 실제 공원",
+      "tip": "세이부이케부쿠로선·도영오에도선 네리마역(練馬駅) 북쪽 출구에서 도보 1분. 네리마문화센터 바로 옆의 작은 공원이며, 철쭉(진달래) 만개기는 4월 중순~하순.",
+      "workId": "your-lie-in-april",
+      "scene": "1화, 코세이가 공원에서 카오리의 멜로디언 연주를 듣고 처음 만나는 장면",
+      "source": "https://jatrabridge.com/2024/05/04/12214/anime-your-lie-in-april-pilgrimage-course/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477535/spotchu/spots/hhkbap4ohg4l70hkprwx.jpg",
+      "imageCredit": {
+        "author": "Kentin",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Heisei_tsutsuji_park_nerima_tokyo_2015.jpg"
       }
     },
     {
@@ -13217,6 +13689,20 @@
       "scene": "극중 도서관이 있던 언덕으로 설정된 공원 — 세이지의 고백 장면 배경 언덕으로도 소개됨",
       "verified": "reported",
       "source": "https://seichimap.jp/works/mimisuma/"
+    },
+    {
+      "id": "tokyo-izumi-kobushi-park-your-lie-april-c58a",
+      "title": "이즈미 코부시 공원 (너의 거짓말 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.74918,
+      "lng": 139.58918,
+      "area": "오이즈미가쿠엔역 인근, 네리마구",
+      "subject": "카오리가 코세이를 반주자로 지목하는 동네 공원 장면의 실제 배경",
+      "tip": "세이부이케부쿠로선 오이즈미가쿠엔역(大泉学園駅) 북쪽 출구에서 도보 약 4분. 작은 주택가 공원이라 평일 오전이 한적하고 촬영하기 좋음.",
+      "workId": "your-lie-in-april",
+      "scene": "3화, 카오리가 코세이를 자신의 바이올린 반주자로 지목하는 공원 장면",
+      "source": "https://www.animepilgrimage.com/Locations/your-lie-in-april"
     },
     {
       "id": "tokyo-jingu-dori-park-toilet-perfect-days-a37e",
@@ -13533,6 +14019,26 @@
       }
     },
     {
+      "id": "tokyo-nerima-culture-center-your-lie-april-7b2c",
+      "title": "네리마문화센터 (TOWA홀 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.73941,
+      "lng": 139.65375,
+      "area": "네리마역 북쪽, 네리마구",
+      "subject": "극중 콩쿠르 무대 'TOWA홀'의 실제 모델 건물 외관",
+      "tip": "네리마역 북쪽 출구 도보 1분, 헤이세이 철쭉공원 바로 옆. 정면 계단과 로비 창이 극중 콩쿠르 회장 장면과 겹쳐 보인다. 실내는 실제 공연 시설이므로 외관 위주로 촬영.",
+      "workId": "your-lie-in-april",
+      "scene": "극 전반에 걸쳐 등장하는 피아노·바이올린 콩쿠르 회장 'TOWA홀'의 실제 모델 건물",
+      "source": "https://seichi-junrei.info/630/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477539/spotchu/spots/vybj4m2yhgbxienz6vjz.jpg",
+      "imageCredit": {
+        "author": "Asanagi",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nerima_Culture_Center_2026-02-01.jpg"
+      }
+    },
+    {
       "id": "tokyo-odaiba-kaihinkoen-digimon-7d2e",
       "title": "오다이바 해변공원 (디지몬 어드벤처 성지)",
       "city": "tokyo",
@@ -13725,6 +14231,46 @@
         "author": "Asanagi",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Kamiyama-cho_2022-07-07.jpg"
+      }
+    },
+    {
+      "id": "tokyo-shakujii-park-your-lie-april-9d4e",
+      "title": "샤쿠지이 공원 (너의 거짓말 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.73889,
+      "lng": 139.5975,
+      "area": "샤쿠지이코엔역 인근, 네리마구",
+      "subject": "카오리가 검은 고양이를 쫓는 연못가 산책로, 오프닝 영상에도 쓰인 풍경",
+      "tip": "세이부이케부쿠로선 샤쿠지이코엔역(石神井公園駅) 남쪽 출구에서 도보 약 10분. 미츠호지연못(三宝寺池)·샤쿠지이연못(石神井池) 두 연못을 낀 산책로 어디서든 촬영 가능, 이른 아침이 한적.",
+      "workId": "your-lie-in-april",
+      "scene": "1화, 카오리가 검은 고양이를 쫓아 뛰어가는 장면의 배경 공원",
+      "source": "https://www.anitabi.jp/works/31?lang=en",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477542/spotchu/spots/m01wlmtorweza6teasbl.jpg",
+      "imageCredit": {
+        "author": "Guilhem Vellut from Annecy, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pond_@_Shakujii_Park_@_Nerima_(9669708483).jpg"
+      }
+    },
+    {
+      "id": "tokyo-shakujii-river-sakura-your-lie-april-e6b3",
+      "title": "샤쿠지이가와 벚꽃길 (너의 거짓말 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.7413,
+      "lng": 139.64861,
+      "area": "네리마다카노다이역 인근, 네리마구 미나미타나카",
+      "subject": "두 사람이 우연히 마주치는 벚꽃 만개 하천 산책로",
+      "tip": "세이부이케부쿠로선 네리마다카노다이역(練馬高野台駅)에서 강변으로 나가 야마시타바시(山下橋)~야쿠시도바시(薬師堂橋) 약 700m 벚꽃 터널을 따라 촬영. 개화 시기는 3월 말~4월 초, 좁은 강변길이라 통행인 배려 필요.",
+      "workId": "your-lie-in-april",
+      "scene": "2화, 코세이와 카오리가 벚꽃길에서 우연히 마주치는 장면의 배경 하천길",
+      "source": "https://jatrabridge.com/2024/05/04/12214/anime-your-lie-in-april-pilgrimage-course/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788477547/spotchu/spots/nuryn6gpf45hvamkbde7.jpg",
+      "imageCredit": {
+        "author": "Koujigenba",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Shakujii_River_and_Sakura_2010.jpg"
       }
     },
     {
@@ -14962,6 +15508,13 @@
       "progress": 0
     },
     {
+      "id": "all-about-my-mother",
+      "title": "내 어머니의 모든 것",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "perfume-the-story-of-a-murderer",
       "title": "향수: 어느 살인자의 이야기",
       "type": "영화",
@@ -15452,6 +16005,13 @@
       "progress": 0
     },
     {
+      "id": "28-days-later",
+      "title": "28일 후",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "kingsman-the-secret-service",
       "title": "킹스맨: 시크릿 에이전트",
       "type": "영화",
@@ -15620,6 +16180,13 @@
       "progress": 0
     },
     {
+      "id": "youve-got-mail",
+      "title": "유브 갓 메일",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "when-harry-met-sally",
       "title": "해리가 샐리를 만났을 때",
       "type": "영화",
@@ -15783,6 +16350,13 @@
     {
       "id": "mission-impossible-fallout",
       "title": "미션 임파서블: 폴아웃",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "charade",
+      "title": "샤레이드",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -15987,6 +16561,13 @@
       "id": "startup",
       "title": "스타트업",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-man-from-nowhere",
+      "title": "아저씨",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -16204,6 +16785,13 @@
       "id": "perfect-days",
       "title": "퍼펙트 데이즈",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "your-lie-in-april",
+      "title": "너의 거짓말",
+      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
