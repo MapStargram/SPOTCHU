@@ -9,6 +9,11 @@ import {
   SPOT_COORDS,
   CITY_CENTER,
 } from "../lib/mock";
+// 스팟 좌표는 3개 소스에 나뉘어 있다: base=SPOT_COORDS, research=RESEARCH_COORDS,
+// imported=inline shooterLat(+IMPORTED_COORDS). 예전 seed는 SPOT_COORDS만 조회해
+// ~700개 research/imported 스팟을 (0,0)으로 시딩 → 지도 뷰포트에서 소멸했다.
+import { RESEARCH_COORDS } from "../lib/spots.research";
+import { IMPORTED_COORDS } from "../lib/spots.imported";
 import { BADGE_DEFS } from "../lib/badges";
 
 const db = new PrismaClient();
@@ -109,12 +114,30 @@ async function main() {
     create: { id: "demo-jimin", name: "지민", nickname: "지민" },
   });
 
+  // 좌표 조회: inline(imported) → 3개 소스 병합 맵. 없으면 (0,0) 오염 대신 건너뛴다.
+  const ALL_COORDS: Record<string, { lat: number; lng: number }> = {
+    ...SPOT_COORDS,
+    ...RESEARCH_COORDS,
+    ...IMPORTED_COORDS,
+  };
+  const missingCoord: string[] = [];
+
   // 스팟 (+ 작품 연결)
   for (const s of SPOTS) {
-    const coord = SPOT_COORDS[s.id];
+    const coord =
+      s.shooterLat != null && s.shooterLng != null
+        ? { lat: s.shooterLat, lng: s.shooterLng }
+        : ALL_COORDS[s.id];
+    if (!coord) {
+      missingCoord.push(s.id); // fail-loud: 좌표 없는 스팟은 시딩하지 않음(지도에 못 놓음)
+      continue;
+    }
     await db.spot.upsert({
       where: { id: s.id },
       update: {
+        // 좌표를 update에도 넣어야 기존 (0,0) 행이 재시드로 교정된다(예전엔 update에 좌표 없어 미교정).
+        shooterLat: coord.lat,
+        shooterLng: coord.lng,
         coverImageUrl: s.imageUrl ?? null,
         imageAuthor: s.imageCredit?.author ?? null,
         imageLicense: s.imageCredit?.license ?? null,
@@ -129,8 +152,8 @@ async function main() {
         name: s.title,
         categoryId: catId(s.categoryLabel),
         cityId: s.city,
-        shooterLat: coord?.lat ?? 0,
-        shooterLng: coord?.lng ?? 0,
+        shooterLat: coord.lat,
+        shooterLng: coord.lng,
         coverImageUrl: s.imageUrl ?? null,
         imageAuthor: s.imageCredit?.author ?? null,
         imageLicense: s.imageCredit?.license ?? null,
@@ -154,6 +177,10 @@ async function main() {
       });
     }
   }
+  if (missingCoord.length)
+    console.warn(
+      `⚠️ 좌표 없어 건너뛴 스팟 ${missingCoord.length}개: ${missingCoord.slice(0, 12).join(", ")}${missingCoord.length > 12 ? " …" : ""}`,
+    );
 
   // 컬렉션 (+ 아이템)
   for (const col of COLLECTIONS) {
