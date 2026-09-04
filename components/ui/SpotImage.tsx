@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { cldThumb } from "@/lib/cloudinary-url";
 
 // 스팟 사진 로딩/실패 상태 통일(#56). 로딩 중엔 펄스 스켈레톤. 사진이 없거나 실패하면
@@ -22,6 +22,14 @@ export function SpotImage({
 }) {
   const [loaded, setLoaded] = useState(false);
   const [errored, setErrored] = useState(false);
+
+  // eager/캐시 이미지는 하이드레이션 전에 로드가 끝나 React onLoad가 안 잡힌다 → opacity:0에
+  // 영영 갇혀 히어로가 투명해졌다. 마운트 시 img.complete를 직접 확인해 상태를 맞춘다.
+  const syncOnMount = useCallback((node: HTMLImageElement | null) => {
+    if (!node || !node.complete) return;
+    if (node.naturalWidth > 0) setLoaded(true);
+    else setErrored(true);
+  }, []);
 
   // 사진 없음/실패 → 그라디언트 대신 마스코트 기본 이미지(플랫 배경, 그라디언트 아님).
   if (!src || errored) {
@@ -54,6 +62,7 @@ export function SpotImage({
       )}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
+        ref={syncOnMount}
         src={cldThumb(src, width)}
         alt={alt}
         loading={loading}
