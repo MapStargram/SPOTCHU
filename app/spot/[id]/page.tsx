@@ -290,7 +290,7 @@ export default async function SpotDetailScreen({
               </h2>
               {posts.length > 0 && (
                 <Link
-                  href={`/feed/${s.city}`}
+                  href={`/spot/${s.id}/photos`}
                   className="text-[11px] font-semibold text-[color:var(--muted)]"
                 >
                   전체 →
@@ -312,7 +312,7 @@ export default async function SpotDetailScreen({
               </Link>
             ) : (
               <ul className="flex flex-col gap-3">
-                {posts.map((p) => (
+                {posts.slice(0, 6).map((p) => (
                   <li
                     key={p.id}
                     className="overflow-hidden rounded-[14px] bg-white shadow-[shadow:var(--sh-card)]"
