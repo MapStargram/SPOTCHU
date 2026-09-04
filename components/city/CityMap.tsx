@@ -12,6 +12,7 @@ import {
   type Country,
   type RegionId,
 } from "@/lib/cities-geo";
+import { Flag } from "@/components/ui/Flag";
 
 // 평면 세계지도 도시 선택(기본 뷰). 지구본이 절반을 숨겨 생기던 스크롤/중복 리스트를 없애고,
 // 19개 국가 마커를 한 화면에 배치한다. 배경은 지구본 텍스처(earth-day.jpg)를 등장방형 그대로 재활용.
@@ -213,7 +214,7 @@ export function CityMap({ counts }: { counts?: Record<string, number> }) {
               }`}
               style={{ left: `${x}%`, top: `${y}%` }}
             >
-              <span aria-hidden>{c.flag}</span>
+              <Flag emoji={c.flag} alt="" />
               {SHORT_NAME[c.id] ?? c.name}
               {avail && (
                 <span className="text-[10px] font-extrabold text-coral">
@@ -235,9 +236,11 @@ export function CityMap({ counts }: { counts?: Record<string, number> }) {
             <ChevronLeft size={14} /> 지도로
           </button>
           <div className="mb-2 flex items-baseline gap-2 px-0.5">
-            <span aria-hidden className="text-[16px]">
-              {openCountry.flag}
-            </span>
+            <Flag
+              emoji={openCountry.flag}
+              alt=""
+              className="inline-block h-4 w-auto rounded-[2px]"
+            />
             <span className="text-[16px] font-extrabold tracking-[-0.02em] text-navy">
               {openCountry.name}
             </span>

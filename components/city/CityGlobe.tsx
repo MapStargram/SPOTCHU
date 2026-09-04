@@ -10,6 +10,7 @@ import {
   type Country,
   type Datum,
 } from "@/lib/cities-geo";
+import { Flag } from "@/components/ui/Flag";
 
 // 도시 선택 지구본(globe.gl) — 평면 지도(CityMap)의 대안 뷰. 나라 마커 → 나라 클릭 시 그 나라로
 // 줌인 + 도시 마커를 정확한 좌표에 표시. 도시 마커/버튼 클릭 → /home/[city]. "전체 지구본"으로 줌아웃.
@@ -192,9 +193,11 @@ export function CityGlobe({ counts }: { counts?: Record<string, number> }) {
                         aria-label={`${country.name} ${country.cities.length}개 도시`}
                         className="flex items-center gap-1.5 rounded-full border border-[color:var(--line)] bg-white py-2 pl-3 pr-3.5 shadow-[shadow:var(--sh-card)] transition active:scale-[0.97]"
                       >
-                        <span aria-hidden className="text-[15px] leading-none">
-                          {country.flag}
-                        </span>
+                        <Flag
+                          emoji={country.flag}
+                          alt=""
+                          className="inline-block h-[15px] w-auto rounded-[2px]"
+                        />
                         <span className="text-[13px] font-bold tracking-[-0.01em] text-navy">
                           {country.name}
                         </span>
