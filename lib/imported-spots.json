@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T04:06:57.106Z",
+  "generatedAt": "2026-09-04T10:06:33.124Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -143,7 +143,13 @@
       "workId": "the-fault-in-our-stars",
       "scene": "Leidsegracht 4 운하 벤치 장면",
       "verified": "reported",
-      "source": "https://www.movie-locations.com/movies/f/Fault-In-Our-Stars.php"
+      "source": "https://www.movie-locations.com/movies/f/Fault-In-Our-Stars.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516339/spotchu/spots/io6vhthptapk3imxb0tk.jpg",
+      "imageCredit": {
+        "author": "Supercarwaar",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Leidsegracht,_Amsterdam.jpg"
+      }
     },
     {
       "id": "amsterdam-fault-in-our-stars-rijksmuseum-passage",
@@ -5549,7 +5555,13 @@
       "workId": "skyfall",
       "scene": "본드가 실바를 쫓아 '템플'에서 '엠뱅크먼트'까지 이어지는 지하철 추격·탈선 장면",
       "verified": "reported",
-      "source": "https://en.wikipedia.org/wiki/Charing_Cross_tube_station"
+      "source": "https://en.wikipedia.org/wiki/Charing_Cross_tube_station",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516345/spotchu/spots/smf9iysutwq7lyiqfbky.jpg",
+      "imageCredit": {
+        "author": "mattbuck (category)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Charing_Cross_station_MMB_04_375902.jpg"
+      }
     },
     {
       "id": "london-claremont-square-grimmauld-place-harry-potter-8b41",
@@ -6199,7 +6211,13 @@
       "tip": "웨스트본 파크 로드와 포토벨로 로드가 만나는 모퉁이입니다. 파란 대문 집과 도보 3분 거리라 함께 묶어 촬영하기 좋습니다.",
       "workId": "notting-hill",
       "scene": "안나 스콧과의 첫 만남 — 오렌지주스를 쏟고 그의 집에서 옷을 갈아입히는 장면의 시작점",
-      "source": "https://movie-locations.com/movies/n/Notting-Hill.php"
+      "source": "https://movie-locations.com/movies/n/Notting-Hill.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516348/spotchu/spots/khlyjtgqqiizkhddlde5.jpg",
+      "imageCredit": {
+        "author": "Papertree at English Wikipedia",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Portobello_Road,_Notting_Hill.jpg"
+      }
     },
     {
       "id": "london-oxford-street-wardour-corner-28-days-later-e02b",
@@ -6915,7 +6933,13 @@
       "workId": "la-casa-de-papel",
       "scene": "시즌 1–2의 허구 스페인 왕립 조폐국 외관 촬영지",
       "verified": "reported",
-      "source": "https://www.esmadrid.com/casa-papel-madrid"
+      "source": "https://www.esmadrid.com/casa-papel-madrid",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516351/spotchu/spots/mai3n4hbydgdvix5kr3z.jpg",
+      "imageCredit": {
+        "author": "Luis García (Zaqarbal)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Edificio_central_del_CSIC_(Madrid)_01.jpg"
+      }
     },
     {
       "id": "madrid-etsiae-cardenal-cisneros-casa-de-papel-9f2a",
@@ -7503,7 +7527,13 @@
       "workId": "beyond-the-boundary",
       "scene": "나라 호텔 본관이 나세 가문 저택 모델로 소개된 외관·내부 장면; 정확한 standing point는 사람 검토",
       "verified": "reported",
-      "source": "https://kspkk.co.jp/butaitanbou/kyokai_nara.html"
+      "source": "https://kspkk.co.jp/butaitanbou/kyokai_nara.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516354/spotchu/spots/ykeke3afsadbmpvcprwl.jpg",
+      "imageCredit": {
+        "author": "Daderot",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nara_Hotel_main_building_-_Nara,_Japan_-_DSC07416.jpg"
+      }
     },
     {
       "id": "nara-demon-slayer-yagyu-ittoseki-f92c",
@@ -7948,7 +7978,13 @@
       "tip": "노스무어가 쪽 코너에서 간판과 야외 테이블이 보이는 구도로 촬영. 지금도 영업 중이라 주말 브런치 시간대엔 대기줄이 있다.",
       "workId": "the-devil-wears-prada",
       "scene": "네이트가 근무하는 레스토랑에서 앤디의 승진을 친구들과 축하하는 장면",
-      "source": "https://onlocationtours.com/locations/the-devil-wears-prada-locations/"
+      "source": "https://onlocationtours.com/locations/the-devil-wears-prada-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516356/spotchu/spots/uriwyt7eihoeedvwggzl.jpg",
+      "imageCredit": {
+        "author": "Eden, Janine and Jim from New York City",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bubby%27s_(53877702143).jpg"
+      }
     },
     {
       "id": "newyork-buddakan-sex-and-the-city-a56c",
@@ -9358,7 +9394,13 @@
       "workId": "josee-the-tiger-and-the-fish",
       "scene": "HEP FIVE 관람차 후 한큐 선광장에서 쉬는 데이트 장면",
       "verified": "reported",
-      "source": "https://metronine.osaka/article_tour/20210312-joseetora-seichi/"
+      "source": "https://metronine.osaka/article_tour/20210312-joseetora-seichi/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516359/spotchu/spots/crv3sjfcnhlocduufavc.jpg",
+      "imageCredit": {
+        "author": "BradBeattie",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:HEP_Five_Ferris_Wheel.jpg"
+      }
     },
     {
       "id": "osaka-josee-aizenzaka-slope-8f12",
@@ -9563,7 +9605,13 @@
       "workId": "amelie",
       "scene": "생마르탱 운하에서 물수제비(리코셰)를 뜨는 장면",
       "verified": "reported",
-      "source": "https://www.allocine.fr/film/fichefilm-27063/secrets-tournage/"
+      "source": "https://www.allocine.fr/film/fichefilm-27063/secrets-tournage/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516362/spotchu/spots/e1qtomlzj8ntfrx4thfd.jpg",
+      "imageCredit": {
+        "author": "Superbass",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:2022-04-14-Passerelle_de_la_Grange-aux-Belles-8590.jpg"
+      }
     },
     {
       "id": "paris-amelie-gare-de-lest-photobooth-7f1d",
@@ -10051,7 +10099,13 @@
       "tip": "루브르 정식 입장권으로 드농관 1층 살 몰리앙 방문. 상시 혼잡하니 개장 직후 방문이 유리하다.",
       "workId": "john-wick-chapter-4",
       "scene": "윈스턴이 마르퀴와 만나는 장면(들라크루아 '민중을 이끄는 자유의 여신' 앞)",
-      "source": "https://screenrant.com/john-wick-4-filming-locations-explained/"
+      "source": "https://screenrant.com/john-wick-4-filming-locations-explained/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516365/spotchu/spots/mfvwyivbsphpz5oo8pj4.jpg",
+      "imageCredit": {
+        "author": "Wilfredor",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Visitors_of_Louvre_and_Nike_of_Samothrace.jpg"
+      }
     },
     {
       "id": "paris-luxembourg-gardens-kiosque-7e1c",
@@ -10561,7 +10615,13 @@
       "tip": "폭이 좁아 차량이 거의 다니지 않는 보행자 골목이다. 케 드 콩티 쪽 입구에서 골목이 좁아지는 안쪽을 향해 담는 구도가 극중 트럭이 끼여 멈추는 장면과 비슷한 느낌을 준다.",
       "workId": "mission-impossible-fallout",
       "scene": "경찰에 쫓기던 트럭이 좁은 골목에 끼여 멈추고, 헌트와 워커가 대기 중이던 오토바이로 갈아타 탈출하는 장면",
-      "source": "https://www.sceen-it.com/sceen/3319/Mission-Impossible-Fallout/Rue-de-Nevers"
+      "source": "https://www.sceen-it.com/sceen/3319/Mission-Impossible-Fallout/Rue-de-Nevers",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516369/spotchu/spots/wzift1co09f5xxoqvqjq.jpg",
+      "imageCredit": {
+        "author": "Mbzt",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:P1070489_Paris_VI_rue_de_Nevers_rwk.JPG"
+      }
     },
     {
       "id": "paris-rue-scribe-american-express-charade-b48d",
@@ -10575,7 +10635,13 @@
       "tip": "옥상은 출입 불가하니 길 건너편 인도에서 삼각 코너 파사드를 올려다보는 구도로. 오페라 가르니에에서 도보 3분.",
       "workId": "charade",
       "scene": "피터가 아메리칸 익스프레스 사무실을 찾아가고 건물 옥상에서 격투가 벌어지는 장면",
-      "source": "https://en.wikipedia.org/wiki/Charade_(1963_film)"
+      "source": "https://en.wikipedia.org/wiki/Charade_(1963_film)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516372/spotchu/spots/tnqvgpneqdlytst05ggv.jpg",
+      "imageCredit": {
+        "author": "Chabe01",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Rue_Scribe_-_Paris_IX_(FR75)_-_2021-06-28_-_1.jpg"
+      }
     },
     {
       "id": "paris-saint-eustache-eglise-3d9a",
@@ -14306,7 +14372,13 @@
       "workId": "perfect-days",
       "scene": "영화 초반 히라야마의 첫 청소 루틴 시퀀스에 등장하는 화장실 (극중 약 7분경)",
       "verified": "reported",
-      "source": "https://tokyotoilet.jp/ebisu_east_park/"
+      "source": "https://tokyotoilet.jp/ebisu_east_park/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516376/spotchu/spots/xo8sdbjfqnmr7lyev8rn.jpg",
+      "imageCredit": {
+        "author": "Syced",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Parc_d%27Ebisu-higashi_2.jpg"
+      }
     },
     {
       "id": "tokyo-ebisu-park-toilet-perfect-days-4b6c",
@@ -14606,7 +14678,13 @@
       "workId": "perfect-days",
       "scene": "히라야마의 청소 루틴 몽타주에 등장, '아마야도리' 이름 그대로 원형 처마가 특징인 화장실 (극중 약 45분경)",
       "verified": "reported",
-      "source": "https://tokyotoilet.jp/jingu-dori_park/"
+      "source": "https://tokyotoilet.jp/jingu-dori_park/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516379/spotchu/spots/owrtjtdx3260bwwwcglz.jpg",
+      "imageCredit": {
+        "author": "sergejf",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Jingu-dori_public_restrooms.jpg"
+      }
     },
     {
       "id": "tokyo-joganji-temple-lost-in-translation-9b2c",
@@ -14879,7 +14957,13 @@
       "workId": "perfect-days",
       "scene": "히라야마의 도쿄 공중화장실 청소 루틴 몽타주에 등장 (극중 약 12분경)",
       "verified": "reported",
-      "source": "https://tokyotoilet.jp/nabesima_park/"
+      "source": "https://tokyotoilet.jp/nabesima_park/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516383/spotchu/spots/obfjrxyutsjsjelwthjx.jpg",
+      "imageCredit": {
+        "author": "Kamemaru2000",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nabeshima_shoutou_park_shibuya.JPG"
+      }
     },
     {
       "id": "tokyo-nakai-station-toki-kake-b4c1",
@@ -15391,7 +15475,13 @@
       "workId": "tokyo-godfathers",
       "scene": "공원 북쪽에서 도쿄도청사를 올려다보는 구도 — 노숙자들의 골판지 집이 도청 아래 있다는 설정의 원경",
       "verified": "reported",
-      "source": "https://dtman.info/anime-pilgrimage-for-tokyo-godfathers/"
+      "source": "https://dtman.info/anime-pilgrimage-for-tokyo-godfathers/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516389/spotchu/spots/gfqu6pyqxhz5cfpjpvfd.jpg",
+      "imageCredit": {
+        "author": "Another Believer",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Shinjuku_Niagara_Falls_at_Shinjuku_Central_Park_in_Tokyo,_2019_-_075.jpg"
+      }
     },
     {
       "id": "tokyo-shinjuku-central-park-water-plaza-tenkinoko-d4",
@@ -15996,7 +16086,13 @@
       "time": "오후, 대운하 반사광",
       "workId": "summertime-1955",
       "scene": "제인이 머무는 펜시오네 피오리니의 테라스 장면",
-      "source": "https://lucasitaly.com/2017/11/30/venice-in-the-movies-summertime-1955/"
+      "source": "https://lucasitaly.com/2017/11/30/venice-in-the-movies-summertime-1955/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788516392/spotchu/spots/vmu0jmtj9pynhdnraqox.jpg",
+      "imageCredit": {
+        "author": "This Photo was taken by Wolfgang Moroder. Feel fr",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Campo_san_Vio_sul_Canal_Grande_a_Venezia.jpg"
+      }
     },
     {
       "id": "venice-conservatorio-benedetto-marcello-casino-royale-4f0d",
