@@ -189,8 +189,11 @@ export function AccountManager({
           </Section>
 
           <p className="px-1.5 text-[11px] leading-[1.6] text-[color:var(--muted)]">
-            같은 이메일을 쓰는 소셜 계정은 자동으로 한 계정에 연결돼요. 마지막
-            남은 로그인 수단은 계정 잠금을 막기 위해 해제할 수 없어요.
+            여러 소셜을 연결하면 어느 걸로 로그인해도 같은 계정이에요. 같은
+            이메일은 자동으로 합쳐지고, 카카오처럼 이메일을 받지 않는 소셜도
+            여기서 <b className="font-semibold text-navy">연결하기</b>를 누르면
+            지금 계정에 합쳐져요. 마지막 남은 로그인 수단은 계정 잠금을 막기
+            위해 해제할 수 없어요.
           </p>
         </div>
       </div>

@@ -133,27 +133,36 @@ export function Settings({
 
         <div className="flex flex-col gap-5">
           {/* 계정 */}
-          <Section title="계정">
-            <Row
-              icon={<Pencil size={18} />}
-              label="프로필 편집"
-              extra={
-                profile
-                  ? `${countryById(country)?.flag ?? ""} ${nick || "닉네임 없음"}`.trim()
-                  : "로그인 필요"
-              }
-              chevron
-              onClick={openEdit}
-            />
-            <Row
-              icon={<Users size={18} />}
-              label="연결된 로그인"
-              extra={profile ? providers || "없음" : "로그인 필요"}
-              href="/profile/account"
-              chevron
-              last
-            />
-          </Section>
+          <div>
+            <Section title="계정">
+              <Row
+                icon={<Pencil size={18} />}
+                label="프로필 편집"
+                extra={
+                  profile
+                    ? `${countryById(country)?.flag ?? ""} ${nick || "닉네임 없음"}`.trim()
+                    : "로그인 필요"
+                }
+                chevron
+                onClick={openEdit}
+              />
+              <Row
+                icon={<Users size={18} />}
+                label="연결된 로그인"
+                extra={profile ? providers || "없음" : "로그인 필요"}
+                href="/profile/account"
+                chevron
+                last
+              />
+            </Section>
+            {profile && (
+              <p className="mt-1.5 px-1.5 text-[11px] leading-[1.6] text-[color:var(--muted)]">
+                카카오·네이버·구글을{" "}
+                <b className="font-semibold text-navy">연결된 로그인</b>에서
+                추가하면, 어느 걸로 로그인해도 하나의 계정으로 쓸 수 있어요.
+              </p>
+            )}
+          </div>
 
           {/* 앱 (준비중 — 앱 전체 다크 팔레트/다국어 미구현) */}
           <Section title="앱">

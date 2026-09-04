@@ -11,19 +11,15 @@ import { CoralButton } from "@/components/ui/CoralButton";
 import { Field, Notice, authInputClass } from "@/components/auth/AuthUI";
 import { signupWithEmail } from "@/lib/actions/auth";
 import { COUNTRIES } from "@/lib/cities-geo";
+import {
+  ConsentChecklist,
+  type ConsentKey,
+} from "@/components/auth/ConsentChecklist";
 
 // A5b · 이메일 가입 — 이메일/비밀번호 + 생년 + 필수 동의 3종. 제출 시 signupWithEmail →
 // 성공하면 인증 메일 안내 + 자동 로그인 후 /city. 필수 동의 미완료 시 제출 불가.
 const AUTH_ENABLED = process.env.NEXT_PUBLIC_AUTH_ENABLED === "true";
 const THIS_YEAR = new Date().getFullYear();
-
-const CONSENTS = [
-  { key: "terms", label: "(필수) 이용약관에 동의합니다" },
-  { key: "privacy", label: "(필수) 개인정보 수집·이용에 동의합니다" },
-  { key: "location", label: "(필수) 위치기반서비스 이용약관에 동의합니다" },
-] as const;
-
-type ConsentKey = (typeof CONSENTS)[number]["key"];
 
 export default function SignupScreen() {
   const router = useRouter();
@@ -212,25 +208,7 @@ export default function SignupScreen() {
           </select>
         </div>
 
-        <fieldset className="mt-1 flex flex-col gap-2.5 rounded-2xl bg-[color:var(--cream-2)] p-3.5">
-          <legend className="px-1 text-[12px] font-bold text-navy">
-            필수 동의
-          </legend>
-          {CONSENTS.map((c) => (
-            <label
-              key={c.key}
-              className="flex cursor-pointer items-center gap-2.5 text-[12px] text-navy"
-            >
-              <input
-                type="checkbox"
-                checked={agree[c.key]}
-                onChange={() => toggle(c.key)}
-                className="h-[18px] w-[18px] shrink-0 accent-[color:var(--coral)]"
-              />
-              <span>{c.label}</span>
-            </label>
-          ))}
-        </fieldset>
+        <ConsentChecklist agree={agree} onToggle={toggle} />
 
         <CoralButton
           type="submit"
