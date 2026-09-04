@@ -43,16 +43,30 @@ function nearCity(p: LatLng, city: CityId): boolean {
   return Math.abs(p.lat - c.lat) < 1.5 && Math.abs(p.lng - c.lng) < 1.5;
 }
 
+// 카테고리(칩)·작품(하위필터) 동시 적용. 둘 다 null이면 전체.
+function applyFilters(
+  spots: Spot[],
+  cat: string | null,
+  wk: string | null,
+): Spot[] {
+  if (!cat && !wk) return spots;
+  return spots.filter(
+    (s) => (!cat || s.categoryLabel === cat) && (!wk || s.workId === wk),
+  );
+}
+
 function GoogleMapLayer({
   city,
   userPos,
   category,
+  work,
   onViewportSpots,
   onSelectSpot,
 }: {
   city: CityId;
   userPos: LatLng | null;
   category: string | null;
+  work: string | null;
   onViewportSpots: (spots: Spot[]) => void;
   onSelectSpot: (spot: Spot) => void;
 }) {
@@ -62,6 +76,7 @@ function GoogleMapLayer({
         city={city}
         userPos={userPos}
         category={category}
+        work={work}
         onViewportSpots={onViewportSpots}
         onSelectSpot={onSelectSpot}
       />
@@ -76,12 +91,14 @@ function ImperativeMap({
   city,
   userPos,
   category,
+  work,
   onViewportSpots,
   onSelectSpot,
 }: {
   city: CityId;
   userPos: LatLng | null;
   category: string | null;
+  work: string | null;
   onViewportSpots: (spots: Spot[]) => void;
   onSelectSpot: (spot: Spot) => void;
 }) {
@@ -103,6 +120,8 @@ function ImperativeMap({
   onSelectRef.current = onSelectSpot;
   const categoryRef = useRef(category);
   categoryRef.current = category;
+  const workRef = useRef(work);
+  workRef.current = work;
   const rawSpotsRef = useRef<Spot[]>([]); // 마지막 뷰포트 스팟(필터 전) — 칩 변경 시 재필터용
 
   // 뷰포트 스팟에 맞춰 마커를 id 기준으로 diff(추가/제거). 매번 전 마커를 재생성하지 않아 깜빡임 없음.
@@ -190,10 +209,11 @@ function ImperativeMap({
           const spots = (await res.json()) as Spot[];
           if (cancelled) return;
           rawSpotsRef.current = spots;
-          const cat = categoryRef.current;
-          const shown = cat
-            ? spots.filter((s) => s.categoryLabel === cat)
-            : spots;
+          const shown = applyFilters(
+            spots,
+            categoryRef.current,
+            workRef.current,
+          );
           syncMarkers(shown);
           onSpotsRef.current(shown);
         } catch {
@@ -220,14 +240,12 @@ function ImperativeMap({
     };
   }, [city, syncMarkers]);
 
-  // 카테고리 칩 변경 → 재fetch 없이 마지막 뷰포트 스팟을 재필터해 마커·미리보기 갱신.
+  // 카테고리/작품 칩 변경 → 재fetch 없이 마지막 뷰포트 스팟을 재필터해 마커·미리보기 갱신.
   useEffect(() => {
-    const shown = category
-      ? rawSpotsRef.current.filter((s) => s.categoryLabel === category)
-      : rawSpotsRef.current;
+    const shown = applyFilters(rawSpotsRef.current, category, work);
     syncMarkers(shown);
     onSpotsRef.current(shown);
-  }, [category, syncMarkers]);
+  }, [category, work, syncMarkers]);
 
   // 현재 위치가 잡히면 중심 이동 + '내 위치' 마커(FAB 재요청 시에도 재중심).
   // 도시 근처일 때만(다른 도시 브라우징 중엔 내 위치로 튀지 않도록).
@@ -323,11 +341,13 @@ export function MapView({
   userPos,
   onLocate,
   category,
+  work,
 }: {
   city: CityId;
   userPos: LatLng | null; // 현재 위치(ExploreView가 소유 — 피드 거리순과 공유)
   onLocate: () => void; // FAB '내 위치로 이동' → 재요청
   category?: string | null; // 지도 카테고리 필터(칩). null=전체
+  work?: string | null; // 작품 하위필터(애니/드라마 선택 시). null=전체 작품
 }) {
   // 지도는 자체적으로 뷰포트 스팟을 로드(도시 전체 일괄 로드 금지, rules §불변식).
   const [viewportSpots, setViewportSpots] = useState<Spot[]>([]);
@@ -349,6 +369,7 @@ export function MapView({
             city={city}
             userPos={userPos}
             category={category ?? null}
+            work={work ?? null}
             onViewportSpots={(spots) => {
               setViewportSpots(spots);
               setSelectedSpot(null); // 새 뷰포트 로드 시 마커 선택 해제

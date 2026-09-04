@@ -34,7 +34,7 @@
   - **현재 위치 표시**: 위치 권한 허용 시.
   - **뷰포트 로드 컨트롤**: 이동/줌 시 뷰포트 기준으로 스팟을 로드(디바운스). 자동 재로드 vs "이 지역 재검색" 버튼 방식은 TODO.
 - **스팟 미니 카드**: 핀 탭 시 대표 사진·이름·검증 상태·카테고리 요약. 탭 → 스팟 상세.
-- ~~**+ 플로팅 버튼**~~: 제거됨(2026-09-03, [#120](https://github.com/MapStargram/SPOTCHU/pull/120)). 스팟 제보 진입은 하단 내비 **제보 탭**으로 이동([`../10-spot-registration/spec.md`](../10-spot-registration/spec.md)).
+- **+ 플로팅 버튼(제보 진입)**: 지도·피드의 코럴 (+) FAB → 스팟 제보([`../10-spot-registration/spec.md`](../10-spot-registration/spec.md)). (2026-09-03 [#120](https://github.com/MapStargram/SPOTCHU/pull/120)으로 제거→제보 탭 이동했다가, 2026-09-04 [#145](https://github.com/MapStargram/SPOTCHU/pull/145)로 하단 3번째 탭을 커뮤니티 피드로 교체하며 제보 진입을 탐색 FAB으로 되돌림.)
 - **도시 컨텍스트 표시**: 현재 선택 도시명(변경은 홈/도시 선택에서).
 
 ## 인터랙션 흐름

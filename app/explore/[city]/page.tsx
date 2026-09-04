@@ -1,7 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import { AppShell } from "@/components/shell/AppShell";
 import { ExploreView } from "@/components/explore/ExploreView";
-import { getCities, getSpotsByCity } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
+import { getCities, getSpotsByCity, getWorks } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
 import { getCurrentUser } from "@/lib/session";
 import { getSavedSpotIds } from "@/lib/actions/mutations";
 import { type CityId } from "@/lib/mock";
@@ -24,10 +24,11 @@ export default async function ExplorePage({
     if (fallback) redirect(`/explore/${fallback}`);
     notFound();
   }
-  const [spots, user, savedIds] = await Promise.all([
+  const [spots, user, savedIds, works] = await Promise.all([
     getSpotsByCity(city as CityId),
     getCurrentUser(),
     getSavedSpotIds(),
+    getWorks(), // 작품 id→제목(작품 하위필터·그룹 라벨)
   ]);
   return (
     <AppShell active="explore">
@@ -37,6 +38,7 @@ export default async function ExplorePage({
         cities={cities.map((c) => ({ id: c.id, name: c.name }))}
         loggedIn={!!user}
         initialSaved={savedIds}
+        works={works.map((w) => ({ id: w.id, label: w.label }))}
       />
     </AppShell>
   );
