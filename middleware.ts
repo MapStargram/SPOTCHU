@@ -16,8 +16,9 @@ const gate = auth((req) => {
   if (!user?.needsConsent) return NextResponse.next();
 
   const { pathname, search } = req.nextUrl;
-  // 동의 화면 자체는 예외(무한 리다이렉트 방지). /api/auth는 matcher에서 이미 제외.
-  if (pathname.startsWith("/consent")) return NextResponse.next();
+  // 동의 화면 자체 + 정책 문서(동의 중 열람)는 예외(무한 리다이렉트 방지). /api/auth는 matcher에서 이미 제외.
+  if (pathname.startsWith("/consent") || pathname.startsWith("/policy"))
+    return NextResponse.next();
 
   const url = new URL("/consent", req.nextUrl);
   url.searchParams.set("callbackUrl", pathname + search);

@@ -11,15 +11,13 @@ import { Field, Notice, authInputClass } from "@/components/auth/AuthUI";
 import { completeSocialConsent } from "@/lib/actions/auth";
 import { meetsMinAge } from "@/lib/auth/age";
 import { COUNTRIES } from "@/lib/cities-geo";
+import {
+  ConsentChecklist,
+  type ConsentKey,
+} from "@/components/auth/ConsentChecklist";
 
 // A5c · 소셜 가입 동의 게이트(클라이언트). 필수 동의 3종 + 출생연도(만14세). 이메일 가입과 동일 정책.
 const THIS_YEAR = new Date().getFullYear();
-const CONSENTS = [
-  { key: "terms", label: "(필수) 이용약관에 동의합니다" },
-  { key: "privacy", label: "(필수) 개인정보 수집·이용에 동의합니다" },
-  { key: "location", label: "(필수) 위치기반서비스 이용약관에 동의합니다" },
-] as const;
-type ConsentKey = (typeof CONSENTS)[number]["key"];
 
 export function ConsentGate({
   callbackUrl,
@@ -153,25 +151,7 @@ export function ConsentGate({
           </select>
         </div>
 
-        <fieldset className="mt-1 flex flex-col gap-2.5 rounded-2xl bg-[color:var(--cream-2)] p-3.5">
-          <legend className="px-1 text-[12px] font-bold text-navy">
-            필수 동의
-          </legend>
-          {CONSENTS.map((c) => (
-            <label
-              key={c.key}
-              className="flex cursor-pointer items-center gap-2.5 text-[12px] text-navy"
-            >
-              <input
-                type="checkbox"
-                checked={agree[c.key]}
-                onChange={() => toggle(c.key)}
-                className="h-[18px] w-[18px] shrink-0 accent-[color:var(--coral)]"
-              />
-              <span>{c.label}</span>
-            </label>
-          ))}
-        </fieldset>
+        <ConsentChecklist agree={agree} onToggle={toggle} />
 
         <CoralButton
           type="submit"
