@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T13:11:50.533Z",
+  "generatedAt": "2026-09-04T13:54:58.943Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -5142,6 +5142,20 @@
       }
     },
     {
+      "id": "jeju-dokkaebiroad-yeonpung-yeonga-a04e",
+      "title": "신비의 도로(도깨비도로) (연풍연가 촬영지)",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.4512,
+      "lng": 126.4873,
+      "area": "제주시 노형동",
+      "subject": "내리막이 오르막처럼 보이는 착시 구간 도로면과 표지판",
+      "tip": "도로 옆 지정 정차 공간에서 도로면을 낮은 각도로 촬영하면 착시 효과가 잘 드러난다. 차량이 다니는 실제 도로이므로 차로 위로 나가지 말 것.",
+      "workId": "yeonpung-yeonga",
+      "scene": "영서가 도깨비도로에 얽힌 아버지의 사연을 이야기하는 장면",
+      "source": "https://seogwipo.grandculture.net/seogwipo/toc/GC04601365"
+    },
+    {
       "id": "jeju-geumoreum-crater-sunset-c93d",
       "title": "금오름 분화구 산정화구호 일몰 뷰포인트",
       "city": "jeju",
@@ -5201,6 +5215,20 @@
       "source": "https://www.harpersbazaar.co.kr"
     },
     {
+      "id": "jeju-jongdalri-yeonpung-yeonga-6d18",
+      "title": "종달리 해안도로 갯벌 (연풍연가 촬영지)",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.4829,
+      "lng": 126.9018,
+      "area": "제주시 구좌읍 종달리",
+      "subject": "물 빠진 갯벌 너머로 우도가 보이는 해안도로 전망",
+      "tip": "간조 시간대(물때 확인 후 방문)에 갯벌이 넓게 드러나 영화 속 조개잡이 장면과 비슷한 풍경을 담을 수 있다. 해안도로 갓길 전망 공간에서 촬영할 것.",
+      "workId": "yeonpung-yeonga",
+      "scene": "영서와 태희가 드넓은 모래 뻘에 앉아 조개를 캐며 다정해지는 장면",
+      "source": "https://seogwipo.grandculture.net/seogwipo/toc/GC04601365"
+    },
+    {
       "id": "jeju-mulyeongari-werewolf-meadow-5c8b",
       "title": "물영아리오름 입구 목초지 삼나무 숲길 포토스팟",
       "city": "jeju",
@@ -5258,6 +5286,26 @@
       "source": "https://namu.wiki/w/%EA%B1%B4%EC%B6%95%ED%95%99%EA%B0%9C%EB%A1%A0(%EC%98%81%ED%99%94)"
     },
     {
+      "id": "jeju-sangumburi-yeonpung-yeonga-b7e2",
+      "title": "산굼부리 (연풍연가 촬영지)",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.4316,
+      "lng": 126.69,
+      "area": "제주시 조천읍 교래리",
+      "subject": "산굼부리 화구벽 둘레길에서 억새 초원과 분화구 안쪽을 함께 담는 구도",
+      "tip": "매표소를 지나 계단길을 오르면 좌측 꽃밭·둘레길 구간이 촬영 지점으로 알려져 있다. 가을(10~11월) 억새철에 방문하면 영화 속 장면과 가장 비슷한 색감을 담을 수 있다.",
+      "workId": "yeonpung-yeonga",
+      "scene": "태희와 영서가 첫 여행지인 산굼부리 안을 둘러보며 어색한 공기 속을 걷는 장면",
+      "source": "https://seogwipo.grandculture.net/seogwipo/toc/GC04601365",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530055/spotchu/spots/vfgmznsnlzzuqdfnotaz.jpg",
+      "imageCredit": {
+        "author": "Naturehead",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sangumburi_volcanic_crater.jpg"
+      }
+    },
+    {
       "id": "jeju-seoyeon-house-window-7b4a",
       "title": "카페 서연의집 1층 폴딩도어 오션뷰 액자 프레임",
       "city": "jeju",
@@ -5290,6 +5338,40 @@
       "scene": "tvN 드라마 <우리들의 블루스>에서 제주 푸릉마을 인물들(김우빈, 한지민 등)의 낭만적인 해안 드라이브 및 바닷가 데이트 배경으로 등장. SBS 드라마 <시크릿 가든> 자전거 라이딩 명장면 촬영지.",
       "verified": "reported",
       "source": "https://www.visitjeju.net"
+    },
+    {
+      "id": "jeju-sinyangbeach-yeonpung-yeonga-92cf",
+      "title": "신양해수욕장 (연풍연가 촬영지)",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.431,
+      "lng": 126.9155,
+      "area": "서귀포시 성산읍 신양리",
+      "subject": "초승달 모양 백사장에서 섭지코지 방향으로 이어지는 해안선",
+      "tip": "해 질 무렵 백사장 동쪽 끝에서 섭지코지 쪽을 바라보고 촬영하면 부드러운 역광을 담을 수 있다.",
+      "workId": "yeonpung-yeonga",
+      "scene": "영서와 태희가 해변에 만들어진 오두막에 맨발로 앉아 지난 추억을 이야기하는 장면",
+      "source": "https://seogwipo.grandculture.net/seogwipo/toc/GC04601365"
+    },
+    {
+      "id": "jeju-songaksan-yeonpung-yeonga-f3a9",
+      "title": "송악산 둘레길 (연풍연가 촬영지)",
+      "city": "jeju",
+      "category": "drama",
+      "lat": 33.2077,
+      "lng": 126.2909,
+      "area": "서귀포시 대정읍 상모리",
+      "subject": "둘레길 계단 구간에서 가파도·마라도·형제섬이 보이는 해안 절경 구도",
+      "tip": "능선 계단에서 뒤돌아 찍으면 형제섬과 바다가 함께 프레임에 들어온다. 해안 절벽 지대라 바람이 강하니 난간 안쪽에서 촬영할 것.",
+      "workId": "yeonpung-yeonga",
+      "scene": "좁고 가파른 언덕을 오르던 태희가 쑥스러운 듯 영서의 손을 놓고 앞서 걷는 '송악산 계단 장면'",
+      "source": "https://cine21.com/news/view/?mag_id=35336",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530058/spotchu/spots/ysxutwerekpxq0rbzbvv.jpg",
+      "imageCredit": {
+        "author": "Lcarrion88",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Songaksan.jpg"
+      }
     },
     {
       "id": "kobe-customs-house-wife-of-a-spy-7d2a",
@@ -5517,6 +5599,26 @@
       "source": "https://kobe-journal.com/archives/6388385388.html"
     },
     {
+      "id": "kyoto-botanical-garden-my-tomorrow-your-yesterday-f04c",
+      "title": "교토부립식물원 (나는 내일, 어제의 너와 만난다 촬영지)",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.0465,
+      "lng": 135.7621,
+      "area": "시모가모, 사쿄구, 교토 (Shimogamo, Sakyo-ku, Kyoto)",
+      "subject": "트라이던트 단풍나무(トウカエデ) 앞 산책로 구도",
+      "tip": "유료 입장(식물원 입장료 별도, 정기 휴원일 있음). 지하철 기타야마역에서 도보로 접근 가능하며 가을 단풍철 오후 빛이 특히 좋다.",
+      "workId": "my-tomorrow-your-yesterday",
+      "scene": "트라이던트 단풍나무 앞 고백 장면",
+      "source": "https://kyotopi.jp/articles/FBcEU",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530061/spotchu/spots/pkztxdy2dbgqfdyszsk6.jpg",
+      "imageCredit": {
+        "author": "PlusMinus",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:KyotoBotanicalGarden.jpg"
+      }
+    },
+    {
       "id": "kyoto-chionin-otokozaka-steps-8d3f",
       "title": "지온인 오토코자카 돌계단",
       "city": "kyoto",
@@ -5605,6 +5707,26 @@
         "author": "Saigen Jiro",
         "license": "CC0",
         "source": "https://commons.wikimedia.org/wiki/File:Fushimiinari-taisha,_naihaiden-1.jpg"
+      }
+    },
+    {
+      "id": "kyoto-fushimi-inari-senbon-torii-my-tomorrow-your-yesterday-d29a",
+      "title": "후시미이나리 센본토리이 (나는 내일, 어제의 너와 만난다 촬영지)",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 34.9698,
+      "lng": 135.7746,
+      "area": "후시미구, 교토 (Fushimi-ku, Kyoto)",
+      "subject": "끝없이 이어지는 주황색 도리이 터널 사이 참배길 구도",
+      "tip": "오쿠샤 호하이쇼를 지나 이나리산 정상 방향 참배길 구간이 촬영 장소. 이른 아침 개장 직후 방문하면 인파 없이 도리이 터널을 온전히 담을 수 있다.",
+      "workId": "my-tomorrow-your-yesterday",
+      "scene": "타카히사와 에미가 데이트 중 센본토리이를 지나가는 장면",
+      "source": "https://fushimiinari-guide.com/location-boku-asu/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530064/spotchu/spots/ytthu5ws2laylriqf8im.jpg",
+      "imageCredit": {
+        "author": "Jason Zhang",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fushimi_Inari-taisha_senbon-torii,_August_2019.jpg"
       }
     },
     {
@@ -5763,6 +5885,26 @@
       }
     },
     {
+      "id": "kyoto-mokkobashi-my-tomorrow-your-yesterday-b7e3",
+      "title": "모코바시 (나는 내일, 어제의 너와 만난다 촬영지)",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.0135,
+      "lng": 135.7818,
+      "area": "오카자키, 사쿄구 (Okazaki, Sakyo-ku, Kyoto)",
+      "subject": "시라카와 운하 위에 놓인 사람 한 명 폭의 좁은 외나무 다리",
+      "tip": "지하철 히가시야마역에서 헤이안진구 방향으로 시라카와를 따라 걷다 보면 나오는 작은 다리. 다리 폭이 매우 좁으니 통행에 주의하고, 봄 벚꽃철엔 인파가 몰린다.",
+      "workId": "my-tomorrow-your-yesterday",
+      "scene": "타카히사와 에미가 극 중 처음으로 손을 잡는 장면 촬영지",
+      "source": "https://kyotopi.jp/articles/tfWVP",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530068/spotchu/spots/mrfvr38ria52sdwapbpc.jpg",
+      "imageCredit": {
+        "author": "Indiana jo",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E9%87%8D%E8%A6%81%E6%96%87%E5%8C%96%E7%9A%84%E6%99%AF%E8%A6%B3_%E5%B2%A1%E5%B4%8E(%E4%BA%AC%E9%83%BD)3.JPG"
+      }
+    },
+    {
       "id": "kyoto-nanzenji-suirokaku-aqueduct-k-on-b202",
       "title": "교토 난젠지 수로각 붉은 벽돌 아치",
       "city": "kyoto",
@@ -5827,6 +5969,46 @@
         "author": "湖畔老",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/41679630@N05/18137243736"
+      }
+    },
+    {
+      "id": "kyoto-sanjo-ohashi-my-tomorrow-your-yesterday-c815",
+      "title": "산조대교 (나는 내일, 어제의 너와 만난다 촬영지)",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.0102,
+      "lng": 135.7708,
+      "area": "산조, 교토 (Sanjo, Kyoto)",
+      "subject": "카모강을 가로지르는 산조대교 위 인물 구도",
+      "tip": "게이한 산조역 바로 앞이라 접근이 쉽다. 저녁 노을 시간대에 다리와 카모강 실루엣이 잘 나온다.",
+      "workId": "my-tomorrow-your-yesterday",
+      "scene": "타카히사와 에미의 데이트 약속 장소로 등장",
+      "source": "https://filminglocation.work/jmovie/bokuasu/kinokimi01/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530072/spotchu/spots/l2hoc3unzcu8y1jfkqza.jpg",
+      "imageCredit": {
+        "author": "そらみみ",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sanjo-Ohashi_Bridge_from_east.JPG"
+      }
+    },
+    {
+      "id": "kyoto-seika-university-my-tomorrow-your-yesterday-a6d8",
+      "title": "교토세이카대학 (나는 내일, 어제의 너와 만난다 촬영지)",
+      "city": "kyoto",
+      "category": "drama",
+      "lat": 35.0857,
+      "lng": 135.7984,
+      "area": "이와쿠라, 사쿄구, 교토 (Iwakura, Sakyo-ku, Kyoto)",
+      "subject": "타카히사가 다니는 미술대학 캠퍼스 정문 외경",
+      "tip": "실제 운영 중인 대학 캠퍼스이므로 정문 등 외부 공개 구역에서만 촬영할 것. 에이잔전철을 이용해 접근할 수 있다.",
+      "workId": "my-tomorrow-your-yesterday",
+      "scene": "타카히사가 다니는 미술대학으로 등장",
+      "source": "https://filminglocation.work/jmovie/bokuasu/kinokimi01/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530074/spotchu/spots/wpxwv8b8fd2jk1jbogd6.jpg",
+      "imageCredit": {
+        "author": "Atelier Verde",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kyoto_Seika_University140524NI5.JPG"
       }
     },
     {
@@ -8391,6 +8573,22 @@
       }
     },
     {
+      "id": "nara-sanjodori-shara-7f2a",
+      "title": "산조도리 (사라소주 바사라 축제 촬영지)",
+      "city": "nara",
+      "category": "drama",
+      "lat": 34.68208,
+      "lng": 135.83242,
+      "area": "산조도리 동쪽 끝(사루사와 연못 인근), 나라시 / Sanjo-dori near Sarusawa Pond, Nara",
+      "subject": "사루사와 연못 쪽에서 서쪽 상점가 방향으로 뻗은 산조도리 거리 구도",
+      "tip": "매년 8월 말 '나라 바사라 마츠리' 기간엔 실제 퍼레이드가 이 거리에서 열려 영화 속 분위기를 그대로 느낄 수 있다. 평소엔 오래된 상점가 노포가 늘어선 거리 자체를 담기 좋다.",
+      "lens": "24-35mm",
+      "time": "바사라 마츠리 기간(8월 말) 저녁, 평소엔 이른 아침",
+      "workId": "sharasojyu",
+      "scene": "소꿉친구 유(夕)가 춤을 추고 아버지 타쿠(卓)가 실행위원장으로 활약하는 절정부 '바사라 축제' 장면 — 1999년부터 실제로 산조도리에서 열려온 여름 축제를 그대로 촬영했다",
+      "source": "https://yamatoji.nara-kankou.or.jp/filmlocation/course02/"
+    },
+    {
       "id": "nara-sarusawa-pond-kofukuji-pagoda-view-38bd",
       "title": "사루사와 연못 남서쪽 호반 (경계의 저편 & 케이온!! 코후쿠지 5층탑 뷰포인트)",
       "city": "nara",
@@ -8511,6 +8709,22 @@
       "workId": "beyond-the-boundary",
       "scene": "제7화 '구름빛(曇色)'에서 요몽에 홀린 이나미 사쿠라가 무기를 휘두르며 쿠리야마 미라이를 몰아붙여 격렬한 액션 배틀을 펼치는 낡은 시장 통로의 실제 배경 모델.",
       "source": "https://commons.wikimedia.org/wiki/File:Old_sign_for_Tsubai_Market,_Nara,_Japan.jpg"
+    },
+    {
+      "id": "nara-uoman-shara-e18b",
+      "title": "우오만 본점 (사라소주 아역배우 출연 어묵집)",
+      "city": "nara",
+      "category": "drama",
+      "lat": 34.68065,
+      "lng": 135.82909,
+      "area": "모치이도노 상점가, 나라시 / Mochiidono Center-gai, Nara",
+      "subject": "1901년 창업한 가마보코·사츠마아게 전문점 우오만 본점의 상점가 매장 정면",
+      "tip": "지금도 갓 튀긴 사츠마아게를 파는 인기 노포다. 매장 앞 상점가는 통행이 많으니 짧게 촬영하고 통로를 막지 말 것.",
+      "lens": "35mm 표준 단렌즈",
+      "time": "오전 9~11시(개점 직후, 한산할 때)",
+      "workId": "sharasojyu",
+      "scene": "매장을 총괄하는 현 전무가 어린 시절 주인공 '슌(俊)' 역으로 직접 출연한 모치이도노 상점가의 실제 노포",
+      "source": "https://yamatoji.nara-kankou.or.jp/filmlocation/course02/"
     },
     {
       "id": "nara-wakakusayama-summit-deer-c79d",
@@ -9888,6 +10102,29 @@
       }
     },
     {
+      "id": "okinawa-chatan-sunset-beach-nada-sou-sou-e83c",
+      "title": "차탄 선셋비치 (눈물이 주룩주룩 촬영지)",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.314996,
+      "lng": 127.754891,
+      "area": "北谷公園サンセットビーチ, 차탄초 미하마 (Chatan Park Sunset Beach, Okinawa main island — 이시가키섬 아님)",
+      "subject": "요타로와 소꿉친구 이나미네 게이코가 어울리던 해변",
+      "tip": "미하마 아메리칸빌리지 바로 옆 해변으로 나하공항에서 차로 약 40분. 오키나와 유수의 노을 명소이니 일몰 1시간 전에 도착하는 것을 추천한다.",
+      "lens": "24-70mm",
+      "time": "일몰 무렵",
+      "workId": "tears-for-you",
+      "scene": "요타로와 소꿉친구 이나미네 게이코가 어울리던 해변 장면",
+      "verified": "reported",
+      "source": "http://loca.ash.jp/show/2006/m2006_nadasoso.htm",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530077/spotchu/spots/fknfbxyxeyfuqgighivk.jpg",
+      "imageCredit": {
+        "author": "そらみみ",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Chatan_Sunset_Beach_(west)_20150317-2.JPG"
+      }
+    },
+    {
       "id": "okinawa-chinen-marine-leisure-aquatope-9d5b",
       "title": "지넨 카이요 레저센터 (아쿠아토프 성지)",
       "city": "okinawa",
@@ -9988,6 +10225,52 @@
       "workId": "the-aquatope-on-white-sand",
       "scene": "1화 — 후카가 조개껍질에 둘러싸인 채 해변에서 눈을 뜨는 장면",
       "source": "https://tboffice.hateblo.jp/entry/aquatope-hyakuna-beach"
+    },
+    {
+      "id": "okinawa-ikei-beach-nada-sou-sou-7c2e",
+      "title": "이케이 비치 (눈물이 주룩주룩 촬영지)",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.388112,
+      "lng": 127.991073,
+      "area": "伊計島(이케이섬), 우루마시 (Ikei Island, Uruma City — 오키나와 본섬에 해중도로로 연결된 부속섬, 이시가키섬 아님)",
+      "subject": "어린 시절 남매 요타로와 카오루가 함께 걸었던 해변",
+      "tip": "우루마시에서 헨자섬·미야기섬을 잇는 카이추도로(해중도로)를 건너 이케이대교로 들어가는 섬. 나하 시내에서 차로 약 1시간~1시간 20분 거리로 렌터카가 사실상 필수(대중교통 노선 미비)이며, 해변은 유료 입장 시설이다.",
+      "lens": "35mm",
+      "time": "오전 순광 또는 노을 무렵",
+      "workId": "tears-for-you",
+      "scene": "어린 요타로와 카오루가 함께 걷던 해변이자, 훗날 할머니와 카오루가 걷는 인상적인 바다 장면의 배경",
+      "verified": "reported",
+      "source": "https://www.jimovie.jp/nadasousou.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530080/spotchu/spots/jxqw9plpyn65js7jdpmy.jpg",
+      "imageCredit": {
+        "author": "Hideyuki KAMON",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Odomari_Beach_Ikei_Island_Uruma.jpg"
+      }
+    },
+    {
+      "id": "okinawa-kokusai-dori-nada-sou-sou-4f9a",
+      "title": "고쿠사이도리 (눈물이 주룩주룩 촬영지)",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.214053,
+      "lng": 127.680977,
+      "area": "国際通り(국제거리), 나하시 (Kokusai-dori, Naha — 오키나와 본섬 최대 번화가, 이시가키섬 아님)",
+      "subject": "요타로가 몰던 트럭이 카오루를 태우고 달리던 나하 최대 번화가",
+      "tip": "유이레일 겐초마에역·미에바시역에서 도보로 접근 가능한 약 1.6km 거리의 상점가. 낮에는 관광객 인파가 많으니 이른 아침이 한산해서 촬영하기 좋다.",
+      "lens": "24-35mm",
+      "time": "이른 아침",
+      "workId": "tears-for-you",
+      "scene": "요타로가 모는 트럭에 카오루를 태우고 달리던 나하 번화가 장면",
+      "verified": "reported",
+      "source": "http://loca.ash.jp/show/2006/m2006_nadasoso.htm",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530081/spotchu/spots/wwa4ppqetkuhgludy0sx.jpg",
+      "imageCredit": {
+        "author": "663highland",
+        "license": "CC BY 2.5",
+        "source": "https://commons.wikimedia.org/wiki/File:Kokusai-dori08s3s4440.jpg"
+      }
     },
     {
       "id": "okinawa-kouri-bridge-south-approach-b43e",
@@ -10129,6 +10412,29 @@
       "source": "https://www.animepilgrimage.com/ja/maps/place/2c1d0b66-0f31-4fb3-8f00-0afc5b5b9942"
     },
     {
+      "id": "okinawa-sakurazaka-nada-sou-sou-b6d1",
+      "title": "사쿠라자카 나카도리 (눈물이 주룩주룩 촬영지)",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.214778,
+      "lng": 127.690111,
+      "area": "桜坂中通り(사쿠라자카), 나하시 (Sakurazaka, Naha — 오키나와 본섬, 이시가키섬 아님)",
+      "subject": "채소를 배달하던 요타로가 오토바이를 세우고 동네 할머니와 이야기를 나누던 골목",
+      "tip": "국제거리 동쪽 끝에서 도보 5~8분, 사쿠라자카 극장 주변의 레트로한 골목. 밤에는 선술집 거리로 붐비니 한적한 낮 시간대 방문을 추천한다.",
+      "lens": "35-50mm",
+      "time": "낮 시간대",
+      "workId": "tears-for-you",
+      "scene": "채소를 배달 중이던 요타로가 오토바이를 세우고 동네 할머니에게 말을 걸던 골목 장면",
+      "verified": "reported",
+      "source": "http://loca.ash.jp/show/2006/m2006_nadasoso.htm",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530084/spotchu/spots/keb88keteoibdpgykam8.jpg",
+      "imageCredit": {
+        "author": "Kugel",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Sakurazaka_Theater,_Naha.JPG"
+      }
+    },
+    {
       "id": "okinawa-toyosaki-aniinii-hill-a92c",
       "title": "토요사키 츄라선 비치 '니니의 언덕' (영화 <눈물이 주룩주룩> 촬영지)",
       "city": "okinawa",
@@ -10144,6 +10450,29 @@
       "scene": "豊崎美らSUNビーチ 니니의 언덕 촬영 로케이션",
       "verified": "reported",
       "source": "https://www.city.tomigusuku.lg.jp/kanko_bunka_sports/shizen_koen/3275.html"
+    },
+    {
+      "id": "okinawa-university-ryukyus-nada-sou-sou-1a5f",
+      "title": "류큐대학 센바루캠퍼스 (눈물이 주룩주룩 촬영지)",
+      "city": "okinawa",
+      "category": "drama",
+      "lat": 26.252703,
+      "lng": 127.766542,
+      "area": "琉球大学 千原キャンパス, 니시하라초 (University of the Ryukyus, Nishihara — 오키나와 본섬, 이시가키섬 아님)",
+      "subject": "카오루가 찾아가 게이코와 대화를 나누던 대학 캠퍼스",
+      "tip": "나하 시내에서 차로 약 30분 거리의 실제 운영 중인 대학교 캠퍼스. 재학생 학습권 보호를 위해 수업 시간대 방문은 피하고 캠퍼스 내에서는 정숙을 유지한다.",
+      "lens": "35mm",
+      "time": "주말 낮",
+      "workId": "tears-for-you",
+      "scene": "여동생 카오루가 캠퍼스로 찾아가 게이코와 대화를 나누던 장면",
+      "verified": "reported",
+      "source": "http://loca.ash.jp/show/2006/m2006_nadasoso.htm",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530085/spotchu/spots/fjqe22ni9u4vjujlpall.jpg",
+      "imageCredit": {
+        "author": "Hykw-a4 at ja.Wikipedia",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Ryuukyuudaigaku.jpg"
+      }
     },
     {
       "id": "osaka-abenosuji-tram-black-rain-5a91",
@@ -10344,6 +10673,23 @@
       "source": "https://news.yahoo.co.jp/expert/articles/a3f5c206520a11bb2574d7fb296ff3764f097f0d"
     },
     {
+      "id": "osaka-kotobuki-onsen-boogie-woogie-c9d1",
+      "title": "고토부키온센 (드라마 '부기우기' 목욕탕 '하나유' 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.67119,
+      "lng": 135.45717,
+      "area": "벤텐초, 오사카 미나토구 (Bentencho, Minato-ku, Osaka)",
+      "subject": "쇼와 레트로 감성의 실제 영업 대중목욕탕 외관 — 주인공 하나다가(花田家)의 목욕탕 '하나유(はな湯)' 모델이 된 곳",
+      "tip": "JR 벤텐초역 서쪽 출구에서 도보 약 10분. 위치는 건물 단위의 근사치이며, 실제 영업 중인 목욕탕(16~23시, 월요 휴무)이니 이용객 통행을 방해하지 않게 외관만 조용히 촬영하자.",
+      "lens": "24-35mm",
+      "time": "낮 (영업시간 외)",
+      "workId": "boogie-woogie",
+      "scene": "1화부터 등장하는 하나다가의 목욕탕 '하나유' 촬영지",
+      "verified": "reported",
+      "source": "https://dorama9.com/bugiugi-rokechi/"
+    },
+    {
       "id": "osaka-kyobashi-grandchateau-black-rain-c84e",
       "title": "교바시 그랜드샤토 빌딩 (영화 '블랙 레인' 파칭코 아지트 급습 촬영지)",
       "city": "osaka",
@@ -10364,6 +10710,23 @@
       }
     },
     {
+      "id": "osaka-kyu-kinzoku-kogyo-boogie-woogie-4b6e",
+      "title": "구 킨조쿠공업 사옥 (드라마 '부기우기' 우메마루소녀가극단 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.65151,
+      "lng": 135.48466,
+      "area": "기타쓰모리, 오사카 니시나리구 (Kitatsumori, Nishinari-ku, Osaka)",
+      "subject": "1937년 준공, 국가등록유형문화재로 지정된 실제 가동 공장 사옥 외관 — 극중 우메마루 소녀가극단(梅丸少女歌劇団) 양성소로 등장",
+      "tip": "실제 가동 중인 공장 부지이니 정문 앞 공용 보도에서 외관만 촬영하고 사유지 진입은 삼가자. 좌표는 번지 단위 근사치이므로 현장에서 특징적인 서양식 목조 파사드와 문기둥을 확인하자.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "boogie-woogie",
+      "scene": "4~5화, 스즈코가 우메마루 소녀가극단 오디션을 보러 가는 장면의 외관",
+      "verified": "reported",
+      "source": "https://locatv.com/bugiugi-location02/"
+    },
+    {
       "id": "osaka-naniwabashi-lion-public-hall-8b2c",
       "title": "난바바시 사자상 & 오사카 시립 중앙공회당 뷰포인트",
       "city": "osaka",
@@ -10377,6 +10740,23 @@
       "time": "블루아워 또는 오전",
       "verified": "reported",
       "source": "https://osaka-info.jp/spot/naniwabashi-bridge/"
+    },
+    {
+      "id": "osaka-nhk-osaka-hall-boogie-woogie-7f2a",
+      "title": "NHK 오사카홀 (드라마 '부기우기' 무대·오디션 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.682911,
+      "lng": 135.519889,
+      "area": "오테마에, 오사카 주오구 (Otemae, Chuo-ku, Osaka)",
+      "subject": "NHK 오사카 방송회관 내 다목적홀 'NHK오사카홀' 외관 — 극중 무대 오디션·공연 장면이 촬영된 실제 홀",
+      "tip": "다니마치욘초메역에서 도보 5분, 오사카성 인근. 위치는 건물 단위의 근사치이니 실제 정문 앞 보행로에서 구도를 잡자. 일반 공개행사가 있을 때만 내부 관람이 가능하니 평소엔 외관 위주로 촬영하자.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "boogie-woogie",
+      "scene": "스즈코의 오디션 및 무대 공연 장면(1화 등)이 촬영된 홀",
+      "verified": "reported",
+      "source": "https://asa-dora.com/15347/"
     },
     {
       "id": "osaka-prefectural-government-hero-e72a",
@@ -10437,6 +10817,29 @@
         "author": "Hyppolyte de Saint-Rambert",
         "license": "CC BY 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=152618034"
+      }
+    },
+    {
+      "id": "osaka-toyokuni-shrine-boogie-woogie-e03f",
+      "title": "도요쿠니 신사·오사카성 공원 (드라마 '부기우기' 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.68417,
+      "lng": 135.52694,
+      "area": "오사카성 공원, 오사카 주오구 (Osaka Castle Park, Chuo-ku, Osaka)",
+      "subject": "오사카성 혼마루 남쪽 도요쿠니 신사 앞 산책로 — 극중 인물이 아이를 찾아 헤매는 장면 및 아이들이 뛰노는 장면이 촬영된 곳",
+      "tip": "오사카성 덴슈카쿠에서 도보 5분, 혼마루 남측 산책로 일대. 좌표는 신사 경내 기준 근사치이며, 이른 아침 인적이 드문 시간대에 방문하면 한적한 구도를 얻기 좋다.",
+      "lens": "24-35mm",
+      "time": "이른 아침",
+      "workId": "boogie-woogie",
+      "scene": "극중 실종된 아이를 찾아 헤매는 장면, 아이들이 뛰노는 장면",
+      "verified": "reported",
+      "source": "https://www.trivia-click.com/boogie-woogie-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530090/spotchu/spots/vczhwqvs6hggc3p782hf.jpg",
+      "imageCredit": {
+        "author": "そらみみ (Soramimi)",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Haiden_of_Hokoku_Shrine_in_Osaka_Castle.JPG"
       }
     },
     {
@@ -13072,6 +13475,20 @@
       }
     },
     {
+      "id": "sapporo-arima-building-tantei-bar-c07f",
+      "title": "아리마 빌딩 (탐정은 바에 있다 - 바 '켈러 오하타' 촬영지)",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.053807,
+      "lng": 141.354821,
+      "area": "미나미6조 니시3초메, 스스키노 / Minami 6-jo Nishi 3-chome, Susukino, Chuo-ku",
+      "subject": "극중 탐정의 아지트로 설정된 가상의 바 '켈러 오하타'가 1층에 있던 것으로 나오는 붉은 벽돌 건물 외관",
+      "tip": "건물 옆 좁은 골목(나카코지) 쪽에서 붉은 벽돌 외관과 '有馬ビル' 표식을 함께 담으면 극중 장면과 비슷한 구도가 나온다. 1층은 현재 다른 업종으로 바뀌었으니 실내 촬영 없이 외관 위주로.",
+      "workId": "tantei-wa-bar-ni-iru",
+      "scene": "\"무슨 일 있으면 전화해. 밤엔 대개 바 켈러 오하타에 있다\"는 대사로 유명한 탐정의 아지트 바 외관 설정 (1편, 2011)",
+      "source": "https://hakoaru.net/archives/39044592.html"
+    },
+    {
       "id": "sapporo-asahiyama-park-banana-movie-5c8e",
       "title": "아사히야마 기념공원 전망 테라스",
       "city": "sapporo",
@@ -13093,6 +13510,20 @@
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Asahiyama_Memorial_Park.jpg"
       }
+    },
+    {
+      "id": "sapporo-barutop-cafe-tantei-bar-a53e",
+      "title": "바르 톱 (옛 깃사텐 톱, 탐정은 바에 있다 - 깃사 몬드 촬영지)",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.053339,
+      "lng": 141.352483,
+      "area": "미나미6조 니시4초메, 스스키노 / Minami 6-jo Nishi 4-chome, Susukino, Chuo-ku",
+      "subject": "극중 탐정의 단골 찻집 '깃사 몬드'로 등장한 50년 노포 찻집(2017년 폐업 후 현재는 같은 자리 이탈리안 바 '바르 톱')의 외관",
+      "tip": "지하철 스스키노역에서 도보 3분. 2017년 찻집 폐업 후 원래 주인의 딸이 같은 자리에서 이탈리안 바로 대를 이어 영업 중이라 간판·업종이 바뀌었으니 참고. 밤 영업 전 낮 시간대 외관 촬영이 무난하다.",
+      "workId": "tantei-wa-bar-ni-iru",
+      "scene": "탐정이 아침마다 들르는 단골 찻집 '깃사 몬드' 장면 (1편, 2011)",
+      "source": "https://yasutabi.info/archives/2843"
     },
     {
       "id": "sapporo-clocktower-mn-terrace-3f2a",
@@ -13131,6 +13562,26 @@
       "scene": "삿포로 시민교류플라자는 노던 라이츠 빌딩 촬영지; 정확한 외부 프레임은 추가 확인 필요",
       "verified": "official",
       "source": "https://www.screensapporo.jp/works/9921"
+    },
+    {
+      "id": "sapporo-edelhof-hotel-tantei-bar-4d9a",
+      "title": "호텔 몬테레 에델호프 삿포로 (탐정은 바에 있다 촬영지)",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.064669,
+      "lng": 141.355497,
+      "area": "기타2조 니시1초메, JR삿포로역 인근 / Kita 2-jo Nishi 1-chome, near JR Sapporo Station",
+      "subject": "결혼식 피로연 도중 총격 사건이 벌어지는 영화 결말부 장면이 촬영된 웨딩홀 겸 호텔 외관",
+      "tip": "JR삿포로역 남쪽 출구에서 도보 약 5분. 실제 영업 중인 호텔·웨딩홀이라 내부 촬영은 예식 유무를 확인하고 정문 앞 도로변에서 외관 위주로 담는 것을 추천.",
+      "workId": "tantei-wa-bar-ni-iru",
+      "scene": "결혼식 피로연에서 총격 사건이 벌어지는 1편 결말부 클라이맥스 장면 (2011)",
+      "source": "https://loca-station.jp/column-vol-131",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530095/spotchu/spots/uqkidfyssc0kuo4y5b70.jpg",
+      "imageCredit": {
+        "author": "Braveheart",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hotel_Monterey_Edelhof_Sapporo_02.jpg"
+      }
     },
     {
       "id": "sapporo-golden-kamuy-beer-museum-factory-8c2f",
@@ -13377,6 +13828,26 @@
         "author": "663highland",
         "license": "CC BY 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:Chuo_Sapporo_S4W4S4W3_01s4s3200.jpg"
+      }
+    },
+    {
+      "id": "sapporo-tanuki9-ramen-tantei-bar-e2b7",
+      "title": "산카쿠야마 고에몬 라멘 다누키코지 본점 (탐정은 바에 있다 촬영지)",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.056281,
+      "lng": 141.344917,
+      "area": "다누키코지 9초메, 삿포로 주오구 / Tanuki Koji 9-chome, Chuo-ku, Sapporo",
+      "subject": "다누키코지 상점가 9초메 동쪽 모퉁이에 있는 라멘 가게 외관·간판. 극중 탐정과 조수 다카다가 습격당하기 전 나란히 라멘을 먹던 곳",
+      "tip": "다누키코지 아케이드 9초메 교차로 쪽 모퉁이 매장이라 외관 사진을 찍기 쉽다. 가게 안쪽 벽에는 출연 배우 사인이 걸려 있어 실제 촬영지임을 확인할 수 있으니, 식사 후 카운터 뒤편도 함께 살펴볼 것.",
+      "workId": "tantei-wa-bar-ni-iru",
+      "scene": "탐정(오이즈미 요)과 조수 다카다(마쓰다 류헤이)가 다누키코지 라멘집에서 함께 라멘을 먹는 장면 (1편, 2011)",
+      "source": "https://www.travel.co.jp/guide/article/14192/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788530098/spotchu/spots/qwmqekhqjbqvgotwjg69.jpg",
+      "imageCredit": {
+        "author": "Mugu-shisai",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tanukikoji_01.jpg"
       }
     },
     {
@@ -19420,6 +19891,13 @@
       "progress": 0
     },
     {
+      "id": "my-tomorrow-your-yesterday",
+      "title": "나는 내일, 어제의 너와 만난다",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "the-last-samurai",
       "title": "라스트 사무라이",
       "type": "영화",
@@ -19444,13 +19922,6 @@
       "id": "oregairu-zoku",
       "title": "역시 내 청춘 러브코메디는 잘못됐다. 속",
       "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "my-tomorrow-your-yesterday",
-      "title": "나는 내일, 어제의 너와 만난다",
-      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -19805,6 +20276,13 @@
       "progress": 0
     },
     {
+      "id": "tears-for-you",
+      "title": "눈물이 주룩주룩",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "its-okay-thats-love",
       "title": "괜찮아, 사랑이야",
       "type": "드라마",
@@ -19815,13 +20293,6 @@
       "id": "jujutsu-kaisen-2",
       "title": "呪術廻戦 2期",
       "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "tears-for-you",
-      "title": "눈물이 주룩주룩",
-      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -20015,6 +20486,13 @@
       "progress": 0
     },
     {
+      "id": "tantei-wa-bar-ni-iru",
+      "title": "탐정은 바에 있다",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "kon-na-yofuke-ni-banana-ka-yo",
       "title": "이런 야밤에 바나나라니 사랑스러운 실화",
       "type": "영화",
@@ -20053,13 +20531,6 @@
       "id": "nami-yo-kiitekure-dosanko-gal",
       "title": "파도여 들어다오 / 도산코 갸루는 초초 귀여워",
       "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "tantei-wa-bar-ni-iru",
-      "title": "탐정은 바에 있다",
-      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
