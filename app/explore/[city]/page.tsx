@@ -4,6 +4,7 @@ import { ExploreView } from "@/components/explore/ExploreView";
 import { getCities, getSpotsByCity, getWorks } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
 import { getCurrentUser } from "@/lib/session";
 import { getSavedSpotIds } from "@/lib/actions/mutations";
+import { CITIES } from "@/lib/cities-catalog";
 import { type CityId } from "@/lib/mock";
 
 // C1~C4 · 탐색(지도⇄피드). 도시별 스팟을 DB(lib/data)에서 읽어 클라이언트 뷰에 전달.
@@ -30,12 +31,20 @@ export default async function ExplorePage({
     getSavedSpotIds(),
     getWorks(), // 작품 id→제목(작품 하위필터·그룹 라벨)
   ]);
+  // 도시 선택 드롭다운을 국가별로 묶어 정리(도시가 늘어도 길게 나열되지 않게). 국가·정렬은
+  // 코드 카탈로그(CITIES) 기준 — DB Country enum이 일부 국가를 폴백시키는 문제 우회(단일 원천).
+  const catIdx = new Map(CITIES.map((c, i) => [c.id, i] as const));
+  const catCountry = new Map(CITIES.map((c) => [c.id, c.country] as const));
+  const cityOptions = [...cities]
+    .sort((a, b) => (catIdx.get(a.id) ?? 999) - (catIdx.get(b.id) ?? 999))
+    .map((c) => ({ id: c.id, name: c.name, country: catCountry.get(c.id) }));
+
   return (
     <AppShell active="explore">
       <ExploreView
         spots={spots}
         city={city as CityId}
-        cities={cities.map((c) => ({ id: c.id, name: c.name }))}
+        cities={cityOptions}
         loggedIn={!!user}
         initialSaved={savedIds}
         works={works.map((w) => ({ id: w.id, label: w.label }))}
