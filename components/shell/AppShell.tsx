@@ -4,7 +4,13 @@ import { TabBar } from "../ui/TabBar";
 // 앱 서피스 셸: 데스크톱은 좌측 Sidebar + 오프셋, 모바일은 하단 TabBar.
 // content 폭·헤더는 각 페이지가 반응형으로 관리한다(모바일 컬럼 ↔ 데스크톱 와이드).
 type Active =
-  "home" | "explore" | "collections" | "profile" | "notifications" | "report";
+  | "home"
+  | "explore"
+  | "feed"
+  | "collections"
+  | "profile"
+  | "notifications"
+  | "report";
 
 export function AppShell({
   active,

@@ -54,7 +54,7 @@ export default async function FeedPage({
   ]);
 
   return (
-    <AppShell active="explore">
+    <AppShell active="feed">
       <div className="mx-auto flex w-full max-w-[500px] flex-col bg-cream pb-28 pt-safe-top lg:pb-12 lg:pt-6">
         <header className="flex items-center gap-2.5 px-4">
           <Link
