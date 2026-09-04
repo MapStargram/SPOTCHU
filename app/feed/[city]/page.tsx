@@ -12,6 +12,7 @@ import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
 import { cldThumb } from "@/lib/cloudinary-url";
 import { LikeButton } from "@/components/community/LikeButton";
+import { Flag } from "@/components/ui/Flag";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { getCity, getCities, getFeedPosts, type FeedTab } from "@/lib/data";
 import { getCurrentUser } from "@/lib/session";
@@ -135,11 +136,7 @@ export default async function FeedPage({
                       <span className="text-[12px] font-bold text-navy">
                         {p.authorName}
                       </span>
-                      {p.authorFlag && (
-                        <span className="text-[12px] leading-none">
-                          {p.authorFlag}
-                        </span>
-                      )}
+                      {p.authorFlag && <Flag emoji={p.authorFlag} alt="" />}
                       {p.isVerifiedShot && (
                         <TagPill
                           variant="mint"

@@ -15,6 +15,7 @@ import { SpotJsonLd } from "@/components/seo/SpotJsonLd";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { Mascot } from "@/components/ui/Mascot";
 import { SpotImage } from "@/components/ui/SpotImage";
+import { Flag } from "@/components/ui/Flag";
 import { type Verified } from "@/lib/mock";
 import { getSpot, getWork, getCollections, getSpotPosts } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 import { getCurrentUser } from "@/lib/session";
@@ -335,11 +336,7 @@ export default async function SpotDetailScreen({
                           <span className="text-[12px] font-bold text-navy">
                             {p.authorName}
                           </span>
-                          {p.authorFlag && (
-                            <span className="text-[12px] leading-none">
-                              {p.authorFlag}
-                            </span>
-                          )}
+                          {p.authorFlag && <Flag emoji={p.authorFlag} alt="" />}
                           {p.isVerifiedShot && (
                             <TagPill
                               variant="mint"

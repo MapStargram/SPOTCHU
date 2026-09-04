@@ -8,6 +8,7 @@ import { Select } from "@/components/ui/Select";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { useSaved } from "@/lib/useSaved";
 import { SpotImage } from "@/components/ui/SpotImage";
+import { Flag } from "@/components/ui/Flag";
 import type { PinCard } from "@/lib/mock";
 
 // 홈 핀터레스트식 메이슨리 그리드. 모든 핀 = 지도에 찍히는 스팟 → 탭하면 상세(지도+앵글).
@@ -130,8 +131,11 @@ export function PinGrid({
             </span>
             {/* 국가 국기(전체 지역 혼합 피드) — 저장 버튼 왼쪽 우상단. 도시별 홈은 flag 미전달 → 미표시. */}
             {s.flag && (
-              <span className="absolute right-12 top-2 flex h-9 w-9 items-center justify-center rounded-full bg-black/30 text-[15px] leading-none backdrop-blur-sm">
-                {s.flag}
+              <span className="absolute right-12 top-2 inline-flex items-center rounded-md bg-black/35 p-1 backdrop-blur-sm">
+                <Flag
+                  emoji={s.flag}
+                  className="block h-4 w-auto rounded-[2px]"
+                />
               </span>
             )}
             {s.verified === "official" && (

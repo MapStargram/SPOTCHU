@@ -5,6 +5,7 @@ import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
 import { LikeButton } from "@/components/community/LikeButton";
 import { ShareButton } from "@/components/ui/ShareButton";
+import { Flag } from "@/components/ui/Flag";
 import { getPostDetail, getSpot } from "@/lib/data";
 import { cldThumb } from "@/lib/cloudinary-url";
 import { getCurrentUser } from "@/lib/session";
@@ -75,11 +76,7 @@ export default async function PostDetailPage({
             <div>
               <div className="flex items-center gap-1 text-[12px] font-bold">
                 {p.authorName}
-                {p.authorFlag && (
-                  <span className="text-[13px] leading-none">
-                    {p.authorFlag}
-                  </span>
-                )}
+                {p.authorFlag && <Flag emoji={p.authorFlag} alt="" />}
               </div>
               <div className="mt-0.5 font-latin text-[10px] opacity-85">
                 {p.when} · @ {p.spotTitle}

@@ -54,9 +54,12 @@ export function SpotImage({
 
   return (
     <>
+      {/* 로딩 스켈레톤은 '불투명' 중립 회색 — 반투명이면 부모의 진한 thumbGrad가 비쳐, 사진이 뜰 때
+          화려한 그라디언트→사진으로 튀어 보기 불편했다(#home 첫 진입). 중립 회색이 그라디언트를
+          덮어 사진이 차분히 페이드인된다. */}
       {!loaded && (
         <div
-          className="absolute inset-0 animate-pulse bg-black/10"
+          className="absolute inset-0 animate-pulse bg-[color:var(--line)]"
           aria-hidden
         />
       )}
