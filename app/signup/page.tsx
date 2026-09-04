@@ -28,6 +28,7 @@ type ConsentKey = (typeof CONSENTS)[number]["key"];
 export default function SignupScreen() {
   const router = useRouter();
   const [email, setEmail] = useState("");
+  const [nickname, setNickname] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [birthYear, setBirthYear] = useState("");
@@ -39,6 +40,7 @@ export default function SignupScreen() {
   });
   const [errors, setErrors] = useState<{
     email?: string;
+    nickname?: string;
     password?: string;
     confirm?: string;
     birthYear?: string;
@@ -53,6 +55,9 @@ export default function SignupScreen() {
   const validate = () => {
     const next: typeof errors = {};
     if (!/.+@.+\..+/.test(email)) next.email = "이메일 형식을 확인해주세요";
+    const nick = nickname.trim();
+    if (nick.length < 1 || nick.length > 20)
+      next.nickname = "닉네임은 1~20자로 입력해주세요";
     if (password.length < 8) next.password = "비밀번호는 8자 이상이어야 합니다";
     if (confirm !== password) next.confirm = "비밀번호가 일치하지 않습니다";
     const y = Number(birthYear);
@@ -71,6 +76,7 @@ export default function SignupScreen() {
     setSubmitting(true);
     const res = await signupWithEmail({
       email,
+      nickname: nickname.trim(),
       password,
       agreeTerms: true,
       agreePrivacy: true,
@@ -135,6 +141,18 @@ export default function SignupScreen() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@example.com"
           error={errors.email}
+        />
+        <Field
+          id="signup-nickname"
+          label="닉네임"
+          type="text"
+          required
+          maxLength={20}
+          value={nickname}
+          onChange={(e) => setNickname(e.target.value)}
+          placeholder="표시할 닉네임"
+          hint="다른 사용자와 겹치지 않는 이름 (최대 20자)"
+          error={errors.nickname}
         />
         <Field
           id="signup-password"

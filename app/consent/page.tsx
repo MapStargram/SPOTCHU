@@ -18,11 +18,14 @@ export default async function ConsentPage({
 
   const dbUser = await db.user.findUnique({
     where: { id: user.id },
-    select: { agreedTermsAt: true },
+    select: { agreedTermsAt: true, nickname: true, name: true },
   });
   const { callbackUrl } = await searchParams;
   const dest = safeCallback(callbackUrl ?? null);
   if (dbUser?.agreedTermsAt) redirect(dest);
 
-  return <ConsentGate callbackUrl={dest} />;
+  // 소셜에서 받은 이름을 닉네임 기본값으로 미리 채운다(사용자가 바꿀 수 있음).
+  const defaultNickname = (dbUser?.nickname ?? dbUser?.name ?? "").slice(0, 20);
+
+  return <ConsentGate callbackUrl={dest} defaultNickname={defaultNickname} />;
 }

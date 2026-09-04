@@ -9,6 +9,8 @@ import { unstable_update } from "@/auth";
 import { emailSchema, passwordSchema, hashPassword } from "@/lib/auth/password";
 import { meetsMinAge } from "@/lib/auth/age";
 import { COUNTRY_IDS } from "@/lib/cities-geo";
+import { nicknameSchema, isNicknameTaken } from "@/lib/nickname";
+import { Prisma } from "@prisma/client";
 import { createToken, consumeToken } from "@/lib/auth/tokens";
 
 // 소속 국가 id 정규화: 지원 목록(COUNTRY_META)에 있는 값만 통과, 아니면 undefined(미저장).
@@ -24,6 +26,7 @@ const SOCIAL_PROVIDERS = ["google", "kakao", "naver", "apple"] as const;
 const signupSchema = z.object({
   email: emailSchema,
   password: passwordSchema,
+  nickname: nicknameSchema,
   agreeTerms: z.literal(true),
   agreePrivacy: z.literal(true),
   agreeLocation: z.literal(true),
@@ -39,7 +42,7 @@ export async function signupWithEmail(
 ): Promise<Result> {
   const parsed = signupSchema.safeParse(input);
   if (!parsed.success) return { ok: false, error: "입력값을 확인해주세요" };
-  const { email, password, birthYear } = parsed.data;
+  const { email, password, nickname, birthYear } = parsed.data;
 
   if (!meetsMinAge(birthYear))
     return { ok: false, error: "만 14세 미만은 가입할 수 없습니다" };
@@ -54,25 +57,50 @@ export async function signupWithEmail(
         "이미 사용 중인 이메일입니다. 로그인하거나 비밀번호 찾기를 이용하세요.",
     };
 
+  // 닉네임 중복 방지(가입 시점). @unique + P2002 catch가 레이스 백스톱.
+  if (await isNicknameTaken(nickname))
+    return { ok: false, error: "이미 사용 중인 닉네임입니다" };
+
   const now = new Date();
-  const user = await db.user.create({
-    data: {
-      email,
-      passwordHash: await hashPassword(password),
-      role: "USER",
-      agreedTermsAt: now,
-      agreedPrivacyAt: now,
-      agreedLocationAt: now,
-      birthYear,
-      country,
-    },
-  });
+  let user;
+  try {
+    user = await db.user.create({
+      data: {
+        email,
+        passwordHash: await hashPassword(password),
+        nickname,
+        role: "USER",
+        agreedTermsAt: now,
+        agreedPrivacyAt: now,
+        agreedLocationAt: now,
+        birthYear,
+        country,
+      },
+    });
+  } catch (e) {
+    if (
+      e instanceof Prisma.PrismaClientKnownRequestError &&
+      e.code === "P2002"
+    ) {
+      // 유니크 충돌 — 닉네임이면 닉네임 안내, 아니면(이메일 레이스) 이메일 안내.
+      const target = String(e.meta?.target ?? "");
+      return target.includes("nickname")
+        ? { ok: false, error: "이미 사용 중인 닉네임입니다" }
+        : {
+            ok: false,
+            error:
+              "이미 사용 중인 이메일입니다. 로그인하거나 비밀번호 찾기를 이용하세요.",
+          };
+    }
+    throw e;
+  }
 
   await sendVerifyEmail(email, await createToken("verify", user.id));
   return { ok: true };
 }
 
 const consentSchema = z.object({
+  nickname: nicknameSchema,
   agreeTerms: z.literal(true),
   agreePrivacy: z.literal(true),
   agreeLocation: z.literal(true),
@@ -93,7 +121,7 @@ export async function completeSocialConsent(
   const parsed = consentSchema.safeParse(input);
   if (!parsed.success)
     return { ok: false, error: "필수 항목에 모두 동의해주세요" };
-  const { birthYear } = parsed.data;
+  const { nickname, birthYear } = parsed.data;
 
   if (!meetsMinAge(birthYear)) {
     // 동의 없이(만14세 미만) 계정 유지 금지 — 소셜 로그인으로 생성된 계정을 삭제하고 로그아웃.
@@ -105,17 +133,28 @@ export async function completeSocialConsent(
     };
   }
 
+  // 닉네임 중복 방지(본인 제외). @unique + 아래 P2002 catch가 레이스 백스톱.
+  if (await isNicknameTaken(nickname, me.id))
+    return { ok: false, error: "이미 사용 중인 닉네임입니다" };
+
   const now = new Date();
-  await db.user.update({
-    where: { id: me.id },
-    data: {
-      agreedTermsAt: now,
-      agreedPrivacyAt: now,
-      agreedLocationAt: now,
-      birthYear,
-      country: cleanCountry(parsed.data.country),
-    },
-  });
+  try {
+    await db.user.update({
+      where: { id: me.id },
+      data: {
+        nickname,
+        agreedTermsAt: now,
+        agreedPrivacyAt: now,
+        agreedLocationAt: now,
+        birthYear,
+        country: cleanCountry(parsed.data.country),
+      },
+    });
+  } catch (e) {
+    if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2002")
+      return { ok: false, error: "이미 사용 중인 닉네임입니다" };
+    throw e;
+  }
   // 토큰의 needsConsent 재계산(=false) → 재로그인 없이 미들웨어 통과.
   // 실패해도 동의는 이미 저장됨 → /consent 페이지가 DB 기준으로 자가 치유(리다이렉트).
   try {

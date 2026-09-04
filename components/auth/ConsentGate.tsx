@@ -21,13 +21,21 @@ const CONSENTS = [
 ] as const;
 type ConsentKey = (typeof CONSENTS)[number]["key"];
 
-export function ConsentGate({ callbackUrl }: { callbackUrl: string }) {
+export function ConsentGate({
+  callbackUrl,
+  defaultNickname,
+}: {
+  callbackUrl: string;
+  defaultNickname: string;
+}) {
   const router = useRouter();
   const [agree, setAgree] = useState<Record<ConsentKey, boolean>>({
     terms: false,
     privacy: false,
     location: false,
   });
+  const [nickname, setNickname] = useState(defaultNickname); // 소셜 이름 프리필
+  const [nickErr, setNickErr] = useState<string | undefined>();
   const [birthYear, setBirthYear] = useState("");
   const [birthErr, setBirthErr] = useState<string | undefined>();
   const [country, setCountry] = useState("kr"); // 주 사용자층(한국) 기본 선택
@@ -41,6 +49,12 @@ export function ConsentGate({ callbackUrl }: { callbackUrl: string }) {
     e.preventDefault();
     setServerError(null);
     setBirthErr(undefined);
+    setNickErr(undefined);
+    const nick = nickname.trim();
+    if (nick.length < 1 || nick.length > 20) {
+      setNickErr("닉네임은 1~20자로 입력해주세요");
+      return;
+    }
     const y = Number(birthYear);
     if (!/^\d{4}$/.test(birthYear) || y < 1900 || y > THIS_YEAR) {
       setBirthErr("출생연도 4자리를 입력해주세요");
@@ -54,6 +68,7 @@ export function ConsentGate({ callbackUrl }: { callbackUrl: string }) {
 
     setSubmitting(true);
     const res = await completeSocialConsent({
+      nickname: nick,
       agreeTerms: true,
       agreePrivacy: true,
       agreeLocation: true,
@@ -91,6 +106,18 @@ export function ConsentGate({ callbackUrl }: { callbackUrl: string }) {
 
       <form onSubmit={onSubmit} className="flex flex-col gap-3.5" noValidate>
         {serverError && <Notice variant="error">{serverError}</Notice>}
+        <Field
+          id="consent-nickname"
+          label="닉네임"
+          type="text"
+          required
+          maxLength={20}
+          value={nickname}
+          onChange={(e) => setNickname(e.target.value)}
+          placeholder="표시할 닉네임"
+          hint="다른 사용자와 겹치지 않는 이름 (최대 20자)"
+          error={nickErr}
+        />
         <Field
           id="consent-birthyear"
           label="출생연도"
