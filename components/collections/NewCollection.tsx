@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { loginHref } from "@/lib/login-url";
 import { Camera, Lock, Share2 } from "lucide-react";
 import { createCollectionAction } from "@/lib/actions/mutations";
 
 // E4 · 새 컬렉션 생성. 저장 시 서버 액션으로 소유자 컬렉션 생성(기본 PRIVATE) — PRD §15.
 export function NewCollection() {
   const router = useRouter();
+  const pathname = usePathname(); // 로그인 후 원래 화면으로 복귀(callbackUrl)
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [privacy, setPrivacy] = useState<"private" | "link">("private");
@@ -24,7 +26,7 @@ export function NewCollection() {
     });
     setSaving(false);
     if (!res.ok) {
-      if (res.reason === "unauthenticated") router.push("/login");
+      if (res.reason === "unauthenticated") router.push(loginHref(pathname));
       return;
     }
     router.replace(`/collections/${res.collectionId}`);

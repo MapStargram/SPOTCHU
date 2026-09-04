@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { loginHref } from "@/lib/login-url";
 import {
   X,
   ChevronLeft,
@@ -37,6 +38,7 @@ export function ReportFlow({
   cities: { id: CityId; label: string }[];
 }) {
   const router = useRouter();
+  const pathname = usePathname(); // 로그인 후 제보 화면으로 복귀(callbackUrl)
   const first = cities[0]?.id ?? "seoul";
   const [step, setStep] = useState<Step>("location");
   const [city, setCity] = useState<CityId>(first);
@@ -115,7 +117,7 @@ export function ReportFlow({
     if (res.ok) {
       setStep("done");
     } else if (res.reason === "unauthenticated") {
-      router.push("/login"); // GUEST 소프트 게이트
+      router.push(loginHref(pathname)); // GUEST 소프트 게이트 → 로그인 후 복귀
     } else if (res.reason === "high_risk") {
       setError("고위험 유형(철도 선로 등)은 등록할 수 없어요.");
     } else {

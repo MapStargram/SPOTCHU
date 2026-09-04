@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { loginHref } from "@/lib/login-url";
 import { Bookmark, Plus, Check, LogIn } from "lucide-react";
 import { CoralButton } from "./ui/CoralButton";
 import { useFocusTrap } from "@/lib/useFocusTrap";
@@ -32,6 +33,7 @@ export function SpotActions({
   checkedIn?: boolean; // 로그인 유저가 이 스팟을 방문 인증한 적 있으면 '방문 완료'로 표기
 }) {
   const router = useRouter();
+  const pathname = usePathname(); // 로그인 후 이 스팟으로 복귀(callbackUrl)
   const [open, setOpen] = useState(false);
   const [cols, setCols] = useState<Col[]>(collections);
   const [selected, setSelected] = useState<Set<string>>(new Set(savedIn));
@@ -67,7 +69,7 @@ export function SpotActions({
     const res = await createCollectionAction({ title });
     setSaving(false);
     if (!res.ok) {
-      if (res.reason === "unauthenticated") router.push("/login");
+      if (res.reason === "unauthenticated") router.push(loginHref(pathname));
       return;
     }
     // 새 컬렉션을 목록에 추가하고 자동 선택 → 저장 시 이 스팟이 추가된다(spec 인수조건).
@@ -168,7 +170,7 @@ export function SpotActions({
                 </p>
                 <CoralButton
                   className="mt-1"
-                  onClick={() => router.push("/login")}
+                  onClick={() => router.push(loginHref(pathname))}
                 >
                   로그인하고 저장하기
                 </CoralButton>
