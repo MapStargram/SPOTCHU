@@ -387,9 +387,12 @@ export function MapView({
             style={{ background: preview.thumbGrad }}
           >
             <SpotImage src={preview.imageUrl} alt="" width={640} />
-            <span className="absolute bottom-1.5 right-1.5 z-10">
-              <Sparkle />
-            </span>
+            {/* 공식 인증 스팟만 반짝이(홈 그리드와 동일 규칙) — 예전엔 모든 프리뷰에 표시됐다. */}
+            {preview.verified === "official" && (
+              <span className="absolute bottom-1.5 right-1.5 z-10">
+                <Sparkle />
+              </span>
+            )}
           </div>
           <div className="flex min-w-0 flex-1 flex-col gap-1">
             <div className="truncate text-[14px] font-bold tracking-[-0.01em] text-navy">

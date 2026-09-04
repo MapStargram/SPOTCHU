@@ -60,10 +60,14 @@ export function ExploreView({
   spots,
   city,
   cities,
+  loggedIn = false,
+  initialSaved = [],
 }: {
   spots: Spot[];
   city: CityId;
   cities: { id: string; name: string }[];
+  loggedIn?: boolean;
+  initialSaved?: string[];
 }) {
   const router = useRouter();
   const [view, setView] = useState<"map" | "feed">("map"); // 기본=지도(현재 위치 우선 진입)
@@ -196,7 +200,11 @@ export function ExploreView({
         </div>
       ) : (
         <div className="mx-auto w-full max-w-[1180px] flex-1 px-4 pb-28 pt-4 lg:px-8 lg:pb-12">
-          <FeedView spots={feedSpots} />
+          <FeedView
+            spots={feedSpots}
+            loggedIn={loggedIn}
+            initialSaved={initialSaved}
+          />
         </div>
       )}
 
