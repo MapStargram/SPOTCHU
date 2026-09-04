@@ -226,7 +226,11 @@ export function CollectionDetail({
             </div>
           </div>
 
-          <div className="-mt-5 flex justify-center">{toggle}</div>
+          {/* 히어로가 position:relative라 페인트 순서상 static 형제(토글)보다 위에 그려진다 →
+              -mt-5로 히어로 하단에 걸친 토글 상단이 히어로에 가려졌다(#collections 상세). relative+z로 위로. */}
+          <div className="relative z-10 -mt-5 flex justify-center">
+            {toggle}
+          </div>
 
           {/* 순서 편집(내 컬렉션·2개 이상) — 여행 계획 동선 순서 */}
           {owned && items.length > 1 && (
