@@ -357,7 +357,7 @@ export function CollectionDetail({
             >
               <ChevronLeft size={20} />
             </button>
-            <span className="rounded-full bg-[rgba(255,249,242,0.9)] px-4 py-2.5 font-ko text-[13px] font-extrabold tracking-[-0.01em] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur">
+            <span className="max-w-[55%] truncate rounded-full bg-[rgba(255,249,242,0.9)] px-4 py-2.5 font-ko text-[13px] font-extrabold tracking-[-0.01em] text-navy shadow-[shadow:var(--sh-card)] backdrop-blur">
               {title}
             </span>
             {owned ? (
@@ -376,8 +376,8 @@ export function CollectionDetail({
               />
             )}
           </div>
-          {/* Toggle */}
-          <div className="absolute left-1/2 top-24 z-[9] -translate-x-1/2">
+          {/* Toggle — 상단 바(top-14, ~40px)와 겹치지 않게 아래로 여백. 제목 pill은 truncate로 1줄 유지. */}
+          <div className="absolute left-1/2 top-28 z-[9] -translate-x-1/2">
             {toggle}
           </div>
           {/* Carousel — 담긴 스팟 스와이프(실사진·번호) */}
