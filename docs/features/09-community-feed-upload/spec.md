@@ -8,7 +8,7 @@
 ## 진입점 / 사용자
 - **진입점**
   - 방문 인증 직후 "사진 올리기"([`../07-gps-checkin/`](../07-gps-checkin/)에서 이어짐) → 해당 스팟 **자동 연결**.
-  - 탐색 탭 도시 피드([`../03-explore-map-feed/`](../03-explore-map-feed/)의 피드 뷰) 내 업로드 진입.
+  - 하단 내비 **커뮤니티 탭** → 도시 커뮤니티 피드(`/feed/[city]`) 기본 진입, 상단 카메라 버튼으로 업로드(2026-09-04 [#145](https://github.com/MapStargram/SPOTCHU/pull/145)로 3번째 탭 신설).
   - 스팟 상세([`../04-spot-detail/`](../04-spot-detail/)) 사진 갤러리에서 업로드.
   - 프로필 "내 사진"([`../08-gamification-badges/`](../08-gamification-badges/)).
 - **사용자/권한**: 열람 = GUEST 포함 전체. 업로드·좋아요 = USER 이상(소프트 게이트). 작품 원본 장면 스틸은 사용자 게시물이 아니라 운영자 영역(§24).

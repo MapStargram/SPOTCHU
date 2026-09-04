@@ -56,8 +56,9 @@ const FEED_CHIPS = [
   { label: "최신순", dot: "var(--navy-2)" },
   { label: "작품별", dot: "var(--coral-light)" }, // 작품(성지)별 그룹 — workId 있는 스팟만
 ];
-// MAP_CHIPS에서 작품 하위필터를 붙이는 카테고리(애니 성지=1·드라마=2).
-const WORK_CHIP_IDX = new Set([1, 2]);
+// 작품 하위필터/그룹 연결은 칩 위치가 아닌 라벨로 판정(칩 재정렬·삽입에도 어긋나지 않게).
+const WORK_CATEGORIES = new Set(["애니 성지", "드라마"]); // 작품 하위필터를 붙이는 지도 카테고리
+const FEED_WORK_IDX = FEED_CHIPS.findIndex((c) => c.label === "작품별"); // 피드 '작품별' 칩 위치
 
 // C1~C4 탐색 콘텐츠(AppShell 내부). 모바일=앱 컬럼 폭, 데스크톱=사이드바 옆 와이드.
 export function ExploreView({
@@ -90,8 +91,8 @@ export function ExploreView({
 
   // 지도에서 애니/드라마 카테고리 선택 시 노출할 작품 칩(현재 도시에 실제 존재하는 작품만).
   const catWorks = useMemo(() => {
-    if (view !== "map" || !WORK_CHIP_IDX.has(chip)) return [];
-    const cat = MAP_CHIPS[chip].label;
+    const cat = view === "map" ? MAP_CHIPS[chip]?.label : undefined;
+    if (!cat || !WORK_CATEGORIES.has(cat)) return [];
     const ids = new Set<string>();
     for (const s of spots)
       if (s.categoryLabel === cat && s.workId) ids.add(s.workId);
@@ -102,7 +103,7 @@ export function ExploreView({
 
   // 피드 '작품별' — workId 있는 스팟을 작품별로 묶어 섹션 헤더로 그룹(스팟 많은 작품 먼저).
   const workGroups = useMemo(() => {
-    if (view !== "feed" || chip !== 4) return null;
+    if (view !== "feed" || chip !== FEED_WORK_IDX) return null;
     const m = new Map<string, Spot[]>();
     for (const s of spots) {
       if (!s.workId) continue;
