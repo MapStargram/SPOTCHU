@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { canDisconnect } from "./link";
+import { meetsMinAge } from "./age";
 import { buildIdentifier, parseIdentifier } from "./tokens";
 import {
   hashPassword,
@@ -17,6 +18,18 @@ describe("canDisconnect (잠금 방지)", () => {
     expect(canDisconnect(1, false)).toBe(false); // 소셜만 1개
     expect(canDisconnect(0, true)).toBe(false); // 비번만
     expect(canDisconnect(0, false)).toBe(false);
+  });
+});
+
+describe("meetsMinAge (만14세 가입 게이트)", () => {
+  const now = new Date("2026-06-15");
+  it("만 14세 이상은 허용(경계 포함)", () => {
+    expect(meetsMinAge(2012, 14, now)).toBe(true); // 2026-2012=14 (경계)
+    expect(meetsMinAge(1998, 14, now)).toBe(true);
+  });
+  it("만 14세 미만은 거부", () => {
+    expect(meetsMinAge(2013, 14, now)).toBe(false); // 13
+    expect(meetsMinAge(2026, 14, now)).toBe(false); // 0
   });
 });
 

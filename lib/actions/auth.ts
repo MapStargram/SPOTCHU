@@ -5,8 +5,15 @@
 import { z } from "zod";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
+import { unstable_update } from "@/auth";
 import { emailSchema, passwordSchema, hashPassword } from "@/lib/auth/password";
+import { meetsMinAge } from "@/lib/auth/age";
+import { COUNTRY_IDS } from "@/lib/cities-geo";
 import { createToken, consumeToken } from "@/lib/auth/tokens";
+
+// 소속 국가 id 정규화: 지원 목록(COUNTRY_META)에 있는 값만 통과, 아니면 undefined(미저장).
+const cleanCountry = (c?: string) =>
+  c && COUNTRY_IDS.includes(c) ? c : undefined;
 import { sendVerifyEmail, sendResetEmail } from "@/lib/email";
 import { canDisconnect } from "@/lib/auth/link";
 
@@ -21,6 +28,7 @@ const signupSchema = z.object({
   agreePrivacy: z.literal(true),
   agreeLocation: z.literal(true),
   birthYear: z.number().int().min(1900).max(new Date().getFullYear()),
+  country: z.string().optional(), // 소속 국가(선택). COUNTRY_META id — 서버에서 정규화.
 });
 
 // 이메일/비밀번호 가입. 신규 이메일만 생성한다. 이미 존재하는 이메일(소셜 포함)은 여기서
@@ -33,8 +41,10 @@ export async function signupWithEmail(
   if (!parsed.success) return { ok: false, error: "입력값을 확인해주세요" };
   const { email, password, birthYear } = parsed.data;
 
-  if (new Date().getFullYear() - birthYear < 14)
+  if (!meetsMinAge(birthYear))
     return { ok: false, error: "만 14세 미만은 가입할 수 없습니다" };
+
+  const country = cleanCountry(parsed.data.country);
 
   const existing = await db.user.findUnique({ where: { email } });
   if (existing)
@@ -54,10 +64,63 @@ export async function signupWithEmail(
       agreedPrivacyAt: now,
       agreedLocationAt: now,
       birthYear,
+      country,
     },
   });
 
   await sendVerifyEmail(email, await createToken("verify", user.id));
+  return { ok: true };
+}
+
+const consentSchema = z.object({
+  agreeTerms: z.literal(true),
+  agreePrivacy: z.literal(true),
+  agreeLocation: z.literal(true),
+  birthYear: z.number().int().min(1900).max(new Date().getFullYear()),
+  country: z.string().optional(), // 소속 국가(선택). COUNTRY_META id — 서버에서 정규화.
+});
+
+// 소셜 로그인 직후 동의 화면(/consent) 완료. 로그인된 컨텍스트에서만 동작.
+// 만 14세 미만은 가입 차단 → 방금 만들어진 계정을 삭제(cascade)하고 로그아웃을 요청한다.
+// 성공 시 unstable_update({})로 세션 토큰의 needsConsent 플래그를 재계산(해제)해 미들웨어를 통과시킨다.
+export async function completeSocialConsent(
+  input: z.input<typeof consentSchema>,
+): Promise<{ ok: true } | { ok: false; error: string; signOut?: boolean }> {
+  const me = await getCurrentUser();
+  if (!me?.id)
+    return { ok: false, error: "로그인이 필요합니다", signOut: true };
+
+  const parsed = consentSchema.safeParse(input);
+  if (!parsed.success)
+    return { ok: false, error: "필수 항목에 모두 동의해주세요" };
+  const { birthYear } = parsed.data;
+
+  if (!meetsMinAge(birthYear)) {
+    // 동의 없이(만14세 미만) 계정 유지 금지 — 소셜 로그인으로 생성된 계정을 삭제하고 로그아웃.
+    await db.user.delete({ where: { id: me.id } });
+    return {
+      ok: false,
+      error: "만 14세 미만은 가입할 수 없습니다",
+      signOut: true,
+    };
+  }
+
+  const now = new Date();
+  await db.user.update({
+    where: { id: me.id },
+    data: {
+      agreedTermsAt: now,
+      agreedPrivacyAt: now,
+      agreedLocationAt: now,
+      birthYear,
+      country: cleanCountry(parsed.data.country),
+    },
+  });
+  // 토큰의 needsConsent 재계산(=false) → 재로그인 없이 미들웨어 통과.
+  // 실패해도 동의는 이미 저장됨 → /consent 페이지가 DB 기준으로 자가 치유(리다이렉트).
+  try {
+    await unstable_update({});
+  } catch {}
   return { ok: true };
 }
 

@@ -2,9 +2,11 @@
 
 // 프로필 설정 서버 액션. 외부 입력은 zod로 검증하고, 권한은 서버에서 강제한다(CLAUDE.md §5).
 import { z } from "zod";
+import { Prisma } from "@prisma/client";
 import { revalidatePath } from "next/cache";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
+import { COUNTRY_IDS } from "@/lib/cities-geo";
 
 const nicknameSchema = z
   .string()
@@ -53,11 +55,46 @@ export async function updateNicknameAction(
       error: parsed.error.issues[0]?.message ?? "잘못된 입력",
     };
 
-  await db.user.update({
-    where: { id: user.id },
-    data: { nickname: parsed.data },
+  // 중복 방지: 대소문자 무시로 다른 사용자가 쓰는 닉네임인지 검사(DB @unique는 대소문자 구분 백스톱).
+  const taken = await db.user.findFirst({
+    where: {
+      nickname: { equals: parsed.data, mode: "insensitive" },
+      id: { not: user.id },
+    },
+    select: { id: true },
   });
+  if (taken) return { ok: false, error: "이미 사용 중인 닉네임이에요" };
+
+  try {
+    await db.user.update({
+      where: { id: user.id },
+      data: { nickname: parsed.data },
+    });
+  } catch (e) {
+    // 동시 저장으로 @unique 위반(P2002) — 위 검사와 사이의 레이스. 동일 안내로 처리.
+    if (e instanceof Prisma.PrismaClientKnownRequestError && e.code === "P2002")
+      return { ok: false, error: "이미 사용 중인 닉네임이에요" };
+    throw e;
+  }
   revalidatePath("/profile");
   revalidatePath("/profile/settings");
   return { ok: true, nickname: parsed.data };
+}
+
+// 소속 국가 저장. COUNTRY_META의 2글자 id만 허용(외부 입력 검증 — CLAUDE.md §5).
+export async function updateCountryAction(
+  raw: string,
+): Promise<{ ok: true; country: string } | { ok: false; error: string }> {
+  const user = await getCurrentUser();
+  if (!user?.id) return { ok: false, error: "로그인이 필요해요" };
+  if (!COUNTRY_IDS.includes(raw))
+    return { ok: false, error: "지원하지 않는 국가예요" };
+
+  await db.user.update({
+    where: { id: user.id },
+    data: { country: raw },
+  });
+  revalidatePath("/profile");
+  revalidatePath("/profile/settings");
+  return { ok: true, country: raw };
 }

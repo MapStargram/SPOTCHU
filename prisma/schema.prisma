@@ -124,8 +124,9 @@ model User {
   passwordHash  String? // 이메일/비밀번호 가입자만 값 존재(bcrypt). 소셜 전용은 null. 절대 응답에 노출 금지.
   name          String? // Auth.js 표준
   image         String? // Auth.js 표준
-  nickname      String? // 서비스 표시명(name과 별개)
+  nickname      String? @unique // 서비스 표시명(name과 별개). 중복 불가(대소문자 무시 검사는 서버액션에서).
   avatarUrl     String?
+  country       String? // 소속 국가(가입/설정에서 지정). lib/cities-geo COUNTRY_META의 2글자 id(kr·jp…). 게시물에 국기 표시.
   role          Role      @default(USER)
   isTrusted     Boolean   @default(false)
   // 동의 이력 (한국 위치정보법 대응)

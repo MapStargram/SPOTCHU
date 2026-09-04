@@ -5,6 +5,9 @@ import {
   buildCountries,
   REGIONS,
   COUNTRY_META,
+  COUNTRIES,
+  COUNTRY_IDS,
+  countryById,
 } from "./cities-geo";
 
 describe("project — 등장방형 투영(박스 내 %)", () => {
@@ -88,6 +91,23 @@ describe("buildCountries — 국가별 도시 그룹", () => {
       .flatMap((c) => c.cities)
       .find((x) => x.id === sample.id);
     expect(off?.available).toBe(false);
+  });
+});
+
+describe("countryById / COUNTRIES — 사용자 소속 국가", () => {
+  it("유효한 id는 국기·한국어 이름을 반환", () => {
+    const kr = countryById("kr");
+    expect(kr?.flag).toBe("🇰🇷");
+    expect(kr?.name).toBe("한국");
+  });
+  it("미지정·미지원 id는 null(게시물에서 국기 미표시)", () => {
+    expect(countryById(null)).toBeNull();
+    expect(countryById("")).toBeNull();
+    expect(countryById("zz")).toBeNull();
+  });
+  it("COUNTRY_IDS는 COUNTRIES와 개수 일치하고 kr 포함(검증·피커 원천)", () => {
+    expect(COUNTRY_IDS).toContain("kr");
+    expect(COUNTRY_IDS.length).toBe(COUNTRIES.length);
   });
 });
 

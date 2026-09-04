@@ -21,8 +21,10 @@ import {
 import {
   updateNicknameAction,
   updateAvatarAction,
+  updateCountryAction,
 } from "@/lib/actions/profile";
 import { uploadImageFile } from "@/lib/client-upload";
+import { COUNTRIES, countryById } from "@/lib/cities-geo";
 import { useFocusTrap } from "@/lib/useFocusTrap";
 
 // G4 · 설정. 닉네임 편집·연결 로그인은 실제 DB, 미구현 기능(다크/언어/알림)은 "준비중"으로 표기.
@@ -41,12 +43,15 @@ export function Settings({
     nickname: string;
     providers: string[];
     image: string | null;
+    country: string | null;
   } | null;
 }) {
   const router = useRouter();
   const [nick, setNick] = useState(profile?.nickname ?? "");
+  const [country, setCountry] = useState(profile?.country ?? "");
   const [editing, setEditing] = useState(false);
   const [draft, setDraft] = useState(nick);
+  const [draftCountry, setDraftCountry] = useState(country);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [avatar, setAvatar] = useState(profile?.image ?? null);
@@ -58,6 +63,7 @@ export function Settings({
   const openEdit = () => {
     if (!profile) return router.push("/login");
     setDraft(nick);
+    setDraftCountry(country);
     setError(null);
     setEditing(true);
   };
@@ -84,13 +90,25 @@ export function Settings({
     setSaving(true);
     setError(null);
     const res = await updateNicknameAction(draft);
-    setSaving(false);
-    if (res.ok) {
-      setNick(res.nickname);
-      setEditing(false);
-    } else {
+    if (!res.ok) {
+      setSaving(false);
       setError(res.error);
+      return;
     }
+    setNick(res.nickname);
+    // 국가가 바뀌었으면 저장(빈 값=미선택은 저장 안 함).
+    if (draftCountry && draftCountry !== country) {
+      const cres = await updateCountryAction(draftCountry);
+      if (!cres.ok) {
+        setSaving(false);
+        setError(cres.error);
+        return;
+      }
+      setCountry(cres.country);
+    }
+    setSaving(false);
+    setEditing(false);
+    router.refresh();
   };
 
   const providers = profile?.providers
@@ -119,7 +137,11 @@ export function Settings({
             <Row
               icon={<Pencil size={18} />}
               label="프로필 편집"
-              extra={profile ? nick || "닉네임 없음" : "로그인 필요"}
+              extra={
+                profile
+                  ? `${countryById(country)?.flag ?? ""} ${nick || "닉네임 없음"}`.trim()
+                  : "로그인 필요"
+              }
               chevron
               onClick={openEdit}
             />
@@ -273,6 +295,29 @@ export function Settings({
               placeholder="표시할 닉네임"
               className="mt-1.5 w-full rounded-2xl border border-[color:var(--line)] bg-white px-4 py-3 text-[14px] text-navy outline-none focus:border-[color:var(--coral)]"
             />
+
+            <label
+              htmlFor="country"
+              className="mt-4 block text-[12px] font-semibold text-[color:var(--muted)]"
+            >
+              소속 국가
+            </label>
+            <select
+              id="country"
+              value={draftCountry}
+              onChange={(e) => setDraftCountry(e.target.value)}
+              className="mt-1.5 w-full rounded-2xl border border-[color:var(--line)] bg-white px-4 py-3 text-[14px] text-navy outline-none focus:border-[color:var(--coral)]"
+            >
+              <option value="" disabled>
+                국가 선택
+              </option>
+              {COUNTRIES.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.flag} {c.name}
+                </option>
+              ))}
+            </select>
+
             {error && <p className="mt-2 text-[12px] text-coral">{error}</p>}
             <button
               onClick={() => void save()}

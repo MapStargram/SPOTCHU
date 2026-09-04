@@ -8,7 +8,7 @@ export type FeedTab = "popular" | "latest" | "verified";
 const FEED_LIMIT = 60; // ponytail: 상한. 커서 페이지네이션은 rules TODO.
 
 const postInclude = {
-  author: { select: { id: true, nickname: true, name: true } },
+  author: { select: { id: true, nickname: true, name: true, country: true } },
   spot: { select: { id: true, name: true, cityId: true } },
   images: { orderBy: { order: "asc" as const }, select: { url: true } },
   _count: { select: { likes: true } },
