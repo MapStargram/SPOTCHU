@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T23:19:07.813Z",
+  "generatedAt": "2026-09-04T03:00:43.600Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -3843,6 +3843,29 @@
       }
     },
     {
+      "id": "hongkong-canton-road-bike-scene-comrades-c716",
+      "title": "광동도(캔튼로드) 자전거 장면 거리 (첨밀밀 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.2975,
+      "lng": 114.169,
+      "area": "Canton Road, Tsim Sha Tsui",
+      "subject": "이소군(여명)이 자전거 뒷자리에 이교(장만옥)를 태우고 지나가며 그녀가 덩리쥔의 '첨밀밀'을 흥얼거리는 영화의 상징적 장면 — 배경이 된 광동도 상점가",
+      "tip": "지금도 尖沙咀의 주요 쇼핑가로 남아 있으나 개별 상점은 대부분 교체됨. 보도에서 거리 전경 위주로 촬영하고 차도 진입은 금지.",
+      "lens": "24-35mm",
+      "time": "낮",
+      "workId": "comrades-almost-a-love-story",
+      "scene": "이소군이 자전거로 이교를 태우고 함께 '첨밀밀'을 흥얼거리는 영화의 대표 장면",
+      "verified": "reported",
+      "source": "https://vocus.cc/article/5bce7ff6fd8978000151f5b6",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490749/spotchu/spots/mm5sgcg1x9fvqz1fipi7.jpg",
+      "imageCredit": {
+        "author": "LN9267",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Canton_Road,Tsim_Sha_Tsui_05-03-2022.jpg"
+      }
+    },
+    {
       "id": "hongkong-central-mid-levels-escalator-cochrane-4a91",
       "title": "중경삼림 센트럴 미드레벨 에스컬레이터 코크란 스트리트 구간",
       "city": "hongkong",
@@ -4037,6 +4060,29 @@
       }
     },
     {
+      "id": "hongkong-king-george-v-memorial-park-comrades-8f3a",
+      "title": "킹조지 5세 기념공원 (첨밀밀 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.3053,
+      "lng": 114.1681,
+      "area": "King George V Memorial Park, Jordan (Kwun Chung), Yau Tsim Mong, Kowloon",
+      "subject": "극 초반 광저우에서 갓 상경한 이소군(여명)이 자전거로 배달 일을 하며 지나가는 공원길 — 영화 오프닝 시퀀스의 배경 장소",
+      "tip": "MTR 조던(Jordan)역에서 도보 5분, 광동도(廣東道) 바로 옆 공공 공원이라 접근이 쉽다. 이른 아침 산책로가 한산해 인물 없는 배경 컷을 담기 좋다.",
+      "lens": "35mm",
+      "time": "오전",
+      "workId": "comrades-almost-a-love-story",
+      "scene": "이소군(여명)이 자전거로 일하며 지나가는 영화 오프닝 시퀀스의 배경 공원",
+      "verified": "reported",
+      "source": "https://film-pilgrimage.com/2017/05/29/%E7%94%9C%E8%9C%9C%E8%9C%9C/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490757/spotchu/spots/nsk8yrkmqyiezahvscml.jpg",
+      "imageCredit": {
+        "author": "Fadchwizo Rodawomt",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:HK_YTM_Jordan_night_%E5%BB%A3%E6%9D%B1%E9%81%93_Canton_Road_King_George_V_Memorial_Park_Kowloon_night_October_2022_Px3.jpg"
+      }
+    },
+    {
       "id": "hongkong-lai-tak-tsuen-atrium-ghost-shell-7b3f",
       "title": "라이탁춘 원형 아트리움 (공각기동대 실사 촬영지)",
       "city": "hongkong",
@@ -4163,6 +4209,29 @@
         "author": "Sakaori (talk)",
         "license": "CC BY 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Yick_Cheong_Building_and_Yick_Fat_Building._Aug._2015.A.JPG"
+      }
+    },
+    {
+      "id": "hongkong-nathan-road-644-comrades-5d29",
+      "title": "네이던로드 644 영어학원 건물 (첨밀밀 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.316,
+      "lng": 114.17,
+      "area": "644 Nathan Road (陶德大廈), Mong Kok",
+      "subject": "극중 '실용영전(實用英專)' 간판이 걸렸던 영어학원 건물 외관 — 인물 제레미(크리스토퍼 도일 분)가 실전 영어를 가르치던 곳으로 등장",
+      "tip": "몽콕역과 야우마테이역 사이 네이던로드 변, 더우유가(豉油街) 교차로 인근 상가 건물. 현재는 학원 간판이 없고 다른 업종이 들어서 있으니 건물 외관 위주로 촬영.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "comrades-almost-a-love-story",
+      "scene": "영어 강사 제레미(크리스토퍼 도일)가 '실용영전' 학원에서 수강생들에게 실전 영어를 가르치는 장면의 배경 건물",
+      "verified": "reported",
+      "source": "https://film-pilgrimage.com/2017/05/29/%E7%94%9C%E8%9C%9C%E8%9C%9C/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490766/spotchu/spots/det0nctfc4cpq6zcieql.jpg",
+      "imageCredit": {
+        "author": "Belsadnay Boratdm Sandsy",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:HK_MK_%E6%97%BA%E8%A7%92_Mongkok_%E5%BD%8C%E6%95%A6%E9%81%93_Nathan_Road_Argyle_Street_HSBC_HQ_Building_November_2025_N13P_01.jpg"
       }
     },
     {
@@ -7529,6 +7598,28 @@
       "source": "https://www.untappedcities.com/film-locations-youve-got-mail-nyc/"
     },
     {
+      "id": "newyork-battery-park-statue-of-liberty-home-alone-2-a29c",
+      "title": "배터리 파크 (나 홀로 집에 2 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7009,
+      "lng": -74.0152,
+      "area": "로어 맨해튼 최남단, 배터리 파크(The Battery) 산책로",
+      "subject": "케빈이 동전 망원경으로 자유의 여신상을 바라보던 배터리 파크 워터프런트 — 영화 속 동전 망원경은 현재 철거됨",
+      "tip": "산책로 난간에서 남서쪽 뉴욕항 방향으로 자유의 여신상이 보인다. 일몰 무렵 실루엣 촬영이 좋고, 페리 선착장 인파를 피해 공원 서쪽 산책로가 비교적 한산하다.",
+      "lens": "70-200mm(여신상 클로즈업)",
+      "time": "일몰",
+      "workId": "home-alone-2-lost-in-new-york",
+      "scene": "케빈이 배터리 파크에서 동전 망원경으로 자유의 여신상을 구경하는 관광 몽타주 장면",
+      "source": "https://nycinfilm.com/2024/12/26/home-alone-2-lost-in-new-york-1992/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490772/spotchu/spots/cq50nz83quypia4jacal.jpg",
+      "imageCredit": {
+        "author": "Joe Mabel (on Flickr as Joe Mabel from Seattle, US",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Battery_Park_from_New_York_Harbor_01_(9441158603).jpg"
+      }
+    },
+    {
       "id": "newyork-bethesda-terrace-harry-sally-c17d",
       "title": "베데스다 테라스 (해리가 샐리를 만났을 때 촬영지)",
       "city": "newyork",
@@ -7643,6 +7734,49 @@
       "workId": "when-harry-met-sally",
       "scene": "해리와 샐리가 각자의 친구 제스·마리를 서로에게 소개해주려던 더블데이트가 오히려 제스와 마리를 이어주는 장면",
       "source": "https://movie-locations.com/movies/w/When-Harry-Met-Sally.php"
+    },
+    {
+      "id": "newyork-carnegie-hall-exterior-home-alone-2-c1f8",
+      "title": "카네기홀 외관 (나 홀로 집에 2 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7649,
+      "lng": -73.9794,
+      "area": "미드타운 맨해튼, 7번가 881번지(57번가 코너)",
+      "subject": "비둘기 아줌마가 케빈을 데려가는 콘서트홀로 등장하는 실제 카네기홀 외관 — 내부 다락방·공연장 장면은 시카고 심포니센터(오케스트라 홀)에서 별도 촬영됨",
+      "tip": "7번가 건너편 인도에서 정문 차양과 대리석 파사드를 함께 담을 수 있다. 영화 속 내부는 이 건물이 아니라 시카고에서 촬영된 세트이므로 외관 촬영에 집중할 것.",
+      "lens": "35-50mm",
+      "time": "역광을 피할 수 있는 오전",
+      "workId": "home-alone-2-lost-in-new-york",
+      "scene": "비둘기 아줌마가 케빈을 데리고 들어가는 콘서트홀의 외경으로 등장(내부는 시카고에서 촬영)",
+      "source": "https://nycinfilm.com/2024/12/26/home-alone-2-lost-in-new-york-1992/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490776/spotchu/spots/rn9bru3czzqgi63zqoig.jpg",
+      "imageCredit": {
+        "author": "Kidfly182",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Carnegie_Hall_August_2021.jpg"
+      }
+    },
+    {
+      "id": "newyork-central-park-bow-bridge-enchanted-e81a",
+      "title": "센트럴파크 보우 브리지 (마법에 걸린 사랑 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7748,
+      "lng": -73.9718,
+      "area": "Central Park, Bow Bridge (The Lake, 74번가 인근)",
+      "subject": "더 레이크를 가로지르는 주철 다리 '보우 브리지' — 뮤지컬 넘버 'That's How You Know'에서 지젤 일행이 센트럴파크 곳곳을 거닐며 노래하는 장면들의 배경 중 하나",
+      "tip": "센트럴파크 72번가 입구에서 도보 약 10분, 더 레이크 남쪽 체리힐 방향 호숫가에서 다리 전체와 수면을 함께 담을 수 있다. 다리 위로 올라가 호수 건너 산레모 타워 방향 뷰도 인기 구도.",
+      "workId": "enchanted",
+      "scene": "'That's How You Know' 뮤지컬 넘버 중 지젤이 센트럴파크를 거닐며 노래하고 춤추는 장면의 배경 중 하나인 보우 브리지",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/e/Enchanted.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490779/spotchu/spots/z4ytgz83paglity4npot.jpg",
+      "imageCredit": {
+        "author": "Rhododendrites",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Bow_Bridge_panorama_Central_Park_(86746p).jpg"
+      }
     },
     {
       "id": "newyork-central-park-conservatory-water-tiffanys-1e8c",
@@ -7925,6 +8059,27 @@
       }
     },
     {
+      "id": "newyork-merchants-gate-uss-maine-enchanted-b47d",
+      "title": "머천츠 게이트 USS 메인 기념비 (마법에 걸린 사랑 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.768,
+      "lng": -73.9812,
+      "area": "Merchants' Gate, Central Park (Columbus Circle, 59th St & Central Park West)",
+      "subject": "센트럴파크 남서쪽 입구 '머천츠 게이트'에 있는 실존 기념비 'USS 메인 내셔널 모뉴먼트' — 뒤로 컬럼버스 서클과 타임워너센터 쌍둥이 타워가 보인다",
+      "tip": "지하철 A/B/C/D·1선 Columbus Circle역 바로 앞. 컬럼버스 서클 쪽 인도에서 타임워너센터를 배경 삼아 기념비를 담을 수 있다. 광장이 넓어 낮 시간에도 비교적 여유롭게 촬영 가능.",
+      "workId": "enchanted",
+      "scene": "네이선니얼이 에드워드 왕자를 컬럼버스 서클 초입 USS 메인 기념비 앞에서 엉뚱한 방향으로 떠나보내 지젤을 찾지 못하게 방해하는 장면",
+      "verified": "reported",
+      "source": "https://onlocationtours.com/locations/enchanted-movie-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490782/spotchu/spots/q5atahzwmubrpyfvg2wl.jpg",
+      "imageCredit": {
+        "author": "PortableNYCTours",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:USS_Maine_National_Monument_-_Peace.jpg"
+      }
+    },
+    {
       "id": "newyork-miranda-townhouse-devil-prada-d05b",
       "title": "미란다의 타운하우스 (악마는 프라다를 입는다 촬영지)",
       "city": "newyork",
@@ -7999,6 +8154,49 @@
       }
     },
     {
+      "id": "newyork-paterno-riverside-116th-enchanted-3f6c",
+      "title": "파테르노 아파트 (마법에 걸린 사랑 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.8088,
+      "lng": -73.966,
+      "area": "Morningside Heights, Manhattan (440 Riverside Drive & W 116th St)",
+      "subject": "로버트와 딸 모건이 사는 아파트로 등장한 실존 건물 '파테르노(The Paterno)' — 곡선형의 화려한 아이보리색 파사드가 특징인 1909~1910년 준공 주거 건물",
+      "tip": "지하철 1선 116 St-Columbia University역에서 도보 8분. 리버사이드 드라이브 건너편 리버사이드 파크 쪽 인도에서 곡선형 파사드 전체를 담을 수 있다. 실거주 개인 건물이므로 로비·현관 근접 촬영은 삼갈 것.",
+      "workId": "enchanted",
+      "scene": "로버트와 딸 모건이 사는 아파트 건물 외경 — 지젤이 처음 로버트의 집을 찾아와 문을 두드리는 장면 등에서 반복 등장",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/The_Paterno",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490791/spotchu/spots/s4ieis59atqwxj8efig8.jpg",
+      "imageCredit": {
+        "author": "Jay Dobkin",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:425_Riverside_Drive_1.jpg"
+      }
+    },
+    {
+      "id": "newyork-plaza-hotel-home-alone-2-9d4a",
+      "title": "플라자 호텔 (나 홀로 집에 2 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7641,
+      "lng": -73.9738,
+      "area": "미드타운 맨해튼, 그랜드 아미 플라자 (5번가 & 센트럴파크 사우스)",
+      "subject": "케빈이 아빠의 신용카드로 체크인해 스위트룸에 묵고, 이후 엄마 케이트가 직원에게 케빈의 행방을 묻는 실제 더 플라자 호텔(768 Fifth Ave) 외관",
+      "tip": "호텔 정문은 5번가·센트럴파크 사우스 코너에 있다. 길 건너 그랜드 아미 플라자(퓰리처 분수) 인도에서 파사드와 차양을 함께 담을 수 있다. 로비는 투숙객 위주로 촬영이 제한적이니 외관 위주로.",
+      "lens": "24-35mm",
+      "time": "차량이 적은 이른 아침",
+      "workId": "home-alone-2-lost-in-new-york",
+      "scene": "케빈이 뉴욕에서 아빠 신용카드로 체크인해 묵는 호텔이자, 엄마 케이트가 케빈을 찾아 프런트에 도움을 청하는 장면의 배경",
+      "source": "https://nycinfilm.com/2024/12/26/home-alone-2-lost-in-new-york-1992/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490796/spotchu/spots/xztn0e4erl34kjril2yi.jpg",
+      "imageCredit": {
+        "author": "Daniel Dimitrov",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Plaza_Hotel_Manhattan_NYC.jpg"
+      }
+    },
+    {
       "id": "newyork-puck-building-harry-sally-9f4b",
       "title": "퍼크 빌딩 (해리가 샐리를 만났을 때 촬영지)",
       "city": "newyork",
@@ -8016,6 +8214,50 @@
         "author": "e_chaya",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/10165467@N04/5335808916"
+      }
+    },
+    {
+      "id": "newyork-radio-city-music-hall-home-alone-2-e83b",
+      "title": "라디오 시티 뮤직홀 (나 홀로 집에 2 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7599,
+      "lng": -73.9795,
+      "area": "미드타운 맨해튼, 6번가(Avenue of the Americas) 1260번지",
+      "subject": "케빈이 홀로 뉴욕 관광을 시작하며 폴라로이드로 사진을 찍는 아르데코 양식의 라디오 시티 뮤직홀 마퀴",
+      "tip": "6번가 인도에서 대형 마퀴를 올려다보는 구도가 기본. 해 진 직후 마퀴 조명이 켜지면 더 화려하고, 도보 5분 거리의 록펠러 센터와 묶어 촬영하기 좋다.",
+      "lens": "16-24mm(광각)",
+      "time": "해 진 직후 마퀴 점등 시간",
+      "workId": "home-alone-2-lost-in-new-york",
+      "scene": "케빈이 뉴욕에 도착해 혼자 시내 관광을 시작하며 명소들을 폴라로이드로 촬영하는 장면",
+      "source": "https://nycinfilm.com/2024/12/26/home-alone-2-lost-in-new-york-1992/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490800/spotchu/spots/soyqijcvhf2rwzvitgbx.jpg",
+      "imageCredit": {
+        "author": "Frank Schulenburg",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Radio_City_Music_Hall_at_night_(2024)-L1006228.jpg"
+      }
+    },
+    {
+      "id": "newyork-rockefeller-center-christmas-tree-home-alone-2-b7e2",
+      "title": "록펠러 센터 크리스마스 트리 (나 홀로 집에 2 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7587,
+      "lng": -73.9787,
+      "area": "미드타운 맨해튼, 록펠러 플라자(5번가 49~50번가 사이)",
+      "subject": "엔딩에서 케빈이 어머니 케이트와 극적으로 재회하는 록펠러 센터 대형 크리스마스 트리 앞 선큰 플라자 — 1991년 실제 크리스마스 시즌에 현지 촬영",
+      "tip": "선큰 플라자를 둘러싼 상단 산책로에서 트리와 황금빛 프로메테우스 동상을 함께 담을 수 있다. 연말 성수기엔 인파가 매우 많으니 이른 아침 방문을 추천.",
+      "lens": "24-70mm",
+      "time": "이른 아침",
+      "workId": "home-alone-2-lost-in-new-york",
+      "scene": "엔딩부에서 록펠러 센터 크리스마스 트리 앞, 케빈이 어머니와 재회하는 장면",
+      "source": "https://nycinfilm.com/2024/12/26/home-alone-2-lost-in-new-york-1992/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490802/spotchu/spots/f41n3c1wsucaiol3dv7z.jpg",
+      "imageCredit": {
+        "author": "Matthew Binebrink",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Rockefeller_Christmas_Tree_Close-Up_2018.jpg"
       }
     },
     {
@@ -8202,6 +8444,27 @@
       }
     },
     {
+      "id": "newyork-times-square-46th-manhole-enchanted-9c2f",
+      "title": "타임스스퀘어 46번가 (마법에 걸린 사랑 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7589,
+      "lng": -73.9857,
+      "area": "Times Square, Manhattan (Broadway & W 46th St)",
+      "subject": "지젤이 안달라시아에서 맨홀을 뚫고 웨딩드레스 차림으로 솟아올라 뉴욕에 첫발을 내딛는 실제 촬영 장소 — 타임스스퀘어 브로드웨이 보행자 광장",
+      "tip": "지하철 N/Q/R/W·1/2/3·7선 Times Sq-42 St역에서 도보 3분. 브로드웨이 차 없는 보행자 구역(더피 스퀘어 인근)에서 사방 전광판을 배경으로 촬영. 상시 인파가 많으니 이른 아침 방문을 추천.",
+      "workId": "enchanted",
+      "scene": "지젤이 웨딩드레스 차림으로 맨홀을 뚫고 타임스스퀘어 한복판에 등장해 뉴욕에 처음 발을 딛는 오프닝 장면",
+      "verified": "reported",
+      "source": "https://en.wikipedia.org/wiki/Enchanted_(film)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490803/spotchu/spots/epdm2oq5sjqha2afyijs.jpg",
+      "imageCredit": {
+        "author": "Boris Dzhingarov",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Times_Square_at_night-_Manhattan,_New_York_City,_United_States_of_America_(9868029253).jpg"
+      }
+    },
+    {
       "id": "newyork-tudor-city-overpass-chrysler-c92f",
       "title": "튜더 시티 42번가 육교 크라이슬러 빌딩 뷰포인트",
       "city": "newyork",
@@ -8336,6 +8599,27 @@
         "author": "Tomás Fano",
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Central_Park_Wollman_Rink.jpg"
+      }
+    },
+    {
+      "id": "newyork-woolworth-building-ball-enchanted-c92e",
+      "title": "울워스 빌딩 (마법에 걸린 사랑 촬영지)",
+      "city": "newyork",
+      "category": "drama",
+      "lat": 40.7124,
+      "lng": -74.0075,
+      "area": "Civic Center, Lower Manhattan (233 Broadway)",
+      "subject": "1913년 준공된 마천루 '울워스 빌딩' — 극중 '왕과 왕비의 가장무도회'가 열리고 나리사가 용으로 변해 로버트를 붙잡고 첨탑을 오르는 클라이맥스 결전의 무대로 쓰인 실존 건물 외경",
+      "tip": "지하철 4/5/6·R/W선 City Hall역에서 도보 2분. 브로드웨이 건너 시티홀 파크 서쪽 인도에서 첨탑까지 프레임에 담으려면 광각 렌즈가 유리하다. 현재도 업무·주거용 건물로 로비 출입은 제한된다.",
+      "workId": "enchanted",
+      "scene": "'왕과 왕비의 가장무도회'가 열리고, 나리사가 용으로 변신해 로버트를 붙잡고 건물 첨탑을 오르는 클라이맥스 결전이 벌어지는 배경 건물",
+      "verified": "reported",
+      "source": "https://movie-locations.com/movies/e/Enchanted.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490807/spotchu/spots/frzfe7lvxdx1pshoxifk.jpg",
+      "imageCredit": {
+        "author": "Bmzuckerman",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Neo-Gothic_-_New_York,_NY_-_Woolworth_Building_(1).jpg"
       }
     },
     {
@@ -9267,6 +9551,26 @@
       }
     },
     {
+      "id": "paris-gare-du-nord-bourne-identity-b61c",
+      "title": "파리 북역 (본 아이덴티티 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.88111,
+      "lng": 2.35528,
+      "area": "10구, Gare du Nord(파리 북역), Paris",
+      "subject": "본이 여러 위조 여권이 든 빨간 가방을 물품보관함에 맡기는, 유럽에서 이용객이 가장 많은 기차역",
+      "tip": "정면 광장(Place Napoléon III)에서 파사드 전체가 잘 나온다. 이른 아침 시간대가 인파가 적어 촬영하기 좋다.",
+      "workId": "the-bourne-identity",
+      "scene": "본이 역 물품보관함에 여러 위조 신분증이 든 가방을 맡기는 영화 초중반 장면",
+      "source": "https://www.filmfrance.net/en/once-upon-a-time/the-bourne-identity/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490811/spotchu/spots/xxsqmqgjnawrjel3yi4k.jpg",
+      "imageCredit": {
+        "author": "Taxiarchos228",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Paris_-_Gare_du_Nord.jpg"
+      }
+    },
+    {
       "id": "paris-grand-palais-mi-fallout-6f3a",
       "title": "그랑 팔레 (미션 임파서블 폴아웃 촬영지)",
       "city": "paris",
@@ -9304,6 +9608,26 @@
         "author": "Guilhem Vellut from Paris, France",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Courtyard,_H%C3%B4tel_de_Soubise,_Paris_9_June_2017.jpg"
+      }
+    },
+    {
+      "id": "paris-hotel-regina-bourne-identity-4f8a",
+      "title": "호텔 레지나 플라스 데 피라미드 (본 아이덴티티 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.86388,
+      "lng": 2.33214,
+      "area": "1구, Place des Pyramides(루브르 앞), Paris",
+      "subject": "마리가 위조 신분 '존 마이클 케인'의 정보를 캐내러 잠입하는 실제 호텔 레지나 건물",
+      "tip": "광장 중앙 잔 다르크 금동상 앞에서 호텔 정면 파사드를 담을 수 있다. 튈르리 정원 입구·루브르 박물관과 도보 3분 거리.",
+      "workId": "the-bourne-identity",
+      "scene": "본과 마리가 호텔 레지나 잠입을 계획하는 영화 중반 장면",
+      "source": "https://movie-locations.com/movies/b/Bourne-Identity.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490816/spotchu/spots/bn0lgopfqzceqzohjyhu.jpg",
+      "imageCredit": {
+        "author": "Laurent Bougras",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_de_l%27H%C3%B4tel_Regina.jpg"
       }
     },
     {
@@ -9643,6 +9967,20 @@
       }
     },
     {
+      "id": "paris-passage-plantin-bourne-identity-9d2b",
+      "title": "파사주 플랑탱 계단 (본 아이덴티티 미니쿠퍼 추격 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.87111,
+      "lng": 2.38833,
+      "area": "20구, Passage Plantin(벨빌), Paris",
+      "subject": "본이 미니쿠퍼로 경찰을 따돌리며 그대로 질주해 내려간 벨빌의 좁은 계단 골목(rue du Transvaal~rue des Couronnes, 길이 약 80m)",
+      "tip": "rue du Transvaal 쪽 계단 위에서 아래로 내려다보는 구도가 영화 속 추격 장면과 가장 비슷하다. 차량이 다니지 않는 도보 전용 계단이라 안전하지만, 조용한 주택가이니 소음·사생활에 유의.",
+      "workId": "the-bourne-identity",
+      "scene": "경찰에 쫓기던 본이 미니쿠퍼를 몰고 벨빌의 좁은 계단길을 그대로 내려가는 추격 명장면",
+      "source": "https://tokyofox.net/2012/02/17/paris-2012-pt-ii-the-bourne-identity-filming-locations/"
+    },
+    {
       "id": "paris-polidor-restaurant-midnight-in-paris-6f2a",
       "title": "폴리도르 레스토랑 (미드나잇 인 파리)",
       "city": "paris",
@@ -9689,6 +10027,26 @@
       }
     },
     {
+      "id": "paris-pont-des-arts-bourne-identity-e94f",
+      "title": "퐁데자르 다리 (본 아이덴티티 엔딩 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.85833,
+      "lng": 2.3375,
+      "area": "1구, Pont des Arts(루브르·앵스티튀 드 프랑스 사이), Paris",
+      "subject": "본이 트레드스톤 사건을 뒤로하고 강을 건너 사라지는 엔딩 장면의 보행자 전용 다리",
+      "tip": "다리 중앙에서 루브르 방향으로 담으면 엔딩 장면과 비슷한 구도가 나온다. 해 질 무렵은 인파가 몰리니 이른 시간대 추천.",
+      "workId": "the-bourne-identity",
+      "scene": "본이 퐁데자르를 건너 홀로 걸어가며 사라지는 영화의 마지막 장면",
+      "source": "https://www.filmfrance.net/en/once-upon-a-time/the-bourne-identity/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490819/spotchu/spots/nzlrdjg5pf7vd3yhapfs.jpg",
+      "imageCredit": {
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Paris,_Pont_des_Arts_--_2014_--_1404.jpg"
+      }
+    },
+    {
       "id": "paris-pont-du-carrousel-da-vinci-code-e02f",
       "title": "퐁 뒤 캐루젤 (다빈치 코드 촬영지)",
       "city": "paris",
@@ -9706,6 +10064,26 @@
         "author": "Nan Palmero from San Antonio, TX, USA",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Pont_du_Carrousel,_Paris_October_2012.jpg"
+      }
+    },
+    {
+      "id": "paris-pont-neuf-bourne-identity-7c3e",
+      "title": "퐁뇌프 다리 (본 아이덴티티 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8572,
+      "lng": 2.3415,
+      "area": "1구, 퐁뇌프(센강·시테섬 서단), Paris",
+      "subject": "본이 콘클린과 담판 짓는 장면 속 실제 다리 — 파리에서 가장 오래된 다리로 시테섬 서쪽 끝을 지난다",
+      "tip": "다리 중앙이나 시테섬 서쪽 끝 스퀘어 베르갈랑 공원에서 강변과 함께 담을 수 있다. 메트로 7호선 Pont Neuf역에서 도보 1분.",
+      "workId": "the-bourne-identity",
+      "scene": "본이 트레드스톤 국장 콘클린을 다리 위로 불러내 대치하는 영화 후반부 장면",
+      "source": "https://movie-locations.com/movies/b/Bourne-Identity.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490821/spotchu/spots/pte6p0cosdgsyeqgfil5.jpg",
+      "imageCredit": {
+        "author": "Sumit Surai",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Pont_Neuf_-_Paris_-_France.jpg"
       }
     },
     {
@@ -11795,6 +12173,20 @@
       "source": "https://namu.wiki/w/%EB%8B%AC%EC%BD%A4%ED%95%9C%20%EC%9D%B8%EC%83%9D(2005%EB%85%84%20%EC%98%81%ED%99%94)"
     },
     {
+      "id": "seoul-hanyeol-memorial-hall-movie-1987-d316",
+      "title": "이한열기념관",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.555,
+      "lng": 126.9339,
+      "area": "신촌, 마포구",
+      "subject": "이한열 열사의 유품과 6월 민주항쟁 사료를 상설 전시하는 기념관. 2005년 신촌에 개관했다",
+      "tip": "신촌역/신촌기차역 도보권. 평일 오전 10시~오후 5시 개관(주말 휴관), 무료 관람. 열사가 쓰러질 당시 신었던 신발 등 유품과 당시 사진 자료를 볼 수 있다.",
+      "workId": "1987",
+      "scene": "영화 속 실존 인물 이한열 열사(배우 강동원 분)를 기리는 실제 기념관. 유품과 사료를 통해 극의 배경이 된 6월항쟁의 역사를 확인할 수 있다.",
+      "source": "https://m.korea.kr/news/policyNewsView.do?newsId=148902262"
+    },
+    {
       "id": "seoul-hongdae-nbclub-bittersweet-life-9d2a",
       "title": "홍대 NB클럽 옛터 (달콤한 인생 촬영지)",
       "city": "seoul",
@@ -11940,6 +12332,26 @@
       }
     },
     {
+      "id": "seoul-myeongdong-cathedral-movie-1987-8f4c",
+      "title": "명동성당 (박종철 고문치사 폭로 미사 현장)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5639,
+      "lng": 126.9873,
+      "area": "명동2가, 중구",
+      "subject": "천주교정의구현사제단이 박종철 고문치사 사건의 축소·조작을 폭로한 1987년 5월 18일 광주민주화운동 7주기 추도미사가 열린 실제 성당. 영화 속 폭로 미사 장면도 한국 영화 최초로 이 성당 내부에서 실제 촬영 허가를 받아 촬영됨",
+      "tip": "명동역 6번 출구에서 도보 5분. 성당 정문 앞 광장(계단)에서 고딕 첨탑을 정면으로 담을 수 있다. 실제 종교시설이므로 미사 시간에는 촬영을 삼가고 정숙을 유지할 것.",
+      "workId": "1987",
+      "scene": "정의구현사제단이 박종철 사건의 진상을 폭로하는 미사 장면 실제 촬영지. 실제 역사에서도 1987.5.18 이 성당에서 김승훈 신부가 고문 축소·조작을 폭로했다.",
+      "source": "https://www.elle.co.kr/article/78254",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490825/spotchu/spots/tpfgebs0buw0qfqucfsc.jpg",
+      "imageCredit": {
+        "author": "kallerna",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Myeongdong_Cathedral_6.jpg"
+      }
+    },
+    {
       "id": "seoul-namsan-cablecar-past-lives-4f9b",
       "title": "남산케이블카 (패스트 라이브즈 촬영지)",
       "city": "seoul",
@@ -11978,6 +12390,20 @@
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/69047098@N00/4615670756"
       }
+    },
+    {
+      "id": "seoul-namyeongdong-bunsil-movie-1987-b271",
+      "title": "민주인권기념관 (옛 남영동 대공분실)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5408,
+      "lng": 126.9718,
+      "area": "갈월동, 용산구",
+      "subject": "서울대생 박종철 열사가 물고문·전기고문 끝에 숨진 509호 조사실이 있던 실제 건물(現 민주인권기념관). 영화 촬영 사상 처음으로 이 건물 외부 촬영이 허용됨",
+      "tip": "지하철 1호선 남영역 1번 출구 바로 앞. 상설 개방(월요일 휴관, 무료), 5층 509호 조사실이 원형 그대로 보존돼 있다. 추모의 뜻을 담아 정숙하게 관람할 것.",
+      "workId": "1987",
+      "scene": "박처원 등이 박종철을 신문·고문하는 509호 조사실 장면의 실제 촬영지이자, 1987.1.14 고문치사 사건이 실제로 벌어진 역사적 현장.",
+      "source": "https://www.seoul.co.kr/news/newsView.php?id=20180107500008"
     },
     {
       "id": "seoul-nmk-open-plaza-namsan-view-a1f8",
@@ -12413,6 +12839,20 @@
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Overlooking_han_river.jpg"
       }
+    },
+    {
+      "id": "seoul-yonsei-hanyeol-hill-movie-1987-5e9a",
+      "title": "연세대학교 정문 이한열동산",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5664,
+      "lng": 126.9388,
+      "area": "신촌동, 서대문구",
+      "subject": "1987년 6월 9일 연세대생 이한열 열사가 경찰 최루탄에 맞아 쓰러진 실제 지점. 정문 왼쪽 기둥에서 약 1.9m 떨어진 자리에 추모 동판이 설치돼 있다",
+      "tip": "2호선 신촌역 3번 출구에서 도보 5분. 정문 안쪽 왼쪽 바닥의 추모 동판을 찾아보자. 매년 6월 9일 추모식이 열리는 공개 공간이니 조용히 참배·촬영할 것.",
+      "workId": "1987",
+      "scene": "영화가 그리는 6월항쟁의 도화선, 1987.6.9 이한열 최루탄 피격의 실제 발생 현장. 다만 영화 속 정문·백양로 장면 자체는 촬영 당시 공사 중이어서 오픈세트와 CG로 별도 재현됐다.",
+      "source": "https://www.minjuroad.or.kr/location/150"
     },
     {
       "id": "sg-fort-canning-tree-tunnel-fc01",
@@ -13563,6 +14003,28 @@
       }
     },
     {
+      "id": "tokyo-hayashi-fumiko-museum-toki-kake-e6d3",
+      "title": "하야시 후미코 기념관 (시간을 달리는 소녀 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.71589,
+      "lng": 139.6844,
+      "area": "Nakai, Shinjuku, Tokyo",
+      "subject": "마코토의 집 모델로 알려진 목조 가옥 — 소설가 하야시 후미코의 옛 자택을 개축한 기념관",
+      "tip": "나카이역에서 도보 7분. 정원이 있는 목조 가옥 외관을 담기 좋다. 실내는 유료 전시관이므로 입구에서 촬영 규정을 확인하고, 방문 전 공식 페이지에서 휴관일을 확인할 것.",
+      "lens": "24-35mm",
+      "time": "오전~오후, 정원 채광이 좋은 시간대",
+      "workId": "the-girl-who-leapt-through-time",
+      "scene": "마코토가 사는 집의 실제 모델로 알려진 목조 가옥",
+      "source": "https://seichi-junrei.info/455/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490830/spotchu/spots/of6ekfbyo44rjdlv9nji.jpg",
+      "imageCredit": {
+        "author": "Kamemaru2000",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hayashi_fumiko_memorial_hall_shinjuku.JPG"
+      }
+    },
+    {
       "id": "tokyo-heisei-tsutsuji-park-your-lie-april-3a1f",
       "title": "헤이세이 철쭉공원 (너의 거짓말 성지)",
       "city": "tokyo",
@@ -13973,6 +14435,28 @@
       "source": "https://tokyotoilet.jp/nabesima_park/"
     },
     {
+      "id": "tokyo-nakai-station-toki-kake-b4c1",
+      "title": "나카이역 건널목 (시간을 달리는 소녀 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.71424,
+      "lng": 139.68666,
+      "area": "Nakai, Shinjuku, Tokyo",
+      "subject": "세이부신주쿠선 나카이역 앞 철도 건널목 — 마코토가 자전거로 내려오다 열차와 부딪힐 뻔하며 첫 타임리프 능력을 얻는 모티프가 된 곳",
+      "tip": "세이부신주쿠선·도에이오에도선 나카이역 하차. 건널목은 인도(차단기 바깥)에서만 촬영하고 선로·차단기 안쪽으로는 절대 들어가지 않는다. 역 앞 상점가 입구의 시계 간판이 작중 '가라쿠리 시계'의 모델로 함께 볼거리.",
+      "lens": "35-50mm",
+      "time": "평일 낮, 열차 통행이 잦지 않은 시간대",
+      "workId": "the-girl-who-leapt-through-time",
+      "scene": "마코토의 자전거 브레이크가 고장 나 건널목에서 열차와 충돌할 뻔하며 처음 타임리프하는 장면의 실제 모델",
+      "source": "https://seichi-junrei.info/455/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490832/spotchu/spots/ybvpriooqdhwmfkqqt6m.jpg",
+      "imageCredit": {
+        "author": "Nyao148 (talk · contribs)",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seibu-Nakai-Sta.JPG"
+      }
+    },
+    {
       "id": "tokyo-nanagodori-park-toilet-perfect-days-92be",
       "title": "나나고도리공원 구형 하이 토일렛 화장실 (퍼펙트 데이즈)",
       "city": "tokyo",
@@ -14056,6 +14540,28 @@
         "author": "Guilhem Vellut from Annecy, France",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Odaiba_Seaside_Park_@_Tokyo_Bay_Grand_Fireworks_Festival_2013_(9490385877).jpg"
+      }
+    },
+    {
+      "id": "tokyo-omokagebashi-toki-kake-91fa",
+      "title": "오모카게바시 갈림길 (시간을 달리는 소녀 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.71497,
+      "lng": 139.71556,
+      "area": "Takada, Toshima, Tokyo",
+      "subject": "간다가와 오모카게바시를 건너 우회전하면 나오는 Y자형 갈림길과 언덕길(후지미자카 인근)",
+      "tip": "도덴 아라카와선 오모카게바시 정류장 또는 도쿄메트로 도자이선 와세다역에서 도보 5~10분. 다리를 건너 우회전하면 나오는 Y자 갈림길이 포인트. 좁은 주택가 도로이니 차량·주민 통행에 방해되지 않게 인도에서 촬영.",
+      "lens": "35mm",
+      "time": "늦은 오후~해질녘",
+      "workId": "the-girl-who-leapt-through-time",
+      "scene": "치아키가 자전거로 마코토를 데려다주다 갈림길에서 고백하고, 마코토가 이를 되돌리려 여러 번 타임리프하는 명장면의 배경",
+      "source": "https://seichi-junrei.info/455/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490835/spotchu/spots/uwntnvom8at1zgewrq3k.jpg",
+      "imageCredit": {
+        "author": "tak1701d",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Omokage-bashi_2016.jpg"
       }
     },
     {
@@ -14636,6 +15142,50 @@
         "author": "江戸村のとくぞう",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=85164309"
+      }
+    },
+    {
+      "id": "tokyo-tetsugakudo-park-toki-kake-3d8e",
+      "title": "데쓰가쿠도 공원 야구장 (시간을 달리는 소녀 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.72274,
+      "lng": 139.6756,
+      "area": "Matsugaoka, Nakano, Tokyo",
+      "subject": "마코토·치아키·고스케 세 친구가 방과 후 캐치볼·야구를 하던 데쓰가쿠도 공원 운동시설 야구장",
+      "tip": "도에이 오에도선 오치아이미나미나가사키역 또는 세이부신주쿠선 아라이야쿠시마에역에서 도보 10분 이상. 외야 펜스 바깥 관람로에서 그라운드 전경을 담는다. 2020년 리뉴얼로 인조잔디이며, 이용 중인 팀·훈련을 방해하지 않을 것.",
+      "lens": "24-70mm",
+      "time": "오후 늦은 시간, 노을빛",
+      "workId": "the-girl-who-leapt-through-time",
+      "scene": "오프닝·엔딩에 등장하는, 세 사람이 여름날 방과 후 야구를 하며 시간을 보내는 야구장",
+      "source": "https://san-tatsu.jp/articles/115003/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490839/spotchu/spots/f7mcgfcrzloymimzxpuc.jpg",
+      "imageCredit": {
+        "author": "Morio",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Baseball_ground_Tetsugakudo_park_Nakano_Tokyo_Japan_5_October_2003.jpg"
+      }
+    },
+    {
+      "id": "tokyo-tokyo-national-museum-toki-kake-7f2a",
+      "title": "도쿄국립박물관 (시간을 달리는 소녀 성지)",
+      "city": "tokyo",
+      "category": "anime",
+      "lat": 35.7188,
+      "lng": 139.7764,
+      "area": "Ueno Park, Taito, Tokyo",
+      "subject": "혼칸(본관) 정면 계단 — 마코토의 이모(하루코)가 명화를 복원하며 일하는 박물관으로 등장",
+      "tip": "JR 우에노역 공원 출구에서 도보 10분. 혼칸 앞 넓은 계단과 파사드가 작중 구도와 닮은 포인트. 개관시간(9:30~) 내 방문하고 삼각대·장비는 관내 규정을 따를 것.",
+      "lens": "24-35mm",
+      "time": "오전 개관 직후, 인파 적은 시간대",
+      "workId": "the-girl-who-leapt-through-time",
+      "scene": "마코토가 이모 하루코를 찾아가 명화 복원 이야기를 듣고, 그 방에서 여러 번 타임리프를 반복하는 장면의 배경",
+      "source": "https://seichi-junrei.info/455/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788490841/spotchu/spots/cgrtba6qn3vsqcx9b4mn.jpg",
+      "imageCredit": {
+        "author": "Ryan Sharpe",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Honkan,_Tokyo_National_Museum_%E2%80%93_Tokyo,_Japan_%E2%80%93_(2019-12-30).jpg"
       }
     },
     {
@@ -15767,6 +16317,13 @@
       "progress": 0
     },
     {
+      "id": "comrades-almost-a-love-story",
+      "title": "첨밀밀",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "infernal-affairs",
       "title": "무간도",
       "type": "영화",
@@ -16187,6 +16744,13 @@
       "progress": 0
     },
     {
+      "id": "home-alone-2-lost-in-new-york",
+      "title": "나 홀로 집에 2",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "when-harry-met-sally",
       "title": "해리가 샐리를 만났을 때",
       "type": "영화",
@@ -16215,6 +16779,13 @@
       "progress": 0
     },
     {
+      "id": "enchanted",
+      "title": "마법에 걸린 사랑",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "breakfast-at-tiffanys",
       "title": "티파니에서 아침을",
       "type": "영화",
@@ -16224,13 +16795,6 @@
     {
       "id": "-newyork",
       "title": "원스 어폰 어 타임 인 아메리카",
-      "type": "영화",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "home-alone-2-lost-in-new-york",
-      "title": "Home Alone 2",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -16378,6 +16942,13 @@
     {
       "id": "midnight-in-paris",
       "title": "미드나잇 인 파리",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-bourne-identity",
+      "title": "본 아이덴티티",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -16600,6 +17171,13 @@
       "progress": 0
     },
     {
+      "id": "1987",
+      "title": "1987",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "squid-game",
       "title": "오징어 게임",
       "type": "드라마",
@@ -16799,6 +17377,13 @@
       "id": "hana-yori-dango",
       "title": "꽃보다 남자",
       "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "the-girl-who-leapt-through-time",
+      "title": "시간을 달리는 소녀",
+      "type": "애니",
       "spotCount": 1,
       "progress": 0
     },
