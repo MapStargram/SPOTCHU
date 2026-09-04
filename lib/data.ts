@@ -236,6 +236,7 @@ const WORKTYPE_LABEL: Record<string, string> = {
   ANIME: "애니",
   MOVIE: "영화",
   DRAMA: "드라마",
+  OTHER: "기타", // 누락 시 `?? row.type`로 raw "OTHER"가 화면에 노출됐다(작품 6종이 OTHER).
 };
 interface DbWorkLike {
   id: string;
