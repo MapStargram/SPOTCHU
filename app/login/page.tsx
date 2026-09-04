@@ -47,6 +47,17 @@ const PROVIDERS = [
   // getProviders() 확정 후 목록에서 빠져 '떴다 사라지는' 깜빡임이 된다. 시크릿 준비되면 여기에 재추가.
 ];
 
+// OAuth 콜백 에러(?error=)를 사용자 친화 메시지로 변환. 대표: OAuthAccountNotLinked
+// (연결하려는 소셜이 이미 다른 스팟츄 계정에 묶여 있음 — 계정통합 시도 실패).
+function authErrorMessage(code: string): string {
+  switch (code) {
+    case "OAuthAccountNotLinked":
+      return "이미 다른 계정에 연결된 소셜 로그인이에요. 기존 로그인 수단으로 로그인한 뒤 설정 > 연결된 로그인에서 추가해 주세요.";
+    default:
+      return "로그인 중 문제가 발생했어요. 다시 시도해 주세요.";
+  }
+}
+
 export default function LoginScreen() {
   const router = useRouter();
   // 마운트 전(SSR·하이드레이션 첫 렌더)엔 available=null → 항상 정적 PROVIDERS 전체를
@@ -60,6 +71,13 @@ export default function LoginScreen() {
       return;
     }
     getProviders().then((p) => setAvailable(p ? Object.keys(p) : []));
+  }, []);
+
+  // OAuth 콜백 에러(?error=)를 사용자 친화 메시지로 표시(계정 연결 실패 등).
+  const [oauthError, setOauthError] = useState<string | null>(null);
+  useEffect(() => {
+    const err = new URLSearchParams(window.location.search).get("error");
+    if (err) setOauthError(authErrorMessage(err));
   }, []);
   const shown =
     available === null
@@ -124,6 +142,7 @@ export default function LoginScreen() {
       </div>
 
       <div className="flex flex-col gap-2.5">
+        {oauthError && <Notice variant="error">{oauthError}</Notice>}
         {shown.map((p) => (
           <button
             key={p.id}

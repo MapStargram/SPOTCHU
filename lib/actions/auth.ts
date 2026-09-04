@@ -5,7 +5,9 @@
 import { z } from "zod";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
+import { unstable_update } from "@/auth";
 import { emailSchema, passwordSchema, hashPassword } from "@/lib/auth/password";
+import { meetsMinAge } from "@/lib/auth/age";
 import { createToken, consumeToken } from "@/lib/auth/tokens";
 import { sendVerifyEmail, sendResetEmail } from "@/lib/email";
 import { canDisconnect } from "@/lib/auth/link";
@@ -33,7 +35,7 @@ export async function signupWithEmail(
   if (!parsed.success) return { ok: false, error: "입력값을 확인해주세요" };
   const { email, password, birthYear } = parsed.data;
 
-  if (new Date().getFullYear() - birthYear < 14)
+  if (!meetsMinAge(birthYear))
     return { ok: false, error: "만 14세 미만은 가입할 수 없습니다" };
 
   const existing = await db.user.findUnique({ where: { email } });
@@ -58,6 +60,56 @@ export async function signupWithEmail(
   });
 
   await sendVerifyEmail(email, await createToken("verify", user.id));
+  return { ok: true };
+}
+
+const consentSchema = z.object({
+  agreeTerms: z.literal(true),
+  agreePrivacy: z.literal(true),
+  agreeLocation: z.literal(true),
+  birthYear: z.number().int().min(1900).max(new Date().getFullYear()),
+});
+
+// 소셜 로그인 직후 동의 화면(/consent) 완료. 로그인된 컨텍스트에서만 동작.
+// 만 14세 미만은 가입 차단 → 방금 만들어진 계정을 삭제(cascade)하고 로그아웃을 요청한다.
+// 성공 시 unstable_update({})로 세션 토큰의 needsConsent 플래그를 재계산(해제)해 미들웨어를 통과시킨다.
+export async function completeSocialConsent(
+  input: z.input<typeof consentSchema>,
+): Promise<{ ok: true } | { ok: false; error: string; signOut?: boolean }> {
+  const me = await getCurrentUser();
+  if (!me?.id)
+    return { ok: false, error: "로그인이 필요합니다", signOut: true };
+
+  const parsed = consentSchema.safeParse(input);
+  if (!parsed.success)
+    return { ok: false, error: "필수 항목에 모두 동의해주세요" };
+  const { birthYear } = parsed.data;
+
+  if (!meetsMinAge(birthYear)) {
+    // 동의 없이(만14세 미만) 계정 유지 금지 — 소셜 로그인으로 생성된 계정을 삭제하고 로그아웃.
+    await db.user.delete({ where: { id: me.id } });
+    return {
+      ok: false,
+      error: "만 14세 미만은 가입할 수 없습니다",
+      signOut: true,
+    };
+  }
+
+  const now = new Date();
+  await db.user.update({
+    where: { id: me.id },
+    data: {
+      agreedTermsAt: now,
+      agreedPrivacyAt: now,
+      agreedLocationAt: now,
+      birthYear,
+    },
+  });
+  // 토큰의 needsConsent 재계산(=false) → 재로그인 없이 미들웨어 통과.
+  // 실패해도 동의는 이미 저장됨 → /consent 페이지가 DB 기준으로 자가 치유(리다이렉트).
+  try {
+    await unstable_update({});
+  } catch {}
   return { ok: true };
 }
 
