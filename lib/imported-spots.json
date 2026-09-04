@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T13:54:58.943Z",
+  "generatedAt": "2026-09-04T20:52:42.750Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -2189,6 +2189,23 @@
       }
     },
     {
+      "id": "busan-40-stairs-cafe-the-king-eternal-monarch-3f8c",
+      "title": "40계단 문화관광테마거리 (더 킹 영원의 군주 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1005,
+      "lng": 129.0369,
+      "area": "부산 중구 중앙동4가 40계단 문화관광테마거리",
+      "subject": "40계단 테마거리 옛 골목 카페 일대",
+      "tip": "호위무사 조영과 통신장교 명승아가 만나는 카페 장면이 촬영된 근대문화거리. 지하철 1호선 중앙역 11번 출구에서 도보 5분.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "the-king-eternal-monarch",
+      "scene": "조영과 명승아가 카페에서 만나는 장면",
+      "verified": "reported",
+      "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000302002001000&uc_seq=852&lang_cd=en"
+    },
+    {
       "id": "busan-ahopsan-bamboo-portal-a71c",
       "title": "기장 아홉산숲 대나무 당간지주 차원의 문",
       "city": "busan",
@@ -2440,6 +2457,29 @@
       }
     },
     {
+      "id": "busan-haeundae-gunamno-the-king-eternal-monarch-b7e2",
+      "title": "해운대 구남로 (더 킹 영원의 군주 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1601,
+      "lng": 129.1613,
+      "area": "부산 해운대구 우동 구남로 문화광장",
+      "subject": "해운대역~해수욕장을 잇는 구남로 문화광장 번화가 거리",
+      "tip": "대한제국 황제 이곤과 이림이 대치하는 장면이 촬영된 해운대 최대 번화가. 저녁엔 인파가 많아 거리 전경을 담으려면 이른 아침이 낫다.",
+      "lens": "24-35mm",
+      "time": "이른 아침",
+      "workId": "the-king-eternal-monarch",
+      "scene": "이곤과 이림이 대치하는 장면",
+      "verified": "reported",
+      "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000302002001000&uc_seq=852&lang_cd=en",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555117/spotchu/spots/ynppsgci1jbrbk9c70pi.jpg",
+      "imageCredit": {
+        "author": "Pranay chakraborty 2004",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Crowds_at_the_crosswalk_on_Gunam-ro_Culture_Square,_Haeundae,_at_twilight.jpg"
+      }
+    },
+    {
       "id": "busan-hocheon-namilbar-deck-b82f",
       "title": "호천문화플랫폼 남일바 야경 포토존",
       "city": "busan",
@@ -2593,6 +2633,29 @@
       "source": "https://mobile.busan.com/view/busan/view.php?code=20170606000230"
     },
     {
+      "id": "busan-marine-city-cinema-street-the-king-eternal-monarch-a05e",
+      "title": "마린시티 영화의 거리 (더 킹 영원의 군주 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.159,
+      "lng": 129.143,
+      "area": "부산 해운대구 우동 마린시티1로, 영화의 거리·산토리니 광장",
+      "subject": "영화의 거리 해안 산책로와 마린시티 스카이라인",
+      "tip": "흰 토끼를 쫓는 장면과 홀로 걷는 장면이 촬영된 해안 산책로. 산토리니 광장에서 마린시티 고층빌딩을 배경으로 담기 좋고, 노을·야간 모두 추천.",
+      "lens": "24-35mm",
+      "time": "일몰~야간",
+      "workId": "the-king-eternal-monarch",
+      "scene": "흰 토끼를 쫓는 장면, 홀로 걷는 장면",
+      "verified": "reported",
+      "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000302002001000&uc_seq=852&lang_cd=en",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555121/spotchu/spots/ljtamcc8c2fxozbwhoha.jpg",
+      "imageCredit": {
+        "author": "Jeena Paradies",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Marine_City_Night_2022_03.jpg"
+      }
+    },
+    {
       "id": "busan-namilvilla-hansung-stairs-6d3f",
       "title": "한성주택(남일빌라) 계단 골목",
       "city": "busan",
@@ -2624,6 +2687,23 @@
       "workId": "the-attorney",
       "scene": "국가보안법 위반 사건 관련 유치장·형사계 사무실 장면 — 실제 사상경찰서에서 6일간 협조 촬영(유치장 내부는 초상권 문제로 외부 출입 장면 위주로 촬영)",
       "source": "http://filmbusan.kr/kor/addon/00000001/program_view.asp?m_idx=107226&c_idx=4&QueryType=B&QueryStep=2"
+    },
+    {
+      "id": "busan-suyeongman-yacht-park-the-king-eternal-monarch-e942",
+      "title": "수영만 요트경기장 (더 킹 영원의 군주 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1609,
+      "lng": 129.1406,
+      "area": "부산 해운대구 우동 수영만 요트경기장",
+      "subject": "요트 계류장과 마리나 전경",
+      "tip": "5화에서 이곤이 정태을과 함께 요트를 타고 광안리·동백섬 일대를 둘러보는 장면이 촬영된 마리나. 계류된 요트들 사이로 사진을 남기기 좋다.",
+      "lens": "24-70mm",
+      "time": "낮",
+      "workId": "the-king-eternal-monarch",
+      "scene": "5화, 이곤과 정태을이 요트를 타고 이동하는 장면",
+      "verified": "reported",
+      "source": "https://triple.guide/articles/a28af789-e2c3-4084-bdf6-af4df773909d"
     },
     {
       "id": "busan-the-bay-101-marine-city-reflection-b81c",
@@ -7921,6 +8001,43 @@
       }
     },
     {
+      "id": "melbourne-albert-park-lake-im-sorry-i-love-you-4b1e",
+      "title": "알버트 파크 레이크 (미안하다 사랑한다 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.848,
+      "lng": 144.971,
+      "area": "Albert Park Lake, Melbourne",
+      "subject": "알버트 파크 호수와 호숫가 야자수 드라이브 도로",
+      "tip": "레이크사이드 드라이브를 걸으며 호수 건너 도심 스카이라인과 야자수를 함께 프레임에. F1 그랑프리 기간(3월)엔 도로가 통제되니 사전 확인 필요.",
+      "lens": "35-50mm",
+      "time": "늦은 오후",
+      "workId": "im-sorry-i-love-you",
+      "scene": "무혁이 차를 몰고 자주 드라이브하던 장면",
+      "verified": "reported",
+      "source": "https://www.traveltimes.co.kr/news/articleView.html?idxno=40753",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555127/spotchu/spots/uhswj6ba8ezk9mjw9wuc.jpg",
+      "imageCredit": {
+        "author": "Kgbo",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Albert_Park_and_Lake_seen_from_Carousel_venue,_Melbourne.jpg"
+      }
+    },
+    {
+      "id": "melbourne-blackburn-english-language-school-neighbours-c8b1",
+      "title": "블랙번 영어언어학교 (네이버스 에린스보로 고교 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.84771,
+      "lng": 145.14939,
+      "area": "Burwood East, Melbourne",
+      "subject": "극중 에린스보로 고등학교 외경으로 쓰인 블랙번 영어언어학교 정문·운동장 외관",
+      "tip": "실제 재학생이 있는 학교이므로 교내로 들어가지 말고 도로변 보도에서 정문 외관만 촬영하세요. 등하교 시간대는 피하는 것이 좋습니다.",
+      "workId": "neighbours",
+      "scene": "에린스보로 고등학교(Erinsborough High) 외경 촬영지",
+      "source": "https://www.whattowatch.com/features/where-is-erinsborough-in-australia-everything-you-need-to-know-about-the-neighbours-location"
+    },
+    {
       "id": "melbourne-carlton-gardens-hochgurtel-fountain-reb-a35b",
       "title": "Carlton Gardens Hochgurtel Fountain axis view",
       "city": "melbourne",
@@ -7963,6 +8080,95 @@
       }
     },
     {
+      "id": "melbourne-docklands-harbour-esplanade-im-sorry-i-love-you-9f3d",
+      "title": "도클랜드 하버 에스플러네이드 (미안하다 사랑한다 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.817286,
+      "lng": 144.946053,
+      "area": "Harbour Esplanade, Docklands, Melbourne",
+      "subject": "빅토리아 하버와 도클랜드 워터프론트 고층 아파트 야경",
+      "tip": "해질 무렵 하버 에스플러네이드 산책로에서 워터프론트 불빛과 정박한 요트를 함께 담기 좋다. 야간엔 인적이 드무니 동행 권장.",
+      "lens": "24-70mm",
+      "time": "일몰 후",
+      "workId": "im-sorry-i-love-you",
+      "scene": "무혁과 은채가 함께 밤을 보낸 장소로 소개되는 장면",
+      "verified": "reported",
+      "source": "https://www.traveltimes.co.kr/news/articleView.html?idxno=40753",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555129/spotchu/spots/zlye9mqz1zqmx3jggsjj.jpg",
+      "imageCredit": {
+        "author": "Ruperthetherton",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Harbour_Esplanade,_Docklands.jpg"
+      }
+    },
+    {
+      "id": "melbourne-federation-square-im-sorry-i-love-you-7c2a",
+      "title": "페더레이션 스퀘어 (미안하다 사랑한다 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.817798,
+      "lng": 144.968714,
+      "area": "Federation Square, Melbourne CBD",
+      "subject": "페더레이션 스퀘어 광장과 플린더스 스트리트역 방향 전경",
+      "tip": "광장 중앙 계단 쪽에서 플린더스 스트리트역 돔을 배경으로 담기 좋다. 낮에는 인파가 많으니 인적 드문 이른 아침을 추천.",
+      "lens": "24-35mm",
+      "time": "오전 이른 시간 또는 늦은 오후",
+      "workId": "im-sorry-i-love-you",
+      "scene": "은채와 무혁이 처음 만난 장소로 소개되는 장면",
+      "verified": "reported",
+      "source": "https://www.traveltimes.co.kr/news/articleView.html?idxno=40753",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555131/spotchu/spots/bryrqwxmyvwjqivi9b4r.jpg",
+      "imageCredit": {
+        "author": "DXR",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fed_Square,_Melbourne,_north_view_20230219_1.jpg"
+      }
+    },
+    {
+      "id": "melbourne-general-cemetery-im-sorry-i-love-you-2e9c",
+      "title": "멜버른 제너럴 세머터리 (미안하다 사랑한다 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.78889,
+      "lng": 144.96528,
+      "area": "College Crescent, Parkville, Melbourne",
+      "subject": "멜버른 제너럴 세머터리 정문 진입로와 묘역 풍경",
+      "tip": "College Crescent 쪽 정문 진입로에서 촬영. 실제 운영 중인 묘지이니 조문객을 방해하지 말고 삼각대·장시간 촬영은 피할 것. 단일 출처 정보이므로 현장 대조 권장.",
+      "lens": "35-50mm",
+      "time": "오전 개장 직후",
+      "workId": "im-sorry-i-love-you",
+      "scene": "마지막 회, 무혁이 죽은 뒤 은채가 그의 무덤 앞에서 스스로 목숨을 끊는 마지막 장면",
+      "verified": "reported",
+      "source": "http://xmelbourne.blogspot.com/2013/08/blog-post_2379.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555133/spotchu/spots/o8orumugkpnc0susnoki.jpg",
+      "imageCredit": {
+        "author": "Bob Tan",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Aerial_panorama_of_Melbourne_General_Cemetery_in_Carlton._September_2023.jpg"
+      }
+    },
+    {
+      "id": "melbourne-holy-trinity-church-doncaster-neighbours-9f3a",
+      "title": "홀리 트리니티 교회 던커스터 (네이버스 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.78778,
+      "lng": 145.13806,
+      "area": "Doncaster, Melbourne",
+      "subject": "스콧과 샬린의 결혼식이 촬영된 성공회 교회 정문·파사드 외관",
+      "tip": "예배가 없는 시간대에 방문하고, 문이 잠겨 있을 때가 많으니 정문 파사드 위주로 촬영하세요. 예배 중에는 신자를 방해하지 않도록 조용히.",
+      "workId": "neighbours",
+      "scene": "523화 '매직 모먼츠' — 스콧 로빈슨과 샬린 미첼의 결혼식(1987년); 2001년 다른 커플의 결혼식 장면에도 재사용됨",
+      "source": "https://tokyofox.net/2019/04/03/australia-2019-pt-iii-the-church-where-scott-charlene-got-married-in-neighbours/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555136/spotchu/spots/dbarile5bxjf1hpixdkh.jpg",
+      "imageCredit": {
+        "author": "Ottre",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Anglican_church_at_Doncaster2.jpg"
+      }
+    },
+    {
       "id": "melbourne-hosier-lane-misa-street-art-c303",
       "title": "호지어 레인·루틀리지 레인 교차점 — ‘미안하다, 사랑한다’ 그래피티 스팟",
       "city": "melbourne",
@@ -7984,6 +8190,89 @@
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/43164453@N08/6859457547"
       }
+    },
+    {
+      "id": "melbourne-hotel-windsor-miss-fishers-4d7a",
+      "title": "더 호텔 윈저 (미스 피셔의 미스터리 살인사건 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.81194,
+      "lng": 144.97278,
+      "area": "The Hotel Windsor, 111 Spring Street, Melbourne CBD",
+      "subject": "더 호텔 윈저의 빅토리아 양식 정면 파사드; 파이넌 피셔가 멜버른 도착 초기 묵는 호텔로 등장",
+      "tip": "Spring Street 건너편(Parliament House 쪽) 보도에서 정면 파사드를 촬영하세요. 영업 중인 5성급 호텔이므로 로비·출입구 통행을 방해하지 마세요.",
+      "lens": "24-70mm",
+      "time": "오전 (교통량 적은 이른 시간)",
+      "workId": "miss-fishers-murder-mysteries",
+      "scene": "시즌1 초반 파이넌 피셔가 저택 워들로우로 옮기기 전 묵는 호텔로 등장하며, 1920년대 자동차로 거리를 채워 외관·실내 장면을 모두 촬영했습니다.",
+      "verified": "reported",
+      "source": "https://vicscreen.vic.gov.au/news/melbourne-is-home-to-australias-most-fabulous-female-detectives",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555138/spotchu/spots/se0ebzvjzumdjmnlfykh.jpg",
+      "imageCredit": {
+        "author": "Rexness",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hotel_Windsor_Facade,_Spring_Street,_Melbourne_Australia_(4523656957).jpg"
+      }
+    },
+    {
+      "id": "melbourne-labassa-miss-fishers-6a1d",
+      "title": "라바사 저택 (미스 피셔의 미스터리 살인사건 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.87306,
+      "lng": 145.025,
+      "area": "Labassa, 2 Manor Grove, Caulfield North",
+      "subject": "내셔널트러스트 소유 후기 빅토리아 양식 대저택; 임페리얼 클럽 실내 촬영지",
+      "tip": "정문 앞 Manor Grove 보도에서 저택 정면을 촬영하세요. 내셔널트러스트 지정 개방일에만 입장 가능하니 방문 전 일정을 확인하세요.",
+      "lens": "24-70mm",
+      "time": "오후",
+      "workId": "miss-fishers-murder-mysteries",
+      "scene": "시즌2 1화 '머더 모스트 스캔덜러스(Murder Most Scandalous)'에서 임페리얼 클럽(Imperial Club) 실내 장면 촬영지로 등장합니다.",
+      "verified": "reported",
+      "source": "https://cosypursuits.com/labassa/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555142/spotchu/spots/encupxyc7oreuajqd7ip.jpg",
+      "imageCredit": {
+        "author": "Rohanstorey",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Labassa_entry_front.jpg"
+      }
+    },
+    {
+      "id": "melbourne-old-treasury-building-miss-fishers-9b2f",
+      "title": "올드 트레저리 빌딩 (미스 피셔의 미스터리 살인사건 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.81315,
+      "lng": 144.97412,
+      "area": "Old Treasury Building, Spring Street, Melbourne CBD",
+      "subject": "1858년 완공된 르네상스 리바이벌 양식 옛 재무청사 정면 계단과 열주 파사드",
+      "tip": "Treasury Gardens 방향 Spring Street 보도에서 정면 계단과 열주를 함께 담으세요. 현재 박물관으로 운영 중이니 관람객 동선을 방해하지 마세요.",
+      "lens": "16-35mm",
+      "time": "늦은 오후",
+      "workId": "miss-fishers-murder-mysteries",
+      "scene": "1920년대 멜버른 관공서 외관 배경으로 여러 에피소드의 촬영에 활용된 장소입니다.",
+      "verified": "reported",
+      "source": "https://cosypursuits.com/old-treasury-building/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555147/spotchu/spots/tpaequwrpnqvqc2gt1th.jpg",
+      "imageCredit": {
+        "author": "Joyofmuseums",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Old_Treasury_Building,_Melbourne_-_www.joyofmuseums.com_-_exterior.jpg"
+      }
+    },
+    {
+      "id": "melbourne-panton-hill-winery-neighbours-4de6",
+      "title": "팬튼힐 빈야드 앤 와이너리 (네이버스 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.63651,
+      "lng": 145.22296,
+      "area": "Panton Hill, Melbourne",
+      "subject": "클로이와 피어스의 결혼식 장면이 촬영된 포도밭과 와이너리 건물 외관",
+      "tip": "실제 영업 중인 와이너리로 시음·투어 운영 시간에 방문 가능. 포도밭 사이 통로에서 건물을 배경으로 촬영하면 좋다.",
+      "workId": "neighbours",
+      "scene": "클로이·피어스 결혼식 장면 (2019년, 2022년 시즌, 2023~2024년 리부트에서 반복 촬영)",
+      "source": "https://pantonhillwinery.com.au/news/filming-for-melbourne-television/"
     },
     {
       "id": "melbourne-pin-oak-court-ramsay-street-8f4a",
@@ -8042,6 +8331,52 @@
         "author": "Diggers2004",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=110698598"
+      }
+    },
+    {
+      "id": "melbourne-rippon-lea-estate-miss-fishers-c48e",
+      "title": "리폰리 저택 (미스 피셔의 미스터리 살인사건 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.8792,
+      "lng": 144.9995,
+      "area": "Rippon Lea Estate, 192 Hotham Street, Elsternwick",
+      "subject": "내셔널트러스트 소유 19세기 대저택과 정원; 이모 프루던스 저택 외관 촬영지",
+      "tip": "정문 진입로 또는 정원 관람로에서 저택 파사드를 담으세요. 유료 관람지이니 개장 시간을 미리 확인하세요.",
+      "lens": "24-70mm",
+      "time": "오전~이른 오후",
+      "workId": "miss-fishers-murder-mysteries",
+      "scene": "이모 프루던스(Aunt Prudence)의 저택 외관으로 시리즈 내내 반복 등장하는 촬영지입니다.",
+      "verified": "reported",
+      "source": "https://www.nationaltrust.org.au/places/rippon-lea-estate/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555150/spotchu/spots/i7a1i6m0sovf5bhijnv2.jpg",
+      "imageCredit": {
+        "author": "Sardaka",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Rippon_Lea_002.jpg"
+      }
+    },
+    {
+      "id": "melbourne-st-kilda-beach-im-sorry-i-love-you-d8a6",
+      "title": "세인트킬다 비치 (미안하다 사랑한다 촬영지)",
+      "city": "melbourne",
+      "category": "drama",
+      "lat": -37.8646,
+      "lng": 144.9677,
+      "area": "St Kilda Beach, Port Phillip, Melbourne",
+      "subject": "세인트킬다 부두 초입에서 바라본 포트 필립 만 바다",
+      "tip": "부두 초입 백사장에서 만 건너 도심 스카이라인 방향으로. 일몰 시간대 하늘빛이 가장 화려하다. 단일 출처 정보이므로 현장 대조 권장.",
+      "lens": "24-35mm",
+      "time": "일몰",
+      "workId": "im-sorry-i-love-you",
+      "scene": "무혁이 한없이 바다를 바라보던 장면",
+      "verified": "reported",
+      "source": "http://xmelbourne.blogspot.com/2013/08/blog-post_2379.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555153/spotchu/spots/frsb8mpkgbhcuu63z8x1.jpg",
+      "imageCredit": {
+        "author": "Dietmar Rabich",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Melbourne_(AU),_St_Kilda_Beach_--_2019_--_1590.jpg"
       }
     },
     {
@@ -10673,6 +11008,20 @@
       "source": "https://news.yahoo.co.jp/expert/articles/a3f5c206520a11bb2574d7fb296ff3764f097f0d"
     },
     {
+      "id": "osaka-kashimura-temple-seto-utsumi-d29f",
+      "title": "西然寺 사찰 (세토우츠미 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.5773,
+      "lng": 135.479071,
+      "area": "西然寺, 사카이구 에비스노초히가시, 오사카 사카이시",
+      "subject": "西然寺 사찰 입구·경내 — 극중 히로인 가시무라 이치고(연기: 나카조 아야미)의 집(절)으로 등장, 그녀가 비질하는 장면 촬영지",
+      "tip": "실제 운영 중인 사찰이니 입구 앞 공공 보도에서만 외관을 촬영하고 경내 사적 공간·법요 중에는 촬영을 삼가세요.",
+      "workId": "seto-utsumi",
+      "scene": "가시무라가 절 마당에서 비질하는 장면",
+      "source": "https://sakai-film.jp/feature02/"
+    },
+    {
       "id": "osaka-kotobuki-onsen-boogie-woogie-c9d1",
       "title": "고토부키온센 (드라마 '부기우기' 목욕탕 '하나유' 촬영지)",
       "city": "osaka",
@@ -10782,6 +11131,26 @@
       }
     },
     {
+      "id": "osaka-senyo-high-school-seto-utsumi-b7e4",
+      "title": "센요고등학교 정문 (泉陽高等学校, 세토우츠미 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.57998,
+      "lng": 135.48003,
+      "area": "센요고등학교, 사카이구 구루마노마치히가시, 오사카 사카이시",
+      "subject": "泉陽高等学校(오사카부립 센요고등학교) 정문 — 원작 만화의 모델교이자 실제 촬영지, 두 주인공 세토·우츠미가 다니는 고교",
+      "tip": "정문 앞 공공 보도에서 외관만 촬영하세요. 재학 중인 학교라 등하교 시간대엔 학생 통행에 방해되지 않게 주의하고, 교내 진입은 삼가세요.",
+      "workId": "seto-utsumi",
+      "scene": "정문 앞 등하교길 장면 — 실제 재학생들이 엑스트라로 참여",
+      "source": "https://sakai-film.jp/feature02/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555156/spotchu/spots/hynalztjx6ljznyy09z5.jpg",
+      "imageCredit": {
+        "author": "Bakkai",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sen-yo_highschool.jpg"
+      }
+    },
+    {
       "id": "osaka-setoutsumi-uchikawa-steps-b47e",
       "title": "사카이 우치카와 강변 계단 (영화 '세토우츠미' 방과 후 대화 계단)",
       "city": "osaka",
@@ -10861,6 +11230,26 @@
         "author": "Dick Thomas Johnson from Tokyo, Japan",
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Shinsekai_(49251920793).jpg"
+      }
+    },
+    {
+      "id": "osaka-yamanokuchi-shotengai-seto-utsumi-6ac3",
+      "title": "사카이 야마노쿠치 상점가 (세토우츠미 촬영지)",
+      "city": "osaka",
+      "category": "drama",
+      "lat": 34.57796,
+      "lng": 135.47488,
+      "area": "야마노쿠치 상점가, 사카이구, 오사카 사카이시",
+      "subject": "야마노쿠치 상점가 아케이드 — 치매를 앓는 세토 할아버지(자전거포 '세토사이클' 창업자)가 배회하는 장면의 배경이 된 옛 상점가",
+      "tip": "한카이 전기궤도 오쇼지(大小路)역 또는 슈쿠인(宿院)역에서 도보 2~5분. 실제 영업 중인 상점가이니 상인·손님 통행에 방해되지 않게 촬영하세요.",
+      "workId": "seto-utsumi",
+      "scene": "세토 할아버지가 상점가를 배회하는 장면",
+      "source": "https://sakai-film.jp/feature02/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788555159/spotchu/spots/zoryuupwtsj675xupofe.jpg",
+      "imageCredit": {
+        "author": "Suikotei",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sakai_Yamanokuchi_Shopping_Street.jpg"
       }
     },
     {
@@ -20332,15 +20721,15 @@
       "progress": 0
     },
     {
-      "id": "hero-princess-toyotomi",
-      "title": "히어로 (2007년 영화판) / 프린세스 토요토미 (2011년)",
+      "id": "seto-utsumi",
+      "title": "세토우츠미",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "seto-utsumi",
-      "title": "세토우츠미",
+      "id": "hero-princess-toyotomi",
+      "title": "히어로 (2007년 영화판) / 프린세스 토요토미 (2011년)",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
