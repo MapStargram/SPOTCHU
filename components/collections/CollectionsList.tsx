@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Plus, Lock } from "lucide-react";
+import { Plus, Lock, Link2 } from "lucide-react";
 import { TagPill } from "../ui/TagPill";
 import { EmptyState } from "../ui/EmptyState";
 import type { Collection } from "@/lib/mock";
@@ -90,8 +90,17 @@ export function CollectionsList({
                 style={{ background: col.coverGrad }}
               >
                 {tab === "own" ? (
-                  <span className="absolute -bottom-3.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-white shadow-[shadow:var(--sh-card)]">
-                    <Lock size={14} className="text-[color:var(--muted)]" />
+                  <span
+                    className="absolute -bottom-3.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-white shadow-[shadow:var(--sh-card)]"
+                    aria-label={
+                      col.visibility === "LINK" ? "공유 링크" : "비공개"
+                    }
+                  >
+                    {col.visibility === "LINK" ? (
+                      <Link2 size={14} className="text-[color:var(--muted)]" />
+                    ) : (
+                      <Lock size={14} className="text-[color:var(--muted)]" />
+                    )}
                   </span>
                 ) : (
                   <span className="absolute left-2.5 top-2.5">

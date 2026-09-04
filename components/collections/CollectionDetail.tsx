@@ -324,12 +324,7 @@ export function CollectionDetail({
                     >
                       <Trash2 size={16} />
                     </button>
-                  ) : (
-                    <MoreHorizontal
-                      size={16}
-                      className="shrink-0 text-[color:var(--muted)]"
-                    />
-                  )}
+                  ) : null}
                 </li>
               );
             })}

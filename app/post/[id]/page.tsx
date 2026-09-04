@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronLeft, Bookmark, Check } from "lucide-react";
+import { ChevronLeft, Check } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
 import { LikeButton } from "@/components/community/LikeButton";
@@ -101,7 +101,6 @@ export default async function PostDetailPage({
               size={24}
             />
             <ShareButton title={p.spotTitle} size={22} className="text-navy" />
-            <Bookmark size={22} />
           </div>
           {p.caption && (
             <p className="mt-3 text-[13px] leading-[1.6]">{p.caption}</p>
