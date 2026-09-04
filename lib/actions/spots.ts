@@ -20,7 +20,7 @@ export async function getSpotsByCityFromDb(cityId: string) {
       id: { notIn: hidden },
     },
     orderBy: [{ uniqueCheckinCount: "desc" }, { createdAt: "desc" }],
-    include: { category: true },
+    include: { category: true, works: { select: { workId: true } } }, // workId → 탐색 작품 필터/그룹
   });
 }
 
@@ -37,7 +37,7 @@ export async function getSpotsInBoundsFromDb(cityId: string, b: Bounds) {
       shooterLng: { gte: b.west, lte: b.east },
     },
     orderBy: [{ uniqueCheckinCount: "desc" }, { createdAt: "desc" }],
-    include: { category: true },
+    include: { category: true, works: { select: { workId: true } } }, // workId → 탐색 작품 필터
     take: 500, // 넓은 줌 상한(최대 도시 스팟 수 < 500 → 실사용 손실 없음, rules TODO 상한 결정)
   });
 }
