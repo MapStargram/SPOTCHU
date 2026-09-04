@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T10:36:27.120Z",
+  "generatedAt": "2026-09-04T11:22:15.097Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -2149,6 +2149,22 @@
       "source": "https://www.busan.go.kr/tour/filmtour01"
     },
     {
+      "id": "busan-bosudong-bookstreet-the-attorney-4d9a",
+      "title": "보수동책방골목 (변호인 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1032,
+      "lng": 129.0263,
+      "area": "부산 중구 보수동1가",
+      "subject": "헌책방들이 늘어선 골목 — 주인공이 팔았던 사법고시 책을 다시 사러 오는 장면 구도",
+      "tip": "국제시장·자갈치역에서 도보로 이동 가능한 헌책방 골목 전체가 촬영 당시 분위기를 간직하고 있다. 좁은 골목이라 상점 진열대와 통행인을 방해하지 않도록 주의하고, 골목 초입에서 안쪽을 향해 담는 구도가 대표적이다.",
+      "lens": "24-35mm",
+      "time": "낮 (상점 영업시간 09:00-21:00)",
+      "workId": "the-attorney",
+      "scene": "송우석이 아들 출산을 계기로 사법시험 공부를 다시 시작하며, 예전에 팔았던 사법고시 책을 헌책방에서 되찾아오는 장면",
+      "source": "http://www.busan.go.kr/news/totalnews01/view?dataNo=57228"
+    },
+    {
       "id": "busan-cheongsapo-crossing-beach-train-7f2a",
       "title": "청사포 해변열차 건널목",
       "city": "busan",
@@ -2447,6 +2463,22 @@
       }
     },
     {
+      "id": "busan-jungang-cathedral-the-attorney-7b1e",
+      "title": "중앙성당 (변호인 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1031,
+      "lng": 129.0305,
+      "area": "부산 중구 대청동",
+      "subject": "중앙성당 정문·종탑 파사드 — 1987년 박종철 고문치사 항의 시위 재연 장면 구도",
+      "tip": "성당 앞 대청로 인도·계단 앞 공터에서 정문과 종탑을 정면으로 담을 수 있다. 실제 미사가 열리는 종교시설이므로 예배·신자 통행을 방해하지 않고 외관만 조용히 촬영할 것. 용두산공원에서 도보로 가깝다.",
+      "lens": "24-35mm",
+      "time": "오전, 역광 피하기",
+      "workId": "the-attorney",
+      "scene": "극 후반부 1987년 박종철 고문치사 항의 시위 장면 — 실제 시위가 열렸던 이 성당에서 촬영. 양우석 감독이 '유일하게 진짜를 고집했던 장소'라고 밝힌 곳",
+      "source": "https://cine21.com/news/view/?mag_id=106280"
+    },
+    {
       "id": "busan-jungangdong-40steps-nowheretohide-4f1e",
       "title": "영화 <인정사정 볼 것 없다> 중앙동 40계단 오프닝 명장면 스팟",
       "city": "busan",
@@ -2502,6 +2534,22 @@
       "scene": "동만·애라·설희·탁수가 함께 사는 '남일빌라' 외경과 계단(극 전반)",
       "verified": "reported",
       "source": "https://www.busan.com/view/busan/view.php?code=20170619000418"
+    },
+    {
+      "id": "busan-sasang-police-the-attorney-c62f",
+      "title": "사상경찰서 (변호인 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1747,
+      "lng": 128.9792,
+      "area": "부산 사상구 감전동",
+      "subject": "경찰서 정문 외경 — 유치장·형사계 사무실 관련 장면용 익스테리어",
+      "tip": "현직 경찰관서이므로 정문 건너편 인도에서 외관만 짧게 담고 자리를 옮길 것. 업무 방해나 출입구 앞 장시간 촬영은 삼가자. 흰여울·중앙성당·보수동책방골목을 먼저 본 뒤 들르는 코어 팬용 보조 스팟이다.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "the-attorney",
+      "scene": "국가보안법 위반 사건 관련 유치장·형사계 사무실 장면 — 실제 사상경찰서에서 6일간 협조 촬영(유치장 내부는 초상권 문제로 외부 출입 장면 위주로 촬영)",
+      "source": "http://filmbusan.kr/kor/addon/00000001/program_view.asp?m_idx=107226&c_idx=4&QueryType=B&QueryStep=2"
     },
     {
       "id": "busan-the-bay-101-marine-city-reflection-b81c",
@@ -5153,6 +5201,20 @@
       }
     },
     {
+      "id": "kyoto-demachi-futaba-tamako-market-5b8f",
+      "title": "데마치 후타바 (다마야 모델 화과자점)",
+      "city": "kyoto",
+      "category": "anime",
+      "lat": 35.0301,
+      "lng": 135.76955,
+      "area": "데마치, 가미교구, 교토 (Demachi, Kamigyo-ku, Kyoto)",
+      "subject": "1899년 창업한 노포 화과자점 데마치 후타바(出町ふたば)의 외관. 극 중 주인공 가족이 운영하는 떡집 '다마야(たまや)'와 간판 상품 '나다이 마메다이후쿠'의 실제 모티프가 된 가게.",
+      "tip": "간판 메뉴 '나다이 마메모치(名代豆餅)'를 사려는 줄이 상시 길게 늘어서므로 오전 일찍 방문을 추천한다. 화요일 정기휴무. 마스가타 상점가 동쪽 입구 바로 코앞이라 함께 둘러보기 좋다.",
+      "workId": "tamako-market",
+      "scene": "다마야의 모델이 된 실존 화과자점(제작 협력점으로 알려짐)이자 간판 상품 '나다이 마메모치'의 실제 모티프",
+      "source": "https://ani-tabi.com/19062017-3075.html"
+    },
+    {
       "id": "kyoto-demachi-masugata-arcade-8b3c",
       "title": "데마치 마스가타 상점가 동쪽 입구",
       "city": "kyoto",
@@ -5168,6 +5230,20 @@
       "scene": "우사기야마 상점가의 실제 모델인 데마치 마스가타 상점가 아케이드",
       "verified": "reported",
       "source": "https://kyotolove.kyoto/article/20210217-masugata/"
+    },
+    {
+      "id": "kyoto-demachibashi-tamako-market-c94d",
+      "title": "데마치바시 다리 (타마코 러브스토리 성지)",
+      "city": "kyoto",
+      "category": "anime",
+      "lat": 35.03055,
+      "lng": 135.77103,
+      "area": "데마치야나기, 가미교구, 교토 (Demachiyanagi, Kamigyo-ku, Kyoto)",
+      "subject": "가모가와에 놓인 보행자 다리 데마치바시(出町橋) 위에서 가모오하시·델타 방향을 바라보는 구도. 극장판에서 배경으로 확인된 촬영 위치.",
+      "tip": "다리 난간 쪽으로 살짝 몸을 내밀어 강 쪽을 찍어야 극중 구도와 비슷해진다(보행자·자전거 통행이 많으니 주의). 데마치야나기역에서 도보 2분.",
+      "workId": "tamako-market",
+      "scene": "극장판 '타마코 러브스토리'에서 가모오하시를 배경으로 한 컷의 실제 촬영 위치로 데마치바시 부근이 확인됨",
+      "source": "https://touyokojunrei.com/archives/58587253.html"
     },
     {
       "id": "kyoto-fushimi-inari-senbon-torii-e41c",
@@ -5307,6 +5383,26 @@
       }
     },
     {
+      "id": "kyoto-kamogawa-delta-tamako-market-7f2b",
+      "title": "카모가와 델타 징검돌 (타마코 마켓 성지)",
+      "city": "kyoto",
+      "category": "anime",
+      "lat": 35.03012,
+      "lng": 135.77174,
+      "area": "데마치야나기, 사쿄구, 교토 (Demachiyanagi, Sakyo-ku, Kyoto)",
+      "subject": "가모가와(賀茂川)와 다카노가와(高野川)가 합류해 삼각주(델타)를 이루는 지점. 거북이 모양 징검돌을 건너는 구도로, 델리아·타마코가 강가에서 노는 장면들의 실제 배경.",
+      "tip": "징검돌은 물이 불었을 때나 비 온 직후엔 미끄러우니 무리해서 건너지 말 것. 데마치야나기역에서 도보 2~3분, 가모오하시와 데마치바시 두 다리 사이에서 델타 전경이 잘 보인다.",
+      "workId": "tamako-market",
+      "scene": "가모가와 델타·징검돌이 반복적으로 등장하는 강변 장면(TV판) 및 극장판 '타마코 러브스토리'의 로맨스 시퀀스",
+      "source": "https://llxyo.github.io/photolog/tamakoma_animetourism/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520883/spotchu/spots/fld7mcivxtupb3k5sk1z.jpg",
+      "imageCredit": {
+        "author": "Joli Rumi",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:A_crossing_pathway_with_stepping_stones_at_Kamo_River,_Kyoto,_Japan.jpg"
+      }
+    },
+    {
       "id": "kyoto-kifune-shrine-kasuga-lantern-staircase",
       "title": "기후네 신사 돌계단과 등롱",
       "city": "kyoto",
@@ -5392,6 +5488,26 @@
         "author": "湖畔老",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/41679630@N05/18137243736"
+      }
+    },
+    {
+      "id": "kyoto-shimogamo-jinja-tamako-market-1a6e",
+      "title": "시모가모 신사 (타마코 러브스토리 고백 장면 성지)",
+      "city": "kyoto",
+      "category": "anime",
+      "lat": 35.03825,
+      "lng": 135.77244,
+      "area": "시모가모, 사쿄구, 교토 (Shimogamo, Sakyo-ku, Kyoto)",
+      "subject": "유네스코 세계문화유산 시모가모 신사(下鴨神社) 경내. 극장판에서 모치조가 타마코에게 고백하는 장면의 배경이 된 곳.",
+      "tip": "참배객이 많은 곳이니 조용히 촬영할 것. 참도인 타다스노모리(糺の森) 숲길을 함께 걸으며 이동하면 분위기가 좋다. 데마치야나기역에서 도보 약 12분.",
+      "workId": "tamako-market",
+      "scene": "극장판 '타마코 러브스토리'에서 모치조가 타마코에게 고백하는 장면의 무대(원문: もち蔵がたまこに告白するシーンに登場する世界遺産の神社)",
+      "source": "https://www.anitabi.jp/works/102",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520885/spotchu/spots/osp8bvilat08lq2nyk7k.jpg",
+      "imageCredit": {
+        "author": "Immanuelle",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Shimogamo_Shrine-83.jpg"
       }
     },
     {
@@ -11305,6 +11421,28 @@
       }
     },
     {
+      "id": "prague-kampa-island-lovers-in-prague-c471",
+      "title": "캄파 섬 강변 (프라하의 연인 촬영지)",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.0845,
+      "lng": 14.4083,
+      "area": "캄파 섬, 말라스트라나 (Kampa Island, Malá Strana, Prague 1)",
+      "subject": "캄파 섬 남쪽 강변 산책로에서 체르토브카 수로의 옛 물레방아와 카를교를 함께 담는 구도. '프라하의 베네치아'로 불리는 풍경이다.",
+      "tip": "캄파 공원 강변에서 카를교 방향으로 서면 수면 위 다리 반영을 함께 담을 수 있다. 해 질 무렵 노을빛이 반영에 비칠 때가 가장 좋다.",
+      "lens": "35-50mm",
+      "time": "일몰 전후",
+      "workId": "lovers-in-prague-2005",
+      "scene": "체코필름커미션 기록상 말라스트라나 일대가 2005년 8월 프라하 로케이션 촬영 배경으로 쓰임",
+      "source": "https://filmcommission.gov.cz/en/film/lovers-in-prague/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520889/spotchu/spots/tvg9mrc4t9hvb8vfxu1i.jpg",
+      "imageCredit": {
+        "author": "Bradley Weber",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Kampa_Island_Prague_(51621511422).jpg"
+      }
+    },
+    {
       "id": "prague-liechtenstein-palace-mission-impossible-a56d",
       "title": "리히텐슈타인 궁전 미 대사관 외관 촬영지 (미션 임파서블 1편)",
       "city": "prague",
@@ -11348,6 +11486,28 @@
         "author": "Debarshi Ray",
         "license": "CC BY-SA 2.0",
         "source": "https://www.flickr.com/photos/39423133@N04/7471680128"
+      }
+    },
+    {
+      "id": "prague-mala-strana-bridge-tower-lovers-in-prague-9e2f",
+      "title": "카를교 말라스트라나 다리탑 (프라하의 연인 촬영지)",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.0872,
+      "lng": 14.4075,
+      "area": "말라스트라나 다리탑, 카를교 서쪽 끝 (Malá Strana Bridge Tower, Prague 1)",
+      "subject": "카를교 서쪽 끝, 고딕 양식의 말라스트라나 다리탑 아치 아래를 지나는 구도. 탑 사이로 페트르진 언덕 방향이 함께 보인다.",
+      "tip": "다리탑을 정면으로 올려다보는 구도가 인상적이다. 오전 이른 시간에 방문하면 역광이 덜하고 다리 위 인파도 상대적으로 적다.",
+      "lens": "24-35mm",
+      "time": "이른 아침",
+      "workId": "lovers-in-prague-2005",
+      "scene": "체코필름커미션(체코 정부 공식 촬영지 기록)에 따르면 2005년 8월 프라하 로케이션 촬영 당시 카를교 일대가 배경으로 사용됨",
+      "source": "https://filmcommission.gov.cz/en/film/lovers-in-prague/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520892/spotchu/spots/ptezxgich76ku5swc7ug.jpg",
+      "imageCredit": {
+        "author": "Wind",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Charles_Bridge_tower_on_the_side_of_Mala_Strana_at_night_ver2.jpg"
       }
     },
     {
@@ -11432,6 +11592,28 @@
         "author": "*rboed*",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/92082510@N04/19627141426"
+      }
+    },
+    {
+      "id": "prague-old-town-astronomical-clock-lovers-in-prague-2a6e",
+      "title": "구시청사 천문시계 (프라하의 연인 촬영지)",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.087,
+      "lng": 14.4209,
+      "area": "구시청사, 구시가 광장 서쪽 (Old Town Hall Astronomical Clock, Prague 1)",
+      "subject": "구시가 광장 서쪽, 구시청사 천문시계탑을 정면으로 담는 구도. 매시 정각 열두 사도 인형극이 펼쳐진다.",
+      "tip": "정각 몇 분 전 시계탑 앞에 자리를 잡으면 인형극과 인파를 함께 담을 수 있다. 기존 등록된 얀 후스 동상 '소원의 벽' 스팟에서 광장을 가로질러 도보 1분 거리.",
+      "lens": "24-35mm",
+      "time": "이른 아침 또는 저녁",
+      "workId": "lovers-in-prague-2005",
+      "scene": "체코필름커미션 기록상 구시가 광장 일대가 2005년 8월 프라하 로케이션 촬영 배경으로 쓰임 (얀 후스 동상 '소원의 벽' 장면과 같은 광장)",
+      "source": "https://filmcommission.gov.cz/en/film/lovers-in-prague/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520895/spotchu/spots/ftutwoyyqkq8yr5afshb.jpg",
+      "imageCredit": {
+        "author": "Scotch Mist",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Prague_Town_Hall_Clock_2021_16.jpg"
       }
     },
     {
@@ -11563,6 +11745,22 @@
         "license": "CC BY 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Prag_%E2%80%93_Kuppel_und_Glockenturm_der_St.-Nikolaus-Kirche_am_Kleinseitner_Ring_-_Dome_a_zvonice_chr%C3%A1mu_sv_na_Malostransk%C3%A9m_n%C3%A1m%C4%9Bst%C3%AD_-_panoramio.jpg"
       }
+    },
+    {
+      "id": "prague-vysehrad-ramparts-lovers-in-prague-5b8d",
+      "title": "비셰흐라드 성벽 전망대 (프라하의 연인 촬영지)",
+      "city": "prague",
+      "category": "drama",
+      "lat": 50.0637,
+      "lng": 14.4165,
+      "area": "비셰흐라드 공원, 프라하 2 (Vyšehrad, Prague 2)",
+      "subject": "비셰흐라드 성벽 위에서 블타바 강과 철교, 멀리 프라하 성 스카이라인을 함께 담는 파노라마 구도.",
+      "tip": "성벽을 따라 이어지는 산책로는 24시간 개방된 안전한 공원 지대다. 해 질 녘에 방문하면 역광 없이 강과 성 실루엣을 함께 담기 좋다.",
+      "lens": "16-35mm",
+      "time": "일몰",
+      "workId": "lovers-in-prague-2005",
+      "scene": "체코필름커미션 기록에 따르면 비셰흐라드 일대가 2005년 8월 프라하 로케이션 촬영 배경으로 쓰임",
+      "source": "https://filmcommission.gov.cz/en/film/lovers-in-prague/"
     },
     {
       "id": "prague-wallenstein-garden-amadeus-7a1c",
@@ -14344,6 +14542,26 @@
       "source": "https://tokyofox.net/2012/04/25/australia-2012-pt-xi-the-matrix-filming-locations/"
     },
     {
+      "id": "taipei-beitou-station-turn-left-turn-right-7f2a",
+      "title": "베이터우역 승강장 (턴 레프트 턴 라이트 촬영지)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.1319,
+      "lng": 121.4986,
+      "area": "베이터우역, 베이터우, 타이베이 (MRT Beitou Station, Beitou, Taipei)",
+      "subject": "존과 이브가 지하철 승강장 양쪽에 갈라서서도 서로를 알아보지 못하고 스쳐 지나가는 '엇갈림' 몽타주의 실제 촬영 승강장(4번 승강장)",
+      "tip": "실제 운행 중인 대만지하철(捷運) 환승역 승강장이다. 노란 안전선 뒤에서 반대편 승강장을 향해 촬영하면 영화 속 구도에 가깝다. 출퇴근 혼잡 시간은 피할 것.",
+      "workId": "turn-left-turn-right",
+      "scene": "회전문, 엘리베이터에 이어 지하철 승강장에서도 두 사람이 반대편에 갈라서서 스쳐 지나가는 '엇갈림' 몽타주 장면 (북투역 4번 승강장)",
+      "source": "https://zh.wikipedia.org/zh-tw/%E5%90%91%E5%B7%A6%E8%B5%B0%C2%B7%E5%90%91%E5%8F%B3%E8%B5%B0_(%E9%9B%BB%E5%BD%B1)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520897/spotchu/spots/fofz6pk5av4lmb3q24hv.jpg",
+      "imageCredit": {
+        "author": "Subscriptshoe9",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:TRTC381_in_Beitou_Station.JPG"
+      }
+    },
+    {
       "id": "taipei-eatdrink-grandhotel-lobby-03",
       "title": "영화 음식남녀와 하나 그리고 둘 - 타이베이 그랜드 호텔 로비",
       "city": "taipei",
@@ -14364,6 +14582,26 @@
         "author": "立羽（Yi-Ting Chen）",
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=116953362"
+      }
+    },
+    {
+      "id": "taipei-fujin-street-turn-left-turn-right-b91d",
+      "title": "푸진제 (턴 레프트 턴 라이트 아파트 골목 촬영지)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.0607,
+      "lng": 121.5601,
+      "area": "푸진제, 민성 공동체, 쑹산구, 타이베이 (Fujin St, Minsheng Community, Songshan District, Taipei)",
+      "subject": "존과 이브가 벽 하나를 사이에 둔 이웃인 줄 모른 채 매일 다른 방향으로 집을 나서는 아파트가 늘어선 골목",
+      "tip": "가로수가 우거진 저층 아파트 골목 특유의 분위기가 그대로 남아있다. 실제 주민이 거주하는 구역이므로 도로에서만 촬영하고 사유지 진입은 삼갈 것.",
+      "workId": "turn-left-turn-right",
+      "scene": "담 하나를 사이에 둔 이웃인 줄 모르고 매일 반대 방향으로 집을 나서는 두 주인공의 설정을 보여주는 아파트 골목 장면",
+      "source": "https://zh.wikipedia.org/zh-tw/%E5%90%91%E5%B7%A6%E8%B5%B0%C2%B7%E5%90%91%E5%8F%B3%E8%B5%B0_(%E9%9B%BB%E5%BD%B1)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520902/spotchu/spots/ck1fnlutcmnmmdoq95kk.jpg",
+      "imageCredit": {
+        "author": "玄史生",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fujin_Street_in_Afternoon_20091116.JPG"
       }
     },
     {
@@ -14573,6 +14811,26 @@
       }
     },
     {
+      "id": "taipei-vieshow-xinyi-turn-left-turn-right-58ab",
+      "title": "신이 비에쇼 영화관 (구 화나웨이슈, 턴 레프트 턴 라이트 촬영지)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.0353,
+      "lng": 121.5666,
+      "area": "신이구, 타이베이 (Xinyi District, Taipei)",
+      "subject": "같은 도시, 같은 극장가를 오가면서도 만나지 못하는 두 주인공의 배경이 된 멀티플렉스 영화관(당시 명칭 화나웨이슈/Warner Village)",
+      "tip": "현재는 '비에쇼 영화관 신이점'으로 상호가 바뀌었지만 건물 위치는 그대로다. 타이베이101이 함께 보이는 각도로 찍으면 2003년 개봉 당시(101 공사 중) 스카이라인과 비교하는 재미가 있다.",
+      "workId": "turn-left-turn-right",
+      "scene": "도시 곳곳에서 반복되는 엇갈림 장면의 배경으로 등장하는 극장가 신",
+      "source": "https://zh.wikipedia.org/zh-tw/%E5%90%91%E5%B7%A6%E8%B5%B0%C2%B7%E5%90%91%E5%8F%B3%E8%B5%B0_(%E9%9B%BB%E5%BD%B1)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520911/spotchu/spots/vshxyqtycxfnetuxqxue.jpg",
+      "imageCredit": {
+        "author": "毛貓大少爺",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Taipei_Nan_Shan_Plaza,_Taipei_101_and_Vieshow_Cinemas_Taipei_Xinyi_20190825.jpg"
+      }
+    },
+    {
       "id": "taipei-vivelamour-daan-amphitheater-02",
       "title": "영화 사랑만세 - 다안 삼림공원 야외음악당",
       "city": "taipei",
@@ -14614,6 +14872,46 @@
         "author": "User:Sinsyuan",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Taipei_101_from_Xiangshan_20250731.jpg"
+      }
+    },
+    {
+      "id": "taipei-ximending-turn-left-turn-right-e04f",
+      "title": "시먼딩 보행자거리 (턴 레프트 턴 라이트 촬영지)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.043,
+      "lng": 121.5064,
+      "area": "시먼딩 보행자거리, 완화구, 타이베이 (Ximending Pedestrian Area, Wanhua District, Taipei)",
+      "subject": "같은 거리를 오가면서도 두 주인공이 끝내 마주치지 못하는 '엇갈림' 장면들의 배경이 된 보행자 전용구역",
+      "tip": "타이베이 톈허우궁 인근부터 청두루·한중제 일대까지가 극 중 배경이 된 보행자거리다. 인파를 피해 평일 오전 방문을 추천.",
+      "workId": "turn-left-turn-right",
+      "scene": "두 주인공이 같은 거리, 같은 시간대에 있으면서도 서로를 알아보지 못한 채 지나치는 도심 엇갈림 몽타주 장면",
+      "source": "https://zh.wikipedia.org/zh-tw/%E5%90%91%E5%B7%A6%E8%B5%B0%C2%B7%E5%90%91%E5%8F%B3%E8%B5%B0_(%E9%9B%BB%E5%BD%B1)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520914/spotchu/spots/jfhdduni3jqtwiglgff6.jpg",
+      "imageCredit": {
+        "author": "CEphoto, Uwe Aranas",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Taipei_Taiwan_Ximending-Party-World-Building-03.jpg"
+      }
+    },
+    {
+      "id": "taipei-yangming-hospital-turn-left-turn-right-3c6e",
+      "title": "타이베이시립 양밍병원 (턴 레프트 턴 라이트 촬영지)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.1052,
+      "lng": 121.5321,
+      "area": "스린구, 타이베이 (Shilin District, Taipei)",
+      "subject": "섣달그믐 밤 갑자기 쓰러진 이브가 입원하고, 대학 선배인 후 박사가 그녀를 돌보는 병원 장면 촬영지",
+      "tip": "지금은 '타이베이시립연합병원 양밍원구'로 이름이 바뀐 실제 진료 병원이다. 환자와 의료진 동선을 방해하지 않도록 정문 외경 위주로만 조용히 촬영할 것.",
+      "workId": "turn-left-turn-right",
+      "scene": "섣달그믐 밤 이브가 병원에 입원해 후 박사에게 치료받는 장면",
+      "source": "https://zh.wikipedia.org/zh-tw/%E5%90%91%E5%B7%A6%E8%B5%B0%C2%B7%E5%90%91%E5%8F%B3%E8%B5%B0_(%E9%9B%BB%E5%BD%B1)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520916/spotchu/spots/o0ad2faxd7qvguw73g38.jpg",
+      "imageCredit": {
+        "author": "Tianmu peter",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E5%A3%AB%E6%9E%97%E5%8D%80%E9%99%BD%E6%98%8E%E9%86%AB%E9%99%A2,%E8%87%BA%E5%8C%97%E5%B8%82%E7%AB%8B%E8%81%AF%E5%90%88%E9%86%AB%E9%99%A2%E9%99%BD%E6%98%8E%E9%99%A2%E5%8D%80,_Yangming_Branch_of_Taipei_City_Hospital_-_panoramio.jpg"
       }
     },
     {
@@ -14770,6 +15068,23 @@
       }
     },
     {
+      "id": "tokyo-bonus-track-silent-e14f",
+      "title": "BONUS TRACK 산책로 (드라마 silent 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.659285,
+      "lng": 139.66399,
+      "area": "세타가야구 다이타, 시모키타센로가이(下北線路街)",
+      "subject": "옛 오다큐선 철길 부지에 조성된 복합 상업시설 BONUS TRACK 옆 목조 산책로",
+      "tip": "세타가야다이타역에서 시모키타자와역 방향으로 도보 5분. 평일 낮에는 한산해 인물 없는 산책로 컷을 담기 좋다. 매장 앞 통행에 방해되지 않게 촬영할 것.",
+      "lens": "24-35mm",
+      "time": "낮",
+      "workId": "silent",
+      "scene": "극 중 여러 회차에 반복 등장하는 산책로. 최종화에서 미나토(스즈카 오우시)가 소우의 부름에 돌아보는 장면이 이 옆 산책로에서 촬영됐다",
+      "verified": "reported",
+      "source": "https://loca.ash.jp/info/2022/d202210_silent.htm"
+    },
+    {
       "id": "tokyo-cafe-la-boheme-shinjuku-gyoen-your-name-9a2c",
       "title": "카페 라 보엠 신주쿠교엔점 (너의 이름은.)",
       "city": "tokyo",
@@ -14874,6 +15189,23 @@
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Daiba_Park_@_Odaiba_(14042554524).jpg"
       }
+    },
+    {
+      "id": "tokyo-daita-fujimi-bridge-silent-7c2a",
+      "title": "다이타 후지미바시 (드라마 silent 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.657885,
+      "lng": 139.659958,
+      "area": "세타가야구 다이타, 세타가야다이타역 인근",
+      "subject": "오다큐선 지하화로 새로 생긴 보행자 전용 다리 위. 다리 난간과 함께 서쪽 저 멀리 후지산이 보이는 구도",
+      "tip": "세타가야다이타역 서쪽 출구에서 도보 1분. 맑은 날 늦은 오후~해질녘에는 다리 너머로 후지산이 보여 극중 장면과 비슷한 구도를 담을 수 있다. 환칠(環七) 차도 위 다리이니 난간 밖으로 몸을 내밀지 말 것.",
+      "lens": "35-50mm",
+      "time": "늦은 오후~해질녘",
+      "workId": "silent",
+      "scene": "1화, 재회한 소우(메구로 렌)와 츠무기(가와구치 하루나)가 다리 위에서 대화를 나누는 장면 촬영지",
+      "verified": "reported",
+      "source": "https://komuken.com/silent-loca/"
     },
     {
       "id": "tokyo-dogenzaka-2chome-crossing-jujutsu-kaisen-7f1b",
@@ -15099,6 +15431,29 @@
         "author": "あばさー",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Higashi-Ikebukuro_Central_Park_01.JPG"
+      }
+    },
+    {
+      "id": "tokyo-higashikitazawa-station-silent-3f8c",
+      "title": "히가시키타자와역 앞 로터리 (드라마 silent 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.665556,
+      "lng": 139.673194,
+      "area": "세타가야구 기타자와, 히가시키타자와역",
+      "subject": "오다큐선 히가시키타자와역 앞 버스 로터리. 정류장과 역 출입구가 함께 보이는 구도",
+      "tip": "실제 시부야행 버스가 정차하는 로터리다. 버스 승하차 승객 통행을 막지 말고, 정류장 벤치 옆에서 촬영할 것.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "silent",
+      "scene": "최종화, 미나토가 버스를 기다리다 꽃다발을 안고 내린 나나와 마주치는 로터리 장면 촬영지",
+      "verified": "reported",
+      "source": "https://www.shimokitazawa.info/news/2022/12/silent-location/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520919/spotchu/spots/lp6mgzyydgxyearkqvmd.jpg",
+      "imageCredit": {
+        "author": "N509FZ",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:East_exit_of_Higashi-Kitazawa_Station_(20230805174600).jpg"
       }
     },
     {
@@ -15654,6 +16009,23 @@
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Daikanransha_(Odaiba_Ferris_Wheel)_(8732601781).jpg"
       }
+    },
+    {
+      "id": "tokyo-reload-shimokita-silent-9b6d",
+      "title": "reload 산책로 (드라마 silent 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.663484,
+      "lng": 139.670114,
+      "area": "세타가야구 기타자와, 시모키타센로가이(下北線路街)",
+      "subject": "하얀 단층 상점들이 늘어선 reload 옆 보행로. 상점 사이 골목과 하늘이 함께 담기는 구도",
+      "tip": "시모키타자와역·히가시키타자와역 양쪽에서 도보 4분. 상점 영업시간(대부분 오전 11시~) 이후 방문하면 풍경과 인파를 함께 담을 수 있다.",
+      "lens": "24-35mm",
+      "time": "낮~초저녁",
+      "workId": "silent",
+      "scene": "3화, 나나(나츠호)가 산책로를 걷던 소우를 발견하고 말을 거는 장면 촬영지. 9화 크리스마스트리 장식 장면도 이 부근에서 촬영됐다",
+      "verified": "reported",
+      "source": "https://loca.ash.jp/info/2022/d202210_silent.htm"
     },
     {
       "id": "tokyo-roppongi-keyakizaka-tower-framing-9c34",
@@ -16322,6 +16694,29 @@
         "author": "Akonnchiroll",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_2023.jpg"
+      }
+    },
+    {
+      "id": "tokyo-towerrecords-shibuya-silent-c05e",
+      "title": "타워레코드 시부야점 (드라마 silent 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.661947,
+      "lng": 139.701008,
+      "area": "시부야구 진난",
+      "subject": "타워레코드 시부야점 외벽·매장 입구. 대형 로고 사인과 계단이 함께 보이는 구도",
+      "tip": "시부야역에서 도보 5분. 실제 영업 중인 매장이므로 손님 통행에 방해되지 않게 외부에서 촬영할 것.",
+      "lens": "24-35mm",
+      "time": "낮~초저녁",
+      "workId": "silent",
+      "scene": "츠무기(가와구치 하루나)가 아르바이트하는 CD 매장으로 등장하는 실제 매장. 극 전반에 걸쳐 반복 등장",
+      "verified": "reported",
+      "source": "https://news.mynavi.jp/article/20221110-silent/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520921/spotchu/spots/tc9zhttrbq7evormhchx.jpg",
+      "imageCredit": {
+        "author": "Another Believer",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tower_Records_Shibuya_in_Shibuya,_Tokyo,_2019_-_796.jpg"
       }
     },
     {
@@ -17039,6 +17434,46 @@
       }
     },
     {
+      "id": "yokohama-hikawa-maru-abunai-deka-c93a",
+      "title": "니혼유센 히카와마루 (위험한 형사 촬영지)",
+      "city": "yokohama",
+      "category": "drama",
+      "lat": 35.446686,
+      "lng": 139.651261,
+      "area": "야마시타 공원 북단, 나카구, 요코하마 (Yamashita Park north end, Naka-ku, Yokohama)",
+      "subject": "야마시타 공원에 계류된 옛 여객선 히카와마루 선체와 부두 전경",
+      "tip": "선박 우현 쪽 부두 산책로에서 뱃머리가 잘 보이는 각도로 촬영. 선내 견학은 유료(300엔 내외)로 가능하다.",
+      "workId": "abunai-deka",
+      "scene": "1998년 극장판 '위험한 형사 포에버 THE MOVIE'에서 두 주인공이 히카와마루 옆에서 유조선을 밀어내는 장면의 실제 배경",
+      "source": "https://www.welcome.city.yokohama.jp/blog/detail.php?blog_id=278",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520924/spotchu/spots/klp8umzqzwgkzxvedrh8.jpg",
+      "imageCredit": {
+        "author": "Ymblanter",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Hikawa_Maru_seen_from_the_southwest.jpg"
+      }
+    },
+    {
+      "id": "yokohama-hotel-newgrand-abunai-deka-d05e",
+      "title": "호텔 뉴그랜드 (위험한 형사 촬영지)",
+      "city": "yokohama",
+      "category": "drama",
+      "lat": 35.444772,
+      "lng": 139.649592,
+      "area": "야마시타초 10번지, 나카구, 요코하마 (Yamashita-cho 10, Naka-ku, Yokohama)",
+      "subject": "1927년 개업한 클래식 호텔 본관 외관. 아치형 창문이 늘어선 유서 깊은 건물이 극중 여러 차례 등장",
+      "tip": "야마시타 공원 건너편 도로에서 본관 외벽 아치 창문이 한 프레임에 들어오게 촬영한다. 정문 앞은 통행이 많으니 이른 아침을 추천.",
+      "workId": "abunai-deka",
+      "scene": "시리즈에서 옥상 및 외관이 여러 차례 등장한 요코하마의 상징적 클래식 호텔",
+      "source": "https://www.welcome.city.yokohama.jp/blog/detail.php?blog_id=278",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520926/spotchu/spots/zvs6hab0mojczr9lauaa.jpg",
+      "imageCredit": {
+        "author": "Suikotei",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Hotel_New_Grand_2019.jpg"
+      }
+    },
+    {
       "id": "yokohama-kitanaka-bridge-nigehaji-01",
       "title": "기타나카교 (도망치는 건 부끄럽지만 도움이 된다 명장면 촬영지)",
       "city": "yokohama",
@@ -17059,6 +17494,26 @@
         "author": "Yokohama_Landmark_Tower_02.JPG: Σ64 derivative work: 0607crp (talk)",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Yokohama_Landmark_Tower_02_cropped.jpg"
+      }
+    },
+    {
+      "id": "yokohama-motomachi-silverohno-abunai-deka-a4c1",
+      "title": "모토마치 상점가 실버 오노 (위험한 형사 촬영지)",
+      "city": "yokohama",
+      "category": "drama",
+      "lat": 35.440002,
+      "lng": 139.647258,
+      "area": "모토마치 4초메, 나카구, 요코하마 (Motomachi 4-chome, Naka-ku, Yokohama)",
+      "subject": "1948년 창업한 은제품 전문점 '실버 오노(SILVER OHNO)' 매장 외관과 모토마치 상점가 거리",
+      "tip": "상점가 도로 맞은편에서 간판과 쇼윈도가 함께 보이게 촬영한다. 영업시간(11~18시, 월요 휴무)을 확인하고 방문할 것.",
+      "workId": "abunai-deka",
+      "scene": "극중 옥 반지 감정 장면이 촬영된 실제 보석상. 요코하마시 공식 '위험한 형사 로케지 투어' 캠페인 참여 매장",
+      "source": "https://www.welcome.city.yokohama.jp/blog/detail.php?blog_id=287",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520930/spotchu/spots/urtg5gvzfba5mwchso9o.jpg",
+      "imageCredit": {
+        "author": "Ymblanter",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Motomachi_shopping_street.jpg"
       }
     },
     {
@@ -17148,6 +17603,40 @@
         "author": "KQuhen",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=178794771"
+      }
+    },
+    {
+      "id": "yokohama-yamashita-bridge-abunai-deka-f2b8",
+      "title": "야마시타바시 다리 (위험한 형사 촬영지)",
+      "city": "yokohama",
+      "category": "drama",
+      "lat": 35.443135,
+      "lng": 139.652905,
+      "area": "야마시타초, 나카구, 요코하마 (국도 82호선, 나카무라강 하구) — Yamashita-cho, Naka-ku, Yokohama",
+      "subject": "나카무라강이 항구와 만나는 지점의 작은 다리. 국도 82호선 위 차량 추격 장면의 실제 배경",
+      "tip": "다리 위는 차량 통행이 있으니 인도에서 촬영한다. 모토마치·주카가이역에서 도보 약 3분 거리.",
+      "workId": "abunai-deka",
+      "scene": "1986년 극장판 1편의 카체이스 장면이 촬영된 실제 다리",
+      "source": "https://www.automesseweb.jp/2024/07/05/1607536"
+    },
+    {
+      "id": "yokohama-yamashita-park-abunai-deka-b7f2",
+      "title": "야마시타 공원 (위험한 형사 촬영지)",
+      "city": "yokohama",
+      "category": "drama",
+      "lat": 35.445778,
+      "lng": 139.64975,
+      "area": "야마시타초, 나카구, 요코하마 (Yamashita-cho, Naka-ku, Yokohama)",
+      "subject": "분수 광장(수호신상)에서 바다 쪽 마린타워를 바라보는 구도. 항구 산책로와 계류된 히카와마루가 함께 배경으로 담긴다.",
+      "tip": "공원 중앙 분수 앞에서 바다 방향으로 서면 마린타워가 프레임에 들어온다. 해 질 무렵 항구 조명이 켜질 때가 극 중 분위기와 가장 비슷하다.",
+      "workId": "abunai-deka",
+      "scene": "시리즈 전편에 걸쳐 반복 등장하는 항구 산책 장면 및 1998년 극장판 '위험한 형사 포에버 THE MOVIE'의 항만 시퀀스 배경",
+      "source": "https://www.welcome.city.yokohama.jp/blog/detail.php?blog_id=278",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788520934/spotchu/spots/bpsbpx551lhcpjkvksol.jpg",
+      "imageCredit": {
+        "author": "Guilhem Vellut from Annecy, France",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Yamashita_Park_@_Yokohama_(9054590638).jpg"
       }
     },
     {
@@ -17361,6 +17850,13 @@
       "progress": 0
     },
     {
+      "id": "the-attorney",
+      "title": "변호인",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "slam-dunk",
       "title": "슬램덩크",
       "type": "애니",
@@ -17385,13 +17881,6 @@
       "id": "fight-for-my-way",
       "title": "쌈, 마이웨이",
       "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "the-attorney",
-      "title": "변호인",
-      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -18502,6 +18991,13 @@
       "progress": 0
     },
     {
+      "id": "turn-left-turn-right",
+      "title": "턴 레프트, 턴 라이트",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "eat-drink-man-woman-yi-yi",
       "title": "음식남녀 (Eat Drink Man Woman) / 하나 그리고 둘 (Yi Yi)",
       "type": "영화",
@@ -18533,13 +19029,6 @@
       "id": "in-time-with-you-taipei",
       "title": "아가능불회애니 (연애의 조건 / In Time With You)",
       "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "turn-left-turn-right",
-      "title": "턴 레프트, 턴 라이트 (향좌주, 향우주)",
-      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
@@ -18582,6 +19071,13 @@
       "id": "sailor-moon",
       "title": "미소녀 전사 세일러문",
       "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "silent",
+      "title": "silent",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
@@ -18670,13 +19166,6 @@
       "progress": 0
     },
     {
-      "id": "silent",
-      "title": "silent",
-      "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
       "id": "the-wolverine",
       "title": "더 울버린",
       "type": "영화",
@@ -18740,15 +19229,15 @@
       "progress": 0
     },
     {
-      "id": "gekijoban-tokyo-mer",
-      "title": "극장판 TOKYO MER: 달리는 응급실",
-      "type": "영화",
+      "id": "abunai-deka",
+      "title": "위험한 형사",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "abunai-deka",
-      "title": "위험한 형사",
+      "id": "gekijoban-tokyo-mer",
+      "title": "극장판 TOKYO MER: 달리는 응급실",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
