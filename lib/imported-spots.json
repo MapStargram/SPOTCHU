@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T12:41:40.085Z",
+  "generatedAt": "2026-09-04T13:11:50.533Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -3857,6 +3857,26 @@
       }
     },
     {
+      "id": "fukuoka-hakata-eki-tonkotsu-ramens-f38a",
+      "title": "하카타역 하카타구치 (하카타 돈코츠 라멘즈 성지)",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.589306,
+      "lng": 130.419194,
+      "area": "하카타역 앞, 후쿠오카 (Hakata Station, Fukuoka)",
+      "subject": "규슈 최대 터미널역인 하카타역의 서쪽 출구 '하카타구치' 앞 역전 광장 — 주인공 사이토가 후쿠오카(하카타)에 도착하는 1화 도입부 장면의 배경",
+      "tip": "역 앞 로터리와 버스터미널이 함께 보이는 각도가 애니 구도와 유사하다. 출퇴근 시간대는 인파가 많으니 이른 오전 방문을 추천한다.",
+      "workId": "hakata-tonkotsu-ramens",
+      "scene": "사이토가 하카타역에 도착해 텐진 방면으로 향하는 1화 장면",
+      "source": "https://ameblo.jp/taiyaki3140/entry-12344812624.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788527484/spotchu/spots/anytov6od4ra9rv2fa3y.jpg",
+      "imageCredit": {
+        "author": "Hirho",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:JR_Hakata_City_the_atrium_spanning_the_9th_and_10th_floors_topped_by_a_skylight_Hakata-eki-ch%C5%AB%C5%8Dgai_Hakata-ku_Fukuoka_20240806.jpg"
+      }
+    },
+    {
       "id": "fukuoka-hakata-station-plaza-tonkotsu-ramens-3e1f",
       "title": "하카타역 광장 - 너의 췌장을 먹고 싶어",
       "city": "fukuoka",
@@ -3877,6 +3897,49 @@
         "author": "ぱちょぴ",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:JR_Hakata_City_2011_Jan.jpg"
+      }
+    },
+    {
+      "id": "fukuoka-hakozaki-miyamae-eki-tonkotsu-ramens-a6c4",
+      "title": "하코자키미야마에역 2번 출구 (하카타 돈코츠 라멘즈 성지)",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.615833,
+      "lng": 130.419581,
+      "area": "하코자키, 히가시구, 후쿠오카 (Hakozaki, Higashi-ku, Fukuoka)",
+      "subject": "후쿠오카 지하철 하코자키선 하코자키미야마에역 2번 출구 일대 — 형사의 자택 인근 주택가 및 사건 현장 관련 장면의 배경이 된 역 출구",
+      "tip": "2번 출구 계단과 표지판이 애니에 그대로 등장하니 출구 표지판이 잘 보이는 정면에서 촬영한다. 주변은 실제 주택가이므로 늦은 밤 촬영과 소음은 피한다.",
+      "workId": "hakata-tonkotsu-ramens",
+      "scene": "형사의 자택 인근 주택가 및 사건 현장 관련 1화 장면",
+      "source": "https://ameblo.jp/taiyaki3140/entry-12344812624.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788527485/spotchu/spots/tqiqig6lx5zyhcfkr3sa.jpg",
+      "imageCredit": {
+        "author": "No machine-readable author provided. Ningyou assum",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Fukuoka_Hakozakimiyamae_subway_station.jpg"
+      }
+    },
+    {
+      "id": "fukuoka-ichitomi-kodoku-7d94",
+      "title": "이치토미 (고독한 미식가 하카타 출장편)",
+      "city": "fukuoka",
+      "category": "drama",
+      "lat": 33.592289,
+      "lng": 130.40712,
+      "area": "하카타구 나카스 4초메 인형소지(人形小路) 골목, 나카스카와바타역 인근",
+      "subject": "인형소지 골목 안 요리주점 '이치토미(一富)' 입구 포렴과 간판을 정면으로 담는 촬영 포인트",
+      "tip": "촬영자 좌표는 일본 국토지리원 주소 API로 얻은 '나카스4초메2번' 블록 좌표이며, 정확한 가게 앞 위치는 현장 또는 스트리트뷰로 재확인이 필요합니다. 실제 영업 중인 요리주점(18시~새벽, 일·공휴일 휴무)이니 좁은 골목 통행을 막지 않게 짧게 촬영하세요.",
+      "lens": "24-35mm",
+      "time": "영업 시작 직후 저녁(18시경)",
+      "workId": "kodoku-no-gourmet-season-4-hakata-special",
+      "scene": "고로가 후쿠오카상공회의소 강연을 마친 뒤 나카스를 산책하다 인형소지 골목의 '이치토미'에 들어가 사바고마·사바낫토·특제 자완무시·영계 스프조림을 먹는 장면",
+      "verified": "reported",
+      "source": "https://www.hakata-yamakasa.net/discovery-hakata/kodoku-no-gourmet/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788527489/spotchu/spots/ubvnqakrzmjznn8dfxjr.jpg",
+      "imageCredit": {
+        "author": "Hirho",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Reisen_D%C5%8Dri_the_view_SW_from_Gokusho_Street_Reisenmachi_and_Tenyamachi_Hakata-ku_Fukuoka_20240129.jpg"
       }
     },
     {
@@ -3932,6 +3995,40 @@
       "workId": "natsume-yuujincho",
       "scene": "4기 12화('기억의 문' / 記憶の扉). 주인공 나츠메 타카시가 옛 유년 시절의 집을 찾아가기 위해 탑승한 열차의 이동 경로와 함께 등장하는 후쿠오카의 대표적 노스탤지어 철도 풍경.",
       "source": "http://blog.livedoor.jp/animeseichi/archives/natsume-fukuoka.html"
+    },
+    {
+      "id": "fukuoka-nakasu-yatai-tonkotsu-ramens-b7c2",
+      "title": "나카스 포장마차 거리 (하카타 돈코츠 라멘즈 성지)",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.58994,
+      "lng": 130.408939,
+      "area": "나카스, 후쿠오카 (Nakasu, Fukuoka)",
+      "subject": "나카가와 강변을 따라 늘어선 포장마차(야타이) 행렬 — 극중 고다 겐조가 운영하는 라멘 포장마차 '겐짱'을 비롯해 나카스 강변 야타이 거리가 반복적으로 배경으로 등장한다",
+      "tip": "포장마차 조명이 켜지는 해질녘 이후(18~20시경) 강 건너편에서 찍으면 애니 속 분위기와 가장 비슷한 야경을 담을 수 있다. 실제 영업 중인 포장마차이므로 손님과 상인에게 카메라를 들이대지 않는다.",
+      "workId": "hakata-tonkotsu-ramens",
+      "scene": "라멘 포장마차 '겐짱'을 포함한 나카강변 야타이 거리 장면의 배경",
+      "source": "https://anime-tourism.jp/t/853/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788527492/spotchu/spots/b6oufdnnvt04rlgvh43q.jpg",
+      "imageCredit": {
+        "author": "Hirho",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seiry%C5%AB_Park_Fukuoka_Hakata_Yatai_along_Naka_River_Nakasu_1-ch%C5%8Dme_Hakata-ku_Fukuoka_20250401_180028.jpg"
+      }
+    },
+    {
+      "id": "fukuoka-nishijin-palace-dome-tonkotsu-ramens-d1e9",
+      "title": "니시진 팰리스돔 배팅센터 (하카타 돈코츠 라멘즈 성지)",
+      "city": "fukuoka",
+      "category": "anime",
+      "lat": 33.585499,
+      "lng": 130.361869,
+      "area": "니시진, 사와라구, 후쿠오카 (Nishijin, Sawara-ku, Fukuoka)",
+      "subject": "니시진역 인근 실내 배팅센터 '니시진 팰리스돔' 건물 외관 — 극중 바바가 배팅센터에서 시간을 보내는 1화 장면의 실제 배경 건물",
+      "tip": "니시진역 6번 출구에서 도보 약 3분 거리. 실제 영업 중인 배팅센터이므로 이용객을 방해하지 말고 건물 외관 위주로 촬영한다.",
+      "workId": "hakata-tonkotsu-ramens",
+      "scene": "바바가 배팅센터에서 스트레스를 푸는 1화 장면의 배경 건물",
+      "source": "https://astral-tanbou.com/entry/2018/01/14/233105"
     },
     {
       "id": "fukuoka-ohori-park-kangetsukyo-fuufu-ijou-9c2f",
@@ -7928,6 +8025,69 @@
       }
     },
     {
+      "id": "nagoya-aichi-pref-office-vivant-b7e2",
+      "title": "아이치현청 본청사 (VIVANT 촬영지)",
+      "city": "nagoya",
+      "category": "drama",
+      "lat": 35.180202,
+      "lng": 136.906144,
+      "area": "Aichi Prefectural Government Office main building, Sannomaru, Naka-ku (나고야성 인근)",
+      "subject": "성곽 의장을 살린 1938년 준공 아이치현청 본청사 정면 파사드 — 극중 6층 '정청의 간(正庁の間)'이 바르카 공화국 주일대사관 실내로 쓰였다",
+      "tip": "정청의 간 내부 견학은 사전 예약이 있어야 가능하니, 예약이 없다면 나고야성 방향 정면의 성곽풍 외관을 촬영하세요. 지하철 메이조선 나고야성역 3번 출구에서 도보 약 1분, 평일 업무시간 외에는 출입이 제한될 수 있습니다.",
+      "lens": "24-35mm",
+      "time": "평일 오전 (정청의 간 견학은 사전예약 필요)",
+      "workId": "vivant",
+      "scene": "제2화 - 바르카 공화국 주일대사관 설정의 '정청의 간'에서 노기 일행에게 손수 지은 밥을 대접하는 장면",
+      "verified": "reported",
+      "source": "https://www.news-postseven.com/archives/20230916_1904057.html/2",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788527495/spotchu/spots/yrhkfegllkgno6qhlc1m.jpg",
+      "imageCredit": {
+        "author": "Evelyn-rose",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Aichi-Prefectural-Government-Office-2.jpg"
+      }
+    },
+    {
+      "id": "nagoya-cci-building-vivant-4f9d",
+      "title": "나고야상공회의소 빌딩 (VIVANT 촬영지)",
+      "city": "nagoya",
+      "category": "drama",
+      "lat": 35.165638,
+      "lng": 136.898568,
+      "area": "Nagoya Chamber of Commerce and Industry Building, Sakae, Naka-ku (시라카와공원 인근)",
+      "subject": "1967년 준공된 나고야상공회의소 빌딩 — 극중 대회의실(홀)이 낙찰 입찰 회의 및 벚꽃 계획 설명 회의 장면 배경으로 쓰였다",
+      "tip": "대회의실 등 건물 내부는 일반 공개가 아니므로 맞은편 시라카와공원 쪽에서 외관 위주로 촬영하세요. 지하철 히가시야마선·쓰루마이선 후시미역에서 도보 약 5분.",
+      "lens": "35-50mm",
+      "time": "낮 시간대",
+      "workId": "vivant",
+      "scene": "제6-7화 - 별반 관련 인물들이 모이는 입찰 회의 및 벚꽃 계획을 설명하는 회의 장면",
+      "verified": "reported",
+      "source": "https://location.la.coocan.jp/VIVANT_tbs.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788527497/spotchu/spots/eb6daalu8berlvq1xbzw.jpg",
+      "imageCredit": {
+        "author": "円周率３パーセント",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Nagoya_Chamber_of_Commerce_and_Industry_20131223.JPG"
+      }
+    },
+    {
+      "id": "nagoya-ceramic-center-vivant-2a6c",
+      "title": "일본도자기센터 (VIVANT 촬영지)",
+      "city": "nagoya",
+      "category": "drama",
+      "lat": 35.174472,
+      "lng": 136.922111,
+      "area": "Japan Ceramic Center, Daikan-cho, Higashi-ku (나고야 '문화의 길' 지구)",
+      "subject": "1934년 구관·1958년 신관으로 이뤄진 일본도자기센터 빌딩 — 대회의실의 아치형 천장이 극중 바르카 경찰서 수사 회의실로 등장",
+      "tip": "'문화의 길(文化のみち)' 근대건축 산책 코스 안에 있어 인근 유적과 함께 둘러보기 좋습니다. 사쿠라도리선 다카오카역에서 도보 이동 가능하며, 대회의실 내부는 대관 예약 시에만 촬영할 수 있습니다.",
+      "lens": "24-35mm",
+      "time": "낮 시간대 (대회의실 내부는 대관 예약 필요)",
+      "workId": "vivant",
+      "scene": "제1-2화 - 바르카 경찰서 수사 회의실 장면",
+      "verified": "reported",
+      "source": "https://www.nagoya-info.jp/location/showcase/detail/167/"
+    },
+    {
       "id": "nagoya-city-archives-grand-staircase-4e1d",
       "title": "나고야시 시정자료관 중앙 대계단 및 스테인드글라스",
       "city": "nagoya",
@@ -8117,6 +8277,34 @@
         "license": "CC BY 2.5",
         "source": "https://commons.wikimedia.org/wiki/File:Ama-no-Iwatate_Shrine-05_photo.jpg"
       }
+    },
+    {
+      "id": "nara-imaicho-kometanike-rurouni-kenshin-7f2a",
+      "title": "옛 요네타니가 주택 (바람의 검심 최종장 촬영지)",
+      "city": "nara",
+      "category": "drama",
+      "lat": 34.50712,
+      "lng": 135.78729,
+      "area": "이마이초, 가시하라시, 나라현 (Imai-cho, Kashihara, Nara)",
+      "subject": "에도시대 상가거리 이마이초에 남은 중요문화재 고택 '옛 요네타니가 주택'의 낮은 목조 마치야 정면",
+      "tip": "중요전통적건조물군보존지구인 이마이초 골목 맞은편에서 찍으면 처마선과 격자창이 한 프레임에 들어온다. 실내 무료 견학 가능(09:00-17:00, 정오 휴관, 월요일·연말연시 휴관). 근철 오야마토야기역·JR 우네비역에서 도보 10분 내외.",
+      "workId": "rurouni-kenshin-the-final",
+      "scene": "다카니 메구미(아오이 유우)가 오구니 진료소에서 부상자들을 치료하고 사노스케가 그곳으로 뛰어드는 장면",
+      "source": "https://web.gogo-kashihara.com/imai-kenshin/"
+    },
+    {
+      "id": "nara-kyunarakangoku-rurouni-kenshin-b19d",
+      "title": "옛 나라 감옥 (바람의 검심 최종장 촬영지)",
+      "city": "nara",
+      "category": "drama",
+      "lat": 34.6973,
+      "lng": 135.83295,
+      "area": "한냐지초, 나라시, 나라현 (Hannyaji-cho, Nara City, Nara)",
+      "subject": "메이지시대 오대 감옥 중 하나로 지어진 붉은 벽돌 옛 나라 감옥의 정문·회랑·독방동 외관",
+      "tip": "법무성 소유 중요문화재로, 현재 호시노야가 운영하는 '나라 감옥 뮤지엄'으로 재단장돼 사전 예약 견학만 가능. 붉은 벽돌 파사드는 오후 정면광일 때가 촬영하기 좋다.",
+      "workId": "rurouni-kenshin-the-final",
+      "scene": "겐신과 가오루의 중요한 순간을 포함해 독방동·회랑에서 촬영된 시퀀스",
+      "source": "https://www.ciwawa.site/nara-kangoku-museum/"
     },
     {
       "id": "nara-onmyoji-suzakumon-plaza-8a3b",
@@ -13341,6 +13529,46 @@
       }
     },
     {
+      "id": "seoul-cityhall-station-seoul-station-b7e2",
+      "title": "시청역 10번 출구 (애니메이션 '서울역' 배경)",
+      "city": "seoul",
+      "category": "anime",
+      "lat": 37.5647,
+      "lng": 126.9769,
+      "area": "중구 서소문동, 서울",
+      "subject": "지하철 1·2호선 환승역 시청역의 2호선 10번 출구 부근 — 딸을 찾는 노숙자가 지상으로 나오는 장면에서 뒤편에 '중부등기소·서소문동' 표지판이 그대로 확인되는 배경",
+      "tip": "10번 출구는 서울시립미술관 서소문본관 방향으로, 실제 '서소문동' 도로 표지판을 볼 수 있는 자리다. 출퇴근 시간대는 인파가 많으니 피해서 방문하는 편이 좋다.",
+      "workId": "seoul-station",
+      "scene": "엄마를 찾는 노숙자가 지하철역 출구로 올라오는 장면 — 배경 표지판 문구로 시청역 10번 출구가 확인됨",
+      "source": "https://namu.wiki/w/%EC%84%9C%EC%9A%B8%EC%97%AD(%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98)/%EC%A4%84%EA%B1%B0%EB%A6%AC",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788527500/spotchu/spots/xspiyapqrit46tyonaj0.jpg",
+      "imageCredit": {
+        "author": "Umaku",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seoul_City_Office_from_Subway_Station.jpg"
+      }
+    },
+    {
+      "id": "seoul-coex-god-of-high-school-7f2a",
+      "title": "코엑스 K-POP 스퀘어 (갓 오브 하이스쿨 성지)",
+      "city": "seoul",
+      "category": "anime",
+      "lat": 37.5115,
+      "lng": 127.0598,
+      "area": "강남구 삼성동",
+      "subject": "삼성역 5·6번 출구 앞 코엑스 아티움 K-POP 스퀘어 외벽 전광판과 코엑스몰 일대 — 극 중 전국 고교생 종합격투기 대회 'GOD OF HIGH SCHOOL(G.O.H)'의 개최지로 등장",
+      "tip": "삼성역 5·6번 출구로 나오면 바로 보이는 코엑스 아티움 K-POP 스퀘어 앞 광장에서 촬영. 저녁에 전광판 조명이 켜지면 배경이 더 화려하게 나온다.",
+      "workId": "god-of-high-school",
+      "scene": "전국 고등학생 종합격투기 대회 'G.O.H'의 실제 개최 장소로 코엑스가 배경으로 등장",
+      "source": "https://gall.dcinside.com/board/view/?id=hit&no=15969",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788527503/spotchu/spots/mhmvrxg1t9gckldcdb7g.jpg",
+      "imageCredit": {
+        "author": "Christophe95",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:COEX_Center.jpg"
+      }
+    },
+    {
       "id": "seoul-common-ground-vincenzo-4d7e",
       "title": "커먼그라운드 (빈센조 촬영지)",
       "city": "seoul",
@@ -13370,6 +13598,26 @@
       "workId": "startup",
       "scene": "8화 — 인재와 인재 어머니가 식사하며 대화를 나누는 레스토랑 장면",
       "source": "https://english.visitseoul.net/hallyu/Seoul-as-Seen-in-the-Romantic-TV-Series-Start-Up/ENN036494"
+    },
+    {
+      "id": "seoul-ddp-god-of-high-school-3c9e",
+      "title": "동대문디자인플라자 DDP (갓 오브 하이스쿨 성지)",
+      "city": "seoul",
+      "category": "anime",
+      "lat": 37.5663,
+      "lng": 127.0092,
+      "area": "중구 을지로7가",
+      "subject": "동대문디자인플라자(DDP)의 곡선형 외벽 및 광장 — 극 중 'G.O.H' 대회 홍보 배너가 걸린 배경으로 등장",
+      "tip": "DDP 동대문역사문화공원역 1번 출구 쪽 외부 광장에서 곡선형 파사드를 정면으로 담으면 애니 배경 구도와 비슷하다.",
+      "workId": "god-of-high-school",
+      "scene": "'G.O.H' 대회 홍보 배너가 걸린 배경 건물로 동대문디자인플라자가 등장",
+      "source": "https://gall.dcinside.com/board/view/?id=hit&no=15969",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788527505/spotchu/spots/n2fuzcjohguxazq2rv9t.jpg",
+      "imageCredit": {
+        "author": "Dwxn",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:20240601_144028_Dongdaemun_Design_Plaza,_Seoul_08.jpg"
+      }
     },
     {
       "id": "seoul-ddp-station-exit8-man-from-nowhere-5e91",
@@ -13681,6 +13929,26 @@
       "source": "https://m.korea.kr/news/policyNewsView.do?newsId=148902262"
     },
     {
+      "id": "seoul-hoehyeon-station-seoul-station-d914",
+      "title": "회현역 (애니메이션 '서울역' 배경)",
+      "city": "seoul",
+      "category": "anime",
+      "lat": 37.5585,
+      "lng": 126.9781,
+      "area": "중구 남창동, 서울 (남대문시장 인근)",
+      "subject": "지하철 4호선 회현역(부역명 남대문시장) 출입구 — 혜선과 노숙 노인이 선로를 따라 걷다 지상으로 빠져나와 통신이 다시 연결되는 장면의 배경이 되는 역",
+      "tip": "회현역은 남대문시장·신세계백화점 본점과 바로 이어진다. 역 출입구를 넣은 스냅은 시장 쪽보다 한산한 큰길 쪽 출구에서 찍기 편하다.",
+      "workId": "seoul-station",
+      "scene": "지하 선로를 따라 탈출하던 혜선과 노인이 지상으로 올라와 회현역에 있다고 통화하는 장면",
+      "source": "https://namu.wiki/w/%EC%84%9C%EC%9A%B8%EC%97%AD(%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98)/%EC%A4%84%EA%B1%B0%EB%A6%AC",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788527510/spotchu/spots/x0z4wp2cxhxlxthxqzgr.jpg",
+      "imageCredit": {
+        "author": "LERK",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Seoul-metro-425-Hoehyeon-station-entrance-1-20181124-080708.jpg"
+      }
+    },
+    {
       "id": "seoul-hongdae-nbclub-bittersweet-life-9d2a",
       "title": "홍대 NB클럽 옛터 (달콤한 인생 촬영지)",
       "city": "seoul",
@@ -13747,6 +14015,20 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=6593269"
       }
+    },
+    {
+      "id": "seoul-ichon-hangang-bridge-god-of-high-school-b41d",
+      "title": "이촌한강공원 한강대교 (갓 오브 하이스쿨 성지)",
+      "city": "seoul",
+      "category": "anime",
+      "lat": 37.5178,
+      "lng": 126.9612,
+      "area": "용산구 이촌동",
+      "subject": "한강대교·한강철교와 63빌딩이 함께 보이는 한강 스카이라인 — 오프닝 및 1화 배경",
+      "tip": "이촌한강공원 산책로에서 한강대교와 노들섬, 63빌딩 방향을 한 프레임에 담을 수 있다. 노을 무렵 실루엣이 애니 배경과 비슷하다.",
+      "workId": "god-of-high-school",
+      "scene": "오프닝 및 1화에서 한강철교와 63빌딩이 보이는 스카이라인 배경으로 등장",
+      "source": "https://gall.dcinside.com/board/view/?id=hit&no=15969"
     },
     {
       "id": "seoul-ichon-hangang-park-the-host-b6e2",
@@ -14224,6 +14506,20 @@
       "workId": "goblin",
       "scene": "김신과 저승사자가 나란히 걷는 슬로모션 장면 등으로 알려진 그래피티 터널",
       "source": "https://tongblog.sdm.go.kr/4814"
+    },
+    {
+      "id": "seoul-sinchon-severance-hospital-god-of-high-school-5e8a",
+      "title": "신촌세브란스병원 (갓 오브 하이스쿨 성지)",
+      "city": "seoul",
+      "category": "anime",
+      "lat": 37.562,
+      "lng": 126.9406,
+      "area": "서대문구 신촌동(연세로)",
+      "subject": "신촌세브란스병원 본관 외경 — 극 중 친구가 입원한 병원 배경으로 등장",
+      "tip": "연세로 쪽 병원 정문 앞 인도에서 본관 건물을 정면으로 담을 수 있다. 병원 진입로이므로 통행에 방해되지 않게 잠깐만 촬영한다.",
+      "workId": "god-of-high-school",
+      "scene": "한대위의 친구가 입원한 병원 배경으로 신촌세브란스병원이 등장",
+      "source": "https://gall.dcinside.com/board/view/?id=hit&no=15969"
     },
     {
       "id": "seoul-sinjeongnegeori-station-my-mister-c3d1",
@@ -19313,15 +19609,15 @@
       "progress": 0
     },
     {
-      "id": "tora-ni-tsubasa",
-      "title": "연속 TV 소설 '호랑이에게 날개'",
+      "id": "vivant",
+      "title": "VIVANT",
       "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "vivant",
-      "title": "VIVANT",
+      "id": "tora-ni-tsubasa",
+      "title": "연속 TV 소설 '호랑이에게 날개'",
       "type": "드라마",
       "spotCount": 1,
       "progress": 0
@@ -19355,15 +19651,15 @@
       "progress": 0
     },
     {
-      "id": "onmyoji-2001",
-      "title": "음양사",
+      "id": "rurouni-kenshin-the-final",
+      "title": "바람의 검심 최종장: 더 파이널",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "rurouni-kenshin-the-final",
-      "title": "바람의 검심 최종장: 더 파이널",
+      "id": "onmyoji-2001",
+      "title": "음양사",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -19810,6 +20106,20 @@
       "progress": 0
     },
     {
+      "id": "seoul-station",
+      "title": "서울역",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "god-of-high-school",
+      "title": "갓 오브 하이스쿨",
+      "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "startup",
       "title": "스타트업",
       "type": "드라마",
@@ -19845,13 +20155,6 @@
       "progress": 0
     },
     {
-      "id": "god-of-high-school",
-      "title": "갓 오브 하이스쿨",
-      "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
       "id": "a-bittersweet-life",
       "title": "달콤한 인생",
       "type": "영화",
@@ -19875,13 +20178,6 @@
     {
       "id": "lost-in-the-moonlight",
       "title": "달빛궁궐",
-      "type": "애니",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "seoul-station",
-      "title": "서울역",
       "type": "애니",
       "spotCount": 1,
       "progress": 0
