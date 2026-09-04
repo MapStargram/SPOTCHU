@@ -7,12 +7,7 @@ import { revalidatePath } from "next/cache";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
 import { COUNTRY_IDS } from "@/lib/cities-geo";
-
-const nicknameSchema = z
-  .string()
-  .trim()
-  .min(1, "닉네임을 입력하세요")
-  .max(20, "20자 이내로 입력하세요");
+import { nicknameSchema, isNicknameTaken } from "@/lib/nickname";
 
 // 아바타 URL은 우리 Cloudinary 업로드분만 허용(임의 외부 URL을 user.image에 주입 차단).
 const CLOUD =
@@ -56,14 +51,8 @@ export async function updateNicknameAction(
     };
 
   // 중복 방지: 대소문자 무시로 다른 사용자가 쓰는 닉네임인지 검사(DB @unique는 대소문자 구분 백스톱).
-  const taken = await db.user.findFirst({
-    where: {
-      nickname: { equals: parsed.data, mode: "insensitive" },
-      id: { not: user.id },
-    },
-    select: { id: true },
-  });
-  if (taken) return { ok: false, error: "이미 사용 중인 닉네임이에요" };
+  if (await isNicknameTaken(parsed.data, user.id))
+    return { ok: false, error: "이미 사용 중인 닉네임이에요" };
 
   try {
     await db.user.update({
