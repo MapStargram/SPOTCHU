@@ -3,6 +3,7 @@ import { Settings, Pencil, ChevronRight, LogIn, Sparkles } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { AppIcon } from "@/components/ui/AppIcon";
 import { LoginGate } from "@/components/auth/LoginGate";
+import { CityProgressList } from "@/components/profile/CityProgressList";
 import { getCurrentUser } from "@/lib/session";
 import { getProfileStats, getCityProgress, getBadgeCards } from "@/lib/data";
 import { db } from "@/lib/db";
@@ -169,37 +170,9 @@ export default async function ProfilePage() {
         )}
 
         <div className="mt-6 flex flex-col gap-6 px-5 lg:mt-8 lg:grid lg:grid-cols-2 lg:gap-8 lg:px-6">
-          {/* City progress */}
+          {/* City progress — 다열 그리드 + 접기(스크롤 방지) */}
           {cityProgress.length > 0 && (
-            <section>
-              <h2 className="mb-2.5 text-[13px] font-extrabold tracking-[-0.01em]">
-                도시 진행률
-              </h2>
-              <div className="flex flex-col gap-2.5">
-                {cityProgress.map((cp) => (
-                  <div
-                    key={cp.id}
-                    className="rounded-[14px] bg-white px-3.5 py-3 shadow-[shadow:var(--sh-card)]"
-                  >
-                    <div className="mb-2 flex justify-between text-[13px]">
-                      <span className="font-bold">{cp.name}</span>
-                      <span className="font-latin text-[11px] text-[color:var(--muted)]">
-                        <b className="text-coral">{cp.visited}</b> / {cp.total}
-                      </span>
-                    </div>
-                    <div className="h-1.5 overflow-hidden rounded-full bg-[color:var(--cream-2)]">
-                      <div
-                        className="h-full rounded-full"
-                        style={{
-                          width: `${Math.min(100, (cp.visited / cp.total) * 100)}%`,
-                          background: "var(--grad-body)",
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </section>
+            <CityProgressList cities={cityProgress} />
           )}
 
           {/* Badge peek */}
