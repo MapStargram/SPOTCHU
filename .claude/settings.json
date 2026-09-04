@@ -26,14 +26,20 @@
       {
         "matcher": "Edit|Write",
         "hooks": [
-          { "type": "command", "command": "npm run --silent hook:format --if-present" }
+          {
+            "type": "command",
+            "command": "npm run --silent hook:format --if-present 2>&1"
+          }
         ]
       }
     ],
     "Stop": [
       {
         "hooks": [
-          { "type": "command", "command": "npm run --silent hook:typecheck --if-present" }
+          {
+            "type": "command",
+            "command": "npm run --silent hook:typecheck --if-present 2>&1"
+          }
         ]
       }
     ]
