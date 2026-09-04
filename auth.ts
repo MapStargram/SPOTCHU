@@ -20,29 +20,13 @@ import { authConfig } from "@/auth.config";
 const social = [
   process.env.AUTH_GOOGLE_ID &&
     Google({ allowDangerousEmailAccountLinking: true }),
+  // 카카오: 이메일(account_email)은 비즈니스 앱 전환(사업자 인증) 전엔 '권한 없음'이라 scope에 넣으면
+  //   로그인 에러가 난다. 그래서 이메일 없이 사용 — 자동 계정통합(이메일 기준) 대신 로그인 후
+  //   설정 > 연결하기로 통합한다(@auth/core: 로그인 상태 signIn은 이메일 없이 현재 계정에 linkAccount).
+  //   ⚠️ 비즈니스 승인으로 이메일을 켤 땐: authorization scope에 account_email 추가 +
+  //   profile()에서 검증된 이메일(is_email_verified && is_email_valid)만 노출(미검증 이메일 자동연결 탈취 방지).
   process.env.AUTH_KAKAO_ID &&
-    Kakao({
-      allowDangerousEmailAccountLinking: true,
-      // 이메일 기반 자동 계정통합("한 사람=한 계정")을 위해 account_email 동의를 요청한다.
-      // ⚠️ 카카오 콘솔 > 카카오 로그인 > 동의항목에서 '카카오계정(이메일)'을 활성화해야 한다(미활성 시 로그인 에러).
-      // 이메일을 못 받으면(사용자 거부 등) 자동통합 불가 → 로그인 후 설정에서 명시적 연결로 통합.
-      authorization: {
-        url: "https://kauth.kakao.com/oauth/authorize",
-        params: { scope: "profile_nickname profile_image account_email" },
-      },
-      // 미검증 이메일은 노출하지 않는다 — allowDangerousEmailAccountLinking과 결합 시
-      // 미검증 이메일로 남의 계정에 자동연결되는 탈취를 막는다(검증된 이메일만 자동통합).
-      profile(profile) {
-        const acc = profile.kakao_account;
-        const verified = acc?.is_email_verified && acc?.is_email_valid;
-        return {
-          id: String(profile.id),
-          name: acc?.profile?.nickname ?? null,
-          email: verified ? (acc?.email ?? null) : null,
-          image: acc?.profile?.profile_image_url ?? null,
-        };
-      },
-    }),
+    Kakao({ allowDangerousEmailAccountLinking: true }),
   process.env.AUTH_NAVER_ID &&
     Naver({ allowDangerousEmailAccountLinking: true }),
   process.env.AUTH_APPLE_ID &&
