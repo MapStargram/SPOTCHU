@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T10:06:33.124Z",
+  "generatedAt": "2026-09-04T10:36:27.120Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -3438,6 +3438,52 @@
       }
     },
     {
+      "id": "florence-piazza-poggi-calmi-cuori-6a1d",
+      "title": "포지 광장 아르노 강변 (냉정과 열정 사이 촬영지)",
+      "city": "florence",
+      "category": "drama",
+      "lat": 43.76466,
+      "lng": 11.26458,
+      "area": "Piazza Giuseppe Poggi, San Niccolò, Lungarno, Florence",
+      "subject": "미켈란젤로 언덕으로 오르는 램프 초입, 아르노 강변 작은 광장 풍경",
+      "tip": "폰테 알레 그라치에 인근, 미켈란젤로 광장으로 오르는 네오마니에리스모 램프 초입의 강변 자리. 극 중 첼로 연주가 흐르며 두 사람이 손을 포개는 장면이 촬영된 곳으로, 오가는 사람이 적어 여유롭게 강변 풍경을 담을 수 있다.",
+      "lens": "35-50mm",
+      "time": "노을",
+      "workId": "calmi-cuori-appassionati",
+      "scene": "아르노 강변에서 첼로 연주를 들으며 두 사람이 손을 포개는 장면",
+      "verified": "reported",
+      "source": "https://happist.com/566876/%ED%94%BC%EB%A0%8C%EC%B2%B4%EC%9D%98-%EC%82%AC%EB%9E%91-%EC%98%81%ED%99%94-%EB%83%89%EC%A0%95%EA%B3%BC-%EC%97%B4%EC%A0%95%EC%82%AC%EC%9D%B4-%EC%82%AC%EB%9E%91%EC%9D%84-%EB%94%B0%EB%9D%BC",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518118/spotchu/spots/pecagbekaoriinvj45z2.jpg",
+      "imageCredit": {
+        "author": "PROPOLI87",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Porta_San_Niccol%C3%B2_-_Piazza_Poggi_-_Firenze.jpg"
+      }
+    },
+    {
+      "id": "florence-piazzale-michelangelo-calmi-cuori-b7e2",
+      "title": "미켈란젤로 광장 (냉정과 열정 사이 촬영지)",
+      "city": "florence",
+      "category": "drama",
+      "lat": 43.76278,
+      "lng": 11.26506,
+      "area": "Piazzale Michelangelo, Oltrarno, Florence",
+      "subject": "전망대 난간 너머로 두오모 쿠폴라를 포함한 피렌체 구시가 스카이라인",
+      "tip": "해 질 무렵 노을에 물든 두오모와 아르노강 스카이라인을 담기 좋은 피렌체 대표 전망대. 영화 홍보 스틸도 이곳에서 촬영됐다. 난간 근처는 관광객이 몰리니 이른 아침이나 늦은 오후를 노리자.",
+      "lens": "24-35mm",
+      "time": "일몰",
+      "workId": "calmi-cuori-appassionati",
+      "scene": "피렌체 시가지를 담은 파노라마 전경 및 영화 홍보 이미지 촬영지",
+      "verified": "reported",
+      "source": "https://happist.com/566876/%ED%94%BC%EB%A0%8C%EC%B2%B4%EC%9D%98-%EC%82%AC%EB%9E%91-%EC%98%81%ED%99%94-%EB%83%89%EC%A0%95%EA%B3%BC-%EC%97%B4%EC%A0%95%EC%82%AC%EC%9D%B4-%EC%82%AC%EB%9E%91%EC%9D%84-%EB%94%B0%EB%9D%BC",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518119/spotchu/spots/jbnsshdha3zgy7zjoit0.jpg",
+      "imageCredit": {
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Vista_de_Florencia_desde_Piazzale_Michelangelo,_Italia,_2022-09-18,_DD_212-214_HDR.jpg"
+      }
+    },
+    {
       "id": "florence-ponte-grazie-ponte-vecchio-8d14",
       "title": "폰테 알레 그라치에 서측 난간 폰테 베키오 & 바사리 회랑 뷰포인트",
       "city": "florence",
@@ -3559,6 +3605,52 @@
         "author": "M McBey",
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/158652122@N02/49678288033"
+      }
+    },
+    {
+      "id": "florence-santissima-annunziata-calmi-cuori-2e8f",
+      "title": "산티시마 안눈치아타 광장 (냉정과 열정 사이 촬영지)",
+      "city": "florence",
+      "category": "drama",
+      "lat": 43.77659,
+      "lng": 11.26032,
+      "area": "Piazza della Santissima Annunziata, San Marco, Florence",
+      "subject": "브루넬레스키 회랑(스페달레 델리 인노첸티)과 페르디난도 1세 기마상이 있는 좌우 대칭 광장 전경",
+      "tip": "광장 중앙 기마상 근처에서 양옆의 르네상스식 회랑을 대칭 구도로 담을 수 있다. 두오모 주변보다 한적해 인물 사진 찍기 좋다.",
+      "lens": "24-35mm",
+      "time": "오전",
+      "workId": "calmi-cuori-appassionati",
+      "scene": "서른 살 생일에 재회한 두 주인공이 서로의 진심을 숨긴 채 만나는 장면",
+      "verified": "reported",
+      "source": "https://triple.guide/articles/5a446104-fc4d-4dd4-b0c8-1bfb898cf3f0",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518121/spotchu/spots/h5bvh3x7irolidsygsjb.jpg",
+      "imageCredit": {
+        "author": "Gunnar Klack",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:2024-05-30-Piazza-Santissima-Annunziata-Florenz.jpg"
+      }
+    },
+    {
+      "id": "florence-uffizi-gallery-calmi-cuori-9c3d",
+      "title": "우피치 미술관 회랑 (냉정과 열정 사이 촬영지)",
+      "city": "florence",
+      "category": "drama",
+      "lat": 43.7686,
+      "lng": 11.2556,
+      "area": "Piazzale degli Uffizi, Florence",
+      "subject": "우피치 미술관 U자형 안뜰 회랑과 위인 조각상들이 늘어선 통로",
+      "tip": "우피치 광장(Piazzale degli Uffizi) 안뜰에서 시뇨리아 광장 방향으로 뻗은 회랑을 세로 구도로 담으면 극 중 유화 복원사로 일하던 주인공의 작업 무대 분위기가 살아난다.",
+      "lens": "35mm",
+      "time": "낮",
+      "workId": "calmi-cuori-appassionati",
+      "scene": "유화 복원가로 일하는 주인공 쥰세이의 일터로 등장",
+      "verified": "reported",
+      "source": "https://triple.guide/articles/5a446104-fc4d-4dd4-b0c8-1bfb898cf3f0",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518124/spotchu/spots/ncce5h6k2gudrkirmazj.jpg",
+      "imageCredit": {
+        "author": "Txllxt TxllxT",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Firenze_-_Florence_-_Il_cortile_degli_Uffizi_-_View_SSW_on_Piazzale_degli_Uffizi_I.jpg"
       }
     },
     {
@@ -6088,6 +6180,28 @@
       }
     },
     {
+      "id": "london-mediterraneo-notting-hill-ted-lasso-91ae",
+      "title": "메디테라네오 (테드 래소 '아테네의 맛' 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.5152,
+      "lng": -0.2058,
+      "area": "Kensington Park Road, Notting Hill, London",
+      "subject": "노팅힐의 이탈리안 레스토랑 메디테라네오 외관 — 극 중 네이트 가족의 단골 그리스 식당 'A Taste of Athens'로 등장",
+      "tip": "실제 영업 중인 레스토랑이므로 외관 사진은 짧게 찍고 손님 통행과 테라스석 이용을 방해하지 않도록 주의한다.",
+      "lens": "35-50mm",
+      "time": "낮",
+      "workId": "ted-lasso",
+      "scene": "네이트와 그의 가족이 즐겨 찾는 식당 'A Taste of Athens'로 등장, 시즌3에서 네이트가 이곳 웨이터로 일하는 장면",
+      "source": "https://londoninreallife.com/visiting-london/ted-lasso-film-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518126/spotchu/spots/k6rl3orgplhr9xocxwr4.jpg",
+      "imageCredit": {
+        "author": "Andrew Wilson",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mediterraneo_restaurant,_Kensington_Park_Road_-_geograph.org.uk_-_3255189.jpg"
+      }
+    },
+    {
       "id": "london-mi6-sis-vauxhall-cross-skyfall-a1f3",
       "title": "MI6 본부(SIS 빌딩) — 스카이폴 촬영지",
       "city": "london",
@@ -6409,6 +6523,50 @@
       }
     },
     {
+      "id": "london-richmond-bridge-ted-lasso-3d6c",
+      "title": "리치먼드 브리지 & 리버사이드 (테드 래소 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.4573,
+      "lng": -0.3073,
+      "area": "Richmond Bridge, Richmond upon Thames, London",
+      "subject": "템스강을 가로지르는 1777년 완공의 리치먼드 브리지와 강변 산책로 — 로이와 킬리의 첫 데이트, 파파라치에게 포착되는 장면의 배경",
+      "tip": "다리 위나 남쪽 강변 산책로(Cholmondeley Walk)에서 다리와 강을 함께 담을 수 있다. 일몰 무렵 강물에 다리가 반사되는 모습이 특히 좋다.",
+      "lens": "35-85mm",
+      "time": "일몰",
+      "workId": "ted-lasso",
+      "scene": "시즌1 8화, 로이와 킬리의 첫 데이트 및 파파라치에게 포착되는 리버사이드 장면",
+      "source": "https://candaceabroad.com/ted-lasso-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518130/spotchu/spots/cuvs66bnbxirwhfjorpa.jpg",
+      "imageCredit": {
+        "author": "Xander11012",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Richmond_Bridge,_London.jpg"
+      }
+    },
+    {
+      "id": "london-richmond-green-ted-lasso-b7e2",
+      "title": "리치먼드 그린 (테드 래소 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.4612,
+      "lng": -0.3051,
+      "area": "Richmond Green, Richmond upon Thames, London",
+      "subject": "리치먼드 그린의 넓은 잔디밭과 주변 산책로 — 극 중 테드의 동네 공원으로 시즌 내내 반복 등장",
+      "tip": "Paved Court·The Prince's Head 바로 건너편 공원이라 기존 스팟과 묶어 도보로 함께 돌아보기 좋다. 주말엔 동네 축구·크리켓 경기가 열려 극중 분위기를 그대로 느낄 수 있다.",
+      "lens": "35-50mm",
+      "time": "15:00-18:00",
+      "workId": "ted-lasso",
+      "scene": "시즌 1~3 전반에 걸쳐 테드의 산책, 로이의 유소년 축구 코칭 등 리치먼드 그린을 배경으로 한 다수의 장면",
+      "source": "https://www.visitrichmond.co.uk/explore/film-and-tv/ted-lasso",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518133/spotchu/spots/dfwycbjhyi92v4wjcj0x.jpg",
+      "imageCredit": {
+        "author": "Brit in Seoul",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Richmond_Green,_London_(2).jpg"
+      }
+    },
+    {
       "id": "london-rosmead-garden-notting-hill-4a7d",
       "title": "로즈미드 가든 (담장 넘기 장면)",
       "city": "london",
@@ -6482,6 +6640,28 @@
         "author": "Jim Osley",
         "license": "CC BY-SA 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:Royal_Opera_House,_Covent_Garden,_London_WC2_-_geograph.org.uk_-_4481270.jpg"
+      }
+    },
+    {
+      "id": "london-selhurst-park-ted-lasso-f4a9",
+      "title": "셀허스트 파크 (AFC 리치먼드 홈구장 '넬슨 로드' 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.398,
+      "lng": -0.0855,
+      "area": "Selhurst Park, Holmesdale Road, South Norwood, London",
+      "subject": "크리스탈 팰리스 FC의 홈구장 셀허스트 파크, 홈스데일 로드 스탠드 외관 — 극 중 AFC 리치먼드의 홈구장 '넬슨 로드'로 등장",
+      "tip": "경기 없는 날에도 홈스데일 로드 쪽 정문 외관 촬영이 가능하다. 실제 크리스탈 팰리스 경기 관람 일정과 겸해 방문하면 좋다.",
+      "lens": "24mm 광각",
+      "time": "낮",
+      "workId": "ted-lasso",
+      "scene": "AFC 리치먼드의 홈경기 장면 전반 — 극중 '넬슨 로드' 스타디움의 실제 촬영지, 홈스데일 로드 엔드 외관이 정문으로 사용됨",
+      "source": "https://www.goal.com/en-gb/lists/where-was-ted-lasso-filmed-locations-stadiums/bltb46b79bece2dee8e",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518136/spotchu/spots/n5475m7t78ii7ipwpfvm.jpg",
+      "imageCredit": {
+        "author": "Arne Müseler",
+        "license": "CC BY-SA 3.0 de",
+        "source": "https://commons.wikimedia.org/wiki/File:London_Selhurst_Park_crystal_palace_stadium_aerialview.JPG"
       }
     },
     {
@@ -6640,6 +6820,28 @@
         "author": "wikimedia",
         "license": "CC BY 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=36593833"
+      }
+    },
+    {
+      "id": "london-st-andrews-kingsbury-ted-lasso-c05f",
+      "title": "세인트 앤드류 교회 (테드 래소 장례식 장면 촬영지)",
+      "city": "london",
+      "category": "drama",
+      "lat": 51.568,
+      "lng": -0.2618,
+      "area": "Old Church Lane, Kingsbury, London",
+      "subject": "킹스베리에 있는 그레이드 I 등급의 고건축 세인트 앤드류 교회(Old St Andrew's Church) 외관 — 레베카 아버지의 장례식 장면 촬영지",
+      "tip": "리치먼드에서는 다소 떨어진 브렌트구 소재라 별도 일정으로 방문하는 게 효율적이다. 목조 골조 외관과 고요한 묘지 마당이 인상적이니 예배 시간을 피해 조용히 촬영한다.",
+      "lens": "35-50mm",
+      "time": "흐린 날 오후",
+      "workId": "ted-lasso",
+      "scene": "시즌2 10화 'No Weddings and a Funeral', 레베카 아버지의 장례식 장면",
+      "source": "https://www.sceen-it.com/sceen/5693/Ted-Lasso/St-Andrew-s-Church-Kingsbury",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518139/spotchu/spots/vexfhbpowbknnwb06zyh.jpg",
+      "imageCredit": {
+        "author": "John Slater",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:St_Andrew%27s_Church,_Kingsbury_-_geograph.org.uk_-_5428099.jpg"
       }
     },
     {
@@ -9813,6 +10015,28 @@
       }
     },
     {
+      "id": "paris-cafe-debussy-inception-7f2a",
+      "title": "카페 드뷔시 코너 (인셉션 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8473,
+      "lng": 2.3095,
+      "area": "파리 15구 그르넬 (Rue César Franck × Rue Bouchut)",
+      "subject": "영화 속 카페 '드뷔시'로 꾸며졌던 골목 모퉁이 — 촬영 당시 델리 'Da Stuzzi' 자리로, 현재는 이탈리안 레스토랑 '일 루소(Il Russo)'가 있다",
+      "tip": "오스만 양식 건물이 늘어선 조용한 주택가 골목이라 인적이 드문 평일 낮에 방문하기 좋다. 실제 상업 중인 레스토랑이므로 실내 촬영이나 영업 방해는 삼갈 것.",
+      "lens": "표준(35mm)",
+      "time": "낮",
+      "workId": "inception",
+      "scene": "아리아드네(엘리엇 페이지)가 카페 '드뷔시'에서 코브와 대화하다 자신이 꿈속에 있음을 깨닫고 주변 건물들을 무너뜨리는 장면",
+      "source": "https://www.sortiraparis.com/en/what-to-do-in-paris/cinema-series/articles/298991-on-the-trail-of-inception-in-which-parts-of-paris-nolan-s-film-was-shot",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518146/spotchu/spots/hq5jm6wguf6jevxnw6oc.jpg",
+      "imageCredit": {
+        "author": "Chabe01",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Rue_C%C3%A9sar_Franck_-_Paris_XV_(FR75)_-_2021-08-07_-_1.jpg"
+      }
+    },
+    {
       "id": "paris-champs-elysees-guignol-charade-a094",
       "title": "샹젤리제 정원 기뇰 인형극장 (샤레이드 촬영지)",
       "city": "paris",
@@ -10238,6 +10462,28 @@
       }
     },
     {
+      "id": "paris-palais-galliera-inception-b91d",
+      "title": "팔레 갈리에라 (인셉션 '건축 아카데미' 입구)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8655,
+      "lng": 2.2966,
+      "area": "파리 16구, Avenue Pierre 1er de Serbie",
+      "subject": "영화 속 가상의 건축 아카데미 정문으로 쓰인 팔레 갈리에라(파리 패션 박물관) 출입구",
+      "tip": "실제로는 파리 패션 박물관(Musée Galliera) 정문이며 외경만 촬영에 쓰였다. 실내 강의실 장면은 런던에서 별도 촬영돼 내부는 영화 속 모습과 다르니 참고할 것.",
+      "lens": "광각(24mm)",
+      "time": "낮",
+      "workId": "inception",
+      "scene": "코브가 마일스 교수를 만나러 건축 아카데미 정문으로 들어서는 장면",
+      "source": "https://www.movie-locations.com/movies/i/Inception.php",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518149/spotchu/spots/vrfwdhrzi7bgywb3v0or.jpg",
+      "imageCredit": {
+        "author": "Joe deSousa",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_Galliera,_Paris_21_July_2017.jpg"
+      }
+    },
+    {
       "id": "paris-palais-garnier-escalier-9c2f",
       "title": "팔레 가르니에(파리 오페라) 그랑 에스칼리에",
       "city": "paris",
@@ -10356,6 +10602,28 @@
       "workId": "the-bourne-identity",
       "scene": "경찰에 쫓기던 본이 미니쿠퍼를 몰고 벨빌의 좁은 계단길을 그대로 내려가는 추격 명장면",
       "source": "https://tokyofox.net/2012/02/17/paris-2012-pt-ii-the-bourne-identity-filming-locations/"
+    },
+    {
+      "id": "paris-passy-station-inception-3ec8",
+      "title": "파시역 고가교 (인셉션 '드림 트레이닝 시설' 촬영지)",
+      "city": "paris",
+      "category": "drama",
+      "lat": 48.8575,
+      "lng": 2.2858,
+      "area": "파리 16구 파시(Passy), 메트로 6호선 파시역 인근",
+      "subject": "고가 메트로 6호선 파시역 하부 구조물 — 영화 속 코브의 작업실 겸 '드림 트레이닝 시설' 출입구로 쓰인 철제 문과 은색 기둥",
+      "tip": "비르아켐 다리로 이어지는 6호선 고가철로 아래, 파시역 부근 철제 출입문이 실제 촬영 장소다. 기존에 등록된 비르아켐 다리 스팟과는 약 250m 떨어진 별개 지점이니 혼동하지 말 것.",
+      "lens": "표준",
+      "time": "낮",
+      "workId": "inception",
+      "scene": "아서(조셉 고든레빗)가 코브의 작업실 겸 드림 트레이닝 시설로 들어서는 장면",
+      "source": "https://untappedcities.com/2010/07/22/inception-where-they-filmed-in-paris/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518157/spotchu/spots/qby3xlmo9a7xvinoo0cb.jpg",
+      "imageCredit": {
+        "author": "billknock",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Viaduc_de_Passy,_Paris,_France_February_2015.jpg"
+      }
     },
     {
       "id": "paris-polidor-restaurant-midnight-in-paris-6f2a",
@@ -11404,6 +11672,29 @@
       }
     },
     {
+      "id": "rome-eur-palazzo-dei-congressi-la-dolce-vita-3e6f",
+      "title": "EUR 팔라초 데이 콩그레시 (달콤한 인생 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.8339,
+      "lng": 12.4744,
+      "area": "Palazzo dei Congressi, EUR, Rome",
+      "subject": "아달베르토 리베라가 설계한 라치오날리즘 건축 파사드 — 에마가 병원으로 실려가는 장면의 실제 외관",
+      "tip": "에마의 자살 시도 후 마르첼로가 그녀를 병원으로 데려가는 장면의 건물 외관이 EUR 지구의 이 팔라초 데이 콩그레시입니다(내부는 세트). 낮에는 기하학적 그림자가 뚜렷한 파시스트 시대 라치오날리즘 건축을 담기 좋아요.",
+      "lens": "표준~광각",
+      "time": "낮",
+      "workId": "la-dolce-vita",
+      "scene": "에마의 자살 시도 이후 마르첼로가 그녀를 병원으로 데려가는 장면 — 병원 외관 촬영지",
+      "verified": "reported",
+      "source": "https://www.italyformovies.com/film-serie-tv-games/detail/6710/la-dolce-vita",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518159/spotchu/spots/qpscik6acjy93vy1nnb0.jpg",
+      "imageCredit": {
+        "author": "Alberti1492",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Palazzo_dei_Congressi_a_EUR_Roma.jpg"
+      }
+    },
+    {
       "id": "rome-fontana-acqua-paola-great-beauty-7b2e",
       "title": "아쿠아 파올라 분수(일 폰타노네) (그레이트 뷰티 촬영지)",
       "city": "rome",
@@ -11544,6 +11835,29 @@
       }
     },
     {
+      "id": "rome-piazza-del-popolo-la-dolce-vita-4f9a",
+      "title": "포폴로 광장 넵튠 분수 (달콤한 인생 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.9105,
+      "lng": 12.4755,
+      "area": "Piazza del Popolo (west side), Rome",
+      "subject": "광장 서쪽(테베레 강 방향) 넵튠 분수와 광장 전경 — 마르첼로가 차로 등장하는 장면의 배경",
+      "tip": "1화에서 마르첼로가 마달레나와 카딜락을 몰고 지나가며 매춘부를 만나는 장면이 실제 이 광장에서 촬영됐습니다. 넵튠 분수는 광장 서쪽, 테베레 강 방향 반원 구역에 있어요.",
+      "lens": "35mm 표준",
+      "time": "늦은 오후",
+      "workId": "la-dolce-vita",
+      "scene": "1화 — 마르첼로가 마달레나와 카딜락을 타고 광장을 지나며 매춘부를 만나는 장면",
+      "verified": "reported",
+      "source": "https://www.bfi.org.uk/features/dolce-vita-federico-fellini-rome-locations",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518162/spotchu/spots/oek2jh8mlmhggnj4bzli.jpg",
+      "imageCredit": {
+        "author": "Jebulon",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fontana_del_Nettuno,_Piazza_del_Popolo,_Rome,_Italie.jpg"
+      }
+    },
+    {
       "id": "rome-piazza-del-popolo-obelisk-angels-demons-b291",
       "title": "포폴로 광장 오벨리스크 — 천사와 악마 흙의 제단",
       "city": "rome",
@@ -11601,6 +11915,52 @@
         "author": "This Photo was taken by Wolfgang Moroder. Feel free to use",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Piazza_Navona_Gange_fontana_dei_Fiumi_Roma.jpg"
+      }
+    },
+    {
+      "id": "rome-piazza-san-giovanni-bosco-la-dolce-vita-a05c",
+      "title": "산 조반니 보스코 대성당 광장 (달콤한 인생 속 슈타이너의 성당)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.8587,
+      "lng": 12.5654,
+      "area": "Piazza San Giovanni Bosco, Tuscolano, Rome",
+      "subject": "산 조반니 보스코 대성당 파사드와 광장 — 작가 슈타이너가 마르첼로를 초대하는 성당 장면의 실제 외관",
+      "tip": "작가 슈타이너가 마르첼로에게 오르간 연주를 들려주는 성당 장면에서 외관은 이 대성당에서, 내부(오르간 연주 장면)는 노멘타노 지구의 산티 마르티리 카나데시 성당에서 촬영했습니다 — 둘 다 세트가 아닌 실제 성당입니다. 거대한 돔과 넓은 광장을 함께 담아보세요.",
+      "lens": "표준",
+      "time": "낮",
+      "workId": "la-dolce-vita",
+      "scene": "작가 슈타이너가 마르첼로를 성당으로 초대해 바흐 '토카타와 푸가'를 오르간으로 연주하는 장면 — 외관 촬영지",
+      "verified": "reported",
+      "source": "https://www.italyformovies.it/film-serie-tv-games/detail/6710/la-dolce-vita",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518166/spotchu/spots/iprubmyhootjtzorbi3j.jpg",
+      "imageCredit": {
+        "author": "Justinawind",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Roma_-_Basilica_di_San_Giovanni_Bosco_-_2023-10-01_01-43-14_001.JPG"
+      }
+    },
+    {
+      "id": "rome-piazza-san-pietro-la-dolce-vita-c81d",
+      "title": "성 베드로 광장 (달콤한 인생 오프닝 항공 촬영지)",
+      "city": "rome",
+      "category": "drama",
+      "lat": 41.9022,
+      "lng": 12.4572,
+      "area": "Piazza San Pietro, Vatican City",
+      "subject": "성 베드로 대성당 돔(쿠폴라) 전경 — 오프닝 헬리콥터 시퀀스가 실제로 지나간 배경",
+      "tip": "오프닝에서 그리스도 석상을 실은 헬리콥터가 성 베드로 대성당 상공을 가로지르는 항공 장면은 실제 바티칸에서 촬영됐습니다. 단, 뒤이어 마르첼로가 돔 내부 계단을 오르며 실비아를 쫓는 장면은 치네치타 스튜디오에 그대로 재현한 세트라 실제 돔 내부와 다릅니다.",
+      "lens": "광각",
+      "time": "이른 아침(인파가 적을 때)",
+      "workId": "la-dolce-vita",
+      "scene": "오프닝 — 헬리콥터가 그리스도 석상을 옮기며 성 베드로 대성당 상공을 지나가는 장면(돔 내부 추격 장면은 치네치타 세트)",
+      "verified": "reported",
+      "source": "https://almostginger.com/la-dolce-vita-filming-locations-rome/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518168/spotchu/spots/bqoros4spzgnpivzj8xb.jpg",
+      "imageCredit": {
+        "author": "Diliff",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:St_Peter%27s_Square,_Vatican_City_-_April_2007.jpg"
       }
     },
     {
@@ -12340,6 +12700,28 @@
       "source": "https://filmoblivion.com/2024/01/17/past-lives-2023/"
     },
     {
+      "id": "seoul-cheongdam-bridge-avengers-age-of-ultron-4b1e",
+      "title": "청담대교 (어벤져스2 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5317,
+      "lng": 127.0667,
+      "area": "광진구 자양동, 뚝섬한강공원(청담대교 북단)",
+      "subject": "청담대교와 그 아래를 지나는 지하철 7호선 구간. 울트론의 트럭이 다리로 진입하는 대규모 추격 시퀀스가 촬영된 곳",
+      "tip": "청담대교는 서울 한강 다리 중 유일하게 보행자 통로가 없는 자동차전용도로라 다리 위 진입은 불가능하다. 북단 뚝섬한강공원(자양역 인근) 산책로에서 다리 전경을 안전하게 촬영할 것.",
+      "lens": "표준~망원(다리 실루엣)",
+      "time": "일몰 직후(교각 조명)",
+      "workId": "avengers-age-of-ultron",
+      "scene": "울트론의 트럭과 캡틴 아메리카·블랙 위도우의 추격전이 이어지는 청담대교 구간",
+      "source": "https://collider.com/avengers-2-south-korea-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518173/spotchu/spots/feq968q3vcdro40u74cq.jpg",
+      "imageCredit": {
+        "author": "Motoko C. K.",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Cheongdam_Bridge_20260416_1.jpg"
+      }
+    },
+    {
       "id": "seoul-d-lifestyle-kitchen-gwanghwamun-startup-c6a1",
       "title": "디라이프스타일키친 광화문점 (스타트업 촬영지)",
       "city": "seoul",
@@ -12509,6 +12891,28 @@
       "workId": "tune-in-for-love",
       "scene": "한국영상자료원(KMDB) 공식 로케이션 목록에 이 영화의 실제 촬영 협조 장소로 등재돼 있다. 구체적으로 어떤 장면이 촬영됐는지는 공개 자료에 별도로 명시돼 있지 않다.",
       "source": "https://www.kmdb.or.kr/db/kor/detail/movie/K/20960"
+    },
+    {
+      "id": "seoul-gangnam-daero-avengers-age-of-ultron-9d2c",
+      "title": "강남대로 강남역 사거리 (어벤져스2 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.4981,
+      "lng": 127.0275,
+      "area": "강남구 역삼동, 강남대로(강남역 사거리~교보타워사거리 방향)",
+      "subject": "강남대로 8차선 직선 도로. 캡틴 아메리카와 블랙 위도우가 오토바이로 울트론을 추격하며 강남 시내를 질주하는 장면의 배경",
+      "tip": "강남역 사거리 지상 인도(11번 출구 인근)에서 강남대로 직선 구도를 담을 수 있다. 왕복 교통량이 많은 대로이므로 반드시 인도에서 촬영.",
+      "lens": "표준",
+      "time": "낮 또는 야간(강남대로 조명)",
+      "workId": "avengers-age-of-ultron",
+      "scene": "블랙 위도우가 오토바이로 강남대로를 질주하며 CGV 골목으로 급회전하고 캡틴 아메리카가 뒤쫓는 추격 장면(2014년 4월 6일 강남역사거리→교보타워사거리 구간 전면 통제 후 촬영)",
+      "source": "https://www.koreaherald.com/article/3645904",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518174/spotchu/spots/gkrj6ret90uylolus4tt.jpg",
+      "imageCredit": {
+        "author": "Minseong Kim",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Gangnam_Station_Bus_Stop.jpg"
+      }
     },
     {
       "id": "seoul-geumhosan-stairs-past-lives-7d3e",
@@ -12785,6 +13189,50 @@
       }
     },
     {
+      "id": "seoul-mapo-bridge-avengers-age-of-ultron-7f3a",
+      "title": "마포대교 (어벤져스2 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5336,
+      "lng": 126.9364,
+      "area": "마포구 도화동~영등포구 여의도동, 마포대교",
+      "subject": "한강을 가로지르는 마포대교 상판. 캡틴 아메리카가 울트론의 트럭에 올라타 교전을 벌이는 대규모 추격 시퀀스의 배경",
+      "tip": "마포대교는 양쪽에 '생명의 다리' 보행자 인도가 있어 도보로 다리 위를 건너며 한강 조망과 함께 촬영할 수 있다. 차로 진입 금지, 인도에서만 촬영할 것.",
+      "lens": "표준~광각",
+      "time": "노을 또는 야간(한강 야경)",
+      "workId": "avengers-age-of-ultron",
+      "scene": "캡틴 아메리카가 트럭 위에 올라타 울트론과 교전하는 마포대교 추격 시퀀스(2014년 3월 30일 다리 전면 통제 후 촬영)",
+      "source": "https://www.koreaherald.com/article/3645904",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518177/spotchu/spots/p9na3t3iseffkzdcwqva.jpg",
+      "imageCredit": {
+        "author": "TurnOnTheNight",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Mapo_Bridge_20240501173359.jpg"
+      }
+    },
+    {
+      "id": "seoul-mullae-steel-street-avengers-age-of-ultron-a5c8",
+      "title": "문래동 철강거리 (어벤져스2 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5189,
+      "lng": 126.895,
+      "area": "영등포구 문래동, 문래역 7번 출구 인근 철강거리",
+      "subject": "낡은 철공소 간판이 늘어선 좁은 골목. 선로를 이탈한 지하철 차량이 도심 거리로 밀려드는 도시 파괴 시퀀스의 배경으로 사용됨",
+      "tip": "문래역 7번 출구로 나오면 바로 철강거리 골목이 이어진다. 실제 영업 중인 철공소가 많은 작업 공간이므로 조업을 방해하지 않는 선에서 촬영할 것.",
+      "lens": "표준~광각(골목)",
+      "time": "낮",
+      "workId": "avengers-age-of-ultron",
+      "scene": "선로를 이탈한 지하철 차량이 시내로 돌진하고 어벤져스가 시민을 구출하는 서울 시가지 파괴 시퀀스",
+      "source": "https://en.wikipedia.org/wiki/Mullae_station",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518181/spotchu/spots/hzcci1y5dxks3qocu6pg.jpg",
+      "imageCredit": {
+        "author": "Republic of Korea from Seoul, Republic of Korea",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:MullaeDong_20150204_11_(15865364604).jpg"
+      }
+    },
+    {
       "id": "seoul-myeongdong-cathedral-movie-1987-8f4c",
       "title": "명동성당 (박종철 고문치사 폭로 미사 현장)",
       "city": "seoul",
@@ -12996,6 +13444,22 @@
         "license": "CC BY 2.0",
         "source": "https://www.flickr.com/photos/126817823@N08/15128844806"
       }
+    },
+    {
+      "id": "seoul-sangam-dmc-avengers-age-of-ultron-3e6f",
+      "title": "상암 DMC 월드컵북로·누리꿈스퀘어 (어벤져스2 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.577,
+      "lng": 126.8898,
+      "area": "마포구 상암동, 월드컵북로(누리꿈스퀘어·MBC 신사옥 일대)",
+      "subject": "디지털미디어시티(DMC) 방송사 건물들 사이로 뻗은 월드컵북로. 블랙 위도우가 도로 위로 뛰어내려 캡틴 아메리카에게 방패를 건네주고, 퀸젯이 건물 사이로 진입하는 장면의 배경",
+      "tip": "누리꿈스퀘어 앞 월드컵북로 인도에서 도로와 주변 방송사 건물이 함께 보이는 구도로 촬영 가능. 지하철 6호선 디지털미디어시티역 2번 출구에서 도보 이동.",
+      "lens": "광각(도로+건물 구도)",
+      "time": "낮",
+      "workId": "avengers-age-of-ultron",
+      "scene": "블랙 위도우가 캡틴 아메리카에게 방패를 던져주는 장면, 퀸젯이 MBC 신사옥 사이 상공을 지나 서울로 진입하는 장면",
+      "source": "https://blog.hyosung.com/2225"
     },
     {
       "id": "seoul-sangbong-terminal-squid-game-d92f",
@@ -13903,6 +14367,28 @@
       }
     },
     {
+      "id": "taipei-huaxi-night-market-monga-e93f",
+      "title": "화서가 관광야시장 (몽가 촬영지)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.0385873,
+      "lng": 121.4985012,
+      "area": "Wanhua (Bangka), Taipei",
+      "subject": "화서가 야시장 입구의 붉은 전통 패루(牌樓) — 등롱과 간판이 늘어선 아케이드 골목을 정면으로 담는 구도",
+      "tip": "저녁에 상점이 문을 열면 붉은 조명과 간판이 화면을 채운다. 좁은 통로라 인파가 많으니 인물 없는 컷은 이른 오후를 노릴 것.",
+      "lens": "24mm",
+      "time": "해질녘~초저녁",
+      "workId": "monga",
+      "scene": "수백 명이 뒤엉키는 대규모 패싸움 장면이 광저우가 옆 골목에서 이 야시장 입구까지 이어지며 촬영됐고, 극중 '원숭이'가 오징어탕을 사 먹은 뒤 달아나는 추격 장면도 야시장 골목(모루샹)에서 찍었다.",
+      "source": "https://www.ctee.com.tw/news/20201013700238-431207",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518184/spotchu/spots/uord9rjwf7j9a4onbr7y.jpg",
+      "imageCredit": {
+        "author": "Yu tptw",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Huaxi_Street_Tourist_Night_Market_paifang_20220617.jpg"
+      }
+    },
+    {
       "id": "taipei-in-time-with-you-jiannan-mountain-4e92",
       "title": "드라마 '아가능불회애니' 지안난산 야경 전망대",
       "city": "taipei",
@@ -13964,6 +14450,60 @@
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/w/index.php?curid=82719219"
       }
+    },
+    {
+      "id": "taipei-qingcao-lane-monga-c81d",
+      "title": "청초항 약초골목 (몽가 촬영지)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.037038,
+      "lng": 121.500475,
+      "area": "Wanhua (Bangka), Taipei",
+      "subject": "약초·한약재 상점이 늘어선 좁은 골목 — 처마 아래 걸린 말린 약초 다발과 골목 끝 원근감을 살리는 세로 구도",
+      "tip": "폭이 매우 좁은 상점가라 영업 중인 가게 앞을 막지 않도록 주의. 오전에는 약초를 손질하는 상인들의 생활 풍경도 함께 담을 수 있다.",
+      "lens": "35mm",
+      "time": "오전~이른 오후",
+      "workId": "monga",
+      "scene": "등장인물 '백원숭이(白猴)'의 집이 청초항(서창가 224항) 안에 설정되어, 그와 외할아버지가 나오는 장면이 골목 안 한약방 '사지청초당(四知靑草堂)'에서 촬영됐다.",
+      "source": "https://drugs.pixnet.net/blog/post/30326857"
+    },
+    {
+      "id": "taipei-qingshan-temple-monga-f4a9",
+      "title": "청산궁 (몽가 촬영지)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.04,
+      "lng": 121.499444,
+      "area": "Wanhua (Bangka), Taipei",
+      "subject": "화려한 금박 기둥과 조각 장식이 돋보이는 청산궁 1층 정전 — 신단과 처마 장식을 함께 담는 실내 구도",
+      "tip": "영화 본편이 아니라 개봉 전 배포된 화려한 배경의 티저 예고편이 이곳에서 촬영됐다. 실제 운영 중인 사당이므로 참배객과 향 연기를 피해 이른 오전 방문을 추천.",
+      "lens": "16-35mm (실내 광각)",
+      "time": "오전 이른 시간",
+      "workId": "monga",
+      "scene": "영화 개봉 전 배포된 화려한 배경의 티저 예고편이 청산궁 정전 내부에서 촬영됐다. 화려한 장식 때문에 예고편 촬영지로 선택됐으나, 본편의 주요 '묘구' 장면은 마당이 넓은 인근 청수조사묘에서 촬영됐다.",
+      "source": "https://drugs.pixnet.net/blog/post/30367298",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788518186/spotchu/spots/ygkf0org7dvn5ru4v7zt.jpg",
+      "imageCredit": {
+        "author": "Felix Filnkoessl",
+        "license": "CC BY-SA 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:2017-06-29_Bangka_Qingshan_Temple,_Wanhua_District,_Taipei.jpg"
+      }
+    },
+    {
+      "id": "taipei-qingshui-temple-monga-b7e2",
+      "title": "청수조사묘 (몽가 촬영지)",
+      "city": "taipei",
+      "category": "drama",
+      "lat": 25.040278,
+      "lng": 121.502778,
+      "area": "Wanhua (Bangka), Taipei",
+      "subject": "영화 속 '묘구방(廟口幫)'의 근거지로 나온 조사묘 앞마당 — 정문 계단과 처마 지붕을 함께 담는 정면 구도",
+      "tip": "영화 포스터 배경이 바로 이 조사묘 정면이다. 실제 운영 중인 사찰이므로 참배객을 방해하지 않도록 정문 맞은편 인도에서 촬영하고 법요 시간은 피할 것.",
+      "lens": "24-35mm",
+      "time": "오전 (역광 피하기)",
+      "workId": "monga",
+      "scene": "주인공들의 거처와 결의 장면 등 '묘구방' 관련 장면 대부분이 실제로 이 조사묘 경내와 신상 앞에서 촬영됐다 (촬영지가 용산사라는 것은 흔한 오해이며, 위키백과에도 이를 바로잡는 설명이 있다).",
+      "source": "https://zh.wikipedia.org/zh-tw/%E8%89%8B%E8%88%BA_(%E9%9B%BB%E5%BD%B1)"
     },
     {
       "id": "taipei-sisinancun-lawn-101-c3d4",
@@ -17283,15 +17823,15 @@
       "progress": 0
     },
     {
-      "id": "sherlock",
-      "title": "셜록",
+      "id": "ted-lasso",
+      "title": "테드 래소",
       "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
     {
-      "id": "ted-lasso",
-      "title": "테드 래소",
+      "id": "sherlock",
+      "title": "셜록",
       "type": "드라마",
       "spotCount": 1,
       "progress": 0
@@ -17640,6 +18180,13 @@
       "progress": 0
     },
     {
+      "id": "inception",
+      "title": "인셉션",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "midnight-in-paris",
       "title": "미드나잇 인 파리",
       "type": "영화",
@@ -17649,13 +18196,6 @@
     {
       "id": "the-bourne-identity",
       "title": "본 아이덴티티",
-      "type": "영화",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "inception",
-      "title": "인셉션",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -17724,6 +18264,13 @@
       "progress": 0
     },
     {
+      "id": "la-dolce-vita",
+      "title": "달콤한 인생 (라 돌체 비타)",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "the-great-beauty",
       "title": "그레이트 뷰티",
       "type": "영화",
@@ -17733,13 +18280,6 @@
     {
       "id": "spectre",
       "title": "007 스펙터",
-      "type": "영화",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "la-dolce-vita",
-      "title": "달콤한 인생 (라 돌체 비타)",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
@@ -17969,6 +18509,13 @@
       "progress": 0
     },
     {
+      "id": "monga",
+      "title": "몽가",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "in-time-with-you",
       "title": "아가능불회애니 (연애의 조건)",
       "type": "드라마",
@@ -17979,13 +18526,6 @@
       "id": "light-the-night",
       "title": "화등초상",
       "type": "드라마",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "monga",
-      "title": "몽가 (Monga)",
-      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
