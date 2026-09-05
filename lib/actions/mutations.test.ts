@@ -180,3 +180,33 @@ describe("checkInAction", () => {
     });
   });
 });
+
+// 입력 검증(§5 신뢰경계). invalid_input은 db 조회 이전에 반환되므로 DB 없이 실행 가능
+// (vitest run -t "입력 검증"). getCurrentUser만 모킹 — 그 외 부작용 없음.
+describe("checkInAction 입력 검증", () => {
+  it("NaN·Infinity·범위밖·음수 좌표는 db 접근 전에 reason:invalid_input로 거부한다", async () => {
+    asUser("test-user-validation");
+    const bad = [
+      { lat: Number.NaN, lng: 126.9, accuracy: 10 },
+      { lat: 37.5, lng: 126.9, accuracy: Number.NaN },
+      { lat: 37.5, lng: 126.9, accuracy: Infinity },
+      { lat: 999, lng: 126.9, accuracy: 10 }, // 위도 범위밖
+      { lat: 37.5, lng: 200, accuracy: 10 }, // 경도 범위밖
+      { lat: 37.5, lng: 126.9, accuracy: -5 }, // 음수 정확도
+    ];
+    for (const coord of bad) {
+      const res = await checkInAction("any-spot-id", coord as never);
+      expect(res).toMatchObject({ ok: false, reason: "invalid_input" });
+    }
+  });
+
+  it("빈/공백 spotId도 reason:invalid_input로 거부한다", async () => {
+    asUser("test-user-validation");
+    const res = await checkInAction("   ", {
+      lat: 37.5,
+      lng: 126.9,
+      accuracy: 10,
+    });
+    expect(res).toMatchObject({ ok: false, reason: "invalid_input" });
+  });
+});

@@ -20,6 +20,14 @@ const CLOUD =
   process.env.CLOUDINARY_CLOUD_NAME ??
   "";
 
+// 체크인 입력(외부 GPS) — §5 신뢰경계 zod 검증. lat/lng/accuracy는 유한수·유효범위만 허용
+// (NaN·Infinity·범위밖 좌표 차단). accuracy 상한(≤50)은 아래 별도 게이트에서 "accuracy" 사유로 처리.
+const CheckInInput = z.object({
+  lat: z.number().finite().gte(-90).lte(90),
+  lng: z.number().finite().gte(-180).lte(180),
+  accuracy: z.number().finite().nonnegative(),
+});
+
 // F · GPS 방문 인증 (반경 100m + accuracy ≤ 50m, unique 1회 + 쿨다운 24h, 결과만 저장)
 export async function checkInAction(
   spotId: string,
@@ -29,24 +37,28 @@ export async function checkInAction(
 > {
   const user = await getCurrentUser();
   if (!user?.id) return { ok: false, reason: "unauthenticated" };
+  const parsed = CheckInInput.safeParse(coord);
+  if (!parsed.success || typeof spotId !== "string" || spotId.trim() === "")
+    return { ok: false, reason: "invalid_input" };
+  const c = parsed.data; // 검증된 좌표 — 이하 coord 대신 사용
   const spot = await db.spot.findUnique({ where: { id: spotId } });
   if (!spot) return { ok: false, reason: "not_found" };
   // 안전차단(고위험) 스팟은 인증 불가 — 단건 조회는 blocked를 거르지 않으므로 여기서 방어(CLAUDE §6).
   if (spot.isBlockedHighRisk) return { ok: false, reason: "blocked" };
 
-  if (coord.accuracy > 50)
+  if (c.accuracy > 50)
     return {
       ok: false,
       reason: "accuracy",
-      accuracyM: Math.round(coord.accuracy),
+      accuracyM: Math.round(c.accuracy),
     };
 
-  const userPos = { lat: coord.lat, lng: coord.lng };
+  const userPos = { lat: c.lat, lng: c.lng };
   const target = { lat: spot.shooterLat, lng: spot.shooterLng };
   if (
     !canCheckIn(userPos, target, {
       radiusM: spot.checkinRadiusM,
-      accuracyM: coord.accuracy,
+      accuracyM: c.accuracy,
     })
   )
     return {
@@ -67,14 +79,14 @@ export async function checkInAction(
     // createdAt은 "최초"가 아니라 "마지막 인증" 시각으로 재정의된다(재인증 쿨다운=앱 규칙, schema 주석).
     await db.checkIn.update({
       where: { id: existing.id },
-      data: { deviceAccuracyM: coord.accuracy, createdAt: new Date() },
+      data: { deviceAccuracyM: c.accuracy, createdAt: new Date() },
     });
     return { ok: true, first: false };
   }
 
   // 최초 인증 — 결과만 저장(원시 좌표 미보관). skipDuplicates로 동시 요청 경합(연타·멀티탭) 방어(§38).
   const created = await db.checkIn.createMany({
-    data: [{ userId: user.id, spotId, deviceAccuracyM: coord.accuracy }],
+    data: [{ userId: user.id, spotId, deviceAccuracyM: c.accuracy }],
     skipDuplicates: true,
   });
   // 경합에서 밀림(이미 다른 요청이 생성) — 집계는 그 요청이 담당하므로 여기선 성공만 반환.
