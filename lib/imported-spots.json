@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T00:04:15.285Z",
+  "generatedAt": "2026-09-05T00:29:45.324Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -3564,6 +3564,29 @@
       }
     },
     {
+      "id": "danang-airport-the-protege-b3e8",
+      "title": "다낭 국제공항 (영화 프로티제 촬영지)",
+      "city": "danang",
+      "category": "drama",
+      "lat": 16.0439,
+      "lng": 108.1994,
+      "area": "Hòa Cường, Đà Nẵng — 다낭 국제공항 국제선 터미널 진입로",
+      "subject": "다낭 국제공항 국제선 터미널 외경과 택시 승하차장",
+      "tip": "안나(매기 큐)가 다낭에 도착해 택시를 잡는 장면의 배경으로 다낭시 공식 관광 포털이 지목한 곳. 국제선 터미널 앞 공개 승하차 구역에서만 촬영하고 활주로·계류장 등 통제구역엔 절대 접근하지 않는다.",
+      "lens": "24mm 광각(터미널 외경) 또는 35mm(승하차장 스냅)",
+      "time": "주간, 항공기 이착륙이 보이는 오후",
+      "workId": "the-protege",
+      "scene": "안나가 다낭 공항에 도착해 택시를 잡는 장면",
+      "verified": "official",
+      "source": "https://danangfantasticity.com/en/danang-asian-film-festival-2025/da-nang-a-premier-filming-destination-with-unique-landscapes",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788568173/spotchu/spots/hwixmbzyfytssykblukw.jpg",
+      "imageCredit": {
+        "author": "Chainwit.",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:2024_Da_Nang_International_Airport_(DAD)_-_international_terminal_-_img_06.jpg"
+      }
+    },
+    {
       "id": "danang-dragon-bridge-love-pier-03",
       "title": "용다리와 사랑의 부두 불쇼 야경 뷰포인트",
       "city": "danang",
@@ -4901,6 +4924,20 @@
       "source": "https://www.netflix.com/tudum/articles/a-tourist-guide-to-love-filming-locations-vietnam"
     },
     {
+      "id": "hongkong-ap-lei-chau-lee-lok-street-moonlight-ptu-b7d1",
+      "title": "압레이차우 리록가·리남도 공업지구 (PTU 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.23751,
+      "lng": 114.15345,
+      "area": "Ap Lei Chau, Lee Lok Street / Lee Nam Road industrial area",
+      "subject": "리남도(利南道)·리록가(利樂街) 일대 공업용 건물이 늘어선 거리",
+      "tip": "극중 배경은 침사추이 광둥도로 설정됐지만 실제로는 이곳 압레이차우 공업지구에서 촬영됐다. 평일 낮에는 화물차 통행이 많아 인도에서만 촬영할 것.",
+      "workId": "moonlight-express-ptu",
+      "scene": "PTU(2003) 최종 총격전 장면 — 극중에서는 침사추이로 설정됐지만 실제 촬영지는 이곳이다.",
+      "source": "https://film-pilgrimage.com/2017/04/12/ptu/"
+    },
+    {
       "id": "hongkong-california-restaurant-daguilar-8f4b",
       "title": "중경삼림 캘리포니아 레스토랑 옛터",
       "city": "hongkong",
@@ -5093,6 +5130,26 @@
         "author": "Wishds",
         "license": "CC BY-SA 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Duddell_Street,Hong_Kong.jpg"
+      }
+    },
+    {
+      "id": "hongkong-fong-wing-kee-restaurant-moonlight-ptu-9f2a",
+      "title": "방영기 사테소고기전문점 (PTU 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.3276,
+      "lng": 114.1887,
+      "area": "Kowloon City, 85-87 Hau Wong Road",
+      "subject": "60년 전통 샤브샤브(훠궈) 노포 방영기(方榮記)의 외관",
+      "tip": "형사와 갱단 두목이 마주치는 장면이 촬영된 실제 영업 중인 식당이다. 맞은편 보도에서 간판이 보이도록 낮 시간대에 촬영하면 좋다.",
+      "workId": "moonlight-express-ptu",
+      "scene": "PTU(2003) — 형사와 갱단 두목이 이 샤브샤브 식당에서 마주치고, 이 만남 직후 두목이 흉기에 찔리는 장면이 촬영됐다.",
+      "source": "https://zh.wikipedia.org/wiki/PTU_(%E9%9B%BB%E5%BD%B1)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788568176/spotchu/spots/inijmaivvib5airci7tj.jpg",
+      "imageCredit": {
+        "author": "Lord Jaraxxus",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%E4%B9%9D%E9%BE%8D%E5%9F%8E_Kowloon_City_%E4%BE%AF%E7%8E%8B%E9%81%93_2A_Hau_Wong_Road_%E5%88%A9%E6%88%90%E9%8C%B6%E8%A1%8C_Lee_Shing_Watch_%E6%A8%93%E6%A2%AF%E8%88%96,_2019.jpg"
       }
     },
     {
@@ -5482,6 +5539,26 @@
       }
     },
     {
+      "id": "hongkong-tom-lee-music-cameron-lane-moonlight-ptu-6c4e",
+      "title": "통리금행 캐머런레인점 (PTU 촬영지)",
+      "city": "hongkong",
+      "category": "drama",
+      "lat": 22.2977,
+      "lng": 114.1722,
+      "area": "Tsim Sha Tsui, 1-9 Cameron Lane",
+      "subject": "홍콩 최대 규모 악기 전문점 통리금행(通利琴行) 건물 외관",
+      "tip": "침사추이역 B2 출구에서 도보 1분 거리. 기동순찰대원들의 갈등 장면이 촬영된 건물로, 지금도 같은 자리에서 영업 중이다.",
+      "workId": "moonlight-express-ptu",
+      "scene": "PTU(2003) — 기동순찰대원들이 동료를 지킬지 원칙을 따를지 갈등하는 장면이 이 악기점 앞에서 촬영됐다.",
+      "source": "https://film-pilgrimage.com/2017/04/12/ptu/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788568179/spotchu/spots/mvfdciv2ghlsrsqnubh6.jpg",
+      "imageCredit": {
+        "author": "TOANGM TOEMWM",
+        "license": "CC0",
+        "source": "https://commons.wikimedia.org/wiki/File:HK_TST_Tsim_Sha_Tsui_%E9%87%91%E9%A6%AC%E5%80%AB%E9%81%93_Cameron_Road_October_2025_N13P_109.jpg"
+      }
+    },
+    {
       "id": "hongkong-tsuen-wan-cemetery-ghost-shell-6e2a",
       "title": "췬완 화인영원공동묘지 (공각기동대 실사 촬영지)",
       "city": "hongkong",
@@ -5494,6 +5571,26 @@
       "workId": "ghost-in-the-shell-2017",
       "scene": "영화 후반부, 등장인물이 무덤을 찾아가는 장면 — 실제 공동묘지에서 거의 그대로 촬영",
       "source": "https://www.atlasofwonders.com/2017/03/ghost-in-shell-filming-locations.html"
+    },
+    {
+      "id": "incheon-art-platform-beauty-inside-d47b",
+      "title": "인천아트플랫폼 (뷰티 인사이드 촬영지)",
+      "city": "incheon",
+      "category": "drama",
+      "lat": 37.47312,
+      "lng": 126.61933,
+      "area": "중구 해안동, 인천아트플랫폼",
+      "subject": "개항기 창고·공장 건물을 리모델링한 복합문화공간 — 극중 가구점 외관으로 등장",
+      "tip": "노란 철문과 붉은 벽돌 외벽이 남아있는 안뜰 파사드를 정면에서 담는다. 실제 운영 중인 전시·공연 공간이므로 관람객 동선을 막지 말고 외관 위주로 짧게 촬영할 것.",
+      "workId": "the-beauty-inside-2015",
+      "scene": "홍이수(한효주)가 근무하는 가구점의 외관으로 등장한 개항기 근대건축물 외벽",
+      "source": "https://www.incheon.go.kr/goodmorning/GOOD020102/view?nttNo=1924908",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788568181/spotchu/spots/jkqxqcjtsicimfabalbe.jpg",
+      "imageCredit": {
+        "author": "이강철",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:%EC%9D%B8%EC%B2%9C%EC%95%84%ED%8A%B8%ED%94%8C%EB%9E%AB%ED%8F%BC_%EB%82%A8%EB%8F%99%EC%9E%85%EA%B5%AC_Incheon_Art_Platform,_SE_Entrance_20191124.jpg"
+      }
     },
     {
       "id": "incheon-beauty-inside-studio-valor-e81a",
@@ -15154,6 +15251,26 @@
       "source": "https://xn--rck8fl98i.com/?p=22052"
     },
     {
+      "id": "sapporo-sosei-square-htb-suiyo-dodesho-7c2e",
+      "title": "삿포로 창세 스퀘어 HTB 신사옥 (수요일 어떠신가요 촬영지)",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.063147,
+      "lng": 141.355494,
+      "area": "Kita 1 Jo Nishi 1-chome, Chuo-ku, Sapporo",
+      "subject": "HTB(홋카이도테레비) 신사옥이 입주한 삿포로 창세 스퀘어",
+      "tip": "건물 1층 공용 로비에 '수요일 어떠신가요' 상설 전시 코너와 캐릭터 포토존이 있다. 오도리역(도자이/난보쿠/도호선)과 바로 연결돼 접근이 쉽다.",
+      "workId": "suiyo-dodesho",
+      "scene": "2018년 개국 50주년을 맞아 히라기시 구사옥에서 이전한 HTB 신사옥. 1층에 프로그램 상설 전시·굿즈숍 운영",
+      "source": "https://dodesyo.com/htbhq-souseisqare/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788568183/spotchu/spots/i3eormkmvftkno4e6dgu.jpg",
+      "imageCredit": {
+        "author": "KTERRA1010",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:HTB%E6%96%B0%E7%A4%BE%E5%B1%8B%E3%83%BBon%E3%81%A1%E3%82%83%E3%82%93.jpg"
+      }
+    },
+    {
       "id": "sapporo-susukino-cocono-terrace-nikka-e54b",
       "title": "코코노 스스키노 2층 코코노 테라스 (스스키노 교차로 닛카 간판 & 노면전차 뷰포인트)",
       "city": "sapporo",
@@ -15215,6 +15332,26 @@
         "author": "Mugu-shisai",
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Tanukikoji_01.jpg"
+      }
+    },
+    {
+      "id": "sapporo-tokeidai-suiyo-dodesho-4b91",
+      "title": "삿포로 시계탑 (수요일 어떠신가요 촬영지)",
+      "city": "sapporo",
+      "category": "drama",
+      "lat": 43.062602,
+      "lng": 141.353681,
+      "area": "Kita 1 Jo Nishi 2-chome, Chuo-ku, Sapporo",
+      "subject": "삿포로 시계탑(구 삿포로농학교 연무장)",
+      "tip": "시계탑 정면(남쪽) 광장에서 촬영. 매일 지나치는 삿포로 랜드마크가 '일본전국 그림엽서 여행2' 편에서 스즈이가 직접 뽑은 목적지 엽서로 등장해 팀이 허탈해했던 장면의 무대다.",
+      "workId": "suiyo-dodesho",
+      "scene": "일본전국 그림엽서 여행2 — 스즈이 다카유키가 삿포로 시계탑 엽서를 뽑아 그날 삿포로로 귀환한 회차",
+      "source": "https://hdylw-note.com/blog-entry-361.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788568186/spotchu/spots/npzgjgpu9zvx46mhylr4.jpg",
+      "imageCredit": {
+        "author": "Unknown",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Sapporo_Clock_Tower_Hokkaido_Japan_2.jpg"
       }
     },
     {
@@ -21617,6 +21754,13 @@
       "progress": 0
     },
     {
+      "id": "moonlight-express-ptu",
+      "title": "Moonlight Express & PTU",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "chungking-express",
       "title": "중경삼림",
       "type": "영화",
@@ -21675,13 +21819,6 @@
     {
       "id": "fallen-angels",
       "title": "타락천사",
-      "type": "영화",
-      "spotCount": 1,
-      "progress": 0
-    },
-    {
-      "id": "moonlight-express-ptu",
-      "title": "Moonlight Express & PTU",
       "type": "영화",
       "spotCount": 1,
       "progress": 0
