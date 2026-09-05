@@ -220,16 +220,29 @@ export default async function SpotDetailScreen({
             </Link>
           )}
 
-          {/* Angle guide */}
-          <section>
-            <h2 className="mb-2 flex items-center gap-1.5 text-[14px] font-extrabold tracking-[-0.02em] text-navy">
-              <span className="h-1.5 w-1.5 rounded-full bg-coral" /> 각도 가이드
-            </h2>
-            <p className="text-[12px] leading-[1.65] text-[color:var(--muted)]">
-              카메라를 <b className="text-navy">{s.angle}</b> 방향으로 살짝 낮게
-              세팅하세요. {s.lens} 렌즈가 이상적입니다. {s.tip}
-            </p>
-          </section>
+          {/* Angle guide — angle/lens 값 있는 절만 렌더(없으면 문장 깨짐·빈 섹션 방지).
+              tip은 아래 '츄의 팁'과 중복이라 여기선 제외. */}
+          {(s.angle || s.lens) && (
+            <section>
+              <h2 className="mb-2 flex items-center gap-1.5 text-[14px] font-extrabold tracking-[-0.02em] text-navy">
+                <span className="h-1.5 w-1.5 rounded-full bg-coral" /> 각도
+                가이드
+              </h2>
+              <p className="text-[12px] leading-[1.65] text-[color:var(--muted)]">
+                {s.angle && (
+                  <>
+                    카메라를 <b className="text-navy">{s.angle}</b> 방향으로
+                    살짝 낮게 세팅하세요.{" "}
+                  </>
+                )}
+                {s.lens && (
+                  <>
+                    <b className="text-navy">{s.lens}</b> 렌즈가 이상적입니다.
+                  </>
+                )}
+              </p>
+            </section>
+          )}
 
           {/* Compare slider (D2) */}
           <section>
@@ -273,12 +286,16 @@ export default async function SpotDetailScreen({
                 ["카메라 방향", s.angle],
                 ["추천 렌즈", s.lens],
                 ["추천 시간", recTime],
-              ].map(([k, v]) => (
-                <div key={k} className="contents">
-                  <dt className="font-medium text-[color:var(--muted)]">{k}</dt>
-                  <dd className="font-bold text-navy">{v}</dd>
-                </div>
-              ))}
+              ]
+                .filter(([, v]) => v)
+                .map(([k, v]) => (
+                  <div key={k} className="contents">
+                    <dt className="font-medium text-[color:var(--muted)]">
+                      {k}
+                    </dt>
+                    <dd className="font-bold text-navy">{v}</dd>
+                  </div>
+                ))}
             </dl>
           </div>
 
