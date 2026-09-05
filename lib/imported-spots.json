@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T22:35:29.674Z",
+  "generatedAt": "2026-09-05T00:04:15.285Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -2510,6 +2510,40 @@
       "source": "https://www.busan.go.kr/news/storyreport/view?dataNo=65120&gugun=Next"
     },
     {
+      "id": "busan-chowon-apartment-decision-to-leave-b21e",
+      "title": "초원아파트 (헤어질 결심 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1191,
+      "lng": 129.0417,
+      "area": "동구 초량동",
+      "subject": "초량동 산동네 계단과 옥상 — 해준이 용의자를 쫓는 추격·체포 장면 배경",
+      "tip": "부산역 1번 출구에서 도보 약 10분. 가파른 계단 골목이라 오후 시간대가 그림자 없이 담기 좋다. 실제 주민 거주지이니 큰 소리나 장시간 촬영은 피할 것.",
+      "workId": "decision-to-leave",
+      "scene": "경찰서에서부터 해준을 따라온 서래, PC방과 옥상 체포 장면",
+      "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000302002001000&uc_seq=1414&lang_cd=en"
+    },
+    {
+      "id": "busan-dadaepo-beach-broker-b09a",
+      "title": "다대포해수욕장 (브로커 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.0482,
+      "lng": 128.9656,
+      "area": "사하구 다대동",
+      "subject": "노을과 백사장이 어우러진 해변 전경(극중 아이유의 SNS 사진 배경)",
+      "tip": "다대포꿈의낙조분수 광장 쪽에서 해 질 무렵 서면 극중 사진과 비슷한 구도가 나온다. 다대포해수욕장역에서 도보 약 10분.",
+      "workId": "broker",
+      "scene": "이지은(아이유)이 SNS에 올린 사진 속 해변 장면",
+      "source": "https://english.visitkorea.or.kr/svc/whereToGo/hdrdslt/hdrdsltView.do?crsSn=393082",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788566636/spotchu/spots/l19ypfbrm6gm8twj94sv.jpg",
+      "imageCredit": {
+        "author": "Ken Eckert",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Dadaepo_Beach,_Busan,_Korea.jpg"
+      }
+    },
+    {
       "id": "busan-dadaepo-beach-hungnam-b6e2",
       "title": "다대포해수욕장",
       "city": "busan",
@@ -2545,6 +2579,34 @@
       "scene": "동수가 조직 간 갈등을 피해 옛 어항을 찾는 장면의 배경으로 촬영",
       "verified": "reported",
       "source": "https://ko.wikipedia.org/wiki/%EB%8C%80%EB%B3%80%ED%95%AD"
+    },
+    {
+      "id": "busan-daedong-hwamyeong-bridge-decision-to-leave-a17c",
+      "title": "대동화명대교 (헤어질 결심 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.2205,
+      "lng": 129.009,
+      "area": "북구 화명동",
+      "subject": "대동화명대교 보행·자전거 전용로 — 문자 대화 장면의 배경 다리",
+      "tip": "차도와 분리된 보행·자전거 전용로가 있어 안전하게 걸으며 낙동강과 다리 전경을 함께 담을 수 있다. 노을 무렵 다리 실루엣이 특히 좋다.",
+      "workId": "decision-to-leave",
+      "scene": "두 번째 남편 임호신의 협박 문자 대화 장면 (오타 대 맞춤법)",
+      "source": "https://extmovie.com/movietalk/82061390"
+    },
+    {
+      "id": "busan-daedong-songdo-mansion-decision-to-leave-7f3a",
+      "title": "대동송도맨션 (헤어질 결심 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.0783,
+      "lng": 129.0158,
+      "area": "서구 남부민동",
+      "subject": "'서래의 집'으로 나온 대동송도맨션 2동 외관 — 잠복·귀가 장면의 배경 건물",
+      "tip": "극 중 사망자 기도수의 신분증에 적힌 주소가 실제 이 건물 주소와 거의 일치한다. 맞은편 도로에서 건물 저층부와 계단을 함께 담으면 극 중 구도에 가깝다. 실거주 건물이라 촬영은 짧게, 정중하게.",
+      "workId": "decision-to-leave",
+      "scene": "서래(탕웨이)의 아파트 잠복·귀가 장면 ('굿모닝', 식후 담배 등)",
+      "source": "https://dvdprime.com/g2/bbs/board.php?bo_table=comm&wr_id=23788273"
     },
     {
       "id": "busan-gamcheon-148-stairs-a2e9",
@@ -2773,6 +2835,34 @@
       }
     },
     {
+      "id": "busan-jeonpo-cafe-street-broker-6d31",
+      "title": "전포카페거리 (브로커 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1595,
+      "lng": 129.0623,
+      "area": "부산진구 전포동",
+      "subject": "공구거리에서 개성 있는 카페거리로 바뀐 골목 전경",
+      "tip": "전포역 3번 출구에서 도보 3분. 평일 오전에는 한산해 골목 전체를 세로 구도로 담기 좋다.",
+      "workId": "broker",
+      "scene": "전포삼거리 인근, 극중 배경으로 등장한 개성 있는 카페 골목",
+      "source": "https://english.visitkorea.or.kr/svc/whereToGo/hdrdslt/hdrdsltView.do?crsSn=393082"
+    },
+    {
+      "id": "busan-jeonpo-samgeori-broker-f28e",
+      "title": "전포삼거리 (브로커 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1548,
+      "lng": 129.0668,
+      "area": "부산진구 전포동",
+      "subject": "빛바랜 벽화와 공중전화 부스가 있는 버스정류장 골목",
+      "tip": "실제 주민들이 오가는 생활 골목이니 통행을 방해하지 않게 짧게 촬영하자. 벽화를 배경 삼아 정류장 쪽에서 서면 영화 속 구도와 비슷하다.",
+      "workId": "broker",
+      "scene": "이지은(아이유)이 버스정류장 옆 공중전화로 향하는 장면",
+      "source": "https://english.visitkorea.or.kr/svc/whereToGo/hdrdslt/hdrdsltView.do?crsSn=393082"
+    },
+    {
       "id": "busan-jungang-cathedral-the-attorney-7b1e",
       "title": "중앙성당 (변호인 촬영지)",
       "city": "busan",
@@ -2852,6 +2942,20 @@
       }
     },
     {
+      "id": "busan-nambusan-church-broker-a1c4",
+      "title": "남부산교회 (브로커 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.148,
+      "lng": 129.0745,
+      "area": "부산진구 전포동",
+      "subject": "베이비박스가 설치된 교회 외경(극중 '부산가족교회')",
+      "tip": "실제 예배가 열리는 교회이니 예배 시간은 피하고 외관만 조용히 촬영하자. 산복도로 언덕길이라 오르막·좁은 골목 통행에 주의.",
+      "workId": "broker",
+      "scene": "베이비박스가 설치된 교회 장면(극중 명칭 '부산가족교회')",
+      "source": "https://english.visitkorea.or.kr/svc/whereToGo/hdrdslt/hdrdsltView.do?crsSn=393082"
+    },
+    {
       "id": "busan-namilvilla-hansung-stairs-6d3f",
       "title": "한성주택(남일빌라) 계단 골목",
       "city": "busan",
@@ -2869,6 +2973,20 @@
       "source": "https://www.busan.com/view/busan/view.php?code=20170619000418"
     },
     {
+      "id": "busan-park-hyatt-decision-to-leave-c94d",
+      "title": "파크 하얏트 부산 (헤어질 결심 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1586,
+      "lng": 129.1436,
+      "area": "해운대구 우동 (마린시티)",
+      "subject": "파크 하얏트 부산 외관 — 디플로매트 스위트에서의 호텔 장면 배경 건물",
+      "tip": "마린시티 해안 산책로 쪽에서 호텔 전면 유리 외관이 한눈에 들어온다. 노을 무렵 객실 조명이 켜지면 극 중 실내 장면과 비슷한 분위기를 담을 수 있다.",
+      "workId": "decision-to-leave",
+      "scene": "디플로매트 스위트 — 서래를 다그치는 장면, 가발과 포크 장면",
+      "source": "https://extmovie.com/movietalk/82061390"
+    },
+    {
       "id": "busan-sasang-police-the-attorney-c62f",
       "title": "사상경찰서 (변호인 촬영지)",
       "city": "busan",
@@ -2883,6 +3001,20 @@
       "workId": "the-attorney",
       "scene": "국가보안법 위반 사건 관련 유치장·형사계 사무실 장면 — 실제 사상경찰서에서 6일간 협조 촬영(유치장 내부는 초상권 문제로 외부 출입 장면 위주로 촬영)",
       "source": "http://filmbusan.kr/kor/addon/00000001/program_view.asp?m_idx=107226&c_idx=4&QueryType=B&QueryStep=2"
+    },
+    {
+      "id": "busan-sushi-nan-decision-to-leave-e05f",
+      "title": "스시난 (헤어질 결심 촬영지)",
+      "city": "busan",
+      "category": "drama",
+      "lat": 35.1575,
+      "lng": 129.1467,
+      "area": "해운대구 우동 (마린시티)",
+      "subject": "스시 오마카세 전문점 '스시난' 오픈키친과 초밥 도시락 — 극 중 실제 사용된 초밥 소품 제작처",
+      "tip": "실제 영업 중인 예약제 식당이다. 방문 전 예약이 필수이며, 카운터 자리에서 오픈키친과 함께 담으면 영화 속 장면과 비슷한 구도가 나온다.",
+      "workId": "decision-to-leave",
+      "scene": "극 중 등장하는 초밥 도시락 장면 (스시난이 실제 소품을 제작)",
+      "source": "https://www.diningcode.com/profile.php?rid=cvKUYlqAQgEX"
     },
     {
       "id": "busan-suyeongman-yacht-park-the-king-eternal-monarch-e942",
@@ -15108,6 +15240,20 @@
       }
     },
     {
+      "id": "seoul-air-force-hall-reply-1988-e0a4",
+      "title": "공군회관 (응답하라 1988 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5102,
+      "lng": 126.9236,
+      "area": "신길동, 영등포구",
+      "subject": "극중 '대검찰청 예식장'으로 등장한 공군회관(현 공군호텔) 웨딩홀 외관과 예식장 입구.",
+      "tip": "1호선 대방역 5번 출구에서 도보 5~10분. 실제 운영 중인 예식장이라 주말·예식 시간대에는 하객 출입이 우선돼 촬영이 제한될 수 있다.",
+      "workId": "reply-1988",
+      "scene": "최종화(20화) 성보라·성선우 결혼식 장면",
+      "source": "https://www.ajunews.com/view/20160112140653209"
+    },
+    {
       "id": "seoul-avengers-some-sevit-banpo-e5f6",
       "title": "어벤져스: 에이지 오브 울트론 세빛섬 야경",
       "city": "seoul",
@@ -15213,6 +15359,43 @@
       "source": "https://filmoblivion.com/2024/01/17/past-lives-2023/"
     },
     {
+      "id": "seoul-buam7-crash-landing-c48d",
+      "title": "부암동7 (사랑의 불시착 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5955141,
+      "lng": 126.9698196,
+      "area": "종로구 부암동",
+      "subject": "북악산 자락 저택 진입로에서 바라본 건물 외관 — 극중 북한 내 저택 구도",
+      "tip": "북악스카이웨이 초입, 자하문터널 인근. 카페 겸 문화공간으로 운영되어 이용객만 내부 진입 가능하니, 외부 정원·진입로에서 건물 전경을 담는 것이 무난하다.",
+      "workId": "crash-landing-on-you",
+      "scene": "구승준이 억류된 북한 내 고급 저택 장면",
+      "source": "https://english.visitseoul.net/hallyu/filming-locations-of-crash-landing-on-you_/34364"
+    },
+    {
+      "id": "seoul-bulgwangcheon-moving-5c8a",
+      "title": "불광천 (무빙 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5905,
+      "lng": 126.916,
+      "area": "은평구 응암동",
+      "subject": "불광천변 산책로에서 하늘을 향한 구도",
+      "tip": "벚꽃(4월)과 단풍(11월) 시즌에 특히 아름답습니다. 자전거 도로와 인도가 함께 있으니 자전거 통행에 주의하며 산책로 안쪽에서 촬영하세요.",
+      "lens": "16-35mm",
+      "time": "벚꽃철 오전 또는 노을 무렵",
+      "workId": "moving",
+      "scene": "김두식(조인성 분)이 하늘을 나는 장면이 촬영된 하천",
+      "verified": "official",
+      "source": "https://english.visitseoul.net/hallyu/movingseoul_/44795",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788566646/spotchu/spots/bgbniz3azlgpiysihg5v.jpg",
+      "imageCredit": {
+        "author": "RyuMinjoo",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Starting_point_of_Bulgwangcheon.jpg"
+      }
+    },
+    {
       "id": "seoul-cheongdam-bridge-avengers-age-of-ultron-4b1e",
       "title": "청담대교 (어벤져스2 촬영지)",
       "city": "seoul",
@@ -15233,6 +15416,20 @@
         "license": "CC BY 4.0",
         "source": "https://commons.wikimedia.org/wiki/File:Cheongdam_Bridge_20260416_1.jpg"
       }
+    },
+    {
+      "id": "seoul-choigyuha-house-reply-1988-b6d9",
+      "title": "최규하 전 대통령 가옥 (응답하라 1988 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5553,
+      "lng": 126.9147,
+      "area": "서교동, 마포구",
+      "subject": "극중 동룡이네 집으로 등장한 최규하 전 대통령의 실제 사저 외관과 마당. 1972년 지어진 복층형 도시주택으로 국가등록문화재 제413호.",
+      "tip": "2호선 합정역에서 도보 이동 가능. 국가등록문화재로 무료 개방 중이라 생활유물 500여 점이 남은 내부까지 볼 수 있지만, 휴관일·개방시간은 방문 전 확인할 것.",
+      "workId": "reply-1988",
+      "scene": "10화·15화 류동룡(류준열)이네 집 내부 장면",
+      "source": "https://www.hankookilbo.com/news/article/201601080922419577"
     },
     {
       "id": "seoul-cityhall-station-seoul-station-b7e2",
@@ -15306,6 +15503,20 @@
       "source": "https://english.visitseoul.net/hallyu/Seoul-as-Seen-in-the-Romantic-TV-Series-Start-Up/ENN036494"
     },
     {
+      "id": "seoul-ddmc-crash-landing-6d4a",
+      "title": "동아디지털미디어센터 DDMC (사랑의 불시착 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.578507,
+      "lng": 126.8929551,
+      "area": "마포구 상암동",
+      "subject": "매봉산로 건너편 인도에서 바라본 DDMC 빌딩 정면 외경 — 극중 '세리스초이스' 본사 사옥",
+      "tip": "디지털미디어시티역에서 도보 5분. 빌딩 정문 맞은편 인도에서 로우앵글로 찍으면 극중 사옥 외경과 같은 구도가 나온다. 내부는 일반 입주 오피스이므로 로비 밖에서만 촬영할 것.",
+      "workId": "crash-landing-on-you",
+      "scene": "11화 — 극중 세리스초이스(Seri's Choice) 본사 사옥 외경",
+      "source": "https://soulspot.co.kr/en/ddmc/"
+    },
+    {
       "id": "seoul-ddp-god-of-high-school-3c9e",
       "title": "동대문디자인플라자 DDP (갓 오브 하이스쿨 성지)",
       "city": "seoul",
@@ -15358,6 +15569,23 @@
       "workId": "parasite",
       "scene": "기우가 친구 민혁에게 박사장 딸 과외 자리를 제안받는 영화 초반 술자리 장면",
       "source": "https://mediahub.seoul.go.kr/archives/1268956"
+    },
+    {
+      "id": "seoul-dongdaemun-market-moving-7d2f",
+      "title": "동대문종합시장 (무빙 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5706,
+      "lng": 127.0104,
+      "area": "종로구 종로5가",
+      "subject": "동대문종합시장 정문 앞 거리에서 바라보는 상가 외관",
+      "tip": "실제 영업 중인 원단·부자재 도매시장입니다. 상인 통행과 하역 작업을 방해하지 않는 인도에서 촬영하세요. 일요일은 휴무라 평일 영업시간(08:00~19:00) 방문을 권장합니다.",
+      "lens": "35-50mm",
+      "time": "영업시간대 낮",
+      "workId": "moving",
+      "scene": "이재만(김성균 분)이 과거 일하며 아들을 기다리던 곳으로 소개된 촬영지",
+      "verified": "official",
+      "source": "https://english.visitseoul.net/hallyu/movingseoul_/44795"
     },
     {
       "id": "seoul-eungbongsan-pavilion-seongsu-bridge-e89c",
@@ -16265,6 +16493,20 @@
       "source": "https://mediahub.seoul.go.kr/archives/1268956"
     },
     {
+      "id": "seoul-starcity-cheonho-crash-landing-9e15",
+      "title": "스타시티서울 한강뷰 레스토랑 (사랑의 불시착 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5422778,
+      "lng": 127.1205137,
+      "area": "강동구 천호동",
+      "subject": "7층 통유리창 자리에서 바라본 한강 조망 — 극중 '평양 카페' 구도",
+      "tip": "천호대교 북단, 스타시티빌딩 7층. 창가 좌석은 주말 예약이 필수이며, 해질 무렵 한강과 천호대교 조명이 함께 담기는 자리가 극중 장면과 가장 비슷하다.",
+      "workId": "crash-landing-on-you",
+      "scene": "8화 — 극중 평양의 호텔 카페로 등장, 서단이 구승준과 재회하는 장면",
+      "source": "https://english.visitseoul.net/hallyu/filming-locations-of-crash-landing-on-you_/34364"
+    },
+    {
       "id": "seoul-the-classic-yonsei-yeonhuigwan-c3d4",
       "title": "클래식 연세대학교 연희관 촬영지",
       "city": "seoul",
@@ -16393,6 +16635,37 @@
       }
     },
     {
+      "id": "seoul-wolfgangs-steakhouse-crash-landing-3b91",
+      "title": "울프강 스테이크하우스 청담 (사랑의 불시착 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.5244974,
+      "lng": 127.041463,
+      "area": "강남구 청담동",
+      "subject": "레스토랑 정문 앞 인도에서 바라본 입구 — 극중 파파라치 시점 구도",
+      "tip": "압구정로데오역에서 도보 5분, 영인빌딩 지하 1·2층. 저녁 시간대는 예약 없이 입장이 어려우니 사전 예약 권장하며, 매장 앞 인도에서만 촬영하고 다른 손님 출입을 막지 말 것.",
+      "workId": "crash-landing-on-you",
+      "scene": "1화 — 윤세리와 차상운이 데이트 중 파파라치에게 포착되는 장면",
+      "source": "https://creatrip.com/en/blog/9668"
+    },
+    {
+      "id": "seoul-wonhyo-apartment-moving-a93c",
+      "title": "원효아파트 (무빙 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.536,
+      "lng": 126.9655,
+      "area": "용산구 원효로2가",
+      "subject": "1970년 준공된 저층 원효아파트 단지 외관",
+      "tip": "실제 주민이 거주하는 노후 아파트입니다. 단지 안으로 들어가지 말고 원효로 인도에서 외관만 촬영하세요. 재건축이 논의 중이라 방문 전 존치 여부를 확인하세요.",
+      "lens": "35mm",
+      "time": "낮",
+      "workId": "moving",
+      "scene": "이재만(김성균 분) 가족이 과거 거주하던 집으로 소개된 촬영지",
+      "verified": "official",
+      "source": "https://english.visitseoul.net/hallyu/movingseoul_/44795"
+    },
+    {
       "id": "seoul-yangjae-forest-station-ddakji-9f2c",
       "title": "양재시민의숲역 (오징어 게임 딱지치기 승강장)",
       "city": "seoul",
@@ -16446,6 +16719,23 @@
         "license": "CC BY 2.0",
         "source": "https://commons.wikimedia.org/wiki/File:63_Building_and_Yeouido_Han_River_Park_at_Night.jpg"
       }
+    },
+    {
+      "id": "seoul-yongridangil-moving-e14b",
+      "title": "용리단길 (무빙 촬영지)",
+      "city": "seoul",
+      "category": "drama",
+      "lat": 37.531,
+      "lng": 126.9705,
+      "area": "용산구 한강로2가",
+      "subject": "신용산역~삼각지역 사이 골목 카페·상점 거리",
+      "tip": "좁은 골목에 카페와 편집숍이 밀집해 있습니다. 상점 앞 통행을 막지 않는 곳에서 촬영하세요. 저녁 조명이 예뻐 야간 방문도 좋습니다.",
+      "lens": "24-35mm",
+      "time": "낮~초저녁",
+      "workId": "moving",
+      "scene": "이재만 가족이 살던 원효아파트 인근 동네 풍경으로 소개된 지역",
+      "verified": "reported",
+      "source": "https://english.visitseoul.net/hallyu/movingseoul_/44795"
     },
     {
       "id": "seoul-yongyangbongjeojeong-sky-deck-hangang-bridge-b73a",
@@ -17883,6 +18173,20 @@
       }
     },
     {
+      "id": "tokyo-arakawa-8chome-danchi-shoplifters-a93c",
+      "title": "아라카와 8초메 주택(도영단지) (어느 가족 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.740031,
+      "lng": 139.787655,
+      "area": "아라카와 8초메, 아라카와구",
+      "subject": "유리의 친부모 집으로 등장한 도영주택 단지 외관",
+      "tip": "실제 주민이 거주하는 공공주택입니다. 단지 안으로 들어가지 말고 앞 도로에서 건물 외관만 담으며, 창문·베란다를 클로즈업하지 마세요.",
+      "workId": "shoplifters",
+      "scene": "유리가 시바타 가족에게서 풀려나 돌아온 뒤, 친부모가 기자들에게 둘러싸이는 장면",
+      "source": "https://setuyakun.com/archives/1902"
+    },
+    {
       "id": "tokyo-asahi-inari-jinja-ginza-tenkinoko-d2",
       "title": "아사히이나리 신사 옥상 (날씨의 아이)",
       "city": "tokyo",
@@ -17898,6 +18202,26 @@
       "scene": "히나가 도리이를 지나 '맑음 소녀'의 힘을 얻는 옥상 신사 장면의 모델",
       "verified": "reported",
       "source": "https://chikuhobby.com/jinja/asahiinari/"
+    },
+    {
+      "id": "tokyo-asahi-shinkin-kappabashi-shoplifters-d81b",
+      "title": "아사히신용금고 갓파바시 지점 (어느 가족 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.716358,
+      "lng": 139.78889,
+      "area": "마쓰가야(갓파바시), 다이토구",
+      "subject": "하츠에 할머니가 연금을 인출하던 신용금고 정면 외관",
+      "tip": "갓파바시도구가이 거리 인도에서 지점 정면 파사드를 담으세요. 실제 영업 중인 금융기관이니 출입구를 막지 말고 내부 촬영은 삼가세요.",
+      "workId": "shoplifters",
+      "scene": "하츠에가 통장으로 연금을 인출하는 장면(실제 은행 직원이 엑스트라로 출연)",
+      "source": "https://setuyakun.com/archives/1902",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788566651/spotchu/spots/q73bp7dontzqg1yku8o4.jpg",
+      "imageCredit": {
+        "author": "Suikotei",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Asahi_Shinkin_Bank_Kappabashi_Branch.jpg"
+      }
     },
     {
       "id": "tokyo-asakusa-culture-center-terrace-b391",
@@ -18514,6 +18838,20 @@
       "source": "https://seichimap.jp/works/mimisuma/"
     },
     {
+      "id": "tokyo-ishikawa-shoten-zebra-shoplifters-4f7e",
+      "title": "이시카와 상점(제브라) (어느 가족 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.760025,
+      "lng": 139.838651,
+      "area": "니시카메아리, 가쓰시카구",
+      "subject": "쇼타와 유리가 물건을 훔치던 옛날식 다가시야(구멍가게) 외관",
+      "tip": "가게 앞 좁은 골목에서 정면 외관만 담으세요. 실제 동네 아이들이 이용하는 가게이니 영업시간엔 손님·주인 얼굴이 나오지 않게 배려하세요.",
+      "workId": "shoplifters",
+      "scene": "오사무가 쇼타·유리에게 물건 훔치는 법을 가르치고, 훗날 가게 주인이 '동생한테는 시키지 마라'며 타이르는 장면",
+      "source": "https://xn--rck8fl98i.com/?p=20878"
+    },
+    {
       "id": "tokyo-izumi-kobushi-park-your-lie-april-c58a",
       "title": "이즈미 코부시 공원 (너의 거짓말 성지)",
       "city": "tokyo",
@@ -18571,6 +18909,26 @@
         "author": "ウィキ太郎 (Wiki Taro)",
         "license": "Public domain",
         "source": "https://commons.wikimedia.org/wiki/File:Tahouzan_Jouganji_Temple,_Nakano_City,_Tokyo.jpg"
+      }
+    },
+    {
+      "id": "tokyo-joyful-minowa-fujiya-shoplifters-9c4a",
+      "title": "조이풀 미노와 상점가·니쿠노후지야 정육점 (어느 가족 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.732868,
+      "lng": 139.79197,
+      "area": "미나미센주, 아라카와구",
+      "subject": "가족이 저녁 찬거리를 사 들고 함께 걷던 쇼와레트로 상점가 '조이풀 미노와'와 정육점 '니쿠노후지야' 외관",
+      "tip": "도덴아라카와선 미노와바시역 앞에서 상점가 아케이드 입구를 정면으로 담으세요. 실제 장 보는 주민이 많은 생활 상점가이니 통행에 방해되지 않게 짧게 촬영하세요.",
+      "workId": "shoplifters",
+      "scene": "가족들이 저녁 찬거리로 고로케를 사서 함께 걸어 돌아가는 상점가 장면",
+      "source": "https://setuyakun.com/archives/1902",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788566656/spotchu/spots/acpn2icw0wkbgosy7j9j.jpg",
+      "imageCredit": {
+        "author": "Suikotei",
+        "license": "CC BY 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Joyful_Minowa_Shopping_street_20250921-2.jpg"
       }
     },
     {
@@ -18693,6 +19051,20 @@
         "license": "CC BY-SA 3.0",
         "source": "https://commons.wikimedia.org/wiki/File:Sumida_River_at_sunset,_Kachidokibashi_Bridge,_Tokyo.jpg"
       }
+    },
+    {
+      "id": "tokyo-kadoya-nishiarai-shoplifters-6e2f",
+      "title": "간미도코로 카도야 (어느 가족 촬영지)",
+      "city": "tokyo",
+      "category": "drama",
+      "lat": 35.778512,
+      "lng": 139.779535,
+      "area": "니시아라이, 아다치구",
+      "subject": "하츠에 할머니와 아키가 단팥죽·빙수를 먹던 쇼와레트로 간미처(甘味処) '카도야' 외관·간판",
+      "tip": "니시아라이다이시 참배길 쪽 가게 앞 인도에서 간판을 정면으로 담으면 영화 속 구도와 비슷합니다. 실제 영업 중인 가게이니 손님 통행을 막지 말고, 실내 촬영 전엔 양해를 구하세요.",
+      "workId": "shoplifters",
+      "scene": "하츠에와 아키가 단팥죽·빙수를 나눠 먹으며 속마음을 나누는 장면(영화 시작 약 22분경)",
+      "source": "https://www.enjoytokyo.jp/article/201330/"
     },
     {
       "id": "tokyo-karaokekan-shibuya-lost-in-translation-e42a",
@@ -21077,6 +21449,20 @@
       "progress": 0
     },
     {
+      "id": "decision-to-leave",
+      "title": "헤어질 결심",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "broker",
+      "title": "브로커",
+      "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "the-little-prince",
       "title": "감천문화마을 어린 왕자",
       "type": "기타",
@@ -22029,6 +22415,13 @@
       "progress": 0
     },
     {
+      "id": "reply-1988",
+      "title": "응답하라 1988",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
       "id": "avengers-age-of-ultron",
       "title": "어벤져스: 에이지 오브 울트론",
       "type": "영화",
@@ -22067,6 +22460,20 @@
       "id": "past-lives",
       "title": "패스트 라이브즈",
       "type": "영화",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "crash-landing-on-you",
+      "title": "사랑의 불시착",
+      "type": "드라마",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "moving",
+      "title": "무빙",
+      "type": "드라마",
       "spotCount": 1,
       "progress": 0
     },
@@ -22249,6 +22656,13 @@
       "id": "love-live",
       "title": "러브라이브!",
       "type": "애니",
+      "spotCount": 1,
+      "progress": 0
+    },
+    {
+      "id": "shoplifters",
+      "title": "어느 가족",
+      "type": "영화",
       "spotCount": 1,
       "progress": 0
     },
