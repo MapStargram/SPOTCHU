@@ -84,14 +84,26 @@ async function main() {
     });
   }
 
-  // 작품
+  // 작품. 제목·타입은 재시드로 갱신(기존 update:{} no-op라 소스에서 제목 교정해도
+  // DB에 반영 안 돼 옛 모지바케 제목이 라이브에 남던 버그).
+  const workIds = new Set(WORKS.map((w) => w.id));
   for (const w of WORKS) {
+    const type = WORKTYPE[w.type] ?? "OTHER";
     await db.work.upsert({
       where: { id: w.id },
-      update: {},
-      create: { id: w.id, title: w.title, type: WORKTYPE[w.type] ?? "OTHER" },
+      update: { title: w.title, type },
+      create: { id: w.id, title: w.title, type },
     });
   }
+  // 소스에서 사라진 작품(이름변경·병합된 옛 id) 정리 — SpotWork는 onDelete:Cascade로 함께 삭제.
+  // 재시드가 삭제도 반영해야 orphan 작품(검색 필터의 중복·모지바케)이 사라진다.
+  // 가드: WORKS 임포트가 깨져 목록이 비정상적으로 작으면 대량 삭제를 막는다.
+  if (workIds.size < 100) throw new Error(`WORKS 로드 이상(${workIds.size}) — orphan 정리 중단`);
+  const removedWorks = await db.work.deleteMany({
+    where: { id: { notIn: [...workIds] } },
+  });
+  if (removedWorks.count)
+    console.warn(`🗑️ 소스에 없는 작품 ${removedWorks.count}개 삭제(orphan 정리)`);
 
   // 배지 정의(운영자 마스터 데이터, 정확히 3종 — feature 08 rules §불변식)
   for (const b of BADGE_DEFS) {
