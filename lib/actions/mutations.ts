@@ -8,7 +8,11 @@ import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
 import { canCheckIn, haversineMeters, bearingDeg } from "@/lib/geo";
 import { isBlockedHighRisk } from "@/lib/safety";
-import { awardCheckInBadges, type AwardedBadge } from "@/lib/actions/badges";
+import {
+  awardCheckInBadges,
+  awardFirstReporterBadge,
+  type AwardedBadge,
+} from "@/lib/actions/badges";
 import * as mock from "@/lib/mock";
 import { createNotification } from "@/lib/notify";
 
@@ -110,12 +114,15 @@ export async function checkInAction(
         where: { id: spotId, verificationStatus: "USER_REPORTED" },
         data: { verificationStatus: "USER_VERIFIED" },
       });
-      // 실제로 전이한 요청(count===1)에서만 제보자 본인에게 승격 알림.
-      if (promoted.count === 1 && spot.createdById)
+      // 실제로 전이한 요청(count===1)에서만 제보자 본인에게 승격 알림 + 최초 제보자 배지 지급.
+      // 배지 지급 시점 = USER_VERIFIED 승격 시(결정: 검증된 제보만 보상 · rules 08). grant는 멱등(1회).
+      if (promoted.count === 1 && spot.createdById) {
         await createNotification(spot.createdById, "SPOT_PROMOTED", {
           refType: "SPOT",
           refId: spotId,
         });
+        await awardFirstReporterBadge(spot.createdById);
+      }
     }
   }
 

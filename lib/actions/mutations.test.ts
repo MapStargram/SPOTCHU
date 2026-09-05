@@ -171,7 +171,15 @@ describe("checkInAction", () => {
     });
     expect(promotedCount).toBe(1);
 
-    await db.userBadge.deleteMany({ where: { userId: { in: verifierIds } } });
+    // 승격 시 제보자에게 최초 제보자 배지 지급(결정: USER_VERIFIED 승격 시 · rules 08).
+    const reporterBadge = await db.userBadge.findFirst({
+      where: { userId: reporterId, badge: { key: "first-reporter" } },
+    });
+    expect(reporterBadge).not.toBeNull();
+
+    await db.userBadge.deleteMany({
+      where: { userId: { in: [reporterId, ...verifierIds] } }, // 승격 시 reporter의 최초제보자 배지 포함
+    });
     await db.checkIn.deleteMany({ where: { spotId } });
     await db.notification.deleteMany({
       where: { userId: { in: [reporterId, ...verifierIds] } },
