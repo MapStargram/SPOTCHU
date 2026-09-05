@@ -42,17 +42,21 @@ function styleMarker(
 function ImperativeCollectionMap({
   spots,
   activeId,
+  onSelect,
 }: {
   spots: Spot[];
   activeId?: string | null;
+  onSelect?: (id: string) => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const mapRef = useRef<google.maps.Map | null>(null);
   const markersRef = useRef<MarkerRec[]>([]);
-  // 최신 activeId를 마커 생성 시점 초기 스타일에 반영(생성 이펙트 deps엔 넣지 않아 지도 재생성 방지).
+  // 최신 activeId·onSelect를 마커 생성 시점(생성 이펙트 deps 밖)에 반영 — 지도 재생성 방지.
   const activeIdRef = useRef(activeId);
   activeIdRef.current = activeId;
+  const onSelectRef = useRef(onSelect);
+  onSelectRef.current = onSelect;
 
   useEffect(() => {
     ensureGoogleMaps(); // Maps JS 로더 설치(멱등) — @vis.gl APIProvider 대체
@@ -126,7 +130,12 @@ function ImperativeCollectionMap({
         const active = s.id === activeIdRef.current;
         const el = document.createElement("div");
         styleMarker(el, i + 1, c.color, active);
-        el.addEventListener("click", () => router.push(`/spot/${s.id}`));
+        // 마커 탭 = 그 스팟 활성화(카드 동기화·강조·이동). onSelect 없으면 상세로 폴백.
+        el.addEventListener("click", () =>
+          onSelectRef.current
+            ? onSelectRef.current(s.id)
+            : router.push(`/spot/${s.id}`),
+        );
         const marker = new AdvancedMarkerElement({
           map,
           position: p,
@@ -170,10 +179,18 @@ function ImperativeCollectionMap({
 export function CollectionMap({
   spots,
   activeId,
+  onSelect,
 }: {
   spots: Spot[];
   activeId?: string | null;
+  onSelect?: (id: string) => void;
 }) {
   if (!KEY) return null;
-  return <ImperativeCollectionMap spots={spots} activeId={activeId} />;
+  return (
+    <ImperativeCollectionMap
+      spots={spots}
+      activeId={activeId}
+      onSelect={onSelect}
+    />
+  );
 }

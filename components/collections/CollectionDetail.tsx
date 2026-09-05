@@ -87,6 +87,17 @@ export function CollectionDetail({
     }
     if (bestId && bestId !== activeId) setActiveId(bestId);
   };
+  // 마커 탭 → 그 스팟 활성화 + 해당 카드를 가운데로 스크롤(상세 이동은 카드 탭으로).
+  const selectSpot = (id: string) => {
+    setActiveId(id);
+    const el = carouselRef.current;
+    const card = el?.querySelector<HTMLElement>(`[data-spot-id="${id}"]`);
+    if (el && card)
+      el.scrollTo({
+        left: card.offsetLeft - (el.clientWidth - card.offsetWidth) / 2,
+        behavior: "smooth",
+      });
+  };
 
   // 순서 이동(위/아래). 지도 동선·번호도 items 기준이라 함께 갱신.
   const move = (i: number, dir: -1 | 1) =>
@@ -192,7 +203,11 @@ export function CollectionDetail({
   );
 
   return (
-    <div className="relative mx-auto flex min-h-dvh w-full max-w-[500px] flex-col bg-cream pb-28 lg:max-w-[720px]">
+    <div
+      className={`relative flex min-h-dvh w-full flex-col bg-cream pb-28 ${
+        view === "list" ? "mx-auto max-w-[500px] lg:max-w-[720px]" : ""
+      }`}
+    >
       {view === "list" ? (
         <>
           {/* Hero */}
@@ -374,7 +389,11 @@ export function CollectionDetail({
         <div className="relative flex-1 overflow-hidden bg-[#DDE5EE]">
           {/* 실제 지도(핀=촬영자 위치, 번호=순서, 점선=동선). 키 없으면 폴백 배경. */}
           {KEY ? (
-            <CollectionMap spots={items} activeId={activeId} />
+            <CollectionMap
+              spots={items}
+              activeId={activeId}
+              onSelect={selectSpot}
+            />
           ) : (
             <MapBackground />
           )}
@@ -422,7 +441,7 @@ export function CollectionDetail({
                 href={`/spot/${s.id}`}
                 data-spot-id={s.id}
                 className={`flex w-[260px] shrink-0 items-center gap-2.5 rounded-2xl bg-white p-3 shadow-[shadow:var(--sh-elevated)] transition ${
-                  s.id === activeId ? "ring-2 ring-coral" : ""
+                  s.id === activeId ? "ring-2 ring-inset ring-coral" : ""
                 }`}
               >
                 <div
