@@ -1,6 +1,6 @@
 import { AppShell } from "@/components/shell/AppShell";
 import { UploadForm } from "@/components/community/UploadForm";
-import { getSpot } from "@/lib/data";
+import { getSpot, getUploadQuickPicks } from "@/lib/data";
 import { getCurrentUser } from "@/lib/session";
 
 // H2 · 게시물 업로드. 인증 직후 진입 시 ?spot=<id>&verified=1 로 스팟 자동 연결(spec 인수조건).
@@ -12,9 +12,10 @@ export default async function UploadPage({
   searchParams: Promise<{ spot?: string; verified?: string }>;
 }) {
   const sp = await searchParams;
-  const [user, spot] = await Promise.all([
+  const [user, spot, quickPicks] = await Promise.all([
     getCurrentUser(),
     sp.spot ? getSpot(sp.spot) : Promise.resolve(undefined),
+    getUploadQuickPicks(), // 최근 방문·저장 스팟 — 검색 없이 한 번에 연결
   ]);
   return (
     <AppShell noTabBar>
@@ -22,6 +23,7 @@ export default async function UploadPage({
         loggedIn={!!user}
         initialSpot={spot ? { id: spot.id, title: spot.title } : null}
         verifiedFromCheckin={sp.verified === "1" && !!spot}
+        quickPicks={quickPicks}
       />
     </AppShell>
   );

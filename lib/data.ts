@@ -806,6 +806,54 @@ export async function getMyPosts(): Promise<FeedPost[]> {
   return rows.map((r) => mapDbPost(r, liked.has(r.id)));
 }
 
+// 업로드 스팟 연결 '빠른 선택' — 최근 방문 + 저장한 스팟(검색 없이 한 번에 연결). 최신 방문 먼저,
+// 중복 제거, 상한 8. 비로그인은 빈 배열. GPS 근처는 체크인→업로드 자동연결과 겹쳐 제외(마찰↓).
+export async function getUploadQuickPicks(): Promise<
+  { id: string; title: string }[]
+> {
+  if (!USE_DB) {
+    const out: { id: string; title: string }[] = [];
+    for (const h of mock.VISIT_HISTORY.slice(0, 6)) {
+      const s = mock.getSpot(h.id);
+      if (s) out.push({ id: s.id, title: s.title });
+    }
+    return out;
+  }
+  const user = await getCurrentUser();
+  if (!user?.id) return [];
+  const picks: { id: string; title: string }[] = [];
+  const seen = new Set<string>();
+  const add = (id: string, title: string) => {
+    if (!seen.has(id)) {
+      seen.add(id);
+      picks.push({ id, title });
+    }
+  };
+  // 최근 방문 먼저(방금 다녀온 곳에서 올릴 가능성이 큼)
+  const visited = await getVisitHistory();
+  for (const v of visited) add(v.spot.id, v.spot.title);
+  // 저장(기본 컬렉션)한 스팟
+  const col = await db.collection.findFirst({
+    where: { ownerId: user.id, isDefault: true },
+    select: { id: true },
+  });
+  if (col) {
+    const items = await db.collectionItem.findMany({
+      where: { collectionId: col.id },
+      select: { spotId: true },
+    });
+    const ids = items.map((i) => i.spotId).filter((id) => !seen.has(id));
+    if (ids.length) {
+      const spots = await db.spot.findMany({
+        where: { id: { in: ids } },
+        select: { id: true, name: true },
+      });
+      for (const s of spots) add(s.id, s.name);
+    }
+  }
+  return picks.slice(0, 8);
+}
+
 // J1 · 알림 목록(본인 것만, 발행 역순). 표시 문구는 type+참조 대상명으로 서버 조합.
 export async function getNotifications(): Promise<NotificationView[]> {
   if (!USE_DB) {
