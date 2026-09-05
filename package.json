@@ -22,6 +22,7 @@
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
     "db:seed": "tsx prisma/seed.ts",
+    "admin:create": "tsx scripts/create-admin.ts",
     "import:leads": "tsx scripts/import-leads.ts",
     "research": "tsx scripts/research-orchestrator.ts",
     "research:daily": "tsx scripts/research-orchestrator.ts daily",

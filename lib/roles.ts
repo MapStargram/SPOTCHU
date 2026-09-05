@@ -5,3 +5,8 @@ import type { Role } from "@prisma/client";
 export function isModerator(role: Role | null | undefined): boolean {
   return role === "MODERATOR" || role === "ADMIN";
 }
+
+/** 최고 권한: ADMIN 전용(역할 변경 등 민감 작업). */
+export function isAdmin(role: Role | null | undefined): boolean {
+  return role === "ADMIN";
+}
