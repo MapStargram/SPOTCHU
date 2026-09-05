@@ -93,20 +93,6 @@ const BASE_WORKS: Work[] = [
     progress: 4,
   },
   {
-    id: "suzume",
-    title: "스즈메의 문단속",
-    type: "애니",
-    spotCount: 9,
-    progress: 1,
-  },
-  {
-    id: "weathering",
-    title: "날씨의 아이",
-    type: "애니",
-    spotCount: 7,
-    progress: 0,
-  },
-  {
     id: "itaewon",
     title: "이태원 클라쓰",
     type: "드라마",
