@@ -145,8 +145,8 @@ export async function awardCheckInBadges(
   return awarded;
 }
 
-// 최초 제보자 배지: 스팟 제보 트리거에서 호출(feature 10-spot-registration).
-// ponytail: 제보 서버 액션이 아직 없어 미배선 — 액션 도입 시 create 직후 호출.
+// 최초 제보자 배지. 지급 시점 = 제보한 스팟이 USER_VERIFIED로 승격될 때(결정: 검증된 제보만 보상,
+// rules 08 · 스팸/저품질 제보 badge-farming 방지). checkInAction 승격 전이(원자)에서 호출. grant 멱등(1회).
 export async function awardFirstReporterBadge(
   userId: string,
 ): Promise<AwardedBadge | null> {
