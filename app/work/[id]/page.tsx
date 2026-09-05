@@ -22,10 +22,16 @@ export async function generateMetadata({
   const w = await getWork(id);
   if (!w) return { title: "작품을 찾을 수 없어요" };
   const description = `${w.type} 촬영지 성지순례 · 정확한 위치와 구도로`;
+  // 공유 미리보기 이미지 — 회차별 스팟 중 첫 실사진(카카오·네이버 OG는 이미지가 있어야 카드가 뜬다).
+  const cover = (await getWorkSpots(id)).find((s) => s.imageUrl)?.imageUrl;
   return {
     title: w.title,
     description,
-    openGraph: { title: w.title, description },
+    openGraph: {
+      title: w.title,
+      description,
+      images: cover ? [cover] : undefined,
+    },
   };
 }
 
