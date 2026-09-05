@@ -182,18 +182,22 @@ async function main() {
       `⚠️ 좌표 없어 건너뛴 스팟 ${missingCoord.length}개: ${missingCoord.slice(0, 12).join(", ")}${missingCoord.length > 12 ? " …" : ""}`,
     );
 
-  // 컬렉션 (+ 아이템)
+  // 컬렉션 (+ 아이템). 제목·설명(부제)·공식여부는 재시드로 갱신, 항목은 현재 목록에 맞춰 재조정.
   for (const col of COLLECTIONS) {
+    const fields = {
+      title: col.title,
+      description: col.subtitle, // prod 카드 부제 = Collection.description (mapCollection)
+      isOfficial: col.isOfficial,
+      visibility: "LINK" as const,
+    };
     await db.collection.upsert({
       where: { id: col.id },
-      update: {},
-      create: {
-        id: col.id,
-        ownerId: user.id,
-        title: col.title,
-        isOfficial: col.isOfficial,
-        visibility: "LINK",
-      },
+      update: fields,
+      create: { id: col.id, ownerId: user.id, ...fields },
+    });
+    // 목록에서 빠진 옛 항목 제거(스텁 정리) — 좌표/스팟 자체는 건드리지 않음
+    await db.collectionItem.deleteMany({
+      where: { collectionId: col.id, spotId: { notIn: col.spots.length ? col.spots : ["__none__"] } },
     });
     for (let i = 0; i < col.spots.length; i++) {
       await db.collectionItem.upsert({
