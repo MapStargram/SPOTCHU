@@ -440,7 +440,7 @@ export function CollectionDetail({
                 key={s.id}
                 href={`/spot/${s.id}`}
                 data-spot-id={s.id}
-                className={`flex w-[260px] shrink-0 items-center gap-2.5 rounded-2xl bg-white p-3 shadow-[shadow:var(--sh-elevated)] transition ${
+                className={`relative flex w-[260px] shrink-0 items-center gap-2.5 rounded-2xl bg-white p-3 shadow-[shadow:var(--sh-elevated)] transition ${
                   s.id === activeId ? "ring-2 ring-inset ring-coral" : ""
                 }`}
               >
@@ -449,10 +449,11 @@ export function CollectionDetail({
                   style={{ background: s.thumbGrad }}
                 >
                   <SpotImage src={s.imageUrl} alt="" width={640} />
-                  <span className="absolute -left-1.5 -top-1.5 z-10 flex h-[22px] w-[22px] items-center justify-center rounded-full bg-coral font-latin text-[11px] font-extrabold text-cream">
-                    {i + 1}
-                  </span>
                 </div>
+                {/* 번호 배지 — 이미지 div(overflow-hidden) 밖, 카드 기준 절대배치라 잘리지 않음 */}
+                <span className="absolute left-1.5 top-1.5 z-10 flex h-[22px] w-[22px] items-center justify-center rounded-full bg-coral font-latin text-[11px] font-extrabold text-cream shadow-[0_1px_3px_rgba(23,35,60,0.3)]">
+                  {i + 1}
+                </span>
                 <div className="min-w-0 flex-1">
                   <div className="truncate text-[12px] font-bold tracking-[-0.01em] text-navy">
                     {s.title}
