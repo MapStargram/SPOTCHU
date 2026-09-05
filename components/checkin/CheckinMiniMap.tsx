@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { APIProvider } from "@vis.gl/react-google-maps";
 import { type Spot } from "@/lib/mock";
+import { ensureGoogleMaps } from "@/lib/google-maps-loader";
 import { posOf } from "../explore/pin";
 
 // F1 · 방문 인증 시작화면 미니지도(실 동작). 가짜 배경 대신 스팟 촬영자 위치 + 인증 반경 원.
@@ -14,6 +14,7 @@ function ImperativeMiniMap({ spot }: { spot: Spot }) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    ensureGoogleMaps(); // Maps JS 로더 설치(멱등) — @vis.gl APIProvider 대체
     let cancelled = false;
     let circle: google.maps.Circle | null = null;
     let marker: google.maps.marker.AdvancedMarkerElement | null = null;
@@ -83,9 +84,5 @@ function ImperativeMiniMap({ spot }: { spot: Spot }) {
 // 키 없으면 null(부모가 폴백 배경 처리). 키 있으면 실제 지도.
 export function CheckinMiniMap({ spot }: { spot: Spot }) {
   if (!KEY) return null;
-  return (
-    <APIProvider apiKey={KEY}>
-      <ImperativeMiniMap spot={spot} />
-    </APIProvider>
-  );
+  return <ImperativeMiniMap spot={spot} />;
 }

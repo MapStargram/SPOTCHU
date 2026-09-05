@@ -49,6 +49,9 @@ const PROVIDERS = [
 
 // OAuth 콜백 에러(?error=)를 사용자 친화 메시지로 변환. 대표: OAuthAccountNotLinked
 // (연결하려는 소셜이 이미 다른 스팟츄 계정에 묶여 있음 — 계정통합 시도 실패).
+// 참고: 로그인 상태에서 계정 관리 > 연결하기로 시도하다 난 경우는 이제 auth.ts의 signIn
+// 콜백이 여기 도달하기 전에 가로채 병합 확인 화면(/profile/account/merge)으로 보낸다 — 그래서
+// 이 케이스는 사실상 "로그인 화면에서 처음부터 다시 로그인하는" 시나리오에서만 나온다.
 function authErrorMessage(code: string): string {
   switch (code) {
     case "OAuthAccountNotLinked":

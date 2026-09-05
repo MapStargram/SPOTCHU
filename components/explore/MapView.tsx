@@ -3,7 +3,6 @@
 import { createElement, useCallback, useEffect, useRef, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import Link from "next/link";
-import { APIProvider } from "@vis.gl/react-google-maps";
 import { Plus, Crosshair, MapPin } from "lucide-react";
 import { MapBackground } from "../map/MapBackground";
 import { MapMarker } from "../map/MapMarker";
@@ -11,6 +10,7 @@ import { ErrorBoundary } from "../ui/ErrorBoundary";
 import { Sparkle } from "../ui/Sparkle";
 import { VerifBadge, VERIF_CFG } from "../ui/VerifBadge";
 import { CITY_CENTER } from "@/lib/mock-constants";
+import { ensureGoogleMaps } from "@/lib/google-maps-loader";
 import type { Spot, CityId } from "@/lib/mock";
 import { categoryIcon } from "@/lib/categories";
 import { cldThumb } from "@/lib/cloudinary-url";
@@ -71,16 +71,14 @@ function GoogleMapLayer({
   onSelectSpot: (spot: Spot) => void;
 }) {
   return (
-    <APIProvider apiKey={KEY as string}>
-      <ImperativeMap
-        city={city}
-        userPos={userPos}
-        category={category}
-        work={work}
-        onViewportSpots={onViewportSpots}
-        onSelectSpot={onSelectSpot}
-      />
-    </APIProvider>
+    <ImperativeMap
+      city={city}
+      userPos={userPos}
+      category={category}
+      work={work}
+      onViewportSpots={onViewportSpots}
+      onSelectSpot={onSelectSpot}
+    />
   );
 }
 
@@ -158,12 +156,13 @@ function ImperativeMap({
   }, []);
 
   useEffect(() => {
+    ensureGoogleMaps(); // Maps JS 로더 설치(멱등) — @vis.gl APIProvider 대체
     let cancelled = false;
     let debounce: ReturnType<typeof setTimeout> | undefined;
     let idleListener: google.maps.MapsEventListener | null = null;
     const markers = markersRef.current;
     void (async () => {
-      // APIProvider가 스크립트를 로드할 때까지 대기(@vis.gl 훅에 의존하지 않음 = React19 견고).
+      // 로더가 importLibrary를 정의할 때까지 대기(@vis.gl 훅에 의존하지 않음 = React19 견고).
       for (let i = 0; i < 100 && !window.google?.maps?.importLibrary; i++)
         await new Promise((r) => setTimeout(r, 100));
       if (cancelled || !ref.current || !window.google?.maps?.importLibrary)

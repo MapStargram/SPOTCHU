@@ -9,6 +9,7 @@ import { z } from "zod";
 import { db } from "@/lib/db";
 import { emailSchema, verifyPassword } from "@/lib/auth/password";
 import { isModerator } from "@/lib/roles";
+import { createToken } from "@/lib/auth/tokens";
 import { authConfig } from "@/auth.config";
 
 // Auth.js v5 설정. 소셜 provider는 AUTH_<PROVIDER>_ID / AUTH_<PROVIDER>_SECRET 환경변수를 자동으로 읽는다.
@@ -73,6 +74,47 @@ export const { handlers, signIn, signOut, auth, unstable_update } = NextAuth({
   providers: [...social, credentials],
   callbacks: {
     ...authConfig.callbacks,
+    // 로그인 상태에서 "이미 다른 기존 계정이 쓰는 소셜"을 연결하려 하면(예: 카카오로 로그인
+    // 중인데 이미 다른 계정에 붙어있는 구글을 연결 시도), handleLoginOrRegister가
+    // OAuthAccountNotLinked를 던지기 전에(@auth/core callback/index.js가 signIn 콜백을
+    // 그보다 먼저 호출) 여기서 감지해 에러 대신 "병합 확인" 화면으로 보낸다.
+    // 세션이 없는 최초 로그인(로그인 화면)에서는 개입하지 않음 — 기존 동작(이메일 자동연결/
+    // 신규가입) 그대로. 문자열을 반환하면 handleLoginOrRegister 자체가 실행되지 않아
+    // 지금 세션 쿠키는 이 경로에서 전혀 건드려지지 않는다.
+    async signIn({ account }) {
+      // Credentials(이메일/비밀번호)는 Account 행이 없고 병합 대상이 아니다 — 그대로 통과.
+      // (카카오·네이버=oauth, 구글·애플=oidc — 이 앱이 실제로 쓰는 소셜 provider type 전부.)
+      if (!account || (account.type !== "oauth" && account.type !== "oidc"))
+        return true;
+
+      const session = await auth();
+      const currentUserId = session?.user?.id;
+      if (!currentUserId) return true;
+
+      // 이 provider+providerAccountId를 이미 소유한 User가 있는지 직접 조회(어댑터의
+      // getUserByAccount와 별개 — 우리 쪽 판단 근거를 명시적으로 갖기 위해).
+      const existing = await db.account.findUnique({
+        where: {
+          provider_providerAccountId: {
+            provider: account.provider,
+            providerAccountId: account.providerAccountId,
+          },
+        },
+        select: { userId: true },
+      });
+
+      // 없음(처음 보는 소셜) 또는 이미 지금 계정 소유 → 오늘과 동일하게 통과.
+      if (!existing || existing.userId === currentUserId) return true;
+
+      // 이미 "다른" 계정 소유 → 병합 확인 화면으로. payload는 provider:providerAccountId만
+      // (어느 쪽 userId도 안 실음 — 확인 시점에 항상 새로 조회해야 클라이언트가 임의 userId를
+      // 주입해 남의 계정을 훔쳐가는 걸 막을 수 있다. lib/actions/auth.ts의 mergeAccount 참고).
+      const token = await createToken(
+        "merge",
+        `${account.provider}:${account.providerAccountId}`,
+      );
+      return `/profile/account/merge?token=${token}`;
+    },
     // 로그인 시 동의 이력(agreedTermsAt) 유무로 needsConsent 결정. 소셜 신규 가입자는 동의 이력이
     // 없어(null) 미들웨어가 /consent로 유도한다. 이메일 가입자는 signupWithEmail에서 이미 동의 → 통과.
     // DB 조회는 이 콜백(Node 컨텍스트: 로그인·세션 update)에서만 — 미들웨어(엣지)는 authConfig를 써서 DB 미접근.

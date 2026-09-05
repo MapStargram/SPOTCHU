@@ -41,7 +41,8 @@
 
 - **계정 연결(한 사람 = 한 계정)**: 두 경로로 통합한다.
   - **자동(이메일 기준)**: 동일한 **검증된** 이메일이면 로그인 수단(소셜·비밀번호)이 여러 개여도 한 `User`에 자동 연결(Auth.js `allowDangerousEmailAccountLinking`). 구글·네이버는 이메일 제공. **카카오는 `account_email`이 비즈니스 앱 전환(사업자 인증) 전엔 '권한 없음'이라 이메일을 못 받는다** → 카카오는 자동통합 대상에서 제외(이메일 scope를 넣으면 로그인 에러). 비즈니스 승인 후 이메일을 켤 땐 미검증 이메일(`is_email_verified=false`)은 자동연결에 쓰지 않는다(탈취 방지).
-  - **수동(이메일 없거나 다를 때)**: 카카오처럼 이메일을 못 받으면 자동연결이 안 되므로, 로그인 상태에서 계정 관리(`/profile/account`) > **연결하기**로 통합한다. Auth.js가 현재 세션 사용자에 `linkAccount`로 붙인다(JWT 세션에서도 동작 확인, `@auth/core` handle-login). 연결하려는 소셜이 **이미 다른 계정**에 묶여 있으면 `OAuthAccountNotLinked` — `/login`에서 안내한다.
+  - **수동(이메일 없거나 다를 때)**: 카카오처럼 이메일을 못 받으면 자동연결이 안 되므로, 로그인 상태에서 계정 관리(`/profile/account`) > **연결하기**로 통합한다. Auth.js가 현재 세션 사용자에 `linkAccount`로 붙인다(JWT 세션에서도 동작 확인, `@auth/core` handle-login).
+  - **병합(이미 다른 계정이 그 소셜을 쓰고 있을 때)**: 연결하려는 소셜이 **이미 다른(현재 로그인된 계정이 아닌) 기존 계정**에 묶여 있으면, `signIn` 콜백(`auth.ts`)이 `handleLoginOrRegister`(에러를 던지는 지점)보다 먼저 실행되는 걸 이용해 감지하고, `OAuthAccountNotLinked`로 막는 대신 **병합 확인 화면**(`/profile/account/merge?token=…`)으로 안내한다. 확인하면 그 기존 계정의 관계 데이터(스팟·컬렉션·체크인·좋아요·배지·알림·제보)를 전부 지금 계정으로 옮기고 그 계정은 삭제한다(가역 불가 — 프로필성 필드는 지금 계정 것을 그대로 유지, source에서 복사하지 않음). 토큰은 `VerificationToken`(purpose `"merge"`, payload `provider:providerAccountId` — 어느 쪽 userId도 담지 않음, 확인 시점에 항상 새로 조회)을 재사용, 1회용·만료 있음. 세션이 없는 최초 로그인(`/login`)에서는 이 로직이 개입하지 않고 위 자동/수동 연결 동작을 그대로 따른다.
 - **provider 목록**: 카카오·네이버·구글·애플 + 이메일/비밀번호. (네이버 정식 편입)
 - **세션 전략**: `jwt`(Credentials/이메일·비밀번호는 DB 세션 미지원). 소셜도 JWT 사용, User/Account는 DB에 저장.
 - **이메일 인증·비밀번호 재설정**: Resend로 발송, `VerificationToken` 테이블에 토큰 저장(만료 있음). 재설정 요청은 계정 존재 여부를 노출하지 않는다.
