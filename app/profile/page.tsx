@@ -4,8 +4,14 @@ import { AppShell } from "@/components/shell/AppShell";
 import { AppIcon } from "@/components/ui/AppIcon";
 import { LoginGate } from "@/components/auth/LoginGate";
 import { CityProgressList } from "@/components/profile/CityProgressList";
+import { PostGrid } from "@/components/community/PostGrid";
 import { getCurrentUser } from "@/lib/session";
-import { getProfileStats, getCityProgress, getBadgeCards } from "@/lib/data";
+import {
+  getProfileStats,
+  getCityProgress,
+  getBadgeCards,
+  getMyPosts,
+} from "@/lib/data";
 import { db } from "@/lib/db";
 import { cldThumb } from "@/lib/cloudinary-url";
 
@@ -28,10 +34,11 @@ export default async function ProfilePage() {
       </AppShell>
     );
   }
-  const [stats, cityProgress, badges] = await Promise.all([
+  const [stats, cityProgress, badges, myPosts] = await Promise.all([
     getProfileStats(),
     getCityProgress(),
     getBadgeCards(),
+    getMyPosts(),
   ]);
   // '진행률'은 실제로 시작한 도시(방문>0)만 — 방문 0인 도시 수십 개를 0/N으로 쭉 나열하면 지저분하다.
   // 진행 중인 도시가 없으면 섹션을 숨기고(신규 유저) 하단 시작 유도 카드가 대신 뜬다.
@@ -153,29 +160,51 @@ export default async function ProfilePage() {
         </div>
 
         {/* 게스트/무활동 시 하단이 비지 않도록 시작 유도 카드 */}
-        {progressed.length === 0 && badges.length === 0 && (
-          <div className="mt-6 px-4 lg:mt-8 lg:px-6">
-            <div className="flex flex-col items-center gap-3 rounded-[20px] border border-dashed border-[color:var(--line-strong)] bg-[color:var(--cream-2)] px-6 py-10 text-center">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-coral shadow-[shadow:var(--sh-card)]">
-                {user ? (
-                  <Sparkles size={22} aria-hidden />
-                ) : (
-                  <LogIn size={22} aria-hidden />
-                )}
-              </span>
-              <p className="text-[13px] leading-[1.6] text-navy">
-                {user
-                  ? "아직 방문·배지가 없어요. 스팟을 저장하고 현장에서 인증하면 여기에 쌓여요."
-                  : "로그인하면 저장·방문 인증·배지가 내 프로필에 쌓여요."}
-              </p>
-              <Link
-                href={user ? "/explore" : "/login"}
-                className="rounded-full bg-coral px-5 py-2.5 text-[13px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
-              >
-                {user ? "스팟 둘러보기 →" : "로그인하고 시작하기"}
-              </Link>
+        {progressed.length === 0 &&
+          badges.length === 0 &&
+          myPosts.length === 0 && (
+            <div className="mt-6 px-4 lg:mt-8 lg:px-6">
+              <div className="flex flex-col items-center gap-3 rounded-[20px] border border-dashed border-[color:var(--line-strong)] bg-[color:var(--cream-2)] px-6 py-10 text-center">
+                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-coral shadow-[shadow:var(--sh-card)]">
+                  {user ? (
+                    <Sparkles size={22} aria-hidden />
+                  ) : (
+                    <LogIn size={22} aria-hidden />
+                  )}
+                </span>
+                <p className="text-[13px] leading-[1.6] text-navy">
+                  {user
+                    ? "아직 방문·배지가 없어요. 스팟을 저장하고 현장에서 인증하면 여기에 쌓여요."
+                    : "로그인하면 저장·방문 인증·배지가 내 프로필에 쌓여요."}
+                </p>
+                <Link
+                  href={user ? "/explore" : "/login"}
+                  className="rounded-full bg-coral px-5 py-2.5 text-[13px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
+                >
+                  {user ? "스팟 둘러보기 →" : "로그인하고 시작하기"}
+                </Link>
+              </div>
             </div>
-          </div>
+          )}
+
+        {/* 내 사진 — 인스타 프로필식 그리드(최근 9장 미리보기 + 전체). spec 09 surface ③ */}
+        {myPosts.length > 0 && (
+          <section className="mt-6 px-5 lg:mt-8 lg:px-6">
+            <div className="mb-2.5 flex items-baseline justify-between">
+              <h2 className="text-[13px] font-extrabold tracking-[-0.01em]">
+                내 사진
+              </h2>
+              {myPosts.length > 9 && (
+                <Link
+                  href="/profile/posts"
+                  className="flex items-center text-[11px] font-semibold text-[color:var(--muted)]"
+                >
+                  전체 <ChevronRight size={12} />
+                </Link>
+              )}
+            </div>
+            <PostGrid posts={myPosts.slice(0, 9)} />
+          </section>
         )}
 
         <div className="mt-6 flex flex-col gap-6 px-5 lg:mt-8 lg:grid lg:grid-cols-2 lg:gap-8 lg:px-6">
