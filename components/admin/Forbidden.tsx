@@ -26,7 +26,7 @@ export function Forbidden({
         {unauth && " 운영자 계정으로 로그인해 주세요."}
       </p>
       <Link
-        href={unauth ? "/login" : "/city"}
+        href={unauth ? "/admin/login" : "/city"}
         className="rounded-2xl bg-coral px-5 py-3 text-[13px] font-bold text-cream shadow-[shadow:var(--sh-cta-coral)]"
       >
         {unauth ? "로그인하기" : "홈으로"}

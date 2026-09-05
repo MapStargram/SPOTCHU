@@ -2,9 +2,9 @@
 import type { Role } from "@prisma/client";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
-import { isModerator } from "@/lib/roles";
+import { isModerator, isAdmin } from "@/lib/roles";
 
-export { isModerator };
+export { isModerator, isAdmin };
 
 /** 현재 세션 사용자의 role을 DB에서 조회(세션 값 신뢰 안 함). 비로그인/미존재는 null. */
 export async function getCurrentRole(): Promise<{
@@ -29,5 +29,13 @@ export async function requireModerator(): Promise<Gate> {
   const cur = await getCurrentRole();
   if (!cur) return { ok: false, reason: "unauthenticated" };
   if (!isModerator(cur.role)) return { ok: false, reason: "forbidden" };
+  return { ok: true, userId: cur.userId, role: cur.role };
+}
+
+/** ADMIN 전용 게이트(역할 변경 등). MODERATOR도 거부. */
+export async function requireAdmin(): Promise<Gate> {
+  const cur = await getCurrentRole();
+  if (!cur) return { ok: false, reason: "unauthenticated" };
+  if (!isAdmin(cur.role)) return { ok: false, reason: "forbidden" };
   return { ok: true, userId: cur.userId, role: cur.role };
 }

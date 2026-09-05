@@ -8,6 +8,7 @@ import Credentials from "next-auth/providers/credentials";
 import { z } from "zod";
 import { db } from "@/lib/db";
 import { emailSchema, verifyPassword } from "@/lib/auth/password";
+import { isModerator } from "@/lib/roles";
 import { createToken } from "@/lib/auth/tokens";
 import { authConfig } from "@/auth.config";
 
@@ -40,12 +41,20 @@ const credentials = Credentials({
   credentials: { email: {}, password: {} },
   authorize: async (creds) => {
     const parsed = z
-      .object({ email: emailSchema, password: z.string().min(1) })
+      .object({ email: z.string().min(1), password: z.string().min(1) })
       .safeParse(creds);
     if (!parsed.success) return null;
-    const user = await db.user.findUnique({
-      where: { email: parsed.data.email },
-    });
+
+    // 식별자는 이메일이 기본. 이메일 형식이 아니면 닉네임(username) 로그인으로 폴백하되
+    // 운영자(MODERATOR/ADMIN) 계정만 허용 — 어드민 콘솔용 username 로그인(예: superadmin).
+    // 일반 사용자 로그인 동작은 그대로(이메일 전용).
+    const asEmail = emailSchema.safeParse(parsed.data.email);
+    const user = asEmail.success
+      ? await db.user.findUnique({ where: { email: asEmail.data } })
+      : await db.user
+          .findUnique({ where: { nickname: parsed.data.email.trim() } })
+          .then((u) => (u && isModerator(u.role) ? u : null));
+
     if (!user?.passwordHash) return null;
     const ok = await verifyPassword(parsed.data.password, user.passwordHash);
     if (!ok) return null;
