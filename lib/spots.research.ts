@@ -753,23 +753,6 @@ const RAW: Raw[] = [
     source: "https://en.wikipedia.org/wiki/Gwangan_Bridge",
   },
   {
-    id: "huinnyeoul-village",
-    title: "흰여울문화마을",
-    city: "busan",
-    category: "drama",
-    lat: 35.07728,
-    lng: 129.04637,
-    area: "부산 영도구 영선동4가",
-    subject: "절벽을 따라 늘어선 하얀 집들과 그 너머 바다 풍경",
-    tip: "위쪽 전망 계단에서 내려다보면 바다와 지붕선이 함께. 좁은 골목은 주민 생활공간이므로 조용히 이동한다.",
-    lens: "표준·망원",
-    workId: "the-attorney",
-    scene: "영화 변호인에서 진우의 집으로 쓰인 골목(대사 벽 포토존)",
-    verified: "official",
-    source:
-      "https://www.visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=255",
-  },
-  {
     id: "haedong-yonggungsa",
     title: "해동용궁사",
     city: "busan",
