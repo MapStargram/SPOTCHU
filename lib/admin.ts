@@ -1,9 +1,23 @@
 // 어드민 콘솔 읽기 계층(서버 전용, requireModerator 통과 후 호출).
-// 사용자·게시물·사진 관리 화면이 쓰는 목록/집계. 뮤테이션은 lib/actions/admin.ts.
+// 사용자·게시물·사진·스팟·작품 관리 화면이 쓰는 목록/집계. 뮤테이션은 lib/actions/admin.ts.
 import { db } from "@/lib/db";
-import type { Role } from "@prisma/client";
+import type { Role, VerificationStatus, WorkType } from "@prisma/client";
 
 const TAKE = 100;
+
+export const VERIFICATION_LABELS: Record<VerificationStatus, string> = {
+  OFFICIAL: "공식",
+  USER_VERIFIED: "검증됨",
+  USER_REPORTED: "제보",
+  ESTIMATED: "추정",
+};
+
+export const WORK_TYPE_LABELS: Record<WorkType, string> = {
+  ANIME: "애니",
+  MOVIE: "영화",
+  DRAMA: "드라마",
+  OTHER: "기타",
+};
 
 export interface AdminUserRow {
   id: string;
@@ -156,20 +170,113 @@ export async function listPhotos(): Promise<AdminPhotoRow[]> {
   }));
 }
 
+export interface AdminSpotRow {
+  id: string;
+  name: string;
+  cityName: string;
+  categoryLabel: string;
+  verificationStatus: VerificationStatus;
+  checkinCount: number;
+  saveCount: number;
+  createdAt: Date;
+}
+
+/** 스팟 목록(검색: 스팟명·도시·부제). 최신순. */
+export async function listSpots(q?: string): Promise<AdminSpotRow[]> {
+  const term = q?.trim();
+  const rows = await db.spot.findMany({
+    where: term
+      ? {
+          OR: [
+            { name: { contains: term, mode: "insensitive" } },
+            { subject: { contains: term, mode: "insensitive" } },
+            { city: { name: { contains: term, mode: "insensitive" } } },
+          ],
+        }
+      : undefined,
+    orderBy: { createdAt: "desc" },
+    take: TAKE,
+    select: {
+      id: true,
+      name: true,
+      verificationStatus: true,
+      uniqueCheckinCount: true,
+      saveCount: true,
+      createdAt: true,
+      city: { select: { name: true } },
+      category: { select: { label: true } },
+    },
+  });
+  return rows.map((s) => ({
+    id: s.id,
+    name: s.name,
+    cityName: s.city.name,
+    categoryLabel: s.category.label,
+    verificationStatus: s.verificationStatus,
+    checkinCount: s.uniqueCheckinCount,
+    saveCount: s.saveCount,
+    createdAt: s.createdAt,
+  }));
+}
+
+export interface AdminWorkRow {
+  id: string;
+  title: string;
+  titleEn: string | null;
+  type: WorkType;
+  spotCount: number;
+}
+
+/** 작품 목록(검색: 제목·영문 제목). 스팟 많은 순. */
+export async function listWorks(q?: string): Promise<AdminWorkRow[]> {
+  const term = q?.trim();
+  const rows = await db.work.findMany({
+    where: term
+      ? {
+          OR: [
+            { title: { contains: term, mode: "insensitive" } },
+            { titleEn: { contains: term, mode: "insensitive" } },
+          ],
+        }
+      : undefined,
+    take: TAKE,
+    select: {
+      id: true,
+      title: true,
+      titleEn: true,
+      type: true,
+      _count: { select: { spots: true } },
+    },
+  });
+  return rows
+    .map((w) => ({
+      id: w.id,
+      title: w.title,
+      titleEn: w.titleEn,
+      type: w.type,
+      spotCount: w._count.spots,
+    }))
+    .sort((a, b) => b.spotCount - a.spotCount);
+}
+
 export interface AdminCounts {
   users: number;
   posts: number;
   photos: number;
   pending: number; // 검수 대기(PENDING)
+  spots: number;
+  works: number;
 }
 
 /** 상단 지표 카드용 전체 카운트. */
 export async function adminCounts(): Promise<AdminCounts> {
-  const [users, posts, photos, pending] = await Promise.all([
+  const [users, posts, photos, pending, spots, works] = await Promise.all([
     db.user.count(),
     db.post.count(),
     db.postImage.count(),
     db.moderationItem.count({ where: { status: "PENDING" } }),
+    db.spot.count(),
+    db.work.count(),
   ]);
-  return { users, posts, photos, pending };
+  return { users, posts, photos, pending, spots, works };
 }

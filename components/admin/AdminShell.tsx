@@ -1,27 +1,49 @@
 import Link from "next/link";
 import {
+  LayoutGrid,
   BarChart3,
   Layers,
   Users,
   FileText,
   Image as ImageIcon,
+  MapPin,
+  Star,
+  Settings,
 } from "lucide-react";
 
 // K · 웹 어드민 셸(데스크톱 전용). <768px는 안내 문구. (README: 어드민은 데스크톱 전용)
-type NavId = "queue" | "users" | "posts" | "photos" | "metrics";
+type NavId =
+  | "dashboard"
+  | "queue"
+  | "users"
+  | "posts"
+  | "photos"
+  | "spots"
+  | "works"
+  | "metrics"
+  | "settings";
 
-// 실제 라우트가 있는 항목만 노출(죽은 링크 제거). 검수 큐가 제보·신고 통합 진입점.
+// 모든 항목이 실제 라우트로 연결됨. 검수 큐가 제보·신고 통합 진입점.
 const NAV: {
   id: NavId;
   label: string;
   Icon: typeof BarChart3;
   href: string;
 }[] = [
+  {
+    id: "dashboard",
+    label: "대시보드",
+    Icon: LayoutGrid,
+    href: "/admin/dashboard",
+  },
   { id: "queue", label: "검수 큐 · 제보/신고", Icon: Layers, href: "/admin" },
   { id: "users", label: "사용자", Icon: Users, href: "/admin/users" },
   { id: "posts", label: "게시물", Icon: FileText, href: "/admin/posts" },
   { id: "photos", label: "사진", Icon: ImageIcon, href: "/admin/photos" },
+  { id: "spots", label: "스팟", Icon: MapPin, href: "/admin/spots" },
+  { id: "works", label: "작품", Icon: Star, href: "/admin/works" },
   { id: "metrics", label: "지표", Icon: BarChart3, href: "/admin/metrics" },
+  { id: "settings", label: "설정", Icon: Settings, href: "/admin/settings" },
 ];
 
 export function AdminShell({

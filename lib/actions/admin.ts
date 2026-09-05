@@ -4,7 +4,7 @@
 // 역할 변경은 ADMIN 전용, 그 외 관리(신뢰 토글·삭제)는 운영자(MODERATOR/ADMIN).
 // ⚠️ 게시물/사진 삭제는 실제 delete(스키마에 soft-delete 플래그 없음) — Post 삭제 시
 //    PostImage·Like는 onDelete Cascade로 함께 제거. 되돌릴 수 없으므로 UI에서 확인 후 호출.
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { z } from "zod";
 import { db } from "@/lib/db";
 import { requireModerator, requireAdmin } from "@/lib/authz";
@@ -12,6 +12,17 @@ import { Role } from "@prisma/client";
 
 type Fail = { ok: false; reason: string };
 type Result = Fail | { ok: true };
+
+// 공개 읽기 캐시 태그(lib의 unstable_cache와 일치). 시드/편집 후 즉시 반영용.
+const CONTENT_TAGS = ["spots", "works", "cities", "categories"] as const;
+
+/** 콘텐츠 캐시 재검증(운영자). 지도·피드·검색의 unstable_cache 태그를 무효화. */
+export async function revalidateContentAction(): Promise<Result> {
+  const gate = await requireModerator();
+  if (!gate.ok) return gate;
+  for (const t of CONTENT_TAGS) revalidateTag(t);
+  return { ok: true };
+}
 
 const roleSchema = z.nativeEnum(Role);
 
