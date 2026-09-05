@@ -210,7 +210,7 @@ export function ExploreView({
                 <Home size={16} /> 홈 그리드
               </Link>
             </div>
-            <div className="hidden gap-2 overflow-x-auto lg:flex">
+            <div className="hidden gap-2 overflow-x-auto py-1.5 lg:flex">
               {chips.map((c, i) => (
                 <Chip
                   key={c.label}
@@ -223,7 +223,7 @@ export function ExploreView({
               ))}
             </div>
           </div>
-          <div className="-mx-4 flex gap-2 overflow-x-auto px-4 [scrollbar-width:none] lg:hidden">
+          <div className="-mx-4 flex gap-2 overflow-x-auto px-4 py-1.5 [scrollbar-width:none] lg:hidden">
             {chips.map((c, i) => (
               <Chip
                 key={c.label}
@@ -237,7 +237,7 @@ export function ExploreView({
           </div>
           {/* 작품 하위필터 — 지도에서 애니/드라마 선택 시. 선택하면 그 작품 성지 핀만 표시. */}
           {catWorks.length > 0 && (
-            <div className="-mx-4 flex gap-2 overflow-x-auto px-4 [scrollbar-width:none]">
+            <div className="-mx-4 flex gap-2 overflow-x-auto px-4 py-1.5 [scrollbar-width:none]">
               <Chip
                 active={workId === null}
                 dotColor="var(--yellow)"

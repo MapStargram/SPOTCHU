@@ -172,7 +172,7 @@ export function PinGrid({
   return (
     <div className="mt-3">
       {/* 카테고리 칩 + 지도로 보기 */}
-      <div className="mb-4 flex items-center gap-2 overflow-x-auto pb-1 [scrollbar-width:none]">
+      <div className="mb-4 flex items-center gap-2 overflow-x-auto py-1.5 [scrollbar-width:none]">
         {cats.map((c) => (
           <button
             key={c}
