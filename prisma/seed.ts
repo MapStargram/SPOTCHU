@@ -16,6 +16,14 @@ import { RESEARCH_COORDS } from "../lib/spots.research";
 import { IMPORTED_COORDS } from "../lib/spots.imported";
 import { BADGE_DEFS } from "../lib/badges";
 
+// tsx는 .env.local을 자동 로드하지 않는다(prisma CLI만 .env 로드). Node24 네이티브
+// 로더로 PrismaClient 인스턴스화 전에 직접 로드 — 파일 없으면(CI/prod 실제 env) 무시.
+try {
+  process.loadEnvFile(".env.local");
+} catch {
+  /* .env.local 없음 — 환경에 이미 주입된 DATABASE_URL 사용 */
+}
+
 const db = new PrismaClient();
 
 // 목업 라벨 → DB 코드 매핑
