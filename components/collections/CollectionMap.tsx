@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { APIProvider } from "@vis.gl/react-google-maps";
 import { CITY_CENTER } from "@/lib/mock-constants";
+import { ensureGoogleMaps } from "@/lib/google-maps-loader";
 import type { Spot } from "@/lib/mock";
 import { VERIF_CFG } from "../ui/VerifBadge";
 import { posOf } from "../explore/pin";
@@ -26,6 +26,7 @@ function ImperativeCollectionMap({ spots }: { spots: Spot[] }) {
   const router = useRouter();
 
   useEffect(() => {
+    ensureGoogleMaps(); // Maps JS 로더 설치(멱등) — @vis.gl APIProvider 대체
     let cancelled = false;
     const markers: google.maps.marker.AdvancedMarkerElement[] = [];
     let polyline: google.maps.Polyline | null = null;
@@ -115,9 +116,5 @@ function ImperativeCollectionMap({ spots }: { spots: Spot[] }) {
 // 키 없으면 null(부모가 폴백 처리). 키 있으면 실제 지도.
 export function CollectionMap({ spots }: { spots: Spot[] }) {
   if (!KEY) return null;
-  return (
-    <APIProvider apiKey={KEY}>
-      <ImperativeCollectionMap spots={spots} />
-    </APIProvider>
-  );
+  return <ImperativeCollectionMap spots={spots} />;
 }
