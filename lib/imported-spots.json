@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T00:29:45.324Z",
+  "generatedAt": "2026-09-05T00:47:33.372Z",
   "spots": [
     {
       "id": "amsterdam-armbrug-oudezijds-kolk-st-nicholas",
@@ -230,7 +230,13 @@
       "tip": "다리 중앙 보행로에서 남쪽 암스텔강을 향해 서면 영화 속 관광보트가 지나가던 구도와 비슷하다. 해 질 무렵 목조 도개교 실루엣과 강변 불빛이 함께 담긴다. 자전거·보행 통행량이 많으니 가장자리에서 통행에 방해되지 않게 촬영할 것.",
       "workId": "diamonds-are-forever",
       "scene": "오프닝 시퀀스 — Mr. Wint과 Mr. Kidd가 관광객으로 위장해 다리 위에서 지켜보는 가운데, 암스텔강에서 다이아몬드 밀수책 휘슬러 부인의 시신이 인양되는 장면",
-      "source": "https://www.jamesbondlifestyle.com/product/skinny-bridge-and-canals-amsterdam-netherlands"
+      "source": "https://www.jamesbondlifestyle.com/product/skinny-bridge-and-canals-amsterdam-netherlands",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788569253/spotchu/spots/l82jrtgtd6cqelkiujfb.jpg",
+      "imageCredit": {
+        "author": "S Sepp",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Magere_Brug.jpg"
+      }
     },
     {
       "id": "amsterdam-museumplein-reflecting-pool-rijksmuseum",
@@ -1262,7 +1268,13 @@
       "lens": "24-70mm 표준줌 및 70-200mm 망원렌즈 (도시 압축 구도)",
       "time": "늦은 오후 골든아워 (폐장 1시간 전, 하절기 18:00~19:00 / 동절기 16:30~17:30)",
       "verified": "reported",
-      "source": "https://melia.com/es/experience/espana/barcelona/bunkers-del-carmel-mirador"
+      "source": "https://melia.com/es/experience/espana/barcelona/bunkers-del-carmel-mirador",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788569207/spotchu/spots/fsam3ujqpsm43ikz2ux1.jpg",
+      "imageCredit": {
+        "author": "Pere López Brosa",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Tur%C3%B3_de_la_Rovira_-_P1100470.jpg"
+      }
     },
     {
       "id": "barcelona-casa-mila-rooftop-vicky-cristina-3d9c",
@@ -1411,7 +1423,13 @@
       "lens": "28-50mm; 타일 디테일은 50mm 이상",
       "time": "오전",
       "verified": "reported",
-      "source": "https://ca.wikipedia.org/wiki/El_m%C3%B3n_neix_en_cada_besada"
+      "source": "https://ca.wikipedia.org/wiki/El_m%C3%B3n_neix_en_cada_besada",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788569210/spotchu/spots/dzdkuws5gg1v0pnxmbwi.jpg",
+      "imageCredit": {
+        "author": "Alberto-g-rovi",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Fotomosaico-mural_del_beso_de_Joan_fontcuberta.JPG"
+      }
     },
     {
       "id": "barcelona-laberint-dhorta-perfume-richis-maze-3b9e",
@@ -9199,7 +9217,13 @@
       "workId": "sophie-scholl-die-letzten-tage",
       "scene": "LMU 리히트호프에서 전단을 배포하고 상부에서 전단을 떨어뜨리는 장면",
       "verified": "reported",
-      "source": "https://www.deutschlandfunk.de/sophie-scholl-film-100.html"
+      "source": "https://www.deutschlandfunk.de/sophie-scholl-film-100.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788569213/spotchu/spots/s5vh4geu9eue2o6d8vzn.jpg",
+      "imageCredit": {
+        "author": "Bob Jenkin",
+        "license": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Lichthof_Ludwig-Maximilians-Universit%C3%A4t_M%C3%BCnchen_%E2%80%94_Lichthof_2017-09-03.jpg"
+      }
     },
     {
       "id": "munich-neues-rathaus-sophie-scholl-b6f0",
@@ -9253,7 +9277,13 @@
       "tip": "영화 촬영지가 아닌 실제 처형 사적지다(영화 속 처형 장면은 세트/다른 장소에서 촬영). 현재도 운영 중인 교정시설이므로 정문 담장 밖 공공 인도에서만 외관을 촬영하고, 출입구·경비시설 근접 촬영은 삼갈 것.",
       "workId": "sophie-scholl-die-letzten-tage",
       "scene": "처형 장면의 실제 역사적 배경(사적지)",
-      "source": "https://www.deutschlandmuseum.de/en/history/calendar/1943-02-22-execution-of-the-scholl-siblings/"
+      "source": "https://www.deutschlandmuseum.de/en/history/calendar/1943-02-22-execution-of-the-scholl-siblings/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788569215/spotchu/spots/odp2scaohjjmt2hcyxep.jpg",
+      "imageCredit": {
+        "author": "Wikitarisch",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Justizvollzugsanstalt_M%C3%BCnchen_Stadelheim_Haupteingang.jpg"
+      }
     },
     {
       "id": "munich-umschreibung-endless-staircase-e49c",
@@ -10033,7 +10063,13 @@
       "tip": "지하철 4/5/6/N/R/W선 Lexington Ave-59th St역에서 도보 3분. 3번가(Third Ave)와 59번가 코너의 정문이 대표 촬영 구도이며 갈색 차양과 로고 간판이 잘 보인다. 연말 쇼윈도 장식 시즌엔 영화 속 분위기와 더 가깝다.",
       "workId": "serendipity",
       "scene": "조나단과 사라가 마지막 남은 검정 캐시미어 장갑 한 켤레를 두고 실랑이를 벌이며 처음 만나는 오프닝 장면",
-      "source": "https://onthesetofnewyork.com/serendipity.html"
+      "source": "https://onthesetofnewyork.com/serendipity.html",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788569218/spotchu/spots/o2owmgdxitcrfcbabdln.jpg",
+      "imageCredit": {
+        "author": "Coolcaesar at en.wikipedia",
+        "license": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:NYC_Bloomingdales.jpg"
+      }
     },
     {
       "id": "newyork-breuer-building-manhattan-movie-d071",
@@ -12025,7 +12061,13 @@
       "lens": "35–70mm",
       "time": "블루아워 또는 오전",
       "verified": "reported",
-      "source": "https://osaka-info.jp/spot/naniwabashi-bridge/"
+      "source": "https://osaka-info.jp/spot/naniwabashi-bridge/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788569221/spotchu/spots/porkfxwgdkg1r8txphop.jpg",
+      "imageCredit": {
+        "author": "Daniel Lu (User:dllu)",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Osaka_City_Central_Public_Hall_main_facade_2026_dllu.jpg"
+      }
     },
     {
       "id": "osaka-nhk-osaka-hall-boogie-woogie-7f2a",
@@ -17130,7 +17172,13 @@
       "tip": "다리 중앙 전망 데크에서 싱가포르 플라이어를 배경에 두고 담을 수 있다. 보행자 전용 다리라 안전하며, 야간 조명 점등 후가 촬영에 유리하다.",
       "workId": "3-singapore",
       "scene": "케일럽(애런 폴)이 헬릭스 브리지를 건너며 전화 통화를 하는 장면. 배경으로 싱가포르 플라이어가 보인다.",
-      "source": "https://chopstixandthecity.com/2020/08/07/start-planning-your-trip-to-these-westworld-3-singapore-filming-locations/"
+      "source": "https://chopstixandthecity.com/2020/08/07/start-planning-your-trip-to-these-westworld-3-singapore-filming-locations/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788569223/spotchu/spots/f66mbqkgjfd2lcnl8qdf.jpg",
+      "imageCredit": {
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Puente_Helix,_Marina_Bay,_Singapur,_2023-08-16,_DD_144-146_HDR.jpg"
+      }
     },
     {
       "id": "singapore-henderson-waves-equals-c24f",
@@ -18004,7 +18052,13 @@
       "time": "오전 (역광 피하기)",
       "workId": "monga",
       "scene": "주인공들의 거처와 결의 장면 등 '묘구방' 관련 장면 대부분이 실제로 이 조사묘 경내와 신상 앞에서 촬영됐다 (촬영지가 용산사라는 것은 흔한 오해이며, 위키백과에도 이를 바로잡는 설명이 있다).",
-      "source": "https://zh.wikipedia.org/zh-tw/%E8%89%8B%E8%88%BA_(%E9%9B%BB%E5%BD%B1)"
+      "source": "https://zh.wikipedia.org/zh-tw/%E8%89%8B%E8%88%BA_(%E9%9B%BB%E5%BD%B1)",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788569228/spotchu/spots/er1l5dofox0yqrpsmoe9.jpg",
+      "imageCredit": {
+        "author": "lienyuan lee",
+        "license": "CC BY 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Qingshui_Zushi_Temple_%E6%B8%85%E6%B0%B4%E7%A5%96%E5%B8%AB%E5%BB%9F_-_panoramio.jpg"
+      }
     },
     {
       "id": "taipei-shidong-my-place-light-the-night-e58a",
@@ -21369,7 +21423,13 @@
       "workId": "bungo-stray-dogs",
       "scene": "15세편 서양식 저택 모델로 보고된 장소; EXACT_MATCH 미확정",
       "verified": "reported",
-      "source": "https://travelyokohama.jp/bungosd-yamate-italian-garden/"
+      "source": "https://travelyokohama.jp/bungosd-yamate-italian-garden/",
+      "imageUrl": "https://res.cloudinary.com/blwfzcz7/image/upload/v1788569230/spotchu/spots/tur5swdcvlcknhla64af.jpg",
+      "imageCredit": {
+        "author": "User:妖精書士",
+        "license": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Gaikoukan_no_ie.JPG"
+      }
     },
     {
       "id": "yokohama-zounohana-dazai-view-7c3d",
