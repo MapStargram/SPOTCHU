@@ -353,6 +353,15 @@ export async function getCollections(): Promise<Collection[]> {
     .map((r) => mapCollection(r, uid));
 }
 
+// 사이트맵·비로그인 공개 노출용 — 세션(getCurrentUser)을 건드리지 않아 ISR 사이트맵이 정적으로 유지된다.
+export async function getOfficialCollections(): Promise<Collection[]> {
+  if (!USE_DB) return mock.COLLECTIONS.filter((c) => c.isOfficial);
+  const rows = await getCollectionsFromDb();
+  return rows
+    .filter((r) => r.isOfficial)
+    .map((r) => mapCollection(r, undefined));
+}
+
 export async function getCollection(
   id: string,
 ): Promise<Collection | undefined> {
