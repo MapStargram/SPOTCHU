@@ -14,12 +14,14 @@ interface BeforeInstallPromptEvent extends Event {
 
 type Kind = "android" | "ios";
 
-// PWA 설치 유도 배너. **로그인 전(비로그인 사용자)에만** 렌더 대상 — 호출부(app/layout.tsx)에서
-// 로그인 사용자는 아예 마운트하지 않는다. iOS는 Safari와 홈 화면 추가 앱의 로그인 세션이 분리될 수
-// 있어, 로그인 후 유도하면 재로그인을 겪는다(rules: 01-auth-onboarding "결정된 정책").
+// PWA 설치 유도 배너. **로그인 전(비로그인 사용자)에만** 표시 — iOS는 Safari와 홈 화면 추가 앱의
+// 로그인 세션이 분리될 수 있어, 로그인 후 유도하면 재로그인을 겪는다(rules: 01-auth-onboarding "결정된 정책").
+// 예전엔 레이아웃이 세션을 읽어(getCurrentUser) 로그인 유저를 아예 마운트 안 했으나, 그 세션 읽기가
+// 앱 전체를 동적 렌더로 굳혀 CDN 캐시를 막았다 → 로그인 여부는 여기서 /api/me로 조회해 게이트한다.
 // Android는 beforeinstallprompt로 원탭 설치, iOS는 자동 프롬프트가 없어 안내만 표시한다.
 export function InstallBanner() {
   const [kind, setKind] = useState<Kind | null>(null);
+  const [allowed, setAllowed] = useState(false); // 로그인 여부 확인 후 비로그인일 때만 true
   const [guideOpen, setGuideOpen] = useState(false);
   const [deferredPrompt, setDeferredPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
@@ -32,25 +34,37 @@ export function InstallBanner() {
       (navigator as unknown as { standalone?: boolean }).standalone === true;
     if (isStandalone) return; // 이미 설치됨
 
-    // iPadOS 13+는 UA를 macOS로 위장한다 → 터치포인트로 보강 감지.
-    const isIOS =
-      /iphone|ipad|ipod/i.test(navigator.userAgent) ||
-      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-    if (isIOS) {
-      setKind("ios");
-      return;
-    }
-
+    // beforeinstallprompt는 로드 직후 일찍 발생 → 로그인 조회를 기다리지 말고 즉시 등록(이벤트 유실 방지).
+    // 실제 표시는 allowed(비로그인 확인) 게이트가 함께 열려야 이뤄진다.
     const onPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setKind("android");
     };
     window.addEventListener("beforeinstallprompt", onPrompt);
-    return () => window.removeEventListener("beforeinstallprompt", onPrompt);
+
+    // iPadOS 13+는 UA를 macOS로 위장한다 → 터치포인트로 보강 감지.
+    const isIOS =
+      /iphone|ipad|ipod/i.test(navigator.userAgent) ||
+      (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+    if (isIOS) setKind("ios");
+
+    // 로그인 유저에겐 표시하지 않는다(정책). 실패·불확실 시에도 미표시(보수적).
+    let alive = true;
+    fetch("/api/me")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d) => {
+        if (alive) setAllowed(!!d && d.loggedIn === false);
+      })
+      .catch(() => {});
+
+    return () => {
+      alive = false;
+      window.removeEventListener("beforeinstallprompt", onPrompt);
+    };
   }, []);
 
-  if (!kind) return null;
+  if (!kind || !allowed) return null;
 
   const dismiss = () => {
     localStorage.setItem(DISMISSED_KEY, "1");

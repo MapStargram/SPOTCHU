@@ -275,6 +275,22 @@ export interface WorkSpot {
   scene: string; // SpotWork.sceneNote(장면 메모)
   imageUrl?: string;
 }
+// 캐시(태그 works/spots) — 미캐시 직접 Prisma 조회는 Next 15 auto 모드에서 라우트를 동적으로 만들어
+// 작품 페이지 ISR/CDN 캐시를 막는다. 캐시로 감싸 정적 적격 + /api/revalidate 태그 무효화 연동.
+const cachedWorkSpots = unstable_cache(
+  async (workId: string): Promise<WorkSpot[]> => {
+    const row = await getWorkWithSpotsFromDb(workId);
+    if (!row) return [];
+    return row.spots.map((sw) => ({
+      id: sw.spot.id,
+      title: sw.spot.name,
+      scene: sw.sceneNote ?? "",
+      imageUrl: sw.spot.coverImageUrl ?? undefined,
+    }));
+  },
+  ["db-work-spots"],
+  { revalidate: 300, tags: ["works", "spots"] },
+);
 export async function getWorkSpots(workId: string): Promise<WorkSpot[]> {
   if (!USE_DB) {
     return mock.SPOTS.filter((s) => s.workId === workId).map((s) => ({
@@ -284,14 +300,7 @@ export async function getWorkSpots(workId: string): Promise<WorkSpot[]> {
       imageUrl: s.imageUrl,
     }));
   }
-  const row = await getWorkWithSpotsFromDb(workId);
-  if (!row) return [];
-  return row.spots.map((sw) => ({
-    id: sw.spot.id,
-    title: sw.spot.name,
-    scene: sw.sceneNote ?? "",
-    imageUrl: sw.spot.coverImageUrl ?? undefined,
-  }));
+  return cachedWorkSpots(workId);
 }
 
 // 작품 성지순례 진행률 = 로그인 유저가 이 작품의 스팟 중 방문 인증한 distinct 수 / 전체.

@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { RegisterSW } from "@/components/pwa/RegisterSW";
 import { InstallBanner } from "@/components/pwa/InstallBanner";
-import { getCurrentUser } from "@/lib/session";
 import { APP_URL } from "@/lib/app-url";
 
 export const metadata: Metadata = {
@@ -41,12 +40,13 @@ export const viewport: Viewport = {
   viewportFit: "cover", // 노치/상태바/홈 인디케이터 영역까지 콘텐츠 확장 허용 (edge-to-edge 필수 전제)
 };
 
-export default async function RootLayout({
+// 세션(getCurrentUser)을 여기서 읽으면 앱 전체가 동적 렌더로 굳어 CDN 캐시가 불가능해진다.
+// 로그인 여부가 필요한 설치 배너는 클라에서 /api/me로 자체 조회 → 레이아웃은 정적 유지.
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const user = await getCurrentUser();
   return (
     <html lang="ko">
       <head>
@@ -67,7 +67,7 @@ export default async function RootLayout({
       <body>
         {children}
         <RegisterSW />
-        {!user && <InstallBanner />}
+        <InstallBanner />
       </body>
     </html>
   );
