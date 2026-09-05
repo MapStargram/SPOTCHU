@@ -38,7 +38,7 @@ SPOTCHU: 한·일 사진 스팟/애니 성지를 **정확한 지도 위치와 �
 ## 5. 개발 작업 안전
 - 좌표 불변식: 스팟 좌표는 항상 **촬영자가 서는 위치**(`shooterLat/Lng`). 촬영 대상과 혼동 금지.
 - 도메인 용어는 glossary 준수(`Spot`, `CheckIn`, `verificationStatus`, `Collection`, `Work`).
-- 기술 스택 고정: Next.js(App Router)+TS+Tailwind, Auth.js(카카오·구글·애플), PostgreSQL+PostGIS+Prisma, Cloudinary(이미지), Vercel, Google Maps. 임의 대체 금지. 상세: [`docs/tech-stack.md`](docs/tech-stack.md).
+- 기술 스택 고정: Next.js(App Router)+TS+Tailwind, Auth.js(카카오·네이버·구글·애플), PostgreSQL+PostGIS+Prisma, Cloudinary(이미지), Vercel, Google Maps. 임의 대체 금지. 상세: [`docs/tech-stack.md`](docs/tech-stack.md).
 - 데이터 접근·권한 검사는 **서버**에서. 모든 외부 입력은 서버에서 스키마 검증(zod). 신뢰 경계 검증 생략 금지.
 - 커밋 전 `lint`·`typecheck` 통과. 비자명 로직엔 최소 1개 실행 가능한 테스트.
 
