@@ -51,9 +51,7 @@ export default async function WorkDetailScreen({
         {/* Hero */}
         <div
           className="relative h-[280px] overflow-hidden"
-          style={{
-            background: "linear-gradient(180deg, #2E3F5E 0%, #17233C 100%)",
-          }}
+          style={{ background: "#28324F" }}
         >
           <div
             className="pointer-events-none absolute -right-10 -top-10 h-[220px] w-[220px]"
