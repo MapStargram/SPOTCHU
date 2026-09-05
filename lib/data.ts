@@ -23,6 +23,7 @@ import { filterSpots, type SpotSearchCriteria } from "./search";
 import {
   getPostsByCityFromDb,
   getPostsBySpotFromDb,
+  getPostsByAuthorFromDb,
   getPostFromDb,
   getLikedPostIds,
   type FeedTab,
@@ -786,6 +787,22 @@ export async function getSpotPosts(spotId: string): Promise<FeedPost[]> {
         rows.map((r) => r.id),
       )
     : new Set<string>();
+  return rows.map((r) => mapDbPost(r, liked.has(r.id)));
+}
+
+// 프로필 "내 사진" — 내가 올린 게시물(최신순). 비로그인은 빈 배열(spec 09 surface ③).
+export async function getMyPosts(): Promise<FeedPost[]> {
+  if (!USE_DB) {
+    // 목업: 데모용으로 앞쪽 게시물 일부를 '내 것'처럼 표시(실제 판정은 authorId).
+    return mock.POSTS.slice(0, 9).map(mapMockPost);
+  }
+  const user = await getCurrentUser();
+  if (!user?.id) return [];
+  const rows = await getPostsByAuthorFromDb(user.id);
+  const liked = await getLikedPostIds(
+    user.id,
+    rows.map((r) => r.id),
+  );
   return rows.map((r) => mapDbPost(r, liked.has(r.id)));
 }
 
