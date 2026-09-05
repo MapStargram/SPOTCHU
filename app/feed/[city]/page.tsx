@@ -82,9 +82,11 @@ export default async function FeedPage({
           </Link>
         </header>
 
+        {/* py-1.5: 활성 탭 포커스 아웃라인(coral, offset 2px)이 overflow-x-auto에 위아래로
+            잘려 옆 탭과 겹쳐 보이던 문제 방지(세로 여백 확보). 링크는 rounded-full로 둥근 아웃라인. */}
         <nav
           aria-label="피드 정렬"
-          className="mt-4 flex gap-2 overflow-x-auto px-4 [scrollbar-width:none]"
+          className="mt-4 flex gap-2 overflow-x-auto px-4 py-1.5 [scrollbar-width:none]"
         >
           {TABS.map((t) => (
             <Link
@@ -92,6 +94,7 @@ export default async function FeedPage({
               href={`/feed/${city}?tab=${t.key}`}
               scroll={false}
               aria-current={tab === t.key ? "true" : undefined}
+              className="inline-flex rounded-full"
             >
               <Chip active={tab === t.key} dotColor={t.dot}>
                 {t.label}
