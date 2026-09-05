@@ -165,10 +165,11 @@ describe("checkInAction", () => {
       );
     }
 
-    const notif = await db.notification.findFirst({
+    // 승격 알림은 전이 1회에만 발행(불변식) — 정확히 1건이어야 한다(중복 발행 방지).
+    const promotedCount = await db.notification.count({
       where: { userId: reporterId, type: "SPOT_PROMOTED", refId: spotId },
     });
-    expect(notif).not.toBeNull();
+    expect(promotedCount).toBe(1);
 
     await db.userBadge.deleteMany({ where: { userId: { in: verifierIds } } });
     await db.checkIn.deleteMany({ where: { spotId } });
