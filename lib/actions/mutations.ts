@@ -99,16 +99,19 @@ export async function checkInAction(
     },
   });
 
-  // USER_REPORTED → USER_VERIFIED 자동 승격(서로 다른 3명 이상)
+  // USER_REPORTED → USER_VERIFIED 자동 승격(서로 다른 3명 이상).
+  // spot.verificationStatus는 위 findUnique(라인 44)의 스냅샷이라 동시 인증 시 stale일 수 있다 →
+  // 원자적 조건부 update(where에 현재 상태 포함)로 실제 전이한 1건만 count===1이 되게 하고,
+  // 그 1건에서만 알림을 발행한다(전이 1회 불변식 · 동시 임계 통과 시 중복 알림 방지).
   if (spot.verificationStatus === "USER_REPORTED") {
     const uniq = await db.checkIn.count({ where: { spotId } });
     if (uniq >= 3) {
-      await db.spot.update({
-        where: { id: spotId },
+      const promoted = await db.spot.updateMany({
+        where: { id: spotId, verificationStatus: "USER_REPORTED" },
         data: { verificationStatus: "USER_VERIFIED" },
       });
-      // 전이 1회에만 제보자 본인에게 승격 알림(rules §불변식: 이미 USER_VERIFIED면 재발행 안 함)
-      if (spot.createdById)
+      // 실제로 전이한 요청(count===1)에서만 제보자 본인에게 승격 알림.
+      if (promoted.count === 1 && spot.createdById)
         await createNotification(spot.createdById, "SPOT_PROMOTED", {
           refType: "SPOT",
           refId: spotId,
