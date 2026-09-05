@@ -1,16 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
 import { ShareButton } from "@/components/ui/ShareButton";
-import { getWork, getWorkSpots, getWorkProgress } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
+import { WorkProgress } from "@/components/work/WorkProgress";
+import { getWork, getWorkSpots } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 import { cldThumb } from "@/lib/cloudinary-url";
 
-// DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
-export const dynamic = "force-dynamic";
+// ISR: 정적 셸을 CDN 캐시(크롤러·공유링크 반복 로드 가속). 유저별 진행률만 클라(WorkProgress)에서 조회.
+// force-static: [id] 동적 세그먼트는 generateStaticParams 없이는 auto 모드에서 ƒ(비캐시)로 남는다 →
+// 명시적으로 정적 강제(요청별 온디맨드 렌더 후 캐시). 콘텐츠는 unstable_cache 태그로 /api/revalidate가
+// 즉시 무효화, 시간 폴백 300s. 이 라우트엔 동적 API(쿠키·헤더)가 없어 안전(dynamic="error"로 검증).
+export const dynamic = "force-static";
+export const revalidate = 300;
 
 // 작품 링크 공유·검색 노출용 메타데이터.
 export async function generateMetadata({
@@ -47,9 +52,6 @@ export default async function WorkDetailScreen({
   if (!w) notFound();
 
   const scenes = await getWorkSpots(id);
-  const prog = await getWorkProgress(id); // 로그인 유저 실제 방문 / 전체(비로그인·데모=0)
-  const progressPct =
-    prog.total > 0 ? Math.round((prog.visited / prog.total) * 100) : 0;
 
   return (
     <AppShell>
@@ -106,36 +108,8 @@ export default async function WorkDetailScreen({
           </div>
         </div>
 
-        {/* Progress card */}
-        <div className="relative z-10 -mt-7 mx-4 rounded-[20px] bg-white p-4 shadow-[shadow:var(--sh-elevated)]">
-          <div className="mb-2.5 flex items-baseline justify-between">
-            <div className="text-[13px] font-extrabold tracking-[-0.01em] text-navy">
-              성지순례 진행률
-            </div>
-            <div className="font-latin text-[18px] font-extrabold tracking-[-0.02em] text-coral">
-              {prog.visited}
-              <span className="text-[12px] text-[color:var(--muted)]">
-                /{prog.total}
-              </span>
-            </div>
-          </div>
-          <div className="h-2 overflow-hidden rounded-full bg-[color:var(--cream-2)]">
-            <div
-              className="h-full rounded-full"
-              style={{
-                width: `${progressPct}%`,
-                background: "var(--grad-body)",
-              }}
-            />
-          </div>
-          <div className="mt-2.5 flex items-center gap-2 text-[11px] text-[color:var(--muted)]">
-            <Sparkles size={14} className="shrink-0 text-yellow" aria-hidden />
-            <span>
-              전체 완주 시 <b className="text-navy">{w.title} 마스터</b> 배지
-              획득
-            </span>
-          </div>
-        </div>
+        {/* Progress card — 유저별 방문 수는 클라에서 조회(페이지는 ISR 캐시) */}
+        <WorkProgress workId={id} total={scenes.length} workTitle={w.title} />
 
         {/* Scenes */}
         <section className="mt-6 px-5">
