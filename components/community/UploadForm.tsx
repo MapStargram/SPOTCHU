@@ -20,10 +20,12 @@ export function UploadForm({
   loggedIn,
   initialSpot,
   verifiedFromCheckin,
+  quickPicks,
 }: {
   loggedIn: boolean;
   initialSpot: PickedSpot | null;
   verifiedFromCheckin: boolean;
+  quickPicks: PickedSpot[]; // 최근 방문·저장 스팟 — 검색 없이 한 번에 연결
 }) {
   const router = useRouter();
   // 로그인 후 이 업로드 화면(스팟·인증 컨텍스트 쿼리 포함)으로 복귀.
@@ -269,6 +271,29 @@ export function UploadForm({
                 </div>
               ) : (
                 <div className="rounded-2xl bg-[color:var(--cream-2)] p-3">
+                  {/* 빠른 선택 — 최근 방문·저장한 스팟을 한 번 탭으로 연결(검색 없이). 대부분 업로드는 여기서 끝. */}
+                  {quickPicks.length > 0 && (
+                    <div className="mb-2.5">
+                      <div className="mb-1.5 px-0.5 font-latin text-[10px] font-semibold uppercase tracking-[0.14em] text-[color:var(--muted)]">
+                        최근 · 저장한 스팟
+                      </div>
+                      <div className="flex flex-wrap gap-1.5">
+                        {quickPicks.map((q) => (
+                          <button
+                            key={q.id}
+                            type="button"
+                            onClick={() =>
+                              setSpot({ id: q.id, title: q.title })
+                            }
+                            className="inline-flex max-w-full items-center gap-1 rounded-full border border-[color:var(--line)] bg-white px-3 py-1.5 text-[12px] font-semibold text-navy active:scale-[0.98]"
+                          >
+                            <MapPin size={12} className="shrink-0 text-coral" />
+                            <span className="truncate">{q.title}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                   <div className="flex items-center gap-2 rounded-[12px] bg-white px-3 py-2">
                     <Search size={16} className="text-[color:var(--muted)]" />
                     <input
