@@ -816,6 +816,24 @@ export async function getSpotPosts(spotId: string): Promise<FeedPost[]> {
   return rows.map((r) => mapDbPost(r, liked.has(r.id)));
 }
 
+// 스팟 상세용 공개 방문자 사진(캐시). getSpotPosts는 getCurrentUser로 likedByMe를 계산해 라우트를
+// 동적화하지만, 스팟 상세의 사진 프리뷰엔 좋아요 버튼이 없어 유저별 상태가 불필요 → 세션을 건드리지
+// 않는 캐시 버전으로 ISR 가능하게. 태그(posts/spots)로 /api/revalidate·업로드 후 무효화 연동.
+const cachedSpotPostsPublic = unstable_cache(
+  async (spotId: string): Promise<FeedPost[]> => {
+    const rows = await getPostsBySpotFromDb(spotId);
+    return rows.map((r) => mapDbPost(r, false));
+  },
+  ["db-spot-posts-public"],
+  { revalidate: 300, tags: ["posts", "spots"] },
+);
+export async function getSpotPostsPublic(spotId: string): Promise<FeedPost[]> {
+  if (!USE_DB) {
+    return mock.POSTS.filter((p) => p.spotId === spotId).map(mapMockPost);
+  }
+  return cachedSpotPostsPublic(spotId);
+}
+
 // 프로필 "내 사진" — 내가 올린 게시물(최신순). 비로그인은 빈 배열(spec 09 surface ③).
 export async function getMyPosts(): Promise<FeedPost[]> {
   if (!USE_DB) {

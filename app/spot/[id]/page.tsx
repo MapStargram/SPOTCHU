@@ -17,12 +17,14 @@ import { Mascot } from "@/components/ui/Mascot";
 import { SpotImage } from "@/components/ui/SpotImage";
 import { Flag } from "@/components/ui/Flag";
 import { type Verified } from "@/lib/mock";
-import { getSpot, getWork, getCollections, getSpotPosts } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
-import { getCurrentUser } from "@/lib/session";
-import { getSavedSpotIds, getUserCheckedIn } from "@/lib/actions/mutations";
+import { getSpot, getWork, getSpotPostsPublic } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 
-// DB 조회(캐시됨) + 최신 반영을 위해 동적 렌더.
-export const dynamic = "force-dynamic";
+// ISR: 정적 셸을 CDN 캐시(크롤러·공유링크·반복 조회 가속). 유저별 상태(저장·체크인·컬렉션)는
+// 클라(SpotSaveHeart/SpotActions)가 /api/me/saved·/api/spot/[id]/me-state로 조회. 방문자 사진은
+// 공개 캐시본(getSpotPostsPublic). force-static: [id] 동적 세그먼트는 명시적 정적 강제 필요.
+// 데이터는 unstable_cache 태그(spots/works/posts)로 /api/revalidate 무효화 연동.
+export const dynamic = "force-static";
+export const revalidate = 300;
 
 // 스팟 링크 공유(카톡/SNS)·검색 노출용 메타데이터. 제목=스팟명, OG 이미지=대표 사진.
 export async function generateMetadata({
@@ -68,21 +70,12 @@ export default async function SpotDetailScreen({
   if (!s) notFound();
   const recTime = s.subtitle.split("·").pop()?.trim() ?? "-";
 
-  // s 확정 후 나머지는 서로 독립 — 순차 await 워터폴 대신 병렬로(Neon 왕복 합산 → 최댓값).
-  // getCurrentUser는 cache()라 아래 호출들이 내부에서 재호출해도 auth()는 1회.
-  const [work, user, collections, savedIds, checkedIn, posts] =
-    await Promise.all([
-      s.workId ? getWork(s.workId) : Promise.resolve(null),
-      getCurrentUser(),
-      getCollections(), // 저장 시트: 소유 컬렉션 + 이 스팟이 담긴 컬렉션 id(초기 선택)
-      getSavedSpotIds(), // 히어로 ♥ 초기 상태(로그인=DB, 게스트=[])
-      getUserCheckedIn(s.id), // '방문 완료' 상태(로그인 유저 인증 이력, 게스트=false)
-      getSpotPosts(s.id), // 방문자의 사진 = 이 스팟의 실제 게시물(없으면 빈 배열)
-    ]);
-  const ownCollections = collections.filter((c) => c.isOwn);
-  const savedIn = ownCollections
-    .filter((c) => c.spots.includes(s.id))
-    .map((c) => c.id);
+  // s 확정 후 공개 데이터만 병렬 로드(둘 다 캐시). 유저별 상태(저장·체크인·컬렉션)는
+  // 클라 컴포넌트가 마운트 시 조회 → 페이지는 정적 캐시 유지.
+  const [work, posts] = await Promise.all([
+    s.workId ? getWork(s.workId) : Promise.resolve(null),
+    getSpotPostsPublic(s.id), // 방문자의 사진 = 이 스팟의 실제 게시물(공개 캐시본)
+  ]);
 
   return (
     // noTabBar: 하단 체크인 CTA(SpotActions)가 탭바와 겹치지 않도록 상세는 탭바를 숨긴다(뒤로 버튼으로 이동).
@@ -126,11 +119,7 @@ export default async function SpotDetailScreen({
                 size={18}
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,249,242,0.9)] text-navy backdrop-blur active:scale-90"
               />
-              <SpotSaveHeart
-                spotId={s.id}
-                loggedIn={!!user}
-                initialSaved={savedIds}
-              />
+              <SpotSaveHeart spotId={s.id} />
             </div>
           </div>
           <div className="absolute inset-x-5 bottom-14 text-cream">
@@ -406,19 +395,7 @@ export default async function SpotDetailScreen({
           </div>
         </div>
 
-        <SpotActions
-          spotTitle={s.title}
-          spotId={s.id}
-          loggedIn={!!user}
-          collections={ownCollections.map((c) => ({
-            id: c.id,
-            title: c.title,
-            itemCount: c.itemCount,
-            coverGrad: c.coverGrad,
-          }))}
-          savedIn={savedIn}
-          checkedIn={checkedIn}
-        />
+        <SpotActions spotTitle={s.title} spotId={s.id} />
       </div>
     </AppShell>
   );

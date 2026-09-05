@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { loginHref } from "@/lib/login-url";
 import { Bookmark, Plus, Check, LogIn } from "lucide-react";
@@ -15,40 +15,64 @@ import { diffMembership } from "@/lib/collections";
 
 type Col = { id: string; title: string; itemCount: number; coverGrad: string };
 
+type MeState = {
+  loggedIn: boolean;
+  checkedIn: boolean;
+  savedIn: string[];
+  collections: Col[];
+};
+
 // D1/D3 하단 액션 행 + D4 저장 시트. 저장은 원탭→컬렉션 선택(PRD §15).
-// 시트는 사용자 소유 컬렉션(서버) 목록을 토글하고, 저장 시 추가/제거를 서버 액션에 반영.
+// 스팟 상세는 ISR 캐시라 유저별 상태(로그인·방문완료·소유 컬렉션·저장 위치)를 서버가 못 준다 →
+// 마운트 시 /api/spot/[id]/me-state로 조회. 조회 완료(loaded) 전엔 저장(북마크) 버튼을 막아
+// stale 상태로 인한 잘못된 저장/해제를 방지. 게스트는 시트에서 로그인 게이트를 본다.
 export function SpotActions({
   spotTitle,
   spotId,
-  loggedIn,
-  collections,
-  savedIn,
-  checkedIn = false,
 }: {
   spotTitle: string;
   spotId: string;
-  loggedIn: boolean;
-  collections: Col[];
-  savedIn: string[];
-  checkedIn?: boolean; // 로그인 유저가 이 스팟을 방문 인증한 적 있으면 '방문 완료'로 표기
 }) {
   const router = useRouter();
   const pathname = usePathname(); // 로그인 후 이 스팟으로 복귀(callbackUrl)
   const [open, setOpen] = useState(false);
-  const [cols, setCols] = useState<Col[]>(collections);
-  const [selected, setSelected] = useState<Set<string>>(new Set(savedIn));
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [checkedIn, setCheckedIn] = useState(false);
+  const [savedInIds, setSavedInIds] = useState<string[]>([]);
+  const [cols, setCols] = useState<Col[]>([]);
+  const [loaded, setLoaded] = useState(false);
+  const [selected, setSelected] = useState<Set<string>>(new Set());
   const [creating, setCreating] = useState(false);
   const [newTitle, setNewTitle] = useState("");
   const [saving, setSaving] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
 
+  // 유저별 상태 조회. 실패 시 게스트 기본값 유지(저장 흐름은 로그인 게이트로 안전).
+  useEffect(() => {
+    let alive = true;
+    fetch(`/api/spot/${spotId}/me-state`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: MeState | null) => {
+        if (!alive || !d) return;
+        setLoggedIn(!!d.loggedIn);
+        setCheckedIn(!!d.checkedIn);
+        setSavedInIds(Array.isArray(d.savedIn) ? d.savedIn : []);
+        setCols(Array.isArray(d.collections) ? d.collections : []);
+        setLoaded(true);
+      })
+      .catch(() => {
+        if (alive) setLoaded(true);
+      });
+    return () => {
+      alive = false;
+    };
+  }, [spotId]);
+
   // 다이얼로그 a11y: 포커스 진입·Esc·포커스 트랩·트리거 복귀(공통 훅).
   useFocusTrap(open, panelRef, () => setOpen(false));
 
-  // 열 때마다 최신 서버 props로 재동기화(저장 후 router.refresh 반영).
   const openSheet = () => {
-    setCols(collections);
-    setSelected(new Set(savedIn));
+    setSelected(new Set(savedInIds)); // 조회된 저장 위치로 초기 선택
     setCreating(false);
     setNewTitle("");
     setOpen(true);
@@ -90,14 +114,14 @@ export function SpotActions({
   const save = async () => {
     if (saving) return;
     setSaving(true);
-    const { added, removed } = diffMembership(savedIn, selected);
+    const { added, removed } = diffMembership(savedInIds, selected);
     await Promise.all([
       ...added.map((id) => saveSpotAction(spotId, id)),
       ...removed.map((id) => removeSpotAction(spotId, id)),
     ]);
     setSaving(false);
+    setSavedInIds([...selected]); // 로컬 반영(정적 페이지라 router.refresh는 유저상태를 못 되살림)
     setOpen(false);
-    router.refresh();
   };
 
   return (
@@ -123,8 +147,9 @@ export function SpotActions({
           )}
           <button
             onClick={openSheet}
+            disabled={!loaded}
             aria-label="컬렉션에 저장"
-            className="flex h-[52px] w-[52px] items-center justify-center rounded-2xl border border-[color:var(--line)] bg-white text-navy active:scale-[0.98]"
+            className="flex h-[52px] w-[52px] items-center justify-center rounded-2xl border border-[color:var(--line)] bg-white text-navy transition active:scale-[0.98] disabled:opacity-60"
           >
             <Bookmark size={22} />
           </button>
