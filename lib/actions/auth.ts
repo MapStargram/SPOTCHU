@@ -254,3 +254,208 @@ export async function disconnectProvider(provider: string): Promise<Result> {
   await db.account.deleteMany({ where: { userId: me.id, provider } });
   return { ok: true };
 }
+
+// 이미 다른 계정이 쓰던 소셜을 지금 계정에 합친다. auth.ts의 signIn 콜백이 발급한 병합
+// 토큰만 받는다 — source 쪽 사용자 id는 토큰에 절대 담기지 않고, provider:providerAccountId로
+// 지금 시점에 항상 새로 조회한다(그 사이 연결 해제·재연결됐을 수 있어, 신뢰 가능한 값은
+// 이것뿐 — 클라이언트가 임의 userId를 주입해 남의 계정을 병합해가는 걸 막는 핵심 장치).
+// mergeSpotsAction(lib/actions/moderation.ts)과 동일한 패턴: 유니크 제약 있는 관계는
+// move/drop dedup, 그 외는 전량 이관, 마지막에 빈 계정 삭제.
+export async function mergeAccount(token: string): Promise<Result> {
+  const me = await getCurrentUser();
+  if (!me?.id) return { ok: false, error: "로그인이 필요합니다" };
+
+  const payload = await consumeToken(token, "merge"); // "provider:providerAccountId", 1회용
+  if (!payload)
+    return { ok: false, error: "만료되었거나 유효하지 않은 링크입니다" };
+
+  const sep = payload.indexOf(":");
+  const provider = payload.slice(0, sep);
+  const providerAccountId = payload.slice(sep + 1);
+
+  const sourceAccount = await db.account.findUnique({
+    where: { provider_providerAccountId: { provider, providerAccountId } },
+    select: { userId: true },
+  });
+  if (!sourceAccount)
+    return {
+      ok: false,
+      error: "연결할 계정을 찾을 수 없어요. 다시 시도해주세요.",
+    };
+
+  const sourceUserId = sourceAccount.userId;
+  if (sourceUserId === me.id)
+    return { ok: false, error: "이미 지금 계정에 연결되어 있어요" };
+
+  await db.$transaction(async (tx) => {
+    // 집계 재계산 대상 스팟을 먼저 모은다(이관/삭제로 행이 사라지기 전에 source를 스냅샷).
+    const [sourceCheckIns, sourceLikes] = await Promise.all([
+      tx.checkIn.findMany({
+        where: { userId: sourceUserId },
+        select: { id: true, spotId: true },
+      }),
+      tx.like.findMany({
+        where: { userId: sourceUserId },
+        select: { id: true, postId: true, post: { select: { spotId: true } } },
+      }),
+    ]);
+    const touchedSpotIds = new Set([
+      ...sourceCheckIns.map((c) => c.spotId),
+      ...sourceLikes.map((l) => l.post.spotId),
+    ]);
+
+    // Account — unique[provider,providerAccountId](userId 미포함) → 충돌 불가, 전량 이관.
+    // 이 provider의 Account 행 자체가 지금 계정 소속이 되므로, 이후 이 소셜로도 지금 계정에 로그인된다.
+    await tx.account.updateMany({
+      where: { userId: sourceUserId },
+      data: { userId: me.id },
+    });
+
+    // Collection — 유니크 없음 → 전량 이관. 양쪽에 기본 컬렉션(isDefault)이 있으면
+    // 흡수되는(source) 쪽만 해제(중복 방지, 지금 계정 기본 컬렉션은 그대로 유지).
+    const [targetDefault, sourceDefault] = await Promise.all([
+      tx.collection.findFirst({
+        where: { ownerId: me.id, isDefault: true },
+        select: { id: true },
+      }),
+      tx.collection.findFirst({
+        where: { ownerId: sourceUserId, isDefault: true },
+        select: { id: true },
+      }),
+    ]);
+    if (sourceDefault && targetDefault)
+      await tx.collection.update({
+        where: { id: sourceDefault.id },
+        data: { isDefault: false },
+      });
+    await tx.collection.updateMany({
+      where: { ownerId: sourceUserId },
+      data: { ownerId: me.id },
+    });
+
+    // Post — 유니크 없음 → 전량 이관(좋아요는 Like.userId로 아래서 별도 처리).
+    await tx.post.updateMany({
+      where: { authorId: sourceUserId },
+      data: { authorId: me.id },
+    });
+
+    // Spot.createdById(제보 귀속, nullable) — 유니크 없음 → 전량 이관.
+    await tx.spot.updateMany({
+      where: { createdById: sourceUserId },
+      data: { createdById: me.id },
+    });
+
+    // Report — 유니크 없음 → 전량 이관.
+    await tx.report.updateMany({
+      where: { reporterId: sourceUserId },
+      data: { reporterId: me.id },
+    });
+
+    // Notification — 유니크 없음 → 전량 이관(중복처럼 보이는 알림이 생길 수 있으나 정합성 문제 아님).
+    await tx.notification.updateMany({
+      where: { userId: sourceUserId },
+      data: { userId: me.id },
+    });
+
+    // Like — unique[postId,userId]: 지금 계정이 이미 같은 post에 좋아요면 source 것은 버리고, 아니면 이관.
+    {
+      const targetPostIds = new Set(
+        (
+          await tx.like.findMany({
+            where: { userId: me.id },
+            select: { postId: true },
+          })
+        ).map((r) => r.postId),
+      );
+      const move = sourceLikes
+        .filter((r) => !targetPostIds.has(r.postId))
+        .map((r) => r.id);
+      const drop = sourceLikes
+        .filter((r) => targetPostIds.has(r.postId))
+        .map((r) => r.id);
+      if (move.length)
+        await tx.like.updateMany({
+          where: { id: { in: move } },
+          data: { userId: me.id },
+        });
+      if (drop.length)
+        await tx.like.deleteMany({ where: { id: { in: drop } } });
+    }
+
+    // CheckIn — unique[userId,spotId]: 지금 계정에 없는 스팟만 이관, 겹치면 source 것을 제거.
+    {
+      const targetSpotIds = new Set(
+        (
+          await tx.checkIn.findMany({
+            where: { userId: me.id },
+            select: { spotId: true },
+          })
+        ).map((r) => r.spotId),
+      );
+      const move = sourceCheckIns
+        .filter((r) => !targetSpotIds.has(r.spotId))
+        .map((r) => r.id);
+      const drop = sourceCheckIns
+        .filter((r) => targetSpotIds.has(r.spotId))
+        .map((r) => r.id);
+      if (move.length)
+        await tx.checkIn.updateMany({
+          where: { id: { in: move } },
+          data: { userId: me.id },
+        });
+      if (drop.length)
+        await tx.checkIn.deleteMany({ where: { id: { in: drop } } });
+    }
+
+    // UserBadge — unique[userId,badgeId,context]: 동일 배지·컨텍스트 중복은 제거.
+    {
+      const targetKeys = new Set(
+        (
+          await tx.userBadge.findMany({
+            where: { userId: me.id },
+            select: { badgeId: true, context: true },
+          })
+        ).map((r) => `${r.badgeId}:${r.context}`),
+      );
+      const rows = await tx.userBadge.findMany({
+        where: { userId: sourceUserId },
+        select: { id: true, badgeId: true, context: true },
+      });
+      const move = rows
+        .filter((r) => !targetKeys.has(`${r.badgeId}:${r.context}`))
+        .map((r) => r.id);
+      const drop = rows
+        .filter((r) => targetKeys.has(`${r.badgeId}:${r.context}`))
+        .map((r) => r.id);
+      if (move.length)
+        await tx.userBadge.updateMany({
+          where: { id: { in: move } },
+          data: { userId: me.id },
+        });
+      if (drop.length)
+        await tx.userBadge.deleteMany({ where: { id: { in: drop } } });
+    }
+
+    // dedup으로 행이 줄었을 수 있는 스팟만 집계 재계산. CheckIn이 [userId,spotId] 유니크라
+    // checkinCount(전체)와 uniqueCheckinCount(고유 방문자)는 항상 같다(mergeSpotsAction과 동일 불변식).
+    // saveCount는 CollectionItem 소관이라 이 시나리오에서 건드릴 이유가 없다(각자 자기 컬렉션에
+    // 같은 스팟을 저장한 건 중복이 아니라 그대로 유효한 별개 저장).
+    for (const spotId of touchedSpotIds) {
+      const [checkinCount, likeSum] = await Promise.all([
+        tx.checkIn.count({ where: { spotId } }),
+        tx.like.count({ where: { post: { spotId } } }),
+      ]);
+      await tx.spot.update({
+        where: { id: spotId },
+        data: { checkinCount, uniqueCheckinCount: checkinCount, likeSum },
+      });
+    }
+
+    // source User 삭제 — 위에서 모든 관계가 이미 이관/dedup됨. Session은 JWT 세션 전략이라
+    // 사실상 미사용 테이블이므로 명시 이관 없이 cascade에 맡긴다. 프로필성 필드(닉네임·이메일·
+    // 동의이력·역할 등)는 지금 계정 것을 그대로 유지 — source에서 복사해오지 않는다.
+    await tx.user.delete({ where: { id: sourceUserId } });
+  });
+
+  return { ok: true };
+}

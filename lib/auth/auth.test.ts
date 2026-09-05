@@ -55,7 +55,7 @@ describe("token identifier (교차용도 차단)", () => {
     const id = buildIdentifier("verify", "cuid_abc123");
     expect(parseIdentifier(id)).toEqual({
       purpose: "verify",
-      userId: "cuid_abc123",
+      payload: "cuid_abc123",
     });
   });
   it("verify 토큰의 purpose는 reset과 구별된다", () => {
@@ -64,6 +64,13 @@ describe("token identifier (교차용도 차단)", () => {
     expect(v.purpose).toBe("verify");
     expect(r.purpose).toBe("reset");
     expect(v.purpose === "reset").toBe(false); // consumeToken의 교차용도 거부 근거
+  });
+  it("merge payload(provider:providerAccountId)는 콜론이 있어도 첫 콜론 기준으로만 분리된다", () => {
+    const id = buildIdentifier("merge", "kakao:1234567890");
+    expect(parseIdentifier(id)).toEqual({
+      purpose: "merge",
+      payload: "kakao:1234567890",
+    });
   });
 });
 
