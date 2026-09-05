@@ -668,7 +668,8 @@ export async function getBadgeCards(): Promise<BadgeCard[]> {
     });
   }
 
-  // 최초 제보자 배지(트리거는 feature 10 — 미배선 시 잠금 표시)
+  // 최초 제보자 배지 — 제보한 스팟이 USER_VERIFIED로 승격될 때 지급(#205). context="" 단일이라
+  // held에 "first-reporter:"가 있으면 earned, 없으면 잠금(미획득) 표시.
   cards.push({
     id: "first-reporter",
     title: "최초 제보자",
