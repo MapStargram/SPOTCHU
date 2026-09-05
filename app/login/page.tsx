@@ -52,7 +52,9 @@ const PROVIDERS = [
 function authErrorMessage(code: string): string {
   switch (code) {
     case "OAuthAccountNotLinked":
-      return "이미 다른 계정에 연결된 소셜 로그인이에요. 기존 로그인 수단으로 로그인한 뒤 설정 > 연결된 로그인에서 추가해 주세요.";
+      // 이 소셜이 '다른' 스팟츄 계정에 이미 물려 있는 경우 → 설정 연결로도 못 가져오므로(순환 안내 방지)
+      // 그 소셜로 직접 로그인하도록 안내한다.
+      return "이 소셜 계정은 이미 다른 스팟츄 계정에 연결돼 있어요. 그 소셜 버튼으로 바로 로그인하면 해당 계정으로 이용할 수 있어요.";
     default:
       return "로그인 중 문제가 발생했어요. 다시 시도해 주세요.";
   }
