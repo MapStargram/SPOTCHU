@@ -27,11 +27,14 @@ export function PinGrid({
   city,
   loggedIn = false,
   initialSaved = [],
+  remoteSaved = false,
 }: {
   spots: PinCard[];
   city: string;
   loggedIn?: boolean;
   initialSaved?: string[];
+  // 정적(ISR) 페이지는 서버가 저장상태를 모른다 → 클라에서 /api/me/saved로 조회(remote 모드).
+  remoteSaved?: boolean;
 }) {
   const cats = [
     "전체",
@@ -39,7 +42,9 @@ export function PinGrid({
   ];
   const [cat, setCat] = useState("전체");
   const [sort, setSort] = useState<"popular" | "recent" | "rating">("popular");
-  const { toggle, isSaved } = useSaved({ loggedIn, initial: initialSaved });
+  const { toggle, isSaved, ready } = useSaved(
+    remoteSaved ? { remote: true } : { loggedIn, initial: initialSaved },
+  );
   const filtered =
     cat === "전체" ? spots : spots.filter((s) => s.categoryLabel === cat);
   // 최신순 = 데이터 추가 역순(리서치 스팟이 뒤에 붙음). 그 외는 방문/평점 내림차순.
@@ -154,12 +159,13 @@ export function PinGrid({
           </div>
         </Link>
 
-        {/* 빠른 저장(북마크) */}
+        {/* 빠른 저장(북마크). remote 모드는 저장상태 조회 완료(ready) 전 비활성 → 오토글 방지. */}
         <button
           onClick={() => toggle(s.id)}
+          disabled={!ready}
           aria-label={saved ? "저장 취소" : "저장"}
           aria-pressed={saved}
-          className={`absolute right-2 top-2 z-10 flex h-9 w-9 items-center justify-center rounded-full backdrop-blur-sm transition active:scale-90 ${
+          className={`absolute right-2 top-2 z-10 flex h-9 w-9 items-center justify-center rounded-full backdrop-blur-sm transition active:scale-90 disabled:cursor-default disabled:opacity-60 ${
             saved ? "bg-coral text-white" : "bg-black/35 text-white"
           }`}
         >

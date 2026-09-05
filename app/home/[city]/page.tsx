@@ -9,12 +9,12 @@ import { PinGrid } from "@/components/home/PinGrid";
 import { SpotImage } from "@/components/ui/SpotImage";
 import { type CityId } from "@/lib/mock";
 import { getCity, getCities, getSpot, getSpotsByCity } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
-import { getCurrentUser } from "@/lib/session";
-import { getSavedSpotIds } from "@/lib/actions/mutations";
 
-// 세션(로그인 유저·저장목록)을 매 요청 반영해야 하므로 동적 렌더.
-// (getCurrentUser의 try/catch가 동적 신호를 삼켜 정적으로 굳는 것 방지)
-export const dynamic = "force-dynamic";
+// ISR: 공개 콘텐츠(도시 히어로+스팟 그리드)를 CDN 캐시. 유저별 저장(♥) 상태는 서버 렌더에서 빼고
+// PinGrid(remoteSaved)가 /api/me/saved로 조회. [city] 동적 세그먼트라 force-static 필요(work/[id]와 동일).
+// 데이터는 cachedSpotsByCity/cachedSpot(태그 spots)로 /api/revalidate 연동.
+export const dynamic = "force-static";
+export const revalidate = 300;
 
 // 도시 홈 공유·검색 노출용 메타데이터.
 export async function generateMetadata({
@@ -57,12 +57,10 @@ export default async function HomeScreen({
   }
 
   const heroId = CITY_HERO[city as CityId];
-  // getCity 가드(리다이렉트) 이후는 서로 독립 — 순차 await 대신 병렬 로드.
-  const [all, heroMaybe, user, savedIds] = await Promise.all([
+  // getCity 가드(리다이렉트) 이후는 서로 독립 — 순차 await 대신 병렬 로드(둘 다 캐시).
+  const [all, heroMaybe] = await Promise.all([
     getSpotsByCity(city as CityId),
     heroId ? getSpot(heroId) : Promise.resolve(undefined),
-    getCurrentUser(),
-    getSavedSpotIds(), // 로그인 시 DB, 게스트는 []
   ]);
   const heroSpot = heroMaybe ?? all[0];
   if (!heroSpot) notFound(); // 스팟이 아직 없는 도시
@@ -154,12 +152,7 @@ export default async function HomeScreen({
             {gridSpots.length}곳
           </span>
         </div>
-        <PinGrid
-          spots={gridSpots}
-          city={city}
-          loggedIn={!!user}
-          initialSaved={savedIds}
-        />
+        <PinGrid spots={gridSpots} city={city} remoteSaved />
       </div>
     </AppShell>
   );
