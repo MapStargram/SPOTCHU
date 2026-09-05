@@ -207,7 +207,7 @@ export function CityMap({ counts }: { counts?: Record<string, number> }) {
               key={c.id}
               onClick={() => onCountry(c)}
               aria-label={`${c.name}${avail ? ` ${spots}개 스팟` : " 준비 중"}`}
-              className={`absolute z-10 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1 whitespace-nowrap rounded-full px-2 py-1 text-[11px] font-bold shadow-[0_2px_8px_rgba(0,0,0,0.35)] transition hover:scale-105 ${
+              className={`absolute z-10 flex -translate-x-1/2 -translate-y-1/2 items-center gap-1 whitespace-nowrap rounded-full px-3.5 py-1 text-[11px] font-bold shadow-[0_2px_8px_rgba(0,0,0,0.35)] transition hover:scale-105 ${
                 avail
                   ? "border border-[color:var(--coral)] bg-white text-navy"
                   : "border border-white/30 bg-[color:var(--muted)] text-cream"
