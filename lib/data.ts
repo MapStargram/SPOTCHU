@@ -220,17 +220,25 @@ export async function getSpot(id: string): Promise<Spot | undefined> {
 }
 
 // 도시별 실제 스팟 수(도시 선택 카드용). 하드코딩 데모값이 아니라 실데이터에서 집계.
+// 캐시(태그 spots) — 미캐시 groupBy는 Next 15 auto 모드에서 /city를 동적화해 CDN 캐시를 막는다.
+const cachedCitySpotCounts = unstable_cache(
+  async () => {
+    const rows = await db.spot.groupBy({
+      by: ["cityId"],
+      _count: { _all: true },
+    });
+    return Object.fromEntries(rows.map((r) => [r.cityId, r._count._all]));
+  },
+  ["db-city-spot-counts"],
+  { revalidate: 300, tags: ["spots"] },
+);
 export async function getCitySpotCounts(): Promise<Record<string, number>> {
   if (!USE_DB) {
     const out: Record<string, number> = {};
     for (const c of mock.CITIES) out[c.id] = mock.spotsByCity(c.id).length;
     return out;
   }
-  const rows = await db.spot.groupBy({
-    by: ["cityId"],
-    _count: { _all: true },
-  });
-  return Object.fromEntries(rows.map((r) => [r.cityId, r._count._all]));
+  return cachedCitySpotCounts();
 }
 
 // ── 작품(Work) ──

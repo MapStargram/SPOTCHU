@@ -6,7 +6,9 @@ import { getCitySpotCounts } from "@/lib/data";
 
 // B1 · 도시 선택 — 기본 평면 세계지도(전 국가 마커 한눈에) + 지구본 토글. CityPicker가 두 뷰를 전환.
 // 도시별 스팟 수는 실데이터(DB/목업)에서 집계해 카드에 표시(하드코딩 데모값 아님).
-export const dynamic = "force-dynamic";
+// 공개 콘텐츠(유저 상태 없음) → ISR/CDN 캐시. 카운트는 unstable_cache 태그(spots)로 revalidate 연동.
+export const dynamic = "force-static";
+export const revalidate = 300;
 
 export default async function CityPickerScreen() {
   const counts = await getCitySpotCounts();
