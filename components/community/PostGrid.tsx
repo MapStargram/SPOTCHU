@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Images, Check } from "lucide-react";
+import { Images, Check, Camera } from "lucide-react";
 import { cldThumb } from "@/lib/cloudinary-url";
 import type { FeedPost } from "@/lib/data";
 
@@ -14,9 +14,8 @@ export function PostGrid({ posts }: { posts: FeedPost[] }) {
           href={`/post/${p.id}`}
           aria-label={p.caption || `${p.spotTitle} 사진`}
           className="relative aspect-square overflow-hidden rounded-lg bg-[color:var(--cream-2)]"
-          style={p.images[0] ? undefined : { background: p.gradient }}
         >
-          {p.images[0] && (
+          {p.images[0] ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={cldThumb(p.images[0], 480)}
@@ -24,6 +23,14 @@ export function PostGrid({ posts }: { posts: FeedPost[] }) {
               loading="lazy"
               className="absolute inset-0 h-full w-full object-cover"
             />
+          ) : (
+            // 사진 없는 게시물 — 화려한 그라디언트 대신 중립 회색 플레이스홀더(빈 사진 슬롯 느낌).
+            <span
+              className="absolute inset-0 flex items-center justify-center bg-[color:var(--line)] text-[color:var(--muted-soft)]"
+              aria-hidden
+            >
+              <Camera size={22} />
+            </span>
           )}
           {/* 여러 장 표시 */}
           {p.images.length > 1 && (
