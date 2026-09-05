@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFocusTrap } from "@/lib/useFocusTrap";
 import { SpotImage } from "@/components/ui/SpotImage";
 import Link from "next/link";
@@ -61,6 +61,32 @@ export function CollectionDetail({
   const [savingVis, setSavingVis] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [copied, setCopied] = useState(false);
+
+  // 지도 뷰: 하단 카드 캐러셀에서 중앙에 온 카드를 '활성'으로 → 지도 마커 강조 + 그 위치로 이동.
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [activeId, setActiveId] = useState<string | null>(items[0]?.id ?? null);
+  // items 변경(제거·재정렬)으로 활성 스팟이 사라지면 첫 스팟으로 되돌림.
+  useEffect(() => {
+    if (!items.some((s) => s.id === activeId))
+      setActiveId(items[0]?.id ?? null);
+  }, [items, activeId]);
+  // 캐러셀 스크롤 → 컨테이너 중앙에 가장 가까운 카드를 활성으로.
+  const onCarouselScroll = () => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const center = el.scrollLeft + el.clientWidth / 2;
+    let bestId: string | null = null;
+    let bestDist = Infinity;
+    for (const child of Array.from(el.children) as HTMLElement[]) {
+      const cardCenter = child.offsetLeft + child.offsetWidth / 2;
+      const d = Math.abs(cardCenter - center);
+      if (d < bestDist) {
+        bestDist = d;
+        bestId = child.dataset.spotId ?? null;
+      }
+    }
+    if (bestId && bestId !== activeId) setActiveId(bestId);
+  };
 
   // 순서 이동(위/아래). 지도 동선·번호도 items 기준이라 함께 갱신.
   const move = (i: number, dir: -1 | 1) =>
@@ -347,7 +373,11 @@ export function CollectionDetail({
       ) : (
         <div className="relative flex-1 overflow-hidden bg-[#DDE5EE]">
           {/* 실제 지도(핀=촬영자 위치, 번호=순서, 점선=동선). 키 없으면 폴백 배경. */}
-          {KEY ? <CollectionMap spots={items} /> : <MapBackground />}
+          {KEY ? (
+            <CollectionMap spots={items} activeId={activeId} />
+          ) : (
+            <MapBackground />
+          )}
           {/* Top bar */}
           <div className="absolute inset-x-4 top-14 z-10 flex items-center justify-between">
             <button
@@ -381,12 +411,19 @@ export function CollectionDetail({
             {toggle}
           </div>
           {/* Carousel — 담긴 스팟 스와이프(실사진·번호) */}
-          <div className="absolute inset-x-0 bottom-[calc(100px+env(safe-area-inset-bottom))] z-[9] flex gap-2.5 overflow-x-auto px-3.5 [scrollbar-width:none]">
+          <div
+            ref={carouselRef}
+            onScroll={onCarouselScroll}
+            className="absolute inset-x-0 bottom-[calc(100px+env(safe-area-inset-bottom))] z-[9] flex gap-2.5 overflow-x-auto px-3.5 [scrollbar-width:none]"
+          >
             {items.map((s, i) => (
               <Link
                 key={s.id}
                 href={`/spot/${s.id}`}
-                className="flex w-[260px] shrink-0 items-center gap-2.5 rounded-2xl bg-white p-3 shadow-[shadow:var(--sh-elevated)]"
+                data-spot-id={s.id}
+                className={`flex w-[260px] shrink-0 items-center gap-2.5 rounded-2xl bg-white p-3 shadow-[shadow:var(--sh-elevated)] transition ${
+                  s.id === activeId ? "ring-2 ring-coral" : ""
+                }`}
               >
                 <div
                   className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl"
