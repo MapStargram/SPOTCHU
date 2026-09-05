@@ -34,6 +34,15 @@ import type { Collection, Spot } from "@/lib/mock";
 
 const KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
+// 히어로 배경 — 그라데이션 대신 플랫 다크 톤(크림 텍스트 대비 확보). 목록 카드 tint(peach/mint/
+// periwinkle/sage)와 같은 해시 순서라 카드↔상세가 같은 색 계열로 이어진다.
+const HERO_BG = ["#8A4E33", "#1F6F66", "#28324F", "#3A5A40"];
+function pickHeroBg(id: string): string {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) | 0;
+  return HERO_BG[Math.abs(h) % HERO_BG.length];
+}
+
 export function CollectionDetail({
   col,
   spots,
@@ -213,7 +222,7 @@ export function CollectionDetail({
           {/* Hero */}
           <div
             className="relative h-[240px] overflow-hidden"
-            style={{ background: col.coverGrad }}
+            style={{ background: pickHeroBg(col.id) }}
           >
             <div
               className="pointer-events-none absolute -right-10 -top-10 h-44 w-44"
