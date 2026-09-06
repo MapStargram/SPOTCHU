@@ -3,7 +3,14 @@ import Link from "next/link";
 import { AppShell } from "@/components/shell/AppShell";
 import { FeedView } from "@/components/explore/FeedView";
 import { SearchControls } from "@/components/explore/SearchControls";
-import { getCategories, getCities, getWorks, searchSpots } from "@/lib/data";
+import { CityCourses } from "@/components/home/CityCourses";
+import {
+  getCategories,
+  getCities,
+  getWorks,
+  searchSpots,
+  getOfficialCollections,
+} from "@/lib/data";
 import { getCurrentUser } from "@/lib/session";
 import { getSavedSpotIds } from "@/lib/actions/mutations";
 import { CITIES } from "@/lib/cities-catalog";
@@ -86,18 +93,34 @@ async function SearchResults({
 }: {
   params: ReturnType<typeof toParams>;
 }) {
-  const [spots, user, savedIds] = await Promise.all([
+  const q = params.q?.trim().toLowerCase();
+  const [spots, user, savedIds, officialCols] = await Promise.all([
     searchSpots(params),
     getCurrentUser(),
     getSavedSpotIds(),
+    q ? getOfficialCollections() : Promise.resolve([]),
   ]);
-  if (spots.length === 0) return <EmptyState params={params} />;
+  // 텍스트 검색 시 제목·부제(수록 작품)가 일치하는 공식 코스를 스팟 위에 함께 노출(발견성).
+  const matchedCourses = q
+    ? officialCols.filter((c) =>
+        `${c.title} ${c.subtitle}`.toLowerCase().includes(q),
+      )
+    : [];
+  if (spots.length === 0 && matchedCourses.length === 0)
+    return <EmptyState params={params} />;
   return (
     <section aria-label="검색 결과">
-      <div className="mb-3 font-latin text-[11px] text-[color:var(--muted)]">
-        {spots.length}개 결과
-      </div>
-      <FeedView spots={spots} loggedIn={!!user} initialSaved={savedIds} />
+      {matchedCourses.length > 0 && (
+        <CityCourses courses={matchedCourses} heading="관련 코스" />
+      )}
+      {spots.length > 0 && (
+        <div className={matchedCourses.length > 0 ? "mt-7" : ""}>
+          <div className="mb-3 font-latin text-[11px] text-[color:var(--muted)]">
+            {spots.length}개 스팟
+          </div>
+          <FeedView spots={spots} loggedIn={!!user} initialSaved={savedIds} />
+        </div>
+      )}
     </section>
   );
 }
