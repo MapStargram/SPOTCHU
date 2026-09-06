@@ -31,6 +31,7 @@ function toParams(raw: Raw) {
     category: first(raw.category),
     work: first(raw.work),
     verified: first(raw.verified),
+    sort: first(raw.sort),
   };
 }
 
