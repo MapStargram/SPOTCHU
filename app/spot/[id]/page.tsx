@@ -19,7 +19,7 @@ import { DirectionsButton } from "@/components/spot/DirectionsButton";
 import { Spot3DSection } from "@/components/spot/Spot3DSection";
 import { SafetyBanner } from "@/components/spot/SafetyBanner";
 import { SpotJsonLd } from "@/components/seo/SpotJsonLd";
-import { SpotViewBeacon } from "@/components/analytics/SpotViewBeacon";
+import { ViewBeacon } from "@/components/analytics/ViewBeacon";
 import { ShareButton } from "@/components/ui/ShareButton";
 import { Mascot } from "@/components/ui/Mascot";
 import { SpotImage } from "@/components/ui/SpotImage";
@@ -96,7 +96,7 @@ export default async function SpotDetailScreen({
     // noTabBar: 하단 체크인 CTA(SpotActions)가 탭바와 겹치지 않도록 상세는 탭바를 숨긴다(뒤로 버튼으로 이동).
     <AppShell noTabBar>
       <SpotJsonLd spot={s} />
-      <SpotViewBeacon spotId={s.id} />
+      <ViewBeacon spotId={s.id} />
       <div className="relative mx-auto flex w-full max-w-[500px] flex-col bg-cream pb-28 lg:max-w-[720px]">
         {/* Hero (D1) */}
         <div

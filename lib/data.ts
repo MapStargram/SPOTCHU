@@ -23,6 +23,7 @@ import { filterSpots, type SpotSearchCriteria } from "./search";
 import {
   countDiscoveryUsers,
   countDiscoveryBySource,
+  countWorkViewsByWork,
 } from "./actions/analytics";
 import {
   getPostsByCityFromDb,
@@ -978,6 +979,7 @@ export interface MetricsOverview {
   funnel: FunnelRow[]; // 발견→저장→컬렉션→인증→업로드(발견은 SpotView에서 파생)
   coverage: CityCoverage[];
   discoverySources: { source: string; count: number }[]; // 발견 경로 분포(SpotView.source)
+  topWorks: { workId: string; title: string; viewers: number }[]; // 조회 상위 작품(WorkView)
 }
 
 export async function getMetricsOverview(): Promise<MetricsOverview> {
@@ -1016,6 +1018,11 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
         { source: "work", count: 45 },
         { source: "direct", count: 30 },
       ],
+      topWorks: [
+        { workId: "your-name", title: "너의 이름은.", viewers: 88 },
+        { workId: "decision-to-leave", title: "헤어질 결심", viewers: 61 },
+        { workId: "parasite", title: "기생충", viewers: 47 },
+      ],
     };
   }
 
@@ -1031,6 +1038,7 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
     byStatus,
     discoveryUsers,
     discoverySources,
+    workViewCounts,
   ] = await Promise.all([
     db.checkIn.count(),
     db.collection.findMany({
@@ -1055,7 +1063,22 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
     }),
     countDiscoveryUsers(), // 발견 단계: 스팟을 조회한 distinct 로그인 유저(SpotView, #분석 파이프라인)
     countDiscoveryBySource(), // 발견 경로 분포(source)
+    countWorkViewsByWork(10), // 조회 상위 작품(콘텐츠 관심 신호)
   ]);
+
+  // 상위 작품 id → 제목 해소(WorkView는 FK 없는 이벤트라 별도 조회).
+  const workTitles = workViewCounts.length
+    ? await db.work.findMany({
+        where: { id: { in: workViewCounts.map((w) => w.workId) } },
+        select: { id: true, title: true },
+      })
+    : [];
+  const titleOf = new Map(workTitles.map((w) => [w.id, w.title]));
+  const topWorks = workViewCounts.map((w) => ({
+    workId: w.workId,
+    title: titleOf.get(w.workId) ?? w.workId, // 삭제된 작품이면 id 표시
+    viewers: w.viewers,
+  }));
 
   const funnel = buildFunnel({
     discovery: discoveryUsers, // 조회 이벤트(SpotView) distinct 유저 — 이제 파생 집계됨
@@ -1087,5 +1110,5 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
     })
     .filter((c) => c.spotCount > 0);
 
-  return { nsm, funnel, coverage, discoverySources };
+  return { nsm, funnel, coverage, discoverySources, topWorks };
 }

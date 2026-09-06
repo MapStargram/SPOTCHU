@@ -9,6 +9,9 @@ import {
   countDiscoveryUsers,
   countDiscoveryBySource,
   pruneOldSpotViews,
+  recordWorkView,
+  countWorkViewsByWork,
+  pruneOldWorkViews,
 } from "./analytics";
 
 const db = new PrismaClient();
@@ -32,6 +35,7 @@ describe("recordSpotView / countDiscoveryUsers", () => {
 
   afterEach(async () => {
     await db.spotView.deleteMany({ where: { userId: { in: [userA, userB] } } });
+    await db.workView.deleteMany({ where: { userId: { in: [userA, userB] } } });
     await db.user.deleteMany({ where: { id: { in: [userA, userB] } } });
   });
 
@@ -82,6 +86,54 @@ describe("recordSpotView / countDiscoveryUsers", () => {
     // null(1)+direct(1)이 단일 'direct' 항목으로 병합됐는지 — Map 병합 회귀 방지
     expect(all.filter((d) => d.source === "direct")).toHaveLength(1);
     expect(by.direct).toBeGreaterThanOrEqual(2);
+  });
+
+  it("recordWorkView는 유저·작품·일 1회 디듀프한다", async () => {
+    const workId = `${spotId}-w`;
+    await recordWorkView(userA, workId);
+    await recordWorkView(userA, workId);
+    const rows = await db.workView.findMany({
+      where: { userId: userA, workId },
+    });
+    expect(rows).toHaveLength(1);
+  });
+
+  it("countWorkViewsByWork는 distinct 조회 유저 많은 순으로 정렬한다", async () => {
+    const wX = `${spotId}-wX`;
+    const wY = `${spotId}-wY`;
+    await recordWorkView(userA, wX);
+    await recordWorkView(userB, wX); // wX: 2명
+    await recordWorkView(userA, wY); // wY: 1명
+    const top = await countWorkViewsByWork(1000);
+    const by = Object.fromEntries(top.map((t) => [t.workId, t.viewers]));
+    expect(by[wX]).toBe(2);
+    expect(by[wY]).toBe(1);
+    expect(top.findIndex((t) => t.workId === wX)).toBeLessThan(
+      top.findIndex((t) => t.workId === wY),
+    );
+  });
+
+  it("pruneOldWorkViews는 보존기간 초과분만 삭제한다", async () => {
+    const wOld = `${spotId}-wold`;
+    await db.workView.create({
+      data: {
+        userId: userA,
+        workId: wOld,
+        day: "2000-03-03",
+        createdAt: new Date(Date.now() - 100 * 86_400_000),
+      },
+    });
+    await recordWorkView(userB, `${spotId}-wnew`); // 오늘 → 보존
+    const deleted = await pruneOldWorkViews();
+    expect(deleted).toBeGreaterThanOrEqual(1);
+    expect(
+      await db.workView.count({ where: { userId: userA, workId: wOld } }),
+    ).toBe(0);
+    expect(
+      await db.workView.count({
+        where: { userId: userB, workId: `${spotId}-wnew` },
+      }),
+    ).toBe(1);
   });
 
   it("pruneOldSpotViews는 보존기간(90일) 초과분만 삭제한다", async () => {

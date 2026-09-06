@@ -51,7 +51,7 @@ export default async function MetricsPage() {
     );
   }
 
-  const { nsm, funnel, coverage, discoverySources } =
+  const { nsm, funnel, coverage, discoverySources, topWorks } =
     await getMetricsOverview();
   const sourceTotal = discoverySources.reduce((s, d) => s + d.count, 0);
 
@@ -191,6 +191,51 @@ export default async function MetricsPage() {
               })
             )}
           </div>
+        </section>
+
+        {/* 인기 작품(조회) */}
+        <section aria-labelledby="works-h">
+          <h2
+            id="works-h"
+            className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]"
+          >
+            인기 작품 · 조회 상위 (어느 작품을 더 깊게 채울지)
+          </h2>
+          <div className="mt-2 overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white">
+            <div className="grid grid-cols-[32px_1fr_90px] gap-4 bg-[color:var(--cream-2)] px-5 py-3 font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+              <div className="text-right">#</div>
+              <div>작품</div>
+              <div className="text-right">조회 유저</div>
+            </div>
+            {topWorks.length === 0 ? (
+              <div className="px-5 py-4 text-[13px] text-[color:var(--muted)]">
+                아직 집계된 작품 조회가 없습니다.
+              </div>
+            ) : (
+              topWorks.map((w, i) => (
+                <div
+                  key={w.workId}
+                  className={`grid grid-cols-[32px_1fr_90px] items-center gap-4 px-5 py-3.5 ${
+                    i === 0 ? "" : "border-t border-[color:var(--line)]"
+                  }`}
+                >
+                  <div className="text-right font-latin text-[13px] font-semibold tabular-nums text-[color:var(--muted)]">
+                    {i + 1}
+                  </div>
+                  <div className="truncate text-[13px] font-bold tracking-[-0.01em]">
+                    {w.title}
+                  </div>
+                  <div className="text-right font-latin text-[15px] font-extrabold tabular-nums">
+                    {num(w.viewers)}
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+          <p className="mt-2 text-[11px] leading-[1.6] text-[color:var(--muted)]">
+            작품 조회는 발견 퍼널과 별개인 콘텐츠 관심 신호다(작품 조회 ≠ 스팟
+            발견). 스팟이 적은데 조회가 많은 작품이 다음 심화(스팟 확충) 후보다.
+          </p>
         </section>
 
         {/* 커버리지 */}
