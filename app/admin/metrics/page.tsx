@@ -105,7 +105,7 @@ export default async function MetricsPage() {
                 <div className="text-right font-latin text-[15px] font-extrabold tabular-nums">
                   {s.count == null ? (
                     <span className="text-[11px] font-medium text-[color:var(--muted)]">
-                      이벤트 파이프라인 필요
+                      미집계
                     </span>
                   ) : (
                     num(s.count)
@@ -121,9 +121,10 @@ export default async function MetricsPage() {
             ))}
           </div>
           <p className="mt-2 text-[11px] leading-[1.6] text-[color:var(--muted)]">
-            발견·조회는 DB에 남지 않아 파생 불가 — 저장 단계를 분모로 계산한다.
-            파생 카운트라 단계별 근사치이며, 조회→저장 전환은 외부 이벤트
-            파이프라인 도입 후 확정한다(rules §TODO).
+            발견·조회는 스팟 조회 이벤트(SpotView · 로그인 유저 · 일 1회
+            디듀프)에서 파생해 최상단 분모로 쓴다. 각 단계는 사용자별 시퀀스가
+            아닌 단계별 distinct 카운트라 근사치이며, 단계 간 부분집합을
+            보장하지 않는다.
           </p>
         </section>
 

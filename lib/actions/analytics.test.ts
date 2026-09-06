@@ -4,7 +4,11 @@
 import { describe, it, expect, beforeEach, afterEach } from "vitest";
 import { PrismaClient } from "@prisma/client";
 import { randomUUID } from "crypto";
-import { recordSpotView, countDiscoveryUsers } from "./analytics";
+import {
+  recordSpotView,
+  countDiscoveryUsers,
+  pruneOldSpotViews,
+} from "./analytics";
 
 const db = new PrismaClient();
 
@@ -55,5 +59,27 @@ describe("recordSpotView / countDiscoveryUsers", () => {
     await recordSpotView(userB, spotId, "search");
     const after = await countDiscoveryUsers();
     expect(after - before).toBe(2); // userA, userB 두 명만 증가
+  });
+
+  it("pruneOldSpotViews는 보존기간(90일) 초과분만 삭제한다", async () => {
+    await db.spotView.create({
+      data: {
+        userId: userA,
+        spotId: `${spotId}-old`,
+        day: "2000-01-01",
+        createdAt: new Date(Date.now() - 100 * 86_400_000), // 100일 전(>90)
+      },
+    });
+    await recordSpotView(userB, spotId, "feed"); // 오늘 → 보존
+    const deleted = await pruneOldSpotViews();
+    expect(deleted).toBeGreaterThanOrEqual(1); // 내가 넣은 old 최소 1건
+    const oldLeft = await db.spotView.count({
+      where: { userId: userA, spotId: `${spotId}-old` },
+    });
+    const recentLeft = await db.spotView.count({
+      where: { userId: userB, spotId },
+    });
+    expect(oldLeft).toBe(0); // 초과분 삭제
+    expect(recentLeft).toBe(1); // 최근분 보존
   });
 });

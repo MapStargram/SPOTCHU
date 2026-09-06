@@ -40,3 +40,16 @@ export async function countDiscoveryUsers(): Promise<number> {
   });
   return rows.length;
 }
+
+export const VIEW_RETENTION_DAYS = 90; // 개인정보 최소보관(prd §23) — 설계: pipeline-design.md
+
+/** 보존기간(90일) 초과 조회 이벤트 삭제(createdAt 인덱스 사용). 반환: 삭제 행수. 크론에서 호출. */
+export async function pruneOldSpotViews(
+  now: Date = new Date(),
+): Promise<number> {
+  const cutoff = new Date(now.getTime() - VIEW_RETENTION_DAYS * 86_400_000);
+  const { count } = await db.spotView.deleteMany({
+    where: { createdAt: { lt: cutoff } },
+  });
+  return count;
+}
