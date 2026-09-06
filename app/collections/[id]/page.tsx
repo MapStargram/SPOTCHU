@@ -4,6 +4,8 @@ import { AppShell } from "@/components/shell/AppShell";
 import { CollectionDetail } from "@/components/collections/CollectionDetail";
 import { getCollection, getSpot } from "@/lib/data";
 import { orderByRoute } from "@/lib/geo";
+import { ItemListJsonLd } from "@/components/seo/ItemListJsonLd";
+import { APP_URL } from "@/lib/app-url";
 
 // E2/E3 · 컬렉션 상세 (리스트 ⇄ 지도). env DATA_SOURCE로 목업 ↔ DB(캐시).
 export const dynamic = "force-dynamic";
@@ -53,6 +55,11 @@ export default async function CollectionDetailPage({
   const spots = orderByRoute(found);
   return (
     <AppShell active="collections">
+      <ItemListJsonLd
+        name={col.title}
+        url={`${APP_URL}/collections/${col.id}`}
+        spots={spots}
+      />
       <CollectionDetail col={col} spots={spots} />
     </AppShell>
   );
