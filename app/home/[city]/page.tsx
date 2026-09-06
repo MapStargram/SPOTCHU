@@ -6,9 +6,16 @@ import { AppShell } from "@/components/shell/AppShell";
 import { TagPill } from "@/components/ui/TagPill";
 import { Sparkle } from "@/components/ui/Sparkle";
 import { PinGrid } from "@/components/home/PinGrid";
+import { CityCourses } from "@/components/home/CityCourses";
 import { SpotImage } from "@/components/ui/SpotImage";
 import { type CityId } from "@/lib/mock";
-import { getCity, getCities, getSpot, getSpotsByCity } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
+import {
+  getCity,
+  getCities,
+  getSpot,
+  getSpotsByCity,
+  getOfficialCollections,
+} from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB 전환
 
 // ISR: 공개 콘텐츠(도시 히어로+스팟 그리드)를 CDN 캐시. 유저별 저장(♥) 상태는 서버 렌더에서 빼고
 // PinGrid(remoteSaved)가 /api/me/saved로 조회. [city] 동적 세그먼트라 force-static 필요(work/[id]와 동일).
@@ -57,14 +64,20 @@ export default async function HomeScreen({
   }
 
   const heroId = CITY_HERO[city as CityId];
-  // getCity 가드(리다이렉트) 이후는 서로 독립 — 순차 await 대신 병렬 로드(둘 다 캐시).
-  const [all, heroMaybe] = await Promise.all([
+  // getCity 가드(리다이렉트) 이후는 서로 독립 — 순차 await 대신 병렬 로드.
+  const [all, heroMaybe, officialCols] = await Promise.all([
     getSpotsByCity(city as CityId),
     heroId ? getSpot(heroId) : Promise.resolve(undefined),
+    getOfficialCollections(),
   ]);
   const heroSpot = heroMaybe ?? all[0];
   if (!heroSpot) notFound(); // 스팟이 아직 없는 도시
   const gridSpots = all.filter((s) => s.id !== heroSpot.id);
+  // 이 도시의 공식 코스 = 스팟이 이 도시에 하나라도 걸친 공식 컬렉션(도시별 cityId 데이터 없이 교집합으로).
+  const citySpotIds = new Set(all.map((s) => s.id));
+  const cityCourses = officialCols.filter((col) =>
+    col.spots.some((sid) => citySpotIds.has(sid)),
+  );
 
   return (
     <AppShell active="home">
@@ -142,6 +155,9 @@ export default async function HomeScreen({
             </div>
           </div>
         </Link>
+
+        {/* 이 도시의 공식 코스(큐레이션) — 발견 흐름에 노출 */}
+        <CityCourses courses={cityCourses} />
 
         {/* 지도 속 사진 스팟 — 핀터레스트식 그리드 */}
         <div className="mt-7 flex items-baseline justify-between">
