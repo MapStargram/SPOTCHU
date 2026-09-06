@@ -35,7 +35,9 @@ export function CollectionsList({
 }: {
   collections: Collection[];
 }) {
-  const [tab, setTab] = useState<"own" | "curated">("own");
+  // 내 컬렉션이 없으면(로그아웃·신규 유저) 빈 "내 컬렉션" 대신 큐레이션을 기본 노출 → 공식 코스 발견성.
+  const hasOwn = collections.some((c) => c.isOwn);
+  const [tab, setTab] = useState<"own" | "curated">(hasOwn ? "own" : "curated");
   const list = collections.filter((c) =>
     tab === "own" ? c.isOwn : c.isOfficial,
   );
