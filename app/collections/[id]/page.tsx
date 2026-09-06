@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { AppShell } from "@/components/shell/AppShell";
 import { CollectionDetail } from "@/components/collections/CollectionDetail";
 import { getCollection, getSpot } from "@/lib/data";
+import { orderByRoute } from "@/lib/geo";
 
 // E2/E3 · 컬렉션 상세 (리스트 ⇄ 지도). env DATA_SOURCE로 목업 ↔ DB(캐시).
 export const dynamic = "force-dynamic";
@@ -45,9 +46,11 @@ export default async function CollectionDetailPage({
   const { id } = await params;
   const col = await getCollection(id);
   if (!col) notFound();
-  const spots = (
+  const found = (
     await Promise.all(col.spots.map((sid) => getSpot(sid)))
   ).filter((s): s is NonNullable<typeof s> => !!s);
+  // 지도·리스트 번호를 여행 동선(최근접 이동) 순서로 — 큐레이션 배열 순서가 아니라 실제 방문 순서.
+  const spots = orderByRoute(found);
   return (
     <AppShell active="collections">
       <CollectionDetail col={col} spots={spots} />
