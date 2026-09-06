@@ -3,7 +3,8 @@
 // 어드민 콘솔 뮤테이션. 모든 액션은 서버에서 역할 재검사(CLAUDE.md §5 · 신뢰 경계).
 // 역할 변경은 ADMIN 전용, 그 외 관리(신뢰 토글·삭제)는 운영자(MODERATOR/ADMIN).
 // ⚠️ 게시물/사진 삭제는 실제 delete(스키마에 soft-delete 플래그 없음) — Post 삭제 시
-//    PostImage·Like는 onDelete Cascade로 함께 제거. 되돌릴 수 없으므로 UI에서 확인 후 호출.
+//    PostImage·Like는 onDelete Cascade로 함께 제거. 단, 비정규화 카운터 spot.likeSum은
+//    자동 감소하지 않으므로 deletePostAndSyncLikeSum로 함께 차감한다. 되돌릴 수 없음(UI 확인 후 호출).
 import { revalidatePath, revalidateTag } from "next/cache";
 import { z } from "zod";
 import { db } from "@/lib/db";
@@ -68,18 +69,33 @@ export async function setUserTrustAction(
   return { ok: true };
 }
 
-/** 게시물 삭제(운영자). Cascade로 이미지·좋아요 함께 제거. */
+// 게시물 삭제 + spot.likeSum 정합. Like는 Cascade로 지워지지만 비정규화 likeSum(인기도 정렬용:
+// saveCount+uniqueCheckinCount+likeSum)은 자동 감소하지 않는다 → 삭제 전 좋아요 수만큼 차감한다.
+// 원자적(트랜잭션): 삭제와 차감이 함께 반영돼 카운터 드리프트를 막는다. 없으면 false.
+async function deletePostAndSyncLikeSum(postId: string): Promise<boolean> {
+  const post = await db.post.findUnique({
+    where: { id: postId },
+    select: { spotId: true },
+  });
+  if (!post) return false;
+  const likeCount = await db.like.count({ where: { postId } });
+  await db.$transaction([
+    db.post.delete({ where: { id: postId } }),
+    db.spot.update({
+      where: { id: post.spotId },
+      data: { likeSum: { decrement: likeCount } },
+    }),
+  ]);
+  return true;
+}
+
+/** 게시물 삭제(운영자). Cascade로 이미지·좋아요 함께 제거 + spot.likeSum 차감. */
 export async function deletePostAction(postId: string): Promise<Result> {
   const gate = await requireModerator();
   if (!gate.ok) return gate;
 
-  const post = await db.post.findUnique({
-    where: { id: postId },
-    select: { id: true },
-  });
-  if (!post) return { ok: false, reason: "not_found" };
-
-  await db.post.delete({ where: { id: postId } });
+  if (!(await deletePostAndSyncLikeSum(postId)))
+    return { ok: false, reason: "not_found" };
   revalidatePath("/admin/posts");
   revalidatePath("/admin/photos");
   return { ok: true };
@@ -100,8 +116,8 @@ export async function deletePhotoAction(imageId: string): Promise<Result> {
     where: { postId: image.postId },
   });
   if (remaining <= 1) {
-    // 이미지 0장 게시물은 피드에서 깨지므로 게시물째 삭제(Cascade).
-    await db.post.delete({ where: { id: image.postId } });
+    // 이미지 0장 게시물은 피드에서 깨지므로 게시물째 삭제(Cascade) + spot.likeSum 차감.
+    await deletePostAndSyncLikeSum(image.postId);
   } else {
     await db.postImage.delete({ where: { id: imageId } });
   }
