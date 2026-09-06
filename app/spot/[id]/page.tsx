@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ChevronLeft, ChevronRight, Star, Check, Camera } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Star,
+  Check,
+  Camera,
+  Route,
+} from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
@@ -17,7 +24,12 @@ import { Mascot } from "@/components/ui/Mascot";
 import { SpotImage } from "@/components/ui/SpotImage";
 import { Flag } from "@/components/ui/Flag";
 import { type Verified } from "@/lib/mock";
-import { getSpot, getWork, getSpotPostsPublic } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
+import {
+  getSpot,
+  getWork,
+  getSpotPostsPublic,
+  getOfficialCollections,
+} from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 
 // ISR: 정적 셸을 CDN 캐시(크롤러·공유링크·반복 조회 가속). 유저별 상태(저장·체크인·컬렉션)는
 // 클라(SpotSaveHeart/SpotActions)가 /api/me/saved·/api/spot/[id]/me-state로 조회. 방문자 사진은
@@ -72,10 +84,12 @@ export default async function SpotDetailScreen({
 
   // s 확정 후 공개 데이터만 병렬 로드(둘 다 캐시). 유저별 상태(저장·체크인·컬렉션)는
   // 클라 컴포넌트가 마운트 시 조회 → 페이지는 정적 캐시 유지.
-  const [work, posts] = await Promise.all([
+  const [work, posts, officialCols] = await Promise.all([
     s.workId ? getWork(s.workId) : Promise.resolve(null),
     getSpotPostsPublic(s.id), // 방문자의 사진 = 이 스팟의 실제 게시물(공개 캐시본)
+    getOfficialCollections(), // 이 스팟이 담긴 공식 코스 크로스링크(발견성)
   ]);
+  const inCourses = officialCols.filter((c) => c.spots.includes(s.id));
 
   return (
     // noTabBar: 하단 체크인 CTA(SpotActions)가 탭바와 겹치지 않도록 상세는 탭바를 숨긴다(뒤로 버튼으로 이동).
@@ -207,6 +221,41 @@ export default async function SpotDetailScreen({
               </span>
               <ChevronRight size={16} className="text-[color:var(--muted)]" />
             </Link>
+          )}
+
+          {/* 이 스팟이 담긴 공식 코스(큐레이션) 크로스링크 — 단일 스팟에서 코스 발견 유도 */}
+          {inCourses.length > 0 && (
+            <section>
+              <h2 className="mb-2 flex items-center gap-1.5 text-[14px] font-extrabold tracking-[-0.02em] text-navy">
+                <span className="h-1.5 w-1.5 rounded-full bg-coral" /> 이 스팟이
+                담긴 코스
+              </h2>
+              <div className="flex flex-col gap-2">
+                {inCourses.map((c) => (
+                  <Link
+                    key={c.id}
+                    href={`/collections/${c.id}`}
+                    className="flex items-center gap-3 rounded-2xl bg-[color:var(--cream-2)] px-3.5 py-3 transition active:scale-[0.99]"
+                  >
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] bg-navy text-white">
+                      <Route size={18} aria-hidden />
+                    </span>
+                    <span className="min-w-0 flex-1">
+                      <span className="block font-latin text-[9px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+                        Official Course
+                      </span>
+                      <span className="mt-0.5 block text-[12px] font-bold tracking-[-0.01em] text-navy">
+                        {c.title} · {c.itemCount}곳
+                      </span>
+                    </span>
+                    <ChevronRight
+                      size={16}
+                      className="text-[color:var(--muted)]"
+                    />
+                  </Link>
+                ))}
+              </div>
+            </section>
           )}
 
           {/* Angle guide — angle/lens 값 있는 절만 렌더(없으면 문장 깨짐·빈 섹션 방지).
