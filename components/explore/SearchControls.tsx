@@ -148,6 +148,20 @@ export function SearchControls({
 
       {/* 필터 패널 — 그룹별 경계를 둬서 정렬감을 준다 */}
       <div className="flex flex-col gap-4 rounded-[20px] border border-[color:var(--line)] bg-white p-4 shadow-[shadow:var(--sh-card)]">
+        <Field label="정렬">
+          <div className="flex flex-wrap gap-1.5">
+            <Chip active={!cur("sort")} onClick={() => setParam("sort")}>
+              인기순
+            </Chip>
+            <Chip
+              active={cur("sort") === "recent"}
+              onClick={() => setParam("sort", "recent")}
+            >
+              최신순
+            </Chip>
+          </div>
+        </Field>
+
         <Field label="지역">
           <div className="flex flex-col gap-2.5">
             <div className="flex flex-wrap gap-1.5">

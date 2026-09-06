@@ -409,6 +409,7 @@ const searchSchema = z.object({
     .enum(["official", "user", "reported"])
     .optional()
     .catch(undefined),
+  sort: z.enum(["popular", "recent"]).optional().catch(undefined), // prd §158, 기본 popular
 });
 export type SearchParams = z.input<typeof searchSchema>;
 
@@ -439,8 +440,11 @@ export async function searchSpots(raw: SearchParams): Promise<Spot[]> {
     categoryId: p.category,
     workId: p.work,
     verificationStatus: p.verified ? VERIF_TO_DB[p.verified] : undefined,
+    sort: p.sort,
   });
-  // 최종 인기순: 저장+인증+좋아요 합산(PRD §16). DB orderBy는 근사값이라 여기서 확정.
+  // 최신순은 DB에서 createdAt desc로 확정됨 → 그대로 매핑(재정렬 금지).
+  if (p.sort === "recent") return rows.map(mapSpot);
+  // 인기순(기본): 저장+인증+좋아요 합산(PRD §16). DB orderBy는 근사값이라 여기서 확정.
   const pop = (r: (typeof rows)[number]) =>
     r.saveCount + r.uniqueCheckinCount + r.likeSum;
   return rows
