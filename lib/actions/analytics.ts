@@ -41,6 +41,24 @@ export async function countDiscoveryUsers(): Promise<number> {
   return rows.length;
 }
 
+/** 발견 경로(source)별 조회 이벤트 수(일별 디듀프 기준). null source는 direct로 합산. 많은 순 정렬. */
+export async function countDiscoveryBySource(): Promise<
+  { source: string; count: number }[]
+> {
+  const rows = await db.spotView.groupBy({
+    by: ["source"],
+    _count: { _all: true },
+  });
+  const tally = new Map<string, number>();
+  for (const r of rows) {
+    const key = r.source ?? "direct"; // null(구 데이터)·direct 병합
+    tally.set(key, (tally.get(key) ?? 0) + r._count._all);
+  }
+  return [...tally]
+    .map(([source, count]) => ({ source, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
 export const VIEW_RETENTION_DAYS = 90; // 개인정보 최소보관(prd §23) — 설계: pipeline-design.md
 
 /** 보존기간(90일) 초과 조회 이벤트 삭제(createdAt 인덱스 사용). 반환: 삭제 행수. 크론에서 호출. */

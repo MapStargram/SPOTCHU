@@ -20,7 +20,10 @@ import {
   getWorksFromDb,
 } from "./actions/search";
 import { filterSpots, type SpotSearchCriteria } from "./search";
-import { countDiscoveryUsers } from "./actions/analytics";
+import {
+  countDiscoveryUsers,
+  countDiscoveryBySource,
+} from "./actions/analytics";
 import {
   getPostsByCityFromDb,
   getPostsBySpotFromDb,
@@ -972,8 +975,9 @@ export interface CityCoverage {
 }
 export interface MetricsOverview {
   nsm: number; // 방문 인증 완료 수(최초 unique) = CheckIn 행 수
-  funnel: FunnelRow[]; // 발견→저장→컬렉션→인증→업로드(발견은 이벤트 파이프라인 TODO)
+  funnel: FunnelRow[]; // 발견→저장→컬렉션→인증→업로드(발견은 SpotView에서 파생)
   coverage: CityCoverage[];
+  discoverySources: { source: string; count: number }[]; // 발견 경로 분포(SpotView.source)
 }
 
 export async function getMetricsOverview(): Promise<MetricsOverview> {
@@ -1004,6 +1008,14 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
           verifiedRatio: verifiedRatio(21, 37),
         },
       ],
+      discoverySources: [
+        { source: "search", count: 210 },
+        { source: "map", count: 180 },
+        { source: "feed", count: 120 },
+        { source: "collection", count: 70 },
+        { source: "work", count: 45 },
+        { source: "direct", count: 30 },
+      ],
     };
   }
 
@@ -1018,6 +1030,7 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
     cities,
     byStatus,
     discoveryUsers,
+    discoverySources,
   ] = await Promise.all([
     db.checkIn.count(),
     db.collection.findMany({
@@ -1041,6 +1054,7 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
       _count: { _all: true },
     }),
     countDiscoveryUsers(), // 발견 단계: 스팟을 조회한 distinct 로그인 유저(SpotView, #분석 파이프라인)
+    countDiscoveryBySource(), // 발견 경로 분포(source)
   ]);
 
   const funnel = buildFunnel({
@@ -1073,5 +1087,5 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
     })
     .filter((c) => c.spotCount > 0);
 
-  return { nsm, funnel, coverage };
+  return { nsm, funnel, coverage, discoverySources };
 }

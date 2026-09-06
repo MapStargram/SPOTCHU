@@ -25,6 +25,16 @@ const pct = (x: number | null) =>
   x == null ? "—" : `${(x * 100).toFixed(0)}%`;
 const num = (n: number | null) => (n == null ? "—" : n.toLocaleString("ko-KR"));
 
+// 발견 경로(SpotView.source) → 표시 라벨. SpotViewBeacon의 referrer 판정과 동일 집합.
+const SOURCE_LABEL: Record<string, string> = {
+  search: "검색",
+  map: "지도(탐색)",
+  feed: "피드",
+  collection: "컬렉션",
+  work: "작품",
+  direct: "직접·기타",
+};
+
 export default async function MetricsPage() {
   if (!(await isOperator())) {
     return (
@@ -41,7 +51,9 @@ export default async function MetricsPage() {
     );
   }
 
-  const { nsm, funnel, coverage } = await getMetricsOverview();
+  const { nsm, funnel, coverage, discoverySources } =
+    await getMetricsOverview();
+  const sourceTotal = discoverySources.reduce((s, d) => s + d.count, 0);
 
   return (
     <AdminShell active="metrics">
@@ -126,6 +138,59 @@ export default async function MetricsPage() {
             아닌 단계별 distinct 카운트라 근사치이며, 단계 간 부분집합을
             보장하지 않는다.
           </p>
+        </section>
+
+        {/* 발견 경로 */}
+        <section aria-labelledby="src-h">
+          <h2
+            id="src-h"
+            className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]"
+          >
+            발견 경로 · 어디서 스팟을 여는가 (조회 이벤트)
+          </h2>
+          <div className="mt-2 overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white">
+            {sourceTotal === 0 ? (
+              <div className="px-5 py-4 text-[13px] text-[color:var(--muted)]">
+                아직 집계된 조회 이벤트가 없습니다.
+              </div>
+            ) : (
+              discoverySources.map((d, i) => {
+                const share = d.count / sourceTotal;
+                return (
+                  <div
+                    key={d.source}
+                    className={`px-5 py-3 ${
+                      i === 0 ? "" : "border-t border-[color:var(--line)]"
+                    }`}
+                  >
+                    <div className="flex items-baseline justify-between gap-3">
+                      <div className="text-[13px] font-bold tracking-[-0.01em]">
+                        {SOURCE_LABEL[d.source] ?? d.source}
+                      </div>
+                      <div className="font-latin text-[13px] tabular-nums text-[color:var(--muted)]">
+                        {num(d.count)}
+                        <span className="ml-1.5 font-semibold text-[color:var(--navy-2)]">
+                          {pct(share)}
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-[color:var(--cream-2)]"
+                      role="presentation"
+                    >
+                      <div
+                        className="h-full rounded-full"
+                        style={{
+                          width: `${(share * 100).toFixed(1)}%`,
+                          background: "var(--mint-deep)",
+                        }}
+                      />
+                    </div>
+                  </div>
+                );
+              })
+            )}
+          </div>
         </section>
 
         {/* 커버리지 */}

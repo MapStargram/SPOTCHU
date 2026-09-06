@@ -7,6 +7,7 @@ import { randomUUID } from "crypto";
 import {
   recordSpotView,
   countDiscoveryUsers,
+  countDiscoveryBySource,
   pruneOldSpotViews,
 } from "./analytics";
 
@@ -59,6 +60,28 @@ describe("recordSpotView / countDiscoveryUsers", () => {
     await recordSpotView(userB, spotId, "search");
     const after = await countDiscoveryUsers();
     expect(after - before).toBe(2); // userA, userB 두 명만 증가
+  });
+
+  it("countDiscoveryBySource는 경로별 집계하고 null source를 direct로 병합한다", async () => {
+    await recordSpotView(userA, `${spotId}-a`, "search");
+    await recordSpotView(userA, `${spotId}-b`, "search");
+    await recordSpotView(userB, `${spotId}-a`, "map");
+    await recordSpotView(userA, `${spotId}-c`, "direct");
+    await db.spotView.create({
+      data: {
+        userId: userB,
+        spotId: `${spotId}-null`,
+        day: "2000-02-02",
+        source: null, // 구 데이터 → direct로 병합되어야
+      },
+    });
+    const all = await countDiscoveryBySource();
+    const by = Object.fromEntries(all.map((d) => [d.source, d.count]));
+    expect(by.search).toBeGreaterThanOrEqual(2);
+    expect(by.map).toBeGreaterThanOrEqual(1);
+    // null(1)+direct(1)이 단일 'direct' 항목으로 병합됐는지 — Map 병합 회귀 방지
+    expect(all.filter((d) => d.source === "direct")).toHaveLength(1);
+    expect(by.direct).toBeGreaterThanOrEqual(2);
   });
 
   it("pruneOldSpotViews는 보존기간(90일) 초과분만 삭제한다", async () => {
