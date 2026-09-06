@@ -459,3 +459,70 @@ export async function mergeAccount(token: string): Promise<Result> {
 
   return { ok: true };
 }
+
+// 회원탈퇴(계정 삭제). 정책(결정): 개인데이터 삭제 + 제보 스팟 익명화(커뮤니티 카탈로그 보존).
+//   삭제(Cascade): 계정·세션·컬렉션(+항목)·게시물(+이미지·좋아요)·좋아요·체크인·배지·신고·알림·조회이벤트.
+//   익명화: 사용자가 제보한 Spot은 createdById만 해제(스팟·좌표·검증상태는 보존 — 커뮤니티 자산).
+//   카운터 정합: 개인데이터가 사라진 스팟의 비정규화 카운터(saveCount·checkin·likeSum)를 원본에서 재계산.
+// 세션: JWT 전략이라 서버 세션 테이블은 사실상 미사용 → 삭제 후 클라가 signOut() 호출(설정 화면).
+// 개인정보(prd §23): 되돌릴 수 없음 — 호출부(설정)에서 확인 후 실행.
+// ⚠️ 업로드 이미지의 Cloudinary 원본 자산 삭제는 후속(TODO) — DB 참조는 제거되나 저장소 정리는 별도.
+export async function deleteAccountAction(): Promise<Result> {
+  const me = await getCurrentUser();
+  if (!me?.id) return { ok: false, error: "로그인이 필요합니다" };
+  const userId = me.id;
+
+  // 카운터 재계산 대상 스팟(개인데이터가 걸린 스팟) — 삭제 전 스냅샷.
+  const [items, checkins, posts, likes] = await Promise.all([
+    db.collectionItem.findMany({
+      where: { collection: { ownerId: userId } },
+      select: { spotId: true },
+    }),
+    db.checkIn.findMany({ where: { userId }, select: { spotId: true } }),
+    db.post.findMany({ where: { authorId: userId }, select: { spotId: true } }),
+    db.like.findMany({
+      where: { userId },
+      select: { post: { select: { spotId: true } } },
+    }),
+  ]);
+  const affected = [
+    ...new Set<string>([
+      ...items.map((i) => i.spotId),
+      ...checkins.map((c) => c.spotId),
+      ...posts.map((p) => p.spotId),
+      ...likes.map((l) => l.post.spotId),
+    ]),
+  ];
+
+  await db.$transaction(
+    async (tx) => {
+      // 제보 스팟 익명화(보존) — createdById 해제 후 유저 삭제(FK 안전·명시적 의도).
+      await tx.spot.updateMany({
+        where: { createdById: userId },
+        data: { createdById: null },
+      });
+      // 개인데이터 일괄 삭제 — 위 관계는 모두 onDelete:Cascade.
+      await tx.user.delete({ where: { id: userId } });
+      // 영향 스팟의 비정규화 카운터를 원본에서 재계산(삭제 후 상태 기준 · 드리프트 방지).
+      for (const spotId of affected) {
+        const [saveCount, uniq, likeSum] = await Promise.all([
+          tx.collectionItem.count({ where: { spotId } }),
+          tx.checkIn.count({ where: { spotId } }),
+          tx.like.count({ where: { post: { spotId } } }),
+        ]);
+        await tx.spot.update({
+          where: { id: spotId },
+          data: {
+            saveCount,
+            checkinCount: uniq,
+            uniqueCheckinCount: uniq,
+            likeSum,
+          },
+        });
+      }
+    },
+    { timeout: 20_000 }, // 활동 많은 계정의 다중 스팟 재계산 여유(드문 작업)
+  );
+
+  return { ok: true };
+}

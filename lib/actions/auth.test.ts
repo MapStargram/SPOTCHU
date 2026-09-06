@@ -4,7 +4,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { PrismaClient } from "@prisma/client";
 import { randomUUID } from "crypto";
-import { mergeAccount } from "./auth";
+import { mergeAccount, deleteAccountAction } from "./auth";
 import { createToken } from "@/lib/auth/tokens";
 import { getCurrentUser } from "@/lib/session";
 
@@ -375,6 +375,138 @@ describe("mergeAccount", () => {
       `${PROVIDER}:${providerAccountId}`,
     );
     const res = await mergeAccount(token);
+    expect(res).toEqual({ ok: false, error: "로그인이 필요합니다" });
+  });
+});
+
+describe("deleteAccountAction", () => {
+  let cityId: string;
+  let categoryId: string;
+  let delId: string; // 탈퇴 유저
+  let otherId: string; // 남는 유저
+  let spotA: string; // 탈퇴자가 저장+체크인+제보(익명화 대상)
+  let spotB: string; // 탈퇴자 게시물이 있는 스팟(likeSum)
+  let spotC: string; // 타인 게시물을 탈퇴자가 좋아요한 스팟(likeSum)
+  let postB: string;
+  let postC: string;
+
+  beforeEach(async () => {
+    cityId = `test-city-${randomUUID()}`;
+    categoryId = `test-cat-${randomUUID()}`;
+    delId = `test-user-${randomUUID()}`;
+    otherId = `test-user-${randomUUID()}`;
+    spotA = `test-spot-${randomUUID()}`;
+    spotB = `test-spot-${randomUUID()}`;
+    spotC = `test-spot-${randomUUID()}`;
+    postB = `test-post-${randomUUID()}`;
+    postC = `test-post-${randomUUID()}`;
+    await db.city.create({
+      data: {
+        id: cityId,
+        name: "T",
+        country: "KR",
+        centerLat: LAT,
+        centerLng: LNG,
+      },
+    });
+    await db.category.create({
+      data: { id: categoryId, key: categoryId, label: "T" },
+    });
+    await db.user.createMany({
+      data: [
+        { id: delId, email: `${delId}@t.local` },
+        { id: otherId, email: `${otherId}@t.local` },
+      ],
+    });
+    const mkSpot = (id: string, extra: object) =>
+      db.spot.create({
+        data: {
+          id,
+          name: "s",
+          categoryId,
+          cityId,
+          shooterLat: LAT,
+          shooterLng: LNG,
+          subject: "x",
+          verificationStatus: "USER_VERIFIED",
+          ...extra,
+        },
+      });
+    await mkSpot(spotA, {
+      createdById: delId,
+      saveCount: 1,
+      uniqueCheckinCount: 1,
+      checkinCount: 1,
+    });
+    await mkSpot(spotB, { likeSum: 1 });
+    await mkSpot(spotC, { likeSum: 1 });
+    const col = await db.collection.create({
+      data: { ownerId: delId, title: "저장됨", isDefault: true },
+    });
+    await db.collectionItem.create({
+      data: { collectionId: col.id, spotId: spotA },
+    });
+    await db.checkIn.create({
+      data: { userId: delId, spotId: spotA, deviceAccuracyM: 10 },
+    });
+    await db.post.create({
+      data: { id: postB, authorId: delId, spotId: spotB },
+    });
+    await db.like.create({ data: { postId: postB, userId: otherId } });
+    await db.post.create({
+      data: { id: postC, authorId: otherId, spotId: spotC },
+    });
+    await db.like.create({ data: { postId: postC, userId: delId } });
+  });
+
+  afterEach(async () => {
+    await db.like.deleteMany({ where: { postId: { in: [postB, postC] } } });
+    await db.post.deleteMany({ where: { id: { in: [postB, postC] } } });
+    await db.checkIn.deleteMany({
+      where: { spotId: { in: [spotA, spotB, spotC] } },
+    });
+    await db.collectionItem.deleteMany({
+      where: { spotId: { in: [spotA, spotB, spotC] } },
+    });
+    await db.collection.deleteMany({
+      where: { ownerId: { in: [delId, otherId] } },
+    });
+    await db.spot.deleteMany({ where: { id: { in: [spotA, spotB, spotC] } } });
+    await db.category.deleteMany({ where: { id: categoryId } });
+    await db.user.deleteMany({ where: { id: { in: [delId, otherId] } } });
+    await db.city.deleteMany({ where: { id: cityId } });
+  });
+
+  it("개인데이터 삭제 + 제보 스팟 익명화 + 카운터 재계산", async () => {
+    asUser(delId);
+    const res = await deleteAccountAction();
+    expect(res).toEqual({ ok: true });
+
+    // 유저·개인데이터 삭제
+    expect(await db.user.findUnique({ where: { id: delId } })).toBeNull();
+    expect(await db.collection.count({ where: { ownerId: delId } })).toBe(0);
+    expect(await db.checkIn.count({ where: { userId: delId } })).toBe(0);
+    expect(await db.post.findUnique({ where: { id: postB } })).toBeNull();
+
+    // 제보 스팟 익명화(보존) + 카운터 재계산
+    const a = await db.spot.findUniqueOrThrow({ where: { id: spotA } });
+    expect(a.createdById).toBeNull();
+    expect(a.saveCount).toBe(0);
+    expect(a.uniqueCheckinCount).toBe(0);
+
+    // likeSum 재계산 — 탈퇴자 게시물의 좋아요·탈퇴자의 좋아요 모두 반영
+    const b = await db.spot.findUniqueOrThrow({ where: { id: spotB } });
+    expect(b.likeSum).toBe(0);
+    const c = await db.spot.findUniqueOrThrow({ where: { id: spotC } });
+    expect(c.likeSum).toBe(0);
+    // 타인 데이터는 보존
+    expect(await db.post.findUnique({ where: { id: postC } })).not.toBeNull();
+    expect(await db.user.findUnique({ where: { id: otherId } })).not.toBeNull();
+  });
+
+  it("로그인하지 않은 상태면 실패한다", async () => {
+    mockedGetCurrentUser.mockResolvedValue(null as never);
+    const res = await deleteAccountAction();
     expect(res).toEqual({ ok: false, error: "로그인이 필요합니다" });
   });
 });

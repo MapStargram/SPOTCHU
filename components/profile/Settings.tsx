@@ -17,12 +17,14 @@ import {
   AlertTriangle,
   LogOut,
   Camera,
+  Trash2,
 } from "lucide-react";
 import {
   updateNicknameAction,
   updateAvatarAction,
   updateCountryAction,
 } from "@/lib/actions/profile";
+import { deleteAccountAction } from "@/lib/actions/auth";
 import { uploadImageFile } from "@/lib/client-upload";
 import { COUNTRIES, countryById } from "@/lib/cities-geo";
 import { useFocusTrap } from "@/lib/useFocusTrap";
@@ -59,6 +61,27 @@ export function Settings({
   const fileRef = useRef<HTMLInputElement>(null);
   const editRef = useRef<HTMLDivElement>(null);
   useFocusTrap(editing, editRef, () => setEditing(false));
+  // 회원탈퇴(위험 구역)
+  const [delOpen, setDelOpen] = useState(false);
+  const [delAck, setDelAck] = useState(false);
+  const [deleting, setDeleting] = useState(false);
+  const [delError, setDelError] = useState<string | null>(null);
+  const delRef = useRef<HTMLDivElement>(null);
+  useFocusTrap(delOpen, delRef, () => setDelOpen(false));
+
+  const doDeleteAccount = async () => {
+    setDeleting(true);
+    setDelError(null);
+    const res = await deleteAccountAction();
+    if (!res.ok) {
+      setDeleting(false);
+      setDelError(res.error);
+      return;
+    }
+    // 삭제 성공 → 세션 종료(JWT 무효화) 후 로그인 화면으로.
+    if (AUTH_ENABLED) await signOut({ callbackUrl: "/login" });
+    else router.push("/login");
+  };
 
   const openEdit = () => {
     if (!profile) return router.push("/login");
@@ -220,6 +243,25 @@ export function Settings({
               </span>
             </button>
           </Section>
+
+          {/* 위험 구역 — 회원탈퇴(되돌릴 수 없음) */}
+          {profile && (
+            <Section title="위험 구역">
+              <button
+                onClick={() => {
+                  setDelAck(false);
+                  setDelError(null);
+                  setDelOpen(true);
+                }}
+                className="flex w-full items-center gap-3 px-4 py-3.5 text-left"
+              >
+                <Trash2 size={18} className="text-coral" />
+                <span className="flex-1 text-[13px] font-semibold tracking-[-0.01em] text-coral">
+                  회원탈퇴
+                </span>
+              </button>
+            </Section>
+          )}
         </div>
       </div>
 
@@ -335,6 +377,69 @@ export function Settings({
             >
               {saving ? "저장 중…" : "저장"}
             </button>
+          </div>
+        </div>
+      )}
+
+      {/* 회원탈퇴 확인 — 되돌릴 수 없음(§6). 명시적 동의 체크 후에만 실행. */}
+      {delOpen && (
+        <div
+          className="fixed inset-0 z-40 flex items-end justify-center"
+          role="dialog"
+          aria-modal
+          aria-label="회원탈퇴 확인"
+        >
+          <button
+            aria-label="닫기"
+            onClick={() => setDelOpen(false)}
+            className="absolute inset-0 bg-[rgba(23,35,60,0.5)]"
+          />
+          <div
+            ref={delRef}
+            tabIndex={-1}
+            className="relative z-10 w-full max-w-[430px] rounded-t-[28px] bg-cream px-6 pb-8 pt-5 text-navy outline-none"
+          >
+            <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-[color:var(--line-strong)]" />
+            <div className="flex items-center gap-2 text-[20px] font-extrabold tracking-[-0.02em] text-coral">
+              <Trash2 size={20} /> 회원탈퇴
+            </div>
+            <p className="mt-3 text-[13px] leading-[1.7] text-navy">
+              탈퇴하면{" "}
+              <b>계정·방문 인증 기록·컬렉션·업로드한 사진·좋아요·배지</b>가 모두
+              삭제됩니다. 내가 제보한 스팟은 커뮤니티를 위해{" "}
+              <b>익명으로 남습니다</b>.
+            </p>
+            <p className="mt-2 text-[12px] font-semibold text-coral">
+              이 작업은 되돌릴 수 없습니다.
+            </p>
+            <label className="mt-4 flex cursor-pointer items-start gap-2.5 text-[12px] leading-[1.5] text-navy">
+              <input
+                type="checkbox"
+                checked={delAck}
+                onChange={(e) => setDelAck(e.target.checked)}
+                className="mt-0.5 h-4 w-4 shrink-0 accent-[color:var(--coral)]"
+              />
+              <span>위 내용을 확인했으며, 되돌릴 수 없음을 이해합니다.</span>
+            </label>
+            {delError && (
+              <p className="mt-2 text-[12px] text-coral">{delError}</p>
+            )}
+            <div className="mt-4 flex gap-2.5">
+              <button
+                onClick={() => setDelOpen(false)}
+                disabled={deleting}
+                className="h-[52px] flex-1 rounded-2xl border border-[color:var(--line)] bg-white text-[14px] font-bold text-navy disabled:opacity-60"
+              >
+                취소
+              </button>
+              <button
+                onClick={() => void doDeleteAccount()}
+                disabled={!delAck || deleting}
+                className="h-[52px] flex-1 rounded-2xl bg-coral text-[14px] font-extrabold text-cream shadow-[shadow:var(--sh-cta-coral)] disabled:opacity-50"
+              >
+                {deleting ? "탈퇴 중…" : "탈퇴하기"}
+              </button>
+            </div>
           </div>
         </div>
       )}
