@@ -21,6 +21,11 @@ import {
 } from "./actions/search";
 import { filterSpots, type SpotSearchCriteria } from "./search";
 import {
+  countDiscoveryUsers,
+  countDiscoveryBySource,
+  countWorkViewsByWork,
+} from "./actions/analytics";
+import {
   getPostsByCityFromDb,
   getPostsBySpotFromDb,
   getPostsByAuthorFromDb,
@@ -971,8 +976,10 @@ export interface CityCoverage {
 }
 export interface MetricsOverview {
   nsm: number; // 방문 인증 완료 수(최초 unique) = CheckIn 행 수
-  funnel: FunnelRow[]; // 발견→저장→컬렉션→인증→업로드(발견은 이벤트 파이프라인 TODO)
+  funnel: FunnelRow[]; // 발견→저장→컬렉션→인증→업로드(발견은 SpotView에서 파생)
   coverage: CityCoverage[];
+  discoverySources: { source: string; count: number }[]; // 발견 경로 분포(SpotView.source)
+  topWorks: { workId: string; title: string; viewers: number }[]; // 조회 상위 작품(WorkView)
 }
 
 export async function getMetricsOverview(): Promise<MetricsOverview> {
@@ -1003,38 +1010,78 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
           verifiedRatio: verifiedRatio(21, 37),
         },
       ],
+      discoverySources: [
+        { source: "search", count: 210 },
+        { source: "map", count: 180 },
+        { source: "feed", count: 120 },
+        { source: "collection", count: 70 },
+        { source: "work", count: 45 },
+        { source: "direct", count: 30 },
+      ],
+      topWorks: [
+        { workId: "your-name", title: "너의 이름은.", viewers: 88 },
+        { workId: "decision-to-leave", title: "헤어질 결심", viewers: 61 },
+        { workId: "parasite", title: "기생충", viewers: 47 },
+      ],
     };
   }
 
   // 퍼널 단계 = 각 행동을 1회 이상 한 distinct 사용자 수(사용자 퍼널). 발견은 DB 미보관.
   // ponytail: distinct 스캔. 사용자 수가 수만을 넘으면 raw SQL COUNT(DISTINCT)로 승격.
-  const [nsm, savers, creators, checkinUsers, uploaders, cities, byStatus] =
-    await Promise.all([
-      db.checkIn.count(),
-      db.collection.findMany({
-        where: { items: { some: {} } },
-        select: { ownerId: true },
-        distinct: ["ownerId"],
-      }),
-      db.collection.findMany({
-        where: { isDefault: false, isOfficial: false }, // 자동 기본함·큐레이션 제외
-        select: { ownerId: true },
-        distinct: ["ownerId"],
-      }),
-      db.checkIn.findMany({ select: { userId: true }, distinct: ["userId"] }),
-      db.post.findMany({ select: { authorId: true }, distinct: ["authorId"] }),
-      db.city.findMany({
-        where: { isActive: true },
-        select: { id: true, name: true },
-      }),
-      db.spot.groupBy({
-        by: ["cityId", "verificationStatus"],
-        _count: { _all: true },
-      }),
-    ]);
+  const [
+    nsm,
+    savers,
+    creators,
+    checkinUsers,
+    uploaders,
+    cities,
+    byStatus,
+    discoveryUsers,
+    discoverySources,
+    workViewCounts,
+  ] = await Promise.all([
+    db.checkIn.count(),
+    db.collection.findMany({
+      where: { items: { some: {} } },
+      select: { ownerId: true },
+      distinct: ["ownerId"],
+    }),
+    db.collection.findMany({
+      where: { isDefault: false, isOfficial: false }, // 자동 기본함·큐레이션 제외
+      select: { ownerId: true },
+      distinct: ["ownerId"],
+    }),
+    db.checkIn.findMany({ select: { userId: true }, distinct: ["userId"] }),
+    db.post.findMany({ select: { authorId: true }, distinct: ["authorId"] }),
+    db.city.findMany({
+      where: { isActive: true },
+      select: { id: true, name: true },
+    }),
+    db.spot.groupBy({
+      by: ["cityId", "verificationStatus"],
+      _count: { _all: true },
+    }),
+    countDiscoveryUsers(), // 발견 단계: 스팟을 조회한 distinct 로그인 유저(SpotView, #분석 파이프라인)
+    countDiscoveryBySource(), // 발견 경로 분포(source)
+    countWorkViewsByWork(10), // 조회 상위 작품(콘텐츠 관심 신호)
+  ]);
+
+  // 상위 작품 id → 제목 해소(WorkView는 FK 없는 이벤트라 별도 조회).
+  const workTitles = workViewCounts.length
+    ? await db.work.findMany({
+        where: { id: { in: workViewCounts.map((w) => w.workId) } },
+        select: { id: true, title: true },
+      })
+    : [];
+  const titleOf = new Map(workTitles.map((w) => [w.id, w.title]));
+  const topWorks = workViewCounts.map((w) => ({
+    workId: w.workId,
+    title: titleOf.get(w.workId) ?? w.workId, // 삭제된 작품이면 id 표시
+    viewers: w.viewers,
+  }));
 
   const funnel = buildFunnel({
-    discovery: null, // 조회 이벤트는 DB 미보관 — 이벤트 파이프라인(TODO) 필요
+    discovery: discoveryUsers, // 조회 이벤트(SpotView) distinct 유저 — 이제 파생 집계됨
     save: savers.length,
     collection: creators.length,
     checkin: checkinUsers.length,
@@ -1063,5 +1110,5 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
     })
     .filter((c) => c.spotCount > 0);
 
-  return { nsm, funnel, coverage };
+  return { nsm, funnel, coverage, discoverySources, topWorks };
 }

@@ -25,6 +25,16 @@ const pct = (x: number | null) =>
   x == null ? "—" : `${(x * 100).toFixed(0)}%`;
 const num = (n: number | null) => (n == null ? "—" : n.toLocaleString("ko-KR"));
 
+// 발견 경로(SpotView.source) → 표시 라벨. SpotViewBeacon의 referrer 판정과 동일 집합.
+const SOURCE_LABEL: Record<string, string> = {
+  search: "검색",
+  map: "지도(탐색)",
+  feed: "피드",
+  collection: "컬렉션",
+  work: "작품",
+  direct: "직접·기타",
+};
+
 export default async function MetricsPage() {
   if (!(await isOperator())) {
     return (
@@ -41,7 +51,9 @@ export default async function MetricsPage() {
     );
   }
 
-  const { nsm, funnel, coverage } = await getMetricsOverview();
+  const { nsm, funnel, coverage, discoverySources, topWorks } =
+    await getMetricsOverview();
+  const sourceTotal = discoverySources.reduce((s, d) => s + d.count, 0);
 
   return (
     <AdminShell active="metrics">
@@ -105,7 +117,7 @@ export default async function MetricsPage() {
                 <div className="text-right font-latin text-[15px] font-extrabold tabular-nums">
                   {s.count == null ? (
                     <span className="text-[11px] font-medium text-[color:var(--muted)]">
-                      이벤트 파이프라인 필요
+                      미집계
                     </span>
                   ) : (
                     num(s.count)
@@ -121,9 +133,108 @@ export default async function MetricsPage() {
             ))}
           </div>
           <p className="mt-2 text-[11px] leading-[1.6] text-[color:var(--muted)]">
-            발견·조회는 DB에 남지 않아 파생 불가 — 저장 단계를 분모로 계산한다.
-            파생 카운트라 단계별 근사치이며, 조회→저장 전환은 외부 이벤트
-            파이프라인 도입 후 확정한다(rules §TODO).
+            발견·조회는 스팟 조회 이벤트(SpotView · 로그인 유저 · 일 1회
+            디듀프)에서 파생해 최상단 분모로 쓴다. 각 단계는 사용자별 시퀀스가
+            아닌 단계별 distinct 카운트라 근사치이며, 단계 간 부분집합을
+            보장하지 않는다.
+          </p>
+        </section>
+
+        {/* 발견 경로 */}
+        <section aria-labelledby="src-h">
+          <h2
+            id="src-h"
+            className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]"
+          >
+            발견 경로 · 어디서 스팟을 여는가 (조회 이벤트)
+          </h2>
+          <div className="mt-2 overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white">
+            {sourceTotal === 0 ? (
+              <div className="px-5 py-4 text-[13px] text-[color:var(--muted)]">
+                아직 집계된 조회 이벤트가 없습니다.
+              </div>
+            ) : (
+              discoverySources.map((d, i) => {
+                const share = d.count / sourceTotal;
+                return (
+                  <div
+                    key={d.source}
+                    className={`px-5 py-3 ${
+                      i === 0 ? "" : "border-t border-[color:var(--line)]"
+                    }`}
+                  >
+                    <div className="flex items-baseline justify-between gap-3">
+                      <div className="text-[13px] font-bold tracking-[-0.01em]">
+                        {SOURCE_LABEL[d.source] ?? d.source}
+                      </div>
+                      <div className="font-latin text-[13px] tabular-nums text-[color:var(--muted)]">
+                        {num(d.count)}
+                        <span className="ml-1.5 font-semibold text-[color:var(--navy-2)]">
+                          {pct(share)}
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-[color:var(--cream-2)]"
+                      role="presentation"
+                    >
+                      <div
+                        className="h-full rounded-full"
+                        style={{
+                          width: `${(share * 100).toFixed(1)}%`,
+                          background: "var(--mint-deep)",
+                        }}
+                      />
+                    </div>
+                  </div>
+                );
+              })
+            )}
+          </div>
+        </section>
+
+        {/* 인기 작품(조회) */}
+        <section aria-labelledby="works-h">
+          <h2
+            id="works-h"
+            className="font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]"
+          >
+            인기 작품 · 조회 상위 (어느 작품을 더 깊게 채울지)
+          </h2>
+          <div className="mt-2 overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white">
+            <div className="grid grid-cols-[32px_1fr_90px] gap-4 bg-[color:var(--cream-2)] px-5 py-3 font-latin text-[10px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
+              <div className="text-right">#</div>
+              <div>작품</div>
+              <div className="text-right">조회 유저</div>
+            </div>
+            {topWorks.length === 0 ? (
+              <div className="px-5 py-4 text-[13px] text-[color:var(--muted)]">
+                아직 집계된 작품 조회가 없습니다.
+              </div>
+            ) : (
+              topWorks.map((w, i) => (
+                <div
+                  key={w.workId}
+                  className={`grid grid-cols-[32px_1fr_90px] items-center gap-4 px-5 py-3.5 ${
+                    i === 0 ? "" : "border-t border-[color:var(--line)]"
+                  }`}
+                >
+                  <div className="text-right font-latin text-[13px] font-semibold tabular-nums text-[color:var(--muted)]">
+                    {i + 1}
+                  </div>
+                  <div className="truncate text-[13px] font-bold tracking-[-0.01em]">
+                    {w.title}
+                  </div>
+                  <div className="text-right font-latin text-[15px] font-extrabold tabular-nums">
+                    {num(w.viewers)}
+                  </div>
+                </div>
+              ))
+            )}
+          </div>
+          <p className="mt-2 text-[11px] leading-[1.6] text-[color:var(--muted)]">
+            작품 조회는 발견 퍼널과 별개인 콘텐츠 관심 신호다(작품 조회 ≠ 스팟
+            발견). 스팟이 적은데 조회가 많은 작품이 다음 심화(스팟 확충) 후보다.
           </p>
         </section>
 

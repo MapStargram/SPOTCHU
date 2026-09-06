@@ -10,6 +10,7 @@ import { WorkProgress } from "@/components/work/WorkProgress";
 import { getWork, getWorkSpots } from "@/lib/data"; // env DATA_SOURCE로 목업 ↔ DB(캐시)
 import { cldThumb } from "@/lib/cloudinary-url";
 import { ItemListJsonLd } from "@/components/seo/ItemListJsonLd";
+import { ViewBeacon } from "@/components/analytics/ViewBeacon";
 import { APP_URL } from "@/lib/app-url";
 
 // ISR: 정적 셸을 CDN 캐시(크롤러·공유링크 반복 로드 가속). 유저별 진행률만 클라(WorkProgress)에서 조회.
@@ -62,6 +63,7 @@ export default async function WorkDetailScreen({
         url={`${APP_URL}/work/${id}`}
         spots={scenes}
       />
+      <ViewBeacon workId={w.id} />
       <div className="relative mx-auto flex w-full max-w-[500px] flex-col bg-cream pb-28 lg:max-w-[720px] lg:pb-12">
         {/* Hero */}
         <div

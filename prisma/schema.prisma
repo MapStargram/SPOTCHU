@@ -146,6 +146,8 @@ model User {
   reportedSpots Spot[]    @relation("SpotCreatedBy")
   reports     Report[]
   notifications Notification[]
+  spotViews   SpotView[]
+  workViews   WorkView[]
 }
 
 model Account {
@@ -464,4 +466,39 @@ model SpotLead {
   createdAt      DateTime         @default(now())
 
   promotedSpot Spot? @relation(fields: [promotedSpotId], references: [id])
+}
+
+// 스팟 조회 이벤트 — 퍼널 '발견·조회' 단계 산출용(설계: docs/features/14-metrics-analytics/pipeline-design.md).
+// Phase 1: 로그인 유저만, 사용자·스팟·일 1회 디듀프. 원시 좌표·PII 미저장(prd §23) — 행 사실만.
+// 계정 삭제 시 함께 정리되도록 User에 onDelete:Cascade(타 유저 데이터와 동일 규칙). 보존 프루닝은 Phase 2.
+model SpotView {
+  id        String   @id @default(cuid())
+  spotId    String
+  userId    String
+  source    String? // feed | map | search | collection | work | direct
+  day       String // YYYY-MM-DD (일 단위 디듀프 키)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, spotId, day])
+  @@index([createdAt])
+  @@index([spotId])
+}
+
+// 작품 조회 이벤트 — 콘텐츠 관심 신호(어느 작품을 더 깊게 채울지 판단용). 퍼널 '발견'과 별개
+// (작품 조회 ≠ 스팟 발견). SpotView와 동일 규칙: 로그인만, 유저·작품·일 1회 디듀프, PII 미저장,
+// User onDelete:Cascade, 90일 보존 프루닝. source 없음(작품은 채널 귀인 불필요).
+model WorkView {
+  id        String   @id @default(cuid())
+  workId    String
+  userId    String
+  day       String // YYYY-MM-DD (일 단위 디듀프 키)
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, workId, day])
+  @@index([createdAt])
+  @@index([workId])
 }
