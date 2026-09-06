@@ -5,6 +5,7 @@ import { TagPill } from "@/components/ui/TagPill";
 import { AppShell } from "@/components/shell/AppShell";
 import { LikeButton } from "@/components/community/LikeButton";
 import { ShareButton } from "@/components/ui/ShareButton";
+import { SpotImage } from "@/components/ui/SpotImage";
 import { Flag } from "@/components/ui/Flag";
 import { getPostDetail, getSpot } from "@/lib/data";
 import { cldThumb } from "@/lib/cloudinary-url";
@@ -113,9 +114,11 @@ export default async function PostDetailPage({
           {spot && (
             <div className="mt-3.5 flex items-center gap-3 rounded-2xl bg-[color:var(--cream-2)] px-3.5 py-3">
               <div
-                className="h-11 w-11 shrink-0 rounded-xl"
+                className="relative h-11 w-11 shrink-0 overflow-hidden rounded-xl"
                 style={{ background: spot.thumbGrad }}
-              />
+              >
+                <SpotImage src={spot.imageUrl} alt="" width={640} />
+              </div>
               <div className="min-w-0 flex-1">
                 <div className="font-latin text-[9px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
                   Linked spot
