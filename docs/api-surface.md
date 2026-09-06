@@ -45,3 +45,8 @@
 - USER_REPORTED → USER_VERIFIED: unique 인증 3명 도달 시(트리거 또는 체크인 후처리).
 - 인기 스팟 → OFFICIAL_CANDIDATE 큐 적재(임계는 TODO).
 - 반복 신고 임계 → 자동 임시 숨김.
+
+## 운영 라우트(라우트 핸들러)
+- `POST /api/events` `[USER]` — 조회 계측 수집(클라 `ViewBeacon`→sendBeacon). body `{spotId?|workId?, source?}`, 로그인만·**항상 204**·좌표/PII 미수신([`14-metrics-analytics/`](features/14-metrics-analytics/)).
+- `GET /api/cron/prune-events` `[CRON]` — `SpotView`/`WorkView` 90일 초과분 삭제(Bearer `CRON_SECRET`, 미설정 시 503). Vercel Cron 매일 03:00 UTC.
+- `POST /api/revalidate` `[OPS]` — `unstable_cache` 태그 무효화(Bearer `REVALIDATE_SECRET`). 시드·편집 후 즉시 반영.
