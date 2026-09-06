@@ -14,7 +14,7 @@ export const VERIFIED_STATUSES = ["OFFICIAL", "USER_VERIFIED"] as const;
 export interface FunnelStage {
   key: string;
   label: string;
-  count: number | null; // null = DB 파생 불가(발견/조회 — 이벤트 파이프라인 필요)
+  count: number | null; // null = 이 배포에서 파생 불가(예: DB 없는 데모 경로)
 }
 export interface FunnelRow extends FunnelStage {
   stepRate: number | null; // 직전 측정가능 단계 대비 전환율(0~1)
@@ -30,7 +30,7 @@ export const FUNNEL_ORDER = [
   { key: "upload", label: "업로드" },
 ] as const;
 
-// 단계별 전환율 산출. 분모는 "측정 가능한(count!=null) 첫 단계". null 단계(발견)는 건너뛴다.
+// 단계별 전환율 산출. 분모는 "측정 가능한(count!=null) 첫 단계". count=null 단계는 건너뛴다.
 // 파생 카운트는 사용자별 시퀀스가 아닌 단계별 distinct 카운트라 근사치다(단계가 서로 부분집합 보장 안 됨).
 export function computeFunnel(stages: FunnelStage[]): FunnelRow[] {
   const base = stages.find((s) => s.count != null)?.count ?? null;

@@ -20,6 +20,7 @@ import {
   getWorksFromDb,
 } from "./actions/search";
 import { filterSpots, type SpotSearchCriteria } from "./search";
+import { countDiscoveryUsers } from "./actions/analytics";
 import {
   getPostsByCityFromDb,
   getPostsBySpotFromDb,
@@ -1008,33 +1009,42 @@ export async function getMetricsOverview(): Promise<MetricsOverview> {
 
   // 퍼널 단계 = 각 행동을 1회 이상 한 distinct 사용자 수(사용자 퍼널). 발견은 DB 미보관.
   // ponytail: distinct 스캔. 사용자 수가 수만을 넘으면 raw SQL COUNT(DISTINCT)로 승격.
-  const [nsm, savers, creators, checkinUsers, uploaders, cities, byStatus] =
-    await Promise.all([
-      db.checkIn.count(),
-      db.collection.findMany({
-        where: { items: { some: {} } },
-        select: { ownerId: true },
-        distinct: ["ownerId"],
-      }),
-      db.collection.findMany({
-        where: { isDefault: false, isOfficial: false }, // 자동 기본함·큐레이션 제외
-        select: { ownerId: true },
-        distinct: ["ownerId"],
-      }),
-      db.checkIn.findMany({ select: { userId: true }, distinct: ["userId"] }),
-      db.post.findMany({ select: { authorId: true }, distinct: ["authorId"] }),
-      db.city.findMany({
-        where: { isActive: true },
-        select: { id: true, name: true },
-      }),
-      db.spot.groupBy({
-        by: ["cityId", "verificationStatus"],
-        _count: { _all: true },
-      }),
-    ]);
+  const [
+    nsm,
+    savers,
+    creators,
+    checkinUsers,
+    uploaders,
+    cities,
+    byStatus,
+    discoveryUsers,
+  ] = await Promise.all([
+    db.checkIn.count(),
+    db.collection.findMany({
+      where: { items: { some: {} } },
+      select: { ownerId: true },
+      distinct: ["ownerId"],
+    }),
+    db.collection.findMany({
+      where: { isDefault: false, isOfficial: false }, // 자동 기본함·큐레이션 제외
+      select: { ownerId: true },
+      distinct: ["ownerId"],
+    }),
+    db.checkIn.findMany({ select: { userId: true }, distinct: ["userId"] }),
+    db.post.findMany({ select: { authorId: true }, distinct: ["authorId"] }),
+    db.city.findMany({
+      where: { isActive: true },
+      select: { id: true, name: true },
+    }),
+    db.spot.groupBy({
+      by: ["cityId", "verificationStatus"],
+      _count: { _all: true },
+    }),
+    countDiscoveryUsers(), // 발견 단계: 스팟을 조회한 distinct 로그인 유저(SpotView, #분석 파이프라인)
+  ]);
 
   const funnel = buildFunnel({
-    discovery: null, // 조회 이벤트는 DB 미보관 — 이벤트 파이프라인(TODO) 필요
+    discovery: discoveryUsers, // 조회 이벤트(SpotView) distinct 유저 — 이제 파생 집계됨
     save: savers.length,
     collection: creators.length,
     checkin: checkinUsers.length,
