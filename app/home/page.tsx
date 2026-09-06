@@ -20,12 +20,16 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
+// 둘러보기 피드 표본 크기 — 전체(수천)를 직렬화하면 페이로드가 과대(핀그리드는 10개씩 무한스크롤로
+// 소수만 렌더). 셔플 표본만 클라로 보내 페이로드를 대폭 줄인다(방문마다 셔플로 신선도 유지).
+const HOME_SAMPLE = 90;
+
 export default async function HomeDiscoverScreen() {
   const cities = await getCities();
   const all = (
     await Promise.all(cities.map((c) => getSpotsByCity(c.id)))
   ).flat();
-  const spots = shuffle(all);
+  const spots = shuffle(all).slice(0, HOME_SAMPLE);
   // 혼합 피드라 카드마다 국가가 다름 → 도시 id로 국기 이모지 조회. 국가 메타는 코드 카탈로그(CITIES)
   // 기준 — DB Country enum이 10개국만 지원해 나머지가 "일본"으로 폴백되는 것을 우회(정확·완전).
   const flagOf = new Map(
@@ -73,7 +77,7 @@ export default async function HomeDiscoverScreen() {
             전체 지역 사진 스팟
           </h2>
           <span className="font-latin text-[11px] text-[color:var(--muted)]">
-            {spots.length}곳
+            {all.length.toLocaleString()}곳
           </span>
         </div>
         <PinGrid
