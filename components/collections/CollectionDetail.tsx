@@ -18,7 +18,9 @@ import {
   Link2,
   Check,
   Copy,
+  Route,
 } from "lucide-react";
+import { routeDistanceMeters } from "@/lib/geo";
 import { MapBackground } from "../map/MapBackground";
 import { CategoryLabel } from "../ui/CategoryLabel";
 import { ShareButton } from "../ui/ShareButton";
@@ -57,6 +59,12 @@ export function CollectionDetail({
   const [editing, setEditing] = useState(false); // 순서 편집 모드
   const [savingOrder, setSavingOrder] = useState(false);
   const remaining = col.itemCount - items.length;
+  // 여행 코스 총 이동 거리(동선 순서 기준). 1km↑는 km, 미만은 m.
+  const routeM = routeDistanceMeters(items);
+  const routeLabel =
+    routeM >= 1000
+      ? `${(routeM / 1000).toFixed(1)}km`
+      : `${Math.round(routeM)}m`;
   const owned = col.isOwn && !col.isOfficial; // 내 컬렉션만 편집·삭제
   // 관리 시트(이름변경·공유범위·삭제) — 소유자 전용
   const [menuOpen, setMenuOpen] = useState(false);
@@ -273,6 +281,12 @@ export function CollectionDetail({
               <div className="mt-1.5 font-latin text-[11px] opacity-85">
                 {col.subtitle}
               </div>
+              {items.length > 1 && routeM > 0 && (
+                <div className="mt-1 inline-flex items-center gap-1 text-[11px] opacity-90">
+                  <Route size={12} aria-hidden /> {items.length}곳 · 약{" "}
+                  {routeLabel} 코스
+                </div>
+              )}
             </div>
           </div>
 
