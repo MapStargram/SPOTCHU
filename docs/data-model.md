@@ -105,7 +105,13 @@ i18n: `name_ja?, subject_ja?`(nullable, 후속).
 `id, name, category, lat, lng, cityId, thumbnailUrl?, sponsorTier(SponsorTier default NONE), sponsoredUntil?(date), status(PartnerStatus default PENDING), ownerContact?, linkedSpotIds?(맥락 연결)/areaId?, createdAt`.
 **규칙**: `Spot`과 **별도 엔티티**(사진 스팟의 촬영자-위치 불변식·검증 모델 비오염). 지도·목록에서 "광고/파트너" 라벨 병기(표시·광고법). 정확성·인증 기반 오가닉 랭킹과 **분리된 슬롯**. 실제 노출·판매는 트래픽 확보 후(§42). B2B 온보딩은 일반 제보(§18)와 분리된 권한·검수.
 
+### SpotView / WorkView  ← 조회 이벤트 (분석, [`features/14-metrics-analytics/`](features/14-metrics-analytics/))
+- `SpotView`: `id, spotId, userId, source?(feed|map|search|collection|work|direct), day(YYYY-MM-DD), createdAt`. **유니크**: `(userId, spotId, day)` — 일 1회 디듀프. 퍼널 '발견' 분모 + 발견 경로(source) 산출.
+- `WorkView`: `id, workId, userId, day(YYYY-MM-DD), createdAt`. **유니크**: `(userId, workId, day)`. 콘텐츠 관심 신호(퍼널과 별개, '인기 작품(조회)').
+- **규칙**: 로그인 유저만 기록(`userId`는 `User` FK·onDelete Cascade). `spotId`/`workId`는 **FK 없는 이벤트 사실**. 원시 좌표·EXIF·PII 미저장. **90일 보존**(크론 프루닝). 설계: [`pipeline-design.md`](features/14-metrics-analytics/pipeline-design.md).
+
 ## 인덱스/성능 메모
 - `Spot`: 공간 인덱스(geography), `cityId`, `categoryId`, `verificationStatus`.
 - `Post`: `spotId`, `authorId`, `createdAt`. `Like`: `(postId,userId)` 유니크.
 - 인기도 정렬은 파생 집계 캐시 + 주기적 재계산(또는 트리거). 상세는 Phase 2~4에서 확정.
+- `SpotView`/`WorkView`: `(userId, 대상id, day)` 유니크(디듀프) · `createdAt`(보존 프루닝) · 대상id(`spotId`/`workId`) 인덱스.

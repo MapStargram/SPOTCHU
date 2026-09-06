@@ -20,7 +20,7 @@
 ## 화면 상태
 - MVP에는 **사용자 대면 분석 화면이 없다**. 본 문서는 이벤트 수집·지표 정의 스펙이다.
 - 지표 열람은 외부 분석 도구/대시보드로 수행(도구 선정 **TODO**, rules 참조). 어드민 화면([`../11-admin-moderation/`](../11-admin-moderation/))과는 별개다.
-- **내부 운영 대시보드**(MVP): `app/admin/metrics` — 운영자·PM 전용(role 게이트). 도메인 테이블 **파생 카운트**로 NSM·퍼널·커버리지를 방향성 지표로 표시한다(집계 방식은 rules §집계 방식). 외부 분석 도구 선정 전까지의 최소 열람 창구다.
+- **내부 운영 대시보드**(MVP): `app/admin/metrics` — 운영자·PM 전용(role 게이트). NSM·퍼널·**발견 경로**(source 분포)·**인기 작품(조회)**·커버리지를 방향성 지표로 표시한다. 대부분은 도메인 테이블 파생, 발견·조회는 자가호스팅 조회 이벤트(`SpotView`/`WorkView`)에서 파생한다(집계 방식은 rules §집계 방식). 외부 분석 도구 선정 전까지의 최소 열람 창구다.
 
 ## 구성 요소
 
@@ -36,6 +36,7 @@
 
 ### 추적 이벤트 목록
 > prd에서 도출 가능한 이벤트만 포함한다. 미확정 이벤트·속성은 추가하지 않는다(발명 금지).
+> **구현 상태**: 아래 카탈로그는 외부 분석 도구 도입 시의 전체 계획이다. 현재 자가호스팅으로 실제 계측되는 것은 **`spot_view`·`work_view`뿐**이다(`SpotView`/`WorkView` 테이블, 로그인 유저·일 1회 디듀프·최소 필드). 나머지 이벤트는 도구 도입 후 계측한다.
 
 | event_name | 발생 시점 (prd 근거) | 주요 속성 |
 |---|---|---|
@@ -60,12 +61,14 @@
 | `soft_gate_shown` | 소프트 게이트 노출(§9·auth) | `action`(save/checkin/upload/like/report), `spot_id` |
 
 ### 지표 정의
-> MVP 내부 대시보드는 아래 "산출 소스"의 이벤트 대신 **도메인 테이블 파생 카운트**로 근사한다(rules §집계 방식). 이벤트 시퀀스 기반 정밀 산출은 외부 분석 도구 도입 후.
+> MVP 내부 대시보드는 대부분 지표를 **도메인 테이블 파생 카운트**로, 발견·조회는 **자가호스팅 조회 이벤트**(`SpotView`/`WorkView`)로 근사한다(rules §집계 방식). 사용자별 이벤트 시퀀스 기반 정밀 산출은 외부 분석 도구 도입 후.
 
 | 지표 | 정의 | 산출 소스 |
 |---|---|---|
 | NSM | 방문 인증 완료 수 | `checkin_success`(unique 기준은 rules) · MVP 파생: `CheckIn` 행 수 |
-| 퍼널 전환율 | `spot_view`→`spot_save`→`collection_create`→`checkin_success`→`post_upload` 단계별 비율 | 사용자별 이벤트 시퀀스 · MVP 파생: 단계별 distinct 사용자 수(발견은 DB 미보관 → 저장을 분모로) |
+| 퍼널 전환율 | `spot_view`→`spot_save`→`collection_create`→`checkin_success`→`post_upload` 단계별 비율 | MVP 파생: 단계별 distinct 사용자 수 · **발견=`SpotView` distinct 조회 유저(최상단 분모)** |
+| 발견 경로 | 조회 유입 경로 분포 | `SpotView.source`(feed/map/search/collection/work/direct) |
+| 인기 작품(조회) | 조회 상위 작품(퍼널과 별개 관심 신호) | `WorkView` distinct 조회 유저 |
 | 리텐션 D1/D7/D30 | 기준일 이후 1·7·30일 재방문 사용자 비율 | 세션/로그인 이벤트(기준일 정의는 TODO) |
 | 커버리지 | 도시별 스팟 수 / 검증 비율(`verificationStatus` 분포) | `Spot` 집계(이벤트 아님, 서버 파생) |
 | 지도 비용 | 세션당 `map_load` 호출 수 | `map_load` × `session_id` |
@@ -88,7 +91,8 @@
 - **개인정보**: 원시 좌표·정확 위치·PII를 이벤트 payload/URL 쿼리에 넣지 않는다(prd §23).
 
 ## 인수 조건 (Given/When/Then)
-- **Given** 사용자가 스팟 상세를 열람, **When** 화면이 표시, **Then** `spot_view` 이벤트가 `spot_id`·`city` 속성과 함께 1회 기록된다.
+- **Given** 로그인 사용자가 스팟 상세를 열람, **When** 화면이 마운트, **Then** `SpotView`에 `(userId, spotId, day, source)`가 기록되고 같은 날 재조회는 디듀프된다(비로그인은 무기록·원시 좌표/PII 미저장).
+- **Given** 로그인 사용자가 작품 상세를 열람, **When** 화면이 마운트, **Then** `WorkView`에 `(userId, workId, day)`가 일 1회 디듀프로 기록된다(퍼널이 아닌 콘텐츠 관심 신호로 집계).
 - **Given** 스팟에 최초 방문 인증 완료, **When** `checkin_success`가 `is_unique=true`로 방출, **Then** NSM 카운트가 1 증가하고, 이후 재방문(`is_unique=false`)은 NSM을 추가로 증가시키지 않는다.
 - **Given** 퍼널 이벤트(`spot_view`→`spot_save`→`collection_create`→`checkin_success`→`post_upload`)가 사용자별로 수집, **When** 단계별 집계, **Then** 각 단계 전환율을 산출할 수 있다.
 - **Given** 지도 뷰포트가 로드, **When** `map_load` 방출, **Then** 세션당 호출 수가 비용 지표로 집계된다.
@@ -96,7 +100,7 @@
 
 ## 관련 API / 데이터
 - `CheckIn`(NSM·unique, prd §17·§35), `Spot`(`verificationStatus`·`city` — 커버리지), `Collection`·`Post`·`Like`·`UserBadge`·`ModerationItem`(퍼널·기여 이벤트).
-- **이벤트 저장소·분석 도구**: prd 미정 → **TODO**(rules 참조). 필드 정의: [`../../data-model.md`](../../data-model.md).
+- **조회 이벤트 저장소**: `SpotView`·`WorkView`(자가호스팅) 확정·구현. 범용 외부 분석 도구는 여전히 **TODO**(rules 참조). 필드 정의: [`../../data-model.md`](../../data-model.md).
 - API·서버 액션이 방출하는 서버측 이벤트 지점: [`../../api-surface.md`](../../api-surface.md).
 
 ## Phase
