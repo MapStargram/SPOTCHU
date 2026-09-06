@@ -1,5 +1,11 @@
 import { describe, it, expect } from "vitest";
-import { haversineMeters, bearingDeg, canCheckIn, orderByRoute } from "./geo";
+import {
+  haversineMeters,
+  bearingDeg,
+  canCheckIn,
+  orderByRoute,
+  routeDistanceMeters,
+} from "./geo";
 
 const tokyoTower = { lat: 35.6586, lng: 139.7454 };
 
@@ -74,5 +80,33 @@ describe("orderByRoute", () => {
       P("c", 2),
     ]);
     expect(out[out.length - 1].id).toBe("bad");
+  });
+});
+
+describe("routeDistanceMeters", () => {
+  const Q = (k: number) => ({ shooterLat: 37.5, shooterLng: 126.9 + k * 0.01 });
+  const seg = haversineMeters(
+    { lat: 37.5, lng: 126.9 },
+    { lat: 37.5, lng: 126.91 },
+  );
+
+  it("연속 구간 합(동일 간격 2구간 = 세그먼트×2)", () => {
+    expect(routeDistanceMeters([Q(0), Q(1), Q(2)])).toBeCloseTo(seg * 2, 3);
+  });
+
+  it("0~1개는 0", () => {
+    expect(routeDistanceMeters([])).toBe(0);
+    expect(routeDistanceMeters([Q(0)])).toBe(0);
+  });
+
+  it("좌표 없는 구간은 합산 제외", () => {
+    // Q0-Q1만 유효, 이후 NaN 포함 구간은 스킵 → 세그먼트 1개
+    const d = routeDistanceMeters([
+      Q(0),
+      Q(1),
+      { shooterLat: NaN, shooterLng: NaN },
+      Q(2),
+    ]);
+    expect(d).toBeCloseTo(seg, 3);
   });
 });

@@ -71,6 +71,32 @@ export function orderByRoute<
   return [...route, ...invalid];
 }
 
+/**
+ * 경로 총 이동 거리(m) — orderByRoute로 정렬된 스팟 배열의 연속 구간 합. 여행 코스 길이 표시용.
+ * 좌표 없는 구간은 건너뛴다(합산 제외).
+ */
+export function routeDistanceMeters(
+  spots: { shooterLat?: number | null; shooterLng?: number | null }[],
+): number {
+  let total = 0;
+  for (let i = 1; i < spots.length; i++) {
+    const a = spots[i - 1];
+    const b = spots[i];
+    if (
+      Number.isFinite(a.shooterLat) &&
+      Number.isFinite(a.shooterLng) &&
+      Number.isFinite(b.shooterLat) &&
+      Number.isFinite(b.shooterLng)
+    ) {
+      total += haversineMeters(
+        { lat: a.shooterLat!, lng: a.shooterLng! },
+        { lat: b.shooterLat!, lng: b.shooterLng! },
+      );
+    }
+  }
+  return total;
+}
+
 /** 방문 인증 가능 여부: 반경(m) 이내 && GPS 정확도(m) 충족. (정책: 기본 100m / accuracy≤50m) */
 export function canCheckIn(
   user: LatLng,
