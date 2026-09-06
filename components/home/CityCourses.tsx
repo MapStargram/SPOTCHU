@@ -11,12 +11,18 @@ function bgFor(id: string): string {
   return BG[h % BG.length];
 }
 
-export function CityCourses({ courses }: { courses: Collection[] }) {
+export function CityCourses({
+  courses,
+  heading = "이 도시의 코스",
+}: {
+  courses: Collection[];
+  heading?: string;
+}) {
   if (!courses.length) return null;
   return (
     <section className="mt-7">
       <h2 className="text-[16px] font-extrabold tracking-[-0.02em] lg:text-[19px]">
-        이 도시의 코스
+        {heading}
       </h2>
       <div className="mt-3 flex gap-3 overflow-x-auto pb-1 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {courses.map((c) => (
