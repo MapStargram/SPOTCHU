@@ -39,6 +39,7 @@
 - 위험 경고 배너·비교 슬라이더 출처: [`../04-spot-detail/`](../04-spot-detail/).
 - EXIF 제거·업로드: [`../09-community-feed-upload/`](../09-community-feed-upload/).
 - 신고·notice & takedown·삭제 실행: [`../11-admin-moderation/`](../11-admin-moderation/) (prd §22).
+- **AI 썸네일(장소 일러스트) 정책** — CC 사진 없는 스팟의 대체 이미지(원본 스틸 금지 대안): [`./ai-thumbnail-policy.md`](./ai-thumbnail-policy.md). 초안·법률 검토 대기, 장면 재현 금지·장소 일반 일러스트만·"AI 일러스트" 라벨.
 
 ## TODO / 미결정
 - **외부 지오태그 시딩의 법적 적합성**(prd §41): 각 플랫폼 약관·저작권상 좌표·출처 메타데이터 수집 허용 범위 → **법률 검토 필요**. 그 전까지는 운영자 수동 확인 기반 제한 운영.
