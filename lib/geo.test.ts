@@ -5,6 +5,7 @@ import {
   canCheckIn,
   orderByRoute,
   routeDistanceMeters,
+  orderByDistanceFrom,
 } from "./geo";
 
 const tokyoTower = { lat: 35.6586, lng: 139.7454 };
@@ -108,5 +109,31 @@ describe("routeDistanceMeters", () => {
       Q(2),
     ]);
     expect(d).toBeCloseTo(seg, 3);
+  });
+});
+
+describe("orderByDistanceFrom (검색 거리순 · 클라 근사)", () => {
+  const near = { id: "near", shooterLat: 35.0, shooterLng: 139.0 };
+  const mid = { id: "mid", shooterLat: 35.5, shooterLng: 139.0 };
+  const far = { id: "far", shooterLat: 36.0, shooterLng: 139.0 };
+  const origin = { lat: 35.0, lng: 139.0 };
+
+  it("원점에서 가까운 순으로 정렬한다", () => {
+    const out = orderByDistanceFrom([far, near, mid], origin);
+    expect(out.map((s) => s.id)).toEqual(["near", "mid", "far"]);
+  });
+
+  it("좌표 없는 항목은 맨 뒤(원래 상대순서)로", () => {
+    const a = { id: "a", shooterLat: null, shooterLng: null }; // 좌표 없음
+    const b = { id: "b", shooterLat: null, shooterLng: null };
+    const out = orderByDistanceFrom([a, far, b, near], origin);
+    expect(out.map((s) => s.id)).toEqual(["near", "far", "a", "b"]);
+  });
+
+  it("동거리는 입력 순서 유지(안정)", () => {
+    const p1 = { id: "p1", shooterLat: 35.1, shooterLng: 139.0 };
+    const p2 = { id: "p2", shooterLat: 34.9, shooterLng: 139.0 }; // p1과 원점서 같은 거리
+    const out = orderByDistanceFrom([p1, p2], origin);
+    expect(out.map((s) => s.id)).toEqual(["p1", "p2"]);
   });
 });

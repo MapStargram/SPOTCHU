@@ -159,6 +159,12 @@ export function SearchControls({
             >
               최신순
             </Chip>
+            <Chip
+              active={cur("sort") === "near"}
+              onClick={() => setParam("sort", "near")}
+            >
+              거리순
+            </Chip>
           </div>
         </Field>
 

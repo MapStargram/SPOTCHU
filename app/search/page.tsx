@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Link from "next/link";
 import { AppShell } from "@/components/shell/AppShell";
-import { FeedView } from "@/components/explore/FeedView";
+import { NearbyFeed } from "@/components/explore/NearbyFeed";
 import { SearchControls } from "@/components/explore/SearchControls";
 import { CityCourses } from "@/components/home/CityCourses";
 import {
@@ -119,7 +119,12 @@ async function SearchResults({
           <div className="mb-3 font-latin text-[11px] text-[color:var(--muted)]">
             {spots.length}개 스팟
           </div>
-          <FeedView spots={spots} loggedIn={!!user} initialSaved={savedIds} />
+          <NearbyFeed
+            spots={spots}
+            loggedIn={!!user}
+            initialSaved={savedIds}
+            active={params.sort === "near"}
+          />
         </div>
       )}
     </section>
