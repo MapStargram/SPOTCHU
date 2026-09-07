@@ -13,6 +13,7 @@ import {
 // imported=inline shooterLat(+IMPORTED_COORDS). 예전 seed는 SPOT_COORDS만 조회해
 // ~700개 research/imported 스팟을 (0,0)으로 시딩 → 지도 뷰포트에서 소멸했다.
 import { RESEARCH_COORDS } from "../lib/spots.research";
+import { imageUpdateFields } from "../lib/seed-image";
 import { IMPORTED_COORDS } from "../lib/spots.imported";
 import { BADGE_DEFS } from "../lib/badges";
 
@@ -158,10 +159,8 @@ async function main() {
         // 좌표를 update에도 넣어야 기존 (0,0) 행이 재시드로 교정된다(예전엔 update에 좌표 없어 미교정).
         shooterLat: coord.lat,
         shooterLng: coord.lng,
-        coverImageUrl: s.imageUrl ?? null,
-        imageAuthor: s.imageCredit?.author ?? null,
-        imageLicense: s.imageCredit?.license ?? null,
-        imageSource: s.imageCredit?.source ?? null,
+        // 이미지 필드는 소스에 CC 이미지가 있을 때만 갱신 — 없으면 DB 보존(AI 일러스트 미덮어씀, lib/seed-image).
+        ...imageUpdateFields(s),
         rating: s.rating,
         subtitle: s.subtitle,
         angle: s.angle,
