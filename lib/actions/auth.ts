@@ -18,6 +18,7 @@ const cleanCountry = (c?: string) =>
   c && COUNTRY_IDS.includes(c) ? c : undefined;
 import { sendVerifyEmail, sendResetEmail } from "@/lib/email";
 import { canDisconnect } from "@/lib/auth/link";
+import { destroyImages } from "@/lib/cloudinary";
 
 type Result = { ok: true } | { ok: false; error: string };
 
@@ -466,25 +467,39 @@ export async function mergeAccount(token: string): Promise<Result> {
 //   카운터 정합: 개인데이터가 사라진 스팟의 비정규화 카운터(saveCount·checkin·likeSum)를 원본에서 재계산.
 // 세션: JWT 전략이라 서버 세션 테이블은 사실상 미사용 → 삭제 후 클라가 signOut() 호출(설정 화면).
 // 개인정보(prd §23): 되돌릴 수 없음 — 호출부(설정)에서 확인 후 실행.
-// ⚠️ 업로드 이미지의 Cloudinary 원본 자산 삭제는 후속(TODO) — DB 참조는 제거되나 저장소 정리는 별도.
+// 업로드 이미지의 Cloudinary 원본 자산은 DB 삭제 후 best-effort로 정리(우리 클라우드 URL만).
 export async function deleteAccountAction(): Promise<Result> {
   const me = await getCurrentUser();
   if (!me?.id) return { ok: false, error: "로그인이 필요합니다" };
   const userId = me.id;
 
-  // 카운터 재계산 대상 스팟(개인데이터가 걸린 스팟) — 삭제 전 스냅샷.
-  const [items, checkins, posts, likes] = await Promise.all([
-    db.collectionItem.findMany({
-      where: { collection: { ownerId: userId } },
-      select: { spotId: true },
-    }),
-    db.checkIn.findMany({ where: { userId }, select: { spotId: true } }),
-    db.post.findMany({ where: { authorId: userId }, select: { spotId: true } }),
-    db.like.findMany({
-      where: { userId },
-      select: { post: { select: { spotId: true } } },
-    }),
-  ]);
+  // 삭제 전 스냅샷: 카운터 재계산 대상 스팟 + Cloudinary 정리 대상(게시물 사진·아바타).
+  const [items, checkins, posts, likes, imageRows, userRow] = await Promise.all(
+    [
+      db.collectionItem.findMany({
+        where: { collection: { ownerId: userId } },
+        select: { spotId: true },
+      }),
+      db.checkIn.findMany({ where: { userId }, select: { spotId: true } }),
+      db.post.findMany({
+        where: { authorId: userId },
+        select: { spotId: true },
+      }),
+      db.like.findMany({
+        where: { userId },
+        select: { post: { select: { spotId: true } } },
+      }),
+      db.postImage.findMany({
+        where: { post: { authorId: userId } },
+        select: { url: true },
+      }),
+      db.user.findUnique({ where: { id: userId }, select: { image: true } }),
+    ],
+  );
+  const assetUrls = [
+    ...imageRows.map((r) => r.url),
+    ...(userRow?.image ? [userRow.image] : []), // 소셜 제공 아바타는 우리 클라우드가 아니라 destroyImage가 무시
+  ];
   const affected = [
     ...new Set<string>([
       ...items.map((i) => i.spotId),
@@ -524,5 +539,7 @@ export async function deleteAccountAction(): Promise<Result> {
     { timeout: 20_000 }, // 활동 많은 계정의 다중 스팟 재계산 여유(드문 작업)
   );
 
+  // DB 삭제 확정 후 Cloudinary 원본 자산 정리(best-effort — 실패해도 탈퇴는 이미 완료).
+  await destroyImages(assetUrls);
   return { ok: true };
 }

@@ -9,6 +9,7 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { z } from "zod";
 import { db } from "@/lib/db";
 import { requireModerator, requireAdmin } from "@/lib/authz";
+import { destroyImage, destroyImages } from "@/lib/cloudinary";
 import { Role } from "@prisma/client";
 
 type Fail = { ok: false; reason: string };
@@ -75,7 +76,7 @@ export async function setUserTrustAction(
 async function deletePostAndSyncLikeSum(postId: string): Promise<boolean> {
   const post = await db.post.findUnique({
     where: { id: postId },
-    select: { spotId: true },
+    select: { spotId: true, images: { select: { url: true } } },
   });
   if (!post) return false;
   const likeCount = await db.like.count({ where: { postId } });
@@ -86,6 +87,7 @@ async function deletePostAndSyncLikeSum(postId: string): Promise<boolean> {
       data: { likeSum: { decrement: likeCount } },
     }),
   ]);
+  await destroyImages(post.images.map((i) => i.url)); // best-effort CDN 원본 정리
   return true;
 }
 
@@ -108,7 +110,7 @@ export async function deletePhotoAction(imageId: string): Promise<Result> {
 
   const image = await db.postImage.findUnique({
     where: { id: imageId },
-    select: { postId: true },
+    select: { postId: true, url: true },
   });
   if (!image) return { ok: false, reason: "not_found" };
 
@@ -116,10 +118,11 @@ export async function deletePhotoAction(imageId: string): Promise<Result> {
     where: { postId: image.postId },
   });
   if (remaining <= 1) {
-    // 이미지 0장 게시물은 피드에서 깨지므로 게시물째 삭제(Cascade) + spot.likeSum 차감.
+    // 이미지 0장 게시물은 피드에서 깨지므로 게시물째 삭제(Cascade + likeSum 차감 + CDN 정리).
     await deletePostAndSyncLikeSum(image.postId);
   } else {
     await db.postImage.delete({ where: { id: imageId } });
+    await destroyImage(image.url); // best-effort CDN 원본 정리
   }
   revalidatePath("/admin/photos");
   revalidatePath("/admin/posts");
