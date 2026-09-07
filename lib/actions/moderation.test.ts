@@ -3,7 +3,7 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { PrismaClient } from "@prisma/client";
 import { randomUUID } from "crypto";
-import { mergeSpotsAction } from "./moderation";
+import { mergeSpotsAction, resolveModerationAction } from "./moderation";
 import { getCurrentUser } from "@/lib/session";
 
 vi.mock("@/lib/session", () => ({ getCurrentUser: vi.fn() }));
@@ -205,5 +205,95 @@ describe("mergeSpotsAction", () => {
     expect(res).toMatchObject({ ok: false, reason: "forbidden" });
     // 병합이 실행되지 않아 absorb 참조가 그대로여야 한다
     expect(await db.checkIn.count({ where: { spotId: absorbId } })).toBe(2);
+  });
+});
+
+describe("resolveModerationAction", () => {
+  let cityId: string,
+    categoryId: string,
+    modId: string,
+    reporterId: string,
+    spotId: string,
+    itemId: string;
+
+  beforeEach(async () => {
+    cityId = `test-city-${randomUUID()}`;
+    categoryId = `test-cat-${randomUUID()}`;
+    modId = `test-mod-${randomUUID()}`;
+    reporterId = `test-rep-${randomUUID()}`;
+    spotId = `test-spot-${randomUUID()}`;
+    await db.city.create({
+      data: {
+        id: cityId,
+        name: "T",
+        country: "KR",
+        centerLat: LAT,
+        centerLng: LNG,
+      },
+    });
+    await db.category.create({
+      data: { id: categoryId, key: categoryId, label: "T" },
+    });
+    await db.user.createMany({
+      data: [
+        { id: modId, email: `${modId}@t.local`, role: "MODERATOR" },
+        { id: reporterId, email: `${reporterId}@t.local` },
+      ],
+    });
+    await db.spot.create({
+      data: {
+        id: spotId,
+        name: "s",
+        categoryId,
+        cityId,
+        shooterLat: LAT,
+        shooterLng: LNG,
+        subject: "x",
+        verificationStatus: "USER_REPORTED",
+        createdById: reporterId,
+      },
+    });
+    const item = await db.moderationItem.create({
+      data: { type: "NEW_SPOT", refType: "Spot", refId: spotId },
+    });
+    itemId = item.id;
+  });
+
+  afterEach(async () => {
+    await db.notification.deleteMany({ where: { userId: reporterId } });
+    await db.moderationItem.deleteMany({ where: { id: itemId } });
+    await db.spot.deleteMany({ where: { id: spotId } });
+    await db.category.deleteMany({ where: { id: categoryId } });
+    await db.city.deleteMany({ where: { id: cityId } });
+    await db.user.deleteMany({ where: { id: { in: [modId, reporterId] } } });
+  });
+
+  it("동시 처리(연타)에도 1건만 전이하고 알림은 1회만 발행된다", async () => {
+    asUser(modId);
+    const [a, b] = await Promise.all([
+      resolveModerationAction(itemId, "REJECTED"),
+      resolveModerationAction(itemId, "REJECTED"),
+    ]);
+    expect([a, b].filter((r) => r.ok).length).toBe(1); // 한 건만 전이
+    expect(
+      [a, b].filter((r) => !r.ok && r.reason === "already_resolved").length,
+    ).toBe(1);
+    const it = await db.moderationItem.findUniqueOrThrow({
+      where: { id: itemId },
+    });
+    expect(it.status).toBe("REJECTED");
+    // 중복 알림 없음(원자적 전이 → count===1에서만 발행)
+    expect(
+      await db.notification.count({
+        where: { userId: reporterId, type: "REPORT_REVIEWED" },
+      }),
+    ).toBe(1);
+  });
+
+  it("이미 처리된 아이템 재처리는 already_resolved", async () => {
+    asUser(modId);
+    await resolveModerationAction(itemId, "APPROVED");
+    const again = await resolveModerationAction(itemId, "REJECTED");
+    expect(again).toMatchObject({ ok: false, reason: "already_resolved" });
   });
 });
