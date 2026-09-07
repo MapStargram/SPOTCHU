@@ -5,7 +5,12 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { PrismaClient } from "@prisma/client";
 import { randomUUID } from "crypto";
-import { checkInAction } from "./mutations";
+import {
+  checkInAction,
+  saveSpotAction,
+  toggleSaveAction,
+  toggleLikeAction,
+} from "./mutations";
 import { getCurrentUser } from "@/lib/session";
 
 vi.mock("@/lib/session", () => ({ getCurrentUser: vi.fn() }));
@@ -187,6 +192,89 @@ describe("checkInAction", () => {
     await db.user.deleteMany({
       where: { id: { in: [reporterId, ...verifierIds] } },
     });
+  });
+});
+
+// 저장/좋아요 토글의 원자성(RISK-3): 소스 행 create/delete와 카운터 update를 한 트랜잭션으로
+// 묶었으므로, 정상 경로에서 카운터가 항상 소스 행 수와 일치해야 한다(크래시 롤백은 시뮬레이션 어려워
+// 불변식만 검증). 실 DB(docker-compose postgis) 필요.
+describe("저장/좋아요 토글 카운터 원자성", () => {
+  let cityId: string, categoryId: string, spotId: string, userId: string;
+
+  beforeEach(async () => {
+    cityId = `test-city-${randomUUID()}`;
+    categoryId = `test-cat-${randomUUID()}`;
+    spotId = `test-spot-${randomUUID()}`;
+    userId = `test-user-${randomUUID()}`;
+    await db.city.create({
+      data: {
+        id: cityId,
+        name: "T",
+        country: "KR",
+        centerLat: LAT,
+        centerLng: LNG,
+      },
+    });
+    await db.category.create({
+      data: { id: categoryId, key: categoryId, label: "T" },
+    });
+    await db.user.create({
+      data: { id: userId, email: `${userId}@test.local` },
+    });
+    await db.spot.create({
+      data: {
+        id: spotId,
+        name: "s",
+        categoryId,
+        cityId,
+        shooterLat: LAT,
+        shooterLng: LNG,
+        subject: "x",
+        verificationStatus: "OFFICIAL",
+      },
+    });
+  });
+
+  afterEach(async () => {
+    await db.like.deleteMany({ where: { post: { spotId } } }).catch(() => {});
+    await db.post.deleteMany({ where: { spotId } });
+    await db.collectionItem.deleteMany({ where: { spotId } });
+    await db.collection.deleteMany({ where: { ownerId: userId } });
+    await db.spot.delete({ where: { id: spotId } }).catch(() => {});
+    await db.category.delete({ where: { id: categoryId } }).catch(() => {});
+    await db.city.delete({ where: { id: cityId } }).catch(() => {});
+    await db.user.deleteMany({ where: { id: userId } });
+  });
+
+  it("저장→토글해제→토글저장에서 saveCount가 항상 CollectionItem 수와 일치", async () => {
+    asUser(userId);
+    const expectSaveMatches = async (want: number) => {
+      const spot = await db.spot.findUniqueOrThrow({ where: { id: spotId } });
+      const items = await db.collectionItem.count({ where: { spotId } });
+      expect(spot.saveCount).toBe(items);
+      expect(spot.saveCount).toBe(want);
+    };
+    await saveSpotAction(spotId);
+    await expectSaveMatches(1);
+    expect(await toggleSaveAction(spotId)).toMatchObject({ saved: false });
+    await expectSaveMatches(0);
+    expect(await toggleSaveAction(spotId)).toMatchObject({ saved: true });
+    await expectSaveMatches(1);
+  });
+
+  it("좋아요 토글에서 likeSum이 항상 Like 수와 일치", async () => {
+    asUser(userId);
+    const post = await db.post.create({ data: { authorId: userId, spotId } });
+    const expectLikeMatches = async (want: number) => {
+      const spot = await db.spot.findUniqueOrThrow({ where: { id: spotId } });
+      const likes = await db.like.count({ where: { post: { spotId } } });
+      expect(spot.likeSum).toBe(likes);
+      expect(spot.likeSum).toBe(want);
+    };
+    expect(await toggleLikeAction(post.id)).toMatchObject({ liked: true });
+    await expectLikeMatches(1);
+    expect(await toggleLikeAction(post.id)).toMatchObject({ liked: false });
+    await expectLikeMatches(0);
   });
 });
 
