@@ -46,6 +46,35 @@ function arg(name: string): string | undefined {
 }
 const has = (name: string) => process.argv.includes(`--${name}`);
 
+// 실제 장소 사실 묘사 맵(spotId → {detail, figure}). 있으면 도시·카테고리 대신 디테일 프롬프트로 조립.
+type PlaceDetail = { detail?: string; figure?: boolean };
+function loadPlaceDetail(): Record<string, PlaceDetail> {
+  const p = join(process.cwd(), "scripts", "ai-thumbnail-place-detail.json");
+  if (!existsSync(p)) return {};
+  const raw = JSON.parse(readFileSync(p, "utf8")) as Record<string, unknown>;
+  const out: Record<string, PlaceDetail> = {};
+  for (const [k, v] of Object.entries(raw))
+    if (k[0] !== "_" && v && typeof v === "object") out[k] = v as PlaceDetail;
+  return out;
+}
+
+type SpotForPrompt = {
+  id: string;
+  city: { name: string; nameEn: string | null };
+  category: { key: string } | null;
+};
+function promptFor(s: SpotForPrompt, details: Record<string, PlaceDetail>): string {
+  const d = details[s.id];
+  return buildPlacePrompt({
+    cityName: s.city.nameEn || s.city.name,
+    categoryKey: s.category?.key,
+    seed: hashSeed(s.id),
+    placeDetail: d?.detail,
+    // 큐레이션된 스팟만 인물 포함(맵의 figure, 기본 true). 미큐레이션 일반 스팟은 인물 생략.
+    figure: d ? d.figure : false,
+  });
+}
+
 // Gemini 이미지 REST 호출(nanobanana). 모델·응답 계약은 변할 수 있어 모델을 env로 오버라이드 가능.
 // 응답 parts에서 inlineData(base64) 이미지 파트를 추출. 없으면(모델/모달리티 문제) 에러로 중단.
 const MODEL = process.env.AI_THUMBNAIL_MODEL || "gemini-2.5-flash-image";
@@ -98,6 +127,7 @@ async function main() {
   const spotId = arg("spot");
   const delayMs = Number(process.env.AI_THUMBNAIL_DELAY_MS ?? 4000);
 
+  const details = loadPlaceDetail();
   const db = new PrismaClient();
   const spots = await db.spot.findMany({
     where: {
@@ -121,11 +151,7 @@ async function main() {
   );
   if (!apply) {
     for (const s of spots) {
-      const prompt = buildPlacePrompt({
-        cityName: s.city.nameEn || s.city.name,
-        categoryKey: s.category?.key,
-        seed: hashSeed(s.id),
-      });
+      const prompt = promptFor(s, details);
       console.log(`  [dry] ${s.id}\n        ${prompt}`);
     }
     console.log(
@@ -157,11 +183,7 @@ async function main() {
   const failed: string[] = [];
   for (let i = 0; i < spots.length; i++) {
     const s = spots[i];
-    const prompt = buildPlacePrompt({
-      cityName: s.city.nameEn || s.city.name,
-      categoryKey: s.category?.key,
-      seed: hashSeed(s.id),
-    });
+    const prompt = promptFor(s, details);
     try {
       if (i > 0) await new Promise((r) => setTimeout(r, delayMs)); // 무료 티어 rate limit 회피
       const buf = await generateImage(prompt, key);
