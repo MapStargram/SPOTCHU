@@ -20,14 +20,14 @@ export async function resolveModerationAction(
 
   const item = await db.moderationItem.findUnique({
     where: { id: itemId },
-    select: { status: true, type: true, refType: true, refId: true },
+    select: { type: true, refType: true, refId: true },
   });
   if (!item) return { ok: false, reason: "not_found" };
-  if (item.status !== "PENDING")
-    return { ok: false, reason: "already_resolved" };
 
-  await db.moderationItem.update({
-    where: { id: itemId },
+  // 원자적 상태 전이: PENDING인 1건만 통과(count===1). findUnique→update 사이 경합(운영자 연타·
+  // 멀티탭)에 여러 요청이 통과해 중복 알림을 보내던 문제 방지(#204 체크인 승격과 동일 패턴).
+  const resolved = await db.moderationItem.updateMany({
+    where: { id: itemId, status: "PENDING" },
     data: {
       status,
       note: note?.slice(0, 500),
@@ -35,9 +35,10 @@ export async function resolveModerationAction(
       resolvedAt: new Date(),
     },
   });
+  if (resolved.count === 0) return { ok: false, reason: "already_resolved" };
 
   // 제보자에게 검수 결과 알림(REPORT_REVIEWED) — NEW_SPOT 제보 한정, 제보자=spot.createdById.
-  // 승인/반려/숨김 모두 통지(문구는 일반형). 딥링크는 스팟 상세(refType SPOT).
+  // 실제 전이한 요청(count===1)에서만 발행 → 중복 알림 방지. 승인/반려/숨김 모두 통지(문구 일반형).
   if (item.type === "NEW_SPOT" && item.refType === "Spot") {
     const spot = await db.spot.findUnique({
       where: { id: item.refId },
