@@ -25,6 +25,10 @@ Thumbs.db
 .env*
 public/cesium/
 
+# AI 썸네일 다운로드 폴더(Chrome+Gemini 생성분 임시 수집) · 프로버넌스 로그
+/gemini/
+/research/ai-thumbnails/
+
 # Playwright
 /test-results/
 /playwright-report/
