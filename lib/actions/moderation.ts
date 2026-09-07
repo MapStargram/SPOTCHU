@@ -189,6 +189,23 @@ export async function mergeSpotsAction(
       },
     });
 
+    // absorb 스팟도 소스에서 재계산(포스트 이관·체크인/저장/작품 dedup 후 사실상 0). 미재계산 시
+    // 병합 전 값이 stale로 남아 어드민 목록(hidden 미필터)·역병합 시 과대 카운터가 노출된다.
+    const [auniq, asaves, alikes] = await Promise.all([
+      tx.checkIn.count({ where: { spotId: absorbSpotId } }),
+      tx.collectionItem.count({ where: { spotId: absorbSpotId } }),
+      tx.like.count({ where: { post: { spotId: absorbSpotId } } }),
+    ]);
+    await tx.spot.update({
+      where: { id: absorbSpotId },
+      data: {
+        uniqueCheckinCount: auniq,
+        checkinCount: auniq,
+        saveCount: asaves,
+        likeSum: alikes,
+      },
+    });
+
     await tx.moderationItem.update({
       where: { id: itemId },
       data: {

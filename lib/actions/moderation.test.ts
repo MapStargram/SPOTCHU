@@ -84,6 +84,16 @@ describe("mergeSpotsAction", () => {
           verificationStatus: "OFFICIAL",
         },
       });
+    // 병합 전 absorb에 stale 카운터를 심어, 병합이 keep은 재계산·absorb는 0으로 정합하는지 검증(BUG-2 회귀 가드)
+    await db.spot.update({
+      where: { id: absorbId },
+      data: {
+        saveCount: 9,
+        checkinCount: 9,
+        uniqueCheckinCount: 9,
+        likeSum: 9,
+      },
+    });
     await db.collection.createMany({
       data: [
         { id: colX, ownerId: uA, title: "X" },
@@ -191,6 +201,13 @@ describe("mergeSpotsAction", () => {
     expect(keep.uniqueCheckinCount).toBe(2);
     expect(keep.saveCount).toBe(2);
     expect(keep.likeSum).toBe(1); // 이동한 게시물의 좋아요 1
+
+    // absorb 스팟은 소스 전량 이관 후 0으로 재계산 — stale(9) 방치 금지(BUG-2)
+    const absorb = await db.spot.findUniqueOrThrow({ where: { id: absorbId } });
+    expect(absorb.uniqueCheckinCount).toBe(0);
+    expect(absorb.checkinCount).toBe(0);
+    expect(absorb.saveCount).toBe(0);
+    expect(absorb.likeSum).toBe(0);
 
     // 흡수 스팟 아이템은 MERGED(삭제 아님, 가역)
     const item = await db.moderationItem.findUniqueOrThrow({
