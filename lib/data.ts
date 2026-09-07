@@ -409,7 +409,9 @@ const searchSchema = z.object({
     .enum(["official", "user", "reported"])
     .optional()
     .catch(undefined),
-  sort: z.enum(["popular", "recent"]).optional().catch(undefined), // prd §158, 기본 popular
+  // prd §158 정렬. near(거리순)는 좌표를 서버로 보내지 않으므로(§23) 서버는 popular 셋을 주고
+  // 클라(NearbyFeed)가 사용자 위치 기준으로 재정렬한다 — 서버는 popular처럼 취급.
+  sort: z.enum(["popular", "recent", "near"]).optional().catch(undefined),
 });
 export type SearchParams = z.input<typeof searchSchema>;
 
@@ -440,7 +442,7 @@ export async function searchSpots(raw: SearchParams): Promise<Spot[]> {
     categoryId: p.category,
     workId: p.work,
     verificationStatus: p.verified ? VERIF_TO_DB[p.verified] : undefined,
-    sort: p.sort,
+    sort: p.sort === "recent" ? "recent" : "popular", // near는 popular 셋 → 클라가 거리 재정렬
   });
   // 최신순은 DB에서 createdAt desc로 확정됨 → 그대로 매핑(재정렬 금지).
   if (p.sort === "recent") return rows.map(mapSpot);

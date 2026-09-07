@@ -72,6 +72,27 @@ export function orderByRoute<
 }
 
 /**
+ * 원점(origin, 보통 사용자 현재 위치)에서 가까운 순 정렬. 검색 '거리순'(클라 근사) — 서버가 반환한
+ * 결과셋 내에서만 재정렬하고 좌표는 클라이언트에만 머문다(서버 미전송, prd §23). 좌표 없는 항목은
+ * 원래 상대순서로 맨 뒤에 붙인다. 동거리는 입력 순서 유지(안정 정렬).
+ */
+export function orderByDistanceFrom<
+  T extends { shooterLat?: number | null; shooterLng?: number | null },
+>(items: T[], origin: LatLng): T[] {
+  const hasCoord = (s: T) =>
+    Number.isFinite(s.shooterLat) && Number.isFinite(s.shooterLng);
+  const ranked = items
+    .filter(hasCoord)
+    .map((s, i) => ({
+      s,
+      i,
+      d: haversineMeters(origin, { lat: s.shooterLat!, lng: s.shooterLng! }),
+    }))
+    .sort((a, b) => a.d - b.d || a.i - b.i);
+  return [...ranked.map((x) => x.s), ...items.filter((s) => !hasCoord(s))];
+}
+
+/**
  * 경로 총 이동 거리(m) — orderByRoute로 정렬된 스팟 배열의 연속 구간 합. 여행 코스 길이 표시용.
  * 좌표 없는 구간은 건너뛴다(합산 제외).
  */
