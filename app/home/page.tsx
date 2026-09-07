@@ -2,9 +2,11 @@ import Link from "next/link";
 import { Globe2 } from "lucide-react";
 import { AppShell } from "@/components/shell/AppShell";
 import { PinGrid } from "@/components/home/PinGrid";
-import { getCities, getSpotsByCity } from "@/lib/data";
+import { CityCourses } from "@/components/home/CityCourses";
+import { getCities, getSpotsByCity, getOfficialCollections } from "@/lib/data";
 import { CITIES } from "@/lib/cities-catalog";
 import { COUNTRY_META } from "@/lib/cities-geo";
+import { currentSeason, SEASONAL_COLLECTION, SEASON_LABEL } from "@/lib/season";
 import { getCurrentUser } from "@/lib/session";
 import { getSavedSpotIds } from "@/lib/actions/mutations";
 
@@ -52,6 +54,11 @@ export default async function HomeDiscoverScreen() {
   }));
   const user = await getCurrentUser();
   const savedIds = await getSavedSpotIds();
+  // 이번 계절 추천 — 현재 월의 계절에 해당하는 공식 컬렉션을 노출(운영자 편성, lib/season).
+  // 해당 계절 컬렉션이 없거나 비면 CityCourses가 null 반환 → 섹션 숨김(rules 02 §빈 섹션).
+  const season = currentSeason();
+  const officials = await getOfficialCollections();
+  const seasonal = officials.find((c) => c.id === SEASONAL_COLLECTION[season]);
 
   return (
     <AppShell active="home">
@@ -72,6 +79,11 @@ export default async function HomeDiscoverScreen() {
             <Globe2 size={14} /> 도시별로
           </Link>
         </header>
+
+        <CityCourses
+          courses={seasonal ? [seasonal] : []}
+          heading={`이번 계절 추천 · ${SEASON_LABEL[season]}`}
+        />
 
         <div className="mt-6 flex items-baseline justify-between">
           <h2 className="text-[16px] font-extrabold tracking-[-0.02em] lg:text-[19px]">
