@@ -229,6 +229,28 @@ async function main() {
     }
   }
 
+  // saveCount 정합: canonical = 스팟을 참조하는 CollectionItem 수(공식·사용자 항목 포함,
+  // auth.ts·moderation.ts 재계산식과 동일). 시드는 스팟/항목만 만들고 saveCount를 세팅하지 않아
+  // 큐레이션 스팟이 0으로 남고, 이후 탈퇴/병합 재계산이 걸릴 때만 뒤늦게 점프하던 드리프트(#232 계열)를
+  // 소스에서 재계산해 교정한다(멱등 — 값이 다른 스팟만 update).
+  const itemCounts = await db.collectionItem.groupBy({
+    by: ["spotId"],
+    _count: { spotId: true },
+  });
+  const wantSaveBy = new Map(itemCounts.map((r) => [r.spotId, r._count.spotId]));
+  const spotsNow = await db.spot.findMany({
+    select: { id: true, saveCount: true },
+  });
+  let saveFixed = 0;
+  for (const sp of spotsNow) {
+    const want = wantSaveBy.get(sp.id) ?? 0;
+    if (sp.saveCount !== want) {
+      await db.spot.update({ where: { id: sp.id }, data: { saveCount: want } });
+      saveFixed++;
+    }
+  }
+  if (saveFixed) console.log(`saveCount 정합 교정: ${saveFixed}개 스팟`);
+
   console.log(
     `Seed 완료: 도시 ${CITIES.length} · 스팟 ${SPOTS.length} · 작품 ${WORKS.length} · 컬렉션 ${COLLECTIONS.length} · 배지 ${BADGE_DEFS.length}`,
   );
