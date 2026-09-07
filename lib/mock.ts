@@ -719,6 +719,67 @@ export const COLLECTIONS: Collection[] = [
     isOfficial: false,
     spots: ["gyeongbok", "seongsu", "itaewon-danbam"],
   },
+  // 시즌 테마 큐레이션(운영자 편성, rules 02) — 홈 "이번 계절 추천"이 현재 월로 골라 노출(lib/season).
+  // 시작 큐레이션(운영자가 계속 보강). id는 lib/season SEASONAL_COLLECTION과 일치해야 한다.
+  {
+    id: "season-spring",
+    title: "봄, 벚꽃 명소",
+    subtitle: "벚꽃 스팟 · 공식",
+    itemCount: 3,
+    coverGrad: "linear-gradient(135deg, #FF9EB5 0%, #FFD6A5 100%)",
+    isOwn: false,
+    isOfficial: true,
+    spots: [
+      "okinawa-sakurazaka-nada-sou-sou-b6d1",
+      "tokyo-irohazaka-sakura-park-whisper-9d2a",
+      "tokyo-shakujii-river-sakura-your-lie-april-e6b3",
+    ],
+  },
+  {
+    id: "season-summer",
+    title: "여름, 바다와 해변",
+    subtitle: "해변 스팟 · 공식",
+    itemCount: 4,
+    coverGrad: "linear-gradient(135deg, #45D6C6 0%, #2E86C1 100%)",
+    isOwn: false,
+    isOfficial: true,
+    spots: [
+      "bali-diamond-beach-staircase-a93e",
+      "bali-kuta-beach-memories-of-bali-7f2a",
+      "bali-padang-padang-beach-eatpraylove-e4b2",
+      "bali-kelingking-beach-trex-cliff-viewpoint-e41b",
+    ],
+  },
+  {
+    id: "season-autumn",
+    title: "가을, 단풍과 정원",
+    subtitle: "단풍·정원 감성 · 공식",
+    itemCount: 5,
+    coverGrad: "linear-gradient(135deg, #E2793C 0%, #B23A2E 100%)",
+    isOwn: false,
+    isOfficial: true,
+    spots: [
+      "kyoto-fushimi-inari-senbon-torii-e41c",
+      "kyoto-botanical-garden-my-tomorrow-your-yesterday-f04c",
+      "kyoto-fushimi-inari-yotsutsuji-viewpoint-9c4d",
+      "tokyo-meiji-jingu-gaien-icho-namiki-your-name-e58b",
+      "fukuoka-ohori-park-kangetsukyo-fuufu-ijou-9c2f",
+    ],
+  },
+  {
+    id: "season-winter",
+    title: "겨울, 야경과 전망",
+    subtitle: "야경·전망 · 공식",
+    itemCount: 3,
+    coverGrad: "linear-gradient(135deg, #28324F 0%, #5B6B9E 100%)",
+    isOwn: false,
+    isOfficial: true,
+    spots: [
+      "busan-cheonmasan-sky-observatory-d4a7",
+      "busan-gamcheon-haneulmaru-observatory-f83c",
+      "fukuoka-momochihama-marizon-tower-c42e",
+    ],
+  },
 ];
 
 export const getCity = (id: string) => CITIES.find((c) => c.id === id);
