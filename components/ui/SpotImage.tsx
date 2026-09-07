@@ -13,12 +13,14 @@ export function SpotImage({
   className = "absolute inset-0 h-full w-full object-cover",
   loading = "lazy",
   width = 1080,
+  ai = false,
 }: {
   src?: string | null;
   alt: string;
   className?: string;
   loading?: "lazy" | "eager";
   width?: number;
+  ai?: boolean; // AI 생성 일러스트 → "AI 일러스트" 배지(실사진 오인 방지, 정책 §AI 썸네일)
 }) {
   const [loaded, setLoaded] = useState(false);
   const [errored, setErrored] = useState(false);
@@ -74,6 +76,14 @@ export function SpotImage({
         onLoad={() => setLoaded(true)}
         onError={() => setErrored(true)}
       />
+      {ai && (
+        <span
+          className="pointer-events-none absolute left-1.5 top-1.5 z-10 rounded-full bg-[rgba(23,35,60,0.78)] px-1.5 py-[3px] text-[9px] font-bold leading-none tracking-[-0.01em] text-white"
+          // 색만이 아니라 텍스트 라벨(접근성 §30) — 실사진 오인 방지.
+        >
+          AI 일러스트
+        </span>
+      )}
     </>
   );
 }

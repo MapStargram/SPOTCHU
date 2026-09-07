@@ -137,6 +137,7 @@ function mapSpot(row: DbSpotLike): Spot {
           source: row.imageSource,
         }
       : undefined,
+    isAiIllustration: row.imageLicense === "AI-GENERATED", // 배치 스크립트가 심는 마커
   };
 }
 

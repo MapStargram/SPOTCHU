@@ -117,7 +117,12 @@ export default async function PostDetailPage({
                 className="relative h-11 w-11 shrink-0 overflow-hidden rounded-xl"
                 style={{ background: spot.thumbGrad }}
               >
-                <SpotImage src={spot.imageUrl} alt="" width={640} />
+                <SpotImage
+                  src={spot.imageUrl}
+                  alt=""
+                  width={640}
+                  ai={spot.isAiIllustration}
+                />
               </div>
               <div className="min-w-0 flex-1">
                 <div className="font-latin text-[9px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">

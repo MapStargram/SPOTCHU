@@ -406,7 +406,12 @@ export function MapView({
             className="relative h-[78px] w-[78px] shrink-0 overflow-hidden rounded-2xl"
             style={{ background: preview.thumbGrad }}
           >
-            <SpotImage src={preview.imageUrl} alt="" width={640} />
+            <SpotImage
+              src={preview.imageUrl}
+              alt=""
+              width={640}
+              ai={preview.isAiIllustration}
+            />
             {/* 공식 인증 스팟만 반짝이(홈 그리드와 동일 규칙) — 예전엔 모든 프리뷰에 표시됐다. */}
             {preview.verified === "official" && (
               <span className="absolute bottom-1.5 right-1.5 z-10">
