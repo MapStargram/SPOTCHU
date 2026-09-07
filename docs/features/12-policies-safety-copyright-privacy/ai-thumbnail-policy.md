@@ -7,15 +7,15 @@ CC/PD 실사진이 없는 스팟(현재 ~246개)은 그라디언트 플레이스
 
 ## 결정된 정책 — "실제 장소" 일러스트 (2026-09-07 개정)
 - ✅ **허용**: 해당 스팟의 **실제 장소를 사실적으로** 묘사(건물 유형·거리·지형·지역 특색을 실제에 가깝게). 무드(빛·시간대·계절)로 작품 분위기를 환기하되 어디까지나 "그 실제 장소"다. **실제 장소는 사실이라 저작권 대상이 아니다.**
-- ✅ **허용(2026-09-07 개정)**: **오리지널 익명 인물** 1인(뒤돌아 걷는 일반 복장 등, 얼굴·특정 캐릭터 아님)으로 "사람 사는 장면" 느낌을 더한다. **완전 창작 인물**이어야 하며, 특정 작품 캐릭터를 다른 얼굴로 옮긴 "위장 복제"도 금지.
+- ✅ **허용(2026-09-07 재개정)**: 등장 캐릭터로 **SPOTCHU 자체 마스코트 'Chu'**(우리 IP, `components/ui/Mascot.tsx`·`public/assets/mascot`)를 넣어 장소를 소개한다. 익명 인물 방식을 **대체** — Chu는 자사 자산이라 저작권 리스크 0, 브랜드 일관성↑. 장소마다 **포즈·표정은 다양하게**(카메라로 보기·지도 들기·가리키기·앉기 등), **정체성(코랄 물방울 형태·크림 배·2점 얼굴·네이비 아웃라인·카메라·틸 가방)은 일관** 유지. 텍스트 설명만으로 재현 가능(레퍼런스 이미지 불필요). **실제 사람은 넣지 않는다.**
 - ❌ **금지(저작권)**: 특정 작품의 **장면 재현·캐릭터·식별 가능한 원본 구도/프레이밍**, 로고, 포스터, 실제 인물 초상. 원본 스틸·장면 스크린샷을 참조(image-to-image·시각 레퍼런스)로 투입하는 것 금지(2차적저작물 리스크). **참조는 '실제 장소'에 한한다** — 구글/스트리트뷰 등으로 실제 로케이션을 확인·묘사하는 것은 가능하나, 특정 저작권 사진의 복제는 금지.
 - ❌ **금지(진정성 §3)**: 실제 그 스팟의 실사진처럼 오인시키는 이미지. AI 일러스트는 **명시 라벨** 하에 "환기용 임시 이미지"로만 쓴다.
 
 ## 프롬프트 가드레일
 - 프롬프트에 **작품명·캐릭터명·대사·감독/스튜디오명 금지**. **실제 장소 사실**(건물·거리·지형·지역)·도시·시간대·계절·매체(일러스트/페인터리)만.
 - 실제 장소 사실은 `buildPlacePrompt`의 `placeDetail`로 주입한다 — 호출부가 스팟 name/subject에서 작품명·장면을 제거하고 작성한 값이며, 큐레이션 맵 `scripts/ai-thumbnail-place-detail.json`에 보관한다. **프롬프트 조립은 항상 `buildPlacePrompt`를 거쳐** 가드레일이 구조적으로 붙는다(자유 문자열 금지).
-- 인물은 **오리지널 익명 1인**(뒤돌아선 일반 복장)만. 식별 가능한/저작권 캐릭터·실제 인물 초상 금지. 텍스트·워터마크·로고 금지.
-- 예: `"a small old Showa-era neighborhood shop on a narrow residential alley in an eastern Tokyo suburb, at dusk, with a single anonymous figure seen from behind, detailed painterly illustration. no text, original generic character only, no copyrighted characters, not a recreation of any movie scene."`.
+- 등장 캐릭터는 **SPOTCHU 마스코트 Chu**만(우리 IP). 실제 사람·식별 가능한/저작권 캐릭터 금지. 텍스트·워터마크·로고 금지. Chu 설명은 `buildPlacePrompt`의 `FIGURE` 상수로 고정, **포즈는 호출부(수동 프롬프트)가 장소마다 다양화**.
+- 예: `"...an old Showa-era neighborhood shop on a narrow alley in an eastern Tokyo suburb, with the SPOTCHU mascot Chu (a cute coral teardrop character holding a camera, teal bag) looking up curiously, detailed painterly illustration. no text, no real people, the only character is the mascot Chu, not a recreation of any movie scene."`.
 
 ## 우선순위 (표시 규칙)
 **실제 CC/PD 사진 > AI 일러스트 > 그라디언트.** AI 일러스트는 **CC 사진이 없는 스팟에만** 적용하고, 이후 실사진이 확보되면 교체한다.
@@ -37,7 +37,7 @@ CC/PD 실사진이 없는 스팟(현재 ~246개)은 그라디언트 플레이스
 
 ## 법률 검토 포인트 (prd §24·§41)
 - AI 장소 일러스트가 특정 저작물의 2차적저작물로 해석될 여지(장면 재현 금지로 최소화하나 검토 필요).
-- **오리지널 익명 인물(2026-09-07 개정)** 이 특정 캐릭터의 "위장 복제"로 오인될 여지 — 뒤돌아선 일반형·창작 인물 한정으로 최소화하나 검토 필요.
+- **마스코트 Chu(2026-09-07 재개정)** 는 자사 IP라 제3자 캐릭터 저작권 리스크 없음(오히려 브랜드 일관성↑). 실제 사람 미등장이라 초상권 이슈 없음 — 장면 재현 금지만 유지하면 리스크 최소.
 - 생성 도구 출력물의 상업적 사용·재배포 약관(Gemini/Google 등).
 - 라벨링이 소비자 오인 방지에 충분한지.
 

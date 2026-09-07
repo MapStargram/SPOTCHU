@@ -21,5 +21,33 @@
   "busan-jeonpo-cafe-street-broker-6d31": { "detail": "a trendy cafe street lined with small cafes and boutiques in converted low-rise buildings, Jeonpo, Busan", "figure": true },
   "busan-daedong-songdo-mansion-decision-to-leave-7f3a": { "detail": "an old low-rise hillside apartment building with an external concrete staircase, seen from the road opposite, Nambumin-dong, Busan", "figure": true },
   "busan-daedong-hwamyeong-bridge-decision-to-leave-a17c": { "detail": "a long road bridge spanning the wide Nakdong River with a separated pedestrian and bike lane, Hwamyeong, Busan", "figure": true },
-  "busan-chowon-apartment-decision-to-leave-b21e": { "detail": "an old hillside apartment building along a steep stepped alley near Busan Station, Choryang, Busan", "figure": true }
+  "busan-chowon-apartment-decision-to-leave-b21e": { "detail": "an old hillside apartment building along a steep stepped alley near Busan Station, Choryang, Busan", "figure": true },
+
+  "yokohama-aniversaire-minatomirai-gekijoban-tokyo-mer-c74e": { "detail": "a waterfront plaza approach road in the Minato Mirai district with a view toward a tall landmark tower, Yokohama", "figure": true },
+  "yokohama-akarenga-soko-gekijoban-tokyo-mer-8b1f": { "detail": "historic red-brick warehouse buildings by the harbor with a grassy waterfront plaza and a landmark tower across the bay, Minato Mirai, Yokohama", "figure": true },
+
+  "taipei-zhongshan-lane190-vive-l-amour-d38c": { "detail": "a quiet residential side-alley of low apartment buildings in the Tianmu neighborhood, Shilin, Taipei", "figure": true },
+  "taipei-linyi-street-vive-l-amour-a5f9": { "detail": "a narrow residential lane of older low-rise houses near Dongmen, Zhongzheng, Taipei", "figure": true },
+
+  "sapporo-sankakuyama-radio-konna-yofuke-banana-d92a": { "detail": "a red-brick building converted from an old early-20th-century cannery, near a train station, Nishi-ku, Sapporo", "figure": true },
+  "sapporo-hongo-dori-shotengai-konna-yofuke-banana-6b0d": { "detail": "a local shopping street lined with small independent shops, Shiroishi-ku, Sapporo", "figure": true },
+  "sapporo-hokkaido-university-konna-yofuke-banana-b6f1": { "detail": "a university campus main avenue lined with tall ginkgo trees in autumn colours, with a historic hall, Kita-ku, Sapporo", "figure": true },
+  "sapporo-hakkenzan-orchard-konna-yofuke-banana-f37e": { "detail": "a hillside orchard farm with rows of fruit trees near a mountain trailhead, Minami-ku, Sapporo", "figure": false },
+
+  "okinawa-teniya-bus-stop-chimudondon-f04a": { "detail": "a small rural roadside bus stop with a bench on a coastal hillside village road, northern Okinawa", "figure": true },
+  "okinawa-manzamo-okinawa-rendezvous-9c4b": { "detail": "a dramatic coastal cliff overlooking the East China Sea horizon with a walking-path railing, Onna, Okinawa", "figure": false },
+  "okinawa-churashima-nature-school-chimudondon-e783": { "detail": "a seaside school-like facility with a balcony and grounds facing the ocean, Nago, Okinawa", "figure": true },
+  "okinawa-bise-pier-chekeraccho-6d4a": { "detail": "a small wooden fishing pier reaching into the shallow sea in front of a coastal village, Motobu, Okinawa", "figure": true },
+  "okinawa-akabaka-beach-chimudondon-7c56": { "detail": "a quiet sandy beach with clear shallow turquoise water, Nakijin, Okinawa", "figure": false },
+
+  "nara-neichatei-naramachi-35th-love-letter-3f6c": { "detail": "a traditional two-storey machiya townhouse with a fabric noren curtain at the foot of a stone shrine stairway in the old Naramachi quarter, Nara", "figure": true },
+  "nara-kasuga-junior-high-35th-love-letter-b81f": { "detail": "the exterior gate and facade of a public junior-high school on a quiet street, Nara", "figure": false },
+  "nara-central-wholesale-market-35th-love-letter-9e2d": { "detail": "an early-morning wholesale produce market hall with loading bays and stacked crates, Yamatokoriyama, Nara", "figure": true },
+  "nara-araike-park-35th-love-letter-7c4a": { "detail": "a park pond with benches and a view of a distant five-storey pagoda, wild deer roaming, Nara Park", "figure": false },
+
+  "kyoto-daikichiyama-observatory-hibike-euphonium-5f4c": { "detail": "a hilltop observation deck railing overlooking a river-town cityscape, Uji, Kyoto", "figure": true },
+
+  "phuket-satree-phuket-school-i-told-sunset-6b2c": { "detail": "the gate and wall of an old-town school on a quiet street in Phuket Old Town, Thailand", "figure": false },
+  "phuket-kopitiam-by-wilai-i-told-sunset-3f8a": { "detail": "an old Sino-Portuguese shophouse cafe with a colourful facade on a historic street in Phuket Old Town, Thailand", "figure": true },
+  "phuket-bang-niew-shrine-i-told-sunset-9d4e": { "detail": "an ornate red-pillared Chinese shrine gate with dragon carvings, Phuket Old Town, Thailand", "figure": false }
 }
