@@ -36,6 +36,7 @@ export interface Spot {
   source?: string; // 출처 URL(리서치 반영 스팟의 저작권 투명성)
   imageUrl?: string; // 합법 이미지(위키미디어 CC 등). 없으면 그라디언트 폴백
   imageCredit?: { author: string; license: string; source: string }; // CC 출처표기(필수)
+  isAiIllustration?: boolean; // AI 생성 장소 일러스트(실사진 아님) → "AI 일러스트" 배지(정책 §AI 썸네일)
   shooterLat?: number; // 불변식: 촬영자가 서는 위치(지도 핀). 목업은 SPOT_COORDS로 대체
   shooterLng?: number;
   safetyTags?: SafetyTag[]; // 현장 안전 주의(사유지·선로·차도·상업시설) — 상세 경고 배너 트리거
@@ -56,6 +57,7 @@ export type PinCard = Pick<
   | "rating"
   | "visits"
   | "imageUrl"
+  | "isAiIllustration"
 > & {
   flag?: string; // 국가 국기 이모지(전체 지역 혼합 피드에서만 — 도시별 홈은 동일 국가라 생략)
 };

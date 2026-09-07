@@ -130,7 +130,12 @@ export function PinGrid({
             style={{ height: pinHeight(s.id), background: s.thumbGrad }}
           >
             {/* 2열 메이슨리 썸네일(~180px) — 640px면 레티나까지 충분 */}
-            <SpotImage src={s.imageUrl} alt={s.title} width={640} />
+            <SpotImage
+              src={s.imageUrl}
+              alt={s.title}
+              width={640}
+              ai={s.isAiIllustration}
+            />
             <span className="absolute left-2 top-2 rounded-full bg-black/30 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
               <CategoryLabel label={s.categoryLabel} size={11} />
             </span>

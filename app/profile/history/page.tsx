@@ -51,7 +51,12 @@ export default async function HistoryPage() {
                       className="absolute inset-0 overflow-hidden rounded-xl"
                       style={{ background: r.spot.thumbGrad }}
                     >
-                      <SpotImage src={r.spot.imageUrl} alt="" width={640} />
+                      <SpotImage
+                        src={r.spot.imageUrl}
+                        alt=""
+                        width={640}
+                        ai={r.spot.isAiIllustration}
+                      />
                     </div>
                     <span className="absolute -bottom-1 -right-1 flex h-[22px] w-[22px] items-center justify-center rounded-full border-2 border-white bg-mint">
                       <Check

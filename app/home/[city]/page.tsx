@@ -129,6 +129,7 @@ export default async function HomeScreen({
             src={heroSpot.imageUrl}
             alt={heroSpot.title}
             loading="eager"
+            ai={heroSpot.isAiIllustration}
           />
           {heroSpot.imageUrl && (
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />

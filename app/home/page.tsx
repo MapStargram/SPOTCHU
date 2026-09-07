@@ -47,6 +47,7 @@ export default async function HomeDiscoverScreen() {
     rating: s.rating,
     visits: s.visits,
     imageUrl: s.imageUrl,
+    isAiIllustration: s.isAiIllustration,
     flag: flagOf.get(s.city),
   }));
   const user = await getCurrentUser();

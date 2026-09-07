@@ -103,7 +103,12 @@ export default async function SpotDetailScreen({
           className="relative h-[360px] overflow-hidden"
           style={{ background: s.heroGrad }}
         >
-          <SpotImage src={s.imageUrl} alt={s.title} loading="eager" />
+          <SpotImage
+            src={s.imageUrl}
+            alt={s.title}
+            loading="eager"
+            ai={s.isAiIllustration}
+          />
           {s.imageUrl && (
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25" />
           )}

@@ -331,7 +331,12 @@ export function CollectionDetail({
                     className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-[10px]"
                     style={{ background: s.thumbGrad }}
                   >
-                    <SpotImage src={s.imageUrl} alt="" width={640} />
+                    <SpotImage
+                      src={s.imageUrl}
+                      alt=""
+                      width={640}
+                      ai={s.isAiIllustration}
+                    />
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-[13px] font-bold tracking-[-0.01em] text-navy">
@@ -471,7 +476,12 @@ export function CollectionDetail({
                   className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl"
                   style={{ background: s.thumbGrad }}
                 >
-                  <SpotImage src={s.imageUrl} alt="" width={640} />
+                  <SpotImage
+                    src={s.imageUrl}
+                    alt=""
+                    width={640}
+                    ai={s.isAiIllustration}
+                  />
                 </div>
                 {/* 번호 배지 — 이미지 div(overflow-hidden) 밖, 카드 기준 절대배치라 잘리지 않음 */}
                 <span className="absolute left-1.5 top-1.5 z-10 flex h-[22px] w-[22px] items-center justify-center rounded-full bg-coral font-latin text-[11px] font-extrabold text-cream shadow-[0_1px_3px_rgba(23,35,60,0.3)]">
