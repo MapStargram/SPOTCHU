@@ -59,7 +59,7 @@ erDiagram
 
 ### Spot  ← 제품의 중심
 필수: `id, name, categoryId, cityId, shooterLat, shooterLng, coverImageUrl, subject(text), verificationStatus, createdById, createdAt`.
-선택: `subjectLat?, subjectLng?, bearing?(0-360), addressCached?, access?, tip?, timeOfDay(TimeOfDay[]), season?, lens?, difficulty?(Difficulty), crowdedness?, caution?, checkinRadiusM(default 100)`.
+선택: `aiThumbnailUrl?(AI Chu 썸네일 — 카드용. coverImageUrl=실사진(상세 히어로)과 별도 공존; 정책 §AI 썸네일), subjectLat?, subjectLng?, bearing?(0-360), addressCached?, access?, tip?, timeOfDay(TimeOfDay[]), season?, lens?, difficulty?(Difficulty), crowdedness?, caution?, checkinRadiusM(default 100)`.
 안전: `safetyTags(SafetyTag[])`, `isBlockedHighRisk(bool)`.
 파생 집계(비정규화 캐시): `saveCount, checkinCount, uniqueCheckinCount, likeSum` (인기도 정렬용).
 i18n: `name_ja?, subject_ja?`(nullable, 후속).

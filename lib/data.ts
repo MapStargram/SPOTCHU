@@ -3,6 +3,7 @@
 // ⚠️ DB 행에는 그라디언트/일부 표시 필드가 없어 결정적 폴백으로 매핑한다(실 이미지 준비 전까지 임시).
 import * as mock from "./mock";
 import type { Spot, City, CityId, Work, Collection, Verified } from "./mock";
+import { pickSpotImages } from "./spot-image-select";
 import {
   getSpotsByCityFromDb,
   getSpotsInBoundsFromDb,
@@ -92,6 +93,7 @@ interface DbSpotLike {
   saveCount: number;
   category?: { label: string } | null;
   coverImageUrl?: string | null;
+  aiThumbnailUrl?: string | null;
   imageAuthor?: string | null;
   imageLicense?: string | null;
   imageSource?: string | null;
@@ -129,7 +131,7 @@ function mapSpot(row: DbSpotLike): Spot {
     safetyTags: (row.safetyTags ?? []) as Spot["safetyTags"],
     caution: row.caution ?? undefined,
     blocked: row.isBlockedHighRisk ?? false,
-    imageUrl: row.coverImageUrl || undefined,
+    ...pickSpotImages(row), // 썸네일=AI 우선 / 상세 히어로=실사진 우선 (아래 순수 함수)
     imageCredit: row.imageSource
       ? {
           author: row.imageAuthor ?? "",
@@ -137,7 +139,6 @@ function mapSpot(row: DbSpotLike): Spot {
           source: row.imageSource,
         }
       : undefined,
-    isAiIllustration: row.imageLicense === "AI-GENERATED", // 배치 스크립트가 심는 마커
   };
 }
 

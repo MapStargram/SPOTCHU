@@ -216,7 +216,8 @@ model Spot {
   // 불변식: 촬영자가 서는 위치
   shooterLat Float
   shooterLng Float
-  coverImageUrl String? // 대표 이미지(없으면 앱에서 그라디언트 폴백). CC 이미지면 아래 출처표기 필수
+  coverImageUrl String? // 대표 이미지(상세 히어로용, 실사진 우선). 없으면 AI썸네일/그라디언트 폴백. CC면 출처표기 필수
+  aiThumbnailUrl String? // AI Chu 일러스트(카드 썸네일용). 실사진과 별도 보관 — 썸네일=AI, 상세=실사진(정책 §AI 썸네일)
   imageAuthor   String? // CC 저작자
   imageLicense  String? // 예: "CC BY-SA 4.0"
   imageSource   String? // 원본 파일 페이지 URL(Wikimedia 등)

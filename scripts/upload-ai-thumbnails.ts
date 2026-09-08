@@ -1,5 +1,5 @@
 // gemini/ 폴더에 모인 AI 일러스트(spotchu-ai-<spotId>.png)를 Cloudinary 업로드 → 스팟의
-// coverImageUrl + "AI 일러스트" 마커로 DB 반영. Chrome+Gemini로 생성한 이미지를 앱에 붙이는 단계.
+// aiThumbnailUrl(썸네일 전용)로 DB 반영. 실사진 coverImageUrl은 보존(상세 히어로용). Chrome+Gemini 생성분을 앱에 붙이는 단계.
 // (정책: docs/features/12-.../ai-thumbnail-policy.md · 배지: SpotImage ai)
 //
 // ⚠️ 기본 DRY-RUN(파일·대상 스팟만 출력, 업로드·DB 미실행). 실제 반영은 --apply.
@@ -80,13 +80,12 @@ async function main() {
       await db.spot.update({
         where: { id },
         data: {
-          coverImageUrl: res.secure_url,
-          imageLicense: "AI-GENERATED", // 배지 마커(SpotImage ai)
-          imageAuthor: "AI 일러스트 (Gemini)",
-          imageSource: null,
+          // 썸네일 전용 필드에만 기록. 실사진 coverImageUrl/출처는 보존(상세 히어로용).
+          // isAiIllustration/isHeroAi는 mapSpot이 aiThumbnailUrl 유무로 파생 → 별도 마커 불필요.
+          aiThumbnailUrl: res.secure_url,
         },
       });
-      appendFileSync(logFile, JSON.stringify({ spotId: id, file: f, coverImageUrl: res.secure_url, at: new Date().toISOString() }) + "\n");
+      appendFileSync(logFile, JSON.stringify({ spotId: id, file: f, aiThumbnailUrl: res.secure_url, at: new Date().toISOString() }) + "\n");
       ok++; console.log(`✓ ${id} → ${res.secure_url}`);
     } catch (e) {
       failed.push(`${id}: ${(e as Error).message}`); console.error(`✗ ${id}  ${(e as Error).message}`);

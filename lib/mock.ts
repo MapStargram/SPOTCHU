@@ -37,6 +37,8 @@ export interface Spot {
   imageUrl?: string; // 합법 이미지(위키미디어 CC 등). 없으면 그라디언트 폴백
   imageCredit?: { author: string; license: string; source: string }; // CC 출처표기(필수)
   isAiIllustration?: boolean; // AI 생성 장소 일러스트(실사진 아님) → "AI 일러스트" 배지(정책 §AI 썸네일)
+  heroUrl?: string; // 상세 히어로용: 실사진 우선(없으면 AI). 썸네일 imageUrl은 AI 우선이라 분리. 미설정 시 imageUrl 폴백
+  isHeroAi?: boolean; // 상세 히어로가 AI로 폴백됐는지 → 히어로 배지(미설정 시 isAiIllustration 폴백)
   shooterLat?: number; // 불변식: 촬영자가 서는 위치(지도 핀). 목업은 SPOT_COORDS로 대체
   shooterLng?: number;
   safetyTags?: SafetyTag[]; // 현장 안전 주의(사유지·선로·차도·상업시설) — 상세 경고 배너 트리거

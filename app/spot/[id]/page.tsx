@@ -103,13 +103,14 @@ export default async function SpotDetailScreen({
           className="relative h-[360px] overflow-hidden"
           style={{ background: s.heroGrad }}
         >
+          {/* 상세 히어로는 실사진 우선(heroUrl), 없으면 AI. 썸네일(imageUrl)은 AI 우선이라 분리. mock 폴백. */}
           <SpotImage
-            src={s.imageUrl}
+            src={s.heroUrl ?? s.imageUrl}
             alt={s.title}
             loading="eager"
-            ai={s.isAiIllustration}
+            ai={s.isHeroAi ?? s.isAiIllustration}
           />
-          {s.imageUrl && (
+          {(s.heroUrl ?? s.imageUrl) && (
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25" />
           )}
           <div

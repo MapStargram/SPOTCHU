@@ -17,18 +17,18 @@ CC/PD 실사진이 없는 스팟(현재 ~246개)은 그라디언트 플레이스
 - 등장 캐릭터는 **SPOTCHU 마스코트 Chu**만(우리 IP). 실제 사람·식별 가능한/저작권 캐릭터 금지. 텍스트·워터마크·로고 금지. Chu 설명은 `buildPlacePrompt`의 `FIGURE` 상수로 고정, **포즈는 호출부(수동 프롬프트)가 장소마다 다양화**.
 - 예: `"...an old Showa-era neighborhood shop on a narrow alley in an eastern Tokyo suburb, with the SPOTCHU mascot Chu (a cute coral teardrop character holding a camera, teal bag) looking up curiously, detailed painterly illustration. no text, no real people, the only character is the mascot Chu, not a recreation of any movie scene."`.
 
-## 우선순위 (표시 규칙)
-**실제 CC/PD 사진 > AI 일러스트 > 그라디언트.** AI 일러스트는 **CC 사진이 없는 스팟에만** 적용하고, 이후 실사진이 확보되면 교체한다.
+## 우선순위 (표시 규칙)  ← 2026-09-08 개정
+**썸네일(카드/피드/그리드/지도) = AI Chu 우선. 상세 페이지 히어로 = 실사진 우선(없으면 AI). 최종 폴백 = 그라디언트/마스코트.**
+- 브랜딩 일관성은 썸네일에서(전 스팟 Chu), **위치 정확성은 상세에서**(실사진 유지) — §3 절충(사용자 결정).
+- 실사진과 AI를 **별도 필드에 공존** 보관: 실사진=`coverImageUrl`, AI Chu=`aiThumbnailUrl`. (기존 "실사진 확보 시 교체"에서 "둘 다 보관, 맥락별 선택"으로 개정.)
 
 ## 라벨링 (필수)
-- 모든 AI 일러스트 썸네일에 **"AI 일러스트" 배지**를 눈에 띄게 표시(사진·실장면과 구분). 색만이 아니라 텍스트 라벨(접근성 §30).
-- 사용자가 실사진으로 오인하지 않도록 상세 화면에도 동일 표기.
+- AI 일러스트가 실제로 표시되는 곳(썸네일은 항상, 상세는 실사진 없을 때만)에 **"AI 일러스트" 배지** 표시. 색만이 아니라 텍스트 라벨(접근성 §30).
 
-## 데이터 표기 (구현 시)
-- 재사용: `coverImageUrl`에 우리 Cloudinary URL 저장.
-- **구분 마커 필수** — AI 일러스트를 CC 사진과 구별. 택1:
-  - (MVP, 무스키마변경) 규약: `imageLicense = "AI-GENERATED"`, `imageAuthor = "AI 일러스트 (Gemini)"`, `imageSource = null`. UI/`mapSpot`이 이 값으로 배지 분기.
-  - (권장, 명시적) 신규 필드 `isAiIllustration Boolean @default(false)` 또는 `imageKind`("photo_cc" | "ai_illustration"). → `prisma db push`.
+## 데이터 표기 (구현됨)
+- 실사진=`coverImageUrl`(+`imageAuthor/imageLicense/imageSource` 출처표기, 상세 히어로용). AI Chu=`aiThumbnailUrl`(썸네일용). **별도 컬럼**으로 공존 → `prisma db push`/migrate.
+- 업로드 스크립트(`scripts/upload-ai-thumbnails.ts`)는 `aiThumbnailUrl`에만 기록 — 실사진·출처 **미덮어씀**.
+- **배지 분기**: `mapSpot` → `lib/spot-image-select.ts`의 `pickSpotImages`가 `aiThumbnailUrl` 유무로 `isAiIllustration`(썸네일)·`isHeroAi`(상세) 파생. 레거시로 AI가 `coverImageUrl`에 심긴 경우(`imageLicense="AI-GENERATED"`)도 AI로 인식.
 - **프로버넌스 기록**: 생성 도구·모델·프롬프트를 메타로 남긴다(감사·법률 대응).
 
 ## 생성 방법
