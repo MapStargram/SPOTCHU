@@ -89,19 +89,26 @@ export async function checkInAction(
   }
 
   // 최초 인증 — 결과만 저장(원시 좌표 미보관). skipDuplicates로 동시 요청 경합(연타·멀티탭) 방어(§38).
-  const created = await db.checkIn.createMany({
-    data: [{ userId: user.id, spotId, deviceAccuracyM: c.accuracy }],
-    skipDuplicates: true,
+  // 소스(CheckIn) 생성과 카운터 증분을 한 트랜잭션으로 원자화 — 둘 사이 크래시 시 카운터 영구
+  // 드리프트 방지(RISK-3). 승격 전이·알림·배지 같은 외부효과는 트랜잭션 밖에서 처리(긴 tx·롤백 회피).
+  const uid = user.id; // 클로저 안에선 user.id 내로잉이 유지되지 않아 지역 상수로 캡처
+  const first = await db.$transaction(async (tx) => {
+    const created = await tx.checkIn.createMany({
+      data: [{ userId: uid, spotId, deviceAccuracyM: c.accuracy }],
+      skipDuplicates: true,
+    });
+    // 경합에서 밀림(이미 다른 요청이 생성) — 집계는 그 요청이 담당하므로 증분 없이 반환.
+    if (created.count === 0) return false;
+    await tx.spot.update({
+      where: { id: spotId },
+      data: {
+        checkinCount: { increment: 1 },
+        uniqueCheckinCount: { increment: 1 },
+      },
+    });
+    return true;
   });
-  // 경합에서 밀림(이미 다른 요청이 생성) — 집계는 그 요청이 담당하므로 여기선 성공만 반환.
-  if (created.count === 0) return { ok: true, first: false };
-  await db.spot.update({
-    where: { id: spotId },
-    data: {
-      checkinCount: { increment: 1 },
-      uniqueCheckinCount: { increment: 1 },
-    },
-  });
+  if (!first) return { ok: true, first: false };
 
   // USER_REPORTED → USER_VERIFIED 자동 승격(서로 다른 3명 이상).
   // spot.verificationStatus는 위 findUnique(라인 44)의 스냅샷이라 동시 인증 시 stale일 수 있다 →
@@ -161,11 +168,13 @@ export async function saveSpotAction(
   const key = { collectionId_spotId: { collectionId: colId, spotId } };
   const existing = await db.collectionItem.findUnique({ where: key });
   if (existing) return { ok: true, collectionId: colId };
-  await db.collectionItem.create({ data: { collectionId: colId, spotId } });
-  await db.spot.update({
-    where: { id: spotId },
-    data: { saveCount: { increment: 1 } },
-  });
+  await db.$transaction([
+    db.collectionItem.create({ data: { collectionId: colId, spotId } }),
+    db.spot.update({
+      where: { id: spotId },
+      data: { saveCount: { increment: 1 } },
+    }),
+  ]);
   return { ok: true, collectionId: colId };
 }
 
@@ -184,11 +193,13 @@ export async function removeSpotAction(
   const key = { collectionId_spotId: { collectionId, spotId } };
   const existing = await db.collectionItem.findUnique({ where: key });
   if (!existing) return { ok: true }; // 이미 없음
-  await db.collectionItem.delete({ where: key });
-  await db.spot.update({
-    where: { id: spotId },
-    data: { saveCount: { decrement: 1 } },
-  });
+  await db.$transaction([
+    db.collectionItem.delete({ where: key }),
+    db.spot.update({
+      where: { id: spotId },
+      data: { saveCount: { decrement: 1 } },
+    }),
+  ]);
   return { ok: true };
 }
 
@@ -339,18 +350,22 @@ export async function toggleSaveAction(
   const key = { collectionId_spotId: { collectionId: col.id, spotId } };
   const existing = await db.collectionItem.findUnique({ where: key });
   if (existing) {
-    await db.collectionItem.delete({ where: key });
-    await db.spot.update({
-      where: { id: spotId },
-      data: { saveCount: { decrement: 1 } },
-    });
+    await db.$transaction([
+      db.collectionItem.delete({ where: key }),
+      db.spot.update({
+        where: { id: spotId },
+        data: { saveCount: { decrement: 1 } },
+      }),
+    ]);
     return { ok: true, saved: false };
   }
-  await db.collectionItem.create({ data: { collectionId: col.id, spotId } });
-  await db.spot.update({
-    where: { id: spotId },
-    data: { saveCount: { increment: 1 } },
-  });
+  await db.$transaction([
+    db.collectionItem.create({ data: { collectionId: col.id, spotId } }),
+    db.spot.update({
+      where: { id: spotId },
+      data: { saveCount: { increment: 1 } },
+    }),
+  ]);
   return { ok: true, saved: true };
 }
 
@@ -451,11 +466,13 @@ export async function toggleLikeAction(
   const key = { postId_userId: { postId, userId: user.id } };
   const existing = await db.like.findUnique({ where: key });
   if (existing) {
-    await db.like.delete({ where: key });
-    await db.spot.update({
-      where: { id: post.spotId },
-      data: { likeSum: { decrement: 1 } },
-    });
+    await db.$transaction([
+      db.like.delete({ where: key }),
+      db.spot.update({
+        where: { id: post.spotId },
+        data: { likeSum: { decrement: 1 } },
+      }),
+    ]);
     return {
       ok: true,
       liked: false,
@@ -463,19 +480,18 @@ export async function toggleLikeAction(
     };
   }
   try {
-    await db.like.create({ data: { postId, userId: user.id } });
+    // like 생성과 likeSum 증분을 원자화(RISK-3) — 둘 사이 크래시 시 likeSum 영구 과대 방지.
+    // 동시 중복 요청(unique 위반) 시 트랜잭션 전체 롤백 → 증분 없음(멱등).
+    await db.$transaction([
+      db.like.create({ data: { postId, userId: user.id } }),
+      db.spot.update({
+        where: { id: post.spotId },
+        data: { likeSum: { increment: 1 } },
+      }),
+    ]);
   } catch {
-    // 동시 중복 요청(unique 위반) — 멱등: 이미 좋아요 상태로 간주, 중복 카운트 없음.
-    return {
-      ok: true,
-      liked: true,
-      likeCount: await db.like.count({ where: { postId } }),
-    };
+    // 이미 좋아요 상태(경합) — 멱등하게 성공 반환(증분은 롤백되어 반영 안 됨).
   }
-  await db.spot.update({
-    where: { id: post.spotId },
-    data: { likeSum: { increment: 1 } },
-  });
   return {
     ok: true,
     liked: true,
