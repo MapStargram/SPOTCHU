@@ -142,7 +142,9 @@ share_target: {
 안드로이드 폰에서 인스타 게시물을 SPOTCHU로 공유해 화면에 캡션이 찍히는지 확인한다. **비용 0, 소요 1시간, Flow D 전체와 플랫폼 전략의 성패가 여기서 갈린다.**
 
 - 주의 1: Android 공유는 `url` 필드를 채우지 않는다 — **URL이 `text`로 들어온다**(Android 공유 시스템에 URL 필드 개념이 없음). 세 필드를 모두 찍어야 한다.
-- 주의 2: `share_target`이 Next의 `MetadataRoute.Manifest` 타입에 없을 수 있다 → 타입 캐스팅이나 정적 `public/manifest.json` 분리가 필요할 수 있다.
+- 주의 2: ~~`share_target`이 Next의 `MetadataRoute.Manifest` 타입에 없을 수 있다~~ → **확인 결과 Next 15 타입에 이미 포함돼 있다**(`next/dist/lib/metadata/types/manifest-types.d.ts`). 캐스팅도 정적 `manifest.json` 분리도 불필요.
+
+**구현 상태(2026-09-08): 스파이크 구현 완료.** [`app/manifest.ts`](../../../app/manifest.ts)에 `share_target` 등록 + [`app/debug/share/page.tsx`](../../../app/debug/share/page.tsx) 디버그 화면. 받은 파라미터를 가공 없이 전부 표시하고 해시태그 유무로 판정을 내린다. 로컬에서 두 케이스(URL만 / 캡션 포함)로 동작 확인했고 `/manifest.webmanifest`에 `share_target`이 정상 노출되는 것도 확인했다. **남은 것은 실제 안드로이드 기기에서 인스타 게시물을 공유해 결과를 보는 것뿐이다.** 확인이 끝나면 이 두 파일을 정리한다.
 
 #### 안드로이드 결과로 네이티브 결과까지 알 수 있다
 

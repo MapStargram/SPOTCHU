@@ -16,6 +16,15 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#fafafa",
     lang: "ko",
     categories: ["travel", "lifestyle", "photo"],
+    // D-0 스파이크(임시): 인스타 공유 페이로드에 캡션이 오는지 확인용.
+    // Chromium 계열 + PWA 설치 시에만 공유 시트에 SPOTCHU가 나타난다(Safari·Firefox 미지원).
+    // 확인이 끝나면 이 블록과 /debug/share 를 함께 정리한다.
+    // 문서: docs/features/09-community-feed-upload/instagram-crosspost-spec.md §D-0
+    share_target: {
+      action: "/debug/share",
+      method: "GET",
+      params: { title: "title", text: "text", url: "url" },
+    },
     icons: [
       {
         src: "/icons/icon-192.png",
