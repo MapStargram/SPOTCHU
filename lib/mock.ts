@@ -4,7 +4,6 @@
 import { RESEARCH_SPOTS, RESEARCH_WORKS } from "./spots.research";
 import { IMPORTED_SPOTS, IMPORTED_WORKS } from "./spots.imported";
 import { SPOT_IMAGES } from "./spot-images";
-import { WORK_COVERS } from "./work-covers";
 import { type CityId } from "./mock-constants";
 import { CITIES } from "./cities-catalog"; // getCity가 로컬에서 참조(재-export와 별개)
 
@@ -72,7 +71,6 @@ export interface Work {
   type: string;
   spotCount: number;
   progress: number;
-  coverImageUrl?: string; // 작품 대표 포스터(TMDB) — lib/work-covers.ts. 스팟 실사진(CC)과 별개.
 }
 
 export interface Collection {
@@ -106,13 +104,11 @@ const BASE_WORKS: Work[] = [
   { id: "parasite", title: "기생충", type: "영화", spotCount: 5, progress: 2 },
 ];
 
-// 작품 포스터(TMDB)를 합류 — 매칭된 작품만 coverImageUrl이 붙고, 없으면 그대로(포스터 미표시).
-// 포스터는 npm run fetch:work-covers 로 lib/work-covers.ts 에 채운다(TMDB_API_KEY 필요).
 export const WORKS: Work[] = [
   ...BASE_WORKS,
   ...RESEARCH_WORKS,
   ...IMPORTED_WORKS,
-].map((w) => (WORK_COVERS[w.id] ? { ...w, coverImageUrl: WORK_COVERS[w.id].url } : w));
+];
 
 const BASE_SPOTS: Spot[] = [
   {

@@ -25,7 +25,6 @@
     "admin:create": "tsx scripts/create-admin.ts",
     "ai:thumbnails": "tsx scripts/gen-ai-thumbnails.ts",
     "ai:upload": "tsx scripts/upload-ai-thumbnails.ts",
-    "fetch:work-covers": "tsx scripts/fetch-work-covers.ts",
     "import:leads": "tsx scripts/import-leads.ts",
     "research": "tsx scripts/research-orchestrator.ts",
     "research:daily": "tsx scripts/research-orchestrator.ts daily",

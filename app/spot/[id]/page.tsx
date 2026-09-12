@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Star,
-  Check,
-  Camera,
-  Route,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, Check, Camera, Route } from "lucide-react";
 import { TagPill } from "@/components/ui/TagPill";
 import { CategoryLabel } from "@/components/ui/CategoryLabel";
 import { AppShell } from "@/components/shell/AppShell";
@@ -21,6 +14,7 @@ import { SafetyBanner } from "@/components/spot/SafetyBanner";
 import { SpotJsonLd } from "@/components/seo/SpotJsonLd";
 import { ViewBeacon } from "@/components/analytics/ViewBeacon";
 import { ShareButton } from "@/components/ui/ShareButton";
+import { WorkCover } from "@/components/work/WorkCover";
 import { Mascot } from "@/components/ui/Mascot";
 import { SpotImage } from "@/components/ui/SpotImage";
 import { Flag } from "@/components/ui/Flag";
@@ -208,28 +202,12 @@ export default async function SpotDetailScreen({
               href={`/work/${work.id}`}
               className="flex items-center gap-3 rounded-2xl bg-[color:var(--cream-2)] px-3.5 py-3"
             >
-              {work.coverImageUrl ? (
-                <span className="h-11 w-11 shrink-0 overflow-hidden rounded-[10px] bg-[color:var(--cream-2)]">
-                  {/* 작품 포스터(TMDB) — 성지 실사진이 아니라 작품 아트 뱃지 */}
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={work.coverImageUrl}
-                    alt=""
-                    loading="lazy"
-                    className="h-full w-full object-cover"
-                  />
-                </span>
-              ) : (
-                <span
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] text-white"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, #E24352 0%, #FFC857 100%)",
-                  }}
-                >
-                  <Star size={20} strokeWidth={2.25} aria-hidden />
-                </span>
-              )}
+              {/* 작품 커버 — 외부 이미지 없이 코드로 그림(유형별 색·아이콘) */}
+              <WorkCover
+                work={work}
+                className="h-11 w-11 shrink-0 rounded-[10px]"
+                iconSize={20}
+              />
               <span className="min-w-0 flex-1">
                 <span className="block font-latin text-[9px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
                   {(WORK_TYPE_EN[work.type] ?? "Work") + " · Scene"}
