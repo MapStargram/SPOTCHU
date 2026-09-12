@@ -29,6 +29,9 @@ public/cesium/
 /gemini/
 /research/ai-thumbnails/
 
+# 작품 포스터 매칭 검토용 산출물(npm run fetch:work-covers) — 추적 불필요
+/lib/work-covers.review.json
+
 # Playwright
 /test-results/
 /playwright-report/

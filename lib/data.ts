@@ -258,6 +258,7 @@ interface DbWorkLike {
   id: string;
   title: string;
   type: string;
+  coverImageUrl?: string | null;
   spots?: unknown[];
 }
 function mapWork(row: DbWorkLike): Work {
@@ -267,6 +268,7 @@ function mapWork(row: DbWorkLike): Work {
     type: WORKTYPE_LABEL[row.type] ?? row.type,
     spotCount: row.spots?.length ?? 0,
     progress: 0,
+    coverImageUrl: row.coverImageUrl ?? undefined, // 작품 포스터(TMDB) — 스팟 상세 칩·작품 히어로에서 사용
   };
 }
 const cachedWork = unstable_cache(
