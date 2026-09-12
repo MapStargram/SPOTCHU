@@ -1,6 +1,6 @@
 // 목업 데이터(lib/mock.ts) → 실제 DB 시드. 멱등(upsert)이라 반복 실행 안전.
 // 사용: docker compose up -d db → npm run db:migrate → npm run db:seed
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, type Country } from "@prisma/client";
 import {
   CITIES,
   WORKS,
@@ -17,6 +17,7 @@ import { imageUpdateFields } from "../lib/seed-image";
 import { IMPORTED_COORDS } from "../lib/spots.imported";
 import { BADGE_DEFS } from "../lib/badges";
 import { WORK_COVERS } from "../lib/work-covers";
+import { COUNTRY_META } from "../lib/cities-geo";
 
 // tsx는 .env.local을 자동 로드하지 않는다(prisma CLI만 .env 로드). Node24 네이티브
 // 로더로 PrismaClient 인스턴스화 전에 직접 로드 — 파일 없으면(CI/prod 실제 env) 무시.
@@ -37,21 +38,12 @@ const CATEGORY_KEY: Record<string, string> = {
   드라마: "drama",
   "포토 스팟": "photo",
 };
-// 도시 국가(한국어명) → DB enum 코드. 글로벌 확장 10개국(schema Country enum과 일치).
-const COUNTRY: Record<
-  string,
-  "KR" | "JP" | "TW" | "HK" | "TH" | "SG" | "FR" | "GB" | "US" | "ES"
-> = {
-  한국: "KR",
-  일본: "JP",
-  대만: "TW",
-  홍콩: "HK",
-  태국: "TH",
-  싱가포르: "SG",
-  프랑스: "FR",
-  영국: "GB",
-  미국: "US",
-  스페인: "ES",
+// 도시 국가(한국어명) → DB enum 코드. COUNTRY_META(단일 원천)에서 파생 — schema Country enum과 일치.
+// 매핑 실패 시 명시적 에러: 과거 `?? "JP"` 폴백이 미지원 9개국을 조용히 일본으로 시딩했다(#130).
+const toCountryCode = (ko: string): Country => {
+  const m = COUNTRY_META[ko];
+  if (!m) throw new Error(`시드: 알 수 없는 도시 국가 "${ko}" — COUNTRY_META/schema enum에 추가 필요`);
+  return m.id.toUpperCase() as Country;
 };
 const VERIF: Record<string, "OFFICIAL" | "USER_VERIFIED" | "USER_REPORTED"> = {
   official: "OFFICIAL",
@@ -82,12 +74,13 @@ async function main() {
     const center = CITY_CENTER[c.id];
     await db.city.upsert({
       where: { id: c.id },
-      update: {},
+      // 기존 행의 country도 갱신(과거 "JP"로 잘못 시딩된 9개국 교정, #130). update:{} 였으면 no-op.
+      update: { country: toCountryCode(c.country) },
       create: {
         id: c.id,
         name: c.name,
         nameEn: c.nameEn,
-        country: COUNTRY[c.country] ?? "JP",
+        country: toCountryCode(c.country),
         centerLat: center.lat,
         centerLng: center.lng,
       },

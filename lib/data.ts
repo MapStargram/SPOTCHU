@@ -12,7 +12,7 @@ import {
   getCollectionsFromDb,
 } from "./actions/spots";
 import { inBounds, type Bounds } from "./bounds";
-import { countryById } from "./cities-geo";
+import { COUNTRY_META, countryById } from "./cities-geo";
 import { canViewCollection } from "./collections";
 import {
   searchSpotsFromDb,
@@ -147,25 +147,18 @@ interface DbCityLike {
   nameEn: string | null;
   country: string;
 }
-// DB Country enum → 한국어 국가명(지구본 국가 그룹핑 키와 일치, CityGlobe COUNTRY_META).
-const COUNTRY_KO: Record<string, string> = {
-  KR: "한국",
-  JP: "일본",
-  TW: "대만",
-  HK: "홍콩",
-  TH: "태국",
-  SG: "싱가포르",
-  FR: "프랑스",
-  GB: "영국",
-  US: "미국",
-  ES: "스페인",
-};
+// DB Country enum(대문자 ISO2) → 한국어 국가명(지구본 국가 그룹핑 키와 일치).
+// COUNTRY_META(단일 원천)에서 파생 — 하드코딩 목록이 갈라져 신규 국가가 "일본"으로
+// 오표기되던 문제 방지(#130). schema Country enum도 COUNTRY_META id와 동기 유지.
+const COUNTRY_KO: Record<string, string> = Object.fromEntries(
+  Object.entries(COUNTRY_META).map(([ko, m]) => [m.id.toUpperCase(), ko]),
+);
 function mapCity(row: DbCityLike): City {
   return {
     id: row.id as CityId,
     name: row.name,
     nameEn: row.nameEn ?? row.name,
-    country: COUNTRY_KO[row.country] ?? "일본",
+    country: COUNTRY_KO[row.country] ?? row.country,
     spotCount: 0,
     heroGrad: gradFor(row.id),
   };
