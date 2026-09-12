@@ -1,4 +1,6 @@
 import { describe, it, expect } from "vitest";
+import { readFileSync } from "node:fs";
+import { CITIES } from "./cities-catalog";
 import {
   project,
   boxOf,
@@ -122,5 +124,28 @@ describe("REGIONS — 대륙 그룹 무결성", () => {
     for (const r of REGIONS) {
       for (const id of r.countryIds) expect(metaIds.has(id)).toBe(true);
     }
+  });
+});
+
+// #130: 국가 매핑 단일 원천(COUNTRY_META) 정합 — 드리프트 시 신규 국가가 "일본"으로 오표기된다.
+describe("#130 Country 매핑 정합", () => {
+  it("모든 CITIES.country는 COUNTRY_META에 존재(seed toCountryCode·mapCity 보장)", () => {
+    for (const c of CITIES)
+      expect(Object.keys(COUNTRY_META)).toContain(c.country);
+  });
+
+  it("COUNTRY_META의 모든 국가 id(대문자)가 schema Country enum에 존재", () => {
+    const schema = readFileSync(
+      new URL("../prisma/schema.prisma", import.meta.url),
+      "utf8",
+    );
+    const enumVals = new Set(
+      schema
+        .match(/enum Country \{([^}]*)\}/)![1]
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    for (const m of Object.values(COUNTRY_META))
+      expect(enumVals.has(m.id.toUpperCase())).toBe(true);
   });
 });

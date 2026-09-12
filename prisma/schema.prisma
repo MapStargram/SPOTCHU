@@ -99,6 +99,15 @@ enum Country {
   GB
   US
   ES
+  VN
+  ID
+  PH
+  IT
+  DE
+  CZ
+  NL
+  AU
+  AE
 }
 
 enum SourcePlatform {
