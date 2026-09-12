@@ -16,7 +16,6 @@ import { RESEARCH_COORDS } from "../lib/spots.research";
 import { imageUpdateFields } from "../lib/seed-image";
 import { IMPORTED_COORDS } from "../lib/spots.imported";
 import { BADGE_DEFS } from "../lib/badges";
-import { WORK_COVERS } from "../lib/work-covers";
 import { COUNTRY_META } from "../lib/cities-geo";
 
 // tsx는 .env.local을 자동 로드하지 않는다(prisma CLI만 .env 로드). Node24 네이티브
@@ -92,12 +91,10 @@ async function main() {
   const workIds = new Set(WORKS.map((w) => w.id));
   for (const w of WORKS) {
     const type = WORKTYPE[w.type] ?? "OTHER";
-    // 작품 포스터(TMDB, lib/work-covers). 미매칭이면 update에 넣지 않아 DB 기존 커버를 보존한다.
-    const cover = WORK_COVERS[w.id]?.url;
     await db.work.upsert({
       where: { id: w.id },
-      update: { title: w.title, type, ...(cover ? { coverImageUrl: cover } : {}) },
-      create: { id: w.id, title: w.title, type, coverImageUrl: cover ?? null },
+      update: { title: w.title, type },
+      create: { id: w.id, title: w.title, type },
     });
   }
   // 소스에서 사라진 작품(이름변경·병합된 옛 id) 정리 — SpotWork는 onDelete:Cascade로 함께 삭제.

@@ -7,7 +7,6 @@ import {
   Camera,
   Ban,
   ShieldAlert,
-  Film,
 } from "lucide-react";
 
 // J3 · 이용약관 (MVP 요약본). 가입 동의(/signup·/consent)에서 "보기"로 연결.
@@ -37,11 +36,6 @@ const ITEMS = [
     Icon: ShieldAlert,
     title: "면책과 안전",
     body: "정보는 커뮤니티 기여로 제공되어 정확성을 보증하지 않으며, 현장 방문·촬영의 안전과 법규 준수는 이용자 책임입니다. 개인정보·위치정보 처리는 개인정보처리방침을 따릅니다.",
-  },
-  {
-    Icon: Film,
-    title: "이미지·데이터 출처",
-    body: "작품 포스터 이미지는 TMDB(The Movie Database)에서 제공합니다. 본 서비스는 TMDB API를 사용하지만 TMDB의 보증·인증을 받지 않았습니다(This product uses the TMDB API but is not endorsed or certified by TMDB). 스팟 사진은 크리에이티브 커먼즈(CC) 등 라이선스에 따라 저작자·출처를 표기합니다.",
   },
 ];
 
