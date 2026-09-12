@@ -208,15 +208,28 @@ export default async function SpotDetailScreen({
               href={`/work/${work.id}`}
               className="flex items-center gap-3 rounded-2xl bg-[color:var(--cream-2)] px-3.5 py-3"
             >
-              <span
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] text-white"
-                style={{
-                  background:
-                    "linear-gradient(135deg, #E24352 0%, #FFC857 100%)",
-                }}
-              >
-                <Star size={20} strokeWidth={2.25} aria-hidden />
-              </span>
+              {work.coverImageUrl ? (
+                <span className="h-11 w-11 shrink-0 overflow-hidden rounded-[10px] bg-[color:var(--cream-2)]">
+                  {/* 작품 포스터(TMDB) — 성지 실사진이 아니라 작품 아트 뱃지 */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={work.coverImageUrl}
+                    alt=""
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </span>
+              ) : (
+                <span
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[10px] text-white"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, #E24352 0%, #FFC857 100%)",
+                  }}
+                >
+                  <Star size={20} strokeWidth={2.25} aria-hidden />
+                </span>
+              )}
               <span className="min-w-0 flex-1">
                 <span className="block font-latin text-[9px] font-semibold uppercase tracking-[0.16em] text-[color:var(--muted)]">
                   {(WORK_TYPE_EN[work.type] ?? "Work") + " · Scene"}

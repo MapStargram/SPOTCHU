@@ -31,7 +31,9 @@ export async function generateMetadata({
   if (!w) return { title: "작품을 찾을 수 없어요" };
   const description = `${w.type} 촬영지 성지순례 · 정확한 위치와 구도로`;
   // 공유 미리보기 이미지 — 회차별 스팟 중 첫 실사진(카카오·네이버 OG는 이미지가 있어야 카드가 뜬다).
-  const cover = (await getWorkSpots(id)).find((s) => s.imageUrl)?.imageUrl;
+  // 공유 카드 이미지 — 작품 포스터(TMDB) 우선, 없으면 회차 스팟의 첫 실사진.
+  const cover =
+    w.coverImageUrl ?? (await getWorkSpots(id)).find((s) => s.imageUrl)?.imageUrl;
   return {
     title: w.title,
     description,
@@ -70,6 +72,24 @@ export default async function WorkDetailScreen({
           className="relative h-[280px] overflow-hidden"
           style={{ background: "#28324F" }}
         >
+          {w.coverImageUrl && (
+            <>
+              {/* 작품 포스터(TMDB) 히어로 배경 + 하단 그라디언트로 제목 가독성 확보 */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={w.coverImageUrl}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              <div
+                className="pointer-events-none absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(to top, rgba(20,26,45,0.92) 0%, rgba(20,26,45,0.4) 48%, rgba(20,26,45,0.28) 100%)",
+                }}
+              />
+            </>
+          )}
           <div
             className="pointer-events-none absolute -right-10 -top-10 h-[220px] w-[220px]"
             style={{
@@ -114,6 +134,12 @@ export default async function WorkDetailScreen({
             <div className="mt-1 font-latin text-[11px] opacity-85">
               {w.type}
             </div>
+            {w.coverImageUrl && (
+              // TMDB 이미지 출처표기(약관): 포스터가 보일 때 노출. 전체 고지는 /policy/terms.
+              <div className="mt-1 font-latin text-[9px] opacity-70">
+                포스터 이미지: TMDB
+              </div>
+            )}
           </div>
         </div>
 
