@@ -3,6 +3,7 @@
 // RN 앱이 이 /api/rn/* 엔드포인트를 EXPO_PUBLIC_API_URL로 소비한다(spotchu-rn/lib/data.ts).
 import { NextResponse } from "next/server";
 import type { Spot, City, Work, Collection } from "./mock";
+import type { FeedPost } from "./data";
 
 // CSS linear-gradient 문자열 → [color, color] 튜플(RN expo-linear-gradient).
 function gradArr(css: string): [string, string] {
@@ -80,6 +81,21 @@ export function toRnCollection(c: Collection) {
     isOwn: c.isOwn,
     isOfficial: c.isOfficial,
     spots: c.spots,
+  };
+}
+
+export function toRnPost(p: FeedPost) {
+  return {
+    id: p.id,
+    author: p.authorName,
+    when: p.when,
+    spotId: p.spotId,
+    spotTitle: p.spotTitle,
+    likes: p.likeCount,
+    verified: p.isVerifiedShot,
+    gradient: gradArr(p.gradient),
+    caption: p.caption,
+    imageUrl: p.images[0],
   };
 }
 
