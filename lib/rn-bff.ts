@@ -107,3 +107,16 @@ export function rnJson(data: unknown, status = 200) {
     headers: { "Access-Control-Allow-Origin": "*" },
   });
 }
+
+// 브라우저(react-native-web) 프리플라이트 — Authorization/JSON 본문이 붙는 요청은 OPTIONS를 먼저 보낸다.
+export function rnOptions() {
+  return new NextResponse(null, {
+    status: 204,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+      "Access-Control-Allow-Headers": "authorization,content-type",
+      "Access-Control-Max-Age": "86400",
+    },
+  });
+}
