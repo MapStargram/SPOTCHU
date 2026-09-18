@@ -484,7 +484,9 @@ export function CollectionDetail({
                   />
                 </div>
                 {/* 번호 배지 — 이미지 div(overflow-hidden) 밖, 카드 기준 절대배치라 잘리지 않음 */}
-                <span className="absolute left-1.5 top-1.5 z-10 flex h-[22px] w-[22px] items-center justify-center rounded-full bg-coral font-latin text-[11px] font-extrabold text-cream shadow-[0_1px_3px_rgba(23,35,60,0.3)]">
+                <span
+                  className={`absolute left-1.5 ${s.isAiIllustration ? "top-9" : "top-1.5"} z-10 flex h-[22px] w-[22px] items-center justify-center rounded-full bg-coral font-latin text-[11px] font-extrabold text-cream shadow-[0_1px_3px_rgba(23,35,60,0.3)]`}
+                >
                   {i + 1}
                 </span>
                 <div className="min-w-0 flex-1">
