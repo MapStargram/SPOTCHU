@@ -4,7 +4,7 @@ export default function ExploreLoading() {
     <div className="min-h-dvh bg-[color:var(--cream-2)] lg:pl-[76px]">
       <div className="mx-auto w-full max-w-[1180px] px-4 pt-4 lg:px-8 lg:pt-8">
         <div className="h-12 w-full animate-pulse rounded-[20px] bg-[color:var(--line)]" />
-        <div className="mt-3 flex gap-2">
+        <div className="-mx-4 mt-3 flex gap-2 overflow-x-auto px-4 [scrollbar-width:none]">
           {[80, 72, 96, 88, 84].map((w, i) => (
             <div
               key={i}

@@ -136,7 +136,9 @@ export function PinGrid({
               width={640}
               ai={s.isAiIllustration}
             />
-            <span className="absolute left-2 top-2 rounded-full bg-black/30 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
+            <span
+              className={`absolute left-2 ${s.isAiIllustration ? "top-9" : "top-2"} rounded-full bg-black/30 px-2.5 py-1 text-[10px] font-semibold text-white backdrop-blur-sm`}
+            >
               <CategoryLabel label={s.categoryLabel} size={11} />
             </span>
             {/* 국가 국기(전체 지역 혼합 피드) — 저장 버튼 왼쪽 우상단. 도시별 홈은 flag 미전달 → 미표시. */}

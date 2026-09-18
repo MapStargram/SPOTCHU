@@ -42,7 +42,9 @@ export function FeedView({
                   ai={s.isAiIllustration}
                 />
                 {/* 카테고리 = 콘텐츠 '종류'. 어두운 반투명 칩 + 아이콘으로 밝은 사진 위에서도 판독(홈 그리드와 동일 표기). */}
-                <span className="absolute left-2 top-2 inline-flex items-center rounded-full bg-black/35 px-2 py-1 text-[10px] font-semibold text-white backdrop-blur-sm">
+                <span
+                  className={`absolute left-2 ${s.isAiIllustration ? "top-9" : "top-2"} inline-flex items-center rounded-full bg-black/35 px-2 py-1 text-[10px] font-semibold text-white backdrop-blur-sm`}
+                >
                   <CategoryLabel label={s.categoryLabel} size={11} />
                 </span>
                 {s.verified === "official" && (
