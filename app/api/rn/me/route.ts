@@ -1,9 +1,13 @@
 // spotchu-rn 개인 데이터 — 프로필 통계(방문/배지/저장). Bearer 앱 토큰 필요.
 import { db } from "@/lib/db";
 import { getRnUserId } from "@/lib/rn-auth";
-import { rnJson } from "@/lib/rn-bff";
+import { rnJson, rnOptions } from "@/lib/rn-bff";
 
 export const dynamic = "force-dynamic";
+
+export function OPTIONS() {
+  return rnOptions();
+}
 
 export async function GET(req: Request) {
   const userId = await getRnUserId(req);

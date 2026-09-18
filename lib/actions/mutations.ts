@@ -6,15 +6,17 @@ import { z } from "zod";
 import { revalidateTag } from "next/cache";
 import { db } from "@/lib/db";
 import { getCurrentUser } from "@/lib/session";
-import { canCheckIn, haversineMeters, bearingDeg } from "@/lib/geo";
-import { isBlockedHighRisk } from "@/lib/safety";
 import {
-  awardCheckInBadges,
-  awardFirstReporterBadge,
-  type AwardedBadge,
-} from "@/lib/actions/badges";
+  checkInFor,
+  toggleSaveFor,
+  getSavedSpotIdsFor,
+  getUserCheckedInFor,
+  type CheckInResult,
+  type SaveToggleResult,
+} from "@/lib/rn-writes";
+import { bearingDeg } from "@/lib/geo";
+import { isBlockedHighRisk } from "@/lib/safety";
 import * as mock from "@/lib/mock";
-import { createNotification } from "@/lib/notify";
 
 type Fail = { ok: false; reason: string; [k: string]: unknown };
 
@@ -24,118 +26,15 @@ const CLOUD =
   process.env.CLOUDINARY_CLOUD_NAME ??
   "";
 
-// 체크인 입력(외부 GPS) — §5 신뢰경계 zod 검증. lat/lng/accuracy는 유한수·유효범위만 허용
-// (NaN·Infinity·범위밖 좌표 차단). accuracy 상한(≤50)은 아래 별도 게이트에서 "accuracy" 사유로 처리.
-const CheckInInput = z.object({
-  lat: z.number().finite().gte(-90).lte(90),
-  lng: z.number().finite().gte(-180).lte(180),
-  accuracy: z.number().finite().nonnegative(),
-});
-
 // F · GPS 방문 인증 (반경 100m + accuracy ≤ 50m, unique 1회 + 쿨다운 24h, 결과만 저장)
+// 도메인 로직은 lib/rn-writes.checkInFor에 있고(RN 라우트와 공유), 여기선 세션에서 userId만 해석한다.
 export async function checkInAction(
   spotId: string,
   coord: { lat: number; lng: number; accuracy: number },
-): Promise<
-  Fail | { ok: true; first: boolean; awardedBadges?: AwardedBadge[] }
-> {
+): Promise<CheckInResult> {
   const user = await getCurrentUser();
   if (!user?.id) return { ok: false, reason: "unauthenticated" };
-  const parsed = CheckInInput.safeParse(coord);
-  if (!parsed.success || typeof spotId !== "string" || spotId.trim() === "")
-    return { ok: false, reason: "invalid_input" };
-  const c = parsed.data; // 검증된 좌표 — 이하 coord 대신 사용
-  const spot = await db.spot.findUnique({ where: { id: spotId } });
-  if (!spot) return { ok: false, reason: "not_found" };
-  // 안전차단(고위험) 스팟은 인증 불가 — 단건 조회는 blocked를 거르지 않으므로 여기서 방어(CLAUDE §6).
-  if (spot.isBlockedHighRisk) return { ok: false, reason: "blocked" };
-
-  if (c.accuracy > 50)
-    return {
-      ok: false,
-      reason: "accuracy",
-      accuracyM: Math.round(c.accuracy),
-    };
-
-  const userPos = { lat: c.lat, lng: c.lng };
-  const target = { lat: spot.shooterLat, lng: spot.shooterLng };
-  if (
-    !canCheckIn(userPos, target, {
-      radiusM: spot.checkinRadiusM,
-      accuracyM: c.accuracy,
-    })
-  )
-    return {
-      ok: false,
-      reason: "range",
-      distanceM: Math.round(haversineMeters(userPos, target)),
-    };
-
-  const existing = await db.checkIn.findUnique({
-    where: { userId_spotId: { userId: user.id, spotId } },
-  });
-  if (existing) {
-    const hours = (Date.now() - existing.createdAt.getTime()) / 3_600_000;
-    if (hours < 24) return { ok: false, reason: "cooldown" };
-    // 재방문: 통계 unique 카운트는 유지, 결과만 갱신.
-    // createdAt(쿨다운 기준 시점)을 현재로 리셋해 '마지막 인증' 기준으로 새 24h 주기를 시작한다.
-    // 미갱신 시 첫 주기 이후 쿨다운이 영구 해제됨(MapStargram/SPOTCHU#79). 스키마상 (user,spot) 1행이라
-    // createdAt은 "최초"가 아니라 "마지막 인증" 시각으로 재정의된다(재인증 쿨다운=앱 규칙, schema 주석).
-    await db.checkIn.update({
-      where: { id: existing.id },
-      data: { deviceAccuracyM: c.accuracy, createdAt: new Date() },
-    });
-    return { ok: true, first: false };
-  }
-
-  // 최초 인증 — 결과만 저장(원시 좌표 미보관). skipDuplicates로 동시 요청 경합(연타·멀티탭) 방어(§38).
-  // 소스(CheckIn) 생성과 카운터 증분을 한 트랜잭션으로 원자화 — 둘 사이 크래시 시 카운터 영구
-  // 드리프트 방지(RISK-3). 승격 전이·알림·배지 같은 외부효과는 트랜잭션 밖에서 처리(긴 tx·롤백 회피).
-  const uid = user.id; // 클로저 안에선 user.id 내로잉이 유지되지 않아 지역 상수로 캡처
-  const first = await db.$transaction(async (tx) => {
-    const created = await tx.checkIn.createMany({
-      data: [{ userId: uid, spotId, deviceAccuracyM: c.accuracy }],
-      skipDuplicates: true,
-    });
-    // 경합에서 밀림(이미 다른 요청이 생성) — 집계는 그 요청이 담당하므로 증분 없이 반환.
-    if (created.count === 0) return false;
-    await tx.spot.update({
-      where: { id: spotId },
-      data: {
-        checkinCount: { increment: 1 },
-        uniqueCheckinCount: { increment: 1 },
-      },
-    });
-    return true;
-  });
-  if (!first) return { ok: true, first: false };
-
-  // USER_REPORTED → USER_VERIFIED 자동 승격(서로 다른 3명 이상).
-  // spot.verificationStatus는 위 findUnique(라인 44)의 스냅샷이라 동시 인증 시 stale일 수 있다 →
-  // 원자적 조건부 update(where에 현재 상태 포함)로 실제 전이한 1건만 count===1이 되게 하고,
-  // 그 1건에서만 알림을 발행한다(전이 1회 불변식 · 동시 임계 통과 시 중복 알림 방지).
-  if (spot.verificationStatus === "USER_REPORTED") {
-    const uniq = await db.checkIn.count({ where: { spotId } });
-    if (uniq >= 3) {
-      const promoted = await db.spot.updateMany({
-        where: { id: spotId, verificationStatus: "USER_REPORTED" },
-        data: { verificationStatus: "USER_VERIFIED" },
-      });
-      // 실제로 전이한 요청(count===1)에서만 제보자 본인에게 승격 알림 + 최초 제보자 배지 지급.
-      // 배지 지급 시점 = USER_VERIFIED 승격 시(결정: 검증된 제보만 보상 · rules 08). grant는 멱등(1회).
-      if (promoted.count === 1 && spot.createdById) {
-        await createNotification(spot.createdById, "SPOT_PROMOTED", {
-          refType: "SPOT",
-          refId: spotId,
-        });
-        await awardFirstReporterBadge(spot.createdById);
-      }
-    }
-  }
-
-  // 배지 지급(서버 판정·멱등) — 이 인증으로 도시/작품 완주 시 축하 피드백용으로 반환
-  const awardedBadges = await awardCheckInBadges(user.id, spotId);
-  return { ok: true, first: true, awardedBadges };
+  return checkInFor(user.id, spotId, coord);
 }
 
 // E · 스팟 저장(원탭 → 기본함 "저장됨" 또는 지정 컬렉션)
@@ -334,55 +233,20 @@ export async function deleteCollectionAction(
   return { ok: true };
 }
 
-// 핀 빠른 저장 토글 — 기본 "저장됨" 컬렉션 기준. 있으면 제거, 없으면 추가.
+// 핀 빠른 저장 토글 — 기본 "저장됨" 컬렉션 기준. 있으면 제거, 없으면 추가. (로직: lib/rn-writes.toggleSaveFor)
 export async function toggleSaveAction(
   spotId: string,
-): Promise<Fail | { ok: true; saved: boolean }> {
+): Promise<SaveToggleResult> {
   const user = await getCurrentUser();
   if (!user?.id) return { ok: false, reason: "unauthenticated" };
-  const col =
-    (await db.collection.findFirst({
-      where: { ownerId: user.id, isDefault: true },
-    })) ??
-    (await db.collection.create({
-      data: { ownerId: user.id, title: "저장됨", isDefault: true },
-    }));
-  const key = { collectionId_spotId: { collectionId: col.id, spotId } };
-  const existing = await db.collectionItem.findUnique({ where: key });
-  if (existing) {
-    await db.$transaction([
-      db.collectionItem.delete({ where: key }),
-      db.spot.update({
-        where: { id: spotId },
-        data: { saveCount: { decrement: 1 } },
-      }),
-    ]);
-    return { ok: true, saved: false };
-  }
-  await db.$transaction([
-    db.collectionItem.create({ data: { collectionId: col.id, spotId } }),
-    db.spot.update({
-      where: { id: spotId },
-      data: { saveCount: { increment: 1 } },
-    }),
-  ]);
-  return { ok: true, saved: true };
+  return toggleSaveFor(user.id, spotId);
 }
 
 // 현재 유저의 저장된 스팟 id 목록(기본 컬렉션). 비로그인은 빈 배열.
 export async function getSavedSpotIds(): Promise<string[]> {
   const user = await getCurrentUser();
   if (!user?.id) return [];
-  const col = await db.collection.findFirst({
-    where: { ownerId: user.id, isDefault: true },
-    select: { id: true },
-  });
-  if (!col) return [];
-  const items = await db.collectionItem.findMany({
-    where: { collectionId: col.id },
-    select: { spotId: true },
-  });
-  return items.map((i) => i.spotId);
+  return getSavedSpotIdsFor(user.id);
 }
 
 // 현재 유저가 이 스팟을 방문 인증한 적 있는지(스팟 상세의 '방문 완료' 상태 표기용). 게스트=false.
@@ -390,11 +254,7 @@ export async function getSavedSpotIds(): Promise<string[]> {
 export async function getUserCheckedIn(spotId: string): Promise<boolean> {
   const user = await getCurrentUser();
   if (!user?.id) return false;
-  const c = await db.checkIn.findUnique({
-    where: { userId_spotId: { userId: user.id, spotId } },
-    select: { id: true },
-  });
-  return !!c;
+  return getUserCheckedInFor(user.id, spotId);
 }
 
 // H · 게시물 작성(스팟 필수 연결, 사진 1~5장). imageUrls는 /api/upload가 EXIF 위치 제거 후 반환한 Cloudinary URL.
