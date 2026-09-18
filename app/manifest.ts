@@ -7,6 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "SPOTCHU",
     description:
       "블로그·SNS에 흩어진 사진 스팟을 하나의 지도로. 도쿄·서울의 정확한 촬영 위치까지.",
+    id: "/",
     start_url: "/",
     scope: "/",
     display: "standalone",
@@ -25,6 +26,27 @@ export default function manifest(): MetadataRoute.Manifest {
       method: "GET",
       params: { title: "title", text: "text", url: "url" },
     },
+    // 홈화면 아이콘 롱프레스 퀵액션(구글맵·네이버지도와 동일 UX). Android/데스크톱 Chromium 지원.
+    shortcuts: [
+      {
+        name: "지도 탐색",
+        short_name: "탐색",
+        url: "/explore",
+        icons: [{ src: "/icons/icon-192.png", sizes: "192x192" }],
+      },
+      {
+        name: "스팟 업로드",
+        short_name: "업로드",
+        url: "/upload",
+        icons: [{ src: "/icons/icon-192.png", sizes: "192x192" }],
+      },
+      {
+        name: "내 저장·방문",
+        short_name: "내 프로필",
+        url: "/profile",
+        icons: [{ src: "/icons/icon-192.png", sizes: "192x192" }],
+      },
+    ],
     icons: [
       {
         src: "/icons/icon-192.png",
