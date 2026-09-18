@@ -281,6 +281,7 @@ export interface WorkSpot {
   title: string;
   scene: string; // SpotWork.sceneNote(장면 메모)
   imageUrl?: string;
+  thumbGrad: string; // 실사진 없는 스팟(그라디언트 폴백)이 회차 목록에서 빈 회색으로 보이지 않게
 }
 // 캐시(태그 works/spots) — 미캐시 직접 Prisma 조회는 Next 15 auto 모드에서 라우트를 동적으로 만들어
 // 작품 페이지 ISR/CDN 캐시를 막는다. 캐시로 감싸 정적 적격 + /api/revalidate 태그 무효화 연동.
@@ -293,6 +294,7 @@ const cachedWorkSpots = unstable_cache(
       title: sw.spot.name,
       scene: sw.sceneNote ?? "",
       imageUrl: sw.spot.coverImageUrl ?? undefined,
+      thumbGrad: gradFor(sw.spot.id),
     }));
   },
   ["db-work-spots"],
@@ -305,6 +307,7 @@ export async function getWorkSpots(workId: string): Promise<WorkSpot[]> {
       title: s.title,
       scene: s.scene ?? "",
       imageUrl: s.imageUrl,
+      thumbGrad: s.thumbGrad,
     }));
   }
   return cachedWorkSpots(workId);

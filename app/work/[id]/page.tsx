@@ -136,7 +136,10 @@ export default async function WorkDetailScreen({
                     href={`/spot/${sc.id}`}
                     className="flex items-center gap-3 rounded-[14px] border border-[color:var(--line)] bg-white px-3 py-2.5 transition active:scale-[0.99]"
                   >
-                    <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-[10px] bg-[color:var(--cream-2)]">
+                    <div
+                      className="relative h-11 w-11 shrink-0 overflow-hidden rounded-[10px] bg-[color:var(--cream-2)]"
+                      style={{ background: sc.thumbGrad }}
+                    >
                       {sc.imageUrl && (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
