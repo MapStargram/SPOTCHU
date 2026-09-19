@@ -31,3 +31,7 @@
 | `12-policies-safety-copyright-privacy/` | 안전·저작권·개인정보 정책 | 6 |
 | `13-notifications/` | 알림 | 6 |
 | `14-metrics-analytics/` | 지표·분석 이벤트 | 6 |
+| `16-shot-guide-overlay/` | 촬영 가이드 오버레이(구도 맞추기) | 후속(prd §28-9) |
+| `17-visit-etiquette-save-note/` | 방문 매너 배너·저장 출처 메모 | 후속(prd §28-10) |
+
+> 15번은 파트너 수익화(`15-partner-monetization/`, prd §42)로 예약 — 폴더 미생성. 16·17은 경쟁사 UX 벤치마크 기반 후속(포스트-MVP).
