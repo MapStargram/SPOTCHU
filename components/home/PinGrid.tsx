@@ -119,6 +119,7 @@ export function PinGrid({
     return (
       <div
         key={s.id}
+        data-tilt
         className="relative overflow-hidden rounded-2xl shadow-[shadow:var(--sh-card)]"
       >
         <Link
@@ -126,6 +127,7 @@ export function PinGrid({
           className="block transition active:scale-[0.98]"
         >
           <div
+            data-vt-img
             className="relative"
             style={{ height: pinHeight(s.id), background: s.thumbGrad }}
           >

@@ -4,7 +4,9 @@
 // (v1은 404 응답까지 캐시하던 버그가 있어, 배포 전 잠깐 깨진 이미지를 영구 캐시하던 문제 방지)
 // (v3: /api/* 는 SW가 완전히 우회 — OAuth 콜백(/api/auth/callback/*)을 가로채 PWA 카카오 로그인이
 //  깨지던 문제 수정. 인증·API는 항상 네트워크 직결, 캐시·오프라인 폴백 대상 아님.)
-const CACHE = "spotchu-v3";
+// (v4: 마스코트 SVG가 같은 URL로 v2 교체(#254) → 캐시 우선 자산이라 재방문 사용자가 옛 v1을 계속 봤다.
+//  같은 URL 자산(/assets/*)을 바꾸면 반드시 버전을 올린다.)
+const CACHE = "spotchu-v4";
 
 self.addEventListener("install", () => {
   self.skipWaiting();

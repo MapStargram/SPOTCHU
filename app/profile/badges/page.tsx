@@ -44,7 +44,7 @@ export default async function BadgeDexPage() {
         <div
           className="mt-4 flex items-center gap-3.5 rounded-[20px] px-4 py-4 text-cream"
           style={{
-            background: "linear-gradient(135deg, #17233C 0%, #2E3F5E 100%)",
+            background: "var(--navy)",
           }}
         >
           <Mascot name="chu-expression-focused" alt="" className="h-16 w-16" />

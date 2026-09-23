@@ -6,9 +6,7 @@ export function MapBackground({
   variant?: "day" | "night";
 }) {
   const night = variant === "night";
-  const bg = night
-    ? "radial-gradient(circle at 20% 30%, rgba(46,63,94,0.5) 0%, transparent 25%), radial-gradient(circle at 75% 65%, rgba(46,63,94,0.4) 0%, transparent 22%), linear-gradient(180deg, #17233C 0%, #0B1424 100%)"
-    : "radial-gradient(circle at 20% 30%, rgba(200,220,190,0.5) 0%, transparent 25%), radial-gradient(circle at 75% 65%, rgba(200,220,190,0.4) 0%, transparent 22%), linear-gradient(180deg, #E5EDF3 0%, #D8E2EC 100%)";
+  const bg = night ? "#17233C" : "#E5EDF3"; // 단색 바탕(그라데이션 금지 — design.md §2)
   const road = night ? "rgba(255,249,242,0.15)" : "#FFF9F2";
   const park = night ? "rgba(69,214,198,0.15)" : "rgba(120,180,140,0.3)";
   return (

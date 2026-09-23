@@ -29,7 +29,7 @@ export default async function PostDetailPage({
     <AppShell>
       <div className="relative mx-auto flex min-h-dvh w-full max-w-[470px] flex-col bg-cream pb-24 lg:min-h-0 lg:pb-12 lg:pt-6">
         {/* Photo carousel (1~5, 가로 스와이프) */}
-        <div className="relative">
+        <div data-vt-hero className="relative">
           {p.images.length > 0 ? (
             <div className="flex snap-x snap-mandatory overflow-x-auto [scrollbar-width:none]">
               {p.images.map((url, i) => (

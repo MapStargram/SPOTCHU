@@ -125,9 +125,7 @@ export function CheckinFlow({
       <div
         className="relative flex min-h-dvh w-full max-w-[430px] flex-col px-5 text-navy"
         style={
-          hero
-            ? { background: "var(--grad-hero)" }
-            : { background: "var(--cream)" }
+          hero ? { background: "var(--coral)" } : { background: "var(--cream)" }
         }
       >
         {children}
@@ -186,8 +184,7 @@ export function CheckinFlow({
             <span
               className="absolute inset-0 rounded-full"
               style={{
-                background:
-                  "radial-gradient(circle, rgba(255,95,109,0.15), transparent 65%)",
+                background: "rgba(232,107,118,0.14)",
                 animation: "markerPulse 1.8s ease-out infinite",
               }}
             />
@@ -212,28 +209,13 @@ export function CheckinFlow({
   if (phase === "success") {
     return (
       <Shell hero>
-        <div
-          className="pointer-events-none absolute -right-14 -top-14 h-[280px] w-[280px]"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(255,200,87,0.5), transparent 65%)",
-          }}
-        />
-        <div
-          className="pointer-events-none absolute -bottom-24 -left-20 h-[320px] w-[320px]"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(69,214,198,0.45), transparent 70%)",
-          }}
-        />
         <div className="relative z-10 flex flex-1 flex-col items-center justify-center text-center text-cream">
-          {/* 3D Chu(three.js, spec §구성 요소 '성공 연출'). 코랄 히어로 위에서 코랄 몸체가
-              묻히지 않게 크림 글로우를 깐다. */}
+          {/* 3D Chu(three.js, spec §구성 요소 '성공 연출'). 코랄 배경에 코랄 몸체가
+              묻히지 않게 옅은 단색 원판을 깐다(그라데이션 금지 — design.md §2). */}
           <div
             className="rounded-full"
             style={{
-              background:
-                "radial-gradient(circle, rgba(255,249,242,0.55), transparent 68%)",
+              background: "rgba(255,255,255,0.2)",
             }}
           >
             <Chu3D size={220} />

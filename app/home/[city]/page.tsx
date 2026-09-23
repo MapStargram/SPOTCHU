@@ -122,6 +122,8 @@ export default async function HomeScreen({
         {/* Hero — 오늘의 스팟 */}
         <Link
           href={`/spot/${heroSpot.id}`}
+          data-tilt
+          data-vt-img
           className="relative mt-6 block h-[196px] overflow-hidden rounded-[20px] shadow-[shadow:var(--sh-elevated)] lg:h-[300px]"
           style={{ background: heroSpot.heroGrad }}
         >
@@ -134,13 +136,6 @@ export default async function HomeScreen({
           {heroSpot.imageUrl && (
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
           )}
-          <div
-            className="pointer-events-none absolute -right-10 -top-10 h-40 w-40"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(255,200,87,0.5), transparent 65%)",
-            }}
-          />
           <div className="absolute left-4 top-3.5">
             <TagPill variant="glass">오늘의 스팟</TagPill>
           </div>

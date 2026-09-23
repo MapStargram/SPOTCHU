@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
         <div
           className="mt-5 flex items-center gap-3.5 rounded-[20px] px-4 py-5 text-navy"
           style={{
-            background: "linear-gradient(135deg, #45D6C6 0%, #38C4B4 100%)",
+            background: "var(--mint-deep)",
           }}
         >
           <Shield size={42} strokeWidth={1.8} />

@@ -1,6 +1,7 @@
 // 도시 카탈로그(식별·표시 메타). 데이터 의존 0 — 대용량 스팟 데이터셋(lib/mock.ts)과 분리해
 // /city 등 클라이언트(cities-geo→CityMap/CityGlobe)가 419KB 스팟 데이터를 끌어오지 않게 한다.
 // spotCount는 폴백값(실 카운트는 getCitySpotCounts로 오버라이드). lib/mock.ts가 re-export한다.
+import { tintFor } from "./surface";
 import { type CityId } from "./mock-constants";
 
 export interface City {
@@ -12,7 +13,7 @@ export interface City {
   heroGrad: string;
 }
 
-export const CITIES: City[] = [
+const CITIES_RAW: City[] = [
   {
     id: "tokyo",
     name: "도쿄",
@@ -326,3 +327,8 @@ export const CITIES: City[] = [
     heroGrad: "linear-gradient(135deg, #FFC857 0%, #45D6C6 100%)",
   },
 ];
+// 도시 바탕도 단색(design.md §2) — 원천 그라데이션 문자열은 덮어쓴다.
+export const CITIES: City[] = CITIES_RAW.map((ct) => ({
+  ...ct,
+  heroGrad: tintFor(ct.id),
+}));

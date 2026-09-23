@@ -229,16 +229,10 @@ export function CollectionDetail({
         <>
           {/* Hero */}
           <div
+            data-vt-hero
             className="relative h-[240px] overflow-hidden"
             style={{ background: pickHeroBg(col.id) }}
           >
-            <div
-              className="pointer-events-none absolute -right-10 -top-10 h-44 w-44"
-              style={{
-                background:
-                  "radial-gradient(circle, rgba(255,249,242,0.35), transparent 65%)",
-              }}
-            />
             <div className="absolute inset-x-4 top-14 flex justify-between">
               <Link
                 href="/collections"
@@ -328,6 +322,7 @@ export function CollectionDetail({
                     {i + 1}
                   </span>
                   <span
+                    data-vt-img
                     className="relative h-[52px] w-[52px] shrink-0 overflow-hidden rounded-[10px]"
                     style={{ background: s.thumbGrad }}
                   >
@@ -473,6 +468,7 @@ export function CollectionDetail({
                 }`}
               >
                 <div
+                  data-vt-img
                   className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl"
                   style={{ background: s.thumbGrad }}
                 >

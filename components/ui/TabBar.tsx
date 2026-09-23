@@ -30,7 +30,7 @@ export function TabBar({ active = "home" }: { active?: ActiveProp }) {
   // ponytail: tokyo 폴백 대신 /feed 위치기반 리졸버가 필요해지면 그때 추가.
   const feedHref = city ? `/feed/${city}` : "/feed/tokyo";
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-20 border-t border-[color:var(--line)] bg-[rgba(255,249,242,0.92)] pb-[env(safe-area-inset-bottom)] backdrop-blur-xl lg:hidden">
+    <nav className="fixed inset-x-0 bottom-0 z-20 [view-transition-name:tabbar] border-t border-[color:var(--line)] bg-[rgba(255,249,242,0.92)] pb-[env(safe-area-inset-bottom)] backdrop-blur-xl lg:hidden">
       <ul className="mx-auto flex h-[72px] max-w-[430px] items-start justify-around pt-3">
         {TABS.map(({ id, label, Icon, href: rawHref }) => {
           const isActive = active === id;

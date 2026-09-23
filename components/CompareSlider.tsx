@@ -10,11 +10,11 @@ import { cldThumb } from "@/lib/cloudinary-url";
 // 현재는 그라디언트 목업. 실제 사진 연동 시 아래 그라디언트를 <Image>로 교체.
 export function CompareSlider({
   repImg,
-  repGrad = "linear-gradient(180deg, #E24352 0%, #17233C 100%)",
+  repGrad = "var(--navy)",
   repLabel = "공식 대표 · 노을",
   repTitle = "대표 앵글",
   userImg,
-  userGrad = "linear-gradient(180deg, #FBEFE0 0%, #FF7A85 60%, #E24352 100%)",
+  userGrad = "var(--cream-2)",
   userLabel,
   userTitle,
 }: {

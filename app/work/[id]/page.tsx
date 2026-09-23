@@ -67,14 +67,20 @@ export default async function WorkDetailScreen({
       <ViewBeacon workId={w.id} />
       <div className="relative mx-auto flex w-full max-w-[500px] flex-col bg-cream pb-28 lg:max-w-[720px] lg:pb-12">
         {/* Hero */}
-        <div className="relative h-[280px] overflow-hidden">
+        <div
+          data-vt-hero
+          data-depth-hero
+          className="relative h-[280px] overflow-hidden"
+        >
           {/* 브랜드 커버 — 외부 이미지·API 없이 코드로 그림(유형별 색 + 아이콘 워터마크) */}
-          <WorkCover
-            work={w}
-            variant="hero"
-            className="absolute inset-0 h-full w-full"
-            iconSize={210}
-          />
+          <div data-depth-layer className="absolute inset-0">
+            <WorkCover
+              work={w}
+              variant="hero"
+              className="absolute inset-0 h-full w-full"
+              iconSize={210}
+            />
+          </div>
           {/* 제목 가독성용 하단 스크림 */}
           <div
             className="pointer-events-none absolute inset-0"
@@ -136,7 +142,10 @@ export default async function WorkDetailScreen({
                     href={`/spot/${sc.id}`}
                     className="flex items-center gap-3 rounded-[14px] border border-[color:var(--line)] bg-white px-3 py-2.5 transition active:scale-[0.99]"
                   >
-                    <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-[10px] bg-[color:var(--cream-2)]">
+                    <div
+                      data-vt-img
+                      className="relative h-11 w-11 shrink-0 overflow-hidden rounded-[10px] bg-[color:var(--cream-2)]"
+                    >
                       {sc.imageUrl && (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img

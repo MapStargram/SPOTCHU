@@ -12,19 +12,19 @@ const SLIDES = [
     mascot: "chu-mascot-map" as const,
     title: ["지도에서", "찾고 있는 그 자리를."],
     body: "블로그와 SNS에 흩어진 사진 스팟을 하나의 지도로. 도쿄와 서울, 정확한 촬영 위치까지 안내해요.",
-    grad: "linear-gradient(180deg, #FF7A85 0%, #E24352 100%)",
+    bg: "#F6E4E6",
   },
   {
     mascot: "chu-mascot-camera" as const,
     title: ["어디에 서서", "어느 방향으로 찍을까."],
     body: "스팟마다 촬영 각도, 추천 렌즈, 시간대까지 츄가 세팅해 뒀어요. 그대로 찍으면 그 사진이에요.",
-    grad: "linear-gradient(180deg, #45D6C6 0%, #38C4B4 100%)",
+    bg: "#DFF2EF",
   },
   {
     mascot: "chu-expression-joy" as const,
     title: ["발견하고 모으고", "인증하는 여행."],
     body: "컬렉션에 저장하고 여행 계획으로. 현장에서 GPS 인증하면 배지가 쌓여요.",
-    grad: "linear-gradient(180deg, #FFC857 0%, #FF7A85 100%)",
+    bg: "#F8EEDA",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function OnboardingScreen() {
 
       <div
         className="flex h-[340px] items-center justify-center overflow-hidden rounded-3xl"
-        style={{ background: slide.grad }}
+        style={{ background: slide.bg }}
       >
         <Mascot
           name={slide.mascot}

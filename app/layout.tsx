@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { RegisterSW } from "@/components/pwa/RegisterSW";
 import { InstallBanner } from "@/components/pwa/InstallBanner";
+import { MotionFX } from "@/components/shell/MotionFX";
 import { APP_URL } from "@/lib/app-url";
 
 export const metadata: Metadata = {
@@ -67,6 +68,7 @@ export default function RootLayout({
       <body>
         {children}
         <RegisterSW />
+        <MotionFX />
         <InstallBanner />
       </body>
     </html>

@@ -4,7 +4,7 @@ import { cldThumb } from "@/lib/cloudinary-url";
 import type { FeedPost } from "@/lib/data";
 
 // 인스타 프로필식 사진 그리드(3열 정사각). 스팟 상세 갤러리·프로필 "내 사진"에서 공용.
-// 서버 컴포넌트 — 탭하면 게시물 상세로. 사진 없으면 gradient 폴백(목업).
+// 서버 컴포넌트 — 탭하면 게시물 상세로. 사진 없으면 단색 폴백.
 export function PostGrid({ posts }: { posts: FeedPost[] }) {
   return (
     <div className="grid grid-cols-3 gap-1">
@@ -13,6 +13,8 @@ export function PostGrid({ posts }: { posts: FeedPost[] }) {
           key={p.id}
           href={`/post/${p.id}`}
           aria-label={p.caption || `${p.spotTitle} 사진`}
+          data-tilt
+          data-vt-img
           className="relative aspect-square overflow-hidden rounded-lg bg-[color:var(--cream-2)]"
         >
           {p.images[0] ? (

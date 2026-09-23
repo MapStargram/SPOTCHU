@@ -173,7 +173,7 @@ function SpotPanel({ spot }: { spot: SpotDetail }) {
         style={
           spot.coverImageUrl
             ? { backgroundImage: `url(${spot.coverImageUrl})` }
-            : { background: "linear-gradient(180deg,#FBEFE0 0%,#FF7A85 100%)" }
+            : { background: "var(--cream-2)" }
         }
       />
       <div className="relative h-[200px] overflow-hidden rounded-[14px] border border-[color:var(--line)] bg-[#DDE5EE]">

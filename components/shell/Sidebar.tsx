@@ -49,7 +49,7 @@ export function Sidebar({ active }: { active?: Active }) {
   const exploreHref = city ? `/explore/${city}` : "/explore";
   const feedHref = city ? `/feed/${city}` : "/feed/tokyo"; // /feed 무도시 라우트 없음 → 기본 도시(자기치유)
   return (
-    <aside className="group peer fixed inset-y-0 left-0 z-30 hidden w-[76px] flex-col overflow-hidden border-r border-[color:var(--line)] bg-cream transition-[width] duration-200 ease-out hover:w-[244px] hover:shadow-[shadow:var(--sh-card)] lg:flex">
+    <aside className="group peer fixed inset-y-0 left-0 z-30 [view-transition-name:sidebar] hidden w-[76px] flex-col overflow-hidden border-r border-[color:var(--line)] bg-cream transition-[width] duration-200 ease-out hover:w-[244px] hover:shadow-[shadow:var(--sh-card)] lg:flex">
       <div className="flex w-[244px] flex-1 flex-col px-3 py-6">
         <Link
           href="/home"
