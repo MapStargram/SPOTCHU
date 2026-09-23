@@ -5,7 +5,7 @@ import {
   Film,
   type LucideIcon,
 } from "lucide-react";
-import { workGradient } from "@/lib/work-visual";
+import { workColor } from "@/lib/work-visual";
 
 // 작품 유형 → 아이콘. 외부 포스터 대신 "무슨 매체인지"를 시각적으로 전달.
 const TYPE_ICON: Record<string, LucideIcon> = {
@@ -31,7 +31,7 @@ export function WorkCover({
   return (
     <span
       className={`relative block overflow-hidden ${className}`}
-      style={{ background: workGradient(work.id) }}
+      style={{ background: workColor(work.id) }}
       aria-hidden
     >
       {variant === "tile" ? (

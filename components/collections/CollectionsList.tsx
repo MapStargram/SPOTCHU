@@ -107,9 +107,11 @@ export function CollectionsList({
             <Link
               key={col.id}
               href={`/collections/${col.id}`}
-              className="overflow-hidden rounded-2xl bg-white shadow-[shadow:var(--sh-card)]"
+              data-tilt
+              className="relative overflow-hidden rounded-2xl bg-white shadow-[shadow:var(--sh-card)]"
             >
               <div
+                data-vt-img
                 className="relative h-[120px] lg:h-[150px]"
                 style={{ background: pickBg(col.id) }}
               >

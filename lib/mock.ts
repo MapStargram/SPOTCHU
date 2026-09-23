@@ -4,6 +4,7 @@
 import { RESEARCH_SPOTS, RESEARCH_WORKS } from "./spots.research";
 import { IMPORTED_SPOTS, IMPORTED_WORKS } from "./spots.imported";
 import { SPOT_IMAGES } from "./spot-images";
+import { tintFor } from "./surface";
 import { type CityId } from "./mock-constants";
 import { CITIES } from "./cities-catalog"; // getCity가 로컬에서 참조(재-export와 별개)
 
@@ -104,11 +105,12 @@ const BASE_WORKS: Work[] = [
   { id: "parasite", title: "기생충", type: "영화", spotCount: 5, progress: 2 },
 ];
 
-export const WORKS: Work[] = [
-  ...BASE_WORKS,
-  ...RESEARCH_WORKS,
-  ...IMPORTED_WORKS,
-];
+const WORKS_RAW: Work[] = [...BASE_WORKS, ...RESEARCH_WORKS, ...IMPORTED_WORKS];
+export const WORKS: Work[] = WORKS_RAW.map((w) => ({
+  ...w,
+  thumbGrad: tintFor(w.id),
+  heroGrad: tintFor(w.id),
+}));
 
 const BASE_SPOTS: Spot[] = [
   {
@@ -256,7 +258,9 @@ export const SPOTS: Spot[] = [
   ...BASE_SPOTS,
   ...RESEARCH_SPOTS,
   ...IMPORTED_SPOTS,
-].map((s) => {
+].map((raw) => {
+  // ponytail: 원천(BASE/RESEARCH/IMPORTED)의 그라데이션 문자열은 그대로 두고 여기서 단색으로 덮는다(design.md §2).
+  const s = { ...raw, thumbGrad: tintFor(raw.id), heroGrad: tintFor(raw.id) };
   const img = SPOT_IMAGES[s.id];
   return img
     ? {
@@ -271,7 +275,7 @@ export const SPOTS: Spot[] = [
     : s;
 });
 
-export const COLLECTIONS: Collection[] = [
+const COLLECTIONS_RAW: Collection[] = [
   {
     id: "tokyo-3d4n",
     title: "도쿄 3박4일 사진 여행",
@@ -781,6 +785,10 @@ export const COLLECTIONS: Collection[] = [
     ],
   },
 ];
+export const COLLECTIONS: Collection[] = COLLECTIONS_RAW.map((c) => ({
+  ...c,
+  coverGrad: tintFor(c.id),
+}));
 
 export const getCity = (id: string) => CITIES.find((c) => c.id === id);
 export const getSpot = (id: string) => SPOTS.find((s) => s.id === id);
@@ -875,7 +883,7 @@ export interface Post {
   caption: string;
 }
 
-export const POSTS: Post[] = [
+const POSTS_RAW: Post[] = [
   {
     id: "p1",
     author: "현우",
@@ -932,6 +940,10 @@ export const POSTS: Post[] = [
     caption: "개장 직후 15분, 사람 없는 근정전 계단.",
   },
 ];
+export const POSTS: Post[] = POSTS_RAW.map((p) => ({
+  ...p,
+  gradient: tintFor(p.id),
+}));
 
 export const getPost = (id: string) => POSTS.find((p) => p.id === id);
 export const postsByCity = (city: CityId) =>

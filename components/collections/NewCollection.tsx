@@ -54,11 +54,11 @@ export function NewCollection() {
           </button>
         </header>
 
-        {/* 커버 미리보기(자동 그라디언트). 커버 사진 업로드는 미지원 — Collection엔 coverGrad만 있다.
+        {/* 커버 미리보기(단색). 커버 사진 업로드는 미지원 — Collection엔 coverGrad만 있다.
             예전엔 동작 안 하는 "커버 사진 선택" 버튼이 있어 눌러도 아무 일도 안 났다. */}
         <div
           className="mt-6 h-[140px] rounded-[20px]"
-          style={{ background: "var(--grad-thumb)" }}
+          style={{ background: "var(--cream-2)" }}
         />
 
         {/* Fields */}

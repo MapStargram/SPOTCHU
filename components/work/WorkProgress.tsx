@@ -50,7 +50,7 @@ export function WorkProgress({
       <div className="h-2 overflow-hidden rounded-full bg-[color:var(--cream-2)]">
         <div
           className="h-full rounded-full transition-[width] duration-500"
-          style={{ width: `${progressPct}%`, background: "var(--grad-body)" }}
+          style={{ width: `${progressPct}%`, background: "var(--coral)" }}
         />
       </div>
       <div className="mt-2.5 flex items-center gap-2 text-[11px] text-[color:var(--muted)]">

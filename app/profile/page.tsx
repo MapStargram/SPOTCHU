@@ -64,15 +64,8 @@ export default async function ProfilePage() {
             여기선 밴드 안쪽 여백만 살짝(#54, edge-to-edge 통일). */}
         <div
           className="relative h-[200px] overflow-hidden lg:rounded-b-[28px]"
-          style={{ background: "var(--grad-hero)" }}
+          style={{ background: "var(--coral)" }}
         >
-          <div
-            className="pointer-events-none absolute -right-10 -top-10 h-52 w-52"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(255,200,87,0.35), transparent 65%)",
-            }}
-          />
           <div className="absolute inset-x-4 top-5 flex items-center justify-between lg:top-6 lg:px-4">
             <span className="font-latin text-[10px] font-semibold uppercase tracking-[0.18em] text-[rgba(255,249,242,0.85)]">
               MY PROFILE

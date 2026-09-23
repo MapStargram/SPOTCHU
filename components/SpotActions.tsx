@@ -12,6 +12,7 @@ import {
   createCollectionAction,
 } from "@/lib/actions/mutations";
 import { diffMembership } from "@/lib/collections";
+import { tintFor } from "@/lib/surface";
 
 type Col = { id: string; title: string; itemCount: number; coverGrad: string };
 
@@ -102,7 +103,7 @@ export function SpotActions({
         id: res.collectionId,
         title,
         itemCount: 0,
-        coverGrad: "var(--grad-thumb)",
+        coverGrad: tintFor(res.collectionId),
       },
       ...prev,
     ]);
@@ -127,7 +128,7 @@ export function SpotActions({
   return (
     <>
       {/* Sticky action row */}
-      <div className="fixed inset-x-0 bottom-0 z-20 lg:pl-[76px]">
+      <div className="fixed inset-x-0 bottom-0 z-20 [view-transition-name:spot-actions] lg:pl-[76px]">
         <div className="mx-auto flex max-w-[500px] gap-2.5 bg-gradient-to-t from-cream via-cream px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-3 lg:max-w-[720px]">
           {checkedIn ? (
             // 방문 완료(재방문은 쿨다운 경과 후 가능 → 탭 유지, 체크인 화면이 쿨다운 안내). 색+아이콘+라벨 병기.

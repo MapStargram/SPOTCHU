@@ -2,6 +2,7 @@
 // 페이지는 lib/mock 대신 여기서 읽으면 env 플래그로 안전하게 전환된다(기본=목업, 데모 유지).
 // ⚠️ DB 행에는 그라디언트/일부 표시 필드가 없어 결정적 폴백으로 매핑한다(실 이미지 준비 전까지 임시).
 import * as mock from "./mock";
+import { tintFor } from "./surface";
 import type { Spot, City, CityId, Work, Collection, Verified } from "./mock";
 import {
   getSpotsByCityFromDb,
@@ -59,18 +60,6 @@ import {
 
 const USE_DB = process.env.DATA_SOURCE === "db";
 
-const GRADS = [
-  "linear-gradient(135deg, #FF7A85 0%, #FFC857 100%)",
-  "linear-gradient(135deg, #45D6C6 0%, #17233C 100%)",
-  "linear-gradient(180deg, #E24352 0%, #17233C 100%)",
-  "linear-gradient(135deg, #FFC857 0%, #45D6C6 100%)",
-];
-function gradFor(id: string): string {
-  let h = 0;
-  for (const ch of id) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
-  return GRADS[h % GRADS.length];
-}
-
 const VERIF_BACK: Record<string, Spot["verified"]> = {
   OFFICIAL: "official",
   USER_VERIFIED: "user",
@@ -105,7 +94,7 @@ interface DbSpotLike {
   works?: { workId: string; sceneNote?: string | null }[];
 }
 function mapSpot(row: DbSpotLike): Spot {
-  const g = gradFor(row.id);
+  const g = tintFor(row.id);
   return {
     id: row.id,
     title: row.name,
@@ -160,7 +149,7 @@ function mapCity(row: DbCityLike): City {
     nameEn: row.nameEn ?? row.name,
     country: COUNTRY_KO[row.country] ?? row.country,
     spotCount: 0,
-    heroGrad: gradFor(row.id),
+    heroGrad: tintFor(row.id),
   };
 }
 
@@ -350,7 +339,7 @@ function mapCollection(row: DbCollectionLike, userId?: string): Collection {
     title: row.title,
     subtitle: row.description ?? "",
     itemCount: row.items?.length ?? 0,
-    coverGrad: gradFor(row.id),
+    coverGrad: tintFor(row.id),
     isOwn: userId ? row.ownerId === userId : false,
     isOfficial: row.isOfficial,
     visibility: row.visibility === "LINK" ? "LINK" : "PRIVATE",
@@ -760,7 +749,7 @@ function mapDbPost(row: DbPost, likedByMe: boolean): FeedPost {
     spotTitle: row.spot.name,
     city: row.spot.cityId as CityId,
     images: row.images.map((i) => i.url),
-    gradient: gradFor(row.id),
+    gradient: tintFor(row.id),
     caption: row.caption ?? "",
     isVerifiedShot: row.isVerifiedShot,
     likeCount: row._count.likes,

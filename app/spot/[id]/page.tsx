@@ -94,32 +94,23 @@ export default async function SpotDetailScreen({
       <div className="relative mx-auto flex w-full max-w-[500px] flex-col bg-cream pb-28 lg:max-w-[720px]">
         {/* Hero (D1) */}
         <div
+          data-vt-hero
+          data-depth-hero
           className="relative h-[360px] overflow-hidden"
           style={{ background: s.heroGrad }}
         >
-          <SpotImage
-            src={s.imageUrl}
-            alt={s.title}
-            loading="eager"
-            ai={s.isAiIllustration}
-          />
-          {s.imageUrl && (
-            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25" />
-          )}
-          <div
-            className="pointer-events-none absolute -right-14 -top-14 h-[280px] w-[280px]"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(255,200,87,0.5), transparent 65%)",
-            }}
-          />
-          <div
-            className="pointer-events-none absolute -bottom-20 -left-14 h-[260px] w-[260px]"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(69,214,198,0.45), transparent 65%)",
-            }}
-          />
+          {/* 깊이 레이어: 스크롤 패럴랙스·마우스 틸트(globals.css 3D 모션) */}
+          <div data-depth-layer className="absolute inset-0">
+            <SpotImage
+              src={s.imageUrl}
+              alt={s.title}
+              loading="eager"
+              ai={s.isAiIllustration}
+            />
+            {s.imageUrl && (
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/25" />
+            )}
+          </div>
           <div className="absolute inset-x-4 top-14 z-10 flex justify-between">
             <Link
               href={`/home/${s.city}`}
@@ -137,12 +128,17 @@ export default async function SpotDetailScreen({
               <SpotSaveHeart spotId={s.id} />
             </div>
           </div>
-          <div className="absolute inset-x-5 bottom-14 text-cream">
+          {/* 사진이 없으면(옅은 단색 바탕) 흰 글자가 안 보인다 → 남색 글자·크림 태그로 대비 확보 */}
+          <div
+            className={`absolute inset-x-5 bottom-14 ${s.imageUrl ? "text-cream" : "text-navy"}`}
+          >
             <div className="mb-2.5 flex gap-1.5">
-              <TagPill variant="glass">
+              <TagPill variant={s.imageUrl ? "glass" : "cream"}>
                 <CategoryLabel label={s.categoryLabel} size={12} />
               </TagPill>
-              <TagPill variant="glass">{VERIFIED_LABEL[s.verified]}</TagPill>
+              <TagPill variant={s.imageUrl ? "glass" : "cream"}>
+                {VERIFIED_LABEL[s.verified]}
+              </TagPill>
             </div>
             <h1 className="text-[22px] font-extrabold leading-[1.2] tracking-[-0.02em]">
               {s.title}

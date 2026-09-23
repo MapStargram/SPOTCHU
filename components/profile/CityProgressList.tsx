@@ -39,7 +39,7 @@ export function CityProgressList({ cities }: { cities: CityProgress[] }) {
               <div className="h-1.5 overflow-hidden rounded-full bg-[color:var(--cream-2)]">
                 <div
                   className="h-full rounded-full"
-                  style={{ width: `${pct}%`, background: "var(--grad-body)" }}
+                  style={{ width: `${pct}%`, background: "var(--coral)" }}
                 />
               </div>
             </div>

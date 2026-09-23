@@ -9,9 +9,10 @@
 - **모바일 한 손 조작**: 하단 내비 4탭 + 엄지 영역 액션. 지도⇄피드 토글 즉각.
 - **둥근 형태, 따뜻한 톤**: 모든 코너 ≥ 12px(버튼·칩은 100px pill). coral·mint·cream 기반, navy 텍스트.
 - **AI 슬롭 금지**: 그림자는 navy-tint만, 컬러 섀도는 coral CTA 하나(`--sh-cta-coral`). 모션은 기능적으로 짧게.
+- **장식용 색 그라데이션 금지**(2026-09-23, 사용자 결정 · 핸드오프보다 우선): 색→색 그라데이션 배경, 빛번짐 원(radial glow), 파스텔 블러를 쓰지 않는다. 면은 **단색**(`lib/surface.ts`의 `tintFor`=옅은 틴트 / `solidFor`=진한 단색, 또는 색 토큰). 예외는 기능용 무채색만: 사진 위 글자 가독성용 검정 스크림, 하단 고정 CTA 뒤 흰 페이드, 3D 지구본 비네트, 틸트 반사광(흰색). `--grad-*` 토큰은 삭제했다.
 
 ## 2. 토큰 (핸드오프 요약 — 값은 colors_and_type.css)
-- **coral** `#FF5F6D`(Primary·CTA·기본 마커) / coral-light `#FF7A85` / coral-deep `#E24352`(press·gradient bottom).
+- **coral** `#FF5F6D`(Primary·CTA·기본 마커) / coral-light `#FF7A85` / coral-deep `#E24352`(press).
 - **mint** `#45D6C6`(검증·저장 마커·GPS 인증 뱃지) / mint-deep `#38C4B4`.
 - **navy** `#17233C`(텍스트·다크 서피스) / navy-2 `#2E3F5E`.
 - **cream** `#FFF9F2`(앱 배경) / cream-2 `#FBEFE0`. 순백 `#FFF`는 cream 위 카드 서피스에만.
@@ -23,6 +24,12 @@
 ## 3. 모션 프리미티브 (핸드오프)
 - 표준 이징 `cubic-bezier(0.4,0,0.2,1)` 220ms(상태 변화). 오버슈트 `cubic-bezier(0.34,1.56,0.64,1)` — 놀이 순간(마커 포커스·저장 토글·F3 배지 팝인).
 - `splashSlide`(로더), `chubob`(마스코트 ±4px 상하), `markerPulse`(포커스된 마커만). coral CTA press: `--coral→--coral-deep` + scale(0.98) 120ms.
+- **3D 모션**(2026-09-23, `components/shell/MotionFX.tsx` + `globals.css` 3D 모션 블록). 전부 `prefers-reduced-motion`이면 꺼지고, 미지원 브라우저는 평소 동작(점진적 향상).
+  - **페이지 전환 = 깊이 이동**: 내부 링크 클릭을 View Transitions로 감싼다. 이전 화면은 뒤로 물러나고(translateZ −180px·흐려짐) 새 화면이 앞으로 다가온다. `뒤로` 링크(`data-vt="back"` 또는 aria-label "뒤로")는 역재생. 같은 경로의 쿼리만 바뀌는 이동·새 탭·외부 링크는 제외(`data-vt="off"`로 개별 제외). 브라우저 뒤로가기는 애니메이션 안 함(iOS 스와이프 백과 중복).
+  - **카드→상세 모핑**: 카드의 `[data-vt-img]` 사진이 상세의 `[data-vt-hero]`로 커지며 이어진다(스팟·작품·게시물·컬렉션).
+  - **상세 히어로 깊이**: `[data-depth-hero]` 안 `[data-depth-layer]`가 스크롤 시 느리게 내려가며 확대(CSS 스크롤 타임라인), 마우스를 따라 5° 기운다(스팟·작품).
+  - **카드 틸트**: `[data-tilt]` 카드가 마우스를 따라 8°(터치는 누르는 동안 6°) 기울고 흰 반사광이 따라온다.
+  - 고정 바(탭바·사이드바·스팟 CTA)는 `view-transition-name`으로 제자리 유지. 전환 중 화면 정지는 최대 0.8초 — 느린 응답이면 평소 이동(로딩 스켈레톤)으로 넘어간다.
 
 ## 4. 지도 마커 (앱 고유 · 색+심볼, 색각 안전 — PRD §30)
 핸드오프 `assets/map-markers/`(96×128) 정본 세트. 핀은 **검증 상태**와 **내-상태(저장/방문)** 를 함께 표현한다.

@@ -25,28 +25,13 @@ export default function SplashScreen() {
 
   return (
     <MobileScreen
-      bg="var(--grad-hero)"
+      bg="var(--coral)"
       className="items-center justify-center overflow-hidden text-cream"
     >
       <button
         onClick={() => router.push("/onboarding")}
         aria-label="시작하기"
         className="absolute inset-0 z-20 cursor-default"
-      />
-      {/* radial glows */}
-      <div
-        className="pointer-events-none absolute -right-16 -top-20 h-[300px] w-[300px]"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(255,200,87,0.5) 0%, transparent 70%)",
-        }}
-      />
-      <div
-        className="pointer-events-none absolute -bottom-24 -left-20 h-[320px] w-[320px]"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(69,214,198,0.45) 0%, transparent 70%)",
-        }}
       />
 
       <div className="relative z-10 flex flex-col items-center">

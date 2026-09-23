@@ -28,9 +28,11 @@ export function FeedView({
           <div key={s.id} className="relative">
             <Link
               href={`/spot/${s.id}`}
-              className="block overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white shadow-[shadow:var(--sh-card)]"
+              data-tilt
+              className="relative block overflow-hidden rounded-2xl border border-[color:var(--line)] bg-white shadow-[shadow:var(--sh-card)]"
             >
               <div
+                data-vt-img
                 className="relative aspect-[4/5]"
                 style={{ background: s.thumbGrad }}
               >
