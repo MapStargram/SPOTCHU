@@ -26,9 +26,9 @@ const MOODS = [
 
 // SPOTCHU 자체 마스코트 'Chu'(정책 2026-09-07 재개정: 익명 인물 → 우리 IP 마스코트로 장소 소개).
 // 텍스트 설명만으로 정체성 유지됨(레퍼런스 이미지 불필요). 포즈는 장소마다 다르게(수동 경로),
-// 빌더는 기본 포즈를 넣는다.
+// 빌더는 기본 포즈를 넣는다. 외형은 Chu v2(2026-09-23, design.md·public/assets/mascot)와 일치시킨다.
 const FIGURE =
-  "with the SPOTCHU mascot Chu — a small cute coral-red teardrop-shaped character with a cream-white belly, a simple two-dot face, a navy outline, holding a little camera with a teal shoulder bag — as a friendly guide in the foreground (keep the character consistent)";
+  "with the SPOTCHU mascot Chu — a small cute chibi character shaped like a plump coral-red map pin standing on two short stubby legs, a round cream face with big sparkly dark eyes, rosy blush cheeks and a small happy smile, a navy outline, tiny stubby arms holding a mint-teal camera — as a friendly guide in the foreground (keep the character consistent)";
 const STYLE =
   "detailed soft painterly illustration with realistic architecture and proportions, the mascot in a clean consistent cute style, atmospheric, warm cinematic color palette";
 // 저작권·진정성 가드레일(정책): 텍스트·간판문구·로고 금지, 실제 인물·저작권 캐릭터 금지

@@ -14,8 +14,8 @@ CC/PD 실사진이 없는 스팟(현재 ~246개)은 그라디언트 플레이스
 ## 프롬프트 가드레일
 - 프롬프트에 **작품명·캐릭터명·대사·감독/스튜디오명 금지**. **실제 장소 사실**(건물·거리·지형·지역)·도시·시간대·계절·매체(일러스트/페인터리)만.
 - 실제 장소 사실은 `buildPlacePrompt`의 `placeDetail`로 주입한다 — 호출부가 스팟 name/subject에서 작품명·장면을 제거하고 작성한 값이며, 큐레이션 맵 `scripts/ai-thumbnail-place-detail.json`에 보관한다. **프롬프트 조립은 항상 `buildPlacePrompt`를 거쳐** 가드레일이 구조적으로 붙는다(자유 문자열 금지).
-- 등장 캐릭터는 **SPOTCHU 마스코트 Chu**만(우리 IP). 실제 사람·식별 가능한/저작권 캐릭터 금지. 텍스트·워터마크·로고 금지. Chu 설명은 `buildPlacePrompt`의 `FIGURE` 상수로 고정, **포즈는 호출부(수동 프롬프트)가 장소마다 다양화**.
-- 예: `"...an old Showa-era neighborhood shop on a narrow alley in an eastern Tokyo suburb, with the SPOTCHU mascot Chu (a cute coral teardrop character holding a camera, teal bag) looking up curiously, detailed painterly illustration. no text, no real people, the only character is the mascot Chu, not a recreation of any movie scene."`.
+- 등장 캐릭터는 **SPOTCHU 마스코트 Chu**만(우리 IP). 실제 사람·식별 가능한/저작권 캐릭터 금지. 텍스트·워터마크·로고 금지. Chu 설명은 `buildPlacePrompt`의 `FIGURE` 상수로 고정, **포즈는 호출부(수동 프롬프트)가 장소마다 다양화**. 외형은 **Chu v2**(2026-09-23 갱신 — 핀 몸통·두 발·크림 얼굴·민트 카메라, `design.md`)를 따른다. 그 이전 생성분(v1 외형)은 재생성하지 않았다(혼재).
+- 예: `"...an old Showa-era neighborhood shop on a narrow alley in an eastern Tokyo suburb, with the SPOTCHU mascot Chu (a cute chibi coral map-pin character on two short legs, cream face with sparkly eyes, holding a mint camera) looking up curiously, detailed painterly illustration. no text, no real people, the only character is the mascot Chu, not a recreation of any movie scene."`.
 
 ## 우선순위 (표시 규칙)
 **실제 CC/PD 사진 > AI 일러스트 > 그라디언트.** AI 일러스트는 **CC 사진이 없는 스팟에만** 적용하고, 이후 실사진이 확보되면 교체한다.
