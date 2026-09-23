@@ -34,3 +34,6 @@ public/cesium/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# Meshy 3D 생성 산출물(로컬 전용)
+meshy_output/
