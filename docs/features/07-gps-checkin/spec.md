@@ -29,6 +29,7 @@
 - **측위 상태 인디케이터**(위치 확인 중).
 - **거리/정확도 안내**: 스팟까지 남은 거리(m), 필요 반경(`checkinRadiusM`, 기본 100m), 현재 `accuracy`.
 - **결과 표시**: 성공/실패/보류. 상태는 **색 + 아이콘 + 라벨 병기**(PRD §30 접근성).
+- **성공 연출**: 성공 화면에 3D Chu 마스코트(three.js 런타임 렌더, `public/assets/mascot/chu-3d.glb`)가 좌우로 살짝 돌아보며 통통 튄다. three.js는 성공 화면에서만 지연 로드하고, 로드 전·WebGL 불가 시 정지 이미지(`chu-3d-still.webp`)로 대체한다. 장식 요소(`aria-hidden`)이며 `prefers-reduced-motion`에서는 정지 프레임 1장만 렌더한다.
 - **재시도 버튼**(실패·보류·권한 거부 시).
 - **(선택) 사진 업로드 진입**: 인증 후 유도. 인증 사진은 `Post.isVerifiedShot`로 표기(PRD §16, feature 09 연동).
 - **배지/승격 안내**: 성공 시 게임화(feature 08) 반영 안내.

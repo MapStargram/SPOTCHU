@@ -18,6 +18,7 @@
 - **yellow** `#FFC857`(하이라이트 전용 — 별·업적 배지·스파클).
 - 폰트: `--font-ko` **Pretendard Variable**, `--font-latin` **Poppins**(둘 다 CDN, Phase 1 self-host 검토), `--font-mono` JetBrains Mono. 영문 SPOTCHU 워드마크는 폰트가 아니라 **SVG 에셋** 사용.
 - 스케일/스페이싱(4px 그리드)/radius/shadow/motion 변수는 핸드오프 표 그대로.
+- **마스코트 Chu v2**(2026-09-23, 핸드오프 아트보드의 v1 Chu보다 우선): 통통한 핀 몸통 + 짧은 두 발, 크림 얼굴, 반짝이는 큰 눈·볼터치, 뭉툭한 팔, 민트 카메라. 굿즈(피규어·키링)로 세울 수 있는 형태. 2D는 `public/assets/mascot/*.svg` 7종(파일명·viewBox는 v1과 동일), 3D는 `chu-3d.glb`(체크인 성공 연출).
 
 ## 3. 모션 프리미티브 (핸드오프)
 - 표준 이징 `cubic-bezier(0.4,0,0.2,1)` 220ms(상태 변화). 오버슈트 `cubic-bezier(0.34,1.56,0.64,1)` — 놀이 순간(마커 포커스·저장 토글·F3 배지 팝인).

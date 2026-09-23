@@ -1,38 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
   <defs>
     <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FF7A85"/>
+      <stop offset="0%" stop-color="#FF8088"/>
       <stop offset="55%" stop-color="#FF5F6D"/>
-      <stop offset="100%" stop-color="#E24352"/>
+      <stop offset="100%" stop-color="#E9485A"/>
     </linearGradient>
-    <linearGradient id="bagGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#5BE0D0"/>
-      <stop offset="100%" stop-color="#38C4B4"/>
+    <linearGradient id="legGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F0525F"/>
+      <stop offset="100%" stop-color="#FF6B77"/>
     </linearGradient>
-    <radialGradient id="lensGrad" cx="0.35" cy="0.35" r="0.75">
-      <stop offset="0%" stop-color="#2E3F5E"/>
-      <stop offset="70%" stop-color="#17233C"/>
-      <stop offset="100%" stop-color="#0B1424"/>
+    <radialGradient id="faceGrad" cx="0.45" cy="0.38" r="0.65">
+      <stop offset="0%" stop-color="#FFFAF4"/>
+      <stop offset="100%" stop-color="#FCE6DA"/>
     </radialGradient>
-    <radialGradient id="lensGlass" cx="0.35" cy="0.35" r="0.55">
-      <stop offset="0%" stop-color="#8FD9FF" stop-opacity="0.9"/>
-      <stop offset="60%" stop-color="#3B6A9E" stop-opacity="0.5"/>
+    <linearGradient id="camGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7BE6D6"/>
+      <stop offset="100%" stop-color="#3CC6B4"/>
+    </linearGradient>
+    <radialGradient id="eyeGrad" cx="0.5" cy="0.3" r="0.75">
+      <stop offset="0%" stop-color="#2C3E63"/>
+      <stop offset="100%" stop-color="#17233C"/>
+    </radialGradient>
+    <radialGradient id="lensGlass" cx="0.35" cy="0.35" r="0.6">
+      <stop offset="0%" stop-color="#8FD9FF" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="#3B6A9E" stop-opacity="0.55"/>
       <stop offset="100%" stop-color="#17233C" stop-opacity="0"/>
     </radialGradient>
     <radialGradient id="cheekGrad" cx="0.5" cy="0.5" r="0.5">
-      <stop offset="0%" stop-color="#FFB4A8" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#FFB4A8" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#FF8A94" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FF8A94" stop-opacity="0"/>
     </radialGradient>
   </defs>
-  <path d="M 200 40 C 105 40, 40 105, 40 200 C 40 265, 75 315, 125 340 C 155 355, 175 375, 190 395 C 195 400, 198 400, 200 400 C 202 400, 205 400, 210 395 C 225 375, 245 355, 275 340 C 325 315, 360 265, 360 200 C 360 105, 295 40, 200 40 Z" fill="url(#bodyGrad)" stroke="#17233C" stroke-width="6" stroke-linejoin="round"/>
-  <ellipse cx="200" cy="205" rx="105" ry="95" fill="#FFF9F2" opacity="0.55"/>
-  <path d="M 130 190 Q 155 165 180 190" fill="none" stroke="#17233C" stroke-width="6" stroke-linecap="round"/>
-  <path d="M 220 190 Q 245 165 270 190" fill="none" stroke="#17233C" stroke-width="6" stroke-linecap="round"/>
-  <circle cx="125" cy="240" r="18" fill="url(#cheekGrad)"/>
-  <circle cx="275" cy="240" r="18" fill="url(#cheekGrad)"/>
-  <path d="M 175 250 Q 200 285 225 250 Q 200 265 175 250 Z" fill="#17233C"/>
-  <path d="M 195 268 Q 200 280 208 268 Q 205 273 195 268 Z" fill="#FF5F6D"/>
-  <path d="M 90 110 l 3 8 l 8 2 l -8 3 l -3 8 l -3 -8 l -8 -3 l 8 -2 z" fill="#FFC857"/>
-  <path d="M 320 130 l 2 5 l 5 1 l -5 2 l -2 5 l -2 -5 l -5 -2 l 5 -1 z" fill="#FFC857"/>
-  <ellipse cx="155" cy="95" rx="35" ry="20" fill="#FFF9F2" opacity="0.35" transform="rotate(-25 155 95)"/>
+  <path d="M 200 28 C 108 28, 42 96, 42 188 C 42 262, 92 316, 150 350 C 172 363, 188 376, 194 386 Q 200 396 206 386 C 212 376, 228 363, 250 350 C 308 316, 358 262, 358 188 C 358 96, 292 28, 200 28 Z" fill="url(#bodyGrad)" stroke="#17233C" stroke-width="6" stroke-linejoin="round"/>
+  <ellipse cx="112" cy="88" rx="29.9" ry="14.95" fill="#FFF9F2" opacity="0.45" transform="rotate(-32 112 88)"/>
+  <circle cx="146.5" cy="74.2" r="5.75" fill="#FFF9F2" opacity="0.45"/>
+  <ellipse cx="200" cy="184" rx="120" ry="114" fill="url(#faceGrad)"/>
+  <path d="M 124 178 Q 150 149.4 176 178" fill="none" stroke="#17233C" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 224 178 Q 250 149.4 276 178" fill="none" stroke="#17233C" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="112" cy="218" rx="24.200000000000003" ry="15.400000000000002" fill="url(#cheekGrad)"/>
+  <ellipse cx="288" cy="218" rx="24.200000000000003" ry="15.400000000000002" fill="url(#cheekGrad)"/>
+  <clipPath id="mouthClip"><path d="M 176 216 Q 200 218 224 216 Q 223 248 200 248 Q 177 248 176 216 Z"/></clipPath>
+  <path d="M 176 216 Q 200 218 224 216 Q 223 248 200 248 Q 177 248 176 216 Z" fill="#17233C" stroke="#17233C" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="248" rx="14.879999999999999" ry="13.44" fill="#FF7A85" clip-path="url(#mouthClip)"/>
+  <ellipse cx="64" cy="262" rx="26.25" ry="21" transform="rotate(-40 64 262)" fill="#FF6470" stroke="#17233C" stroke-width="5"/>
+  <ellipse cx="336" cy="262" rx="26.25" ry="21" transform="rotate(40 336 262)" fill="#FF6470" stroke="#17233C" stroke-width="5"/>
+  <path d="M 58 56 Q 60.5 67.5 72 70 Q 60.5 72.5 58 84 Q 55.5 72.5 44 70 Q 55.5 67.5 58 56 Z" fill="#FFC857"/>
+  <path d="M 348 72.8 Q 350 82 359.2 84 Q 350 86 348 95.2 Q 346 86 336.8 84 Q 346 82 348 72.8 Z" fill="#FFC857"/>
+  <path d="M 368 133.7 Q 369.125 138.875 374.3 140 Q 369.125 141.125 368 146.3 Q 366.875 141.125 361.7 140 Q 366.875 138.875 368 133.7 Z" fill="#FFC857"/>
 </svg>

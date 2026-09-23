@@ -10,6 +10,7 @@ import { TagPill } from "../ui/TagPill";
 import { CategoryLabel } from "../ui/CategoryLabel";
 import { AppIcon } from "../ui/AppIcon";
 import { Mascot } from "../ui/Mascot";
+import { Chu3D } from "./Chu3D";
 import { checkInAction } from "@/lib/actions/mutations";
 import { loginHref } from "@/lib/login-url";
 import { type Spot } from "@/lib/mock";
@@ -226,7 +227,17 @@ export function CheckinFlow({
           }}
         />
         <div className="relative z-10 flex flex-1 flex-col items-center justify-center text-center text-cream">
-          <Mascot name="chu-expression-joy" alt="" bob className="w-[200px]" />
+          {/* 3D Chu(three.js, spec §구성 요소 '성공 연출'). 코랄 히어로 위에서 코랄 몸체가
+              묻히지 않게 크림 글로우를 깐다. */}
+          <div
+            className="rounded-full"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(255,249,242,0.55), transparent 68%)",
+            }}
+          >
+            <Chu3D size={220} />
+          </div>
           <div className="mt-3 font-latin text-[12px] font-bold uppercase tracking-[0.3em] opacity-85">
             Check-in Complete
           </div>
